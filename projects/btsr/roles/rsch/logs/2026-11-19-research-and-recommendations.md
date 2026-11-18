@@ -1,0 +1,18 @@
+# 2026-11-19 연구 둘과 보완책 건의
+
+- 시각(KST, 확인한 것): 시작 00:24 / 끝 00:32
+- 세션: MITCHELL_STUDIO/BTSR/RSCH · 계정은 이 세션 안에서 확인하지 못함 · Fable 5.2 (claude-fable-5-2) · Paseo cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c
+- 근거: owner/utterances/2026-11-18.md — 22:12:53 uuid c5a2e2e4(연구 둘) · 22:15:28 uuid 52dc4ac1(rea = 리버스 엔지니어링, 초기화 00시 20분) · 22:16:50 uuid 47db9e2d(전체적인 보완책 건의). 00:24에 스스로 맞춘 알림(f7cfff67)으로 시작.
+- 한 일:
+  - 한국 시각 확인(00:24:40) 뒤 두 저장소 `pull --ff-only`(둘 다 이미 최신, 제품 저장소 0636fa0 그대로)
+  - 제품 저장소 더 읽음: 연결 도구 명령 목록(`app/vendor/capcut-mcp/src/server.js`)과 한계, Terra 카드 문구(`app/webapp/jobs.py` card_body), capcut 세션의 릴스 분석 기록, 릴스 자동화 기획서의 운영자 결정 칸
+  - 웹 조사: 검색 9번, 페이지 읽기 4번(하위 에이전트 web-fetch) — CapCut 약관·자료 이용 계약, capcut-cli·capcut-cli-david 문서, jianying-headless 기사, 그 저장소 주소(404)
+  - 글 셋을 씀
+- 결과·남긴 파일:
+  - projects/btsr/roles/rsch/studies/2026-11-19-no-computer-use.md
+  - projects/btsr/roles/rsch/studies/2026-11-19-capcut-reverse-engineering.md
+  - projects/btsr/roles/rsch/studies/2026-11-19-recommendations.md
+  - CURRENT.md · knowhow.md 갱신
+- 지킨 것: 제품 저장소는 읽기만. 맥 전용 명령은 돌리지 않음. CapCut 앱을 뜯거나 비공식 서버 주소를 부르지 않음(공개된 글만 읽음). 손님·개인 정보는 옮기지 않음. 사실·추측·전해 들음을 나눠 적음.
+- 막힌 것: 없음. 확인 못 한 것 — 한국 이용자용 CapCut 약관 보충 조항과 약관 뒷부분 원문, jianying-headless 저장소(404), 한국어 음성 서비스의 값·조건(믿을 만한 표를 못 만듦), 맥에 깔린 ffmpeg의 실제 기능.
+- 다음: 한알 말씀 대기. 작은 시험 둘과 운영자께 여쭐 것은 한알이 정하신 뒤.
