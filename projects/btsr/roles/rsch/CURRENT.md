@@ -1,13 +1,14 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 00:32 KST
+- 확인 시각: 2026-11-19 00:37 KST
 - 세션 열림: 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 00:24에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 - 상태: **한알이 맡기신 연구 둘과 보완책 건의를 냄**(근거 말씀 2026-11-18 22:12:53 uuid c5a2e2e4 · 22:15:28 uuid 52dc4ac1 · 22:16:50 uuid 47db9e2d). 한알 답을 기다림.
   - studies/2026-11-19-no-computer-use.md — 연구 ① 화면 조작 없이 하는 방안. 결론: 됨. 목소리·음악은 소리 파일로 넣고, 걸리는 것은 내보내기 하나 → 최종 영상을 CapCut 밖에서 맥이 직접 만드는 안 1을 포함해 세 안.
   - studies/2026-11-19-capcut-reverse-engineering.md — 연구 ② 세 층. 파일 형식은 이미 되고 있음 / 내보내기 엔진은 기술로는 가능해 보이나 권하지 않음 / 목소리·음악 서버는 권하지 않음. 약관의 금지 문장과 음악 이용 조건을 옮김.
   - studies/2026-11-19-recommendations.md — ③ 보완책 건의 10개(순서 있음) · 운영자께 여쭐 것 5 · 한알께 여쭐 것 12~15.
+  - studies/2026-11-19-easy-summary.md — 위 셋을 쉬운 말로 다시 정리(한알 말씀 2026-11-19 00:34:36 uuid 671a9193: "맥은 테스트 됩니다. 다시 쉽게 정리해주세요").
   - 앞서 낸 것: studies/2026-11-18-product-repo-now.md('지금 모습') · studies/2026-11-18-improvement-candidates.md(후보 27개 · 여쭐 것 1~11)
 - 하지 않은 것: 확정·설계·코드. 제품 저장소 수정·push. 맥 전용 명령 실행. CapCut 앱을 뜯거나 비공식 서버를 부르는 일. 작은 시험 둘(목소리 듣기·1101 다시 만들기)은 제안만 하고 하지 않음.
 - 다음 할 일: 한알 말씀 대기. 특히 ① 건의 1(⑥을 CapCut 밖에서 완성)의 방향 ② 운영자께 누가 여쭙는지 ③ 음악 권리 건을 지금 전할지 ④ '전체적인'의 범위. 요구사항은 이번 주말(11-21~22) 한알이 직접 쓰심. 말씀이 오면 owner/utterances/<날짜>.md에 원문 그대로 적음.
