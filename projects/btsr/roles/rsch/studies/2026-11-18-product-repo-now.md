@@ -16,6 +16,8 @@
 | 안 읽음 | `app/webapp/static/*.html` · `app/scripts/capcut_build.mjs`·`*.sh` 본문 · vendor `src/*.js` · capcut·pln·uploader·rsch의 나머지 기록 · `creative_director/requests/`·`plans/` · `rsch/research/` 4개 중 3개 본문 · `dashboard.html`(생성물) |
 | 이 PC에 없음 | `data/` · `config/` · `~/.codex/sessions/` 기록 · 맥 `scratchpad/` 시험 스크립트 · 설치 스크립트 (모두 저장소 밖) |
 
+- 못 본 것에 대해 — 한알: "아 테스트 결과는 내재화 됩니다." (2026-11-18 22:09:14 KST, uuid 2dc3779d — owner/utterances/2026-11-18.md. 범위·시기·누가 하는지는 아직 말씀 없음)
+
 ## 1. 무엇을 하는 공간인가
 
 - 미용실 운영자(저장소 안 호칭 '총괄 디렉터')의 **SNS 영상(주로 인스타 릴스) 작업**을 역할별 Claude 세션이 나눠 맡는 맥 작업 공간 — `CLAUDE.md`:6, `agents/creative_director/knowhow.md`:29.
@@ -75,6 +77,7 @@
 - 접속 제한: 사설망·이 맥·Tailscale 주소만 허용(`server.py`:88-101), PIN 6자리·5번 틀리면 10분 잠금·30일 기억(`pmo/builds.md`:48). 주소는 http.
 - 자동 시작(launchd) 등록됨 2026-11-09(`pmo/builds.md`:44). Tailscale은 연결 끝, **자동 시작은 미등록**(맥이 다시 켜지면 꺼짐 — `pmo/builds.md`:11).
 - 시험: 시험용 폴더에서 124/124, 사전 리허설 28/28(`pmo/logs/2026-11-11_terra-small-cards.md`:39, 86). **시험 스크립트는 맥 `scratchpad/`에 있고 저장소에는 없음**(`git ls-files`에 시험 파일 0개; `pmo/logs/2026-11-09_upload-webapp.md`:26, `pmo/knowhow.md`:45).
+  - 한알: "아 테스트 결과는 내재화 됩니다." (2026-11-18 22:09:14 KST, uuid 2dc3779d — owner/utterances/2026-11-18.md. 범위·시기·누가 하는지는 아직 말씀 없음)
 - **휴대폰에서의 시험은 아직** — 매뉴얼 '휴대폰 시험 일정' 4~9번이 모두 ⬜(`manual.md`:15-20), `pmo/builds.md`:9-10.
 
 ### 공용 명령 `app/scripts/`

@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-18 22:06 KST
+- 확인 시각: 2026-11-18 22:10 KST
 - 세션 열림: 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST). 읽기만, 읽기 전 `pull --ff-only`.
 - 상태: **개선안을 짤 준비 끝.** 제품 저장소를 한 번 훑어 읽고 두 글을 남김(근거 말씀 21:56:59 uuid e0cec51e).
