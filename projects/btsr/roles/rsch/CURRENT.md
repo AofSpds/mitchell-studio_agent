@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 08:56 KST
+- 확인 시각: 2026-11-19 08:57 KST
 - 세션 열림: 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
@@ -23,7 +23,7 @@
 | 1 | 화면 시안 확인: 제품 저장소 `agents/pln/specs/2026-11-09_reel-automation-ui.html`(519줄)과 지금 웹앱 화면 `app/webapp/static/app.html`(764줄)·`pin.html`. 시안과 실제가 어디가 다른지 | 2026-11-19-webapp-screens.md | **끝** (08:53) |
 | 2 | 웹앱이 무엇을 하는지 끝까지: `app/webapp/server.py`·`reel_api.py`의 주소 목록, 화면마다 누르는 것과 그 뒤에 일어나는 일, 옵션(설정) 전부. 아직 안 읽은 기획서 3개 본문(목소리 간격·AI 얼굴·업로드 웹앱)과 pln·pmo `logs/` | 2026-11-19-webapp-what-it-does.md | **끝** (08:56) — 기획서 3개 본문과 capcut·uploader 기록 대부분은 아직 안 읽음 |
 | 3 | OpenCut 숙지: 무엇인지, 구조, 화면·흐름, 영상을 어디서 어떻게 만드는지, 이용 조건, 지금 상태 | 2026-11-19-opencut.md | **끝** (08:56) — 읽기만 함, 돌려 보지 않음 |
-| 4 | '올리면 설정한 대로 작업물을 확인'(⑥)을 지금 흐름과 맞대기: 올린 뒤 사용자가 무엇을 얼마나 기다리고 무엇을 누르는지, 설정이 어디에 있고 무엇이 빠졌는지 | 2026-11-19-upload-to-result.md | 안 함 |
+| 4 | '올리면 설정한 대로 작업물을 확인'(⑥)을 지금 흐름과 맞대기: 올린 뒤 사용자가 무엇을 얼마나 기다리고 무엇을 누르는지, 설정이 어디에 있고 무엇이 빠졌는지 | 2026-11-19-upload-to-result.md | **끝** (08:57) |
 | 5 | UI/UX 고도화 제안: 1~4를 바탕으로, 근거와 함께, 작은 것부터. 운영자 테스트로 요구사항을 계속 받는 길(⑤) 포함 | 2026-11-19-uiux-proposals.md | 안 함 |
 | 6 | 한알께 보고 + CURRENT.md·logs 갱신 | logs/ | 안 함 |
 
