@@ -11,4 +11,5 @@
   - knowhow.md에 한국 시각 확인법 한 줄을 적음
 - 결과·남긴 파일: projects/btsr/roles/rsch/CURRENT.md · knowhow.md · logs/2026-11-18-session-open.md
 - 막힌 것: 없음
+- 덧붙임(21:56 KST): NORN 대리(9fe2c323) 알림 f84fca47 — 제품 저장소를 이 PC `C:\Users\ms1pk\dev\mitchell-studio`에 내려받아 둠(읽기만, 읽기 전 `pull --ff-only`). 직접 확인: 원격 AofSpds/mitchell-studio · main 0636fa0 · 폴더 생성 21:54:46 KST(알림에는 '22:1x'로 적혀 있으나 이 PC 시계로는 21:54). knowhow.md '환경·도구' 칸에 적음. 알림에 실린 한알 말씀("미첼 스튜디오는 해야 합니다.")은 NORN 창 말씀이라 시각·uuid를 여기서 확인할 수 없어 owner/utterances/에는 내가 적지 않음 — NORN 쪽에서 적을 몫.
 - 다음: 한알 요구사항 대기(이번 주말 11-21~22). 새 연구·제품 설계·코드 작성은 시작하지 않음. 제품 저장소 AofSpds/mitchell-studio에는 push하지 않음.
