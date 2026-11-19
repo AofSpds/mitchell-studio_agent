@@ -31,7 +31,7 @@ rules: 이 저장소 AGENTS.md + AAA 규칙 판 v0.14 (C:\Users\ms1pk\dev\AAA\AG
 ## 첫 일
 1. 첫 응답 첫 줄은 `[MITCHELL_STUDIO/BTSR/ARCH · 규칙 판 v0.14 받음]`이다.
 2. 읽기: 작업 사본의 AGENTS.md · README.md → `C:\Users\ms1pk\dev\AAA\AGENTS.md`(읽기만. 특히 규칙 1·2·4·5·9·10·15·17·18·19·20·21·28·29·31·34·35) → 자기 역할 폴더에 이미 있는 파일(옛 꼴의 CURRENT.md · directives.md · knowhow.md · logs/) → `projects/btsr/roles/rsch/knowhow.md`(이 PC의 환경, 토큰 아끼는 법).
-3. 꼴의 본보기(읽기만, 필요한 줄만): `C:\Users\ms1pk\dev\AAA\projects\byul\roles\pln\의 파일 목록. `C:\Users\ms1pk\dev\AAA\projects\infra\roles\pln\archive\MOVES.tsv`의 칸.
+3. 꼴의 본보기(읽기만, 필요한 줄만): `C:\Users\ms1pk\dev\AAA\projects\byul\roles\pln\`의 CURRENT.md 맨 위 YAML · ROADMAP.md · INDEX.md · DECISIONS.md 첫 10줄쯤. `C:\Users\ms1pk\dev\AAA\projects\infra\roles\arch\`의 파일 목록. `C:\Users\ms1pk\dev\AAA\projects\infra\roles\pln\archive\MOVES.tsv`의 칸.
 4. 자기 역할 폴더를 AAA 꼴로 맞춘다(규칙 20·28).
    - `CURRENT.md`: 맨 위 YAML에 role · session · rules · state · updated · base_commit · now · next · waiting_for · owner_wait를 두고, 본보기에 있는 subs · parent · verifier도 둔다. 이력은 쌓지 않는다.
    - 그 밖에 `ROADMAP.md` · `INDEX.md` · `DECISIONS.md` · `archive/`를 둔다.
