@@ -15,3 +15,8 @@
   - 전한 것: PLN(769642ae) · ARCH(c9827256)에 직접, PMO는 S1이 여는 글에 넣게 함 — AAA 규칙을 읽을 것, 역할 트리(5: PLN > RSCH · ARCH > PMO), 작업 칸 이름(20: PLN requirements/ · ARCH design/ · PMO records/), 틀을 스스로 만들지 않음(1·2).
   - 어긋난 것(숨기지 않고 적음, 규칙 27): ① 규칙 40 — SUB를 열기 전에 개설 패킷(OPEN_PACKET.md)을 그 칸에 써서 커밋해야 하는데, 여는 글(메시지)만으로 열었음. sub/ 칸은 이 저장소에 없는 꼴이라 스스로 만들지 않음(이 저장소 AGENTS.md 7). ② 규칙 13 — 세션은 위 역할이 엶(DPM → PLN → 하위 역할). 이번에는 한알 말씀대로 RSCH의 SUB가 PLN·ARCH·PMO를 엶. Paseo의 위아래(RSCH > S1 > PLN·ARCH·PMO)가 역할 트리와 다름.
   - 맞추지 않고 둔 것: 이 저장소의 폴더 꼴(directives·knowhow·logs, CURRENT의 꼴)은 규칙 20·28과 다름 — 임시 저장소라 그대로 둠. 도메인 등록부(DOMAINS.toml)에 MITCHELL_STUDIO는 아직 없음(본 범위: domains/DOMAINS.toml · domains/README.md).
+- 덧붙임(22:00 KST): 한알 "세션이 열린건가요?"(21:59:47 uuid 0a38c9f2) → Paseo 목록과 커밋으로 확인함. 셋 모두 열려 있고(idle), 모두 claude-google · Opus 5.5 (claude-opus-5-5) · auto · high, Paseo에서는 S1(5641fdf4) 아래.
+  - PLN: Paseo 769642ae-d23a-4615-b757-b8d27691f731 · Claude 세션 6123ff97-fb8d-4469-834d-6a6f86647f52 · 열림 커밋 17b2f2b, AAA 규칙 반영 bb2240a
+  - ARCH: Paseo c9827256-268c-4e58-8b69-1f48229a0dc8 · Claude 세션 0863506d-d9d7-47c5-a1cc-b3b64aaadafd · 열림 커밋 ee45ded, AAA 규칙 반영 dc0eb3d
+  - PMO: Paseo a73bc1c9-6e1f-4d46-95f1-02408e07b659 · Claude 세션 2a31c0d8-3003-4b57-9a88-eb68f1d4ce2f · 열림 커밋 5586216(AAA 규칙 말씀을 함께 적음)
+  - Claude 세션 ID는 각 세션이 자기 CURRENT.md에 적은 값을 옮긴 것(RSCH가 따로 대조하지 않음). 세 역할이 무엇을 할지는 아직 말씀 없음.
