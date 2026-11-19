@@ -26,3 +26,8 @@
   - 잘못한 것: 세 세션을 RSCH 작업 공간 안의 하위 세션으로 열었음 → 한알 화면의 작업 공간 목록에 없었음. "Aaa의 규칙을 참조하세요"를 이름 고치기와 규칙 전하기로만 읽었음.
   - 한 것: 앞서 연 세 세션(769642ae · c9827256 · a73bc1c9)의 제목 뒤에 CLOSED를 붙임(지우지 않음. 22:02에 맨 위 줄로 올린 것은 그대로). S1의 개설 패킷을 sub/s1_open_roles/OPEN_PACKET.md에 씀(연 뒤에 쓴 것임을 밝힘). S1에게 역할마다 작업 공간을 만들고 그 안에 세션을 열게 함.
   - sub/ 칸은 이 저장소에 없던 꼴 — AAA 규칙 25·40대로 만듦("aaa보시고 만드시라구요").
+- 덧붙임(22:21 KST): 한알 "똑같이 하세요"(22:18:23 uuid 3a1d2dc6) → 'AAA와 다르게 두겠다'던 둘도 AAA와 똑같이 함.
+  - 가지와 worktree(규칙 19): btsr/pln · btsr/arch · btsr/pmo 가지를 main fa2b7aa에서 갈라 worktrees/btsr-pln · btsr-arch · btsr-pmo에 둠(AAA의 agent_asa/pln ↔ worktrees/agent_asa-pln과 같은 꼴). worktrees/는 .git/info/exclude에 적음(AAA와 같음).
+  - 개설 패킷을 판 2로 고침: 작업 공간의 경로 = 그 역할의 worktree, 역할 폴더는 AAA 규칙 20·28·29의 꼴(CURRENT에 YAML · ROADMAP · INDEX · DECISIONS · archive/, 옛 꼴 파일은 git mv로 archive/에), 역할 세션은 자기 가지에만 커밋·push하고 main에는 합치지 않음.
+  - 판 1로 이미 열린 PLN(작업 공간 wks_b17624602f48a73b · 세션 d41ebe15, main 폴더)은 이어 가지 않음 — 멈추게 하고 제목에 CLOSED를 붙임(작업 공간은 AAA의 'AAA/BYUL/PMO-CLOSED'처럼 '…/PLN-CLOSED').
+  - 아직 AAA와 다른 것: RSCH 자신(작업 공간이 main 폴더, 역할 폴더가 옛 꼴) · 이 저장소 맨 위 AGENTS.md(규칙 판이 주입되지 않음, 도메인 등록 없음) · main 합치기를 정하는 이(AAA는 도메인 DPM, 여기는 없음).
