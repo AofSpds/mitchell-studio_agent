@@ -12,3 +12,4 @@
 - 막힌 것: 없음
 - 다음: 받는 세션이 '세션 열림' 줄을 적고 한알 말씀을 기다림. 이 옛 세션은 이 폴더에 더 쓰지 않음.
 - 받음(14:44 KST, 받는 세션이 적음): Paseo 에이전트 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 2ad93d91-811f-4582-96d5-f59a31463c27 · Fable 5.2 (claude-fable-5-2). 넘김 글(Paseo 알림 a0e91a92, 옛 세션 cf9609b1이 보냄 — 한알 말씀 아님)을 받고 AGENTS.md → CURRENT.md → directives.md · knowhow.md → owner/utterances/2026-11-19.md 끝 → logs/2026-11-19-webapp-improvement.md 끝을 읽음. 이 저장소 main 5b19544, 남은 변경 없음을 확인함. 제품 저장소·프로챗 탭은 건드리지 않음. 새 조사·설계·코드 없음 — 한알 말씀 대기.
+- 덧붙임(14:55 KST, 옛 세션이 적음): 한알 "새로운 세션이 상위가 되어야 합니다"(14:54:27 uuid a2c6b45c — 옛 세션 창의 말씀) → Paseo 꼬리표를 바꿈: 새 세션 3233ba1f의 `paseo.parent-agent-id`·`paseo.parent-server-id`를 비워 맨 위 세션으로, 옛 세션 cf9609b1의 `paseo.parent-agent-id`를 3233ba1f로. `list_agents`로 확인함. 되돌리려면 같은 꼬리표를 `update_agent`로 다시 바꾸면 됨. 원문은 옛 세션이 owner/utterances에 적음.
