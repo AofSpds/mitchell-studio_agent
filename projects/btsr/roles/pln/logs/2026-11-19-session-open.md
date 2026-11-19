@@ -10,4 +10,5 @@
   - 자리를 rsch와 같은 꼴로 만듦
 - 결과·남긴 파일: projects/btsr/roles/pln/directives.md · knowhow.md · CURRENT.md · logs/_template.md · logs/2026-11-19-session-open.md
 - 막힌 것: 없음
+- 덧붙임(21:54 KST): RSCH(3233ba1f)가 한알 말씀 21:52:02 uuid 099449aa("Aaa의 규칙을 참조하세요")를 전함. AAA AGENTS.md(v0.14)와 domains/rhs/ROLES.md 머리를 읽음(읽기만). directives.md에 한 줄, CURRENT.md에 따르는 규칙·작업 칸 `requirements/`를 적음. 앞서 적은 'studies/'는 rsch 칸을 가리킨 것이라 그대로 둠.
 - 다음: 한알 말씀 대기. 역할이 무엇을 하는지 스스로 정하지 않음. 조사·설계·코드·문서 작성은 말씀 뒤에만.
