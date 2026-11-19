@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>화면 시안 — 기획안 초안 2026-11-20 (RSCH)</title>
+<style>
+/* 디자인 값은 지금 웹앱(app/webapp/static/app.html)의 것을 그대로 옮김. 웹폰트 없음. 밝은 모드만 그림. */
+:root {
+  --bg:#efebe5; --card:#faf8f5; --ink:#2b2420; --soft:#7a6f66; --line:#ddd5cb; --bar:#e6e0d8;
+  --accent:#4a3a30; --accent2:#8b6a4f; --ok:#5d8a6b; --okbg:#e3ece4; --wait:#9a6f12; --waitbg:#f3e7c8;
+  --bad:#a8473f; --badbg:#f4e0dc; --grad1:#3a2e27; --grad2:#7a5c45; --onaccent:#faf8f5;
+  --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  --mark:"Baskerville","Libre Baskerville","Times New Roman",serif;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:#cfc8be; color:var(--ink); font-family:var(--font); font-size:17px; line-height:1.45; }
+.top { max-width:1240px; margin:0 auto; padding:28px 24px 4px; }
+.top h1 { font-size:26px; margin:0 0 8px; }
+.top p { margin:4px 0; font-size:15px; color:#4d443d; }
+.top .demo { display:inline-block; background:var(--waitbg); color:var(--wait); border-radius:10px; padding:4px 10px; font-size:14px; font-weight:600; }
+.grid { max-width:1240px; margin:0 auto; padding:20px 24px 60px; display:grid; grid-template-columns:repeat(auto-fill, minmax(375px, 1fr)); gap:36px 28px; justify-items:center; }
+.shot { width:375px; max-width:100%; }
+.shot .hd { font-size:15px; font-weight:700; margin:0 4px 8px; }
+.shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
+.shot .hd .bd { font-weight:400; color:#5a5048; font-size:13px; margin-left:4px; }
+.shot .ft { font-size:13px; color:#4d443d; margin:8px 4px 0; }
+.shot .ft b { color:var(--bad); }
+.phone { width:375px; max-width:100%; height:828px; background:var(--bg); border:8px solid #2b2420; border-radius:40px; overflow:hidden; position:relative; display:flex; flex-direction:column; }
+.scr { flex:1; overflow:hidden; padding:10px 16px 12px; }
+.brand { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.wm { font-family:var(--mark); font-weight:700; font-size:22px; line-height:1.05; letter-spacing:.01em; }
+.brand .r { text-align:right; font-size:11px; color:var(--soft); line-height:1.3; }
+.fbk { display:inline-block; margin-top:4px; font-family:var(--mark); font-weight:700; font-size:13px; border:1px solid var(--line); border-radius:999px; padding:3px 10px; color:var(--accent); background:var(--card); }
+.tabs { display:flex; gap:6px; background:var(--card); border-top:1px solid var(--line); padding:8px 10px 16px; }
+.tabs > span { flex:1; text-align:center; font-family:var(--mark); font-weight:700; font-size:16px; padding:10px 0; border-radius:14px; position:relative; color:var(--soft); }
+.tabs > span.on { background:var(--bar); color:var(--ink); }
+.badge { position:absolute; top:0; right:6px; min-width:18px; height:18px; padding:0 4px; border-radius:9px; background:var(--bad); color:#fff; font:700 11px/18px var(--font); text-align:center; }
+h2 { font-size:20px; margin:0 0 10px; }
+.eh { font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
+.hint { color:var(--soft); font-size:15px; }
+.note { color:var(--soft); font-size:13px; }
+.card { background:var(--card); border-radius:20px; padding:14px 16px; margin-bottom:10px; }
+.big { height:150px; border-radius:28px; background:linear-gradient(160deg,var(--grad1),var(--grad2)); color:var(--onaccent); font-family:var(--mark); font-weight:700; font-size:32px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.btn { display:flex; align-items:center; justify-content:center; text-align:center; padding:13px 10px; border-radius:16px; background:var(--accent); color:var(--onaccent); font-weight:600; font-size:17px; }
+.btn.soft { background:var(--bar); color:var(--ink); }
+.btn.line { background:transparent; color:var(--soft); }
+.btn.sm { padding:9px 8px; font-size:15px; }
+.row { display:flex; gap:10px; margin-top:10px; }
+.row > * { flex:1; }
+.alert { background:var(--waitbg); border-radius:16px; padding:12px 14px; font-size:15px; margin-bottom:10px; }
+.err { background:var(--badbg); border-radius:16px; padding:12px 14px; font-size:15px; margin-bottom:10px; }
+.pill { display:inline-block; border-radius:10px; padding:2px 8px; font-size:13px; background:var(--bar); }
+.pill.done { background:var(--okbg); color:var(--ok); }
+.pill.todo { background:var(--waitbg); color:var(--wait); }
+.pill.stop { background:var(--badbg); color:var(--bad); }
+.dots { margin:6px 0 4px; white-space:nowrap; }
+.dot { display:inline-block; width:22px; height:8px; border-radius:4px; background:var(--line); margin-right:3px; }
+.dot.done { background:var(--ok); } .dot.now { background:var(--accent2); } .dot.stop { background:var(--bad); } .dot.ask { background:var(--wait); }
+.job .tt { font-size:18px; font-weight:700; }
+.sech { font-size:13px; color:var(--soft); font-weight:700; margin:12px 4px 6px; }
+.step { display:flex; gap:10px; align-items:center; background:var(--card); border-radius:18px; padding:7px 12px; margin-bottom:6px; }
+.step.dim { opacity:.55; }
+.num { flex:none; width:26px; height:26px; border-radius:50%; background:var(--bar); font-size:13px; font-weight:700; text-align:center; line-height:26px; }
+.num.done { background:var(--okbg); color:var(--ok); } .num.now { background:var(--accent); color:var(--onaccent); }
+.step .nm { font-family:var(--mark); font-weight:700; font-size:15px; }
+.step .ds { font-size:13px; color:var(--soft); }
+.step .st { margin-left:auto; }
+.nowband { background:var(--card); border-radius:20px; padding:14px 16px; margin-bottom:10px; border-left:6px solid var(--accent2); }
+.nowband .l1 { font-size:18px; font-weight:700; }
+.log { font-size:15px; }
+.log div { display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); }
+.log div:first-child { border-top:0; }
+.log time { flex:none; width:64px; font-size:13px; color:var(--soft); padding-top:2px; }
+.thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:8px 0; }
+.th { aspect-ratio:9/16; border-radius:10px; background:linear-gradient(170deg,#b9aa9a,#8d7a69); position:relative; }
+.th.b { background:linear-gradient(170deg,#a69686,#6f5e50); }
+.th.c { background:linear-gradient(170deg,#c7bbae,#a08d7b); }
+.th i { position:absolute; left:3px; right:3px; bottom:3px; font-style:normal; font-size:10px; text-align:center; border-radius:6px; background:rgba(250,248,245,.9); padding:1px 0; }
+.th.ask { outline:3px solid var(--wait); outline-offset:1px; }
+.th.ask i { background:var(--waitbg); color:var(--wait); font-weight:700; }
+.th.pick { outline:3px solid var(--accent); outline-offset:1px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.chip { border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:14px; background:var(--card); }
+.chip.on { background:var(--accent); color:var(--onaccent); border-color:var(--accent); }
+.kv { display:flex; justify-content:space-between; gap:10px; padding:7px 0; border-top:1px solid var(--line); font-size:15px; }
+.kv:first-of-type { border-top:0; }
+.kv span:first-child { color:var(--soft); flex:none; }
+.kv .q { color:var(--wait); font-weight:700; }
+.ta { border:1px solid var(--line); border-radius:16px; background:var(--bg); padding:10px 12px; min-height:72px; font-size:15px; color:var(--soft); margin:8px 0 4px; }
+.sheet { position:absolute; inset:0; background:rgba(30,26,22,.5); display:flex; align-items:flex-end; }
+.box { width:100%; background:var(--card); border-radius:24px 24px 0 0; padding:18px 16px 22px; }
+.vid { width:150px; aspect-ratio:9/16; border-radius:14px; background:linear-gradient(170deg,#9c8a79,#4f4138); position:relative; flex:none; }
+.vid::after { content:"▶"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:rgba(250,248,245,.85); font-size:30px; }
+.vid.face { background:linear-gradient(170deg,#d1c3b5,#a48f7c); }
+.vid.np::after { content:""; }
+.vid em { position:absolute; left:6px; bottom:6px; font-style:normal; font-size:11px; color:#fff; background:rgba(168,71,63,.9); border-radius:6px; padding:1px 6px; }
+.vid u { position:absolute; left:6px; top:6px; text-decoration:none; font-size:11px; background:rgba(250,248,245,.9); border-radius:6px; padding:1px 6px; }
+.side { display:flex; gap:12px; align-items:flex-start; }
+.lock { color:var(--soft); font-size:13px; margin-top:8px; }
+.ai { color:var(--bad); font-weight:700; }
+.ok { color:var(--ok); font-weight:700; }
+.warn { color:var(--wait); font-weight:700; }
+.o { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--line); font-size:15px; }
+.o:first-of-type { border-top:0; }
+.o small { display:block; color:var(--soft); font-size:12px; }
+.sel { border:1px solid var(--line); border-radius:12px; padding:6px 10px; font-size:14px; background:var(--bg); white-space:nowrap; }
+.gone { text-decoration:line-through; opacity:.5; }
+.strip { display:flex; gap:6px; overflow:hidden; margin:8px 0; }
+.strip .th { flex:none; width:52px; }
+.strip .th i { font-size:10px; }
+.lines div { padding:8px 10px; border-radius:12px; background:var(--bg); margin-bottom:6px; font-size:15px; }
+.lines .ed { outline:2px solid var(--accent); background:#fff; }
+.lockscr { background:linear-gradient(170deg,#3a2e27,#1b1715); border-radius:20px; padding:14px 12px; margin-top:10px; }
+.lockscr .clock { color:#f0e9e1; text-align:center; font-size:34px; font-weight:300; margin-bottom:8px; }
+.push { background:rgba(250,248,245,.92); border-radius:16px; padding:9px 12px; margin-bottom:6px; font-size:14px; }
+.push b { display:block; font-size:14px; }
+.push small { float:right; color:var(--soft); font-size:11px; }
+.toast { position:absolute; left:16px; right:16px; bottom:84px; background:var(--ink); color:var(--card); border-radius:14px; padding:11px 14px; font-size:15px; text-align:center; }
+.flow { font-size:15px; }
+.flow div { padding:8px 0 8px 14px; border-left:3px solid var(--accent2); margin-left:6px; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>화면 시안 — 1차(시술 릴스) 기획안 초안</h1>
+  <p><span class="demo">그림용 시안입니다 · 눌러도 움직이지 않습니다 · 안의 작업과 글은 모두 지어낸 예시입니다</span></p>
+  <p>MITCHELL_STUDIO/BTSR/RSCH · 2026-11-20 · 짝 글: <code>2026-11-20-plan-draft.md</code> 4번(화 번호가 같습니다). 모두 [제안]이고 확정이 아닙니다.</p>
+  <p>색 · 글꼴 · 부품은 지금 웹앱(<code>app/webapp/static/app.html</code>)의 것을 그대로 썼습니다. 탭 넷도 그대로입니다. 화면 아래 붉은 글씨가 지금과 달라지는 곳입니다.</p>
+</div>
+
+<div class="grid">
+
+<!-- 화2 -->
+<div class="shot">
+  <div class="hd"><span class="no">화2</span>Send — 보내기<span class="bd">고침 · 묶음 2 · 3</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점<br><span class="fbk">Feedback</span></div></div>
+    <div class="big" style="height:120px">Send</div>
+    <p class="hint" style="margin:0 0 10px">찍은 사진·영상을 보내면 바로 만들기 시작해요. 확인할 것이 생기면 알려 드려요.</p>
+    <div class="card">
+      <div><span class="eh">Request</span> <span class="hint">요청 사항 (안 적어도 돼요)</span></div>
+      <div class="ta">예) 디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조</div>
+      <div class="note">손님 이름·전화번호는 쓰지 마세요 · 키보드의 🎤로 말해도 돼요</div>
+    </div>
+    <div class="card">
+      <div><span class="eh">Options</span> <span class="hint">기본값 그대로 두면 돼요 ▴</span></div>
+      <div class="o"><div>목소리</div><div class="sel">알아서 골라요 · 기본 ▾</div></div>
+      <div class="o"><div>얼굴 확인<small>만든 AI 얼굴을 보고 진행</small></div><div class="sel">켬 · 기본 ▾</div></div>
+      <div class="o gone"><div>원고 확인</div><div class="sel">켬 ▾</div></div>
+      <div class="o"><div>AI 얼굴 표시</div><div class="note">항상 넣어요 🔒</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span class="on">Send</span><span>Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> 안내 한 줄 · 머리의 Feedback 단추 · '원고 확인' 줄을 없앰(늘 확인받음) · '얼굴 확인' 줄이 생김 · 다 보내면 "업로드 확인이라고 말해 주세요" 대신 작업 화면(화4)으로 곧바로.</div>
+</div>
+
+<!-- 화3 -->
+<div class="shot">
+  <div class="hd"><span class="no">화3</span>Jobs — 작업 목록<span class="bd">고침 · 묶음 4</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점<br><span class="fbk">Feedback</span></div></div>
+    <div class="btn soft sm" style="margin-bottom:6px">⚙ 기본 옵션</div>
+    <div class="sech">보실 것 2</div>
+    <div class="card job" style="border-left:6px solid var(--wait)">
+      <div class="tt">디지털펌 · 뒷볼륨</div><div class="note">오늘 오후 2:10</div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot ask"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill todo">확인해 주세요</span> <span class="hint">원고가 준비됐어요</span>
+    </div>
+    <div class="card job" style="border-left:6px solid var(--bad)">
+      <div class="tt">레이어드 컷</div><div class="note">오늘 오전 11:40</div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot stop"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill stop">잠깐 멈춤</span> <span class="hint">하나만 골라 주세요</span>
+    </div>
+    <div class="sech">저절로 가는 중 1</div>
+    <div class="card job">
+      <div class="tt">애쉬 브라운 염색</div><div class="note">오늘 오후 3:05</div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot now"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill">진행 중</span> <span class="hint">장면을 이어 붙이는 중이에요</span>
+    </div>
+    <div class="sech">끝난 것 4 ▾</div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> 목록을 '보실 것 / 저절로 가는 중 / 끝난 것'으로 나눔 · 카드에 '지금' 한 줄 · 점이 9개(AI 얼굴 단계) · "ChatGPT 대기" 띠 · Copy Prompt · Preflight · Practice를 운영자 화면에서 없앰 · 목록도 스스로 바뀜.</div>
+</div>
+
+<!-- 화4 -->
+<div class="shot">
+  <div class="hd"><span class="no">화4</span>작업 화면 — 진행 중<span class="bd">고침 · 묶음 2 · 4</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="nowband"><div class="l1">장면을 이어 붙이는 중이에요</div><div class="hint">하실 일 없어요 · 다 되면 알려 드려요</div></div>
+    <div class="step"><div class="num done">1</div><div><div class="nm">Send</div><div class="ds">사진·영상을 보냈어요</div></div><div class="st"><span class="pill done">완료</span></div></div>
+    <div class="step"><div class="num done">2</div><div><div class="nm">Intake</div><div class="ds">보내신 것을 살펴봐요</div></div><div class="st"><span class="pill done">완료</span></div></div>
+    <div class="step"><div class="num done">3</div><div><div class="nm">Script</div><div class="ds">원고를 써요 — 확인해 주세요</div></div><div class="st"><span class="pill done">완료</span></div></div>
+    <div class="step"><div class="num done">4</div><div><div class="nm">Face</div><div class="ds">AI 얼굴을 만들어요</div></div><div class="st"><span class="pill done">완료</span></div></div>
+    <div class="step"><div class="num now">5</div><div><div class="nm">Edit</div><div class="ds">장면을 이어 붙여요</div></div><div class="st"><span class="pill">진행 중</span></div></div>
+    <div class="step dim"><div class="num">7</div><div><div class="nm">Voice · Music · Export</div><div class="ds">목소리와 음악을 넣고 영상을 뽑아요</div></div><div class="st"><span class="pill">아직</span></div></div>
+    <div class="step dim"><div class="num">8</div><div><div class="nm">Done</div><div class="ds">완성 — 확인해 주세요</div></div><div class="st"><span class="pill">아직</span></div></div>
+    <div class="sech">진행 기록</div>
+    <div class="card log" style="padding:8px 14px">
+      <div><time>오후 3:21</time><span>AI 얼굴을 만들었어요</span></div>
+      <div><time>오후 3:16</time><span>원고를 확인해 주셨어요</span></div>
+      <div><time>오후 3:09</time><span>원고를 다 썼어요 — 확인해 주세요</span></div>
+      <div><time>오후 3:05</time><span>사진 3장 · 영상 2개를 받았어요</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> 맨 위 '지금' 띠 · 단계의 '누가'(Claude · ChatGPT 카드…) 줄을 '무엇을 하는지'로 · 진행 기록(쉬운 말 한 줄씩) · 화면이 스스로 바뀜(20초마다 다시 읽는 것 대신). ⑥ Preview와 ⑨ Post는 그림에서 줄였습니다.</div>
+</div>
+
+<!-- 화5 a -->
+<div class="shot">
+  <div class="hd"><span class="no">화5</span>접수 확인 — 헷갈리는 것만<span class="bd">새로 · 묶음 3</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="alert"><b>확인해 주세요</b> · 하나만 알려 주시면 바로 이어 가요</div>
+    <div class="card">
+      <div><span class="eh">Intake</span> <span class="hint">보내신 것을 이렇게 나눴어요</span></div>
+      <div class="thumbs">
+        <div class="th"><i>시술 후</i></div><div class="th b"><i>시술 후</i></div><div class="th c ask"><i>?</i></div><div class="th b"><i>시술 전</i></div>
+      </div>
+      <div style="font-weight:700;margin-top:6px">테두리 친 사진은 어느 쪽인가요?</div>
+      <div class="chips"><span class="chip">시술 전</span><span class="chip on">시술 후</span><span class="chip">AI 얼굴</span></div>
+      <div class="note">다른 사진도 누르면 고칠 수 있어요</div>
+    </div>
+    <div class="card">
+      <div class="hint" style="margin-bottom:4px">요청 글에서 이렇게 읽었어요</div>
+      <div class="kv"><span>시술</span><span>디지털펌</span></div>
+      <div class="kv"><span>보여줄 변화</span><span>뒷볼륨</span></div>
+      <div class="kv"><span>모델 연령</span><span class="q">모르겠어요 ?</span></div>
+      <div class="chips"><span class="chip">30대</span><span class="chip">40대</span><span class="chip on">50대</span><span class="chip">60대</span></div>
+      <div class="btn" style="margin-top:6px">맞아요</div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> AI가 먼저 나누고 알아낸 것을 보여 주고, 확실하지 않은 것(노랑)만 묻습니다. 물을 것이 없으면 이 화면은 뜨지 않습니다. 모르는 것은 지어내지 않고 '모르겠어요'로.</div>
+</div>
+
+<!-- 화5 b -->
+<div class="shot">
+  <div class="hd"><span class="no">화5</span>접수 확인 — 빠진 소재<span class="bd">새로 · 묶음 3</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="alert"><b>확인해 주세요</b> · 고르실 때까지 기다리고 있어요</div>
+    <div class="card">
+      <div><span class="eh">Intake</span> <span class="hint">보내신 것을 이렇게 나눴어요</span></div>
+      <div class="thumbs">
+        <div class="th"><i>시술 후</i></div><div class="th b"><i>시술 후</i></div><div class="th c"><i>시술 후</i></div>
+        <div class="th" style="background:none;border:2px dashed var(--wait)"><i style="background:none;color:var(--wait);font-weight:700">시술 전 없음</i></div>
+      </div>
+      <div style="font-size:18px;font-weight:700;margin-top:8px">시술 전 사진이 없어요</div>
+      <div class="hint">어떻게 할지 골라 주세요.</div>
+      <div class="row"><div class="btn soft">더 보내기</div><div class="btn">이대로 만들기</div></div>
+      <div class="note" style="margin-top:8px">이대로 만들면 '시술 전' 장면 없이 만들어요. 없는 장면을 지어내지 않아요.</div>
+    </div>
+    <div class="step dim"><div class="num">3</div><div><div class="nm">Script</div><div class="ds">고르시면 원고를 쓰기 시작해요</div></div><div class="st"><span class="pill">아직</span></div></div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> 소재가 일부 빠지면 무엇이 빠졌는지 알리고 운영자가 먼저 고릅니다. 고를 때까지 원고를 쓰지 않습니다(한알 「B」).</div>
+</div>
+
+<!-- 화6 -->
+<div class="shot">
+  <div class="hd"><span class="no">화6</span>원고 확인<span class="bd">고침 · 묶음 3</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="alert"><b>확인해 주세요</b> · 원고가 준비됐어요</div>
+    <div class="card">
+      <div><span class="eh">Script</span> <span class="hint">영상에서 말하고 자막에 쓸 글</span></div>
+      <div class="lines" style="margin-top:8px">
+        <div>얇고 힘없던 모발에</div>
+        <div>뿌리 볼륨을 살린 디지털펌</div>
+        <div>뒷모습까지 풍성하게</div>
+        <div>예약은 프로필 링크에서</div>
+      </div>
+      <div class="note">마지막 줄 = 썸네일 문구 3개</div>
+      <div class="lines"><div>뒷볼륨 디지털펌 / 얇은 모발 볼륨 / 50대 볼륨펌</div></div>
+      <div class="note"><span class="ok">38/85글자</span> · 14초에 맞아요</div>
+      <div class="row"><div class="btn soft">고칠 점 적기</div><div class="btn">좋아요</div></div>
+    </div>
+    <div class="note" style="margin:0 4px">「좋아요」를 누르면 이어서 만들어요. 고칠 점을 적으면 바로 다시 써서 한 번 더 보여 드려요.</div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> 화면은 거의 그대로. 「고칠 점 적기」를 보낸 뒤 "Claude 앱에 작업 확인이라고 말해 주세요"가 없어지고 바로 다시 씁니다. '원고 확인 끔' 옵션이 없어 이 화면은 늘 뜹니다.</div>
+</div>
+
+<!-- 화5-2 -->
+<div class="shot">
+  <div class="hd"><span class="no">화5-2</span>AI 얼굴 확인<span class="bd">새로 · 묶음 3-2</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="alert"><b>확인해 주세요</b> · 얼굴 사진이 준비됐어요</div>
+    <div class="card">
+      <div><span class="eh">Face</span> <span class="hint">머리 색과 모양이 같은지 봐 주세요</span></div>
+      <div class="side" style="margin-top:10px;justify-content:center">
+        <div class="vid np"><u>시술 후 사진</u></div>
+        <div class="vid np face"><u>만든 얼굴</u><em>얼굴 : AI 합성</em></div>
+      </div>
+      <div class="note" style="margin-top:8px">머리는 그대로 두고 얼굴만 50대 모델로 바꿨어요. 다시 만들기는 2번 더 할 수 있어요.</div>
+      <div class="row"><div class="btn soft">다시 만들기</div><div class="btn">좋아요</div></div>
+      <div class="btn line sm" style="margin-top:4px">고칠 점 적기</div>
+      <div class="lock">「얼굴 : AI 합성」 표시는 영상에 항상 들어가요 🔒</div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> 지금은 운영자가 올리기 전에 다른 앱에서 받아 옵니다. 웹앱이 만들고 나란히 보여 줍니다. 머리가 달라 보이면 노랑 띠 "머리가 조금 달라 보여요"가 붙습니다. '얼굴 확인'을 끄면 이 화면은 뜨지 않습니다.</div>
+</div>
+
+<!-- 화7 a -->
+<div class="shot">
+  <div class="hd"><span class="no">화7</span>문제 — 골라 주세요<span class="bd">새로 · 묶음 5</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="err"><b>잠깐 멈췄어요</b> · 하나만 골라 주시면 이어 가요</div>
+    <div class="card">
+      <div class="kv" style="display:block"><div class="note">무슨 일이 있었나요</div><div style="font-weight:700">고르신 음악을 찾지 못했어요.</div></div>
+      <div class="kv" style="display:block"><div class="note">지금</div><div>목소리까지는 다 넣었고 음악만 남았어요. 두 번 다시 찾아봤어요.</div></div>
+      <div class="kv" style="display:block"><div class="note">하실 일</div><div>아래에서 하나만 골라 주세요.</div></div>
+      <div class="btn" style="margin-top:10px">비슷한 곡으로 넣기</div>
+      <div class="btn soft" style="margin-top:8px">음악 없이 만들기</div>
+      <div class="btn line sm" style="margin-top:4px">개발자에게 넘기기</div>
+    </div>
+    <div class="step"><div class="num now">7</div><div><div class="nm">Voice · Music · Export</div><div class="ds">목소리 ✓ · 음악 ⚠ · 뽑기 ○</div></div><div class="st"><span class="pill stop">잠깐 멈춤</span></div></div>
+    <div class="note" style="margin:6px 4px">다른 작업은 그대로 진행돼요.</div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">2</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> 멈춤은 늘 세 마디(무슨 일 · 지금 · 하실 일)로. 웹앱이 먼저 다시 해 보고, 안 되면 쉬운 말로 묻습니다. 「Do It Myself」 · 「Mark Done」 · 다른 앱을 여는 Helpdesk를 없앱니다.</div>
+</div>
+
+<!-- 화7 b -->
+<div class="shot">
+  <div class="hd"><span class="no">화7</span>문제 — 개발자가 볼게요 · 기다리는 중<span class="bd">새로 · 묶음 5</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="card" style="border-left:6px solid var(--bad)">
+      <div style="font-size:18px;font-weight:700">이 작업은 개발자가 볼게요</div>
+      <div class="hint">하실 일 없어요.</div>
+      <div class="kv" style="display:block;margin-top:8px"><div class="note">무슨 일이 있었나요</div><div>영상을 뽑다가 두 번 멈췄어요. 골라 주신 대로 다시 해 봤는데 안 됐어요.</div></div>
+      <div class="kv" style="display:block"><div class="note">지금</div><div>여기까지 만든 것은 그대로 남겨 두었어요. 다른 작업은 그대로 진행돼요.</div></div>
+      <div class="btn soft sm" style="margin-top:10px">여기까지 보기</div>
+    </div>
+    <div class="sech">이런 때도 같은 꼴로</div>
+    <div class="card" style="border-left:6px solid var(--wait)">
+      <div style="font-size:18px;font-weight:700">기다리는 중이에요</div>
+      <div class="kv" style="display:block;margin-top:4px"><div class="note">무슨 일이 있었나요</div><div>오늘 쓸 수 있는 양을 다 썼어요.</div></div>
+      <div class="kv" style="display:block"><div class="note">지금</div><div>아침 7시 뒤 저절로 이어 가요.</div></div>
+      <div class="kv" style="display:block"><div class="note">하실 일</div><div>없어요.</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> 운영자의 답을 받고도 못 고치면 그 작업만 세우고 개발자에게 넘깁니다. 운영자에게 맥 앞에서 무엇을 하라고 하지 않습니다. 중간 결과물을 남기는지 · 다시 잇는지는 열린 물음(미5)입니다.</div>
+</div>
+
+<!-- 화8 -->
+<div class="shot">
+  <div class="hd"><span class="no">화8</span>완성 영상<span class="bd">고침 · 묶음 6</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">영상 저장</div></div>
+    <div class="alert"><b>다 됐어요</b> · 영상을 확인해 주세요</div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1">
+          <div class="eh">Done</div>
+          <div class="chips"><span class="chip">v1</span><span class="chip on">v2</span></div>
+          <div class="note">v2 · 14.4초<br><span class="ok">MP4 · 1080×1920 · 30fps ✓</span></div>
+          <div class="note" style="margin-top:6px">v2에서 고친 것:<br>자막 더 크게</div>
+        </div>
+      </div>
+      <div class="sech" style="margin-left:0">이 영상에 들어간 것 ▴</div>
+      <div class="kv"><span>목소리</span><span>차분한 언니 · 1.5배 <span class="ok">✓</span></span></div>
+      <div class="kv"><span>음악</span><span>Warm Hearth Acoustic <span class="ok">✓</span></span></div>
+      <div class="kv"><span>길이</span><span>14초 → 14.4초 <span class="ok">✓</span></span></div>
+      <div class="kv"><span>끝 문구</span><span>켬 <span class="ok">✓</span></span></div>
+      <div class="btn" style="margin-top:10px">승인</div>
+      <div class="row"><div class="btn soft">AI에게 고치기</div><div class="btn soft">직접 편집</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> 판 고르기(지금은 가장 새 판만 보임) · 규격 줄 · '이 영상에 들어간 것'(고른 설정이 실제로 들어갔는지) · 「고칠 점 적기」가 「AI에게 고치기」와 「직접 편집」 둘로.</div>
+</div>
+
+<!-- 화8-2 -->
+<div class="shot">
+  <div class="hd"><span class="no">화8-2</span>AI에게 고치기<span class="bd">고침 · 묶음 6</span></div>
+  <div class="phone"><div class="scr" style="filter:brightness(.98)">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">영상 저장</div></div>
+    <div class="card"><div class="side"><div class="vid" style="width:110px"><em>얼굴 : AI 합성</em></div><div><div class="eh">Done</div><div class="chips"><span class="chip">v1</span><span class="chip on">v2</span></div></div></div></div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>AI에게 고치기</h2>
+    <div class="hint">고칠 점을 누르거나 적어 주세요. 새 영상(v3)으로 만들어 드려요. 앞 영상은 그대로 남아요.</div>
+    <div class="chips"><span class="chip on">자막 더 크게</span><span class="chip">더 짧게</span><span class="chip">목소리 바꾸기</span><span class="chip">음악 바꾸기</span><span class="chip">이 장면 빼기</span></div>
+    <div class="ta">예) 마지막 2초 빼 주세요</div>
+    <div class="note">🎤로 말해도 돼요 · 손님 이름은 쓰지 마세요</div>
+    <div class="row"><div class="btn soft">취소</div><div class="btn">보내기</div></div>
+  </div></div>
+  </div>
+  <div class="ft"><b>달라지는 곳:</b> 자주 하는 고침을 단추로 · 보내면 "받았어요 — 바로 고칠게요. 다 되면 알려 드려요." 다른 앱에 말하러 가지 않습니다. 단추에 무엇을 둘지는 써 보며 모읍니다.</div>
+</div>
+
+<!-- 화11 a -->
+<div class="shot">
+  <div class="hd"><span class="no">화11</span>Edit — 직접 편집(장면)<span class="bd">새로 · 묶음 7</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← 영상으로</div><div class="btn soft sm">History</div></div>
+    <div class="side">
+      <div class="vid" style="width:118px"><em>얼굴 : AI 합성</em></div>
+      <div style="flex:1"><div class="eh" style="font-size:20px">Edit</div><div class="hint">v2를 고쳐 v3을 만들어요</div><div class="note" style="margin-top:6px">0:04.2 / 14.4초<br>목표 14초 · 최대 15초</div></div>
+    </div>
+    <div class="chips" style="margin-top:10px"><span class="chip on">Scenes 장면</span><span class="chip">Captions 자막</span><span class="chip">Sound 소리</span></div>
+    <div class="card">
+      <div class="strip">
+        <div class="th c"><i>1.8초</i></div><div class="th pick"><i>3.2초</i></div><div class="th b"><i>2.6초</i></div><div class="th"><i>3.0초</i></div><div class="th c"><i>2.4초</i></div><div class="th b"><i>1.4초</i></div>
+      </div>
+      <div style="font-weight:700">2번 장면 · 시술 후 뒷머리 영상</div>
+      <div class="o"><div>길이</div><div><span class="sel">−</span> <b>3.2초</b> <span class="sel">＋</span></div></div>
+      <div class="o"><div>순서</div><div><span class="sel">← 앞으로</span> <span class="sel">뒤로 →</span></div></div>
+      <div class="o"><div>이 장면</div><div><span class="sel">빼기</span></div></div>
+      <div class="lock">1번 장면(AI 얼굴)의 「얼굴 : AI 합성」 표시는 지울 수 없어요 🔒</div>
+    </div>
+    <div class="row"><div class="btn soft">되돌리기</div><div class="btn">새 판 만들기</div></div>
+  </div></div>
+  <div class="ft"><b>새로:</b> 지금은 휴대폰 편집이 없습니다(옛 목표가 '휴대폰으로 편집하지 않기'). 탭을 늘리지 않고 완성 영상에서 엽니다. 무엇으로 만들지는 갈림길 ㄴ, 어디까지 여는지는 열린 물음입니다.</div>
+</div>
+
+<!-- 화11 b -->
+<div class="shot">
+  <div class="hd"><span class="no">화11</span>Edit — 자막 · 고친 내역<span class="bd">새로 · 묶음 7</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← 영상으로</div><div class="btn soft sm">History</div></div>
+    <div class="chips"><span class="chip">Scenes 장면</span><span class="chip on">Captions 자막</span><span class="chip">Sound 소리</span></div>
+    <div class="card">
+      <div class="lines">
+        <div>얇고 힘없던 모발에</div>
+        <div class="ed">뿌리부터 볼륨을 살린 디지털펌▏</div>
+        <div>뒷모습까지 풍성하게</div>
+        <div>예약은 프로필 링크에서</div>
+      </div>
+      <div class="note"><span class="ok">40/85글자</span> · 글을 바꾸면 목소리도 다시 만들어요</div>
+    </div>
+    <div class="sech">History — 고친 내역</div>
+    <div class="card log" style="padding:8px 14px">
+      <div><time>v3 · 직접</time><span>자막 2번째 줄 고침 · 2번 장면 0.4초 줄임 <span class="pill">만드는 중</span></span></div>
+      <div><time>v2 · AI</time><span>자막 더 크게</span></div>
+      <div><time>v1</time><span>처음 만든 영상</span></div>
+    </div>
+    <div class="row"><div class="btn soft">되돌리기</div><div class="btn">새 판 만들기</div></div>
+    <div class="note" style="margin:8px 4px">고친 내역은 다음 영상을 더 잘 만드는 데 참고해요. 손님 이름은 적지 마세요.</div>
+  </div></div>
+  <div class="ft"><b>새로:</b> 자막 글을 눌러 고침 · 판마다 무엇을 고쳤는지 한 줄(편집 이력). 다음 영상에 저절로 반영하는 것은 다음 차수입니다. Sound 칸은 목소리 크기 · 음악 크기 · 속도 · 음악 바꾸기(그리지 않음).</div>
+</div>
+
+<!-- 화9 -->
+<div class="shot">
+  <div class="hd"><span class="no">화9</span>Feedback — 건의<span class="bd">새로 · 묶음 1</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점<br><span class="fbk" style="background:var(--accent);color:var(--onaccent)">Feedback</span></div></div>
+    <div class="big" style="opacity:.6">Send</div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2><span class="eh">Feedback</span> <span class="hint" style="font-weight:400">앱에 바라는 점을 알려 주세요</span></h2>
+    <div class="chips"><span class="chip">안 돼요</span><span class="chip on">이랬으면 해요</span><span class="chip">이건 좋아요</span></div>
+    <div class="ta" style="color:var(--ink)">원고 확인할 때 글자를 더 크게 볼 수 있으면 좋겠어요</div>
+    <div class="note">🎤로 말해도 돼요 · 손님 이름·전화번호는 쓰지 마세요<br>보던 화면과 시각은 저절로 붙어요</div>
+    <div class="row"><div class="btn soft">취소</div><div class="btn">보내기</div></div>
+    <div class="sech" style="margin-left:0">내가 보낸 건의</div>
+    <div class="log">
+      <div><time>11월 19일</time><span>이건 좋아요 · 원고 글자 수가 바로 보여서 편해요</span></div>
+      <div><time>11월 18일</time><span>안 돼요 · 영상 저장이 가끔 안 눌려요</span></div>
+    </div>
+  </div></div>
+  </div>
+  <div class="ft"><b>새로:</b> 어느 화면에서나 머리의 Feedback 단추로 엽니다. 맥에 먼저 쌓고, 손님 정보가 없는지 본 뒤 깃헙의 건의함 폴더(<code>suggestions/</code>)로 갑니다. 영상 한 편을 고치는 글(화8-2)과는 다른 자리입니다.</div>
+</div>
+
+<!-- 화10 -->
+<div class="shot">
+  <div class="hd"><span class="no">화10</span>알림 켜기 · 알림 글<span class="bd">새로 · 묶음 4</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점</div></div>
+    <div class="card">
+      <div style="font-size:20px;font-weight:700">알림을 켤까요?</div>
+      <div class="hint" style="margin:6px 0 2px">확인할 것이 생기거나 영상이 다 되면 알려 드릴게요. 앱을 닫아 두어도 받아요.</div>
+      <div class="row"><div class="btn soft">나중에</div><div class="btn">알림 켜기</div></div>
+      <div class="note" style="margin-top:8px">아이폰은 '홈 화면에 추가'한 앱에서만 알림이 와요.</div>
+    </div>
+    <div class="sech">잠금 화면에는 이렇게 보여요</div>
+    <div class="lockscr">
+      <div class="clock">3:09</div>
+      <div class="push"><small>지금</small><b>확인해 주세요</b>원고가 준비됐어요</div>
+      <div class="push"><small>12분 전</small><b>다 됐어요</b>영상을 확인해 주세요</div>
+      <div class="push"><small>1시간 전</small><b>골라 주세요</b>잠깐 멈췄어요 — 하나만 골라 주시면 이어 가요</div>
+    </div>
+    <div class="note" style="margin:8px 4px">알림 글에는 손님 정보 · 시술 내용 · 원고 글을 넣지 않아요.</div>
+  </div>
+  <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로:</b> 지금은 알림이 없습니다. 주소가 https여야 하고 아이폰에서 실제로 되는지 해 봐야 합니다. 알림을 누르면 그 작업의 화면으로 갑니다. 종류별로 고르는 것은 뒤로 미룹니다.</div>
+</div>
+
+<!-- 화13 -->
+<div class="shot">
+  <div class="hd"><span class="no">화13</span>기본 옵션<span class="bd">고침 · 묶음 0 · 3</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점</div></div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>기본 옵션</h2>
+    <div class="hint">다음 작업부터 적용돼요</div>
+    <div class="o"><div>목소리</div><div class="sel">알아서 골라요 · 기본 ▾</div></div>
+    <div class="o"><div>목소리 속도</div><div class="sel">1.5배 · 기본 ▾</div></div>
+    <div class="o"><div>음악</div><div class="sel">알아서 골라요 · 기본 ▾</div></div>
+    <div class="o"><div>끝 문구<small>예약 안내 + 가게 이름</small></div><div class="sel">켬 · 기본 ▾</div></div>
+    <div class="o"><div>길이</div><div class="sel">14초 · 기본 ▾</div></div>
+    <div class="o gone"><div>원고 확인</div><div class="sel">켬 ▾</div></div>
+    <div class="o"><div>얼굴 확인<small>만든 AI 얼굴을 보고 진행</small></div><div class="sel">켬 · 기본 ▾</div></div>
+    <div class="o"><div>올릴 곳<small>Post에 캡션이 준비될 곳</small></div><div class="sel">5곳 모두 · 기본 ▾</div></div>
+    <div class="o"><div>AI 얼굴 표시<small>실제 시술 결과로 오해하지 않게</small></div><div class="note">항상 넣어요 🔒</div></div>
+    <div class="o"><div>알림</div><div class="sel">켬 ▾</div></div>
+    <div class="row"><div class="btn soft">취소</div><div class="btn">저장</div></div>
+  </div></div>
+  </div>
+  <div class="ft"><b>달라지는 곳:</b> '원고 확인' 줄을 없앰 · '얼굴 확인' · '알림' 줄이 생김 · 잠긴 줄에 까닭 한 줄. '올릴 곳'은 1차에 그대로. 모델 이름은 운영자가 고르는 것이 아니라 이 화면에 없습니다.</div>
+</div>
+
+<!-- 화5-3 -->
+<div class="shot">
+  <div class="hd"><span class="no">화5-3</span>연출을 바꾸자는 제안<span class="bd">꼴만 · 뒤</span></div>
+  <div class="phone"><div class="scr">
+    <div class="row" style="margin:0 0 8px"><div class="btn line sm" style="justify-content:flex-start">← Jobs</div><div class="btn soft sm">옵션 바꾸기</div></div>
+    <div class="alert"><b>확인해 주세요</b> · 답하지 않으셔도 지금 연출 그대로 만들어요</div>
+    <div class="card">
+      <div style="font-size:18px;font-weight:700">이번 영상은 다른 연출이 더 어울려 보여요</div>
+      <div class="kv" style="display:block;margin-top:6px"><div class="note">지금 연출</div><div>AI 얼굴 → 시술 후 → 시술 전 → 다시 시술 후</div></div>
+      <div class="kv" style="display:block"><div class="note">바꾸면</div><div>시술 전 → 시술 후를 먼저 보여 주고 AI 얼굴은 마지막에</div></div>
+      <div class="kv" style="display:block"><div class="note">까닭</div><div>시술 전 사진이 또렷해서 변화가 잘 보여요.</div></div>
+      <div class="row"><div class="btn soft">바꿔서 만들기</div><div class="btn">지금 연출 그대로</div></div>
+      <div class="note" style="margin-top:8px">이번 영상에만 적용돼요.</div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>꼴만:</b> 기존 연출이 먼저이고, 더 맞는 연출이 있을 때만 제안하고 승인을 받습니다. 안의 연출 글은 지어낸 예시입니다. 템플릿을 두는 자리(묶음 8)가 정해진 뒤에 채웁니다.</div>
+</div>
+
+<!-- 화12 -->
+<div class="shot">
+  <div class="hd"><span class="no">화12</span>Manual — 쓰는 법 · 도움<span class="bd">고침 · 묶음 1</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="r">미첼헤어폼<br>이문아이파크자이점<br><span class="fbk">Feedback</span></div></div>
+    <div class="card">
+      <div class="eh" style="font-size:18px">Daily</div>
+      <div class="flow">
+        <div><b>1. 찍어요</b><br><span class="hint">시술 전 · 시술 후 사진과 영상</span></div>
+        <div><b>2. 보내요</b><br><span class="hint">Send를 누르고 고르면 끝. 바로 만들기 시작해요.</span></div>
+        <div><b>3. 알림이 오면 봐요</b><br><span class="hint">원고를 확인하고, 다 된 영상을 보고 승인해요.</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="eh" style="font-size:18px">Status</div>
+      <div class="kv"><span class="pill todo">확인해 주세요</span><span class="hint">답해 주시면 이어 가요</span></div>
+      <div class="kv"><span class="pill stop">잠깐 멈춤</span><span class="hint">하나만 골라 주세요</span></div>
+      <div class="kv"><span class="pill">기다리는 중</span><span class="hint">저절로 이어 가요</span></div>
+    </div>
+    <div class="card">
+      <div class="eh" style="font-size:18px">Help</div>
+      <div class="chips"><span class="chip">지금 막혔어요</span><span class="chip">이랬으면 해요</span></div>
+      <div class="note">'지금 막혔어요'는 그 작업의 화면으로, '이랬으면 해요'는 Feedback으로 가요.</div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span>Jobs<span class="badge">1</span></span><span>Post</span><span class="on">Manual</span></div></div>
+  <div class="ft"><b>달라지는 곳:</b> Daily가 세 줄로 · 상태 말을 쉬운 말로 · 상황 글을 복사해 다른 앱을 여는 Helpdesk를 없애고 두 갈래로. Workflow(단계 9개 설명)는 그리지 않았습니다.</div>
+</div>
+
+</div>
+</body>
+</html>
