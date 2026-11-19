@@ -1,0 +1,6 @@
+moved_utc	old_path	new_path	commit	reason	batch
+2026-11-19T13:24:44Z	CURRENT.md	archive/PLN_CURRENT_OLD_CLAUDE.md	213541c	AAA 꼴로 맞춤 (규칙 20·28·29, 요청 OPEN_PLN 판 2) — 옛 꼴 CURRENT를 새 CURRENT.md(맨 위 YAML)가 대체	20261119-pln-aaa-shape
+2026-11-19T13:24:44Z	directives.md	archive/PLN_DIRECTIVES_CLAUDE.md	213541c	AAA 꼴로 맞춤 (규칙 20·28·29, 요청 OPEN_PLN 판 2) — 한알 말씀은 DECISIONS.md에서 경로로 가리킴 (규칙 31)	20261119-pln-aaa-shape
+2026-11-19T13:24:44Z	knowhow.md	archive/PLN_KNOWHOW_CLAUDE.md	213541c	AAA 꼴로 맞춤 (규칙 20·28·29, 요청 OPEN_PLN 판 2) — 상설 역할 꼴에 없는 파일 (본문 비어 있음)	20261119-pln-aaa-shape
+2026-11-19T13:24:44Z	logs/_template.md	archive/logs/_template.md	213541c	AAA 꼴로 맞춤 (규칙 20·28·29, 요청 OPEN_PLN 판 2) — 상설 역할 꼴에 없는 칸	20261119-pln-aaa-shape
+2026-11-19T13:24:44Z	logs/2026-11-19-session-open.md	archive/logs/2026-11-19-session-open.md	213541c	AAA 꼴로 맞춤 (규칙 20·28·29, 요청 OPEN_PLN 판 2) — 앞 세션(CLOSED) 개설 기록	20261119-pln-aaa-shape
