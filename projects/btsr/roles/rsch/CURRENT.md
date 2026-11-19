@@ -1,10 +1,21 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 14:44 KST
+- 확인 시각: 2026-11-19 22:30 KST
 - 세션 열림(지금 세션): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 옛 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## 다른 역할 세션 (2026-11-19 22:30 KST — 한알 말씀 21:49:43 · 22:02:43 · 22:18:23, 기록: logs/2026-11-19-sub-sessions.md)
+
+- AAA와 같은 꼴로 엶: 역할마다 Paseo 작업 공간 · 가지 · worktree, 모두 Opus 5.5 · high. 역할 트리(AAA 규칙 5): PLN > RSCH · ARCH > PMO.
+  - `MITCHELL_STUDIO/BTSR/PLN` — worktrees/btsr-pln · 가지 btsr/pln · Paseo 071c15f3
+  - `MITCHELL_STUDIO/BTSR/ARCH` — worktrees/btsr-arch · 가지 btsr/arch · Paseo 9d298a54
+  - `MITCHELL_STUDIO/BTSR/PMO` — worktrees/btsr-pmo · 가지 btsr/pmo · Paseo f3cf6938
+- 세 역할이 무엇을 할지는 한알이 아직 정하지 않으심. 역할 가지를 main에 합치는 것을 누가 정하는지도 아직(여쭘).
+- subs: `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES` (Paseo 5641fdf4 · Opus 5.5) — 칸 sub/s1_open_roles/ (OPEN_PACKET.md 판 2 · 반환.md). 일 끝, 수용 판정은 아직.
+- **RSCH 자신은 아직 옛 꼴**(작업 공간이 main 폴더, 역할 폴더가 directives · knowhow · logs). AAA와 똑같이 하려면 worktree(가지 btsr/rsch)로 옮겨야 하고, 그러려면 새 세션으로 승계해야 함 — 할 때 한알께 알리기만 함(directives.md 21:30:50).
+- AAA 규칙 판: 이 PC dev/AAA 폴더 맨 위 AGENTS.md (v0.14). 세션 · 역할 · SUB를 다루기 전에 먼저 봄(knowhow.md).
 
 ## 새 세션에 넘김 (한알 말씀 2026-11-19 14:40:57 uuid 64a0c484 "현재 세션 승계하세요" · 14:43:00 uuid 03783d8a "새로운 세션으로 승계하시라는겁니다")
 

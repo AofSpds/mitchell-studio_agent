@@ -31,3 +31,10 @@
   - 개설 패킷을 판 2로 고침: 작업 공간의 경로 = 그 역할의 worktree, 역할 폴더는 AAA 규칙 20·28·29의 꼴(CURRENT에 YAML · ROADMAP · INDEX · DECISIONS · archive/, 옛 꼴 파일은 git mv로 archive/에), 역할 세션은 자기 가지에만 커밋·push하고 main에는 합치지 않음.
   - 판 1로 이미 열린 PLN(작업 공간 wks_b17624602f48a73b · 세션 d41ebe15, main 폴더)은 이어 가지 않음 — 멈추게 하고 제목에 CLOSED를 붙임(작업 공간은 AAA의 'AAA/BYUL/PMO-CLOSED'처럼 '…/PLN-CLOSED').
   - 아직 AAA와 다른 것: RSCH 자신(작업 공간이 main 폴더, 역할 폴더가 옛 꼴) · 이 저장소 맨 위 AGENTS.md(규칙 판이 주입되지 않음, 도메인 등록 없음) · main 합치기를 정하는 이(AAA는 도메인 DPM, 여기는 없음).
+- 덧붙임(22:30 KST): 한알 "arch pmo 다 어디갔나여"(22:27:07 uuid 4973fb4b) → S1이 PLN의 끝남 알림을 못 받아 멈춰 있었음(부모 라벨을 비운 탓으로 보임). ARCH·PMO를 기다리지 말고 바로 열게 함. S1 반환서: sub/s1_open_roles/반환.md (커밋 36dd4ea).
+  - 새로 연 것(AAA와 같은 꼴 — 역할마다 Paseo 작업 공간 · 가지 · worktree, 모두 claude-google · Opus 5.5 · auto · high):
+    - PLN: 작업 공간 wks_108719f6be21c0c9 (worktrees/btsr-pln) · 세션 071c15f3-6835-479a-828c-c55e6d0a5e18 · 가지 btsr/pln 47cb045(원격에 있음, 역할 폴더가 AAA 꼴: CURRENT · ROADMAP · INDEX · DECISIONS · archive/)
+    - ARCH: 작업 공간 wks_6dc6b9d13807b202 (worktrees/btsr-arch) · 세션 9d298a54-66dd-4bdd-8617-78f6c234c7ce · 가지 btsr/arch — 22:30 에 첫 일을 하는 중(옛 꼴 파일을 archive/로 옮긴 커밋 0f886ad까지, 원격에는 아직 없음)
+    - PMO: 작업 공간 wks_2dc964d20c5cca11 (worktrees/btsr-pmo) · 세션 f3cf6938-049e-45f7-bb68-a64e06bff385 · 가지 btsr/pmo — 22:30 에 첫 일을 하는 중(커밋 faa8f71까지, 원격에는 아직 없음)
+  - 작업 공간 ID와 Claude 세션 ID는 S1 반환서의 값(RSCH는 세션 목록의 제목 · 작업 폴더 · 모델과 가지만 직접 확인함). 새 작업 공간 셋의 parentWorkspaceId가 RSCH 작업 공간으로 잡힘(도구가 정함) — 한알 화면에서 어떻게 보이는지는 확인하지 못함.
+  - 앞서 잘못 연 CLOSED 넷(769642ae · c9827256 · a73bc1c9 · d41ebe15)은 22:24~22:27에 보관 처리되어 있음 — RSCH가 한 것이 아님.
