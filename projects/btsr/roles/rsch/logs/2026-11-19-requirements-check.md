@@ -36,7 +36,7 @@
 
 **읽은 범위:** 원문 T1~T90 전부(한알 45 전부, ChatGPT도 훑음) · TEMPLATE 원문 전체 · owner/utterances/2026-11-19.md 305~449줄. **안 본 것:** 4번의 '앞선 말씀' 원문 · 7번(ChatGPT 저장본) · 6번의 제품 저장소 인용 · S2 정리의 28가지 하나하나.
 
-## ② 앞선 말씀 · 제품 저장소 기준과 대조 (23:42 KST에 받음)
+## ② 앞선 말씀 · 제품 저장소 기준과 대조 (23:40 KST에 받음)
 
 **한 줄 판정:** 목록은 프로챗과 템플릿 말씀을 빠짐없이 옮겼으나, 앞선 기준을 이어받는 쪽에 빈 곳이 꽤 있음. 운영자(총괄 디렉터)가 승인한 제품 저장소 기준 가운데 요18·19·26·24와 정면으로 어긋나는 것이 넷인데 4번 '바뀐 것'에 하나도 없음. 한알의 앞선 말씀 둘("틀릴경우 다시 계획…", "오류는 절대 안됩니다")이 2~6번에 없음.
 
@@ -72,7 +72,7 @@
 - 목록에 이미 있다고 본 것: 음악 사용 범위(미10) · "여러 번의 테스트"와 "테스트 결과는 내재화"(미7) · 맥을 만지지 않음(요5와 4번 둘째 줄).
 - **읽은 범위:** 목록 전체 · owner/utterances 11-18 · 11-19 전체 · owner/REQUIREMENTS.md(비어 있음) · RSCH directives · automate-everything 60~107줄. 제품 저장소: reel-workflow.md · research/2026-11-09_video-workflow-requirements.md · pln/specs의 reel-automation · ai-face-step · voice-fit-and-export · creative_director directives · manual · requests/2026-11-09_rsch-video-workflow.md · agents/rsch/directives.md · app/webapp/README.md · AGENTS.md 전체, jobs.py 55~129줄, .claude 설정의 머리말. **안 읽은 것:** manual-webapp.md · requests/2026-11-09_reel-automation.md · terra-small-cards · terra-test-plan · chatgpt-one-word-start · pilot-chatgpt-trial 기획서 · 각 역할의 logs·knowhow · UI 시안 · S2 정리와 프로챗 원문 · ChatGPT 가지 문서. 그래서 프로챗 원문이 앞선 기준을 직접 뒤집은 곳이 있는지는 확인하지 못함.
 
-## ③ ChatGPT 저장본과 대조 (23:44 KST에 받음)
+## ③ ChatGPT 저장본과 대조 (23:42 KST에 받음)
 
 **한 줄 판정:** 두 정리는 같은 줄기. ChatGPT 장부 A01–A30(T17~T81의 한알 차례)이 모두 우리 목록의 요 번호에 이어지고 정면으로 어긋나는 곳은 없음. 우리 목록에서 고치거나 더할 곳 12군데 — 무거운 것 둘: 「둘다」(T25)의 뜻, 미4(완성 승인)를 '말씀 없음'으로 적은 것.
 
@@ -112,7 +112,7 @@
 
 **읽은 범위:** 목록 전체 · 원문 T17~T90 전부 · S2 정리 '다' · ChatGPT 가지(끝 0e4f6a4)의 actual-answers · phase1-requirements · verification-audit · publishing-research 전체, opencut-capcut-research 1~265줄(338줄 가운데), interview-state.json의 칸 일부. **안 읽은 것:** opencut-capcut-research 266~338줄 · README · evidence-map · interview-tree · interview-strategy · interview-scenarios · research-backlog · research-update · interview-state의 나머지 칸 · 조사 문서의 바깥 출처. 받은 파일은 이 PC의 임시 폴더(저장소 밖)에 두고 읽었다고 함.
 
-## 셋이 겹쳐 짚은 것 (PRIMARY가 먼저 확인할 차례, 23:45 KST)
+## 셋이 겹쳐 짚은 것 (PRIMARY가 먼저 확인할 차례, 23:42 KST)
 
 1. **요18 「둘다」(T25)의 뜻** — ①-1 · ③-1. 내가 23:19에 원문 T24 끝을 직접 봤을 때도 물음은 'AI 수정 요청으로 새 영상 / 편집 프로젝트 보존'이었음. 고쳐야 함(요18을 나누고 '편집 상태 보존'을 요구로 올림).
 2. **요21 개발자 승인의 범위** — ①-2 · ③-3. T32 물음을 내가 직접 봤음(운영자 수정의 지속 적용). [두 갈래]로.
