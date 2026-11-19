@@ -1,10 +1,20 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 22:30 KST
+- 확인 시각: 2026-11-19 22:38 KST
 - 세션 열림(지금 세션): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 옛 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## 지금 하는 일 (2026-11-19 22:38 KST) — 프로챗 인터뷰 정리 → 요구사항 정리 · 패치 기획 초벌
+
+- 근거(한알): 22:31:28 uuid fc304b16 "이제 프로챗 인터뷰가 끝났습니다. 오퍼스 보조에게 정리작업을 맡기시고 보고 받도록 하세요" · 22:37:50 uuid f4f84dc3 "보고 받으시면 요구사항 정리와 패치 기획 초벌을 만들어 제안하시면 됩니다."
+- 차례:
+  1. **S2의 보고를 받음** — `MITCHELL_STUDIO/BTSR/RSCH/S2_PROCHAT_ORGANIZE`(Paseo 30756978, Opus 5.5). 칸 `sub/s2_prochat_organize/`에 원문(PROCHAT_원문_GPT_PRO.md) · 정리(PROCHAT_정리_CLAUDE.md) · 반환.md가 생김. 5항목(범위 · 산출물 · 권한 · 증거 · 충돌)으로 확인. 한알의 말로 인용된 것은 원문 파일의 그 차례와 맞는지 몇 군데 직접 대조.
+  2. **요구사항 정리** → `studies/2026-11-19-requirements-from-prochat.md` — 한알이 정하신 것만, 근거(프로챗 차례 · 앞선 말씀)와 함께. 지어내지 않음.
+  3. **패치 기획 초벌** → `studies/2026-11-19-patch-plan-draft.md` — 지금 웹앱에서 무엇을 어떤 순서로 고칠지의 초벌. 앞서 낸 글(webapp-what-it-does · upload-to-result · uiux-proposals)의 줄 번호를 근거로. 제안이지 확정이 아님.
+  4. 한알께 제안(결론 한 줄 → 할 일 → 정해 주실 것). 확정 · 설계 · 코드는 그 뒤.
+- 사용량이 끊기면: 23:10 KST에 리셋. Paseo 알림 일정 435cf311이 23:12 · 23:30에 RSCH를 깨움 — 위 차례에서 안 된 첫 줄부터 이어 감.
 
 ## 다른 역할 세션 (2026-11-19 22:30 KST — 한알 말씀 21:49:43 · 22:02:43 · 22:18:23, 기록: logs/2026-11-19-sub-sessions.md)
 
