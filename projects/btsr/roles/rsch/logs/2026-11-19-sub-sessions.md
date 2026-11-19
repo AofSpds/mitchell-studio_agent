@@ -20,3 +20,4 @@
   - ARCH: Paseo c9827256-268c-4e58-8b69-1f48229a0dc8 · Claude 세션 0863506d-d9d7-47c5-a1cc-b3b64aaadafd · 열림 커밋 ee45ded, AAA 규칙 반영 dc0eb3d
   - PMO: Paseo a73bc1c9-6e1f-4d46-95f1-02408e07b659 · Claude 세션 2a31c0d8-3003-4b57-9a88-eb68f1d4ce2f · 열림 커밋 5586216(AAA 규칙 말씀을 함께 적음)
   - Claude 세션 ID는 각 세션이 자기 CURRENT.md에 적은 값을 옮긴 것(RSCH가 따로 대조하지 않음). 세 역할이 무엇을 할지는 아직 말씀 없음.
+- 덧붙임(22:02 KST): 한알 "없어요"(22:01:47 uuid 2933adbf) → 세 세션이 한알 화면에 보이지 않음. 세 세션은 S1 아래(RSCH의 하위의 하위)에 달려 있었음. Paseo에서 PLN·ARCH·PMO의 위 세션 값을 비워 RSCH와 같은 맨 위 줄로 올림(S1과 옛 세션은 RSCH 아래 그대로). 화면에 어떻게 보이는지는 RSCH가 볼 수 없어 확인하지 못함.
