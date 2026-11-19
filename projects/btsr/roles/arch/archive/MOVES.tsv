@@ -1,0 +1,6 @@
+moved_utc	old_path	new_path	commit	reason	batch
+2026-11-19T13:29:36Z	CURRENT.md	archive/ARCH_CURRENT_OLD_CLAUDE.md	0f886ad	옛 꼴(이 저장소 RSCH 꼴) CURRENT를 AAA 꼴 CURRENT.md(맨 위 YAML, 규칙 28)로 바꿈. 열린 때·앞 세션 ID 기록이 여기 남음	20261119-arch-aaa-form
+2026-11-19T13:29:36Z	directives.md	archive/ARCH_DIRECTIVES_OLD_CLAUDE.md	0f886ad	AAA 꼴에 directives.md 칸 없음(규칙 20). 적힌 한알 말씀 2개(21:49:43·21:52:02)는 DECISIONS.md에서 이 자리를 가리킴(규칙 31)	20261119-arch-aaa-form
+2026-11-19T13:29:36Z	knowhow.md	archive/ARCH_KNOWHOW_OLD_CLAUDE.md	0f886ad	AAA 꼴에 knowhow.md 칸 없음(규칙 20). 양식만 있고 배운 것은 비어 있었음	20261119-arch-aaa-form
+2026-11-19T13:29:36Z	logs/2026-11-19-session-open.md	archive/logs/2026-11-19-session-open.md	0f886ad	AAA 꼴에 logs/ 칸 없음(규칙 20·29). 앞 세션(Paseo c9827256, CLOSED) 여는 기록	20261119-arch-aaa-form
+2026-11-19T13:29:36Z	logs/_template.md	archive/logs/_template.md	0f886ad	AAA 꼴에 logs/ 칸 없음(규칙 20·29)	20261119-arch-aaa-form
