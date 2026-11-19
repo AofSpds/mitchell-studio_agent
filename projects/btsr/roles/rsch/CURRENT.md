@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 09:23 KST
+- 확인 시각: 2026-11-19 09:34 KST
 - 세션 열림: 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
@@ -12,6 +12,7 @@
 1. **먼저 읽기:** 이 파일 → owner/utterances/2026-11-19.md의 끝부분 → 아래 '지금까지 낸 글' 가운데 필요한 것. 규칙은 AGENTS.md.
 2. **지금 상태:** 웹앱 개선 조사 다섯 줄이 모두 끝났고(아래 표), 한알께 넷을 여쭌 채 답을 기다림.
    - **09:19 한알: ChatGPT 프로챗을 열어 요구사항을 수집하심**(uuid c526acda). 거기에 드릴 글을 studies/2026-11-19-brief-for-pro-chat.md에 씀(09:23) — 지금 상태 전부 + 아직 정해지지 않은 것 28가지. 요구사항은 그 대화에서 모이므로, 아래 넷의 답도 그쪽에서 올 수 있음.
+   - **프로챗을 엶(09:33):** https://chatgpt.com/c/6afe43b0-b62c-83ee-8c71-ea20e06cf7ad — 이 PC의 Paseo 브라우저에 로그인된 ChatGPT(Pro 플랜) 새 대화. 글 파일을 붙여 보냄. 그 대화에서 정해진 것이 이쪽으로 어떻게 돌아오는지는 아직 말씀 없음.
    - ① "사용자가 설정한대로"의 설정이 어디까지인지(소리·길이·올릴 곳 / 글자 모양·장면 틀·문구·말투까지)
    - ② 운영자의 요구사항이 웹앱에 쌓인 뒤 어떤 길로 한알께 오는지
    - ③ 확인(원고 「좋아요」·완성 「승인」)의 기본을 '보여 주고 넘어감'으로 바꿔도 되는지
