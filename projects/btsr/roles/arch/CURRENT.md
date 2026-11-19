@@ -1,8 +1,10 @@
 # MITCHELL_STUDIO/BTSR/ARCH 지금 상태
 
 - 자리: projects/btsr/roles/arch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · ARCH 역할)
-- 확인 시각: 2026-11-19 21:53 KST
+- 확인 시각: 2026-11-19 21:54 KST
 - 세션 열림: 2026-11-19 21:52 KST — Paseo 에이전트 ID c9827256-268c-4e58-8b69-1f48229a0dc8 · Claude 세션 ID 0863506d-d9d7-47c5-a1cc-b3b64aaadafd · 모델 Opus 5.5 (claude-opus-5-5) (기록: logs/2026-11-19-session-open.md) — RSCH-SUB(5641fdf4)가 엶
+- 위 역할: PLN (AAA 규칙 5 — PLN > RSCH · ARCH > PMO). 요청은 바로 아래 역할로만(15).
+- 작업 칸: `design/` (AAA 규칙 20) — 첫 정본을 쓸 때 만듦, 미리 만들지 않음.
 
 ## 지금
 

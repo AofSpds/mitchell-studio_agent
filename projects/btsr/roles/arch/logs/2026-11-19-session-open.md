@@ -11,3 +11,4 @@
 - 결과·남긴 파일: projects/btsr/roles/arch/directives.md · knowhow.md · CURRENT.md · logs/_template.md · logs/2026-11-19-session-open.md
 - 막힌 것: 없음
 - 다음: 한알 말씀 대기. 역할이 무엇을 하는지 스스로 정하지 않음. 조사·설계·코드·문서 작성은 말씀 뒤에만.
+- 덧붙임(21:54 KST): RSCH가 한알 말씀 21:52:02(uuid 099449aa) "Aaa의 규칙을 참조하세요"를 전함. AAA AGENTS.md(v0.14)와 domains/rhs/ROLES.md 머리 40줄을 읽음(읽기만). directives.md에 한 줄 더하고, CURRENT.md에 위 역할·작업 칸(`design/`)을 적음. 내 파일에 `studies/`를 ARCH 칸으로 적은 곳은 없었음(CURRENT의 `studies/`는 rsch의 것을 가리킴).
