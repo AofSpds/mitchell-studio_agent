@@ -10,3 +10,8 @@
 - 결과·남긴 파일: 이 기록. 세 세션의 ID와 열림 커밋은 아래 덧붙임에.
 - 막힌 것: 없음(여는 때까지)
 - 다음: RSCH-SUB의 보고를 받아 덧붙이고 한알께 보고.
+- 덧붙임(21:54 KST): 한알 "Aaa의 규칙을 참조하세요"(21:52:02 uuid 099449aa) → AAA 규칙 판 v0.14(이 PC의 dev/AAA 폴더 AGENTS.md, AAA main 7abdc87)와 RHS 역할 등록부(domains/rhs/ROLES.md)를 읽음.
+  - 맞춘 것(규칙 10, 이름): 하위 세션 제목 RSCH-SUB → MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES. 넘기고 끝난 옛 세션(cf9609b1) 제목 → MITCHELL_STUDIO/BTSR/RSCH CLOSED.
+  - 전한 것: PLN(769642ae) · ARCH(c9827256)에 직접, PMO는 S1이 여는 글에 넣게 함 — AAA 규칙을 읽을 것, 역할 트리(5: PLN > RSCH · ARCH > PMO), 작업 칸 이름(20: PLN requirements/ · ARCH design/ · PMO records/), 틀을 스스로 만들지 않음(1·2).
+  - 어긋난 것(숨기지 않고 적음, 규칙 27): ① 규칙 40 — SUB를 열기 전에 개설 패킷(OPEN_PACKET.md)을 그 칸에 써서 커밋해야 하는데, 여는 글(메시지)만으로 열었음. sub/ 칸은 이 저장소에 없는 꼴이라 스스로 만들지 않음(이 저장소 AGENTS.md 7). ② 규칙 13 — 세션은 위 역할이 엶(DPM → PLN → 하위 역할). 이번에는 한알 말씀대로 RSCH의 SUB가 PLN·ARCH·PMO를 엶. Paseo의 위아래(RSCH > S1 > PLN·ARCH·PMO)가 역할 트리와 다름.
+  - 맞추지 않고 둔 것: 이 저장소의 폴더 꼴(directives·knowhow·logs, CURRENT의 꼴)은 규칙 20·28과 다름 — 임시 저장소라 그대로 둠. 도메인 등록부(DOMAINS.toml)에 MITCHELL_STUDIO는 아직 없음(본 범위: domains/DOMAINS.toml · domains/README.md).
