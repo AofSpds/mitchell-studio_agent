@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-19 23:27 KST
+- 확인 시각: 2026-11-19 23:23 KST
 - 세션 열림(지금 세션): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 옛 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
@@ -14,14 +14,15 @@
   2. **요구사항 정리** → `studies/2026-11-19-requirements-from-prochat.md` — 한알이 정하신 것만, 근거(프로챗 차례 · 앞선 말씀)와 함께. 지어내지 않음.
   3. **패치 기획 초벌** → `studies/2026-11-19-patch-plan-draft.md` — 지금 웹앱에서 무엇을 어떤 순서로 고칠지의 초벌. 앞서 낸 글(webapp-what-it-does · upload-to-result · uiux-proposals)의 줄 번호를 근거로. 제안이지 확정이 아님.
   4. 한알께 제안(결론 한 줄 → 할 일 → 정해 주실 것). 확정 · 설계 · 코드는 그 뒤.
-- **지금 자리 (23:27 KST): 차례 1~4를 모두 함 — 한알의 답을 기다림.**
+- **지금 자리 (23:23 KST): 차례 1~4를 모두 함 — 한알의 답을 기다림.**
   - 차례 1: S2의 1차 보고를 받음(23:14, 커밋 835eed7). 5항목으로 보고 받음으로 판정(logs/2026-11-19-sub-sessions.md 끝). 인터뷰 구간의 한알 차례 37개를 원문과 견줌 — 모두 같음.
   - 차례 2: `studies/2026-11-19-requirements-from-prochat.md` — 정해진 요구 27줄(요1~요27, 요28은 두 갈래) · 미루신 것 4 · 안 정해진 것 11(미1~미11) · ChatGPT 저장본과 맞대기.
   - 차례 3: `studies/2026-11-19-patch-plan-draft.md` — 묶음 7개와 순서, 갈림길 둘(ㄱ ⑥을 어느 길로 · ㄴ 직접 편집을 무엇으로), 여쭐 것 다섯.
-  - 차례 4: 한알께 제안함(23:27). **여쭌 것 다섯:** ① AI 얼굴 받기를 1차에 넣는지 ② 캡컷 없이 다시 만들어 보는 시험을 할지 + 직접 편집은 웹앱 안 화면인지 ③ '원고 확인 끔' 옵션을 없앨지 ④ 건의를 깃헙의 어디에 둘지 ⑤ 이 초벌을 누가 이어받는지(PLN · ARCH · PMO).
+  - 차례 4: 한알께 제안함(23:23). **여쭌 것 다섯:** ① AI 얼굴 받기를 1차에 넣는지 ② 캡컷 없이 다시 만들어 보는 시험을 할지 + 직접 편집은 웹앱 안 화면인지 ③ '원고 확인 끔' 옵션을 없앨지 ④ 건의를 깃헙의 어디에 둘지 ⑤ 이 초벌을 누가 이어받는지(PLN · ARCH · PMO).
+  - **템플릿 인터뷰가 시작됨**(한알이 S2 창에서 23:15:56 · 23:20:23). 두 말씀을 owner/utterances에 옮겨 적었고 두 글의 6번에 덧붙임. 지금까지: 1차는 대표 워크플로우 템플릿 하나를 실수 없이 · 폴더 규칙은 여러 템플릿과 리비전을 담게. 확정 템플릿은 제품 저장소 `agents/rsch/templates/reel-workflow.md`(본문은 아직 안 읽음). **23:20:23 뒤의 말씀은 S2 칸 파일에서 마저 옮길 것.**
   - 다음: 한알의 답 → 두 글을 고침. **템플릿 인터뷰**(한알이 S2 창에서 하심)가 끝나면 S2 칸의 `TEMPLATE_한알말씀_원문_CLAUDE.md`를 owner/utterances에 옮겨 적고, 두 글의 '템플릿' 칸을 채움.
   - ChatGPT가 제품 저장소 `research/webapp-interview-20261119` 가지(끝 0e4f6a4, 원격에 있음)에 문서 15개를 올려 둠 — `docs/requirements-interview/2026-11-19/`. `phase1-requirements.md` · `verification-audit.md`만 읽음(GitHub에서, 이 PC의 제품 폴더는 건드리지 않음). 조사 글 둘(opencut-capcut-research · publishing-research)은 설계 전에 읽을 것.
-- **압축 뒤 먼저 볼 것 (23:12 KST에 적음, 23:27 고침):**
+- **압축 뒤 먼저 볼 것 (23:12 KST에 적음, 23:23 고침):**
   - 읽을 것: 이 칸 → 위 두 글 → `sub/s2_prochat_organize/반환.md` · `PROCHAT_정리_CLAUDE.md`. 원문 파일(134KB)은 통째로 읽지 말고 대조할 차례만.
   - **템플릿 요구는 프로챗 인터뷰에서 빠졌음**(한알 22:40:43). 템플릿 인터뷰는 **1차 보고가 끝난 뒤** 한알이 S2 창에서 하심(22:49:37) — 1차 보고 · 요구사항 정리 · 패치 기획 초벌에는 "템플릿은 인터뷰 뒤에 채움"이라고 비워 둠. 짐작으로 채우지 않음.
   - 일정 알림 435cf311: 23:12는 지나감(처리함), 23:30에 한 번 더 옴 — 할 일이 없으면 한 줄만 답함.
@@ -35,8 +36,8 @@
   - `MITCHELL_STUDIO/BTSR/ARCH` — worktrees/btsr-arch · 가지 btsr/arch · Paseo 9d298a54
   - `MITCHELL_STUDIO/BTSR/PMO` — worktrees/btsr-pmo · 가지 btsr/pmo · Paseo f3cf6938
 - 세 역할이 무엇을 할지는 한알이 아직 정하지 않으심. 역할 가지를 main에 합치는 것을 누가 정하는지도 아직(여쭘).
-- subs: `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES` (Paseo 5641fdf4 · Opus 5.5) — 칸 sub/s1_open_roles/ (OPEN_PACKET.md 판 2 · 반환.md). 일 끝, 받음(23:27).
-- subs: `MITCHELL_STUDIO/BTSR/RSCH/S2_PROCHAT_ORGANIZE` (Paseo 30756978 · Opus 5.5) — 칸 sub/s2_prochat_organize/ (OPEN_PACKET.md + 덧붙임 1~4 · 원문 · 정리 · 반환.md). 1차 보고 받음(23:27). **템플릿 인터뷰가 남음** — 한알이 그 창에서 시작하심.
+- subs: `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES` (Paseo 5641fdf4 · Opus 5.5) — 칸 sub/s1_open_roles/ (OPEN_PACKET.md 판 2 · 반환.md). 일 끝, 받음(23:20).
+- subs: `MITCHELL_STUDIO/BTSR/RSCH/S2_PROCHAT_ORGANIZE` (Paseo 30756978 · Opus 5.5) — 칸 sub/s2_prochat_organize/ (OPEN_PACKET.md + 덧붙임 1~4 · 원문 · 정리 · 반환.md). 1차 보고 받음(23:20). **템플릿 인터뷰가 남음** — 한알이 그 창에서 시작하심.
 - **RSCH 자신은 아직 옛 꼴**(작업 공간이 main 폴더, 역할 폴더가 directives · knowhow · logs). AAA와 똑같이 하려면 worktree(가지 btsr/rsch)로 옮겨야 하고, 그러려면 새 세션으로 승계해야 함 — 할 때 한알께 알리기만 함(directives.md 21:30:50).
 - AAA 규칙 판: 이 PC dev/AAA 폴더 맨 위 AGENTS.md (v0.14). 세션 · 역할 · SUB를 다루기 전에 먼저 봄(knowhow.md).
 
