@@ -1,0 +1,5 @@
+moved_utc	old_path	new_path	commit	reason	batch
+2026-11-19T13:29:39Z	CURRENT.md	archive/PMO_CURRENT_OLD_CLAUDE.md	faa8f71	AAA 꼴로 맞춤(규칙 20·28) — 대체된 옛 꼴, 지우지 않음. 요청서 OPEN_PMO_요청.md 판 2. 새 CURRENT.md(YAML 꼴)가 대체	20261119-pmo-aaa-shape
+2026-11-19T13:29:39Z	directives.md	archive/PMO_DIRECTIVES_CLAUDE.md	faa8f71	AAA 꼴로 맞춤(규칙 20·28) — 대체된 옛 꼴, 지우지 않음. 요청서 OPEN_PMO_요청.md 판 2. 한알 말씀은 DECISIONS.md에서 가리킴(규칙 31)	20261119-pmo-aaa-shape
+2026-11-19T13:29:39Z	knowhow.md	archive/PMO_KNOWHOW_CLAUDE.md	faa8f71	AAA 꼴로 맞춤(규칙 20·28) — 대체된 옛 꼴, 지우지 않음. 요청서 OPEN_PMO_요청.md 판 2. 빈 양식뿐	20261119-pmo-aaa-shape
+2026-11-19T13:29:39Z	logs/	archive/logs/	faa8f71	AAA 꼴로 맞춤(규칙 20·28) — 대체된 옛 꼴, 지우지 않음. 요청서 OPEN_PMO_요청.md 판 2. 앞 세션 개설 기록·양식 2개	20261119-pmo-aaa-shape
