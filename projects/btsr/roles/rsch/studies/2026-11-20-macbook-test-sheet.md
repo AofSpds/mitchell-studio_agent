@@ -1,6 +1,6 @@
 # 맥북 시험 순서서 — 오늘(11-20) 저녁 · OpenCut 옛 판을 고치지 않고
 
-- 쓴 이: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28) · 쓴 때: 2026-11-20 13:31~ KST
+- 쓴 이: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28) · 쓴 때: 2026-11-20 13:31~ KST · **고침 14:29 KST — PMO의 시험 코드(BTSR-RSCH-001, 제품 가지 `test/opencut-classic-20261120` c2d21a6)를 T9로 넣고 차례를 바꿈.** T9가 T2의 화면 없는 뽑기와 T3-반을 대신하고, T2는 덤으로 내려감. T1은 T9의 서버를 씀.
 - 근거 말씀(`owner/utterances/2026-11-20.md`): 09:40:13 「실테스트는 맥북에서 오늘 저녁에 진행합니다」 · 10:10:04 「네 테스트를 위해서 어디까지 구현을 할까요」 · 11:02:25 「아 그건 괜찮아요. 그 외에 맥북 원래 사용자가 인증이 필요한 항목이 있을까요」(Bun 설치 허락) · 13:25:19 「네 일단 저녁에 다시 정리부탁드리구요. / 테스트 코드는 구현을 해야겠지요?」
 - 바탕: S4의 `sub/s4_opencut_tech/오픈컷_기술보강_CLAUDE.md` 9번. 명령은 거기서 옮겼고, RSCH가 바꾼 곳은 **[고침]**으로 표시했습니다(목록은 맨 끝 7번).
 - **아무도 돌려 본 적 없는 명령입니다.** 꼴이 틀리면 `--help`를 보고 고쳐 쓰고, 고친 꼴을 기록 칸에 적어 주세요.
@@ -15,13 +15,15 @@
 |---|---|---|---|---|---|
 | 1 | **T0** 맥 Chrome 능력 | 맥이 OpenCut 엔진으로 H.264 · AAC를 뽑을 수 있나. 안 되면 '맥이 뽑기'의 첫째 후보가 무너짐 | Chrome | 터미널 + 화면 | 15분 |
 | 2 | **T-i** 아이폰 능력 | iOS 판과 기능 → 옛 판을 고치지 않고 되나(iOS 26) / 고쳐야 하나 | 아이폰 · 케이블 | 아이폰 + 화면 | 15분 |
-| 3 | **T2** 맥에서 한 편 뽑기 | 실제 파일의 코덱 · 규격 · 걸린 시간, 빌드가 통과하나 | Bun(허락됨) | 터미널 + 화면 | 60~90분 |
-| 4 | **T1** https로 아이폰에서 열기 | https 길, 아이폰에서 엔진이 도나 | **HTTPS 켜기(아직 안 정해짐)** · 운영자 계정 | 터미널 + 아이폰 | 45분 |
-| 5 | **T3-반** 저장 꼴 | 변환 스크립트를 짜기 전에 저장 꼴을 실물로 봄 | T2의 프로젝트 | 화면 | 20분 |
-| 6 | **T8** 캡컷 1025의 글자 값 | 자막 · 고정 글자의 모양 값(나중에 나란히 볼 때의 바탕) | 운영자 동의 | 터미널 | 15분 |
+| 3 | **T9** 시험 코드로 한 바퀴 (PMO의 MAC_RUN) | 맥이 우리가 고친 판으로 **화면 없이 한 편을 뽑나**(시험 2의 실물) · 들여오기 · 사람이 고치고 나눈 것을 되받나 · 걸린 시간 | **맥에 코드 받기(1-3에서 정할 것)** · Bun(허락됨) | 터미널 + 화면 | 60분 |
+| 4 | **T1** https로 아이폰에서 열기 | https 길, 아이폰에서 엔진이 도나 — T9의 서버로 | **HTTPS 켜기(아직 안 정해짐)** · 운영자 계정 | 터미널 + 아이폰 | 45분 |
+| 5 | **T8** 캡컷 1025의 글자 값 | 자막 · 고정 글자의 모양 값 — T9의 글자 모양(지금은 시안)을 맞출 바탕 | 운영자 동의 | 터미널 | 15분 |
+| 6 | (덤) **T2** 옛 판 그대로 화면에서 뽑기 | 고치지 않은 판의 화면 뽑기 · 60fps 소재 · 화면의 한글 글꼴 | Bun | 터미널 + 화면 | 60~90분 |
+| — | (덤) **T3-반** 저장 꼴 | T9의 3번(사람이 고치고 나눈 뒤 되받기)이 대신함. 저장 꼴은 PMO가 이 PC에서 들여오기 → 저장 → 꺼내기로 '바뀐 곳 0'까지 봄 | — | — | — |
 
-- 다 못 하면 위 차례대로 합니다. 합쳐 3시간 안팎 **[추측]**.
-- **오늘 못 하는 것:** 시험 3 전체(장면표 한 바퀴)와 시험 4(캡컷과 나란히) — 시험 코드(변환 스크립트 · 들여오기 · 화면 없이 뽑는 쪽)가 있어야 합니다.
+- 다 못 하면 위 차례대로 합니다. 1~5를 합쳐 2시간 30분 안팎 **[추측]**.
+- **PMO가 이 PC(윈도 · Chrome 157)에서 이미 본 것(반환서 `btsr/pmo` 가지 `projects/btsr/roles/pmo/records/opencut-test/`):** 화면 없는 Chrome으로 장면표 → 프로젝트 → 들여오기 → 12초 한 편 뽑기(2.6초, H.264 High · 1080×1920 · 30/1 · AAC) → 되받기(바뀐 곳 0). 뽑은 파일에서 자막 테두리 · 한글 글꼴 · 'AI 합성' 표시 · 끝 문구가 보임. **맥에서 같은지가 오늘 밤의 핵심입니다.**
+- **오늘 못 하는 것:** 시험 3의 실물(진짜 목소리 파일 — 지금 목소리는 캡컷 '텍스트 읽기' 안에만 있음)과 시험 4(캡컷 결과와 나란히 — 글자 모양 값을 T8로 맞춘 뒤).
 
 ---
 
@@ -42,6 +44,9 @@
 
 - **HTTPS를 켤지** — 안 켜면 T1만 빠집니다.
 - **누가 돌리나** — [터미널] 칸은 에이전트에게 맡길 수 있고, [화면] · [아이폰] 칸은 사람.
+- **맥에 시험 코드를 받는 길(T9)** — 제품 저장소가 비공개라 둘 가운데 하나:
+  - (가) **운영자 맥의 제품 저장소 사본에서 그 가지를 받아 꺼내기 [권고]** — `git fetch`는 받기만 하고 지금 가지 · 작업 중인 파일은 바꾸지 않음. 사본에 이미 있는 로그인으로 받음. 로그인을 새로 물으면 멈추고 (나)로.
+  - (나) **한알님 GitHub 계정으로 ZIP 받기** — 한알님 휴대폰(GitHub에 로그인된 브라우저)에서 받아 맥북으로 AirDrop. 운영자 맥에 새 로그인을 남기지 않음.
 - (이 맥북이 웹앱이 도는 맥이 아니면) Tailscale이 없을 수 있음 → T1은 빼고, T8은 캡컷 1025가 있는 맥에서.
 
 ### 1-4. 지킬 것 (시험 내내)
@@ -229,7 +234,87 @@ typeof FileSystemFileHandle!=='undefined' && 'createWritable' in FileSystemFileH
 
 - **갈리는 것:** iOS 26 이상이면 옛 판을 고치지 않고도 T1이 끝까지 갈 수 있음. 26 아래면 T1에서 '소재가 지워짐 · 소리 없음'이 나올 것 — 그게 정상이고, 고칠 곳은 '맥이 H.264 + WAV 사본을 주고 소재를 서버에서 받게'(S4 Q3). 잠금 모드면 영상 미리보기가 안 됨 → 끌지 운영자와 정함.
 
-### T2 — 옛 판을 띄워 맥에서 한 편 뽑기 (Bun 필요)
+### T9 — 시험 코드로 한 바퀴 (PMO의 MAC_RUN — 코드 c2d21a6) **[14:29 더함]**
+
+원본은 제품 가지의 `app/opencut-test/MAC_RUN.md`(PMO). 아래는 그것을 옮기고 받는 길(①)과 손 표시를 더한 것입니다. 모두 `~/oc-test/` 안에서, 가짜 소재만 씁니다. 3-3(Bun) · 3-5(가짜 소재)를 먼저 해 둡니다.
+
+**① 코드 받기** — [터미널] (1-3에서 정한 길)
+
+(가) 운영자 맥의 제품 저장소 사본에서:
+
+```zsh
+cd <제품 저장소 뿌리>
+git status -sb | head -1                              # 지금 가지 — 적어 둠(바뀌지 않아야 함)
+git fetch origin test/opencut-classic-20261120        # 받기만. 로그인을 새로 물으면 Ctrl+C → (나)
+mkdir -p ~/oc-test/ms-test && git archive FETCH_HEAD app/opencut-test | tar -x -C ~/oc-test/ms-test
+git status -sb | head -1                              # 앞과 같은지
+OT=~/oc-test/ms-test/app/opencut-test; ls "$OT"       # MAC_RUN.md · render.mjs · fork/ … 가 보이면 됨
+```
+
+(나) 한알님 GitHub 계정으로: 휴대폰 브라우저(GitHub 로그인됨)에서 `https://github.com/AofSpds/mitchell-studio/archive/refs/heads/test/opencut-classic-20261120.zip`을 받아 맥북으로 AirDrop → `~/oc-test/ms-test`에 풀기 → `OT=<풀린 폴더>/app/opencut-test`.
+
+**② 고친 판 띄우기** — [터미널] (터미널 1 — 이 창은 열어 둠)
+
+```zsh
+cd ~/oc-test && git clone https://github.com/opencut-app/opencut-classic opencut-mitchell
+cd opencut-mitchell && git checkout -b mitchell-test cf5e79e
+git apply "$OT/fork/opencut-classic-cf5e79e-mitchell.patch" && echo "얹기 됨"
+sh scripts/mitchell-fetch-font.sh                     # 한글 글꼴(Noto Sans KR, OFL)을 받음 — sha256이 194018e6…e252 인지
+bun install > ~/oc-test/out/mitchell-install.log 2>&1; echo "끝 코드 $?"
+cp apps/web/.env.example apps/web/.env.local
+cd apps/web && bun run dev --port 3417 --hostname 127.0.0.1
+```
+
+- 볼 것: `Ready`가 뜨는지. 이 맥 안(127.0.0.1)에서만 들어 방화벽 창이 안 뜸. T2의 3000과 겹치지 않게 3417.
+- `OT`는 이 창에서 쓰지 않으므로 ①을 다른 창에서 했으면 그 창의 `OT` 줄을 터미널 2에서 다시 칩니다.
+
+**③ 변환 · 뽑기 · 되받기** — [터미널] (터미널 2)
+
+```zsh
+OT=~/oc-test/ms-test/app/opencut-test; A=http://127.0.0.1:3417; J=~/oc-test/job1
+node -v
+node --test "$OT/tests/convert_diff.test.mjs"                                   # ㉠ C1·C2 자체 시험: pass 6
+node "$OT/make_fixtures.mjs" $J --video ~/oc-test/media/v1080_30.mp4
+node "$OT/convert.mjs" $J --root $J                                            # ㉡ checks: [] 인지
+node "$OT/render.mjs" $J/opencut --app $A --out ~/oc-test/out/c4_headless.mp4  # ㉢ 화면 없이 뽑기
+node "$OT/render.mjs" $J/opencut --app $A --out ~/oc-test/out/c4_headed.mp4 --headed   # ㉣ 창을 띄운 채(비교용)
+node "$OT/render.mjs" $J/opencut --page import --app $A --out ~/oc-test/out/roundtrip.json   # ㉤ 들여오기 + 편집기 길로 열기
+node "$OT/diff.mjs" $J/opencut ~/oc-test/out/roundtrip.json                    # ㉥ 바뀐 곳 0 인지
+node "$OT/render.mjs" --page frames --app $A --video ~/oc-test/out/c4_headless.mp4 --out ~/oc-test/out/c4_frames.png   # ㉦ 장면 다섯 장
+/opt/homebrew/bin/ffprobe -v error -show_entries stream=codec_type,codec_name,profile,level,width,height,r_frame_rate,sample_rate,channels,bit_rate \
+  -of default=nw=1 ~/oc-test/out/c4_headless.mp4                               # ㉧ 맥에서는 ffprobe로 한 번 더
+```
+
+- `render.mjs`는 실행마다 임시 Chrome 프로필을 만들고(맥에서는 `--use-mock-keychain`) 끝나면 지움 — 운영자 Chrome · 키체인을 안 건드림(RSCH가 코드에서 봄). Chrome이 `/Applications`에 없으면 `--chrome <실행 파일 경로>`를 더함.
+- ㉢ · ㉣은 끝에 JSON을 찍음: `ok: true` · `problems: []`이면 규격이 맞은 것. **`MITCHELL_AAC_UNSUPPORTED`가 나오면 AAC가 안 되는 것 — Opus로 바꾸지 않고 멈춘 것**(정상 동작, 적어 둠).
+- ㉧의 레벨은 `41`이 나올 것(이 PC에서도 4.1 — 제품 규격 검사는 레벨을 보지 않음).
+
+**④ 사람이 보는 들여오기 · 고치기** — [터미널] + [화면] (T0-1의 시험용 Chrome)
+
+```zsh
+node "$OT/render.mjs" $J/opencut --serve --app $A        # 찍힌 import_url을 시험용 Chrome(~/oc-test/chrome-test)으로 엶
+```
+
+1. 쪽에 '되짚기 됨'과 '편집기 길로 열어 봄'이 뜨는지 → '편집기에서 열기'.
+2. 편집기에서 자막 하나의 글을 고치고, 영상 조각 하나를 가운데서 나눔(분할) → 몇 초 기다림(자동 저장).
+3. 주소창에 `http://127.0.0.1:3417/mitchell/import` → 그 프로젝트의 '꺼내기' → 받은 파일을 `~/oc-test/out/edited.json`으로.
+4. [터미널] `node "$OT/diff.mjs" $J/opencut ~/oc-test/out/edited.json` → 고친 자막과 '나뉨'이 나오는지.
+
+| 기록 칸 | 값 |
+|---|---|
+| 받은 길((가)/(나)) · 받기 앞뒤 `git status` 첫 줄이 같았나 | |
+| node -v · bun -v · 얹기 · 글꼴 sha256 · 설치 끝 코드 | |
+| ㉠ pass 수 · ㉡ checks | |
+| ㉢ 화면 없이: ok · wall_ms · page.exportMs · page.gpuAvailable · page.codecs · spec · problems | |
+| ㉣ 창을 띄운 채: 같은 칸 | |
+| ㉤ ok · opened(elements · mediaLoaded · thumbnailMade) · ㉥ 바뀐 곳 수 | |
+| ㉦ 장면에서 자막 테두리 · 한글 글꼴 · 사진 채우기가 보이나 · ㉧ ffprobe 결과 | |
+| ④ 목록에 떴나 · 열렸나 · 소재가 다 붙었나 · 4의 결과(고친 자막 · '나뉨' · 나뉜 조각의 id) | |
+
+- **갈리는 것:** ㉢이 규격대로 나오면 '맥이 화면 없이 뽑기'가 섬 → PMO가 C4를 '화면 없이'로 마무리. ㉢만 안 되고 ㉣이 되면 '창을 띄운 채'(맥이 깨어 있어야 함). 둘 다 안 되면 T0 결과와 맞대어 ffmpeg · Remotion 길(ARCH).
+- T9이 끝나도 터미널 1의 서버(3417)는 T1에서 씀 — T1을 안 하면 Ctrl+C.
+
+### (덤) T2 — 옛 판을 띄워 맥에서 한 편 뽑기 (Bun 필요) — T9 뒤에 시간이 남을 때
 
 **① 꾸러미 설치 · 환경 값** — [터미널]
 
@@ -307,19 +392,19 @@ pkill -f "oc-test/chrome-test"                       # 화면 있는 시험용 C
 
 ### T1 — https로 띄워 아이폰에서 열어 보기 (HTTPS를 켜기로 했을 때만)
 
-**① serve 걸기** — [터미널] T2의 서버(127.0.0.1:3000)를 켠 채로, 웹앱 8765와 겹치지 않게 **8443**:
+**① serve 걸기** — [터미널] **T9의 고친 판 서버(127.0.0.1:3417)를 켠 채로** **[14:29 고침]** (T9을 못 했으면 T2의 서버 3000으로 — 아래 주소의 3417을 3000으로), 웹앱 8765와 겹치지 않게 **8443**:
 
 ```zsh
 cd <제품 저장소 뿌리>
 zsh app/webapp/tailscale/ts.sh serve --help | head -40         # 꼴 확인(판마다 다를 수 있음)
-zsh app/webapp/tailscale/ts.sh serve --bg --https=8443 http://127.0.0.1:3000
+zsh app/webapp/tailscale/ts.sh serve --bg --https=8443 http://127.0.0.1:3417
 zsh app/webapp/tailscale/ts.sh serve status                    # https://<Tailscale 이름>.<tailnet>.ts.net:8443 이 보여야 함
 ```
 
 **② 아이폰에서 열기** — [아이폰] Tailscale이 연결된 아이폰 Safari로 `https://<Tailscale 이름>.<tailnet>.ts.net:8443/projects`
 
 - 인증서 경고 없이 열리는가(Let's Encrypt).
-- `bun run dev`로 띄웠는데 화면이 비거나 개발 자원이 막힌다는 경고가 나오면: 시험 사본의 `apps/web/next.config.ts`에 `allowedDevOrigins: ["<Tailscale 이름>.<tailnet>.ts.net"]` 한 줄을 넣고 다시 띄움 **[추측]**. 시험 사본만 고치는 것이고, 고쳤다고 적음.
+- 화면이 비거나 개발 자원이 막힌다는 경고가 나오면(T9 · T2 둘 다 개발 모드로 띄움): 띄운 사본(`~/oc-test/opencut-mitchell` 또는 `~/oc-test/opencut-classic`)의 `apps/web/next.config.ts`에 `allowedDevOrigins: ["<Tailscale 이름>.<tailnet>.ts.net"]` 한 줄을 넣고 서버를 다시 띄움 **[추측]**. 시험 사본만 고치는 것이고, 고쳤다고 적음.
 - "Desktop only" 화면 → 'Take a look anyway' → 새 프로젝트 → 소재 넣기('파일' 앱의 v1080_30.mp4 · v4k_hevc.mp4 · voice.m4a · voice.wav).
 
 **③ 볼 것** — 맥 Safari의 웹 속성 콘솔을 열어 둔 채: 소재가 목록에 남는가, 사라지는가(`Failed to save media item` 줄 — 저장이 실패하면 옛 판이 그 소재를 지움, RSCH가 `add-media-asset.ts`:52-70에서 다시 봄) · 미리보기에 영상이 보이는가 · ▶ 했을 때 소리가 나는가(m4a와 wav 각각) · 4K HEVC를 넣었을 때 알림 · 미리보기가 멈추는가.
@@ -344,7 +429,7 @@ zsh app/webapp/tailscale/ts.sh serve status               # 비었는지
 
 - **갈리는 것:** iOS 26 아래에서 '소재 사라짐 · m4a 소리 없음 · wav 소리 남'이면 S4가 읽은 고칠 곳이 맞은 것 → '맥이 H.264 + WAV 사본을 주고 소재를 서버에서 받게'가 본 구현의 일로 들어감. 영상조차 안 보이면 휴대폰 화면 꼴 (가)는 접고 (나) + '맥이 뽑은 작은 미리보기 MP4를 보여 주기'를 봄.
 
-### T3-반 — 저장 꼴 확인 (코드 없음) — [화면] + [터미널] **[고침: 콘솔 `copy()` + `pbpaste`]**
+### (덤) T3-반 — 저장 꼴 확인 (코드 없음) — [화면] + [터미널] **[고침: 콘솔 `copy()` + `pbpaste`]** — T9의 ④가 대신하므로 T2를 했고 시간이 남을 때만
 
 1. 화면 있는 시험용 Chrome에서 T2의 프로젝트를 연 채 개발자 도구 콘솔에:
 
@@ -402,7 +487,7 @@ F="$HOME/Movies/CapCut/User Data/Projects/com.lveditor.draft/1025/draft_info.jso
 ## 5. 결과 돌려주기
 
 - 기록 칸을 채운 이 글(또는 화면 사진)을 RSCH 창에 붙여 주세요. 길면 `~/oc-test/out/`에 두고 알려 주세요 — 넘길 길을 그때 정합니다.
-- 넘겨도 되는 것: 기록 칸 · `build.log` · `install.log`의 오류 줄 · ffprobe 결과 · JSON 셋(가짜 소재뿐). **넘기지 않는 것:** 손님 영상에서 뽑은 그림 · 캡컷 프로젝트 파일 통째 · `.env.local`.
+- 넘겨도 되는 것: 기록 칸 · `build.log` · `install.log`의 오류 줄 · ffprobe 결과 · JSON 셋(가짜 소재뿐) · **T9의 결과 — ㉢ · ㉣이 찍은 JSON · ㉦ 그림 · `edited.json` · `c4_headless.mp4`(가짜 소재뿐)**. T9 결과는 RSCH가 PMO에 넘겨 C4 꼴과 글자 모양 값을 마무리하게 함. **넘기지 않는 것:** 손님 영상에서 뽑은 그림 · 캡컷 프로젝트 파일 통째 · `.env.local`.
 - RSCH가 받아서: 기획안 초안 묶음 T · 갈림길 ㄱ · 오1 · 오2에 반영하고, 시험 코드(변환 · 들여오기 · 화면 없이 뽑는 쪽)의 꼴을 정함.
 
 ---
@@ -411,13 +496,14 @@ F="$HOME/Movies/CapCut/User Data/Projects/com.lveditor.draft/1025/draft_info.jso
 
 ```zsh
 cd <제품 저장소 뿌리> && zsh app/webapp/tailscale/ts.sh serve status      # T1을 했으면 비었는지(안 비었으면 T1-⑤)
-# 편집기 서버: 띄운 창에서 Ctrl+C
+# 편집기 서버(T9의 3417 · T2의 3000): 띄운 창에서 Ctrl+C
 pkill -f "oc-test/chrome-"                                                # 시험용 Chrome들만 끔(운영자 Chrome은 그대로)
 kill "$(cat ~/oc-test/caffeinate.pid)"                                    # 잠자기 막기 끔
-lsof -nP -iTCP:3000 -sTCP:LISTEN; lsof -nP -iTCP:8443 -sTCP:LISTEN; lsof -nP -iTCP:9222 -sTCP:LISTEN   # 셋 다 비었는지
+for p in 3000 3417 8443 9222; do lsof -nP -iTCP:$p -sTCP:LISTEN; done     # 넷 다 비었는지
 ```
 
-- **남길지 정할 것:** `~/oc-test/`(옛 판 · 가짜 소재 · 결과 — 결과를 넘긴 뒤 지워도 됨) · Bun(`~/.bun` 폴더와 `~/.zshrc`의 bun 줄 — 시험 코드 때 다시 쓰므로 남기는 편 [제안]) · 관리 콘솔의 HTTPS 설정(운영자와).
+- T9를 (가)로 받았으면 운영자 사본에 받은 가지 표시(`origin/test/opencut-classic-20261120`)가 남음 — 작업 중인 파일 · 가지와 상관없어 그대로 둠(지우는 명령은 쓰지 않음).
+- **남길지 정할 것:** `~/oc-test/`(옛 판 · 고친 판 `opencut-mitchell` · 시험 코드 `ms-test` · 가짜 소재 · `job1` · 결과 — 결과를 넘긴 뒤 지워도 됨) · Bun(`~/.bun` 폴더와 `~/.zshrc`의 bun 줄 — 시험 코드 때 다시 쓰므로 남기는 편 [제안]) · 관리 콘솔의 HTTPS 설정(운영자와).
 - 웹앱(8765)이 그대로 도는지: 휴대폰에서 평소 주소로 한 번 열어 봄.
 
 ---
@@ -431,3 +517,4 @@ lsof -nP -iTCP:3000 -sTCP:LISTEN; lsof -nP -iTCP:8443 -sTCP:LISTEN; lsof -nP -iT
 5. **화면 없는 뽑기:** 화면 없는 Chrome에서는 파일 고르기 창이 안 떠 소재를 못 넣을 것 [추측] → 화면 있는 시험용 Chrome을 끈 뒤 **같은 프로필로** 화면 없는 Chrome을 띄워, 소재가 이미 들어간 프로젝트를 열고 Export만. 휴대폰 문턱을 피하려고 `--window-size=1440,900`.
 6. **T3-반:** Application 탭에서 값을 복사하는 대신 콘솔 `copy()` + `pbpaste`.
 7. 더함: 운영자 인증 · 여쭐 것(1번) · 암호 창 피하기(2번) · 잠자기 막기 · 손 표시 · 결과 돌려주기(5번) · 되돌리기(6번).
+8. **14:29 — PMO의 시험 코드를 T9로 넣고 차례를 바꿈:** T9(MAC_RUN)가 T2의 화면 없는 뽑기(⑥)와 T3-반을 대신함 → T2 · T3-반은 덤. T1은 T9의 서버(3417)를 씀. 맥에 코드를 받는 길 (가) · (나)를 1-3에 더함. MAC_RUN에 없던 것: 받는 길 · 받기 앞뒤 `git status` · ㉧ ffprobe · 손 표시.
