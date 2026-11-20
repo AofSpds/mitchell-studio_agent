@@ -1,13 +1,19 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 09:43 KST
+- 확인 시각: 2026-11-20 09:52 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
-## ★★★★ 지금 자리 (2026-11-20 09:38 KST, 새 세션 Opus 5.5 · Max — Paseo 7993ff28) — 압축 뒤 여기부터
+## ★★★★ 지금 자리 (2026-11-20 09:52 KST, 새 세션 Opus 5.5 · Max — Paseo 7993ff28) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (09:52에 적음 — 한알 09:50:40 uuid 5c04dae3 "일단 컨텍스트가 길어졌는데 압축을 위해 저장을 할까요.  아니면 기다렸다가 결과 오면 할깡ᆢㄷ" → 지금 저장 · 압축을 권함):**
+  1. 읽기: 이 칸 → `owner/utterances/2026-11-20.md` 끝 넷(09:12:50 · 09:31:27 · 09:40:13 · 09:50:40) → `sub/s4_opencut_tech/OPEN_PACKET.md`(덧붙임 1까지). 기획안 초안 · 연구 글은 S4 결과를 옮길 때 필요한 곳만.
+  2. **기다리는 것: S4의 '끝남' 알림.** S4는 보조 여섯의 보고를 기다리는 중(09:4x에 덧붙임 1을 받았다고 알림). Paseo 알림의 "finished"는 한 차례가 끝났다는 뜻일 수 있으니, 끝났는지는 **`반환.md`가 있는지**로 봄. 폴링하지 않음.
+  3. S4가 끝나면: 5항목(범위 · 산출물 · 권한 · 증거 · 충돌)으로 판정 → 판단에 쓰는 주장 몇 군데를 소스 · 원 출처에서 다시 확인 → 그 칸이 커밋됐는지 확인(안 됐으면 그 칸만 커밋) → SUB 기록에 받음 → **저녁 전에 `studies/`에 맥북 시험 순서서**(사람과 에이전트 둘 다 따라 할 수 있게 — 누가 돌리는지는 아직 말씀 없음) → 기획안 초안 · 오픈컷 연구 글에 옮김 → 한알께 짧게 보고.
+  4. 말씀 적기: `python -I %TEMP%\rsch_scratch\last_utt.py <개수>`(새 transcript db1af991을 읽음) → Edit로 덧붙임 → `check_utt.py <uuid 앞자리>`로 원문과 같은지 확인.
 
 - **★ 지금 하는 일 — SUB S4의 기술 보강을 기다림(09:38):** 한알 09:31:27 uuid 6a656594 "네 일단 기술적인 분석이 충분히 됐을까요. 아니라면 서브세션에 일을 맡깁니다" → 내 판단 **충분하지 않음**(방향은 섰으나 설계에 넘기기 전에 읽기 · 웹 조사로 풀 빈 곳과 돌려 봐야만 아는 것이 남음). 패킷 `sub/s4_opencut_tech/OPEN_PACKET.md`를 먼저 커밋(b7ed38f)하고 **`MITCHELL_STUDIO/BTSR/RSCH/S4_OPENCUT_TECH`를 엶** — Paseo f8b4036d · Opus 5.5 · high · auto · 읽기와 웹 조사만(설치 · 실행 없음). 물음 Q1 정적 묶음 · Q2 맥에서 화면 없이 뽑기(H.264 · AAC) · Q3 아이폰은 미리보기와 고치기만 · Q4 https와 푸시 · Q5 변환 규격 · Q6 포크 목록 · 한글 글꼴 · Q7 이용 조건 · Q8 자막 모양 값 + '돌려 봐야만 아는 것' · '초안과 어긋나는 곳'. 기록: logs/2026-11-19-sub-sessions.md 끝.
   - **끝나면(알림이 옴 — 폴링하지 않음):** 5항목(범위 · 산출물 · 권한 · 증거 · 충돌)으로 보고, 판단에 쓰는 주장은 소스 · 원 출처에서 몇 군데 다시 확인 → 받음이면 그 칸이 커밋됐는지 보고(안 됐으면 내가 그 칸만 커밋) → 기획안 초안 · 오픈컷 연구 글에 옮김 → 한알께 보고(결론 한 줄 → 바뀐 것 → 정해 주실 것). 돌려 봐야만 아는 것은 그때 '어디서 돌릴지(이 PC / 맥북)'를 한알께 여쭘.
