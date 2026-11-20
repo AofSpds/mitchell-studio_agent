@@ -3,10 +3,10 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T03:31:17+09:00"
+updated: "2026-11-21T03:34:01+09:00"
 base_commit: "fa2b7aa"
 now: "BTSR-PLN-001(작업자 모델 Sol) 받음 → 설계 1판(design/worker-model/) → PMO에 BTSR-ARCH-001 맡김 (급함 — 한알의 맥 웹앱 시험)"
-next: "PMO 반환을 받아들임 기준 1–7과 대조 → PLN에 반환(6항목 + 맥 길 한 줄)"
+next: "PMO 반환을 받아들임 기준 1–7과 대조 → PLN에 반환(6항목 + 맥 길 한 줄). 그사이 BTSR-PLN-002 묶음 1 설계 (PMO에는 ARCH-001 반환 뒤 맡김)"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-001_worker-model-sol 반환"]
 owner_wait: "-"
 subs: []
@@ -32,4 +32,5 @@ verifier: "mitchell_studio/btsr/archv"
 
 - **BTSR-PLN-001_worker-model-sol 받음** (2026-11-21 03:31 KST) — [받음](design/worker-model/WORKER_MODEL_BTSR-PLN-001_RECEIVED_CLAUDE.md). 원본 `btsr/pln` 48967ee.
 - 설계 1판 [design/worker-model/WORKER_MODEL_DESIGN_CLAUDE.md](design/worker-model/WORKER_MODEL_DESIGN_CLAUDE.md) — 제품 origin/main `9e7eb0e`를 읽고 씀(fetch·show·grep만). 설정 `app/webapp/worker_model.py` 한 곳, terra 이름 동작 자리는 모두 둠.
-- PMO에 [BTSR-ARCH-001](design/worker-model/WORKER_MODEL_BTSR-ARCH-001_REQUEST_CLAUDE.md) 맡김 — 반환 기다림.
+- PMO에 [BTSR-ARCH-001](design/worker-model/WORKER_MODEL_BTSR-ARCH-001_REQUEST_CLAUDE.md) 맡김 — PMO 받음(03:33 알림), 반환 기다림.
+- **BTSR-PLN-002_webapp-phase1-capcut 받음** (2026-11-21 03:34 KST) — [받음](design/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_RECEIVED_CLAUDE.md). 원본 `btsr/pln` ee2df91. PLN-001 다음, 묶음 1부터.
