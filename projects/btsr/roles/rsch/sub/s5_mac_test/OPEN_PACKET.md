@@ -28,15 +28,20 @@
 
 **시작 (5분)**
 
-1. 맥 Safari에서 **개인 정보 보호 창**(⇧⌘N) → GitHub에 로그인 → 이 글을 엶:
-   `https://github.com/AofSpds/mitchell-studio_agent/blob/main/projects/btsr/roles/rsch/sub/s5_mac_test/OPEN_PACKET.md`
-2. 오른쪽 위 **'Raw'** → 전체 선택(⌘A) → 복사(⌘C).
-3. 터미널을 열고 아래 한 줄을 침 → Claude Code가 뜨면 붙여 넣고(⌘V) Enter.
+긴 주소는 치지 않으셔도 됩니다 — 눌러서 찾아갑니다(11-21 01:50 「주소를 제가 치기 힘들어요.」).
+
+1. 맥 Safari에서 **개인 정보 보호 창**(⇧⌘N) → 주소창에 **`github.com`**만 치고 → 로그인.
+2. 왼쪽 저장소 목록에서 **mitchell-studio_agent**를 누름(안 보이면 목록 위 칸에 `agent`).
+3. 저장소 화면에서 키보드 **t**(또는 'Go to file' 단추) → **`s5_mac`** 침 → **`…/s5_mac_test/OPEN_PACKET.md`**를 누름 → 이 글이 열림.
+4. 아래 상자 오른쪽의 **복사 단추**(겹친 네모)를 누름 → **터미널**을 열고 붙여 넣고(⌘V) Enter → Claude Code가 뜸(처음이면 '이 폴더를 믿을까요?' → 예).
 
    ```
    mkdir -p ~/oc-test && cd ~/oc-test && claude
    ```
 
+5. Safari로 돌아와 오른쪽 위 **'Raw'** → 전체 선택(⌘A) → 복사(⌘C) → 터미널의 Claude Code에 붙여 넣고(⌘V) Enter.
+
+   - 주소를 바로 여실 수 있으면: `https://github.com/AofSpds/mitchell-studio_agent/blob/main/projects/btsr/roles/rsch/sub/s5_mac_test/OPEN_PACKET.md`
    - ChatGPT(Codex)로 할 때: Codex에서 작업 폴더를 `~/oc-test`로 고르고 똑같이 붙여 넣음.
    - **제품 저장소 폴더에서 띄우지 마세요** — 거기서는 예전 역할 설정이 먼저 읽힙니다.
 
