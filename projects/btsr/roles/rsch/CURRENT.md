@@ -1,11 +1,22 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 16:47 KST
+- 확인 시각: 2026-11-20 19:15 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★★ 지금 자리 (2026-11-20 19:15 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (19:15에 적음 — 한알 19:13:58 uuid d5ffee27 "저장하시고요")**
+  1. **지금 상황:** 오늘(11-20) 밤 한알이 집에서 빌려 온 맥북(웹앱 · 캡컷이 돌던 그 맥 — Claude Code · ChatGPT Codex가 있음)으로 시험함. **터미널 일은 맥의 Claude Code가 지시문대로**, 화면 · 아이폰은 한알. 아이폰 사용자(운영자 — 떨어져 계심, Tailscale로 이미 맥에 이어져 있음)께는 한알이 시험 중에 연락(에이전트가 S8을 마치면 알려 드림). 한알은 아이폰이 없음.
+  2. **읽기:** 지시문 `sub/s5_mac_test/OPEN_PACKET.md`(SUB `MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST` — 0 한알이 하실 것 · 2 지킬 것 · 4 S0~S10 · 5 RESULTS.md 꼴) → 순서서 `studies/2026-11-20-macbook-test-sheet.md`(사람용 · 대조용, 1-5 아이폰 사용자께 드릴 글) → 요청서 `requests/BTSR-RSCH-001_opencut-test-code/요청.md` → 이 칸 아래 ★★★★★★★(16:47~19:09의 자세한 기록).
+  3. **기다리는 것:** 한알이 시험 중에 물으시는 것(막힌 화면을 붙여 주시면 지시문 · 순서서를 고쳐 바로 답) · 끝나면 `~/oc-test/out/RESULTS.md` 내용을 붙여 주심. 폴링하지 않음.
+  4. **결과가 오면:** ① `sub/s5_mac_test/반환.md`로 커밋(한알이 붙여 주신 것이라고 적음 — 개인 정보 · ts.net 주소 · 맥 사용자 이름이 섞여 있으면 가린 뒤) ② 5항목(범위 · 산출물 · 권한 · 증거 · 충돌)으로 판정 ③ PMO(Paseo f3cf6938, BTSR-RSCH-001 열려 있음)에 알림 — C4 꼴('화면 없이' / '창 띄운 채'), 글자 모양 값은 T8 대신 제품 `app/scripts/capcut_build.mjs`:106-117 바탕, `render.mjs --serve` 기본 포트 8765를 안 겹치게 ④ 기획안 초안 묶음 T · 갈림길 ㄱ · 오1 · 오2에 반영 ⑤ 한알께 짧게 보고(결론 한 줄 → 바뀐 것 → 정해 주실 것).
+  5. **오늘 정해진 것:** T8(캡컷 1025 읽기) 오늘 뺌 · 캡컷은 오늘 안 씀 · T-i는 운영자 캡처 두 장 · T1은 운영자가 HTTPS를 켜면(떨어져서 · 통화) · T2 · T3-반은 지시문에서 뺌(순서서에만 덤).
+  6. **지킬 것:** 말씀은 `last_utt.py` → 덧붙임 → `check_utt.py`로 원문 대조. **시각은 PowerShell 시계 · `git log --date=format-local`로 — Git Bash `date`는 UTC를 냄, `grep -c $'\r'`는 엉터리(knowhow).** 맥 사용자 이름 · Tailscale 주소 · 제품 git log의 계정 이름 등 개인 정보를 적지 않음. PLN · ARCH에는 지시하지 않음(말씀 없음). 보고는 결론 한 줄 → 할 일 → 정해 주실 것, 짧게.
+  7. **저녁과 별개로 남은 일:** 기획안 초안에 S4 10번의 12곳 + 시험 코드 범위 · 1차까지 아이폰 · 애플 계정이 드는 곳(16:17 답) 옮기기 · 오픈컷 연구 글에 S4 요지 · S4가 넘긴 여쭐 것 둘(운영자와 가게가 같은 조직인가 · DSDSRefinedLetterM을 캡컷 밖에서) · 게시판 자리 · 캡컷을 놓으려면 목소리(지금 캡컷 '텍스트 읽기')를 어디서 만들지(오2).
 
 ## ★★★★★★★ 지금 자리 (2026-11-20 16:47 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 맥북 시험 준비
 
