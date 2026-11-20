@@ -1,7 +1,7 @@
 # SUB 개설 패킷 — MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (맥북 시험 지시문 · 판 2 — OpenChatCut 메인)
 
 > **⓪ 네 작업 폴더가 `~/oc-test`가 아니면(예: 제품 저장소의 Creative Director 창) — 시험을 직접 하지 말고 아래만 하고 끝낸다** (한알 11-21 02:04 「아 타자 치기기 힘들어요.」 — 한알님이 치시는 글을 줄이려고):
-> 1. 이 글 전체를 `~/oc-test/OPEN_PACKET.md`로 저장한다(받은 그대로).
+> 1. 이 글 전체를 `~/oc-test/OPEN_PACKET.md`로 저장한다(받은 그대로). 이 글은 제품 저장소 가지 `test/opencut-classic-20261120`의 `app/opencut-test/OPEN_PACKET.md`에도 있다(한알 02:0x 「스튜디오에 올리면 안되는거예요?」 — 맥의 GitHub 계정이 제 저장소에 닿지 않아서). 맥에 그 가지를 꺼낸 자리(`~/mitchell_branches/opencut-test`)가 있으면 거기서 `git pull` 한 뒤 복사하면 된다.
 > 2. 아래 칸을 통째로 돌린다 — 새 터미널 창이 열리고 `~/oc-test`에서 Claude Code(Sonnet)가 이 글을 받아 시작한다.
 > 3. 한알님께: "새 창에서 '이 폴더를 믿을까요?'가 나오면 Enter만 누르세요. 그 뒤로는 새 창이 합니다. 이 창은 쉬어도 됩니다."
 > - 이 창은 제품 저장소 · 웹앱 · `~/mitchell_branches`를 건드리지 않는다(기록이 필요하면 '맥 시험을 새 창으로 넘김' 한 줄).
