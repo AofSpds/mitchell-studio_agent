@@ -2,6 +2,7 @@
 
 - 쓴 세션: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28 · Opus 5.5)
 - 근거 말씀(`owner/utterances/2026-11-20.md`): 21:04:18 uuid f0db5d07 「기획안 보강 자료가 들어왔습니다. 검토해주세요.」 · 21:17:24 uuid f454faa1 「네 웹챗에서 연구를 해왔습니다. 자료 확인하시고, openChatCut 도 적극적으로 반영했으면 하네요.」
+- **(21:30 덧붙임) 자료는 21:11:54에 이 저장소로 이미 들어와 있었습니다** — `studies/2026-11-20-openchatcut-voice-supplement.md`(커밋 3a03e46). 21:04에 `git fetch`를 한 번만 하고 다시 보지 않아 놓쳤습니다. 검토는 [자료 검토](2026-11-20-openchatcut-supplement-review.md)에 있습니다. 아래는 그 전에 쓴 그대로입니다.
 - **한알의 웹챗 자료는 아직 받지 못했습니다.** 찾아본 곳: 이 저장소(`git fetch` — 새 커밋 없음) · 제품 저장소 가지(`gh api` — 11-20 새 커밋은 PMO 시험 코드뿐) · 이 PC의 내려받기 · 바탕 화면 · 문서 · `dev` 폴더(지난 4시간) · GitHub 저장소 · gist. Claude Docs는 이름으로 찾는 길이 없고 링크가 있어야 열립니다.
 - 그래서 이 글은 **자료를 받기 전에 원 출처만 읽은 것**입니다. 설치 · 실행은 하지 않았습니다. 읽은 것: GitHub API(저장소 정보 · 판 · 폴더) · README · `cli/commands/render.ts` · `cli/commands/export.ts`의 머리 · `MACOS-RENDER-TUNING.md`의 머리.
 - 표시: **[제안]** 내 안 · **[추측]** 짐작 · **[해석]** 이용 조건의 조항과 흔한 해석(법률 판단 아님).
