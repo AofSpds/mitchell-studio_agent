@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 00:36 KST
+- 확인 시각: 2026-11-21 00:52 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
@@ -17,6 +17,7 @@
   5. **이 PC 시험 폴더(저장소 밖, 남겨 둠 — 2.6GB+):** `C:/Users/ms1pk/dev/btsr-rsch-occ/` — `node/node-v24.22.3-win-x64` · `OpenChatCut`(f96502a + 꾸러미 + Chrome Headless Shell) · `data`(프로젝트 rsch-poc · rsch-job1) · `media-src` · `work`(`scenes2occ.mjs` 확인용 변환기 · `job1` 가짜 작업 · `pmo` PMO 사본) · `fonts`(Noto Sans KR + OFL) · `out`(기록 · mp4). 돌리는 법(Git Bash): `export PATH="/c/Users/ms1pk/dev/btsr-rsch-occ/node/node-v24.22.3-win-x64:$PATH"; export OPENCHATCUT_DATA_DIR="C:/Users/ms1pk/dev/btsr-rsch-occ/data"; cd /c/Users/ms1pk/dev/btsr-rsch-occ/OpenChatCut; node --import tsx cli/main.ts <명령> --json`. ffmpeg는 `node_modules/ffmpeg-static/ffmpeg.exe`(글자 그리기 있음), ffprobe는 `node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe`. 지금 도는 프로세스 없음.
   6. **남은 일(말씀 없으면 하지 않음):** MCP 시험 · 자막을 고칠 수 있는 글자로(OpenChatCut 글자 조각에 테두리 · 글꼴 칸이 없음 — 포크 또는 그림 유지) · 'AI 합성'을 읽히게(그림으로) · 빈 트랙 4개 까닭 · 다음 맥북 시험 5(OpenChatCut 맞대기) 순서서 · 지시문 · 맥 결과가 오면 PMO에 넘기기. PLN · ARCH에는 지시하지 않음(말씀 없음).
   7. **지킬 것:** 말씀은 날짜 파일에(11-21부터 `owner/utterances/2026-11-21.md`) — `last_utt.py` → 덧붙임 → `check_utt.py <uuid> <파일>`. 시각은 PowerShell 시계로. **파이썬 소스에 Windows `\` 경로를 넣지 않음(두 번 실패 — knowhow)**, 고치는 스크립트는 `ast.parse` 먼저. '자료가 들어왔다'는 말씀에는 이 저장소 `git fetch`부터. '못 함'이라는 주장은 돌려 볼 수 있으면 돌려서 확정. 개인 정보(맥 사용자 이름 · Tailscale 주소 · 계정 이름)를 적지 않음. 보고는 결론 한 줄 → 할 일 → 정해 주실 것, 짧게.
+  8. **한알 00:48:50 uuid fca69074 「맥을 지금 돌리나요?」(00:52)** → 확인: Paseo에 이 PC 하나뿐(맥은 없음 — RSCH는 맥에 못 닿음) · 도는 에이전트는 RSCH 하나 · 맥 결과 없음(`git fetch` 새 커밋 0) · 지시문 19:09판(c2d21a6) 그대로. 답: 지금 맥에서 도는 것 없음(한알이 맥의 Claude Code에 지시문을 붙이셔야 시작) · 지금 지시문으로 바로 돌릴 수 있음(S0~S7은 맥 에이전트 혼자 · S9 https는 아이폰 사용자 연락이 어려우면 건너뜀) · OpenChatCut은 지시문에 아직 없음. **정해 주실 것: 지금 돌리실지 · OpenChatCut 칸을 더할지** — 더하면 RSCH가 지시문에 칸을 써서 push(확인용 변환기 `scenes2occ.mjs`는 이 PC 경로가 박혀 있어 맥에 맞게 고쳐야 함 · Node 24 휴대판 · OpenChatCut f96502a · 가짜 장면표). 답을 기다림(폴링하지 않음).
 
 ## ★★★★★★★★ 지금 자리 (2026-11-20 19:15 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
