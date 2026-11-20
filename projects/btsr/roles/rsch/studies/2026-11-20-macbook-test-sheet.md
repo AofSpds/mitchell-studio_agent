@@ -1,0 +1,433 @@
+# 맥북 시험 순서서 — 오늘(11-20) 저녁 · OpenCut 옛 판을 고치지 않고
+
+- 쓴 이: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28) · 쓴 때: 2026-11-20 13:31~ KST
+- 근거 말씀(`owner/utterances/2026-11-20.md`): 09:40:13 「실테스트는 맥북에서 오늘 저녁에 진행합니다」 · 10:10:04 「네 테스트를 위해서 어디까지 구현을 할까요」 · 11:02:25 「아 그건 괜찮아요. 그 외에 맥북 원래 사용자가 인증이 필요한 항목이 있을까요」(Bun 설치 허락) · 13:25:19 「네 일단 저녁에 다시 정리부탁드리구요. / 테스트 코드는 구현을 해야겠지요?」
+- 바탕: S4의 `sub/s4_opencut_tech/오픈컷_기술보강_CLAUDE.md` 9번. 명령은 거기서 옮겼고, RSCH가 바꾼 곳은 **[고침]**으로 표시했습니다(목록은 맨 끝 7번).
+- **아무도 돌려 본 적 없는 명령입니다.** 꼴이 틀리면 `--help`를 보고 고쳐 쓰고, 고친 꼴을 기록 칸에 적어 주세요.
+- 이 맥북 = 웹앱(8765)과 캡컷이 도는 운영자의 맥북으로 읽었습니다 **[내 읽기]**. 다른 맥북이면 1-3을 보세요.
+- 손 표시: **[터미널]** 터미널 명령만(에이전트에게 맡길 수 있음) · **[화면]** 브라우저 화면을 보고 누름(사람 — 에이전트가 하려면 화면 조작 허락이 따로 듦, AAA 규칙 43) · **[아이폰]** 아이폰을 손에 듦(사람).
+
+---
+
+## 0. 한눈에
+
+| 차례 | 시험 | 무엇을 가르나 | 필요한 것 | 손 | 시간 [추측] |
+|---|---|---|---|---|---|
+| 1 | **T0** 맥 Chrome 능력 | 맥이 OpenCut 엔진으로 H.264 · AAC를 뽑을 수 있나. 안 되면 '맥이 뽑기'의 첫째 후보가 무너짐 | Chrome | 터미널 + 화면 | 15분 |
+| 2 | **T-i** 아이폰 능력 | iOS 판과 기능 → 옛 판을 고치지 않고 되나(iOS 26) / 고쳐야 하나 | 아이폰 · 케이블 | 아이폰 + 화면 | 15분 |
+| 3 | **T2** 맥에서 한 편 뽑기 | 실제 파일의 코덱 · 규격 · 걸린 시간, 빌드가 통과하나 | Bun(허락됨) | 터미널 + 화면 | 60~90분 |
+| 4 | **T1** https로 아이폰에서 열기 | https 길, 아이폰에서 엔진이 도나 | **HTTPS 켜기(아직 안 정해짐)** · 운영자 계정 | 터미널 + 아이폰 | 45분 |
+| 5 | **T3-반** 저장 꼴 | 변환 스크립트를 짜기 전에 저장 꼴을 실물로 봄 | T2의 프로젝트 | 화면 | 20분 |
+| 6 | **T8** 캡컷 1025의 글자 값 | 자막 · 고정 글자의 모양 값(나중에 나란히 볼 때의 바탕) | 운영자 동의 | 터미널 | 15분 |
+
+- 다 못 하면 위 차례대로 합니다. 합쳐 3시간 안팎 **[추측]**.
+- **오늘 못 하는 것:** 시험 3 전체(장면표 한 바퀴)와 시험 4(캡컷과 나란히) — 시험 코드(변환 스크립트 · 들여오기 · 화면 없이 뽑는 쪽)가 있어야 합니다.
+
+---
+
+## 1. 시작 전에
+
+### 1-1. 운영자(맥북 주인)께서 해 주실 것
+
+1. **맥 잠금 풀기** — 2번의 잠자기 막기를 켜 두면 처음 한 번이면 됩니다.
+2. **(T1을 할 때만) Tailscale 관리 콘솔에서 HTTPS 켜기** — login.tailscale.com에 운영자 계정으로 들어가 DNS 쪽에서 MagicDNS 켜기 · HTTPS Certificates 'Enable HTTPS'. 맥과 아이폰의 Tailscale이 운영자 계정으로 로그인돼 있습니다(제품 `agents/pmo/logs/2026-11-09_tailscale-access.md`:35). **켜면 맥의 Tailscale 이름(기록상 `mitchell` — 같은 글 :29)과 tailnet 이름이 공개 인증서 장부(CT)에 영구히 남습니다.** 이름을 바꿀 거면 켜기 전에.
+3. **(운영자 아이폰으로 할 때) 아이폰 잠금 풀기 · 케이블로 이을 때 '이 컴퓨터를 신뢰' + 아이폰 암호.** 다른 아이폰으로 T1을 하려면 그 아이폰을 운영자 Tailscale에 더해야 해서 결국 운영자 계정이 듭니다(T-i만이면 아무 아이폰이나 됨).
+
+### 1-2. 운영자께 여쭐 것 (인증은 아님)
+
+- **T8:** 캡컷 1025 프로젝트 파일을 읽는 것(읽기만, 캡컷은 끈 채).
+- **T8의 덤(안 해도 됨):** 승인된 릴스 한 편에서 프레임 한 장으로 자막 크기를 재는 것 — 손님 영상이라서.
+
+### 1-3. 정할 것
+
+- **HTTPS를 켤지** — 안 켜면 T1만 빠집니다.
+- **누가 돌리나** — [터미널] 칸은 에이전트에게 맡길 수 있고, [화면] · [아이폰] 칸은 사람.
+- (이 맥북이 웹앱이 도는 맥이 아니면) Tailscale이 없을 수 있음 → T1은 빼고, T8은 캡컷 1025가 있는 맥에서.
+
+### 1-4. 지킬 것 (시험 내내)
+
+- 제품 저장소 · `data/` · 캡컷 프로젝트는 **읽기만**. 시험은 모두 `~/oc-test/` 안에서 합니다.
+- **손님 소재는 쓰지 않습니다** — 가짜 소재(3-5)만. 아이폰으로 찍어야 하면 사람이 없는 것(벽 · 책상).
+- 웹앱(8765)과 그 자동 시작은 건드리지 않습니다. 맥에 늘 켜 두는 프로그램(LaunchAgent)을 만들지 않습니다.
+- **운영자의 Chrome 프로필은 쓰지 않습니다** — 시험용 프로필(`~/oc-test/chrome-*`)만. **[고침]**
+- 진짜 키 · 비밀 값을 넣지 않습니다(`.env.local`은 꼴만 맞는 값).
+- 끝나면 6번대로 되돌립니다.
+
+---
+
+## 2. 암호 창 피하기 **[고침 — S4 순서에 더함]**
+
+| 창 | 언제 뜨나 | 피하는 법 |
+|---|---|---|
+| 방화벽 '들어오는 연결을 허용할까요?' | 편집기 서버가 모든 주소에서 들을 때(Next의 기본) | 서버를 `-H 127.0.0.1`로 — 이 맥 안에서만. 지금 웹앱 시험과 같은 방법(제품 `agents/pmo/knowhow.md` 방화벽 줄). Tailscale serve도 127.0.0.1로 넘겨 주므로 그대로 됨 |
+| 키체인 암호 **[추측]** | Chrome을 시험용 프로필로 띄울 때 | Chrome에 `--use-mock-keychain` |
+| 관리자 암호 | Chrome이 없어 `/Applications`에 깔 때 | 홈 폴더 `~/Applications`에 깔거나 Chrome for Testing을 `~/oc-test`에(3-2) |
+| 폴더 접근 허락(암호 없음, '허용'만) | 터미널이 '다운로드' 폴더를 읽을 때 | 시험용 Chrome의 내려받기 폴더를 `~/oc-test/out`으로(T0-1) |
+| 잠자기 · 화면 잠김 | 오래 걸리는 설치 · 빌드 · 뽑기 | 아래 명령으로 잠자기를 막고, 끝나면 끔(6번) |
+
+```zsh
+mkdir -p ~/oc-test/out
+caffeinate -dims & echo $! > ~/oc-test/caffeinate.pid      # 잠자기 막기 (끝나면 6번에서 끔)
+```
+
+---
+
+## 3. 준비 — [터미널]
+
+**3-1. 어느 맥인가** — 이 맥북이 웹앱(8765)이 도는 그 맥인지 적습니다.
+
+**3-2. 판 확인**
+
+```zsh
+sw_vers; uname -m                                    # macOS 판 · arm64인지
+ls -d "/Applications/Google Chrome.app" "$HOME/Applications/Google Chrome.app" 2>/dev/null
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --version
+node -v; bun -v; git --version                      # bun이 없으면 3-3
+/opt/homebrew/bin/ffmpeg -version | head -1; /opt/homebrew/bin/ffprobe -version | head -1
+/usr/bin/python3 --version
+df -h ~                                             # 빈 자리 5GB 이상 [추측]
+lsof -nP -iTCP:3000 -sTCP:LISTEN; lsof -nP -iTCP:8443 -sTCP:LISTEN; lsof -nP -iTCP:9222 -sTCP:LISTEN   # 셋 다 비어 있어야 함
+```
+
+- **Chrome이 없으면**(한알께 여쭙고 둘 가운데 하나 — 둘 다 관리자 암호 없음): (가) Google Chrome을 내려받아 `~/Applications`(없으면 만듦)에 끌어 넣음 (나) 3-3 뒤에 `bunx @puppeteer/browsers install chrome@stable --path ~/oc-test/browsers` — Chrome for Testing(H.264 · AAC 있음, S4 Q2ⓒ). 이때는 아래 `CH`를 그 앱 안의 실행 파일로 바꿈.
+- 아래 명령은 모두 이 한 줄을 먼저 친 창에서 씁니다(Chrome이 `~/Applications`에 있으면 그 경로로):
+
+```zsh
+CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+```
+
+**3-3. Bun 1.2.18** — 한알 허락(11:02:25). 옛 판이 이 판으로 못 박혀 있음(옛 판 `package.json`:3 `"packageManager": "bun@1.2.18"` — RSCH가 다시 봄). 홈 폴더에만 깔리고 관리자 암호가 필요 없습니다.
+
+```zsh
+curl -fsSL https://bun.sh/install | bash -s "bun-v1.2.18"
+exec zsh; bun -v                                     # 1.2.18
+```
+
+**3-4. 옛 판 받기** (시험 폴더 — 제품 저장소 밖)
+
+```zsh
+mkdir -p ~/oc-test && cd ~/oc-test
+git clone --depth 1 https://github.com/opencut-app/opencut-classic.git
+cd opencut-classic && git rev-parse HEAD            # cf5e79e919144200294fb9fed22a222592a0aeea 이어야 함(보관된 저장소)
+```
+
+**3-5. 가짜 소재** (손님 소재 없이)
+
+```zsh
+mkdir -p ~/oc-test/media && cd ~/oc-test/media
+FF=/opt/homebrew/bin/ffmpeg
+# ① 세로 1080×1920 · 30fps · 10초 · H.264 + AAC (기본 소재)
+$FF -f lavfi -i testsrc2=size=1080x1920:rate=30 -f lavfi -i sine=frequency=440:sample_rate=48000 -t 10 \
+    -c:v libx264 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest v1080_30.mp4
+# ② 60fps 소재 (프로젝트 fps가 60으로 올라가는지 보기)
+$FF -f lavfi -i testsrc2=size=1080x1920:rate=60 -t 5 -c:v libx264 -pix_fmt yuv420p v1080_60.mp4
+# ③ 4K HEVC 10초 (아이폰 원본 흉내 — 8비트라 HDR은 아님)
+$FF -f lavfi -i testsrc2=size=2160x3840:rate=30 -t 10 -c:v hevc_videotoolbox -tag:v hvc1 -b:v 20M v4k_hevc.mp4
+# ④ 사진 · 목소리 · 음악
+$FF -f lavfi -i color=c=steelblue:s=1080x1440 -frames:v 1 img.png
+$FF -f lavfi -i sine=frequency=660:sample_rate=44100 -t 8 voice.wav
+$FF -f lavfi -i sine=frequency=660:sample_rate=44100 -t 8 -c:a aac -b:a 128k voice.m4a
+$FF -f lavfi -i sine=frequency=220:sample_rate=44100 -t 30 -c:a aac -b:a 128k music.m4a
+ls -la
+```
+
+- `hevc_videotoolbox`가 없다고 나오면 ③은 건너뜀(적어 둠).
+- 아이폰용: ①③④를 아이폰으로 AirDrop → '파일' 앱에 저장.
+
+**3-6. Tailscale** (T1을 할 때만)
+
+```zsh
+cd <제품 저장소 뿌리>                               # 읽기만 — 스크립트만 씀
+zsh app/webapp/tailscale/ts.sh status              # 꺼져 있으면(소켓 없음) 아래 줄을 다른 터미널 창에서
+zsh app/webapp/tailscale/start_tailscaled.sh       # 사용자 공간 모드 — 맥 암호 · VPN 허락 없이 켜짐(그 창은 열어 둠)
+zsh app/webapp/tailscale/ts.sh status              # 이 맥의 Tailscale 이름 · tailnet 이름을 봄
+zsh app/webapp/tailscale/ts.sh funnel status       # funnel이 꺼져 있어야 함(인터넷 공개 아님)
+```
+
+- 그다음 1-1의 2(관리 콘솔에서 HTTPS 켜기 — 운영자).
+- 아이폰: Tailscale 앱이 같은 tailnet에 '연결됨'.
+
+**3-7. 아이폰 준비** — [아이폰] (T-i · T1)
+
+- 설정 › 일반 › 정보에서 **iOS 버전 · 모델 이름** 적기.
+- 설정 › 개인정보 보호 및 보안에서 **잠금 모드** 켜짐/꺼짐 적기(켜져 있으면 WebCodecs 영상이 꺼짐).
+- 설정 › Safari › 고급 › **웹 속성(Web Inspector) 켜기.** 케이블로 맥에 잇고(1-1의 3), 맥 Safari 설정 › 고급 › '웹 개발자용 기능 보기' 켜기.
+
+---
+
+## 4. 시험마다
+
+### T0 — 맥 Chrome 능력 재기 (설치 없음)
+
+**T0-1. 화면 있는 Chrome(시험용 프로필)** — [터미널]로 띄우고 [화면]으로 봄 **[고침: 운영자 프로필 대신 시험용 프로필]**
+
+```zsh
+"$CH" --user-data-dir="$HOME/oc-test/chrome-test" --use-mock-keychain --no-first-run --no-default-browser-check https://example.com &
+```
+
+- 먼저 그 창에서 `chrome://settings/downloads` → 위치를 `~/oc-test/out`으로 바꿈(T2의 뽑은 파일이 여기로 옴).
+- example.com 쪽에서 개발자 도구(⌥⌘J) 콘솔에 한 줄씩:
+
+```js
+await VideoEncoder.isConfigSupported({codec:'avc1.640028', width:1080, height:1920, framerate:30, bitrate:6e6})
+await VideoEncoder.isConfigSupported({codec:'avc1.640028', width:1080, height:1920, framerate:30, bitrate:6e6, hardwareAcceleration:'prefer-hardware'})
+await VideoEncoder.isConfigSupported({codec:'avc1.640028', width:1080, height:1920, framerate:30, bitrate:6e6, hardwareAcceleration:'prefer-software'})
+await AudioEncoder.isConfigSupported({codec:'mp4a.40.2', sampleRate:44100, numberOfChannels:2, bitrate:192000})
+(()=>{const g=document.createElement('canvas').getContext('webgl2'); const e=g&&g.getExtension('WEBGL_debug_renderer_info'); return g? g.getParameter(e.UNMASKED_RENDERER_WEBGL):'webgl2 없음'})()
+!!(navigator.gpu && await navigator.gpu.requestAdapter())
+```
+
+- `chrome://gpu`를 열어 'Video Encode' · 'WebGL' · 'WebGPU' 줄을 적음.
+
+**T0-2. 화면 없는 Chrome(새 headless)** — [터미널] **[고침: 시험용 프로필 · mock keychain]**
+
+```zsh
+"$CH" --headless=new --enable-gpu --use-mock-keychain --user-data-dir="$HOME/oc-test/chrome-headless" \
+      --print-to-pdf="$HOME/oc-test/out/gpu-headless.pdf" chrome://gpu          # GPU 상태를 PDF로 (안 되면 건너뜀)
+"$CH" --headless=new --enable-gpu --use-mock-keychain --user-data-dir="$HOME/oc-test/chrome-headless" \
+      --autoplay-policy=no-user-gesture-required --remote-debugging-port=9222 https://example.com
+```
+
+- 그 창은 둔 채, T0-1의 시험용 Chrome에서 `chrome://inspect` → 'Configure…'에 `localhost:9222` → 뜬 쪽의 'inspect' → 콘솔에서 **T0-1의 여섯 줄을 똑같이** 돌림. [화면]
+- WebGL 줄에 'SwiftShader'가 나오거나 webgl2가 없으면: 같은 명령에 `--use-angle=metal`을 더해 다시. WebGPU가 거짓이면 `--enable-unsafe-webgpu`를 더해 다시.
+- 끝나면 headless 창을 Ctrl+C.
+
+| 기록 칸 | 화면 있는 Chrome | 새 headless(`--enable-gpu`) | (+`--use-angle=metal`) |
+|---|---|---|---|
+| Chrome 판 | | | |
+| H.264 no-preference / prefer-hardware / prefer-software | | | |
+| AAC 192k | | | |
+| WebGL2 renderer 문자열 | | | |
+| WebGPU 어댑터 | | | |
+| chrome://gpu 'Video Encode' | | | |
+
+- **갈리는 것:** H.264가 셋 다 거짓 → 이 맥의 Chrome으로는 못 뽑음 → 뽑는 도구를 ffmpeg · Remotion으로. AAC만 거짓 → AAC 인코더를 따로 넣거나 소리만 ffmpeg로 붙이는 길(ARCH). WebGL이 SwiftShader에서 못 벗어남 → 화면 있는 Chrome으로 뽑는 길을 T2에서 같이 잼.
+
+### T-i — 아이폰 능력 재기 (설치 없음) — [아이폰] + [화면]
+
+1. 아이폰 Safari로 `https://example.com`을 엶(https여야 WebCodecs가 보임).
+2. 맥 Safari › 개발자용 › [아이폰] › example.com → 콘솔에 한 줄씩:
+
+```js
+navigator.userAgent
+[typeof VideoDecoder, typeof AudioDecoder, typeof VideoEncoder, typeof AudioEncoder, typeof OffscreenCanvas]
+await VideoDecoder.isConfigSupported({codec:'avc1.640028'})
+await VideoDecoder.isConfigSupported({codec:'hvc1.1.6.L153.B0'})
+typeof FileSystemFileHandle!=='undefined' && 'createWritable' in FileSystemFileHandle.prototype
+!!document.createElement('canvas').getContext('webgl2')
+!!(navigator.gpu && await navigator.gpu.requestAdapter())
+```
+
+| 기록 칸 | 값 |
+|---|---|
+| 아이폰 모델 · iOS 판 · 잠금 모드 · 누구의 아이폰(운영자 / 다른 사람) | |
+| VideoDecoder · AudioDecoder · VideoEncoder · AudioEncoder · OffscreenCanvas | |
+| H.264(avc1.640028) 풀기 / HEVC(hvc1) 풀기 | |
+| createWritable | |
+| WebGL2 / WebGPU | |
+| (시험한 아이폰이 운영자 것이 아니면) 운영자 아이폰의 iOS 판 | |
+
+- **갈리는 것:** iOS 26 이상이면 옛 판을 고치지 않고도 T1이 끝까지 갈 수 있음. 26 아래면 T1에서 '소재가 지워짐 · 소리 없음'이 나올 것 — 그게 정상이고, 고칠 곳은 '맥이 H.264 + WAV 사본을 주고 소재를 서버에서 받게'(S4 Q3). 잠금 모드면 영상 미리보기가 안 됨 → 끌지 운영자와 정함.
+
+### T2 — 옛 판을 띄워 맥에서 한 편 뽑기 (Bun 필요)
+
+**① 꾸러미 설치 · 환경 값** — [터미널]
+
+```zsh
+cd ~/oc-test/opencut-classic
+bun install > ~/oc-test/out/install.log 2>&1; echo "끝 코드 $?"; tail -20 ~/oc-test/out/install.log
+cp apps/web/.env.example apps/web/.env.local       # '꼴만 맞는 값'이면 됨. 진짜 키는 넣지 않음
+```
+
+- 뜰 때 env 오류가 나면: `apps/web/Dockerfile`:24-34의 자리 표시 값(빌드용 가짜 값)과 같은 꼴로 `.env.local`을 채움.
+
+**② 빌드가 통과하는지** — [터미널] **[고침: `| tee` 뒤의 `$?`는 tee의 값이라 파일로 받음]**
+
+```zsh
+cd ~/oc-test/opencut-classic/apps/web
+bun run build > ~/oc-test/out/build.log 2>&1; echo "끝 코드 $?"
+grep -n "error\|Error" ~/oc-test/out/build.log | head -20
+```
+
+- 실패하면 오류 첫 줄을 적음 — `migrations/runner.ts` 쪽이면 S4가 읽은 대로(Q1 표 9번). **고치지 말고** ③에서 개발 모드로.
+
+**③ 띄우기 — 이 맥 안에서만** — [터미널] **[고침: `-H 127.0.0.1`]**
+
+```zsh
+cd ~/oc-test/opencut-classic/apps/web
+bun run start -H 127.0.0.1      # 빌드가 됐을 때
+bun run dev -H 127.0.0.1        # 빌드가 안 됐을 때
+# 위 꼴이 안 먹으면: bunx next start -H 127.0.0.1  /  bunx next dev --turbopack -H 127.0.0.1
+lsof -nP -iTCP:3000 -sTCP:LISTEN                    # 다른 창에서 — 127.0.0.1:3000 이어야 함(*:3000이면 방화벽 창이 뜰 수 있음)
+```
+
+**④ 한 편 만들기** — [화면] T0-1의 시험용 Chrome에서 **`http://127.0.0.1:3000/projects`** **[고침: 주소를 하나로 — 저장소가 주소마다 따로라서]**
+
+- 새 프로젝트 → 소재 넣기(`~/oc-test/media`의 v1080_30.mp4 · img.png · voice.wav · music.m4a) → 영상을 타임라인에 → 사진을 그 뒤에 → 소리 둘을 소리 트랙에 → 글자 하나("테스트 자막 한글") → 설정에서 화면 1080×1920 · 30fps인지 봄.
+- **덤(짧게):** 새 프로젝트를 하나 더 만들어 v1080_60.mp4를 처음 넣고 → 설정의 fps가 60으로 바뀌는지 적음.
+
+**⑤ 뽑기(화면 있는)** — [화면] Export → MP4 · High · 소리 포함 → 걸린 시간(초시계) → 파일이 `~/oc-test/out`에 생김(T0-1에서 바꾼 내려받기 폴더). 그다음 [터미널]:
+
+```zsh
+/opt/homebrew/bin/ffprobe -v error -show_entries stream=codec_type,codec_name,profile,level,width,height,r_frame_rate,sample_rate,channels,bit_rate \
+  -of default=nw=1 ~/oc-test/out/<받은 파일>.mp4
+```
+
+- 보면 되는 것: `h264` · `High` · level `40` · `1080`×`1920` · `30/1` · 소리 `aac`(**`opus`면 '말없이 Opus'** — S4 Q2ⓑ, RSCH가 `scene-exporter.ts`:109-121에서 다시 봄) · `44100` · `2`.
+
+**⑥ 화면 없는 Chrome으로 같은 프로젝트 뽑기(시간 · GPU)** **[고침]** — 화면 없는 Chrome에서는 파일 고르기 창이 안 떠 소재를 넣을 수 없을 것 **[추측]** → 소재가 이미 들어간 시험용 프로필을 그대로 씀.
+
+```zsh
+pkill -f "oc-test/chrome-test"                       # 화면 있는 시험용 Chrome만 끔(운영자 Chrome은 그대로)
+"$CH" --headless=new --enable-gpu --use-mock-keychain --user-data-dir="$HOME/oc-test/chrome-test" \
+      --window-size=1440,900 --autoplay-policy=no-user-gesture-required --remote-debugging-port=9222 \
+      http://127.0.0.1:3000/projects
+# 다른 터미널 창에서 — 들여다볼 Chrome을 또 다른 시험용 프로필로:
+"$CH" --user-data-dir="$HOME/oc-test/chrome-inspect" --use-mock-keychain --no-first-run chrome://inspect &
+```
+
+- `--window-size`를 준 까닭: 너비 1024 아래면 "Desktop only" 화면이 먼저 뜸(옛 판 `mobile-gate.tsx`).
+- [화면] `chrome://inspect` → 'Configure…'에 `localhost:9222` → 'inspect' 창(쪽 화면이 보이고 눌러짐)에서 ④의 프로젝트를 열고 Export만 → '끝났다' 알림과 걸린 시간을 적음 → 파일이 `~/oc-test/out`에 생겼으면 ⑤의 ffprobe. 안 생기면 '화면 없는 Chrome의 내려받기가 막힘'으로 적음.
+- 이것은 '화면 조작 없는 뽑기'의 실물이 아닙니다 — 그것은 시험 코드(렌더 전용 쪽)가 있어야 됩니다. 오늘은 **화면 없는 Chrome에서 엔진 · 인코더 · GPU가 도는지와 시간**만 봅니다.
+- 끝나면 headless 창 Ctrl+C. ⑤로 돌아가려면 T0-1의 명령으로 화면 있는 시험용 Chrome을 다시 띄움.
+
+| 기록 칸 | 값 |
+|---|---|
+| bun install 끝 코드 · 시간 · 경고 | |
+| `bun run build` 끝 코드 · 첫 오류 줄 | |
+| 띄운 꼴(start / dev, 실제 쓴 명령) · 뜰 때 오류 · 방화벽 창이 떴나 | |
+| 처음 넣은 60fps 소재 뒤 프로젝트 fps | |
+| 화면 있는 뽑기: 걸린 시간 · ffprobe 결과(영상 코덱 · 프로파일 · 레벨 · 크기 · fps · 비트레이트 / 소리 코덱 · 표본율 · 채널) | |
+| 화면 없는 뽑기: 성공/실패 · 걸린 시간 · 오류 글 · 파일이 생겼나 | |
+| 한글 글자 모양(맥 화면에서 무슨 글꼴로 보였나 — 글꼴 고르기에서 'Noto Sans KR'로 바꿨을 때 달라지는지) | |
+| 암호 · 허락 창이 뜬 것(무엇이 · 언제) | |
+
+- **안 될 때 다음 걸음:** 설치 실패 → 오류를 적고 T1 · T3-반은 건너뜀(T0 · T-i · T8은 그대로). 뽑기에서 실패 알림 → 개발자 도구 콘솔의 빨간 줄을 그대로 적음. 소리가 opus → T0의 AAC 줄과 맞대어 적음.
+- **갈리는 것:** 화면 있는 뽑기가 규격대로 나오면 엔진 길은 삶(남는 것은 들머리 · 시간). 화면 없는 쪽만 안 되면 '창을 띄운 Chrome으로 뽑기'가 다음 후보(맥이 깨어 있어야 함). 둘 다 안 되면 ffmpeg · Remotion.
+
+### T1 — https로 띄워 아이폰에서 열어 보기 (HTTPS를 켜기로 했을 때만)
+
+**① serve 걸기** — [터미널] T2의 서버(127.0.0.1:3000)를 켠 채로, 웹앱 8765와 겹치지 않게 **8443**:
+
+```zsh
+cd <제품 저장소 뿌리>
+zsh app/webapp/tailscale/ts.sh serve --help | head -40         # 꼴 확인(판마다 다를 수 있음)
+zsh app/webapp/tailscale/ts.sh serve --bg --https=8443 http://127.0.0.1:3000
+zsh app/webapp/tailscale/ts.sh serve status                    # https://<Tailscale 이름>.<tailnet>.ts.net:8443 이 보여야 함
+```
+
+**② 아이폰에서 열기** — [아이폰] Tailscale이 연결된 아이폰 Safari로 `https://<Tailscale 이름>.<tailnet>.ts.net:8443/projects`
+
+- 인증서 경고 없이 열리는가(Let's Encrypt).
+- `bun run dev`로 띄웠는데 화면이 비거나 개발 자원이 막힌다는 경고가 나오면: 시험 사본의 `apps/web/next.config.ts`에 `allowedDevOrigins: ["<Tailscale 이름>.<tailnet>.ts.net"]` 한 줄을 넣고 다시 띄움 **[추측]**. 시험 사본만 고치는 것이고, 고쳤다고 적음.
+- "Desktop only" 화면 → 'Take a look anyway' → 새 프로젝트 → 소재 넣기('파일' 앱의 v1080_30.mp4 · v4k_hevc.mp4 · voice.m4a · voice.wav).
+
+**③ 볼 것** — 맥 Safari의 웹 속성 콘솔을 열어 둔 채: 소재가 목록에 남는가, 사라지는가(`Failed to save media item` 줄 — 저장이 실패하면 옛 판이 그 소재를 지움, RSCH가 `add-media-asset.ts`:52-70에서 다시 봄) · 미리보기에 영상이 보이는가 · ▶ 했을 때 소리가 나는가(m4a와 wav 각각) · 4K HEVC를 넣었을 때 알림 · 미리보기가 멈추는가.
+
+**④ 손가락으로** — 자막 글 고치기 · 조각 하나 지우기 · 음량 · 속도 · 조각 끌기(안 될 것) · 끝 손잡이 끌기(안 될 것) — 되는 것/안 되는 것만 적음.
+
+**⑤ 끝나면 serve 끄기** — [터미널]
+
+```zsh
+zsh app/webapp/tailscale/ts.sh serve --https=8443 off     # 안 되면 --help의 끄는 꼴로. 'serve reset'은 다른 설정까지 지우므로 쓰지 않음
+zsh app/webapp/tailscale/ts.sh serve status               # 비었는지
+```
+
+| 기록 칸 | 값 |
+|---|---|
+| serve 명령의 실제 꼴 · https 주소가 열렸나 · 인증서 경고 | |
+| start / dev · allowedDevOrigins를 넣었나 | |
+| 소재가 남았나 / 사라졌나(mp4 · 4K HEVC · m4a · wav 각각) · 콘솔 줄 | |
+| 미리보기 영상 · 소리(m4a / wav) · 멈춤 | |
+| 손가락으로 된 것 · 안 된 것 | |
+| 아이폰이 뜨거워졌나 · 탭이 다시 읽혔나(죽음) | |
+
+- **갈리는 것:** iOS 26 아래에서 '소재 사라짐 · m4a 소리 없음 · wav 소리 남'이면 S4가 읽은 고칠 곳이 맞은 것 → '맥이 H.264 + WAV 사본을 주고 소재를 서버에서 받게'가 본 구현의 일로 들어감. 영상조차 안 보이면 휴대폰 화면 꼴 (가)는 접고 (나) + '맥이 뽑은 작은 미리보기 MP4를 보여 주기'를 봄.
+
+### T3-반 — 저장 꼴 확인 (코드 없음) — [화면] + [터미널] **[고침: 콘솔 `copy()` + `pbpaste`]**
+
+1. 화면 있는 시험용 Chrome에서 T2의 프로젝트를 연 채 개발자 도구 콘솔에:
+
+```js
+const openDb = n => new Promise((res, rej) => { const r = indexedDB.open(n); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+const getAll = (db, s) => new Promise((res, rej) => { const q = db.transaction(s).objectStore(s).getAll(); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+const projects = await getAll(await openDb('video-editor-projects'), 'projects');
+projects.map(p => [p.id, p.metadata?.name, p.version])
+```
+
+2. T2의 프로젝트를 고른 뒤(아래 `0`을 그 차례 번호로) 복사해 파일로:
+
+```js
+copy(JSON.stringify(projects[0], null, 2))
+```
+
+```zsh
+pbpaste > ~/oc-test/out/project.json
+```
+
+3. 타임라인에서 영상 조각 하나를 나눈(S) 뒤 1~2를 다시 → `project_split.json`.
+4. 소재 메타: 콘솔에 `copy(JSON.stringify(await getAll(await openDb('video-editor-media-' + projects[0].id), 'media-metadata'), null, 2))` → `pbpaste > ~/oc-test/out/media.json`.
+5. 보면 되는 것(S4 Q5와 맞댐): `version` 31인가 · 시각이 모두 정수이고 1초 = 120,000인가(10초 영상의 `duration`이 1,200,000 안팎) · `trimStart + duration × 속도 + trimEnd = sourceDuration` · 글자 조각 `params`의 열쇠 이름 · `transform.positionX/Y` 값 · **나눈 뒤 조각 id가 새로 생겼나** · 소재 메타에 `fps` · `hasAudio`가 없는가.
+
+| 기록 칸 | 값 |
+|---|---|
+| version · 10초 영상 duration · 불변식이 맞나 | |
+| 나눈 뒤 id(앞 조각 · 뒤 조각) | |
+| 소재 메타의 칸 목록 | |
+
+- 손님 소재가 없으므로 이 JSON 셋은 RSCH에 넘겨도 됩니다(제품 저장소에는 넣지 않음).
+
+### T8 — 자막 · 고정 글자 모양 값 읽기 (읽기만 · 캡컷 1025) — [터미널] (운영자 동의 뒤)
+
+1. 캡컷을 끈 채(파일만 읽음):
+
+```zsh
+F="$HOME/Movies/CapCut/User Data/Projects/com.lveditor.draft/1025/draft_info.json"   # 없으면 같은 폴더의 .cloud_cache_*/1025/draft_content.json
+/usr/bin/python3 -c 'import json,sys;d=json.load(open(sys.argv[1]));[print(json.loads(t["content"])["text"][:16], "|", t.get("font_size"), t.get("border_width"), t.get("border_color"), t.get("text_color"), t.get("font_path","")[-40:]) for t in d["materials"]["texts"]]' "$F"
+/usr/bin/python3 -c 'import json,sys;d=json.load(open(sys.argv[1]));print(d["canvas_config"]);[print(s["material_id"][:8], s["clip"]) for tr in d["tracks"] if tr["type"]=="text" for s in tr["segments"]]' "$F"
+```
+
+- 키 이름이 달라 멈추면 오류 줄을 그대로 적음(파일은 고치지 않음).
+
+2. (덤 — 운영자 동의가 있을 때만, 손님 영상이라서) 승인된 릴스 한 편(`data/output/…_v<N>.mp4`, **읽기만**)에서 손님 얼굴이 없는 장면의 프레임 한 장을 뽑아 자막 글자 높이 · 테두리 두께 · 세로 자리를 px로 잼. 뽑은 그림은 `~/oc-test/out/`에만 두고 저장소에 넣지 않음.
+
+| 기록 칸 | 값 |
+|---|---|
+| 1025 화면 크기(canvas_config) | |
+| 글자 넷의 font_size · border_width · border_color · 색 · 글꼴 파일 · clip(transform · scale) | |
+| (덤) 완성 영상에서 잰 자막 글자 높이 · 테두리 px · 세로 자리 | |
+
+---
+
+## 5. 결과 돌려주기
+
+- 기록 칸을 채운 이 글(또는 화면 사진)을 RSCH 창에 붙여 주세요. 길면 `~/oc-test/out/`에 두고 알려 주세요 — 넘길 길을 그때 정합니다.
+- 넘겨도 되는 것: 기록 칸 · `build.log` · `install.log`의 오류 줄 · ffprobe 결과 · JSON 셋(가짜 소재뿐). **넘기지 않는 것:** 손님 영상에서 뽑은 그림 · 캡컷 프로젝트 파일 통째 · `.env.local`.
+- RSCH가 받아서: 기획안 초안 묶음 T · 갈림길 ㄱ · 오1 · 오2에 반영하고, 시험 코드(변환 · 들여오기 · 화면 없이 뽑는 쪽)의 꼴을 정함.
+
+---
+
+## 6. 끝낼 때 되돌리기 — [터미널]
+
+```zsh
+cd <제품 저장소 뿌리> && zsh app/webapp/tailscale/ts.sh serve status      # T1을 했으면 비었는지(안 비었으면 T1-⑤)
+# 편집기 서버: 띄운 창에서 Ctrl+C
+pkill -f "oc-test/chrome-"                                                # 시험용 Chrome들만 끔(운영자 Chrome은 그대로)
+kill "$(cat ~/oc-test/caffeinate.pid)"                                    # 잠자기 막기 끔
+lsof -nP -iTCP:3000 -sTCP:LISTEN; lsof -nP -iTCP:8443 -sTCP:LISTEN; lsof -nP -iTCP:9222 -sTCP:LISTEN   # 셋 다 비었는지
+```
+
+- **남길지 정할 것:** `~/oc-test/`(옛 판 · 가짜 소재 · 결과 — 결과를 넘긴 뒤 지워도 됨) · Bun(`~/.bun` 폴더와 `~/.zshrc`의 bun 줄 — 시험 코드 때 다시 쓰므로 남기는 편 [제안]) · 관리 콘솔의 HTTPS 설정(운영자와).
+- 웹앱(8765)이 그대로 도는지: 휴대폰에서 평소 주소로 한 번 열어 봄.
+
+---
+
+## 7. S4 9번과 다른 곳 (RSCH가 바꾼 것)
+
+1. **편집기 서버를 `-H 127.0.0.1`로, 주소를 `http://127.0.0.1:3000` 하나로** — 방화벽 창을 피함(Next의 기본은 모든 주소에서 들음). 브라우저 저장소가 주소(출처)마다 따로라 `localhost`와 섞지 않음.
+2. **Chrome은 모두 시험용 프로필(`~/oc-test/chrome-*`)에 `--use-mock-keychain`** — 운영자의 Chrome 프로필 · 키체인을 건드리지 않음. S4의 chrome://gpu PDF 명령에는 프로필이 없었음.
+3. **내려받기 폴더를 `~/oc-test/out`으로** — 운영자의 '다운로드' 폴더를 쓰지 않고, 그 폴더 접근 허락 창도 피함.
+4. **끝 코드:** `명령 | tee 파일; echo $?`는 tee의 값을 보여 줌 → 파일로 받고 `$?`.
+5. **화면 없는 뽑기:** 화면 없는 Chrome에서는 파일 고르기 창이 안 떠 소재를 못 넣을 것 [추측] → 화면 있는 시험용 Chrome을 끈 뒤 **같은 프로필로** 화면 없는 Chrome을 띄워, 소재가 이미 들어간 프로젝트를 열고 Export만. 휴대폰 문턱을 피하려고 `--window-size=1440,900`.
+6. **T3-반:** Application 탭에서 값을 복사하는 대신 콘솔 `copy()` + `pbpaste`.
+7. 더함: 운영자 인증 · 여쭐 것(1번) · 암호 창 피하기(2번) · 잠자기 막기 · 손 표시 · 결과 돌려주기(5번) · 되돌리기(6번).
