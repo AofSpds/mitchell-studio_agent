@@ -10,5 +10,4 @@
 
 | 항목 | 무엇 | 상태 | 정본 | 출처 |
 |---|---|---|---|---|
-
-없음 — 한알 말씀 대기.
+| worker-model | 작업자 모델(⑥ 맥 ChatGPT/Codex)을 설정 한 곳(enum + 지금 값 GPT-6.2 Sol · 생각 High)으로 | 설계 1판 · PMO에 맡김(BTSR-ARCH-001) | [design/worker-model/WORKER_MODEL_DESIGN_CLAUDE.md](design/worker-model/WORKER_MODEL_DESIGN_CLAUDE.md) | PLN 요청 BTSR-PLN-001 (`btsr/pln` 48967ee) |
