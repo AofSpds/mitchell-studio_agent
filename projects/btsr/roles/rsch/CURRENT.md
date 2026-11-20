@@ -1,11 +1,21 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 15:24 KST
+- 확인 시각: 2026-11-20 16:29 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★ 지금 자리 (2026-11-20 16:29 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (16:29에 적음 — 한알 16:27:42 uuid 0945370b "제가 맥북을 빌려온 상황이고 잠금이나 이런건 할수 있어요. 그리고 압축해야겠네요. 저장하세요"):**
+  1. **읽기:** 이 칸 → `owner/utterances/2026-11-20.md`의 10:10:04 뒤 열한 개(10:10:04 · 10:51:39 · 11:02:25 · 13:25:19 · 13:50:27 · 15:22:25 · 15:38:44 · 16:12:13 · 16:17:39 · 16:20:52 · 16:27:42) → **순서서 `studies/2026-11-20-macbook-test-sheet.md`**(0 한눈에 · 1-3 정할 것 · 1-3-1 맥북 · 애플 계정 · T9) → 요청서 `requests/BTSR-RSCH-001_opencut-test-code/요청.md` → PMO 반환서(`git show btsr/pmo:projects/btsr/roles/pmo/records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md`). 아래 ★★★★★ 칸은 오늘 낮의 자세한 기록.
+  2. **지금 상황:** 한알이 운영자의 맥북을 빌려 옴 — 잠금 등은 한알이 함. 오늘 저녁 시험은 한알이 맥북에서 돌리는 것으로 읽음 [내 읽기 — 맥북에 에이전트를 띄울지는 말씀 없음]. 운영자 아이폰은 곁에 없을 수 있음 → T-i는 한알 아이폰으로 되고, T1은 운영자 Tailscale에 든 아이폰(또는 운영자 계정)이 있어야 함.
+  3. **저녁에 할 일 — 한알 13:25:19 "네 일단 저녁에 다시 정리부탁드리구요."** 한알이 저녁에 오시면(또는 '정리'를 말씀하시면) 순서서로 짧게 다시 정리: 결론 한 줄 → 차례 **T0 맥 Chrome 능력 → T-i 아이폰 능력 → T9 시험 코드로 한 바퀴(PMO MAC_RUN) → T1 https로 아이폰에서 열기 → T8 1025 글자 값**(덤 T2 · T3-반), 1~5 합쳐 2시간 30분 안팎 [추측] → 한알이 할 것 · 운영자께 받을 것(남은 것: T1의 Tailscale 관리 화면 HTTPS 켜기 — 운영자 계정, 웹 로그인이 남아 있으면 누르기만 · T1용 운영자 아이폰) → **정해 주실 것 셋: ① 맥에 시험 코드 받는 길 (가) 운영자 맥의 제품 저장소 사본에서 `git fetch` + `git archive` [권고] / (나) 한알 GitHub 계정으로 ZIP → AirDrop ② HTTPS를 켤지(안 켜면 T1만 빠짐) ③ T-i · T1을 어느 아이폰으로.** 이미 정해진 것: 맥북 Bun 설치 허락(11:02:25) · 시험 코드는 PMO(13:50:27) · 이 PC에 Bun · OpenCut 설치 허락(13:50:27).
+  4. **PMO(Paseo f3cf6938):** BTSR-RSCH-001 반환분 수용(14:22 반환, 건은 열어 둠) · 개발 서버 끔 · 작업 폴더 `C:\Users\ms1pk\dev\btsr-pmo-work\`와 Bun 1.2.18은 남김 · 맥 결과를 기다림(새 일 안 함). **맥 결과(T0 · T2 · T9 칸)가 오면 PMO에 알려 C4 꼴('화면 없이' / '창 띄운 채')과 글자 모양 값(T8)을 마무리시킴.** 코드: 제품 가지 `test/opencut-classic-20261120` c2d21a6(비공개 저장소 — 확인은 `gh api`로, 제품 저장소 사본에서 fetch · checkout 하지 않음).
+  5. **저녁과 별개로 남은 일:** 기획안 초안에 S4 10번의 12곳 + 시험 코드 범위 옮기기 · 오픈컷 연구 글에 S4 요지 · 1차까지 아이폰 · 애플 계정이 드는 곳(16:17:39에 답한 것)을 초안 묶음 4 · 7에 · S4가 넘긴 여쭐 것 둘(운영자와 가게가 같은 조직인가 — 이용 조건 / DSDSRefinedLetterM을 캡컷 밖에서 써도 되나) · 게시판 자리(없어서 요청서를 RSCH 칸에 둠 — 나중에 여쭐 것) · PMO에 `bun run build` 확인을 맡길지(맥과 무관, 정적 묶음 Q1). PLN · ARCH에는 지시하지 않음(말씀 없음).
+  6. **지킬 것:** 말씀은 `python -I %TEMP%\rsch_scratch\last_utt.py <n>` → 덧붙임 → `check_utt.py <uuid 앞>`로 원문 대조. **시각은 짐작하지 말고 시계 · transcript · 커밋 시각으로**(knowhow — 오늘 한 번 틀림). Windows 경로가 든 글을 파이썬 heredoc에 넣지 않음(16:28에 `\U`로 실패해 CURRENT가 한 번 빠진 채 커밋됨 — e6b79e0의 글에는 'CURRENT'가 적혀 있으나 실제로는 빠짐, 다음 커밋에서 넣음). Paseo 알림 · PMO 보고는 한알 말씀이 아님. 보고는 결론 한 줄 → 할 일 → 정해 주실 것, 짧게.
 
 ## ★★★★★ 지금 자리 (2026-11-20 10:16 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 여기부터
 
