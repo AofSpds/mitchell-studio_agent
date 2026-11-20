@@ -1,5 +1,15 @@
 # SUB 개설 패킷 — MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (맥북 시험 지시문 · 판 2 — OpenChatCut 메인)
 
+> **⓪ 네 작업 폴더가 `~/oc-test`가 아니면(예: 제품 저장소의 Creative Director 창) — 시험을 직접 하지 말고 아래만 하고 끝낸다** (한알 11-21 02:04 「아 타자 치기기 힘들어요.」 — 한알님이 치시는 글을 줄이려고):
+> 1. 이 글 전체를 `~/oc-test/OPEN_PACKET.md`로 저장한다(받은 그대로).
+> 2. 아래 칸을 통째로 돌린다 — 새 터미널 창이 열리고 `~/oc-test`에서 Claude Code(Sonnet)가 이 글을 받아 시작한다.
+> 3. 한알님께: "새 창에서 '이 폴더를 믿을까요?'가 나오면 Enter만 누르세요. 그 뒤로는 새 창이 합니다. 이 창은 쉬어도 됩니다."
+> - 이 창은 제품 저장소 · 웹앱 · `~/mitchell_branches`를 건드리지 않는다(기록이 필요하면 '맥 시험을 새 창으로 넘김' 한 줄).
+>
+> ```zsh
+> mkdir -p ~/oc-test && { echo '#!/bin/zsh'; echo 'cd ~/oc-test && exec claude --model sonnet "$(cat ~/oc-test/OPEN_PACKET.md)"'; } > ~/oc-test/start.command && chmod +x ~/oc-test/start.command && open -a Terminal ~/oc-test/start.command
+> ```
+
 > **맥의 에이전트에게:** 이 글 전체가 네 일이다. 1~3번을 읽고 4번 A0부터 차례로 시작해라. **A(OpenChatCut)가 오늘의 핵심이고, B(OpenCut 옛 판)는 A가 끝난 뒤 한알님이 하자고 하실 때만** 한다. 화면 · 아이폰 단계는 한알님께 말로 부탁하고 기다려라.
 
 | 칸 | 값 |
