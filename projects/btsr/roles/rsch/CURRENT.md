@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 03:27 KST
+- 확인 시각: 2026-11-21 03:35 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
@@ -12,7 +12,7 @@
 - **방향 바뀜(03:12:51):** 「기존 캡컷 사용 완성도 높이기로 합시다」 · 03:14:14 「테스트지를 다시 … 빨리 테스트하면서 다른 기능 다 완성합시다」 · 03:18:33 「웹앱 테스트는 챗gpt가 진행」 · 「테라 바라보는 거 바꾸시라고 몇번 얘기했나요」(11-19 말씀 넷을 RSCH가 안 넘김).
 - **03:20 잘못:** RSCH가 PMO에 Terra 지시를 메시지로 바로 보냄(AAA 15 · 16 · 17 어김) → 한알 「aaa도 안읽으셨네. 누가 바로 pmo에 보내나요 와」 → 거둠 메시지 → PMO: 제품 저장소 0 변경 · 이 PC 로컬 가지 `fix/worker-model-sol-20261121`만 · PMO 기록 140ed71 · c014ff5. knowhow에 적음.
 - **테스트지:** 시험 가지 `app/opencut-test/WEBAPP_TEST.md`(1c88201)는 **사람이 하는 판(낡음)**. 제 저장소 `studies/2026-11-21-webapp-capcut-test.md`는 ChatGPT가 하는 판으로 고쳐 씀 — **컴퓨터 유즈라 AAA 43(정식 요청 + 한알 사전 승인) 전에는 올리지 않음.**
-- **여쭌 것(답 기다림):** ① Terra 건을 PLN 게시판 요청서로(→ PLN → ARCH → PMO) 1 네 · 2 기다리기 ② 웹앱 테스트의 ChatGPT 화면 조작 승인 1 네(정식 요청서 먼저 보여 드림) · 2 아니오. 게시판(`board/`) 자리는 이 저장소에 아직 없음 — 만들기 전에 AAA 16 꼴 확인.
+- **03:23:56 한알 「1,1 2,1 / 진행하시구요.」** → ① 요청 **BTSR-RSCH-002_worker-model-sol**(`requests/` — 게시판 없어 RSCH 칸, 001과 같음) main 7894480 · PLN(071c15f3)에 '왔다'만 알림 → PLN 받음 · ARCH → PMO 차례, 반환서에 '맥에 들어가는 길' ② 웹앱 테스트 지시문 판 2(ChatGPT 6.2 Sol High가 운영자 대신 · 0번 컴퓨터 유즈 요청 AAA 43 · 승인 03:23:56) 시험 가지 `app/opencut-test/WEBAPP_TEST.md` dbbd9c9. **시작은 Terra 고침이 맥에 들어간 뒤 — RSCH가 한알께 "시작하세요".**
 - TPL_PACKET(03:07)은 그대로 — 사진 받기 끝나면 한알이 ChatGPT로(03:10).
 
 ## ★★★★★★★★★★★★★ 지금 자리 (2026-11-21 03:09 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
