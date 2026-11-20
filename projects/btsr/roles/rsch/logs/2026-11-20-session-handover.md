@@ -14,3 +14,5 @@
 - 넘길 때의 상태: **하던 일이 남아 있음** — ① 오픈컷 연구 결과를 기획안 초안에 반영 ② 한알께 연구 보고. 둘 다 CURRENT.md에 낱낱이 적음. 두 저장소: 이 저장소는 커밋 · push 끝(작업 폴더 깨끗), 제품 저장소는 건드리지 않음(main 0636fa0). 띄워 둔 서버 없음. 서브 에이전트 셋 끝남. Paseo 예약 e8ff0516은 한 번 울리고 끝남.
 - 막힌 것: 없음. (Paseo 브라우저 탭은 04:2x에 두 번 시간 초과로 안 열렸음 — 시안 확인은 Edge를 창 없이 띄워서 함, knowhow에 적음.)
 - 다음: 받는 세션이 '세션 열림' 줄을 CURRENT.md에 적고 위 ① ②를 함. 이 옛 세션은 이 폴더에 더 쓰지 않음(아래 덧붙임만).
+- 덧붙임(09:15 KST, 옛 세션이 적음): 새 세션을 엶 — Paseo 에이전트 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 db1af991-8faf-4cca-b367-15ffddfef21c · Opus 5.5(claude-opus-5-5) · 생각 수준 max · 제공자 claude-google · auto · 같은 작업 공간(wks_b17bef735d169958) · 같은 이름. `get_agent_status`로 모델과 생각 수준을 확인함. 넘김 글은 내가 쓴 것이고 한알의 말씀이 아니라고 첫머리에 적어 보냄.
+- 덧붙임(같은 때): Paseo 꼬리표를 바꿈 — 새 세션 7993ff28의 `paseo.parent-agent-id` · `paseo.parent-server-id`를 비워 맨 위 세션으로, 이 옛 세션 3233ba1f의 `paseo.parent-agent-id`를 7993ff28로(`paseo.parent-server-id`는 srv_gxxQnPC8uKQv). 지난번 한알 말씀 "새로운 세션이 상위가 되어야 합니다"(11-19 14:54:27)를 이번에도 따른 것. 되돌리려면 같은 꼬리표를 거꾸로.
