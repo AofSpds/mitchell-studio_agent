@@ -12,4 +12,6 @@
 
 ## 실행 지시
 
-없음.
+| 번호 | 무엇 | 근거 | 맡긴 일 | 지금 |
+|---|---|---|---|---|
+| 1 | 작업자 모델을 GPT-6.2 Sol High로, 설정 한 곳에서 (요구 worker-model 1판 R01–R07) | 한알 결정 worker-model 04 (11-21 03:23:56) | ARCH ← [BTSR-PLN-001](requirements/worker-model/WORKER_MODEL_BTSR-PLN-001_REQUEST_CLAUDE.md) | ARCH 반환 기다림 |

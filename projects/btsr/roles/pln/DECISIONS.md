@@ -7,7 +7,9 @@
 
 ## 결정 파일
 
-없음 — 항목(요구 묶음)이 아직 없음.
+| 묶음 | 결정 파일 |
+|---|---|
+| worker-model | [requirements/worker-model/WORKER_MODEL_DECISIONS_CLAUDE.md](requirements/worker-model/WORKER_MODEL_DECISIONS_CLAUDE.md) — 01 작업자 모델 6.2 Sol High, 02 변수 + enum, 03 Terra 자리만·운영 전 그냥 고침, 04 PLN → ARCH → PMO |
 
 ## 기획(PLN)이 따르는 다른 곳의 결정 (경로만)
 
