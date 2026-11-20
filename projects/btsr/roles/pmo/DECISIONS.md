@@ -18,3 +18,4 @@
 | 2026-11-19 21:49:43 · 40bb41cb-d0f1-426b-8a71-627e9a9a324e | PLN·ARCH·PMO를 오퍼스로 열기 | owner/utterances/2026-11-19.md · archive/PMO_DIRECTIVES_CLAUDE.md | 미정 — 말씀에 적히지 않음 |
 | 2026-11-19 21:52:02 · 099449aa-3af3-4b28-8527-e2ad2bb6efc9 | AAA 규칙 참조 | owner/utterances/2026-11-19.md · archive/PMO_DIRECTIVES_CLAUDE.md | 미정 — 말씀에 적히지 않음 |
 | 2026-11-19 22:02:43 · c4dfdcfa · 22:18:23 · 3a1d2dc6 | AAA를 보고 만들기 · "똑같이 하세요"(worktree, AAA 꼴 역할 폴더) | owner/utterances/2026-11-19.md (요청서 OPEN_PMO_요청.md 판 2에서 옮김, uuid 앞 8자만 받음) | 미정 — 말씀에 적히지 않음 |
+| 2026-11-20 13:50:27 · 3092e5a9-024e-4187-8f17-50ff69f1a54e | 시험 코드는 PMO가 함 · 이 PC에 Bun·OpenCut 설치 허락 (RSCH의 읽기 — 요청서 BTSR-RSCH-001) | main owner/utterances/2026-11-20.md · CURRENT.md '받은 요청' | 미정 — 말씀에 적히지 않음 |
