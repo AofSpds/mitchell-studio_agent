@@ -8,7 +8,9 @@
 
 ## 기록 항목
 
-없음 — `records/`는 첫 정본을 쓸 때 만든다.
+| 항목 | 무엇 | 상태 | 정본 | 출처 |
+|---|---|---|---|---|
+| opencut-test | OpenCut 옛 판 시험 3·4용 시험 코드 C1–C5 — 반환서 · 이 PC 시험 증거 | 반환함 (2026-11-20 14:22 KST). 맥 시험 남음 | [records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) · [evidence/](records/opencut-test/evidence/) | 요청 BTSR-RSCH-001_opencut-test-code (RSCH). 코드는 제품 저장소 가지 `test/opencut-classic-20261120` c2d21a6 |
 
 ## archive
 

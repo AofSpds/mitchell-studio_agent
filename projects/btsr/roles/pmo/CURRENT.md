@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-20T04:56:12Z"
+updated: "2026-11-20T05:22:08Z"
 base_commit: "fa2b7aa"
-now: "BTSR-RSCH-001_opencut-test-code(시험 코드 C1–C5) 받음 — 착수 전"
-next: "요청서 2번 자료 읽기 → C1 → C2(되면 RSCH에 중간 알림) → C4(맥 T0·T2 결과 뒤 꼴 마무리) → C3 → C5 → 반환서"
-waiting_for: ["rsch:macbook-test-T0-T2-result"]
+now: "BTSR-RSCH-001 반환함 — C1–C5 짬, 이 PC에서 한 바퀴 됨(제품 저장소 test/opencut-classic-20261120 c2d21a6). 맥 시험은 RSCH 순서서로"
+next: "맥 결과(T0·T2·MAC_RUN)를 받으면 C4 꼴 마무리 · 글자 모양 값 맞추기 — 스스로 시작하지 않음(규칙 18)"
+waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,7 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | 받음 · 착수 전 |
+| BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
 
 - 근거: 한알 말씀 2026-11-20 13:50:27 KST uuid 3092e5a9-024e-4187-8f17-50ff69f1a54e 「Pmo가 합니다. / 네 설치하세요 / Https 반드시 켜야 하나요」 — main `owner/utterances/2026-11-20.md` (RSCH 창에서 하신 말씀). [DECISIONS.md](DECISIONS.md)에서 가리킴.
 - 규칙과 다른 곳(숨기지 않음): AAA 규칙 15(잠정 — PMO의 위는 ARCH)와 달리 RSCH가 바로 보냄. 한알 「Pmo가 합니다」를 RSCH가 'ARCH를 거치지 않음'으로 읽음 [RSCH의 읽기] — PMO는 그대로 받음.
@@ -42,6 +42,7 @@ verifier: "mitchell_studio/btsr/pmov"
 ## 지금
 
 - 개설 받음 (2026-11-19 22:29 KST 확인). 옛 꼴 파일(directives.md · knowhow.md · logs/ · 옛 CURRENT.md)을 지우지 않고 [archive/](archive/)로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv).
-- 하던 일 없음. 조사 · 설계 · 코드 · 문서는 한알 말씀 뒤에만.
-- 제품 저장소(`C:\Users\ms1pk\dev\mitchell-studio`)와 RSCH `studies/`는 시키시기 전에 읽지 않음. 제품 저장소의 `agents/pmo`는 맥에서 도는 제품 쪽 에이전트이고 이 세션이 아님.
+- BTSR-RSCH-001 반환함. 이 PC 작업 폴더 `C:\Users\ms1pk\dev\btsr-pmo-work\`(git 밖): 옛 판 포크 사본 · 제품 저장소 새 사본 · Bun 1.2.18 · 시험 원출력. 개발 서버 127.0.0.1:3417 켜 둠.
+- 제품 저장소 원래 사본(`C:\Users\ms1pk\dev\mitchell-studio`)은 읽기만(pull --ff-only 한 번). 제품 저장소의 `agents/pmo`는 맥에서 도는 제품 쪽 에이전트이고 이 세션이 아님.
+- 막힌 것: 휴대용 ffmpeg 받기가 자동 심사에서 막힘 — 우회하지 않음. ffprobe 대신 MP4 상자를 읽어 확인함.
 - main 합치기를 누가 정하는지 말씀 없음 — 스스로 합치지 않음.
