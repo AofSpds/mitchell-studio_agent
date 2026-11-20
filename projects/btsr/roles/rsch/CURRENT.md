@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 02:28 KST
+- 확인 시각: 2026-11-21 02:31 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
@@ -15,6 +15,7 @@
   3. 한알께 드린 한 마디(맥 창에): **「지시문 새로 받아서 이어서 해」.** 끝나면 한알이 RSCH 창에 「끝」 → `gh api "repos/AofSpds/mitchell-studio/contents/app/opencut-test/RESULTS.md?ref=test/opencut-classic-20261120" --jq .content | base64 -d`로 읽고 ★10 3번대로(반환.md · 5가지 판정 · 기획안 반영).
   4. OpenChatCut은 웹인가 → 답: 브라우저로 여는 화면이지만 인터넷 사이트 아님(맥 안 서버 localhost:5199 · 같은 맥 브라우저) · 화면 없이 occ로 뽑기도 됨.
   5. 지침 셋 더함(directives 02:19 · 02:22 · 02:23) · 자동 기억 mac-is-limited.
+  6. **02:27 한알 「아 지금 테스트 중이라고요 테스트 관제를 일단 해여 ㅋㅋㅋ」 → 관제가 먼저.** 맥 쪽 사실(제품 main 커밋으로 읽음): 02:12 CD 창이 판 2 ⓪대로 **터미널 창에 Claude(Sonnet)를 띄워 시험을 넘김(04a4717)** · 02:19 한알이 CD 창에 '이 세션에서 확인 안 되면 관제 어떻게' → CD가 보니 **A6 뽑기까지 진행 중** → 한알 「다음 차부터는 세션을 여는 걸로 하고 지금 그대로 둡시다」(ed84ccb) · 02:20 「노하우만」(6885300 — CD 노하우에만). **그래서 지금은 아무것도 넣지 않고 터미널 창 시험을 그대로 둠 — 3번의 한 마디는 다음 차 · 이어 할 때 것.** RSCH는 맥을 못 봄 → 관제 길: 터미널 창 화면(한알 눈) · CD 창에 「시험 어디까지 왔어?」 · (원하시면) CD 창이 RESULTS.md를 시험 가지에 올리면 RSCH가 읽음. 한알께 A6 → A7(손 10분) → A8(보기) → A9 → B 여쭘('아니오' 권함) 차례와 누르지 말 것을 미리 드림.
 
 ## ★★★★★★★★★★★ 지금 자리 (2026-11-21 02:13 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
