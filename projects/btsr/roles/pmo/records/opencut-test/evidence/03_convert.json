@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "out": "C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\evidence-c2d21a6\\job1\\opencut",
+  "project_id": "d02281da-f376-4271-9785-4a6a05cb4302",
+  "total_sec": 12,
+  "elements": {
+    "scene": 2,
+    "caption": 2,
+    "label": 1,
+    "ending": 2,
+    "voice": 1,
+    "music": 1
+  },
+  "assets": 4,
+  "checks": [],
+  "warnings": [
+    "자막 1: 다음 자막(5.5초)에서 끊음"
+  ]
+}

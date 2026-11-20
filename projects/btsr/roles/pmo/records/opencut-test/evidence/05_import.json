@@ -1,0 +1,30 @@
+{
+  "target": "import",
+  "mode": "headless=new",
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "app": "http://127.0.0.1:3417",
+  "wall_ms": 2088,
+  "ok": true,
+  "page": {
+    "ok": true,
+    "id": "d02281da-f376-4271-9785-4a6a05cb4302",
+    "assets": 4,
+    "listed": true,
+    "opened": {
+      "openedId": "d02281da-f376-4271-9785-4a6a05cb4302",
+      "openedName": "sample_opencut",
+      "elements": 9,
+      "mediaLoaded": 4,
+      "fps": {
+        "numerator": 30,
+        "denominator": 1
+      },
+      "canvasSize": {
+        "width": 1080,
+        "height": 1920
+      },
+      "thumbnailMade": true
+    },
+    "exported_to": "C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\evidence-c2d21a6\\roundtrip.project.json"
+  }
+}
