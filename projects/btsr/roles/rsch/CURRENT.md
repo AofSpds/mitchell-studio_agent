@@ -1,11 +1,20 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 00:52 KST
+- 확인 시각: 2026-11-21 01:26 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★★★★ 지금 자리 (2026-11-21 01:26 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (01:26에 적음 — 한알 01:02:23 uuid 84992ffe 「맥시험에 당연히 오픈챗컷이 들어가야 하고 그게 메인이었으면 해요.」)**
+  1. **지금 상황:** 맥북 시험 지시문을 **판 2**로 바꿔 push함 — `sub/s5_mac_test/OPEN_PACKET.md` 하나(같은 자리 · 같은 여는 길): **A0~A9 OpenChatCut 메인**(Node 24 · ffmpeg · 글꼴 받기(sha256) → OpenChatCut f96502a `npm install` → 가짜 장면표에서 창 없이 한 편(`occ_job.mjs`) → `occ render` 두 번(시간) · 규격 · 그림 · 소리 → A7 한알이 맥 편집기에서 고치기(자막 끌기 · 음악 소리 · 'AI 합성' 지우기가 막히는지) → A8 다른 Claude Code가 MCP로 음악 소리 0.15 → A9 끄기) · **B1~B8 OpenCut 옛 판은 덤**(판 1의 S2~S9) · Z 되돌리기. 맥 시험은 아직 안 돎(00:49 확인 — Paseo에 맥 없음). 언제 돌리실지는 말씀 없음.
+  2. **A는 이 PC에서 먼저 돌려 봄(01:05~01:24):** `logs/2026-11-20-openchatcut-pc-trial.md` 6번(15~20) — 변환기 · 뽑기 27초 · 편집기 서버(`scripts/dev-profile.mjs` — `vite` 바로는 다시 시작 고리) · 서버 HOME을 시험 폴더로('연결' 단추가 `~/.claude.json` · `~/.zshrc`를 고치는 코드) · MCP(토큰 없이 403 · 도구 44) · **다른 Claude Code가 MCP로 고침 25초 applied**. 변환기 `C:/Users/ms1pk/dev/btsr-rsch-occ/work/occ_job.mjs`(sha256 0eff4979…)는 지시문 A5에 heredoc으로 — bash로 풀어 sha 대조함. 명령 칸 42개 `bash -n` 통과. 못 본 것: 편집기 화면 · 편집기를 띄운 채 MCP(browser 묶임) · 맥에서의 시간.
+  3. **결과가 오면:** 아래 ★★★★★★★★ 4번대로(반환.md · 5항목 · 기획안 반영) + A 결과는 기획안 6번 OpenChatCut 칸 · 0-2 · 오8(네 갈래)에. PMO(f3cf6938)에는 B 결과(C4 꼴 등)를 넘김 — A는 RSCH 확인용이라 PMO 일이 아님(제품으로 옮길 때 PMO).
+  4. **기다리는 것(폴링하지 않음):** 한알의 다음 말씀 · 맥 결과(RESULTS.md) 붙여 주심. 열린 정해 주실 것: 오1 · 오2 · 오3 · 오5 · 오6 · 오7 · 오8.
+  5. 나머지(이 PC 시험 폴더 · 돌리는 법 · 지킬 것)는 아래 ★★★★★★★★★(00:36) 칸 5 · 7 그대로. 시험 폴더에 `home/`(가짜 홈) · `work/occ_job.mjs` · `work/job2` · `work/mcp-run`이 더해짐. 남은 프로세스 없음 · 5199 비움.
 
 ## ★★★★★★★★★ 지금 자리 (2026-11-21 00:36 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 

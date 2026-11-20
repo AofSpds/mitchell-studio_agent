@@ -56,3 +56,19 @@
 
 - **뜻:** OpenChatCut으로 '장면표 → 창 없이 넣기 · 놓기 · 자막(우리 모양) · 소리 맞춤 · 잠금 → 뽑기'가 이 PC에서 한 바퀴 돌았습니다. 남은 것은 ① 자막을 그림이 아니라 고칠 수 있는 글자로 두는 길(글자 조각에 테두리 · 글꼴이 없음 — 포크하거나 그림으로 감) ② 'AI 합성' 표시를 읽히게(테두리 그림으로 또는 바탕 띠) ③ 빈 트랙이 생기는 까닭 ④ 맥 · 아이폰 · MCP(Claude Code)로 같은 일.
 - 시험 프로젝트: `rsch-poc`(EDL 시험) · `rsch-job1`(장면표 시험). 뽑은 파일 `out/rsch-poc.mp4` · `out/rsch-job1.mp4` · `out/rsch-job1b.mp4`(라벨 고친 판) — 모두 가짜 소재.
+
+## 6. 맥 지시문 판 2를 위해 먼저 돌려 봄 (2026-11-21 01:05~01:24 KST)
+
+- 근거 말씀(`owner/utterances/2026-11-21.md`): 01:02:23 uuid 84992ffe 「맥시험에 당연히 오픈챗컷이 들어가야 하고 그게 메인이었으면 해요.」 → 맥 지시문을 OpenChatCut 메인(A)으로 다시 쓰기 전에, A의 명령을 이 PC에서 같은 차례로 돌려 봄.
+
+| # | 본 것 | 결과 |
+|---|---|---|
+| 15 | 맥 · 윈도 둘 다 도는 변환기 `work/occ_job.mjs`(scenes2occ의 다음 판 — 경로는 환경 변수, 자막은 줄마다 drawtext, 'AI 합성'도 테두리 그림 + 잠금) | 새 프로젝트 `rsch-job2`에 조각 7개 · ops 둘 다 applied · 라벨 트랙 잠금 · 9초. 뽑기 12초 → **27초**. 2초 · 10초 장면 그림에서 자막 두 줄 가운데 · 테두리 · 'AI 합성'(왼쪽 위)이 읽힘 [실측] |
+| 16 | 맥에서 받을 것 | Node 24.22.3 darwin arm64 · x64 sha256(공식 SHASUMS256) · ffmpeg-static b6.1.1 darwin: **arm64는 FFmpeg 6.0(`text_align` 없음 → 줄마다 그림으로 피함)** · x64는 6.1.1 · 둘 다 freetype 있음 · sha256 적음 · OpenChatCut 원격 HEAD = f96502a 그대로 · 잠금 파일에 git 꾸러미 0 · darwin compositor · esbuild 들어 있음 [실측] |
+| 17 | 편집기 서버 | `vite`를 바로 부르면(`dev:shared` 꼴) 열쇠 저장 자리가 소스 폴더의 `.env.local`이 되어 **5초마다 다시 시작**(15번) → MCP 세션이 사라짐. **`scripts/dev-profile.mjs`(= `npm run dev`의 몸통)로 띄우면 다시 시작 0** · `localhost`([::1]:5199)에서만 들음 · 홈(`USERPROFILE`/`HOME`)을 시험 폴더로 돌리면 프로필 폴더도 그 안에만 생김 · 진짜 홈의 `~/.openchatcut` 안 생김 [실측]. 윈도에서만 'Pre-transform error … /src/main.tsx'가 찍히나 `/src/main.tsx`는 200으로 나옴 |
+| 18 | 편집기 '연결' 단추 | `server/external-agent/client-connect.ts`가 `~/.claude.json` · `~/.cursor/mcp.json` · Codex 설정 · **`~/.zshrc`**에 MCP 주소 · 토큰을 씀 [소스 확인] → 맥에서는 서버의 HOME을 `~/oc-test/home`으로 · 단추를 누르지 않게 |
+| 19 | MCP(curl) | 토큰 없이 403 · 붙기 200(세션 id) · 도구 44개 · `target_project` → `offline`(편집기 안 띄움) · `begin_edit_session(auto)` → `edit_item`(음악 0.1) → `review_edit_session` → **applied**, 문서에서 0.1 확인 [실측] |
+| 20 | **다른 Claude Code가 MCP로** | `claude -p --mcp-config mcp.json --strict-mcp-config --allowedTools mcp__occ --no-session-persistence`(Sonnet 5.5, 글은 stdin) → `offline · list_projects, target_project, begin_edit_session, read_timeline, edit_item, review_edit_session · applied` · **25초** · 문서에서 음악 0.2 확인 [실측] |
+
+- 남은 프로세스 없음 · 5199 비움(확인). 시험 폴더에 `home/`(가짜 홈) · `work/occ_job.mjs` · `work/job2` · `work/mcp-run`(토큰은 이 PC 시험용 임시 값) · `out/` 기록이 더해짐.
+- 못 본 것: 편집기 화면(이 PC에서 화면을 보지 않음 — 화면 조작 허락 없음) · 편집기를 띄운 채(browser 묶임) MCP · 맥에서의 시간 — 모두 맥 지시문 A7 · A8 · A6에서.
