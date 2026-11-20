@@ -33,7 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
+| BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST · RSCH 수용(건은 열어 둠) — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
 
 - 근거: 한알 말씀 2026-11-20 13:50:27 KST uuid 3092e5a9-024e-4187-8f17-50ff69f1a54e 「Pmo가 합니다. / 네 설치하세요 / Https 반드시 켜야 하나요」 — main `owner/utterances/2026-11-20.md` (RSCH 창에서 하신 말씀). [DECISIONS.md](DECISIONS.md)에서 가리킴.
 - 규칙과 다른 곳(숨기지 않음): AAA 규칙 15(잠정 — PMO의 위는 ARCH)와 달리 RSCH가 바로 보냄. 한알 「Pmo가 합니다」를 RSCH가 'ARCH를 거치지 않음'으로 읽음 [RSCH의 읽기] — PMO는 그대로 받음.
@@ -42,7 +42,8 @@ verifier: "mitchell_studio/btsr/pmov"
 ## 지금
 
 - 개설 받음 (2026-11-19 22:29 KST 확인). 옛 꼴 파일(directives.md · knowhow.md · logs/ · 옛 CURRENT.md)을 지우지 않고 [archive/](archive/)로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv).
-- BTSR-RSCH-001 반환함. 이 PC 작업 폴더 `C:\Users\ms1pk\dev\btsr-pmo-work\`(git 밖): 옛 판 포크 사본 · 제품 저장소 새 사본 · Bun 1.2.18 · 시험 원출력. 개발 서버 127.0.0.1:3417 켜 둠.
+- BTSR-RSCH-001 반환함. 이 PC 작업 폴더 `C:\Users\ms1pk\dev\btsr-pmo-work\`(git 밖): 옛 판 포크 사본 · 제품 저장소 새 사본 · Bun 1.2.18 · 시험 원출력 — RSCH 말대로 남겨 둠(맥 결과 뒤 이어 씀). 개발 서버 127.0.0.1:3417은 RSCH 말대로 끔(2026-11-20, 포트 빈 것 확인).
+- RSCH가 이번 반환분을 수용함 — 건은 닫지 않음(C4 꼴 마무리 · 글자 모양 값은 맥 결과 뒤).
 - 제품 저장소 원래 사본(`C:\Users\ms1pk\dev\mitchell-studio`)은 읽기만(pull --ff-only 한 번). 제품 저장소의 `agents/pmo`는 맥에서 도는 제품 쪽 에이전트이고 이 세션이 아님.
 - 막힌 것: 휴대용 ffmpeg 받기가 자동 심사에서 막힘 — 우회하지 않음. ffprobe 대신 MP4 상자를 읽어 확인함.
 - main 합치기를 누가 정하는지 말씀 없음 — 스스로 합치지 않음.
