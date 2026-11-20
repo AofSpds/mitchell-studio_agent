@@ -1,14 +1,10 @@
-# SUB 개설 패킷 — MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (맥북 시험 지시문 · 판 2 — OpenChatCut 메인)
+# SUB 개설 패킷 — MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (맥북 시험 지시문 · 판 2.1 — OpenChatCut 메인)
 
-> **⓪ 네 작업 폴더가 `~/oc-test`가 아니면(예: 제품 저장소의 Creative Director 창) — 시험을 직접 하지 말고 아래만 하고 끝낸다** (한알 11-21 02:04 「아 타자 치기기 힘들어요.」 — 한알님이 치시는 글을 줄이려고):
-> 1. 이 글 전체를 `~/oc-test/OPEN_PACKET.md`로 저장한다(받은 그대로). 이 글은 제품 저장소 가지 `test/opencut-classic-20261120`의 `app/opencut-test/OPEN_PACKET.md`에도 있다(한알 02:0x 「스튜디오에 올리면 안되는거예요?」 — 맥의 GitHub 계정이 제 저장소에 닿지 않아서). 맥에 그 가지를 꺼낸 자리(`~/mitchell_branches/opencut-test`)가 있으면 거기서 `git pull` 한 뒤 복사하면 된다.
-> 2. 아래 칸을 통째로 돌린다 — 새 터미널 창이 열리고 `~/oc-test`에서 Claude Code(Sonnet)가 이 글을 받아 시작한다.
-> 3. 한알님께: "새 창에서 '이 폴더를 믿을까요?'가 나오면 Enter만 누르세요. 그 뒤로는 새 창이 합니다. 이 창은 쉬어도 됩니다."
-> - 이 창은 제품 저장소 · 웹앱 · `~/mitchell_branches`를 건드리지 않는다(기록이 필요하면 '맥 시험을 새 창으로 넘김' 한 줄).
->
-> ```zsh
-> mkdir -p ~/oc-test && { echo '#!/bin/zsh'; echo 'cd ~/oc-test && exec claude --model sonnet "$(cat ~/oc-test/OPEN_PACKET.md)"'; } > ~/oc-test/start.command && chmod +x ~/oc-test/start.command && open -a Terminal ~/oc-test/start.command
-> ```
+> **⓪ 판 2.1 (11-21 02:2x KST) — 지금 한알님이 쓰시는 Claude Code 창에서 그대로 한다. 새 터미널 창 · 새 Claude를 열지 않는다.** 판 2의 ⓪(start.command로 새 터미널 창을 여는 것)은 버린다. 근거: 한알 11-21 02:19 「타자를 길게 치기 힘들어여 키보드 안이으면 대단히 불편합니다. / 그리고 터미널은 열어둔 세션이 관제하기 힘듭니다.」 · 02:22 「지금 테스트중이예요」.
+> 1. **시험이 이미 돌고 있으면 끊지 않는다.** 새로 시작하지 않고, 아무것도 끄지 않는다. `~/oc-test/out/RESULTS.md`를 읽고 끝난 단계는 건너뛰어 다음 단계부터 이어 간다(2번 14).
+> 2. 판 2로 연 **새 터미널 창에서 시험이 돌고 있으면**(`pgrep -fl 'claude --model [s]onnet'`으로 보임) 그 창이 끝까지 하게 두고, 이 창은 시험을 같이 돌리지 않는다(같은 폴더 · 포트를 씀). 이 창은 RESULTS.md를 읽어 한알님께 어디까지 왔는지 알려 드리고, 그 창이 멈추거나 끝나면 이 창이 RESULTS.md에서 이어 간다(그때 한알님께 "새 창을 닫아도 될까요? 1 네 · 2 아니오").
+> 3. 이 글을 받은 그대로 `~/oc-test/OPEN_PACKET.md`에 둔다(덮어씀 — 이어서 할 때 · Codex로 넘길 때 읽음). 이 글은 제품 저장소 가지 `test/opencut-classic-20261120`의 `app/opencut-test/OPEN_PACKET.md`에 있다. 받는 법(작업 파일 · 가지는 그대로): `git -C <제품 저장소나 ~/mitchell_branches/opencut-test> fetch -q origin test/opencut-classic-20261120 && git -C <같은 자리> show FETCH_HEAD:app/opencut-test/OPEN_PACKET.md > ~/oc-test/OPEN_PACKET.md`
+> 4. **한알님은 맥에서 긴 글을 치기 어렵다.** 묻는 것은 한 줄 + 번호(1 · 2 …)나 '네/아니오'로 답하시게 한다(2번 17). 결과는 한알님이 옮기지 않고 네가 시험 가지에 올린다('올리기' — 4번 끝).
 
 > **맥의 에이전트에게:** 이 글 전체가 네 일이다. 1~3번을 읽고 4번 A0부터 차례로 시작해라. **A(OpenChatCut)가 오늘의 핵심이고, B(OpenCut 옛 판)는 A가 끝난 뒤 한알님이 하자고 하실 때만** 한다. 화면 · 아이폰 단계는 한알님께 말로 부탁하고 기다려라.
 
@@ -16,11 +12,11 @@
 |---|---|
 | 연 이 | PRIMARY `MITCHELL_STUDIO/BTSR/RSCH` — 한알님의 윈도 PC · Paseo 7993ff28 · Opus 5.5 · Max |
 | SUB | `MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST` |
-| 실행기 | **맥북의 Claude Code**(터미널에서 `claude`). 안 되거나 쓸 양이 떨어지면 **같은 글을 ChatGPT(Codex)에** 붙임(그때 A8은 건너뜀). **둘을 같이 돌리지 않음**(같은 폴더 · 포트를 씀) |
-| 자기 칸 | 맥의 `~/oc-test/` — 어느 git 저장소에도 쓰지 않음 |
-| 돌려줄 것 | `~/oc-test/out/RESULTS.md`(5번 꼴) → 한알님이 RSCH 창에 붙임 → RSCH가 이 칸 `반환.md`로 커밋 |
-| 주고받는 길 | 이 SUB와 RSCH는 직접 주고받지 못함(이 PC의 Paseo에 맥이 없음 — 11-21 00:49에도 확인). **물음은 모두 한알님께.** |
-| 쓴 때 | 판 1: 2026-11-20 19:00 KST(OpenCut만). **판 2: 2026-11-21 01:24 KST — OpenChatCut을 메인(A)으로, OpenCut은 덤(B)으로.** A의 명령은 RSCH가 이 PC(윈도)에서 같은 차례로 먼저 돌려 봄(경로 · 받는 파일만 맥용으로 다름 — 맥에서 돌려 본 적은 없음). 명령 칸은 `bash -n`으로 문법 확인 |
+| 실행기 | **지금 한알님이 쓰시는 맥의 Claude Code 창**(새 터미널 창 · 새 Claude를 열지 않음 — 판 2.1). 안 되거나 쓸 양이 떨어지면 ChatGPT(Codex)가 `~/oc-test/out/RESULTS.md`에서 이어 감(그때 A8은 건너뜀). **둘을 같이 돌리지 않음**(같은 폴더 · 포트를 씀) |
+| 자기 칸 | 맥의 `~/oc-test/` — git 저장소에 쓰는 것은 '올리기' 하나뿐(RESULTS.md 한 파일 → 시험 가지, `~/oc-test/ms-results`에 따로 받은 사본에서) |
+| 돌려줄 것 | `~/oc-test/out/RESULTS.md`(5번 꼴) → **네가 '올리기'로 시험 가지 `app/opencut-test/RESULTS.md`에 올림**(한알님이 옮기지 않음) → RSCH가 읽고 이 칸 `반환.md`로 커밋 |
+| 주고받는 길 | 이 SUB와 RSCH는 직접 주고받지 못함(이 PC의 Paseo에 맥이 없음 — 11-21 02:19에도 확인). **물음은 한알님께 — 번호나 '네'로 답하시게.** RSCH에게 알릴 것은 RESULTS.md에 적고 올린다. |
+| 쓴 때 | 판 1: 2026-11-20 19:00 KST(OpenCut만). **판 2: 2026-11-21 01:24 KST — OpenChatCut을 메인(A)으로, OpenCut은 덤(B)으로.** A의 명령은 RSCH가 이 PC(윈도)에서 같은 차례로 먼저 돌려 봄(경로 · 받는 파일만 맥용으로 다름 — 맥에서 돌려 본 적은 없음). 명령 칸은 `bash -n`으로 문법 확인. **판 2.1: 2026-11-21 02:26 KST — ⓪의 새 터미널 창을 버리고 지금 창에서 이어 감 · 묻기는 번호로 · 결과는 '올리기'로 시험 가지에**('올리기' 칸은 이 PC에서 가짜 저장소로 돌려 봄 — 올림 · 가릴 것 막음 · 바뀐 것 없음) |
 
 ## 근거 (한알 말씀, 원문 그대로 — `owner/utterances/2026-11-20.md` · `2026-11-21.md`)
 
@@ -36,40 +32,32 @@
 
 ## 0. 한알님이 하실 것
 
-**시작 (5분)**
+**하지 않으실 것 · 지킬 것 (먼저 한 번에 — 한알 11-21 02:01 「제한사항이 있었으면 얘기를 해주셔야지요」)**
 
-긴 주소는 치지 않으셔도 됩니다 — 눌러서 찾아갑니다(11-21 01:50 「주소를 제가 치기 힘들어요.」).
+- 시험은 **지금 쓰시는 Claude Code 창에서 그대로**. 새 터미널 창 · 새 Claude를 열지 않으셔도 됩니다(판 2.1).
+- 같은 시험을 두 창에서 같이 돌리지 않기(이미 새 터미널 창에서 돌고 있으면 그 창이 끝까지 — 에이전트가 번호로 여쭙니다).
+- 긴 글은 치지 않으셔도 됩니다 — 에이전트가 **번호나 '네'로 답하게** 여쭙니다.
+- 맥북에서 할 수 있는 일은 적습니다(한알 11-21 02:23) — 설치는 `~/oc-test` 안 휴대판뿐, 관리자 암호 · `sudo` · 앱 설치 · 맥 설정 바꾸기는 하지 않습니다. 그런 창이 뜨면 '아니오'(또는 '취소').
 
-1. 맥 Safari에서 **개인 정보 보호 창**(⇧⌘N) → 주소창에 **`github.com`**만 치고 → 로그인.
-2. 왼쪽 저장소 목록에서 **mitchell-studio_agent**를 누름(안 보이면 목록 위 칸에 `agent`).
-3. 저장소 화면에서 키보드 **t**(또는 'Go to file' 단추) → **`s5_mac`** 침 → **`…/s5_mac_test/OPEN_PACKET.md`**를 누름 → 이 글이 열림.
-4. 아래 상자 오른쪽의 **복사 단추**(겹친 네모)를 누름 → **터미널**을 열고 붙여 넣고(⌘V) Enter → Claude Code가 뜸(처음이면 '이 폴더를 믿을까요?' → 예).
+**시작 (한 마디)**
 
-   ```
-   mkdir -p ~/oc-test && cd ~/oc-test && claude
-   ```
-
-5. Safari로 돌아와 오른쪽 위 **'Raw'** → 전체 선택(⌘A) → 복사(⌘C) → 터미널의 Claude Code에 붙여 넣고(⌘V) Enter.
-
-   - 주소를 바로 여실 수 있으면: `https://github.com/AofSpds/mitchell-studio_agent/blob/main/projects/btsr/roles/rsch/sub/s5_mac_test/OPEN_PACKET.md`
-   - ChatGPT(Codex)로 할 때: Codex에서 작업 폴더를 `~/oc-test`로 고르고 똑같이 붙여 넣음.
-   - **제품 저장소 폴더에서 띄우지 마세요** — 거기서는 예전 역할 설정이 먼저 읽힙니다.
+- 지금 Claude Code 창에(받아쓰기도 됩니다): **「지시문 새로 받아서 이어서 해」** — 돌고 있던 시험을 끊지 않고 판 2.1로 이어 갑니다.
 
 **얼마나 걸리나 [추측]:** A(OpenChatCut) 40분 안팎 — 그중 한알님 손이 드는 것은 A7(편집기에서 몇 가지 고치기 10분)과 A8(보기 2분). B(OpenCut 옛 판)는 1~2시간 더 — 늦으면 다음에 하셔도 됩니다.
 
 **하는 동안**
 
 - 에이전트가 허락을 물으면 내용을 보고 '예'. 설치 · 지우기 · 암호를 묻는 것은 이 글 2번에 적힌 것인지 보고 정하세요.
+- 에이전트가 "RESULTS.md를 시험 가지에 올릴까요? 1 네 · 2 아니오"라고 처음 한 번 여쭙니다 — '1'이면 RSCH가 바로 읽습니다. 올라가는 것은 글 파일 하나뿐(영상 · 사진 · 이름 · 주소 · 키 없음).
 - 에이전트가 "화면에서 ○○를 눌러 주세요"라고 하면 그대로 해 주세요. 에이전트는 화면을 대신 누르지 않습니다.
 - **OpenChatCut 편집기에서 누르지 않을 것:** 'Claude / Codex / Cursor 연결(Connect)' 단추, AI 채팅 · 목소리 · 그림 · 영상 만들기, 키 넣는 설정 칸, 올리기 · 내려받기. (키가 없고, 맥의 설정 파일을 고치거나 소재가 바깥으로 나갈 수 있음.)
 - '들어오는 네트워크 연결을 허용할까요?' 창이 뜨면 **'거부'**를 눌러도 됩니다(이 맥 안에서만 씀). 무엇이 떴는지는 에이전트에게 말해 주세요.
 - B를 하시면: 아이폰 사용자께는 시험 중에 연락하시면 됩니다 — **에이전트가 B7을 마치면 "이제 연락하실 때"라고 알려 드립니다**(캡처 두 장 · HTTPS 켜기 · 벽 영상 · 통화를 한 번에).
-- 에이전트의 쓸 양이 떨어지면: Codex를 `~/oc-test`에서 열고 이 글을 붙인 뒤 "RESULTS.md를 먼저 읽고 이어서 해"라고 하세요.
+- 에이전트의 쓸 양이 떨어지면: Codex 창에 **「~/oc-test/out/RESULTS.md 읽고 이어서 해」** 한 마디(RESULTS.md 맨 위에 지시문 자리가 적혀 있음).
 
 **끝**
 
-- 에이전트가 `~/oc-test/out/RESULTS.md`를 다 쓰면 그 내용을 RSCH 창에 붙여 주세요(옮기는 길은 편하신 대로).
-- 개인 정보 보호 창을 닫으세요.
+- 에이전트가 "올렸습니다"라고 하면 RSCH 창에 **「끝」** 한 마디면 됩니다 — RSCH가 시험 가지에서 RESULTS.md를 읽습니다.
 
 ---
 
@@ -84,25 +72,28 @@
   5. Claude Code가 MCP로 편집기에 붙어 고치는가(편집기를 띄운 채 — 한알님이 보는 앞에서).
 - **B(덤) — OpenCut 옛 판을 고친 판**(PMO 시험 코드 c2d21a6): 판 1의 S2~S9 그대로. 휴대폰에서 고치는 화면 후보라 남겨 둠. A가 끝나고 한알님이 하자고 하시면.
 - **윈도 PC에서 RSCH가 같은 A를 먼저 돌려 본 것(11-21 01시):** `occ_job.mjs`로 조각 7개가 놓이고 'AI 합성' 트랙이 잠김 · 12초 한 편 뽑기 27~29초(하드웨어 인코딩 없음) · H.264 **Main** · 1080×1920 · 30/1 · `yuvj420p` · AAC **48000Hz** 2채널 · 편집기 서버(`scripts/dev-profile.mjs`)가 localhost:5199에서만 듣고 다시 시작 0번 · MCP 도구 44개 · 토큰 없으면 403 · **다른 Claude Code가 MCP로 음악 소리를 바꿈(25초 — list_projects → target_project → begin_edit_session → read_timeline → edit_item → review_edit_session → applied)**. **맥에서 같은지 · 얼마나 빠른지가 오늘의 핵심.**
-- **이 글이 이 일의 규칙이다.** 이 맥의 다른 지침(예전 역할 설정 · 다른 CLAUDE.md · AGENTS.md)과 부딪히면 멈추고 한알님께 여쭌다.
+- **이 글이 이 일의 규칙이다.** 이 맥의 다른 지침(예전 역할 설정 · 다른 CLAUDE.md · AGENTS.md)과 부딪히면 멈추고 한알님께 여쭌다. 지금 창이 제품 저장소 창이면 그 저장소의 규칙(가지 · 검토 · 커밋)은 그대로 지킨다 — 이 시험은 그 저장소의 작업 파일 · 가지를 바꾸지 않으니 보통 부딪히지 않는다.
 
 ## 2. 지킬 것
 
 1. **파일은 `~/oc-test/` 안에만 쓴다.** 예외: B2 (다)에서 '다운로드' 폴더를 읽는 것. OpenChatCut 편집기 서버는 **`HOME="$OCT/home"`으로 띄운다**(편집기의 '연결' 단추가 `~/.claude.json` · `~/.zshrc`를 고치는 코드가 있어서 — 홈 대신 `~/oc-test/home`에 쓰게). npm 캐시도 `~/oc-test/npm-cache`(env.sh).
-2. **제품 저장소(mitchell-studio)는 읽기만**(B에서만 씀). 허용: `git --no-optional-locks status` · `git log` · `git remote get-url` · `git fetch origin test/opencut-classic-20261120` · `git cat-file` · `git archive`. 금지: checkout · switch · pull · merge · reset · stash · commit · push · 파일 고치기.
+2. **제품 저장소(mitchell-studio)는 읽기만**(B에서만 씀). 허용: `git --no-optional-locks status` · `git log` · `git remote get-url` · `git fetch origin test/opencut-classic-20261120` · `git show FETCH_HEAD:…`(⓪ 지시문 받기) · `git cat-file` · `git archive`. 금지: checkout · switch · pull · merge · reset · stash · commit · push · 파일 고치기. **예외 하나 — '올리기'**(4번 끝): `~/oc-test/ms-results`에 따로 받은 시험 가지 사본에서 RESULTS.md 한 파일만 커밋 · push. 지금 창의 제품 저장소와 `~/mitchell_branches`의 작업 파일 · 가지는 건드리지 않는다.
 3. **손님 정보를 열지 않는다:** 제품 저장소의 `data/` · `config/`, 캡컷 프로젝트, 사진 보관함, 메시지. 소재는 A4 · B4의 가짜 파일만.
 4. **웹앱(8765) · 그 자동 시작 · Tailscale 자동 시작을 건드리지 않는다.** 맥에 늘 켜 두는 프로그램(LaunchAgent)을 만들지 않는다. Tailscale serve는 B8에서 8443만 켜고 끈다(`serve reset` 금지).
 5. **설치(받기)는 이것만, 모두 `~/oc-test` 안:** (A) Node 24.22.3 휴대판 · ffmpeg 휴대판(ffmpeg-static b6.1.1) · 글꼴 Noto Sans KR — 셋 다 sha256 대조 · OpenChatCut f96502a와 그 꾸러미(`npm install`) · 첫 뽑기 때 OpenChatCut이 꾸러미 폴더 안에 저절로 받는 Chrome Headless Shell. (B) Bun 1.2.18(한알 허락 11-20 11:02:25) · 고친 판의 꾸러미(`bun install`). Chrome이 없을 때만 한알님께 여쭌 뒤 Chrome for Testing을 `~/oc-test/browsers`에. `brew` · `sudo` · 앱스토어 · `npm -g`를 쓰지 않고, `~/.zshrc` 등 셸 설정을 고치지 않는다.
 6. **화면 조작(마우스 · 키보드를 대신 누르기 · 화면 찍기)을 하지 않는다** — AAA 규칙 43, 한알님 허락 없음. 화면 단계는 한알님께. (뽑은 그림 파일을 열어 읽고 `open`으로 한알님께 보여 드리는 것은 됨.)
 7. **남의 코드는 고치지 않는다**(OpenChatCut 소스 · PMO 코드). 막히면 오류를 그대로 적고 한알님께. 허용되는 고침은 하나 — B8에서 시험 사본 `~/oc-test/opencut-mitchell/apps/web/next.config.ts`에 `allowedDevOrigins` 한 줄.
 8. **진짜 키 · 비밀 값을 넣지 않는다.** OpenChatCut의 AI 기능(채팅 · 목소리 · 그림 · 받아쓰기)은 쓰지 않는다. MCP 토큰은 A7에서 이 맥 안에서 만든 임시 값 — `~/oc-test/mcp.token`에만 두고 **화면 · RESULTS.md에 찍지 않는다.**
-9. **바깥에 올리지 않는다:** push · gist · 새 저장소 · 파일 공유 없음.
+9. **바깥에 올리지 않는다:** push · gist · 새 저장소 · 파일 공유 없음. 예외는 '올리기' 하나(RESULTS.md 한 파일 → 시험 가지 `test/opencut-classic-20261120` · 강제 push 없음 · 처음 한 번은 한알님께 "1 네 · 2 아니오"로 여쭘).
 10. **RESULTS.md에 적지 않는 것:** 맥 사용자 이름이 든 경로(`/Users/…` 대신 `~`로 고쳐 적음 — 명령이 찍는 JSON의 경로도), Tailscale 주소 전체와 IP(`mitchell.<tailnet>.ts.net`처럼 가림), GitHub 계정 이름 · 저장소 원격 주소, 손님 정보, 키 · 토큰 · 비밀 값.
 11. **시각은 한국 시각** — A0의 `kst`로 그 자리에서 찍는다. 짐작해서 적지 않는다.
 12. 오래 걸리는 명령(받기 · `npm install` · `bun install` · 뽑기)은 시간 제한을 넉넉히(10분). 서버처럼 계속 도는 것은 `nohup … &`로 띄우고 PID를 `~/oc-test/*.pid`에 적는다.
 13. 셸 변수는 명령마다 사라질 수 있으니 **명령마다 맨 앞에 `source ~/oc-test/env.sh`**. **코드 칸 하나는 통째로 한 번에 돌린다**(칸 안에서 만든 변수가 이어지게).
 14. 끝난 단계마다 RESULTS.md를 바로 고친다(중간에 끊겨도 남게). **이어서 할 때는 RESULTS.md를 먼저 읽고 끝난 단계는 건너뛴다.**
 15. **`git`이나 `/usr/bin/python3`를 부르기 전에 `xcode-select -p`로 개발 도구가 있는지 본다** — 없으면 '설치하시겠습니까' 창이 뜬다. A는 git · python을 쓰지 않는다(JSON은 `node`로 읽음).
+16. **새 터미널 창 · 새 Claude 창을 열지 않는다 — 지금 창에서 다 한다**(한알 02:19 「터미널은 열어둔 세션이 관제하기 힘듭니다.」). A8의 `claude -p`는 이 창 안에서 돌고 끝나는 것이라 된다. 브라우저는 A7 · B7의 편집기 화면에만 연다.
+17. **한알님은 맥에서 긴 글을 치기 어렵다**(02:04 · 02:19). 묻는 것은 한 줄 + 번호(1 · 2 …)나 '네/아니오'로. 화면에서 해 주실 것은 한 번에 하나씩 짧게. **맥북에서 할 수 있는 일은 적다**(02:23 「맥북에서 할 수 있는게 제한적이라는거만 기억해두세요.」) — 이 글 밖의 일은 하자고 하지 않는다.
+18. 단계를 마칠 때마다 이 창에 한 줄로 알린다(예: "A3 끝 · 4분 · 다음 A4") — 한알님이 지켜보시게.
 
 ## 3. 멈추고 한알님께 여쭐 때
 
@@ -113,6 +104,7 @@
 - 같은 단계가 두 번 실패할 때 — 오류 끝 20줄을 RESULTS.md에 적고 다음으로 갈지 여쭌다.
 - 빈 디스크가 8GB보다 적을 때(A 약 3GB · B 약 3GB).
 - (B) 제품 저장소 자리를 못 찾거나 둘 이상일 때.
+- 여쭐 때는 번호로(2번 17). 멈춘 까닭은 RESULTS.md에 적고 '올리기'를 한다 — RSCH가 읽고 한알님을 거쳐 도울 수 있게.
 
 ---
 
@@ -436,6 +428,7 @@ for b in "880 원래영상소리(꺼져야)" "220 목소리" "330 음악(-12dB)"
 - 그림 `occ1_frames.png`를 열어 읽고(왼쪽 = 2초 장면 · 오른쪽 = 10초 장면) 적는다: 왼쪽 그림 아래쪽(세로 69% 자리)에 '첫 자막' · 오른쪽 그림에 '둘째 자막 두 줄로 / 나뉘는 긴 문장입니다' 두 줄 가운데 · 흰 글씨 검은 테두리 · 오른쪽 그림의 왼쪽 위에 'AI 합성' · 오른쪽 그림의 사진이 화면을 꽉 채움. 한알님께도 `open "$OCT/out/occ1_frames.png"`로 보여 드린다.
 - 소리: 880은 아주 작아야(윈도 −58~−68dB = 꺼짐) · 220(목소리)과 330(음악)은 그보다 훨씬 커야 한다(윈도: 목소리 구간 −17.6 · 음악 −31 안팎 — 이 명령은 12초 전체 평균이라 값은 다를 수 있음).
 - **갈림:** 뽑기가 되면 '맥이 사람 없이 OpenChatCut으로 뽑기'가 선다. 안 되면 오류 끝 20줄을 적고 한알님께.
+- A6까지 RESULTS.md에 적은 뒤 **'올리기'(4번 끝) — 처음이니 한알님께 "RESULTS.md를 시험 가지에 올릴까요? 1 네 · 2 아니오"**. 2면 올리지 않고 끝에 다시 여쭌다.
 
 ### A7. 사람이 맥 화면에서 고치기 (편집기 — 한알님 화면)
 
@@ -520,7 +513,7 @@ du -sh "$OCT" 2>/dev/null | sed "s#$HOME#~#"
 ```
 
 - Safari로 열었으면 한알님께 그 탭을 닫아 주시게 한다.
-- A 결과를 RESULTS.md에 마저 적고 한알님께 짧게 알린다 → **"B(OpenCut 옛 판)를 이어서 할까요? 1~2시간 걸립니다"** 여쭘. 아니면 Z로.
+- A 결과를 RESULTS.md에 마저 적고 '올리기' → 한알님께 짧게 알린다 → **"B(OpenCut 옛 판)를 이어서 할까요? 1~2시간 걸립니다. 1 네 · 2 아니오(Z로 정리)"** 여쭘.
 
 ---
 
@@ -738,14 +731,36 @@ du -sh "$OCT" 2>/dev/null | sed "s#$HOME#~#"
 
 - `~/oc-test`는 지우지 않는다 — 결과를 넘긴 뒤 한알님이 정하신다(지우면 Node · OpenChatCut · Bun · 시험 사본 · 가짜 소재가 다 사라짐 — 폴더 하나만 지우면 됨).
 - B2 (가)로 받았으면 제품 저장소에 받은 가지 표시(`origin/test/opencut-classic-20261120`)가 남는다 — 작업 파일 · 가지와 상관없어 그대로 둔다.
-- 마지막으로 RESULTS.md에 끝 시각을 적고 한알님께 "RESULTS.md를 RSCH 창에 붙여 주세요"라고 말씀드린다.
+- 마지막으로 RESULTS.md에 끝 시각을 적고 '올리기' → 한알님께 "올렸습니다. RSCH 창에 「끝」 한 마디만 해 주세요"라고 말씀드린다.
+
+### 올리기 — RESULTS.md 한 파일 → 시험 가지 (A6 뒤 · A9 뒤 · Z 뒤 · 멈춰 여쭐 때)
+
+- 처음 한 번은 한알님께 "1 네 · 2 아니오"를 받고 한다. 올리기 전에 2번 10(적지 않는 것)을 다시 본다 — 아래 첫 줄이 걸리면 고친 뒤 다시.
+- 따로 받은 사본(`~/oc-test/ms-results`)에서만 한다. 지금 창의 제품 저장소와 `~/mitchell_branches`는 건드리지 않는다. 커밋 이름은 `S5_MAC_TEST`(맥 사용자의 이름 · 메일이 남지 않게). 강제 push 없음.
+- `SRC`는 원격 주소를 읽을 자리 하나: `~/mitchell_branches/opencut-test`가 있으면 그것, 없으면 지금 창의 제품 저장소. 원격 주소는 화면 · RESULTS.md에 찍지 않는다.
+
+```zsh
+source ~/oc-test/env.sh; RS="$OCT/out/RESULTS.md"; BR=test/opencut-classic-20261120; MR="$OCT/ms-results"
+BAD=$( { grep -nE '/Users/|\.ts\.net|github\.com' "$RS"; [ -s "$OCT/mcp.token" ] && grep -nF -f "$OCT/mcp.token" "$RS"; grep -nE '(^|[^0-9.])(100|10|172|192)\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' "$RS"; } | cut -d: -f1 | sort -un | tr '\n' ' ')
+if [ -n "$BAD" ]; then echo "가릴 것 있음(줄 $BAD) — 고친 뒤 다시. 올리지 않음"; else
+  SRC=~/mitchell_branches/opencut-test; [ -d "$SRC" ] || SRC="$(git rev-parse --show-toplevel)"
+  [ -d "$MR/.git" ] || git clone -q --depth 1 --single-branch --branch "$BR" "$(git -C "$SRC" remote get-url origin)" "$MR"
+  git -C "$MR" pull -q --ff-only origin "$BR" && cp "$RS" "$MR/app/opencut-test/RESULTS.md" && git -C "$MR" add app/opencut-test/RESULTS.md \
+  && git -C "$MR" -c user.name=S5_MAC_TEST -c user.email=s5-mac-test@example.invalid commit -q -m "S5_MAC_TEST: RESULTS.md ($(kst))" \
+  && git -C "$MR" push -q origin "HEAD:$BR" && git -C "$MR" log -1 --format='올림 %h' || echo "올리지 못함 또는 바뀐 것 없음 — 위 줄을 보고 한알님께 번호로 여쭘"
+fi
+```
+
+- push가 거절되면(권한 없음 등) 다시 하지 않고 한알님께: "올리지 못했습니다. 1 그대로 두기(나중에 RSCH와 정함) · 2 RESULTS.md를 화면에 띄우기" — 2면 `open -e "$RS"`.
 
 ---
 
 ## 5. RESULTS.md 꼴
 
 ```markdown
-# 맥북 시험 결과 — 2026-11-__ · MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (지시문 판 2 — OpenChatCut 메인)
+# 맥북 시험 결과 — 2026-11-__ · MITCHELL_STUDIO/BTSR/RSCH/S5_MAC_TEST (지시문 판 2.1 — OpenChatCut 메인)
+
+- 지시문: `~/oc-test/OPEN_PACKET.md` (= 제품 저장소 가지 `test/opencut-classic-20261120`의 `app/opencut-test/OPEN_PACKET.md`) — **이어서 할 때는 이 글과 이 RESULTS.md부터 읽고, 끝난 단계는 건너뜀**
 
 - 돌린 이: (Claude Code / ChatGPT Codex) · 시작 (KST) · 끝 (KST)
 - 끝까지 간 단계: A0 … A9 · B1 … B8 · Z (못 한 단계와 까닭)

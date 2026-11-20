@@ -1,11 +1,20 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 02:17 KST
+- 확인 시각: 2026-11-21 02:28 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★★★★★★ 지금 자리 (2026-11-21 02:28 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **지시문 판 2.1 (02:26)** — 한알 02:19 「타자를 길게 치기 힘들어여 … 터미널은 열어둔 세션이 관제하기 힘듭니다.」 · 02:22 「아니 지시문을 고치라고 고쳐야죠」 · 「지금 테스트중이예요」 · 02:23 「맥북에서 할 수 있는게 제한적이라는거만 기억해두세요. 그리고 오픈챗컷은 웹인가요?」
+  1. 바뀐 것: ⓪의 새 터미널 창(start.command)을 버림 → **지금 창에서 그대로 · 돌고 있는 시험은 끊지 않고 RESULTS.md에서 이어 감** · 묻기는 번호 · '네'로(2번 17) · 단계마다 한 줄 알림(18) · **결과는 맥 에이전트가 '올리기'로 시험 가지 `app/opencut-test/RESULTS.md`에 push**(`~/oc-test/ms-results`에 따로 받은 사본에서 · 커밋 이름 S5_MAC_TEST · 처음 한 번 한알 '1 네' · 가릴 것 검사 — 이 PC에서 가짜 저장소로 돌려 봄).
+  2. 자리 둘: 제 저장소 `sub/s5_mac_test/OPEN_PACKET.md` + **스튜디오 시험 가지 27037f2**(blob ef9cc4c — 둘 같음).
+  3. 한알께 드린 한 마디(맥 창에): **「지시문 새로 받아서 이어서 해」.** 끝나면 한알이 RSCH 창에 「끝」 → `gh api "repos/AofSpds/mitchell-studio/contents/app/opencut-test/RESULTS.md?ref=test/opencut-classic-20261120" --jq .content | base64 -d`로 읽고 ★10 3번대로(반환.md · 5가지 판정 · 기획안 반영).
+  4. OpenChatCut은 웹인가 → 답: 브라우저로 여는 화면이지만 인터넷 사이트 아님(맥 안 서버 localhost:5199 · 같은 맥 브라우저) · 화면 없이 occ로 뽑기도 됨.
+  5. 지침 셋 더함(directives 02:19 · 02:22 · 02:23) · 자동 기억 mac-is-limited.
 
 ## ★★★★★★★★★★★ 지금 자리 (2026-11-21 02:13 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
