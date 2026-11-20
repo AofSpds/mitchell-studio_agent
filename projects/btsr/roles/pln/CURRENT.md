@@ -46,5 +46,5 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 | 세션 | 지위 | 실행기 | 상태 | 칸 |
 |---|---|---|---|---|
 | MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo 071c15f3) | ARCH 반환 · 한알 답 기다림 | 이 폴더 |
-| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo 9d298a54) | PLN-001 받음(btsr/arch aee2291, 설계 1판 → PMO BTSR-ARCH-001) · PLN-002 받을 차례 | `../arch/` (가지 `btsr/arch`) |
+| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo 9d298a54) | PLN-001 받음(btsr/arch aee2291, 설계 1판 → PMO BTSR-ARCH-001) · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo) | 닫힘 — Paseo 에이전트 `769642ae`, Claude 세션 `6123ff97` (옛 기록 기준), Paseo 작업 공간 `wks_b17624602f48a73b`(제목 PLN-CLOSED) | [archive/](archive/) |

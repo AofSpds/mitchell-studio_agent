@@ -15,4 +15,4 @@
 | 번호 | 무엇 | 근거 | 맡긴 일 | 지금 |
 |---|---|---|---|---|
 | 1 | 작업자 모델을 GPT-6.2 Sol High로, 설정 한 곳에서 (요구 worker-model 1판 R01–R07) | 한알 결정 worker-model 04 (11-21 03:23:56) | ARCH ← [BTSR-PLN-001](requirements/worker-model/WORKER_MODEL_BTSR-PLN-001_REQUEST_CLAUDE.md) | ARCH 받음(aee2291) → PMO BTSR-ARCH-001. 반환 기다림 |
-| 2 | 웹앱 1차 캡컷 길 — 묶음 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → 4-b → 6 (요구 webapp-phase1 1판), 7 보류 | 한알 결정 webapp-phase1 01–03 | ARCH ← [BTSR-PLN-002](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_REQUEST_CLAUDE.md) | ARCH 받음 기다림 · 한알 물음 1–7 |
+| 2 | 웹앱 1차 캡컷 길 — 묶음 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → 4-b → 6 (요구 webapp-phase1 1판), 7 보류 | 한알 결정 webapp-phase1 01–03 | ARCH ← [BTSR-PLN-002](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_REQUEST_CLAUDE.md) | ARCH 받음(c288301) — 묶음 1 설계 중 · 한알 물음 1–7 |
