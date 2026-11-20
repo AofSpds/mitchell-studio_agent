@@ -1,13 +1,17 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 09:28 KST
+- 확인 시각: 2026-11-20 09:38 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
-## ★★★★ 지금 자리 (2026-11-20 09:28 KST, 새 세션 Opus 5.5 · Max — Paseo 7993ff28) — 압축 뒤 여기부터
+## ★★★★ 지금 자리 (2026-11-20 09:38 KST, 새 세션 Opus 5.5 · Max — Paseo 7993ff28) — 압축 뒤 여기부터
+
+- **★ 지금 하는 일 — SUB S4의 기술 보강을 기다림(09:38):** 한알 09:31:27 uuid 6a656594 "네 일단 기술적인 분석이 충분히 됐을까요. 아니라면 서브세션에 일을 맡깁니다" → 내 판단 **충분하지 않음**(방향은 섰으나 설계에 넘기기 전에 읽기 · 웹 조사로 풀 빈 곳과 돌려 봐야만 아는 것이 남음). 패킷 `sub/s4_opencut_tech/OPEN_PACKET.md`를 먼저 커밋(b7ed38f)하고 **`MITCHELL_STUDIO/BTSR/RSCH/S4_OPENCUT_TECH`를 엶** — Paseo f8b4036d · Opus 5.5 · high · auto · 읽기와 웹 조사만(설치 · 실행 없음). 물음 Q1 정적 묶음 · Q2 맥에서 화면 없이 뽑기(H.264 · AAC) · Q3 아이폰은 미리보기와 고치기만 · Q4 https와 푸시 · Q5 변환 규격 · Q6 포크 목록 · 한글 글꼴 · Q7 이용 조건 · Q8 자막 모양 값 + '돌려 봐야만 아는 것' · '초안과 어긋나는 곳'. 기록: logs/2026-11-19-sub-sessions.md 끝.
+  - **끝나면(알림이 옴 — 폴링하지 않음):** 5항목(범위 · 산출물 · 권한 · 증거 · 충돌)으로 보고, 판단에 쓰는 주장은 소스 · 원 출처에서 몇 군데 다시 확인 → 받음이면 그 칸이 커밋됐는지 보고(안 됐으면 내가 그 칸만 커밋) → 기획안 초안 · 오픈컷 연구 글에 옮김 → 한알께 보고(결론 한 줄 → 바뀐 것 → 정해 주실 것). 돌려 봐야만 아는 것은 그때 '어디서 돌릴지(이 PC / 맥북)'를 한알께 여쭘.
+  - S4가 일하는 동안 그 칸(`sub/s4_opencut_tech/`)을 내 커밋에 넣지 않음(AAA 규칙 25).
 
 - **받음(09:17):** 아래 '새 세션에 넘김' 칸대로 읽고 '세션 열림' 줄 · 넘김 기록의 받음을 적음(커밋 819f835). AAA 규칙 10대로 옛 세션 3233ba1f의 제목을 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`로 바꿈. 저장소 밖 `last_utt.py`는 새 transcript(db1af991)를 읽게 고침.
 - **첫 일 ① 끝 — 오픈컷 연구를 기획안 초안에 반영(09:28):** `studies/2026-11-20-plan-draft.md` — 머리말에 반영 줄, 1번 범위에 'OpenCut(옛 판)을 웹앱에 포함', 2번 표(요30의 참 = 캡컷 프로젝트 · 요19 ㄴ 풀림), 3번 순서(https의 길을 맨 먼저 — 시험 1 · 묶음 4 · 7의 공통 관문, 시험 2는 localhost라 https 불필요), 묶음 T(시험 넷 표 · 차례 3→2→1→4 · 도구 첫째 = OpenCut 엔진, 07:28의 '①②가 가벼워 보임'은 거둠), 묶음 2(서버의 길 셋), 4(https), 5(뽑은 파일을 `data/output/<작업>_v<N>.mp4`에 두면 지금 검사가 그대로), 6(참인 편집 상태 = 넓힌 장면표 · OpenCut에 자리 없는 것 표), 7(포함 · 붙는 꼴 · 두 꼴 표 · 아이폰 위험 · 이용 조건), 화11 · 4-1 · 화-라, 5번 나-2 · 나-3, 6번(ㄱ의 B 도구 · ㄴ 풀림 · OpenCut 칸을 다시 씀 · 열린 물음에 **오1~오4**), 7번 · 8번. 시안은 화11 아래 설명 한 줄만 고치고 Edge로 찍어 확인(겹침 · 잘림 없음, 휴대폰 화면 안에 OpenCut 이름 없음). 제품 저장소는 줄 다섯(`server.py`:292-302 · :357-361, `voice_fit.py`:317-342, `jobs.py`:566, `agents/pmo/knowhow.md`:24)을 읽기만 해서 맞음을 확인.
@@ -107,6 +111,7 @@
 - subs: `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES` (Paseo 5641fdf4 · Opus 5.5) — 칸 sub/s1_open_roles/ (OPEN_PACKET.md 판 2 · 반환.md). 일 끝, 받음(23:20).
 - subs: `MITCHELL_STUDIO/BTSR/RSCH/S2_PROCHAT_ORGANIZE` (Paseo 30756978 · Opus 5.5) — 칸 sub/s2_prochat_organize/ (OPEN_PACKET.md + 덧붙임 1~4 · 원문 · 정리 · 반환.md). 1차 보고 받음(23:20). 템플릿 인터뷰 보고도 받음(23:32, 커밋 1e3d770). 일 끝.
 - subs: `MITCHELL_STUDIO/BTSR/RSCH/S3_REQ_SUPPLEMENT` (Paseo ea5917a3 · codex GPT-6.2-Astra · auto · xhigh) — 칸 sub/s3_req_supplement/ (OPEN_PACKET.md). 23:55에 엶. 보완 안(요구사항_보완_GPT_ASTRA.md · 반환.md)을 냄. 일 끝, 받음(11-20 00:09). 커밋은 PRIMARY가 대신 함(d133700).
+- subs: `MITCHELL_STUDIO/BTSR/RSCH/S4_OPENCUT_TECH` (Paseo f8b4036d-ba07-47f5-8368-8e55f8390371 · Opus 5.5 · high · auto · Claude 세션 cf7d5ab4) — 칸 sub/s4_opencut_tech/ (OPEN_PACKET.md, 커밋 b7ed38f). 11-20 09:37에 엶(새 PRIMARY 7993ff28). 오픈컷 기술 보강 — 읽기와 웹 조사만. 일하는 중.
 - **RSCH 자신은 아직 옛 꼴**(작업 공간이 main 폴더, 역할 폴더가 directives · knowhow · logs). AAA와 똑같이 하려면 worktree(가지 btsr/rsch)로 옮겨야 하고, 그러려면 새 세션으로 승계해야 함 — 할 때 한알께 알리기만 함(directives.md 21:30:50).
 - AAA 규칙 판: 이 PC dev/AAA 폴더 맨 위 AGENTS.md (v0.14). 세션 · 역할 · SUB를 다루기 전에 먼저 봄(knowhow.md).
 
