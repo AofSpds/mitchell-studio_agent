@@ -1,6 +1,7 @@
 # 맥북 시험 순서서 — 오늘(11-20) 저녁 · OpenCut 옛 판을 고치지 않고
 
 - 쓴 이: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28) · 쓴 때: 2026-11-20 13:31~ KST · **고침 14:29 KST — PMO의 시험 코드(BTSR-RSCH-001, 제품 가지 `test/opencut-classic-20261120` c2d21a6)를 T9로 넣고 차례를 바꿈.** T9가 T2의 화면 없는 뽑기와 T3-반을 대신하고, T2는 덤으로 내려감. T1은 T9의 서버를 씀.
+- **고침 16:44 KST — 한알 16:35:54 「오늘 맥북 테스트를 위한 준비를 해야 합니다」:** RSCH가 PMO 시험 코드(c2d21a6)를 맥 쪽에서 다시 읽고 막힐 곳 넷을 고침(7번의 9) · **0-1 시작 전에 갖출 것** · 코드와 이 글을 받는 길 **(다)**(맥 Safari 개인 정보 보호 창에서 한알님 GitHub)를 더함.
 - 근거 말씀(`owner/utterances/2026-11-20.md`): 09:40:13 「실테스트는 맥북에서 오늘 저녁에 진행합니다」 · 10:10:04 「네 테스트를 위해서 어디까지 구현을 할까요」 · 11:02:25 「아 그건 괜찮아요. 그 외에 맥북 원래 사용자가 인증이 필요한 항목이 있을까요」(Bun 설치 허락) · 13:25:19 「네 일단 저녁에 다시 정리부탁드리구요. / 테스트 코드는 구현을 해야겠지요?」
 - 바탕: S4의 `sub/s4_opencut_tech/오픈컷_기술보강_CLAUDE.md` 9번. 명령은 거기서 옮겼고, RSCH가 바꾼 곳은 **[고침]**으로 표시했습니다(목록은 맨 끝 7번).
 - **아무도 돌려 본 적 없는 명령입니다.** 꼴이 틀리면 `--help`를 보고 고쳐 쓰고, 고친 꼴을 기록 칸에 적어 주세요.
@@ -15,7 +16,7 @@
 |---|---|---|---|---|---|
 | 1 | **T0** 맥 Chrome 능력 | 맥이 OpenCut 엔진으로 H.264 · AAC를 뽑을 수 있나. 안 되면 '맥이 뽑기'의 첫째 후보가 무너짐 | Chrome | 터미널 + 화면 | 15분 |
 | 2 | **T-i** 아이폰 능력 | iOS 판과 기능 → 옛 판을 고치지 않고 되나(iOS 26) / 고쳐야 하나 | 아이폰 · 케이블 | 아이폰 + 화면 | 15분 |
-| 3 | **T9** 시험 코드로 한 바퀴 (PMO의 MAC_RUN) | 맥이 우리가 고친 판으로 **화면 없이 한 편을 뽑나**(시험 2의 실물) · 들여오기 · 사람이 고치고 나눈 것을 되받나 · 걸린 시간 | **맥에 코드 받기(1-3에서 정할 것)** · Bun(허락됨) | 터미널 + 화면 | 60분 |
+| 3 | **T9** 시험 코드로 한 바퀴 (PMO의 MAC_RUN) | 맥이 우리가 고친 판으로 **화면 없이 한 편을 뽑나**(시험 2의 실물) · 들여오기 · 사람이 고치고 나눈 것을 되받나 · 걸린 시간 | **맥에 코드 받기 — (다) GitHub ZIP [권고] (1-3)** · Bun(허락됨) | 터미널 + 화면 | 60분 |
 | 4 | **T1** https로 아이폰에서 열기 | https 길, 아이폰에서 엔진이 도나 — T9의 서버로 | **HTTPS 켜기(아직 안 정해짐)** · 운영자 계정 | 터미널 + 아이폰 | 45분 |
 | 5 | **T8** 캡컷 1025의 글자 값 | 자막 · 고정 글자의 모양 값 — T9의 글자 모양(지금은 시안)을 맞출 바탕 | 운영자 동의 | 터미널 | 15분 |
 | 6 | (덤) **T2** 옛 판 그대로 화면에서 뽑기 | 고치지 않은 판의 화면 뽑기 · 60fps 소재 · 화면의 한글 글꼴 | Bun | 터미널 + 화면 | 60~90분 |
@@ -25,6 +26,20 @@
 - **PMO가 이 PC(윈도 · Chrome 157)에서 이미 본 것(반환서 `btsr/pmo` 가지 `projects/btsr/roles/pmo/records/opencut-test/`):** 화면 없는 Chrome으로 장면표 → 프로젝트 → 들여오기 → 12초 한 편 뽑기(2.6초, H.264 High · 1080×1920 · 30/1 · AAC) → 되받기(바뀐 곳 0). 뽑은 파일에서 자막 테두리 · 한글 글꼴 · 'AI 합성' 표시 · 끝 문구가 보임. **맥에서 같은지가 오늘 밤의 핵심입니다.**
 - **오늘 못 하는 것:** 시험 3의 실물(진짜 목소리 파일 — 지금 목소리는 캡컷 '텍스트 읽기' 안에만 있음)과 시험 4(캡컷 결과와 나란히 — 글자 모양 값을 T8로 맞춘 뒤).
 
+### 0-1. 시작 전에 갖출 것 (16:44 더함)
+
+| 무엇 | 왜 | 없으면 |
+|---|---|---|
+| 맥북 · 충전기 · 인터넷(와이파이) | Bun · 고친 판 소스 · 꾸러미 · 글꼴(· 없으면 Chrome)을 받음 — 1GB 안팎 [추측] | 시작 못 함 |
+| 맥 로그인 암호 — 한알님 | 잠금 풀기 · 혹시 뜨는 키체인 창 | — |
+| **한알님 GitHub 로그인**(2단계 인증을 받을 휴대폰) | 이 글을 맥에서 열어 복사 · 붙여 넣기 + 시험 코드 ZIP 받기 — 받는 길 (다), 1-3 | (가) · (나)로 |
+| (T-i) 아이폰 + 그 아이폰에 맞는 케이블(USB-C ↔ USB-C, 또는 USB-C ↔ 라이트닝) | 맥 Safari로 아이폰 Safari 콘솔을 봄 | T-i 뺌 |
+| (T1) 운영자: Tailscale 관리 화면에서 HTTPS 켜기 + **운영자 Tailscale에 든 아이폰**(운영자 아이폰) | https로 아이폰에서 열기 | **T1 뺌** |
+| (T8) 이 맥이 캡컷 1025가 있는 맥 + 운영자 동의 | 글자 모양 값 읽기 | T8 뺌 |
+
+- **이 글을 맥에서 보는 법:** 맥 Safari에서 **개인 정보 보호 창**(⇧⌘N)을 열고 GitHub에 한알님 계정으로 로그인 → `https://github.com/AofSpds/mitchell-studio_agent/blob/main/projects/btsr/roles/rsch/studies/2026-11-20-macbook-test-sheet.md` → 코드 칸 오른쪽 위 복사 단추로 터미널에 붙여 넣음. 시험 코드 ZIP도 이 창에서 받음(T9 ①). **다 끝나면 이 창을 닫음** — 로그인이 운영자 맥 · 키체인에 남지 않음.
+- 처음 몇 줄(2번의 `mkdir` · `caffeinate`)부터 이 창에서 복사해 씁니다.
+
 ---
 
 ## 1. 시작 전에
@@ -32,7 +47,7 @@
 ### 1-1. 운영자(맥북 주인)께서 해 주실 것
 
 1. ~~맥 잠금 풀기~~ → **한알님이 하심** — 한알님이 이 맥북을 빌려 오심(16:27:42 「제가 맥북을 빌려온 상황이고 잠금이나 이런건 할수 있어요.」). 2번의 잠자기 막기를 켜 두면 처음 한 번이면 됩니다.
-2. **(T1을 할 때만) Tailscale 관리 콘솔에서 HTTPS 켜기** — login.tailscale.com에 운영자 계정으로 들어가 DNS 쪽에서 MagicDNS 켜기 · HTTPS Certificates 'Enable HTTPS'. 맥과 아이폰의 Tailscale이 운영자 계정으로 로그인돼 있습니다(제품 `agents/pmo/logs/2026-11-09_tailscale-access.md`:35). **켜면 맥의 Tailscale 이름(기록상 `mitchell` — 같은 글 :29)과 tailnet 이름이 공개 인증서 장부(CT)에 영구히 남습니다.** 이름을 바꿀 거면 켜기 전에.
+2. **(T1을 할 때만) Tailscale 관리 콘솔에서 HTTPS 켜기** — login.tailscale.com에 운영자 계정으로 들어가 DNS 쪽에서 MagicDNS 켜기 · HTTPS Certificates 'Enable HTTPS'. 맥과 아이폰의 Tailscale이 운영자 계정으로 로그인돼 있습니다(제품 `agents/pmo/logs/2026-11-09_tailscale-access.md`:35). **켜면 맥의 Tailscale 이름(기록상 `mitchell` — 같은 글 :29)과 tailnet 이름이 공개 인증서 장부(CT)에 영구히 남습니다.** 이름을 바꿀 거면 켜기 전에. 관리 화면은 웹이라 운영자가 맥 곁에 없어도 자기 휴대폰에서 켤 수 있음 **[추측]**. 다만 T1에는 운영자 Tailscale에 든 아이폰도 있어야 함(3번 · 1-3-1).
 3. **(운영자 아이폰으로 할 때) 아이폰 잠금 풀기 · 케이블로 이을 때 '이 컴퓨터를 신뢰' + 아이폰 암호.** 다른 아이폰으로 T1을 하려면 그 아이폰을 운영자 Tailscale에 더해야 해서 결국 운영자 계정이 듭니다(T-i만이면 아무 아이폰이나 됨).
 
 ### 1-2. 운영자께 여쭐 것 (인증은 아님)
@@ -43,10 +58,11 @@
 ### 1-3. 정할 것
 
 - **HTTPS를 켤지** — 안 켜면 T1만 빠집니다.
-- **누가 돌리나** — [터미널] 칸은 에이전트에게 맡길 수 있고, [화면] · [아이폰] 칸은 사람.
-- **맥에 시험 코드를 받는 길(T9)** — 제품 저장소가 비공개라 둘 가운데 하나:
-  - (가) **운영자 맥의 제품 저장소 사본에서 그 가지를 받아 꺼내기 [권고]** — `git fetch`는 받기만 하고 지금 가지 · 작업 중인 파일은 바꾸지 않음. 사본에 이미 있는 로그인으로 받음. 로그인을 새로 물으면 멈추고 (나)로.
-  - (나) **한알님 GitHub 계정으로 ZIP 받기** — 한알님 휴대폰(GitHub에 로그인된 브라우저)에서 받아 맥북으로 AirDrop. 운영자 맥에 새 로그인을 남기지 않음.
+- **누가 돌리나** — 한알님(16:27:42 맥북을 빌려 오심)으로 읽음 **[내 읽기]**. [터미널] 칸은 에이전트에게 맡길 수도 있고, [화면] · [아이폰] 칸은 사람.
+- **맥에 시험 코드를 받는 길(T9)** — 제품 저장소 · 이 글의 저장소가 둘 다 비공개라 셋 가운데 하나 **[16:44 고침 — (다)를 권고로]**:
+  - (다) **맥 Safari 개인 정보 보호 창에서 한알님 GitHub로 ZIP 받기 [권고]** — 이 글을 여는 그 창에서 받음(0-1). 커밋 c2d21a6에 못 박은 주소라 그 뒤 가지가 바뀌어도 같은 코드. 휴대폰 · AirDrop이 필요 없고, 창을 닫으면 로그인이 남지 않음. 이 맥이 웹앱 맥이든 아니든 됨.
+  - (가) **이 맥의 제품 저장소 사본에서 받아 꺼내기** — 웹앱이 도는 맥이고 사본에 GitHub 로그인이 저장돼 있을 때. `git fetch`는 받기만 하고 지금 가지 · 작업 중인 파일은 바꾸지 않음. 로그인 · 키체인 암호를 새로 물으면 멈추고 (다)로.
+  - (나) **한알님 휴대폰에서 ZIP 받아 AirDrop** — 맥에서 GitHub 로그인이 안 될 때. 한알님 휴대폰이 아이폰이어야 함.
 - (이 맥북이 웹앱이 도는 맥이 아니면) Tailscale이 없을 수 있음 → T1은 빼고, T8은 캡컷 1025가 있는 맥에서.
 
 ### 1-3-1. 맥북 · 애플 계정이 엮이는 곳 — 한눈에 (15:24 더함, 한알 15:22:25 「맥북이나 애플계정연계가 필요한 부분을 미리 얘기해주세요」)
@@ -60,7 +76,8 @@
 | T-i · T1 | 가짜 소재를 맥북 → 아이폰으로 AirDrop(3-5) | 같은 애플 계정이면 바로 받음. 다른 계정이면 받는 아이폰의 AirDrop을 '모든 사람(10분)'으로 바꾸고 '받기' | 암호 없음 |
 | T1 | Tailscale 관리 화면(login.tailscale.com)에서 HTTPS 켜기 | 운영자 — Tailscale 계정 로그인. **무엇으로 가입했는지(애플 · 구글 등)는 기록에 없음** | 애플로 가입했다면 맥 브라우저 대신 **운영자 아이폰에서 로그인**(Face ID로 됨 — 애플 계정 암호를 몰라도 됨 [추측]). 안 되면 T1만 뺌 |
 | T1 | 아이폰이 운영자 Tailscale에 '연결됨' | 운영자 아이폰은 이미 들어가 있음(기록 :35-36) | 다른 아이폰이면 운영자 계정으로 그 아이폰을 더해야 함 → T1은 운영자 아이폰으로 [권고]. **운영자 아이폰이 곁에 없으면 T-i는 한알님 아이폰으로, T1은 운영자 계정을 못 쓰면 뺌** |
-| T9 (가) | 운영자 맥의 제품 저장소 사본에서 코드 받기(`git fetch`) | 그 맥에 이미 저장된 GitHub 로그인 | 로그인 · 키체인 암호를 새로 물으면 멈추고 (나)로 |
+| T9 (다) [권고] | 맥 Safari 개인 정보 보호 창에서 GitHub 로그인 → 이 글 · 시험 코드 ZIP | 한알님 GitHub(2단계 인증은 한알님 휴대폰) | 창을 닫으면 남지 않음. 터미널이 '다운로드' 폴더를 처음 읽을 때 '허용' 한 번(암호 없음) |
+| T9 (가) | 이 맥의 제품 저장소 사본에서 코드 받기(`git fetch`) | 그 맥에 이미 저장된 GitHub 로그인 | 로그인 · 키체인 암호를 새로 물으면 멈추고 (다)로 |
 | T9 (나) | 한알님 휴대폰 → 맥북 AirDrop(ZIP) | 한알님 GitHub 로그인(휴대폰) + 맥북 AirDrop을 '모든 사람(10분)'으로 | 운영자 맥에 새 로그인이 안 남음 |
 | 결과 넘기기(5번) | 기록 칸 · 파일 | 글은 화면 사진이나 붙여 넣기. 영상 · 그림 파일은 오늘은 `~/oc-test/out`에 둠 | AirDrop으로 한알님 휴대폰에 옮기는 것은 필요할 때만 |
 
@@ -97,7 +114,11 @@ caffeinate -dims & echo $! > ~/oc-test/caffeinate.pid      # 잠자기 막기 (�
 
 ## 3. 준비 — [터미널]
 
-**3-1. 어느 맥인가** — 이 맥북이 웹앱(8765)이 도는 그 맥인지 적습니다.
+**3-1. 어느 맥인가** — 이 맥북이 웹앱(8765)이 도는 그 맥인지 적습니다. 그 맥이고 웹앱이 켜져 있으면 아래 줄이 제품 저장소 뿌리(T9 (가) · T1의 `<제품 저장소 뿌리>`)를 찍습니다 **[16:44 더함 · 추측]**. 아무것도 안 나오면 한알님이 아시는 자리로.
+
+```zsh
+P=$(lsof -tiTCP:8765 -sTCP:LISTEN | head -1); [ -n "$P" ] && git -C "$(lsof -a -p "$P" -d cwd -Fn | sed -n 's/^n//p')" rev-parse --show-toplevel
+```
 
 **3-2. 판 확인**
 
@@ -109,7 +130,7 @@ node -v; bun -v; git --version                      # bun이 없으면 3-3
 /opt/homebrew/bin/ffmpeg -version | head -1; /opt/homebrew/bin/ffprobe -version | head -1
 /usr/bin/python3 --version
 df -h ~                                             # 빈 자리 5GB 이상 [추측]
-lsof -nP -iTCP:3000 -sTCP:LISTEN; lsof -nP -iTCP:8443 -sTCP:LISTEN; lsof -nP -iTCP:9222 -sTCP:LISTEN   # 셋 다 비어 있어야 함
+for p in 3000 3417 3418 8443 9222; do lsof -nP -iTCP:$p -sTCP:LISTEN; done   # 아무것도 안 나와야 함(다섯 자리 모두 빔) [16:44 고침 — 3417 · 3418 더함]
 ```
 
 - **Chrome이 없으면**(한알께 여쭙고 둘 가운데 하나 — 둘 다 관리자 암호 없음): (가) Google Chrome을 내려받아 `~/Applications`(없으면 만듦)에 끌어 넣음 (나) 3-3 뒤에 `bunx @puppeteer/browsers install chrome@stable --path ~/oc-test/browsers` — Chrome for Testing(H.264 · AAC 있음, S4 Q2ⓒ). 이때는 아래 `CH`를 그 앱 안의 실행 파일로 바꿈.
@@ -123,10 +144,12 @@ CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 ```zsh
 curl -fsSL https://bun.sh/install | bash -s "bun-v1.2.18"
-exec zsh; bun -v                                     # 1.2.18
+export PATH="$HOME/.bun/bin:$PATH"; bun -v           # 1.2.18
 ```
 
-**3-4. 옛 판 받기** (시험 폴더 — 제품 저장소 밖)
+- **[16:44 고침]** 앞 꼴의 `exec zsh`는 셸을 새로 띄워 3-2의 `CH`를 지웠음 → 이 창에서는 PATH만 더함. 새 터미널 창은 설치기가 `~/.zshrc`에 넣은 줄로 `bun`을 찾음(그 창에서는 `CH` 줄을 다시 침).
+
+**3-4. 옛 판 받기** (시험 폴더 — 제품 저장소 밖) — **(덤) T2를 할 때만 [16:44 고침]**. T9는 ②에서 따로 받음.
 
 ```zsh
 mkdir -p ~/oc-test && cd ~/oc-test
@@ -156,6 +179,14 @@ ls -la
 
 - `hevc_videotoolbox`가 없다고 나오면 ③은 건너뜀(적어 둠).
 - 아이폰용: ①③④를 아이폰으로 AirDrop → '파일' 앱에 저장.
+- **ffmpeg가 없으면**(`/opt/homebrew/bin/ffmpeg`가 없음 — 웹앱 맥이 아닐 때) **[16:44 더함]**: 3-5는 건너뛰고, T9 ②로 고친 판 서버를 띄운 뒤 터미널 2에서 가짜 영상을 고친 판으로 만듦(PMO 코드의 `/mitchell/fixture` — 10초 · 1080×1920 · 30fps · H.264 + AAC):
+
+```zsh
+mkdir -p ~/oc-test/media; OT=~/oc-test/ms-test/app/opencut-test
+node "$OT/render.mjs" --page fixture --app http://127.0.0.1:3417 --out ~/oc-test/media/v1080_30.mp4   # 끝에 ok · spec이 찍힘
+```
+
+  - 이때 빠지는 것(적어 둠): ② 60fps · ③ 4K HEVC · ㉧ ffprobe(대신 `render.mjs`가 MP4 상자를 직접 읽어 규격을 봄). 아이폰용 소리는 T9 ③ 뒤의 `~/oc-test/job1/src/voice1.wav` · `music.wav`.
 
 **3-6. Tailscale** (T1을 할 때만)
 
@@ -256,24 +287,37 @@ typeof FileSystemFileHandle!=='undefined' && 'createWritable' in FileSystemFileH
 
 원본은 제품 가지의 `app/opencut-test/MAC_RUN.md`(PMO). 아래는 그것을 옮기고 받는 길(①)과 손 표시를 더한 것입니다. 모두 `~/oc-test/` 안에서, 가짜 소재만 씁니다. 3-3(Bun) · 3-5(가짜 소재)를 먼저 해 둡니다.
 
-**① 코드 받기** — [터미널] (1-3에서 정한 길)
+**① 코드 받기** — [터미널] (1-3에서 정한 길). **어느 길이든 끝에 `OT=~/oc-test/ms-test/app/opencut-test`로 같은 자리가 됩니다 [16:44 고침].**
 
-(가) 운영자 맥의 제품 저장소 사본에서:
+(다) [권고] 0-1의 개인 정보 보호 창(GitHub 로그인됨)에서 아래 주소를 엶 → ZIP이 '다운로드'에 받아짐(Safari가 저절로 풀어 폴더가 될 수도 있음 — 둘 다 아래 명령이 받음). **커밋 c2d21a6에 못 박은 주소**:
+
+`https://github.com/AofSpds/mitchell-studio/archive/c2d21a655cec64c415b86a2649a15d7a11e7cd73.zip`
 
 ```zsh
-cd <제품 저장소 뿌리>
+mkdir -p ~/oc-test/ms-test && cd ~/oc-test
+Z=$(ls -d ~/Downloads/mitchell-studio-c2d21a65* | head -1); echo "$Z"      # 처음이면 '다운로드 폴더 접근' 창 → 허용(암호 없음)
+case "$Z" in *.zip) unzip -q "$Z" -d ~/oc-test/ms-zip && Z=$(ls -d ~/oc-test/ms-zip/mitchell-studio-c2d21a65* | head -1);; esac   # ZIP이면 풀고, 이미 폴더면 그대로
+[ -d "$Z/app" ] && cp -R "$Z/app" ~/oc-test/ms-test/ && OT=~/oc-test/ms-test/app/opencut-test && ls "$OT"   # MAC_RUN.md · render.mjs · fork/ … 가 보이면 됨(아무것도 없으면 Z가 빈 것 — 받은 이름을 ls ~/Downloads로 봄)
+```
+
+(가) 이 맥의 제품 저장소 사본에서(웹앱 맥 · 로그인이 저장돼 있을 때):
+
+```zsh
+cd <제품 저장소 뿌리>                                 # 3-1의 줄이 찍은 자리
 git status -sb | head -1                              # 지금 가지 — 적어 둠(바뀌지 않아야 함)
-git fetch origin test/opencut-classic-20261120        # 받기만. 로그인을 새로 물으면 Ctrl+C → (나)
+git fetch origin test/opencut-classic-20261120        # 받기만. 로그인 · 키체인 암호를 새로 물으면 Ctrl+C → (다)
+git rev-parse --short FETCH_HEAD                      # c2d21a6 이어야 함(다르면 그 값을 적음)
 mkdir -p ~/oc-test/ms-test && git archive FETCH_HEAD app/opencut-test | tar -x -C ~/oc-test/ms-test
 git status -sb | head -1                              # 앞과 같은지
 OT=~/oc-test/ms-test/app/opencut-test; ls "$OT"       # MAC_RUN.md · render.mjs · fork/ … 가 보이면 됨
 ```
 
-(나) 한알님 GitHub 계정으로: 휴대폰 브라우저(GitHub 로그인됨)에서 `https://github.com/AofSpds/mitchell-studio/archive/refs/heads/test/opencut-classic-20261120.zip`을 받아 맥북으로 AirDrop → `~/oc-test/ms-test`에 풀기 → `OT=<풀린 폴더>/app/opencut-test`.
+(나) 맥에서 GitHub 로그인이 안 될 때: 한알님 아이폰 브라우저(GitHub 로그인됨)에서 (다)의 주소로 ZIP을 받아 맥북으로 AirDrop(받는 맥의 AirDrop을 '모든 사람(10분)'으로) → '다운로드'에 들어오므로 (다)의 명령 줄을 그대로 씀.
 
 **② 고친 판 띄우기** — [터미널] (터미널 1 — 이 창은 열어 둠)
 
 ```zsh
+OT=~/oc-test/ms-test/app/opencut-test                 # [16:44 고침] 이 창에서도 씀(아래 git apply)
 cd ~/oc-test && git clone https://github.com/opencut-app/opencut-classic opencut-mitchell
 cd opencut-mitchell && git checkout -b mitchell-test cf5e79e
 git apply "$OT/fork/opencut-classic-cf5e79e-mitchell.patch" && echo "얹기 됨"
@@ -284,7 +328,7 @@ cd apps/web && bun run dev --port 3417 --hostname 127.0.0.1
 ```
 
 - 볼 것: `Ready`가 뜨는지. 이 맥 안(127.0.0.1)에서만 들어 방화벽 창이 안 뜸. T2의 3000과 겹치지 않게 3417.
-- `OT`는 이 창에서 쓰지 않으므로 ①을 다른 창에서 했으면 그 창의 `OT` 줄을 터미널 2에서 다시 칩니다.
+- **[16:44 고침]** 앞 꼴에는 'OT는 이 창에서 쓰지 않는다'고 적었으나 `git apply`가 씀 — 그래서 맨 위에 `OT` 줄을 둠. 셸 변수는 창마다 따로라 터미널 2에서도 ③의 첫 줄로 다시 칩니다.
 
 **③ 변환 · 뽑기 · 되받기** — [터미널] (터미널 2)
 
@@ -310,8 +354,10 @@ node "$OT/render.mjs" --page frames --app $A --video ~/oc-test/out/c4_headless.m
 **④ 사람이 보는 들여오기 · 고치기** — [터미널] + [화면] (T0-1의 시험용 Chrome)
 
 ```zsh
-node "$OT/render.mjs" $J/opencut --serve --app $A        # 찍힌 import_url을 시험용 Chrome(~/oc-test/chrome-test)으로 엶
+node "$OT/render.mjs" $J/opencut --serve --port 3418 --app $A   # 찍힌 import_url을 시험용 Chrome(~/oc-test/chrome-test)으로 엶
 ```
+
+- **[16:44 고침] `--port 3418`을 꼭 붙임** — 안 붙이면 묶음 서버가 **8765(웹앱 자리)**를 잡음(`render.mjs`의 `--serve` 기본값). 웹앱이 켜진 맥이면 '이미 쓰는 중' 오류가 나거나, 맥에서는 127.0.0.1로 오는 웹앱 길(Tailscale serve 포함)을 가로챌 수 있음 **[추측]**. 다 보면 Ctrl+C.
 
 1. 쪽에 '되짚기 됨'과 '편집기 길로 열어 봄'이 뜨는지 → '편집기에서 열기'.
 2. 편집기에서 자막 하나의 글을 고치고, 영상 조각 하나를 가운데서 나눔(분할) → 몇 초 기다림(자동 저장).
@@ -517,12 +563,13 @@ cd <제품 저장소 뿌리> && zsh app/webapp/tailscale/ts.sh serve status     
 # 편집기 서버(T9의 3417 · T2의 3000): 띄운 창에서 Ctrl+C
 pkill -f "oc-test/chrome-"                                                # 시험용 Chrome들만 끔(운영자 Chrome은 그대로)
 kill "$(cat ~/oc-test/caffeinate.pid)"                                    # 잠자기 막기 끔
-for p in 3000 3417 8443 9222; do lsof -nP -iTCP:$p -sTCP:LISTEN; done     # 넷 다 비었는지
+for p in 3000 3417 3418 8443 9222; do lsof -nP -iTCP:$p -sTCP:LISTEN; done   # 다섯 다 비었는지
 ```
 
 - T9를 (가)로 받았으면 운영자 사본에 받은 가지 표시(`origin/test/opencut-classic-20261120`)가 남음 — 작업 중인 파일 · 가지와 상관없어 그대로 둠(지우는 명령은 쓰지 않음).
 - **남길지 정할 것:** `~/oc-test/`(옛 판 · 고친 판 `opencut-mitchell` · 시험 코드 `ms-test` · 가짜 소재 · `job1` · 결과 — 결과를 넘긴 뒤 지워도 됨) · Bun(`~/.bun` 폴더와 `~/.zshrc`의 bun 줄 — 시험 코드 때 다시 쓰므로 남기는 편 [제안]) · 관리 콘솔의 HTTPS 설정(운영자와).
 - 웹앱(8765)이 그대로 도는지: 휴대폰에서 평소 주소로 한 번 열어 봄.
+- **0-1의 개인 정보 보호 창을 닫음**(GitHub 로그인이 남지 않게). (다)로 받은 ZIP · 폴더는 '다운로드'에 남으니 결과를 넘긴 뒤 지워도 됨.
 
 ---
 
@@ -536,3 +583,11 @@ for p in 3000 3417 8443 9222; do lsof -nP -iTCP:$p -sTCP:LISTEN; done     # 넷 
 6. **T3-반:** Application 탭에서 값을 복사하는 대신 콘솔 `copy()` + `pbpaste`.
 7. 더함: 운영자 인증 · 여쭐 것(1번) · 암호 창 피하기(2번) · 잠자기 막기 · 손 표시 · 결과 돌려주기(5번) · 되돌리기(6번).
 8. **14:29 — PMO의 시험 코드를 T9로 넣고 차례를 바꿈:** T9(MAC_RUN)가 T2의 화면 없는 뽑기(⑥)와 T3-반을 대신함 → T2 · T3-반은 덤. T1은 T9의 서버(3417)를 씀. 맥에 코드를 받는 길 (가) · (나)를 1-3에 더함. MAC_RUN에 없던 것: 받는 길 · 받기 앞뒤 `git status` · ㉧ ffprobe · 손 표시.
+9. **16:44 — 준비(한알 16:35:54). RSCH가 PMO 코드 c2d21a6을 `gh api`로 다시 읽고(MAC_RUN · render.mjs · make_fixtures · 패치의 파일 14개 목록 · 글꼴 스크립트) 고친 것:**
+   - T9 ④ `--serve`에 `--port 3418` — `render.mjs`의 `--serve` 기본 포트가 8765(웹앱 자리). MAC_RUN에도 없음 → PMO에 나중에 기본값을 바꾸라고 알릴 것(오늘은 코드를 c2d21a6 그대로 둠).
+   - T9 ② 맨 위에 `OT` 줄 — `git apply`가 `$OT`를 쓰는데 앞 꼴은 '이 창에서 쓰지 않는다'고 잘못 적었음.
+   - 3-3 `exec zsh` → `export PATH=…` — `exec zsh`가 3-2의 `CH`를 지웠음.
+   - 3-5에 ffmpeg가 없을 때의 길 — 고친 판의 `/mitchell/fixture`(PMO 코드, 10초 · 1080×1920 · 30fps · H.264 + AAC)로 가짜 영상을 만듦.
+   - 받는 길 (다)를 권고로: 맥 Safari 개인 정보 보호 창에서 한알님 GitHub로 이 글을 열고 ZIP을 받음(커밋에 못 박은 주소). 어느 길이든 `OT`가 같은 자리. (가)에 `git rev-parse --short FETCH_HEAD`(c2d21a6인지).
+   - 0-1 시작 전에 갖출 것 · 3-1 제품 저장소 뿌리 찾는 줄 · 포트 확인에 3417 · 3418 · 3-4는 T2를 할 때만 · 6에 개인 정보 보호 창 닫기.
+   - 다시 보고 문제없던 것: 글꼴 스크립트는 맥의 `shasum`을 먼저 씀 · `render.mjs`는 Node 내장만 씀(Chrome과는 HTTP로 주고받음 — 새 Node가 아니어도 됨, `node --test`만 Node 18 이상) · 저장소의 파일은 줄 끝이 LF(이 PC에서 받은 사본에 CR이 보였던 것은 받는 과정 탓 — 저장소 본을 base64로 세어 CRLF 0을 확인).

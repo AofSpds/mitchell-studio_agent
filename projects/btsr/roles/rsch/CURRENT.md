@@ -1,11 +1,18 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 16:29 KST
+- 확인 시각: 2026-11-20 16:47 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★ 지금 자리 (2026-11-20 16:47 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 맥북 시험 준비
+
+- **압축(16:35:22) 뒤 첫 말씀 — 한알 16:35:54 uuid 42fa919f "오늘 맥북 테스트를 위한 준비를 해야 합니다"** → 13:25:19의 '저녁에 다시 정리'를 지금 하라는 뜻으로 읽음. 순서서와 PMO 코드 c2d21a6(`gh api`로 MAC_RUN · render.mjs · make_fixtures · 패치 목록 · 글꼴 스크립트)을 맥 쪽에서 다시 읽고 **순서서를 고침(16:44 — 순서서 7번의 9)**: T9 ④ `--serve`에 `--port 3418`(기본 8765 = 웹앱 자리) · T9 ② 맨 위 `OT` 줄 · 3-3 `exec zsh` → `export PATH` · 3-5 ffmpeg가 없을 때 고친 판 `/mitchell/fixture`로 가짜 영상 · 받는 길 **(다) [권고] 맥 Safari 개인 정보 보호 창에서 한알 GitHub로 순서서를 열고 ZIP(커밋 c2d21a6에 못 박은 주소)** · 0-1 시작 전에 갖출 것 · 3-1 제품 저장소 뿌리 찾는 줄 · 포트 확인 3417 · 3418 · 3-4는 T2 때만 · 6에 창 닫기. 가지는 c2d21a6 그대로(16:4x에 확인).
+- **여쭌 것(답을 기다림):** ① 빌려 온 맥북이 웹앱 · 캡컷이 돌던 그 맥인가 — 맞으면 T8(1025 글자 값 읽기)을 해도 되나 ② T1(https로 아이폰)을 오늘 할지 — 운영자가 Tailscale 관리 화면에서 HTTPS를 켜고(휴대폰으로 어디서나 [추측]) 운영자 아이폰이 곁에 있어야 함, 없으면 다음으로 [권고] ③ T-i를 한알 아이폰으로 해도 되나. 받는 길은 (다)를 기본으로 알림(다르게 하시면 말씀).
+- **PMO에 나중에 알릴 것(지금은 안 보냄 — 오늘 밤 코드를 c2d21a6 그대로 두려고):** `render.mjs --serve`의 기본 포트 8765를 웹앱과 안 겹치게. 맥 결과를 넘길 때 함께.
+- **다음:** 한알 답 → 순서서에 반영(T1 · T8 넣거나 뺌) → 시험 중 물음에 답 → 결과가 오면 PMO(f3cf6938)에 C4 꼴 · 글자 모양 값 + 위 포트 건.
 
 ## ★★★★★★ 지금 자리 (2026-11-20 16:29 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
