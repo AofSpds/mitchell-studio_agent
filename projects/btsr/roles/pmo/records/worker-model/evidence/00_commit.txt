@@ -1,0 +1,1 @@
+3495f7e 작업자 모델을 설정 한 곳으로: GPT-6.2 Sol · 생각 High (app/webapp/worker_model.py)

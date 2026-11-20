@@ -1,0 +1,43 @@
+app/webapp/README.md:3:> 작업자(⑥ ChatGPT) 모델: **GPT-6.2 Sol · 생각 High** — 설정 한 곳 `app/webapp/worker_model.py` (2026-11-21, BTSR-ARCH-001)
+app/webapp/README.md:20:6. ⑥ 네 칸 (기획서 `agents/pln/specs/2026-11-10_terra-small-cards.md` · 시험 계획 `2026-11-10_terra-test-plan.md`, 2026-11-11 승인)
+app/webapp/README.md:36:6-2. 연습 (기획서 8번): `data/working/_practice/` — `jobs.py practice base`(capcut_seed → base) · `practice reset`(연습 프로젝트 `zz_practice_terra` 되살림 + 맨 위, CapCut 꺼짐) · `practice cards [--force]` · `practice show`
+app/webapp/jobs.py:23:⑥ 네 칸 (status.json ⑥ "parts", 기획서 terra-small-cards): Voice(ChatGPT) → Music(ChatGPT) → Fit(웹앱 voice_fit) → Export(ChatGPT)
+app/webapp/jobs.py:635:# 기획서 agents/pln/specs/2026-11-10_terra-small-cards.md (승인 2026-11-11)
+app/webapp/jobs.py:1050:EXPERIENCE = os.path.join(ROOT, "agents", "_terra", "experience.md")
+app/webapp/jobs.py:1051:PRACTICE_PROJECT = "zz_practice_terra"
+app/webapp/jobs.py:1542:def terra_band():
+app/webapp/jobs.py:1603:    """④가 끝나면 ⑥ 카드 (기획서 terra-small-cards 5번). kind: full · revoice · export · continue."""
+app/webapp/practice.py:2:"""ChatGPT 연습 카드 (기획서 agents/pln/specs/2026-11-10_terra-small-cards.md 8·10번, 시험 계획 1단계).
+app/webapp/practice.py:5:  capcut_seed/      capcut이 만든 되살림 본 (zz_practice_terra 폴더 · root_entry.json · manifest.sha256)
+app/webapp/practice.py:394:        return f"도구 {tc.get('terra') if tc.get('terra') is not None else '-'}번 (ChatGPT 값 · 기록 못 찾음)"
+app/webapp/practice.py:396:    if tc.get("terra") is not None:
+app/webapp/practice.py:397:        w += f" · ChatGPT 적음 {tc['terra']}번 · 차이 {tc['codex'] - tc['terra']:+d}"
+app/webapp/practice.py:475:        c["tools"] = {"terra": int(tv) if tv is not None else None, "codex": got[0] if got else None,
+app/webapp/preflight.py:2:"""ChatGPT 시작 전 점검표 C1~C15 (기획서 agents/pln/specs/2026-11-10_terra-test-plan.md 1번).
+app/webapp/preflight.py:166:    clash = [n for n in names if n != J.PRACTICE_PROJECT and ("practice_terra" in n or n in J.PRACTICE_PROJECT)]
+app/webapp/reel_api.py:252:        J.prune_backups(job)  # 카드 백업은 마지막 것만 남김 (기획서 terra-test-plan 3번)
+app/webapp/reel_api.py:283:            return h.send(200, {"ok": True, "items": jobs_list(), "terra": J.terra_band(), "practice": pr, "worker": WM.public()}) or True
+app/webapp/static/app.html:246:    <div class="stack"><div id="terraBand"></div><details class="pf" id="pfBox" hidden><summary id="pfSum">Preflight</summary><ul id="pfList"></ul></details><div class="alert" id="todoAlert"></div><div class="stack" id="jobList"></div><div class="prac" id="pracBox" hidden></div></div>
+app/webapp/static/app.html:532:  BAND = jr.terra; $("terraBand").innerHTML = bandHtml(jr.terra);
+app/webapp/static/app.html:534:  if ((jr.terra && jr.terra.waiting) || (jr.practice && jr.practice.ready)) loadPreflight(); else $("pfBox").hidden = true;
+app/webapp/tests/test_worker_model.py:28:SOL, TERRA = WM.Model.GPT_6_2_SOL, WM.Model.GPT_6_1_TERRA
+app/webapp/tests/test_worker_model.py:41:        self.assertEqual(WM.name(), "GPT-6.2 Sol")
+app/webapp/tests/test_worker_model.py:42:        self.assertEqual(WM.label(), "GPT-6.2 Sol · 생각 High")
+app/webapp/tests/test_worker_model.py:43:        self.assertEqual(WM.public(), {"model": "GPT-6.2 Sol", "effort": "High", "label": "GPT-6.2 Sol · 생각 High"})
+app/webapp/tests/test_worker_model.py:46:        for ok in ("GPT-6.2 Sol", "gpt-6.2  sol", " GPT-6.2 SOL ", "GPT-6.2Sol"):
+app/webapp/tests/test_worker_model.py:48:        for bad in ("GPT-6.1 Terra", "테라", "", None, "GPT-6.2 Sol High", "Sol"):
+app/webapp/tests/test_worker_model.py:65:        m = self._job_model("GPT-6.2 Sol")
+app/webapp/tests/test_worker_model.py:66:        self.assertEqual(m["name"], "GPT-6.2 Sol")
+app/webapp/tests/test_worker_model.py:69:    def test_six_result_terra_fails(self):
+app/webapp/tests/test_worker_model.py:70:        self.assertFalse(self._job_model("GPT-6.1 Terra")["ok"])
+app/webapp/tests/test_worker_model.py:81:        self.assertTrue(self._practice_model("gpt-6.2 sol")["ok"])
+app/webapp/tests/test_worker_model.py:82:        self.assertFalse(self._practice_model("GPT-6.1 Terra")["ok"])
+app/webapp/tests/test_worker_model.py:97:    def test_sol_then_terra(self):
+app/webapp/tests/test_worker_model.py:101:                self.assertIn("GPT-6.2 Sol · 생각 High", v, k)
+app/webapp/tests/test_worker_model.py:102:                self.assertNotIn("Terra", v, k)
+app/webapp/tests/test_worker_model.py:103:            WM.MODEL = TERRA
+app/webapp/tests/test_worker_model.py:106:                self.assertIn("GPT-6.1 Terra · 생각 High", v, k)
+app/webapp/worker_model.py:12:    GPT_6_1_TERRA = "GPT-6.1 Terra"
+app/webapp/worker_model.py:13:    GPT_6_2_SOL = "GPT-6.2 Sol"
+app/webapp/worker_model.py:26:    """모델 이름 — 예: "GPT-6.2 Sol"."""
+app/webapp/worker_model.py:31:    """사람에게 보이는 글 — 예: "GPT-6.2 Sol · 생각 High"."""

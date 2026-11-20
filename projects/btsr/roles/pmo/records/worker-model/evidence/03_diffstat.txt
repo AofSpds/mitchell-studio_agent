@@ -1,0 +1,27 @@
+ .claude/agents/tester.md                           |  14 +--
+ AGENTS.md                                          |   2 +-
+ CLAUDE.md                                          |   2 +-
+ agents/capcut/reference/practice-project.md        |   2 +-
+ agents/capcut/reference/voice-gap-logic.md         |   2 +-
+ agents/creative_director/directives.md             |   7 +-
+ agents/creative_director/manual-webapp.md          |   8 +-
+ agents/creative_director/manual.md                 |  22 ++--
+ agents/pln/specs/2026-11-09_pilot-chatgpt-trial.md |   2 +
+ .../pln/specs/2026-11-09_reel-automation-ui.html   |   1 +
+ agents/pln/specs/2026-11-09_reel-automation.md     |   2 +
+ agents/pln/specs/2026-11-10_ai-face-step.md        |   2 +
+ .../pln/specs/2026-11-10_chatgpt-one-word-start.md |   2 +
+ agents/pln/specs/2026-11-10_terra-small-cards.md   |   2 +
+ agents/pln/specs/2026-11-10_terra-test-plan.md     |   2 +
+ .../pln/specs/2026-11-10_voice-fit-and-export.md   |   2 +
+ app/scripts/voice_fit.py                           |   2 +-
+ app/webapp/README.md                               |  16 +--
+ app/webapp/jobs.py                                 |  24 ++--
+ app/webapp/practice.py                             |  23 ++--
+ app/webapp/preflight.py                            |   9 +-
+ app/webapp/reel_api.py                             |   3 +-
+ app/webapp/server.py                               |   2 +-
+ app/webapp/static/app.html                         |  11 +-
+ app/webapp/tests/test_worker_model.py              | 130 +++++++++++++++++++++
+ app/webapp/worker_model.py                         |  46 ++++++++
+ 26 files changed, 269 insertions(+), 71 deletions(-)
