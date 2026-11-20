@@ -1,13 +1,21 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 09:17 KST
+- 확인 시각: 2026-11-20 09:28 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
-## ★★★ 새 세션에 넘김 (2026-11-20 09:14 KST) — 받는 세션은 여기부터
+## ★★★★ 지금 자리 (2026-11-20 09:28 KST, 새 세션 Opus 5.5 · Max — Paseo 7993ff28) — 압축 뒤 여기부터
+
+- **받음(09:17):** 아래 '새 세션에 넘김' 칸대로 읽고 '세션 열림' 줄 · 넘김 기록의 받음을 적음(커밋 819f835). AAA 규칙 10대로 옛 세션 3233ba1f의 제목을 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`로 바꿈. 저장소 밖 `last_utt.py`는 새 transcript(db1af991)를 읽게 고침.
+- **첫 일 ① 끝 — 오픈컷 연구를 기획안 초안에 반영(09:28):** `studies/2026-11-20-plan-draft.md` — 머리말에 반영 줄, 1번 범위에 'OpenCut(옛 판)을 웹앱에 포함', 2번 표(요30의 참 = 캡컷 프로젝트 · 요19 ㄴ 풀림), 3번 순서(https의 길을 맨 먼저 — 시험 1 · 묶음 4 · 7의 공통 관문, 시험 2는 localhost라 https 불필요), 묶음 T(시험 넷 표 · 차례 3→2→1→4 · 도구 첫째 = OpenCut 엔진, 07:28의 '①②가 가벼워 보임'은 거둠), 묶음 2(서버의 길 셋), 4(https), 5(뽑은 파일을 `data/output/<작업>_v<N>.mp4`에 두면 지금 검사가 그대로), 6(참인 편집 상태 = 넓힌 장면표 · OpenCut에 자리 없는 것 표), 7(포함 · 붙는 꼴 · 두 꼴 표 · 아이폰 위험 · 이용 조건), 화11 · 4-1 · 화-라, 5번 나-2 · 나-3, 6번(ㄱ의 B 도구 · ㄴ 풀림 · OpenCut 칸을 다시 씀 · 열린 물음에 **오1~오4**), 7번 · 8번. 시안은 화11 아래 설명 한 줄만 고치고 Edge로 찍어 확인(겹침 · 잘림 없음, 휴대폰 화면 안에 OpenCut 이름 없음). 제품 저장소는 줄 다섯(`server.py`:292-302 · :357-361, `voice_fit.py`:317-342, `jobs.py`:566, `agents/pmo/knowhow.md`:24)을 읽기만 해서 맞음을 확인.
+- **첫 일 ② — 한알께 연구 보고(09:28에 드림):** 결론 한 줄 → 한 일 → 정해 주실 것(오1 휴대폰 편집 화면의 꼴 · 오2 캡컷을 놓는지 · 오3 https · 오4 맥북 시험을 누가).
+- **기다리는 것:** 오1~오4의 답 + 아래 칸의 '여쭌 채 답이 없는 것'(얼굴 확인 기본값 · 직접 편집 범위 · 미17~미20 · 화면 4-9 · 맥북 시험 세부). '직접 편집이 웹앱 안 화면인지'는 07:30:43 「웹앱에 포함하는게 제 의견입니다.」로 닫힌 것으로 읽음(초안에 [내 읽기] 표시).
+- **다음:** 답이 오면 초안 · 요구사항 정리에 반영. "맡기라"고 하시면 AAA 규칙대로 요청서 파일을 먼저 쓰고 PLN(071c15f3) → ARCH(9d298a54) → PMO(f3cf6938) — **아직 지시하지 않음.** 시험은 한알이 시키시기 전에는 하지 않음.
+
+## ★★★ 새 세션에 넘김 (2026-11-20 09:14 KST) — 받는 세션은 여기부터 (09:28 받는 세션이 첫 일 둘을 함 → 위 '★★★★ 지금 자리')
 
 - 근거(한알): 11-20 09:12:50 uuid 4a40ebf4 "현재 세션을 오퍼스 맥스로 인수인계합니다." → 같은 이름(MITCHELL_STUDIO/BTSR/RSCH)의 새 세션을 Opus 5.5 · 생각 수준 Max로 엶. 넘기는 쪽: Paseo 3233ba1f · Claude 세션 2ad93d91 · Fable 5.2. 기록: logs/2026-11-20-session-handover.md.
 - **읽는 순서:** 저장소 맨 위 AGENTS.md → 이 칸 → `directives.md` · `knowhow.md` → `owner/utterances/2026-11-20.md`(전부 — 오늘 말씀 열한 개) → `studies/2026-11-20-plan-draft.md`(기획안 초안) → `studies/2026-11-20-opencut-in-webapp.md`(오픈컷 다시 연구) → 필요하면 `studies/2026-11-19-requirements-from-prochat.md`(요 · 미 · 템 번호의 뜻)와 `logs/2026-11-20-opencut-*.md` 셋. AAA 규칙 판은 이 PC `C:\Users\ms1pk\dev\AAA\AGENTS.md`(v0.14, 읽기만).
