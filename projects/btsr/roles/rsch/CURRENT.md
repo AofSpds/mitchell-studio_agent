@@ -1,11 +1,45 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 03:35 KST
-- 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
+- 확인 시각: 2026-11-21 03:40 KST
+- 세션 열림(넘기는 세션 — 받는 세션이 받음을 적으면 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+
+## ★ 새 세션에 넘김 (2026-11-21 03:40 KST) — 받는 세션은 여기부터. 아래 ★ 칸들은 지난 기록(필요할 때만)
+
+- 근거: 한알 03:32:07 uuid 53195f62 「저장하시고 승계하세요. 캡컷 기반 웹앱을 오늘 완성한다. 는 지침을 첫번째로 하시고,」 (승계는 알리기만 — 지침 11-19 21:30:50)
+- 넘기는 세션: Paseo 7993ff28 · Claude db1af991 · Opus 5.5 xhigh (11-20 09:15 ~ 11-21 03:40). 넘긴 뒤 이 폴더에 쓰지 않음.
+- 왜 승계: 압축을 거듭하며 결정을 놓침 — 확정 템플릿 · 40건 정리를 맥 시험에 안 씀 · Terra 말씀 넷(11-19)을 이틀 넘게 안 넘김 · AAA 15 · 16 · 17을 어기고 PMO에 바로 보냄 · 승인 없이 일을 시작 · 말이 길고 어려움. 한알 03:30 피드백 물음과 RSCH의 답: owner/utterances/2026-11-21.md 03:30:51 칸.
+
+### 1. 첫째 지침 — **캡컷 기반 웹앱을 오늘(11-21) 완성한다** (directives.md 맨 위)
+
+### 2. 꼭 지킬 결정 (원문은 owner/utterances · directives)
+1. **캡컷 길** — 03:12:51 「기존 캡컷 사용 완성도 높이기로 합시다」. 편집 엔진 바꾸기(OpenChatCut · OpenCut · 묶음 T)는 멈춤.
+2. **작업자 모델 GPT-6.2 Sol · High, 변수 · enum으로** — 11-19 00:55 · 23:24 · 23:47 · 23:56 「테라대신입니다 … 그냥 고치시면 됩니다」.
+3. **1차 = 대표 템플릿 하나의 완성도**(제품 `agents/rsch/templates/reel-workflow.md` 1101 예시 · 바탕은 40건 정리 `agents/rsch/research/2026-11-09_video-workflow-requirements.md`), 폴더는 여러 템플릿 · 리비전 — 11-19 23:20. 사용자는 ChatGPT로 손님 얼굴을 다른 얼굴로 합성한 **사진**을 씀(02:40).
+4. **역할 · 넘김 길:** PLN 기획 → ARCH 설계 → PMO 구현, RSCH는 요구 · 초안 · 총괄(11-20 00:00:42). **AAA 규칙 판 `C:/Users/ms1pk/dev/AAA/AGENTS.md`** — 15 바로 아래로만 · 16 · 17 요청서 파일 → 메시지는 '왔다'만 · 40 · **43 컴퓨터 유즈는 정식 요청 + 한알 사전 승인**. 게시판이 없어 요청서는 `requests/BTSR-RSCH-<번호>_<이름>/요청.md`.
+5. **맥:** 빌린 것 · 할 수 있는 게 적음(02:23) · 한알은 맥에서 긴 글을 못 침 → 묻기는 번호로 · 새 터미널 창 X · 맥 일은 ChatGPT(Codex)가(02:44). 맥은 Paseo에 없음 — 맥에서 일어난 일은 제품 저장소 커밋으로 봄(Creative Director 창이 기록을 push함).
+6. **일하는 법:** 물으시면 답부터 · 일은 승인 받고(애매하면 한 줄로 읽기 확인) · 짧고 쉬운 말(영어 · 약어 X) · 결론 → 할 일 → 정해 주실 것.
+
+### 3. 열린 일
+| 건 | 지금 | 다음 |
+|---|---|---|
+| **BTSR-RSCH-002** 작업자 모델(Terra → 6.2 Sol High) | PLN 받음(btsr/pln 48967ee, 요구 R01–R07) → ARCH(BTSR-PLN-001) → **PMO에 BTSR-ARCH-001**(btsr/arch aee2291) | PMO 구현 → ARCH → PLN 반환('맥에 들어가는 길' 한 줄) → 한알께 알림 · 웹앱 테스트 ⑥부터 이어서 |
+| **BTSR-RSCH-003** 1차 미구현 전부 · 캡컷 길 | PLN 받음 · **기획 1판 반환**(btsr/pln ee2df91 `projects/btsr/roles/pln/requirements/webapp-phase1/` — RETURN_PLAN · REQUIREMENTS: 차례 · 받아들임 기준 · **4번 한알께 여쭐 것 1–7, 하나씩, 권고 1번**) · ARCH에 BTSR-PLN-002 | **받는 세션의 첫 일: PLN의 여쭐 것 1–7을 한알께 하나씩 번호로**(쉬운 말로 · 권고를 1번에) → 답을 PLN에(요청서 덧붙임 → '왔다') |
+| **웹앱 테스트**(맥 ChatGPT가 운영자 대신 한 편) | 지시문 `studies/2026-11-21-webapp-capcut-test.md` = 시험 가지 `app/opencut-test/WEBAPP_TEST.md`(1f539f1) · 지금 시작 가능(⑥에서 멈추면 기록) · 컴퓨터 유즈 승인 03:23:56 | 결과 `app/opencut-test/WEBAPP_RESULTS.md`(gh api로 읽음) → 003에 덧붙여 PLN에 |
+| TPL_PACKET(사진으로 템플릿 모양 MP4 — OpenChatCut) | 시험 가지 50420b2 · 한알: 사진 받기 끝나면 ChatGPT로(03:10) | 캡컷 길로 바뀌어 할지 한알께 번호로 여쭘 |
+| 맥 | 02:51 OpenChatCut 시험 멈춤(A0~A6 통과) · 맥 rsch(Sonnet)가 ChatGPT 첨부 받기 · 분류 중(분류표 `agents/rsch/research/2026-11-21_chatgpt-attachments-catalog.md`) | — |
+| Paseo | PLN 071c15f3 · ARCH 9d298a54 · PMO f3cf6938(이 PC 작업 사본에 빈 로컬 가지 `fix/worker-model-sol-20261121` — 거둔 지시의 흔적) | — |
+
+### 4. 받는 세션이 할 것
+1. 읽기: AGENTS.md → **이 칸** → directives.md(맨 위 첫째 지침) → knowhow.md 끝 10줄 → owner/utterances/2026-11-21.md 끝 100줄 → PLN 기획 1판의 4번(여쭐 것). 나머지는 필요할 때만(제품 저장소 · studies를 통째로 다시 읽지 않음).
+2. 맨 위 '세션 열림' 줄에 자기 Paseo ID · Claude 세션 ID · 시각 · 모델을 더하고, 이 칸 끝에 '받음' 줄 → 커밋 · push.
+3. 옛 세션 7993ff28 제목을 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`로(Paseo update_agent — AAA 규칙 10).
+4. 저장소 밖 도우미 `%TEMP%/rsch_scratch/last_utt.py` · `check_utt.py`가 읽는 transcript를 새 세션 것으로 바꿈(아니면 한알 말씀을 못 찾음). 일하는 중 온 말씀은 `attachment.type == queued_command`로 들어옴.
+5. 한알께 짧게: "넘겨받았습니다. 첫째 지침(캡컷 웹앱 오늘 완성)대로 갑니다." 그리고 PLN의 여쭐 것 1번부터 번호로.
 
 ## ★★★★★★★★★★★★★★ 지금 자리 (2026-11-21 03:27 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
