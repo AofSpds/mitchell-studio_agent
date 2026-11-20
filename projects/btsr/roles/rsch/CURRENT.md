@@ -1,11 +1,22 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 00:32 KST
+- 확인 시각: 2026-11-21 00:36 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★★★ 지금 자리 (2026-11-21 00:36 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (00:36에 적음 — 한알 11-21 00:35:20 uuid e64ae783 "잠깐 저장하고 압축할까요")**
+  1. **지금 상황:** 11-20 밤 맥북 시험(지시문 `sub/s5_mac_test/OPEN_PACKET.md`)의 결과(`RESULTS.md`)는 **아직 안 옴** — 한알이 시험을 하셨는지는 말씀 없음(그 사이 웹챗 연구를 해 오심). 오면 아래 ★★★★★★★★ 4번대로(반환.md · 5항목 · PMO f3cf6938 · 기획안 반영).
+  2. **11-20 19:18 ~ 11-21 00:35에 한 일(모두 push됨, 마지막 2a8a906 + 이 저장):** ① 계획 정리 — 기획안 맨 위 '0. 지금 어디까지' + S4 12곳 · 시험 코드 · 아이폰/애플 계정 옮김(c16ed21) ② 목소리 값(오7 — 지금 캡컷은 0원, 캡컷을 빼면 사업용 최저 월 6달러, 무료는 API가 없어 손 없이는 못 돌림) ③ '보이스 리플' = OpenCut의 Ripple editing으로 추정해 답함(어디서 보셨는지 답 없음) ④ **한알 웹챗 보강 자료 검토**(`studies/2026-11-20-openchatcut-voice-supplement.md` → `logs/2026-11-20-openchatcut-supplement-review.md`) + **기획안 6번에 OpenChatCut 칸**(네 사실 · 닿는 곳 · 네 갈래 · 이용 조건 · 시험 5, 오8 · 오9) ⑤ **이 PC OpenChatCut 시험**(설치 허락 21:31:49): 창 없이 넣기 · 놓기 · 뽑기 → 자료와 기획안의 '명령줄로 소재 넣기 안 됨'을 고침 → 이어서(00:21:28 「네」) 장면표 → 순서표(`occ edit --ops`) · 자막(우리 모양 그림) · 'AI 합성' 트랙 잠금 · 소리 맞춤까지 12초가 29초에 나옴(`logs/2026-11-20-openchatcut-pc-trial.md` 1~5번).
+  3. **읽기:** 기획안 초안 `studies/2026-11-20-plan-draft.md`의 0번(상황판) · 6번 'OpenChatCut' 칸(끝에 '이어서 본 것') · 열린 물음 표 → `logs/2026-11-20-openchatcut-pc-trial.md` → `logs/2026-11-20-openchatcut-supplement-review.md` → `owner/utterances/2026-11-21.md`. 아래 ★★★★★★★★ 칸은 11-20 저녁의 맥북 시험 준비와 19:18~00:32의 자세한 기록(번호 7 · 11 · 10 · 9 · 8 순서가 섞여 있음).
+  4. **기다리는 것(폴링하지 않음):** 한알의 다음 말씀. 열린 갈래 — (가) 이어서 **MCP 시험**(Claude Code가 OpenChatCut에 MCP로 붙어 같은 편집 — 이 PC에서 `npm run dev`로 편집기 서버(localhost:5199)를 띄워야 함, 띄우면 끝나고 끔) (나) 맥 결과 (다) 정해 주실 것: 오1 휴대폰 편집 화면 · 오2 캡컷을 놓는지 · 오3 맥 이름 공개 장부 · 오5 같은 조직인지 · 오6 릴스 글꼴 · 오7 목소리 · 오8 OpenChatCut 네 갈래(오4 · 오9는 풀림).
+  5. **이 PC 시험 폴더(저장소 밖, 남겨 둠 — 2.6GB+):** `C:/Users/ms1pk/dev/btsr-rsch-occ/` — `node/node-v24.22.3-win-x64` · `OpenChatCut`(f96502a + 꾸러미 + Chrome Headless Shell) · `data`(프로젝트 rsch-poc · rsch-job1) · `media-src` · `work`(`scenes2occ.mjs` 확인용 변환기 · `job1` 가짜 작업 · `pmo` PMO 사본) · `fonts`(Noto Sans KR + OFL) · `out`(기록 · mp4). 돌리는 법(Git Bash): `export PATH="/c/Users/ms1pk/dev/btsr-rsch-occ/node/node-v24.22.3-win-x64:$PATH"; export OPENCHATCUT_DATA_DIR="C:/Users/ms1pk/dev/btsr-rsch-occ/data"; cd /c/Users/ms1pk/dev/btsr-rsch-occ/OpenChatCut; node --import tsx cli/main.ts <명령> --json`. ffmpeg는 `node_modules/ffmpeg-static/ffmpeg.exe`(글자 그리기 있음), ffprobe는 `node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe`. 지금 도는 프로세스 없음.
+  6. **남은 일(말씀 없으면 하지 않음):** MCP 시험 · 자막을 고칠 수 있는 글자로(OpenChatCut 글자 조각에 테두리 · 글꼴 칸이 없음 — 포크 또는 그림 유지) · 'AI 합성'을 읽히게(그림으로) · 빈 트랙 4개 까닭 · 다음 맥북 시험 5(OpenChatCut 맞대기) 순서서 · 지시문 · 맥 결과가 오면 PMO에 넘기기. PLN · ARCH에는 지시하지 않음(말씀 없음).
+  7. **지킬 것:** 말씀은 날짜 파일에(11-21부터 `owner/utterances/2026-11-21.md`) — `last_utt.py` → 덧붙임 → `check_utt.py <uuid> <파일>`. 시각은 PowerShell 시계로. **파이썬 소스에 Windows `\` 경로를 넣지 않음(두 번 실패 — knowhow)**, 고치는 스크립트는 `ast.parse` 먼저. '자료가 들어왔다'는 말씀에는 이 저장소 `git fetch`부터. '못 함'이라는 주장은 돌려 볼 수 있으면 돌려서 확정. 개인 정보(맥 사용자 이름 · Tailscale 주소 · 계정 이름)를 적지 않음. 보고는 결론 한 줄 → 할 일 → 정해 주실 것, 짧게.
 
 ## ★★★★★★★★ 지금 자리 (2026-11-20 19:15 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
