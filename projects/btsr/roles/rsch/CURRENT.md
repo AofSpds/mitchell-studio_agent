@@ -1,11 +1,21 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 01:26 KST
+- 확인 시각: 2026-11-21 02:13 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
+
+## ★★★★★★★★★★★ 지금 자리 (2026-11-21 02:13 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
+
+- **압축 뒤 먼저 볼 것 (02:13에 적음 — 한알 02:12:08 uuid 1b81d667 「일단 압축할께요 저장합니다.」)**
+  1. **맥 쪽 지금:** 한알은 맥의 **제품 저장소 Creative Director 창(Claude Code, 운영자 $20 계정)**을 쓰심. 그 창이 01:55 pull · 01:59 가지 둘을 git worktree로 `~/mitchell_branches/opencut-test` · `~/mitchell_branches/interview`에 꺼냄(main · 웹앱 그대로) · C1 · C2 6/6 · 제품 main 34deb36에 기록 push. **맥의 GitHub 계정은 운영자 것 — 제 저장소(mitchell-studio_agent, 비공개)에 닿지 않음.**
+  2. **지시문 자리 둘(내용 같음):** 제 저장소 `sub/s5_mac_test/OPEN_PACKET.md` + **스튜디오 가지 `test/opencut-classic-20261120`의 `app/opencut-test/OPEN_PACKET.md`(c1018a8 — 한알 02:09 「스튜디오에 올리면 안되는거예요?」로 RSCH가 `gh api`로 직접 올림, main 안 건드림)**. 맨 위 ⓪: `~/oc-test`가 아닌 창이 받으면 시험을 직접 하지 않고 `~/oc-test/OPEN_PACKET.md`로 저장 → `start.command`로 새 터미널 창(`claude --model sonnet`에 지시문 넘김) → 한알은 '이 폴더를 믿을까요?'에 Enter만. **한알께 드린 한 마디: 그 창에 「개발자님 시험 가지 다시 풀받아서 OPEN_PACKET.md 맨 위대로 해줘」.** 지시문을 고치면 두 곳을 같이 고침(스튜디오 쪽은 같은 가지에 `gh api` PUT — sha 필요).
+  3. **PMO(f3cf6938-049e-45f7-bb68-a64e06bff385 — Paseo는 전체 id로 보내야 함):** 가지가 c1018a8로 나아갔다고 알림만 보냄(02:1x, 답 필요 없음).
+  4. **기다리는 것(폴링하지 않음):** 맥에서 A0부터 도는지 · 막힌 곳 물음 · RESULTS.md. 오면 아래 ★★★★★★★★★★(01:26) 3번대로. 열린 정해 주실 것: 오1 · 오2 · 오3 · 오5 · 오6 · 오7 · 오8.
+  5. **이 밤에 받은 꾸지람 둘 → 지침 · 기억:** ① 「제한사항이 있었으면 얘기를 해주셔야지요」 — 손으로 하실 일 전에 하지 말 것을 한 번에(directives.md 02:01:31 · 자동 기억 restrictions-before-hands-on) ② 「왜 거따 넣어놔요. 여기 운영자 깃헙 계정 안이어져있어요」 — 남의 기기가 받을 글은 그 기기가 닿는 곳(스튜디오)에 둠. 한알은 맥에서 글을 치기 힘들어하심 — 할 말은 한 문장으로, 말로(받아쓰기) 해도 되게.
+  6. 나머지(이 PC 시험 폴더 · A를 이 PC에서 먼저 돌린 것 · 지킬 것)는 아래 ★★★★★★★★★★(01:26) · ★★★★★★★★★(00:36) 칸 그대로.
 
 ## ★★★★★★★★★★ 지금 자리 (2026-11-21 01:26 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
