@@ -3,12 +3,12 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T03:39+09:00"
+updated: "2026-11-21T03:44+09:00"
 base_commit: "fa2b7aa"
 now: "ARCH에 둘 넘김 — BTSR-PLN-001 작업자 모델(급함) · BTSR-PLN-002 웹앱 1차 캡컷 길 기획 1판(차례 0→1→2+8→3→5+3-2→4-a→4-b→6, 7 보류). RSCH-003 기획 몫 반환함, 한알께 여쭐 것 7개는 RSCH를 거쳐"
 next: "ARCH 반환을 요구(worker-model R01–R07 · webapp-phase1 R1.1–R6.4)와 대조해 받기 → RSCH에 반환(맥 길 한 줄) · 한알 답(물음 1–7)과 웹앱 시험 결과가 오면 webapp-phase1 2판. 그 밖은 스스로 시작하지 않음(규칙 18)"
-waiting_for: ["role:mitchell_studio/btsr/arch:BTSR-PLN-001 반환", "role:mitchell_studio/btsr/arch:BTSR-PLN-002 받음·반환", "owner(RSCH 거쳐):webapp-phase1 물음 1–7", "role:mitchell_studio/btsr/rsch:WEBAPP_RESULTS"]
-owner_wait: "7 — webapp-phase1 요구 1판 4번 물음 1–7 (RSCH가 하나씩 여쭘)"
+waiting_for: ["role:mitchell_studio/btsr/arch:BTSR-PLN-002 받음·반환", "owner(RSCH 거쳐):webapp-phase1 물음 1–7", "role:mitchell_studio/btsr/rsch:WEBAPP_RESULTS"]
+owner_wait: "8 — 제품 main 합치기를 누가 정하나(worker-model 반환 4번) · webapp-phase1 물음 1–7 (RSCH가 하나씩 여쭘)"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -39,6 +39,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **BTSR-RSCH-003_webapp-phase1-capcut 받음** (2026-11-21 03:30 KST) — 원본 RSCH 칸(main `45f8b7b` `projects/btsr/roles/rsch/requests/BTSR-RSCH-003_webapp-phase1-capcut/요청.md`). 요청이 가리킨 RSCH 기획안 초안(2 · 3 · 5 · 6 · 7 · 8번)을 읽음.
   - 기획 1판 → [requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md), 결정 01–03 → [requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md).
   - ARCH에 넘김 → [BTSR-PLN-002](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_REQUEST_CLAUDE.md). RSCH에 기획 몫 반환 → [requirements/webapp-phase1/WEBAPP_PHASE1_RETURN_PLAN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_RETURN_PLAN_CLAUDE.md).
+- **BTSR-PLN-001 반환 받음 → RSCH에 반환** (03:43 KST) — ARCH 반환 `btsr/arch` `6cf028a`를 R01–R07과 문서로 대조해 받음(PLN은 시험을 다시 돌리지 않음, 제품 원격 가지 머리 `3495f7e` · main `9e7eb0e`만 `git ls-remote`로 봄). 반환 → [requirements/worker-model/WORKER_MODEL_RETURN_CLAUDE.md](requirements/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) — 맥 길 한 줄, 한알께 여쭐 것 하나(제품 main 합치기를 누가 정하나).
+- **webapp-phase1 1.1판** — ARCH 묶음 1 설계 7번에 답함: R1.3은 묶음 1에서 '손 인계 밖 개발 말 0 + 남은 말 목록'으로 받음 · 미16은 묶음 6에서 '고치기 횟수' 뜻.
 - 제품 저장소는 시키시기 전에 읽지 않음 (지금까지 읽지 않음). rsch `studies/`는 RSCH-003이 가리킨 글만 읽음.
 
 ## 세션
@@ -47,5 +49,5 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 |---|---|---|---|---|
 | MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo 071c15f3) | ARCH 반환 · 한알 답 기다림 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/RSCH | 아래 역할 PRIMARY (요청을 보내 온 쪽) | Claude (Paseo 14d04ad1 — 11-21 03:32:07 한알 말씀으로 승계, 옛 7993ff28 CLOSED; RSCH CURRENT main에서 확인) | 알림 · 반환은 14d04ad1로 | `../rsch/` (main) |
-| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo 9d298a54) | PLN-001 받음(btsr/arch aee2291, 설계 1판 → PMO BTSR-ARCH-001) · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
+| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo 9d298a54) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo) | 닫힘 — Paseo 에이전트 `769642ae`, Claude 세션 `6123ff97` (옛 기록 기준), Paseo 작업 공간 `wks_b17624602f48a73b`(제목 PLN-CLOSED) | [archive/](archive/) |
