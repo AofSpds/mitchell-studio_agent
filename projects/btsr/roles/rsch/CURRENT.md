@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-20 19:28 KST
+- 확인 시각: 2026-11-20 21:20 KST
 - 세션 열림(지금 세션): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-19 14:44 KST — Paseo 에이전트 ID 3233ba1f-9fe2-49b5-ac73-e9e42645d7ee · Claude 세션 ID 2ad93d91-811f-4582-96d5-f59a31463c27 · 모델 Fable 5.2 (claude-fable-5-2) (기록: logs/2026-11-19-session-handover.md) — 그 앞 세션 cf9609b1에게서 넘겨받음
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
@@ -17,6 +17,7 @@
   5. **오늘 정해진 것:** T8(캡컷 1025 읽기) 오늘 뺌 · 캡컷은 오늘 안 씀 · T-i는 운영자 캡처 두 장 · T1은 운영자가 HTTPS를 켜면(떨어져서 · 통화) · T2 · T3-반은 지시문에서 뺌(순서서에만 덤).
   6. **지킬 것:** 말씀은 `last_utt.py` → 덧붙임 → `check_utt.py`로 원문 대조. **시각은 PowerShell 시계 · `git log --date=format-local`로 — Git Bash `date`는 UTC를 냄, `grep -c $'\r'`는 엉터리(knowhow).** 맥 사용자 이름 · Tailscale 주소 · 제품 git log의 계정 이름 등 개인 정보를 적지 않음. PLN · ARCH에는 지시하지 않음(말씀 없음). 보고는 결론 한 줄 → 할 일 → 정해 주실 것, 짧게.
   7. **저녁과 별개로 남은 일 (19:28에 고침):** ~~기획안 초안에 S4 10번의 12곳 + 시험 코드 범위 · 1차까지 아이폰 · 애플 계정이 드는 곳(16:17 답) 옮기기 · 오픈컷 연구 글에 S4 요지~~(19:28 됨 — 아래 8) · 여쭐 것(S4가 넘긴 둘 = 초안 오5 · 오6, 목소리 = 오7, 게시판 자리)은 초안 0-3의 4에 모음 — 이번 보고에 한 번 적었으니 다시 캐묻지 않음 · PMO에 `bun run build` 확인을 맡길지(정적 묶음 Q1 — 맥 결과를 넘길 때 함께 볼지 판단).
+  9. **한알 21:04:18 uuid f0db5d07 "기획안 보강 자료가 들어왔습니다. 검토해주세요." · 21:17:24 uuid f454faa1 "네 웹챗에서 연구를 해왔습니다. 자료 확인하시고, openChatCut 도 적극적으로 반영했으면 하네요."(21:20)** → 자료를 못 찾음(이 저장소 · 제품 저장소 가지 · 이 PC 폴더 · GitHub · gist에 없음, Claude Docs는 링크가 있어야 열림) → **링크나 내용을 붙여 달라고 여쭘 — 기다림.** OpenChatCut은 원 저장소로 먼저 읽음: `logs/2026-11-20-openchatcut-first-look.md`(AGPL-3.0 · Electron · MCP로 Claude Code/Codex가 고침 · `occ render` 창 없이 뽑기 · `occ export jianying` 캡컷 초안 · 휴대폰 화면 없음 · v0.2.17). 첫 생각 [제안]: 맥 쪽(에이전트가 고치고 뽑기)은 OpenChatCut, 휴대폰 쪽(손으로 고치기)은 OpenCut. **자료가 오면:** 자료의 주장을 원 출처로 확인 → 기획안 초안에 OpenChatCut 반영(0번 · 묶음 T 시험 · 갈림길 ㄱ · 묶음 5 · 6 · 7 · 2차 · 열린 물음, 이용 조건 AGPL) → 한알께 짧게 보고. PLN · ARCH에는 지시하지 않음.
   8. **한알 19:18:16 uuid c8b67c70 "자 계획 정리 해주실까요. 아직 안된 부분까지"(19:28에 끝냄)** → 기획안 초안 `studies/2026-11-20-plan-draft.md` 맨 위에 **'0. 지금 어디까지'**(0-1 묶음마다 정해진 것 · 지금 · 막는 것 / 0-2 오늘 밤 맥북 시험 / 0-3 아직 안 된 것 · 정해 주실 것)를 두고, 옮기지 못했던 넷을 본문에 옮김 — S4 10번의 12곳(묶음 T 시험 0 · 0-i와 차례 · 시험 2가 볼 것 · 후보 ①의 렌더 전용 쪽 · 묶음 2 `.wasm` · 묶음 4 https · 묶음 7 정적 묶음 · 아이폰 iOS 26/16.4 · 이용 조건 · 화11 글꼴 · 묶음 6 표 세 줄 · 8번) · PMO 시험 코드(묶음 T 새 칸 · 7번 PMO 줄) · 1차 아이폰 · 애플 계정(묶음 4) · 열린 물음 오3 바꿈 · 오4 풀림 · 오5~오7 더함. 오픈컷 연구 글에 9번(S4 요지) · 5번 끝(Node 렌더 포크는 못 씀) · 7번. 시안(html)은 고칠 곳이 없어 그대로. **0번은 상황판이라 맥 결과가 오면 함께 고침.**
 
 ## ★★★★★★★ 지금 자리 (2026-11-20 16:47 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 맥북 시험 준비
