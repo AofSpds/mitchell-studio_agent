@@ -3,7 +3,7 @@
 - 쓴 세션: MITCHELL_STUDIO/BTSR/RSCH (Paseo 7993ff28 · Opus 5.5)
 - 근거 말씀(`owner/utterances/2026-11-20.md`): 21:04:18 uuid f0db5d07 「기획안 보강 자료가 들어왔습니다. 검토해주세요.」 · 21:17:24 uuid f454faa1 「네 웹챗에서 연구를 해왔습니다. 자료 확인하시고, openChatCut 도 적극적으로 반영했으면 하네요.」
 - 검토한 것: [`studies/2026-11-20-openchatcut-voice-supplement.md`](../studies/2026-11-20-openchatcut-voice-supplement.md) — 이 저장소 커밋 3a03e46(21:11:54 KST, 155줄). 한알이 웹챗에서 해 오신 연구이고, 자료 스스로 '연구 참고자료 / 변경 제안 — 지시가 아님'이라고 밝힘. 자료는 고치지 않았습니다.
-- **결론:** 자료에 적힌 OpenChatCut 사실 열한 가지는 원 저장소와 맞았습니다. 고칠 곳은 우리 요구를 옮겨 적은 두 줄이고, 빠진 것 여섯을 더했습니다. 목소리 쪽은 Vrew의 '사업용 가능' 한 줄만 확인했고, 나머지는 이 PC에서 확인하지 못했습니다.
+- **결론:** 자료에 적힌 OpenChatCut 사실 열한 가지는 원 저장소와 맞았습니다. **(21:42 덧붙임) 다만 6번에서 끌어낸 결론 '명령줄로 소재 넣기 불가 — 무인의 핵심 공백'은 이 PC에서 돌려 보니 틀렸습니다 — 도구 호출로 창 없이 넣어지고, 진짜 빈칸은 자막입니다([이 PC 시험](2026-11-20-openchatcut-pc-trial.md)).** 고칠 곳은 우리 요구를 옮겨 적은 두 줄이고, 빠진 것 여섯을 더했습니다. 목소리 쪽은 Vrew의 '사업용 가능' 한 줄만 확인했고, 나머지는 이 PC에서 확인하지 못했습니다.
 - 표시: **[소스 확인]** OpenChatCut 저장소의 글 · 코드에서 RSCH가 직접 봄 · **[미검증]** 확인 못 함.
 
 ## 1. 맞춰 본 것 — 모두 맞음 [소스 확인]
@@ -15,7 +15,7 @@
 | 3 | 편집 세션 `begin_edit_session` → `review_edit_session` → `get_edit_session`, `manual` · `auto` | README | 맞음 |
 | 4 | MCP 편집 세션에는 생성 · 내보내기 · 지우기가 없음 | README | 맞음 |
 | 5 | `occ render`가 저장된 프로젝트를 사람 없이 뽑음 — `--out` · `--fps` · `--codec` · `--dry-run` | `cli/commands/render.ts` | 맞음(그 밖에 `--resolution` · `--bitrate` · `--format` · `--from/--to`) |
-| 6 | `occ media`는 목록만, 소재는 앱 미디어 풀이나 `import_asset` · `import_folder`로 | `cli/commands/media.ts` | 맞음 — 코드 주석: 브라우저가 가진 '업로드 영수증 + 정규화' 사슬이 있어야 해서 일부러 잇지 않음 |
+| 6 | `occ media`는 목록만, 소재는 앱 미디어 풀이나 `import_asset` · `import_folder`로 | `cli/commands/media.ts` · `src/agent/external-tool-policy.ts` | `occ media`가 목록만인 것은 맞음. **그러나 자료의 결론('CLI로 소재 넣기 불가 — 핵심 공백')은 틀림** — `import_asset` · `import_folder`는 창 없이 도는 도구 목록에 있고, `occ tools call import_folder --apply`로 실제로 넣어짐 **[실측 — 21:42, [이 PC 시험](2026-11-20-openchatcut-pc-trial.md)]** |
 | 7 | `occ edit --ops @ops.json --apply`로 여러 고침을 한 번에 | `cli/commands/edit.ts` | 맞음 |
 | 8 | `occ project new --size 1080x1920 --fps 30` | `cli/commands/project.ts` | 맞음 |
 | 9 | Node 24.22.1 이상 25 미만 | `package.json` engines | 맞음 |
