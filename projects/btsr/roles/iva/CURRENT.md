@@ -2,12 +2,13 @@
 role: IVA
 session: MITCHELL_STUDIO/BTSR/IVA
 rules: v0.14
-state: 대기
-updated: "2026-11-21 16:53:02 KST"
-base_commit: 60a2ee9f9073279a434154d5f38426dfbaceba0e
-now: 개설 요청 BTSR-RSCH-004 받음
-next: 검증 요청서가 오면 대상 커밋과 기준을 확인한다
-waiting_for: 웹앱 1차 검증 요청서
+state: 반환
+updated: "2026-11-21 18:12:16 KST"
+base_commit: 361b5d8b4ea1b7cc9012720217542d466854e4fe
+product_commit: 94d45225bac918e572f79b27cae13fe447c77b7a
+now: 웹앱 1차 사용성 검증 완료 · 부적합 · 가 2건 · 나 4건
+next: RSCH가 반환 파일을 대신 커밋하고 합치기 전 고칠 두 건을 전달한다
+waiting_for: 없음
 owner_wait: 없음
 ---
 
