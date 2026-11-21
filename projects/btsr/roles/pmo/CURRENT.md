@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T17:01:38+09:00"
+updated: "2026-11-21T17:05:18+09:00"
 base_commit: "fa2b7aa"
-now: "새 PMO가 승계를 받음. 011 반환 후 ARCH 대조 대기"
-next: "ARCH의 012(4-b) 접수 뒤 기능 가지 첫 커밋·push 확인 → 반환·대조 뒤 013(8-2)"
-waiting_for: ["arch:BTSR-ARCH-011-acceptance", "arch:BTSR-ARCH-012-request", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "012 받음 · HTTPS와 홈 화면 알림 구현 중"
+next: "012 구현·시험 후 ARCH 반환"
+waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -40,6 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
+| BTSR-ARCH-012_webapp-b4b-https-push | ARCH (7621f3de) | btsr/arch 9b579c3 · 설계 2.1판 + 8번 | 2026-11-21 17:05:18 KST | 받음 · 바탕 e512fcd |
 | BTSR-ARCH-011_webapp-b6-fix-versions — 고칠 점 → 다음 판 · 판마다 새 이름 캡컷 프로젝트 · 완성 = 승인 + 규격 · 판 고르기 · ? 둘 · 승인 뒤 caption 일 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` d5f3369 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md` 2.2판 | 2026-11-21 (커밋 시각, 세션 메시지 cbbb6f7d) | **반환함** 17:00 KST — 제품 가지 `feat/webapp-b6-fix-versions-20261121` e512fcd(코드 bdbd66e · 시험 e512fcd, 바탕 243cff0), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B6_RETURN_CLAUDE.md). 시험 125/125(PYTHONUTF8 없이) · 화면 15/15 · 반환은 새 ARCH 7621f3de로 |
 | BTSR-ARCH-010_webapp-b4a2-stuck-restart — 막힘 길 하나 · dev는 suggestions/ push · 처음부터 시작 · 보내는 중 · 흐린 사진 · 접수 · 틈새 · resume · 가진 사진 올리기 걷음 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` a6d7f34 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-010_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (커밋 시각, 세션 메시지 064065fd) | **반환함** 16:30 KST — 제품 가지 `feat/webapp-b4a2-stuck-restart-20261121` 243cff0(코드 6a7d3c6 · 시험 243cff0, 바탕 ed11f5a), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md). 시험 116/116(PYTHONUTF8 없이) · 화면 18/18. **ARCH 수용**(message-id cbbb6f7d) |
 | BTSR-ARCH-009_webapp-b4a-one-job-bar — 한 번에 한 편 · 하는 일 한 줄 + 바 · 화면 스스로 바뀜 · 여러 편 걷기 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` 3da95c5 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-009_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A_DESIGN_CLAUDE.md` 2판(3e6eee5) · 화면 시안 3판 main `projects/btsr/roles/rsch/sub/s8_uiux_rework/` | 2026-11-21 (커밋 시각, 세션 메시지 0eddd3f3) | **반환함** 16:00 KST — 제품 가지 `feat/webapp-b4a-one-job-bar-20261121` ed11f5a(코드 ebc3e66 · c49596e, 시험 627d872 · ed11f5a, 바탕 main 3072e7e), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4A_RETURN_CLAUDE.md). 시험 92/92(PYTHONUTF8 없이) · 화면 27/27. 덧붙임 3-1(cacb410) · 2(7701eb4) 반영. **ARCH 수용**(message-id 064065fd — 여쭘 ① 그대로 ② 남김 ③ 가진 사진 올리기는 ARCH-010에서 걷음) |
