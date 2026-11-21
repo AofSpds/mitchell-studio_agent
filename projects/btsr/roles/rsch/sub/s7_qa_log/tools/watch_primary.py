@@ -30,6 +30,7 @@ def kind(o):
             return "RSCH"
     return None
 
+sys.stdout.reconfigure(encoding="utf-8")
 pos = os.path.getsize(TR)
 pending = False; rsch_after = False; last = time.time(); buf = ""
 while True:
@@ -54,7 +55,7 @@ while True:
                 elif k == "RSCH" and pending:
                     rsch_after = True
         if pending and rsch_after and time.time() - last >= QUIET:
-            print("SETTLED — 적을 차례", flush=True)
+            print("SETTLED - 적을 차례", flush=True)
             pending = False; rsch_after = False
     except Exception as e:
         print(f"ERROR {e}", flush=True)
