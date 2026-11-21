@@ -35,3 +35,4 @@
 - 걸릴 때: ARCH 00:20쯤 PMO에 → PMO 40–50분 → ARCH 15분 → RSCH 20분 = **01:45 KST쯤 합침** → 한알이 맥에 새 판 받기 한 줄 → 오늘 아침 휴대폰 테스트 전에 됨.
 - 맥 기록 한 줄(한알이 맥에 그대로): 「~/Library/Logs/mitchell-upload.log에서 '올리기 끊김' · '올리기 덜 됨' · '받음' · ' 401 ' 줄만 최근 40줄 보여 줘. 파일 이름 말고 시각 · 낱말 · 숫자만.」(서버 `log_message` → launchd `StandardErrorPath`).
 - PLN이 RSCH에 넘김(한알께 그대로).
+- (00:2x) PMO가 BTSR-ARCH-020 받음 — 서버 고침 없이 Send 화면만으로 1–4 모두 · 01:45 합침 어림 그대로. 맥 기록 한 줄 PMO 안(횟수만 — 파일 이름 · 시각 안 나옴)도 RSCH에 넘김 · PLN 권고는 ARCH 줄(때까지 보임).
