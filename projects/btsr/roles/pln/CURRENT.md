@@ -7,7 +7,7 @@ updated: "2026-11-21T13:59+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 3072e7e"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.8판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):4-a · 4-b · 6 설계를 요구 2판으로 다시 잡음", "owner(via rsch a97bebab):17번 — S9 사용 시나리오 재검토 · 4-b 둘 · [안] 넷"]
+waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-009(4-a) 반환", "owner(via rsch a97bebab):17번 — S9 사용 시나리오 재검토 · 4-b 둘 · [안] 넷"]
 owner_wait: "RSCH가 하나씩 여쭘 — Send 막는 때 · 4-b 둘(WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md) · [안] 넷 (요구 2판 4번 끝). 4-a 낱말 장은 결정 22로 쓰지 않음"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -49,6 +49,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **15번 받음 — 중간점검 끝, 시안 3판으로 확정** (RSCH 요청서 003 15번, main `ed67f92`; 한알 15:08:02 · 15:12:00 「네 일단 1차는 그냥 갑시다.」) → **결정 20–26 · 요구 2판** (15:21): 20 미첼 · 21 현황과 단추만(? 표) · 22 영어 그대로(결정 16 거둠) · 23 한 번에 한 편 · 만드는 중 Send 막음 · 24 한 줄 + 바만 · 25 알림 설명 화면 없음 · 26 Post 탭에서 다시 봄. 보류 풀림 — ARCH에 알림(4-a · 4-b · 6을 2판으로 다시 잡기). 결정 17의 '작업 화면에 늘 보임'은 24로 바뀐 것으로 읽음 — RSCH에 짚음. 열린 것 다섯은 요구 4번 끝.
 - **16번 받음** (RSCH main `1aed00a`, 15:24) → **결정 27 · 요구 2.1판**: 개발자에게 넘어가면 화면 9에 「처음부터 시작」 + Send 다시 켬 · 확인 기다릴 때는 Send 막음(R2.3 · R5.6). 사용 시나리오 재검토는 RSCH SUB S9 → 17번. **막힘 · 틈새 쪽(화면 8 · 9 · 맥 연결 · 한도 기다림 · 빈 Jobs) 구현 요청은 17번 뒤** — ARCH에 알림. 결정 17 거둔 읽기는 RSCH도 같음.
 - **4-a · 4-b · 6 설계 2판 받음** (ARCH `3e6eee5`, 15:29) — 요구 2.1판 대조. 4-a(한 편 · 한 줄 + 아홉 칸 바 · busy() · 여러 편 걷기 · 막힘 · 틈새는 17번 뒤 4-a-2) · 4-b(알림 켜기는 Manual 한 곳) 그대로 받음 → ARCH-009 PMO에 보내도 됨. 6은 받되 고칠 것 둘: 기준 4 '승인 단추 없음'이 5번 '승인은 보이되 누르면 의견'과 어긋남 · 5-1 '단계 넷'에 일곱이 적힘. R6.3 → 요구 2.2판 판정(안쪽 기록으로).
+- **ARCH-009(4-a 2판) PMO에 감** (`btsr/arch` `3da95c5`, 바탕 main `3072e7e`). 묶음 6 2.1판 — 기준 4(승인 단추 있고 누르면 opinion) · 5-1 바 네 칸(Edit · Preview · Voice~Export · Done) 바로잡힘. 4-b · 6은 4-a 반환 뒤.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
