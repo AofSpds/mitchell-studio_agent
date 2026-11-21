@@ -50,6 +50,7 @@
 - **받음 (2026-11-21 14:05 KST):** 새 세션 Paseo a97bebab · Claude bb014593 · Fable 5.2 xhigh · 제공자 claude(claude-naver)가 받음(Paseo가 연 시각 14:03:24). 1 읽기 끝(AGENTS · 이 칸 · directives 모두 · knowhow 끝 10줄 · 말씀 11-21 끝 60줄 · 요청서 003 6–12번). 이 칸의 '14:05'는 실제 넘김 커밋 ed83e00 14:02:55 · afa595d 14:03:09. Paseo로 봄(14:04): PLN a6fd0155 · ARCH d9520b95 쉼 · PMO 5fbbea06 도는 중. 이 세션 transcript는 `~/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/bb014593-….jsonl`(`.claude-max` 아님). 다음: 옛 세션 제목 CLOSED → 도우미 transcript 바꾸기 → 한알께 알림 → PLN 알림 기다림.
 - **지금 (14:05 KST):** 3 · 4 끝 — 옛 세션 14d04ad1 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`(Paseo로 확인) · 도우미 `last_utt.py` · `check_utt.py` transcript를 이 세션 것으로 바꿈(`check_utt.py` 기본 말씀 파일도 2026-11-21.md로 — 돌려 봄). 한알께 알림. 이 세션에 온 한알 말씀은 아직 없음. 기다림: PLN 알림(묶음 5 + 3-2 반환).
 - **14:07 KST:** 한알 14:05:46 「프리마리로 올리는것까지 잊지 마세요.」(옛 창에서 하신 말씀 — 옛 세션이 적음 78483d9) → 옛 세션이 이 세션의 Paseo 이름표 `paseo.parent-agent-id` · `paseo.parent-server-id`를 비움 — 이 세션이 Paseo로 확인(둘 다 빈 값 · 제목 `MITCHELL_STUDIO/BTSR/RSCH`). 옛 세션은 이제 쓰지 않음. 기다림: PLN 알림.
+- **14:08 KST:** 한알 14:06:34 「pln도 여전히 프리마리가 아니네요.」(옛 창 — 옛 세션이 적음 dc42bb9) → 옛 세션이 PLN a6fd0155 · ARCH d9520b95 · PMO 5fbbea06 이름표도 비움 — 이 세션이 Paseo로 넷 모두 빈 값 확인(14:08, 셋 다 도는 중). knowhow에 한 줄(승계 뒤 PRIMARY 올림). 옛 세션과 작업 사본이 같아 14:07:11에 커밋이 겹침(내용은 온전 — 옛 세션은 이제 안 씀). 기다림: PLN 알림.
 
 ## ★ 새 세션에 넘김 (2026-11-21 03:40 KST) — 받는 세션은 여기부터. 아래 ★ 칸들은 지난 기록(필요할 때만)
 
