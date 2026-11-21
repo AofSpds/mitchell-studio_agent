@@ -6,8 +6,8 @@ state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
 now: "IVA 부적합(btsr/iva 7915afd) 고침 → PMO(7837ebd8)에 BTSR-ARCH-015 (18:19, 바탕 94d4522 · 가1 · 가2 · 나3 · 나4+A1 · 나5 · 나6 작은 것 + 맥 테스트 글 다시 얹기). 어림 19:40 KST 합침(PLN에 알림)"
-next: "015 반환 대조(코드 머리 · 글 머리 · 됨마다 시험) → PLN. 한알 답(웹앱 Claude가 받은 소재 읽음) 오면 015 덧붙임(MAC_RUN 공통 :31–32)"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-015 반환 (7837ebd8)", "owner:받은 소재를 웹앱 Claude 명령줄이 읽는 것 (CLAUDE_MATERIAL_ASK — RSCH)"]
+next: "015 반환 대조(코드 머리 · 글 머리 · 됨마다 시험 · 덧붙임 1 · 2) → PLN"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-015 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -59,6 +59,7 @@ verifier: "mitchell_studio/btsr/archv"
   - **맥 테스트 글**: PMO 반환 `btsr/pmo` ec3a37c(가지 `feat/webapp-mac-test-doc-20261121` 28e779e, 바탕 94d4522, MAC_RUN 한 파일만) → ARCH 대조(글뿐 · 시험 OK skip 2 · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_BTSR-PLN-002_RETURN_CLAUDE.md) 18:14 + 여쭘 하나.
   - IVA 판정 부적합(RSCH 40번 · PLN 요청 `btsr/pln` edf7209 — 한알 18:07:10 「과검증은 안되어요 …」): ARCH가 고치는 길 정함 → [BTSR-ARCH-015](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-015_REQUEST_CLAUDE.md). 가2는 spec_redo 열린 편에서 C2를 막는 칸으로 안 봄 · 나4 0이면 「다시 만들기」 안 그림 + ? "다시 만들기를 다 썼어요." [안] · 나6은 소재 파일 이름만 코드로, 호칭 없는 이름은 글 두 줄. 요청 번호 015까지(다음 016).
   - 한알 18:27:53 「그거 안막아도 되어요 그런거 필요없습니다. 개인앱이예요.」(RSCH 41번): 015에서 나 6 뺌 → 015 덧붙임 1(18:29). 화면 글 [안] 둘 확정.
+  - 결정 44(한알 18:33:20 「네」 — 웹앱 Claude 명령줄이 받은 소재를 읽음 허락) · 결정 45(18:33:56 「딱 한명이 쓰는 개인 앱이니까 감안해서 해주세요」 — 여러 사람용 막기 · 확인을 늘리지 않음, 편의 먼저) → 015 덧붙임 2(18:35).
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
