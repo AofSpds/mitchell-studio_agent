@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 테스트 글(PLN fc1eda6 · 요구 2.16판 · 결정 39–41) → PMO(7837ebd8)에 BTSR-ARCH-014 (17:51, 바탕 94d4522 위 새 가지 · 글만). 8-2 합치기는 IVA 판정 뒤(결정 41)"
-next: "014 반환 대조(기준 1–11 · 표 셋) → PLN. RSCH의 S13 3판 고칠 것 · 컴퓨터 유즈 답(이끄는 ChatGPT의 웹앱 탭 · 파일 고르기)이 PLN으로 오면 014 덧붙임"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-014 반환 (7837ebd8)", "role:mitchell_studio/btsr/pln:8-2 IVA 판정 (18:30쯤) — 꼭 고칠 것 + 화면 5 「N번 남음」 → PMO 요청"]
+now: "맥 테스트 글(ARCH-014) 받음 · PLN에 반환(18:14) + 한알께 여쭐 것 하나(받은 소재를 웹앱 Claude가 읽는 길 — 결정 39의 셋째 길, 권고 1 허락). 8-2 IVA 판정 기다림"
+next: "여쭘 답 → 014 덧붙임 3(MAC_RUN 공통 :31–32). IVA 판정 → 꼭 고칠 것 + 화면 5 「N번 남음」 ? 안으로 → PMO 요청 하나(BTSR-ARCH-015) · 그때 MAC_RUN 머리 '제품 기준'도"
+waiting_for: ["owner:받은 소재를 웹앱 Claude 명령줄이 읽는 것 허락 (PLN → RSCH)", "role:mitchell_studio/btsr/pln:8-2 IVA 판정 (be41b33c)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -56,6 +56,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 8-2 PLN 받음 → RSCH에 반환 · 합침은 IVA 판정 뒤(결정 41). **맥 테스트 글**: PLN 요청 `btsr/pln` fc1eda6 `requirements/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_REQUEST_CLAUDE.md`(바탕 S13 3판 main ffe451d · 고칠 곳 15건) → PMO에 [BTSR-ARCH-014](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-014_REQUEST_CLAUDE.md) — MAC_RUN_PHASE1.md 한 파일(공통 + 회차 셋) · 걸음마다 다섯 칸 · 결과는 결과 가지 `mactest/webapp-phase1-results`(따로 둔 worktree). PLN 글의 PMO ID(99626982)는 옛 것 — 7837ebd8로 보냄.
   - RSCH 38번(PLN 알림, 17:56): 014 덧붙임 1(12 물음 차례 17 → 4 · 13 worker_model 값은 저장소 밖 사본 · 14 명령 줄 대조 · 15 확인 못 한 둘은 1-1에서). 8-2 IVA 검증 중(판정 18:30쯤). **ARCH 정함: 화면 5 「N번 남음」은 시안대로 ? 풀이 안으로 옮김 — IVA '꼭 고칠 것'과 한 번에(코드 머리 한 번만), 판정 뒤 PMO 요청에 함께.** 물음 차례 17 → 4는 코드대로(PLN 받음).
   - 결정 42 · 요구 2.17판(btsr/pln 28f2077, RSCH 39번 — 한알 17:57:01 「네 그럼요.」): 이끄는 맥 ChatGPT의 컴퓨터 유즈 승인(웹앱 화면 · Send 파일 고르기, 세 회차) → 014 덧붙임 2(17:59 — '승인 뒤' 걷고 표를 글 맨 위에). 새 판 넣기 [안] 확정.
+  - **맥 테스트 글**: PMO 반환 `btsr/pmo` ec3a37c(가지 `feat/webapp-mac-test-doc-20261121` 28e779e, 바탕 94d4522, MAC_RUN 한 파일만) → ARCH 대조(글뿐 · 시험 OK skip 2 · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_BTSR-PLN-002_RETURN_CLAUDE.md) 18:14 + 여쭘 하나.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
