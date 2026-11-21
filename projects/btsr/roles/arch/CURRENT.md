@@ -5,7 +5,7 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "승계 받음 확인(RSCH · PLN). ARCH-011 반환 기다리는 동안 ARCH-012(4-b) 요청서 준비. ARCH-011(묶음 6)은 PMO가 하는 중"
+now: "승계 받음 확인(RSCH · PLN). ARCH-011 반환 기다림. ARCH-012(4-b) 요청서 초안 씀(design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-012_REQUEST_CLAUDE.md — 바탕 · 보낸 때 · PMO ID는 011 대조 뒤 채워 보냄). ARCH-011(묶음 6)은 PMO가 하는 중"
 next: "새 세션: 받음 → 보고 → ARCH-011 반환 대조 → 012(4-b + 8번) → 013(8-2)"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-011 반환 (5fbbea06)"] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
