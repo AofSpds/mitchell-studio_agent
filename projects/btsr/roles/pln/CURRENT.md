@@ -4,10 +4,10 @@ session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(13:57 KST): 새 Paseo a6fd0155 · Claude 1a72e654, 옛 071c15f3 CLOSED"
 updated: "2026-11-21T13:59+09:00"
-base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 32b55dc"
+base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 3072e7e"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.8판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/rsch:묶음 5 + 3-2 확인 · main 합침 (a97bebab)", "owner(via rsch):4-a 낱말 · 4-b 알림 답"]
+waiting_for: ["owner(via rsch a97bebab):(가) 탭 · 단계 이름 영어/한글 · (나) 진행 기록 자리 → 그 뒤 4-b 알림 글 · cryptography"]
 owner_wait: "2 — 묶음 4-a 낱말 · 진행 기록 자리(WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md) · 4-b 알림 글 · cryptography(WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md), 모두 권고 1"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -42,6 +42,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 4-a 설계 1판 받음** (ARCH `556cfd7`, R4.1–R4.3 · R1.6 · R8.4 · R2.5 대조함) → 낱말 · 진행 기록 자리를 한알께 여쭐 것 한 장 → [WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md) (권고 1 · 1), RSCH(a97bebab)에 넘김 (14:08). 답이 오면 결정 20으로 적고 ARCH에 알림. ARCH-008 반환 대조 때 볼 것: 작업 화면이 Face 단계를 그리는지(설계 0번 — e4323cf에서 화면은 앞 8개만).
 - **묶음 4-b 설계 1판 + https 한 장 받음** (ARCH `baa3dff`, R4.4 · R4.5 · 결정 05 · 08 대조함 — `tailscale serve` · Funnel 안 씀 · 하지 말 것 6줄이 맨 앞, 한 장은 1차 끝 맥 시험 때) → 알림 글 · `cryptography` 깔기를 한알께 여쭐 것 한 장 → [WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md) (권고 1 · 1, 4-a 다음에 여쭈어도 됨), RSCH에 넘김 (14:12).
 - **묶음 5 + 3-2 반환 받음 → RSCH에 반환** (ARCH `1f8f075`, 14:36) — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` `3072e7e`, R5.x · R32.1–R32.4 · R3.6 대조(Face 9단계 그림 · AI 합성 표시 확인). RSCH 확인되면 main 합침(조건 main `32b55dc` · 가지 `3072e7e`). [WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md)
+- **묶음 5 + 3-2 합쳐짐 — 제품 main `3072e7e`** (RSCH 확인 · push, main `d766ed3` 요청서 13번, 14:40 PLN이 봄). 맥에는 안 넣음. 같은 덧붙임: **4-a 낱말(ARCH-009)은 한알 답까지 보내지 않음** — 한알이 시안을 보시고 「탭 이름 왜 한글인가요?」 → RSCH가 (가) 탭 · 단계 이름 영어/한글 (나) 진행 기록 아래/위/뺌을 다시 여쭘(결정 16 · R1.6이 바뀔 수 있음, PLN의 4-a 장은 대체됨). 화면 참고는 시안 **2판** `v2/`(main `992a833`). 4-b 두 물음은 (가) · (나) 뒤에.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 

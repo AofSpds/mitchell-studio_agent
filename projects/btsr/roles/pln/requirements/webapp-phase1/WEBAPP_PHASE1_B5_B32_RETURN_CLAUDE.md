@@ -48,3 +48,8 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b5-b32-work
 ## 6. 다음
 
 반환함. RSCH 확인 → RSCH가 앞으로 감기 push. ARCH는 4-a 낱말 답이 오면 ARCH-009, 묶음 6 설계를 이 가지 바탕으로 씀.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 14:40 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `d766ed3` RSCH 요청서 003 13번 — 제품 main 앞으로 감기 `32b55dc..3072e7e`(결정 13). PLN이 14:40에 제품 원격 main 머리 = `3072e7e`를 ls-remote로 봄. 맥에는 넣지 않음(결정 08).
+- RSCH가 볼 것: R32.4 「가진 사진 올리기」 · R5.5 한도 기다림([안]) — 한알께 보여 드리고 바뀌면 작은 고침으로.
