@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-21T14:10:00+09:00"
 base_commit: "fa2b7aa"
 now: "요구 1.8판 · 결정 15–19 받음(14:01, 묶음 나눔 — design/webapp-phase1/WEBAPP_PHASE1_REQ1-8_RECEIVED_CLAUDE.md). 묶음 4-a 설계 1판(14:06, PLN 받음 · 낱말 한알께) · 4-b 설계 1판 + https 한 장(14:10). PMO의 ARCH-008 반환 기다림"
-next: "PMO의 ARCH-008 반환 대조 → PLN(a6fd0155)에 → (낱말 답 뒤) PMO에 ARCH-009(묶음 4-a) → 4-b. 그사이 묶음 6(R6.4 · R6.5) 설계"
+next: "PMO의 ARCH-008 반환 대조 → PLN(a6fd0155)에 → (낱말 답 뒤) PMO에 ARCH-009(묶음 4-a) → 4-b. 묶음 6(R6.1–R6.5 · 고치기 3번) 설계는 ARCH-008 반환을 본 뒤 — 판마다 캡컷 프로젝트 · 뽑기가 008의 작업자 길(worker.py · ⑥) 위에 서므로 그 꼴을 보고 씀"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환 (새 PMO 5fbbea06)", "owner:묶음 4-a 낱말 [안] (설계 3번, PLN → RSCH)"]
 owner_wait: "-"
 subs: []
