@@ -7,7 +7,7 @@ updated: "2026-11-21T13:58:28+09:00"
 base_commit: "fa2b7aa"
 now: "승계 받음 (새 세션 Paseo d9520b95, 13:58). PMO의 ARCH-008 반환 기다리는 사이 묶음 4-a 설계"
 next: "PMO의 ARCH-008 반환 대조 → PLN에. 그사이 묶음 4-a · 4-b(https 맥 손일 + 하지 말 것 한 장) · 묶음 6(R6.4) 설계"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환", "owner:컴퓨터 유즈 범위 승인(설계 5번, PLN → RSCH)"]
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환 (새 PMO 5fbbea06)", "role:mitchell_studio/btsr/pln:컴퓨터 유즈 승인 정식 전달 (한알 13:57:21 「1 1 1 1 1」의 5번 — RSCH가 요청서 003 12번으로 PLN에)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -30,7 +30,7 @@ verifier: "mitchell_studio/btsr/archv"
 
 ## 넘김 (2026-11-21 13:56 KST — 옛 세션 → 새 세션)
 
-- **받음** (13:58 KST, 새 세션 d9520b95): 아래 1–5 차례로 함. 새 PLN Paseo ID `a6fd0155-25ef-4bc7-91b0-394849d6776e`(옛 071c15f3 CLOSED, `btsr/pln` 1eb6c95 — 옛 ARCH가 전함). PMO 새 ID는 PMO 알림을 기다림.
+- **받음** (13:58 KST, 새 세션 d9520b95): 아래 1–5 차례로 함. 새 PLN Paseo ID `a6fd0155-25ef-4bc7-91b0-394849d6776e`(옛 071c15f3 CLOSED, `btsr/pln` 1eb6c95 — 옛 ARCH가 전함). 새 PMO Paseo ID `5fbbea06-93d9-48b2-8930-e101d4603429`(옛 f3cf6938, `btsr/pmo` 3857a2c · ARCH-008은 제품 가지 e4323cf에서 멈춤). 셋(PLN a6fd0155 · RSCH 14d04ad1 · PMO 5fbbea06)에 새 ARCH ID 알림 13:59. 한알 13:57:21 「1 1 1 1 1」 — 5번이 컴퓨터 유즈 범위 승인(CapCut ⑥ 그 작업 프로젝트 하나 · ChatGPT 앱 AI 얼굴 새 대화 하나 · 사진 복사본 한 장 · 최대 3번, 돌리는 것은 1차 끝 맥 시험) — RSCH가 PLN에 전하는 중, PLN 전달을 받으면 묶음 5 + 3-2 설계 5번을 닫음.
 
 - **까닭**: 한알 13:55:17 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」 (RSCH 14d04ad1이 전함, 원문 에이전트 저장소 main `b9c976b` `owner/utterances/2026-11-21.md`). 새 세션 제공자는 Paseo `claude`(이름표 claude-naver — 한알 13:24:06 · 13:35:34), 모델 · 생각 수준 그대로(Opus 5.5 · high), 제목 `MITCHELL_STUDIO/BTSR/ARCH`.
 - **옛 세션**: Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · 작업 공간 `wks_6dc6b9d13807b202` · Claude 세션 `df7a3d93-e2ee-4c76-8467-16606825f451` · claude-google. 넘긴 커밋 = 이 CURRENT가 든 커밋. 멈춘 곳: 묶음 5 + 3-2를 PMO에 맡긴 뒤(ARCH-008), 묶음 4 · 6 설계 전 — 하다 만 파일 없음.
