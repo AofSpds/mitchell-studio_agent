@@ -1,0 +1,90 @@
+[
+ {
+  "name": "Jobs: 작업 다섯 · 점 9개씩",
+  "ok": true
+ },
+ {
+  "name": "Jobs: 맨 위 띠 · 「시작 전 점검」 없음",
+  "ok": true
+ },
+ {
+  "name": "보이는 차례: Send · Intake · Script · Face · Edit …",
+  "ok": true
+ },
+ {
+  "name": "Face 번호 ④",
+  "ok": true
+ },
+ {
+  "name": "나란히: 시술 후 · AI 얼굴 그림 둘",
+  "ok": true
+ },
+ {
+  "name": "얼굴 그림을 주소로 받음 (image/png)",
+  "ok": true
+ },
+ {
+  "name": "「이 사진으로 갈게요 →」 · 「다시 만들기 (2번 남음)」 · 「가진 사진 올리기」",
+  "ok": true,
+  "detail": "✓\nSend\n사진·영상을 보냈어요\n완료\n14:24\n산출물 보기 ▾\n✓\nIntake\n보내신 것을 살펴봐요\n완료\n14:24\n산출물 보기 ▾\n✓\nScript\n원고를 써요 — 확인해 주세요\n완료\n14:24\n산출물 보기 ▾\n4\nFace\nAI 얼굴 — 확인해 주세요\n확인해 주세요\n시술 후\nAI 얼굴\n머리가 조금 달라 보여요\n이 사진으로 갈게요 →\n다시 만들기 (2번 남음)\n가진 사진 올리기\n\n얼굴 : AI 합성 표시는 영상에 항상 들어가요 🔒\n\n머리 색과 모양이 같은지 봐 주세요.\n5\nEdit\n장면을 이어 붙여요\n기다리는 중\n6\nPrevie"
+ },
+ {
+  "name": "머리 다름 노랑 띠",
+  "ok": true
+ },
+ {
+  "name": "잠긴 줄: 합성 표시 늘 🔒",
+  "ok": true
+ },
+ {
+  "name": "Face 칸에 개발 말 없음",
+  "ok": true
+ },
+ {
+  "name": "「이 사진으로 갈게요 →」 → Face 완료 · Edit 진행 · 차례표에 edit",
+  "ok": true,
+  "detail": "done|now|edit"
+ },
+ {
+  "name": "「골라 주세요」 · 까닭 · 고를 것 셋",
+  "ok": true
+ },
+ {
+  "name": "물음일 때 ⚠ 칸 · Helpdesk가 겹쳐 나오지 않음",
+  "ok": true
+ },
+ {
+  "name": "「음악 없이」 → Music 완료 · 물음 없어짐 · 차례표에 six",
+  "ok": true,
+  "detail": "done|usage|six"
+ },
+ {
+  "name": "답한 뒤 고르는 단추 없음",
+  "ok": true
+ },
+ {
+  "name": "「개발자가 볼게요」 · 하실 일 없어요 · 다른 작업은 그대로",
+  "ok": true
+ },
+ {
+  "name": "Do It Myself · Mark Done · Copy Prompt 없음",
+  "ok": true
+ },
+ {
+  "name": "사용량: 아침 7시 뒤 저절로 · 하실 일 없어요",
+  "ok": true,
+  "detail": "✓\nSend\n사진·영상을 보냈어요\n완료\n14:24\n산출물 보기 ▾\n✓\nIntake\n보내신 것을 살펴봐요\n완료\n14:24\n산출물 보기 ▾\n✓\nScript\n원고를 써요 — 확인해 주세요\n완료\n14:24\n산출물 보기 ▾\n✓\nFace\nAI 얼굴 — 확인해 주세요\n완료\n✓\nEdit\n장면을 이어 붙여요\n완료\n산출물 보기 ▾\n6\nPreview\n2단계에서 생겨요\n아직\n7\nVoice · Music · Fit · Export\n목소리와 음악을 넣고 영상을 뽑아요\n진행 중\n○Voice 맥에서\n○Music 맥에서\n○Fit 자동\n○Export 맥에서\n오늘 "
+ },
+ {
+  "name": "'지금' 줄",
+  "ok": true
+ },
+ {
+  "name": "⑥ 칸에 개발 말 없음",
+  "ok": true
+ },
+ {
+  "name": "Helpdesk: 「글 복사하기」 하나 · 앱 열기 단추 없음",
+  "ok": true
+ }
+]

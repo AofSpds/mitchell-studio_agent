@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T05:01:00Z"
+updated: "2026-11-21T05:31:00Z"
 base_commit: "fa2b7aa"
-now: "승계 받음(13:59 KST, 새 PRIMARY Paseo 5fbbea06). BTSR-ARCH-008을 넘김 3번 차례로 이어 하는 중 — 제품 가지 feat/webapp-b5-b32-worker-face-20261121 e4323cf에서"
-next: "BTSR-ARCH-008 남은 것 1(runner) → 9(반환서), 반환은 ARCH d9520b95로"
-waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-008 반환함(14:30 KST) — 제품 가지 feat/webapp-b5-b32-worker-face-20261121 3072e7e. 시험 78/78(PYTHONUTF8 없이) · 화면 21/21. 열린 요청 없음"
+next: "ARCH(d9520b95) 대조 기다림 — 다음 일은 스스로 시작하지 않음"
+waiting_for: ["arch:BTSR-ARCH-008-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -20,7 +20,7 @@ verifier: "mitchell_studio/btsr/pmov"
 |---|---|
 | 역할 | 구현(규칙 5·20). 지금 맡은 일: 아래 '받은 요청' |
 | 프로젝트 | BTSR(부트스트랩) — MITCHELL_STUDIO 도메인 |
-| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` — 옛 9d298a54 CLOSED). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
+| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` — 옛 9d298a54 CLOSED). RSCH는 Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(옛 14d04ad1). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
 | 짝 검증자 | PMOV (비상설, 여는 이 ARCH, 규칙 7). 아직 열리지 않음 |
 | PRIMARY | `MITCHELL_STUDIO/BTSR/PMO` — Paseo(claude · auto) · Opus 5.5 (claude-opus-5-5) · high. Paseo 에이전트 `5fbbea06-93d9-48b2-8930-e101d4603429` · Paseo 작업 공간 `wks_2dc964d20c5cca11` · Claude 세션 `2e566876-0221-4fb1-90e1-2ac53bf8a621` (2026-11-21 13:59 KST 승계로 받음. 옛 PRIMARY Paseo `f3cf6938-049e-45f7-bb68-a64e06bff385` · Claude 세션 `ac64c01a-d76a-418c-b6d9-1ff2b1f205e4` — CLOSED). 작업 폴더 `dev\mitchell-studio_agent\worktrees\btsr-pmo`, 브랜치 `btsr/pmo` (main fa2b7aa에서) |
 | 개설 | RSCH의 SUB `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES`(Paseo 5641fdf4)가 엶 — 요청서 main 폴더 `projects/btsr/roles/rsch/sub/s1_open_roles/OPEN_PMO_요청.md` 판 2. 앞 세션(Paseo a73bc1c9, 옛 꼴)은 요청서에 따라 CLOSED — 이어받음 |
@@ -40,7 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
-| BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | **하는 중** — 13:58 KST 승계로 멈춤, 13:59 새 PRIMARY 5fbbea06가 이어 함. 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` e4323cf(push, 바탕 main 32b55dc). 넘김 3번 |
+| BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | **반환함** 14:30 KST — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` 3072e7e(코드 449f378 · 시험 3072e7e, 앞 부분 e4323cf는 옛 PRIMARY), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md). 시험 78/78(PYTHONUTF8 없이) · 화면 21/21. 13:58 승계로 멈췄다가 13:59 새 PRIMARY 5fbbea06가 이어 함 |
 | BTSR-ARCH-005_webapp-b1-merge — 묶음 1 가지 6cfbc5f를 제품 main에 (앞으로 감기, 맥에는 넣지 않음) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` db1f7e8 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-005_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (80ab702) | **닫힘** (ARCH 58c9c95) — 한알 13:13:30 「직접 하세요.」로 RSCH가 main을 6cfbc5f로 push. PMO의 push는 자동 심사에서 막혔고 우회 안 함. 이 PC 로컬 main = origin/main 6cfbc5f 확인 |
 | BTSR-ARCH-003_worker-model-merge — 제품 가지 `fix/worker-model-sol-20261121` 3495f7e를 제품 main에 합침 (PLN이 정함, 한알 03:47:04) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` bc710d7 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (34a5007) | **반환함** 12:54 KST — 제품 main `e5785b3` (첫 부모 3bd6cdd), [반환서](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) |
 
@@ -112,3 +112,10 @@ verifier: "mitchell_studio/btsr/pmov"
 - 모델: Claude Opus 5.5 `claude-opus-5-5` · 생각 high(list_agents) · 모드 auto.
 - ARCH도 승계함: 새 ARCH Paseo `d9520b95-4853-46b9-b04b-96199dddc95d`(옛 9d298a54 CLOSED, 받음 `btsr/arch` c8d0b55) — 옛 PMO f3cf6938(message-id 84c4b478) · 새 ARCH(message-id 8f8ed47f)가 알림. BTSR-ARCH-008 반환과 승계 끝 알림은 이 ID로.
 - ARCH가 전함: 한알 13:57:21 컴퓨터 유즈 범위 승인(RSCH가 PLN에 전하는 중) — 맥에서 돌리는 것은 여전히 1차 끝 맥 시험에 한 번. PMO는 맥 일 하지 않음 그대로.
+- RSCH도 승계함: 새 RSCH Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(claude-naver · Fable 5.2, 옛 14d04ad1은 곧 CLOSED) — RSCH가 알림(message-id fbabca45). 승계 끝 알림은 그 전에 옛 14d04ad1로 보냈음(14:0x KST).
+- 옛 PRIMARY f3cf6938 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로 바꿈 · ARCH(d9520b95) · RSCH(14d04ad1)에 '승계 끝 · 새 Paseo ID' 알림.
+- BTSR-ARCH-008 이어 해서 반환함(14:30 KST) — 위 '받은 요청' 줄.
+
+### 배운 것 (새 PRIMARY)
+- 이 PC: 긴 고침은 `btsr-pmo-work/tools/pt.py`(줄끝을 지키며 정확히 한 번씩 바꿈, 못 찾으면 멈춤)에 고침 파일을 써서 돌림 — 편집 도구는 먼저 읽어야 하고 큰 파일은 읽기가 무거움.
+- 이 PC: Git Bash `kill $!`은 `nohup`만 죽이고 그 아래 python은 남음 → 포트 주인을 찾아 끔.
