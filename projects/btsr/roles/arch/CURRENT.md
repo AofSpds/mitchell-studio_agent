@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
 now: "PMO(7837ebd8)가 BTSR-ARCH-021(올리기 고침 2 — S14) + 덧붙임 1(5–8, 같은 가지, 02:08) 하는 중. 반환 03:05쯤 · 합침 03:40 KST 목표(PLN에 알림). 제품 main 8b0d084"
-next: "021 반환 대조(Playwright 깐 곳) — PMO 맥락 90%에서 만든 것이므로 1–8을 하나씩 diff로(빠짐 · 반쯤 됨, PLN 9bf60dd · RSCH 59번). 반환서에 한 줄: 끝난 뒤 PMO 저장 · 승계 + 다음 묶음 서브 세션 생각(ARCH 생각 = 고침 2 뒤 승계 · 서브는 큰 묶음만 의뢰서 + 한알 확인, 결정 46). 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
+next: "021 반환 오면 곧바로 둘을 함께: (가) PMO에 저장 · 승계 걺(한알 02:13:24 · RSCH 60번 · PLN 815aa99 — PMO가 스스로 create_agent: codex · gpt-6.2-astra · ultra · full-access · 같은 작업 공간 wks_2dc964d20c5cca11 · 승계 글에 고침 2 가지 · 됨 8개 · 시험 돌리는 법 · 새 PMO 받음 줄 · 옛 PMO CLOSED → 새 id · 받음 커밋을 ARCH가 PLN · RSCH ed5ef600에 한 줄) (나) 대조(Playwright 깐 곳, 1–8 하나씩 diff — 맥락 90%에서 만든 것) → PLN 반환(PMO 승계 생각 한 줄 포함). 승계로 합침을 늦추지 않음. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-021 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
