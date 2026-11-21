@@ -1,0 +1,52 @@
+{
+  "materials": [
+    {
+      "file": "after-01.jpg",
+      "kind": "after",
+      "sure": true
+    },
+    {
+      "file": "after-02.jpg",
+      "kind": "after",
+      "sure": true
+    },
+    {
+      "file": "after-clip.mp4",
+      "kind": "after",
+      "sure": true
+    }
+  ],
+  "facts": {
+    "treatment": {
+      "value": "레이어드 컷",
+      "from": "request",
+      "sure": true
+    },
+    "change": {
+      "value": null,
+      "from": null,
+      "sure": false
+    },
+    "model_age": {
+      "value": null,
+      "from": null,
+      "sure": false,
+      "choices": [
+        "20대",
+        "30대",
+        "40대",
+        "50대"
+      ]
+    }
+  },
+  "ai_face": {
+    "have": false,
+    "plan": "make"
+  },
+  "missing": [
+    "before"
+  ],
+  "missing_ok": [
+    "before"
+  ]
+}

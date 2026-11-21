@@ -1,0 +1,59 @@
+{
+  "job": "2099-04-01_1200",
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "length": 14,
+  "ending": {
+    "on": true
+  },
+  "captions": [
+    {
+      "n": 1,
+      "text": "오늘은 레이어드 컷이에요."
+    },
+    {
+      "n": 2,
+      "text": "옆모습에서 머리 끝을 보세요."
+    },
+    {
+      "n": 3,
+      "text": "뒷모습도 함께 보세요."
+    }
+  ],
+  "project": "2099-04-01_1200_v1",
+  "scenes": [
+    {
+      "n": 1,
+      "role": "result",
+      "file": "data/incoming/2099-04-01_1200/after-01.jpg",
+      "kind": "image",
+      "start": 0,
+      "end": 2,
+      "src_start": 0,
+      "ai": false
+    },
+    {
+      "n": 2,
+      "role": "after",
+      "file": "data/incoming/2099-04-01_1200/after-clip.mp4",
+      "kind": "video",
+      "start": 2,
+      "end": 11,
+      "src_start": 0,
+      "ai": false
+    },
+    {
+      "n": 3,
+      "role": "after",
+      "file": "data/incoming/2099-04-01_1200/after-02.jpg",
+      "kind": "image",
+      "start": 11,
+      "end": 14,
+      "src_start": 0,
+      "ai": false
+    }
+  ]
+}
