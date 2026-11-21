@@ -56,3 +56,17 @@ cd ~/mitchell_studio && git fetch origin && git checkout fix/worker-model-sol-20
 ## 6. 다음
 
 반환함. PLN은 다음 일을 스스로 시작하지 않음(AAA 규칙 18). 웹앱 1차(BTSR-PLN-002)는 ARCH가 묶음 1부터 이어 감 — PMO에 BTSR-ARCH-002로 맡겨짐.
+
+## 덧붙임 — 제품 main 합침 (2026-11-21 12:56 KST, BTSR-PLN-003)
+
+- **결과:** 제품 main = **`e5785b3`** (첫 부모 `3bd6cdd` · 둘째 `3495f7e`) — 「합침: 작업자 모델을 설정 한 곳으로 (GPT-6.2 Sol · 생각 High)」. PMO가 합침(BTSR-ARCH-003), ARCH 반환 `btsr/arch` `ceffefa`(부모 · 나무 · 시험 6/6 다시 봄).
+- **PLN이 직접 본 것:** 제품 원격 main 머리 `e5785b3` · 두 부모 · `app/webapp/worker_model.py` blob이 가지 `3495f7e`와 같음(`8b3fb6e`) — fetch로 읽기만. 시험은 다시 돌리지 않음.
+- 근거: 한알 03:47:04 「rsch가 확인하고 pln이 일단 합니다.」 → RSCH 확인(main `3c3708e`) → PLN이 정함(요청 [BTSR-PLN-003](WORKER_MODEL_BTSR-PLN-003_MERGE_REQUEST_CLAUDE.md)).
+
+### 맥에 들어가는 길 (합친 뒤 — main으로)
+
+```zsh
+cd ~/mitchell_studio && git fetch origin && git checkout main && git pull --ff-only && launchctl kickstart -k gui/$(id -u)/com.mitchellstudio.upload
+```
+
+- 남은 것: 맥에서 볼 것 둘(화면 "GPT-6.2 Sol · 생각 High" · 점검 C3 글, python 3.9.6에서 뜨는지)은 그대로 — RSCH 웹앱 테스트 지시문에.
