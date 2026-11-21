@@ -1,0 +1,22 @@
+ CLAUDE.md                                 |   1 +
+ agents/creative_director/manual-webapp.md |   2 +-
+ app/webapp/MAC_RUN_PHASE1.md              |   1 +
+ app/webapp/devpush.py                     | 224 ++++++++++++++++++
+ app/webapp/intake.py                      |  36 ++-
+ app/webapp/jobs.py                        | 200 ++++++++++------
+ app/webapp/prompts/intake.md              |  12 +-
+ app/webapp/prompts/script.md              |   2 +-
+ app/webapp/reel_api.py                    | 138 ++++-------
+ app/webapp/runner.py                      | 127 ++++++----
+ app/webapp/server.py                      |  59 ++++-
+ app/webapp/static/app.html                | 287 +++++++++++------------
+ app/webapp/suggest_store.py               |   5 +
+ app/webapp/tests/_env.py                  |   2 +-
+ app/webapp/tests/fake_claude.py           |   5 +-
+ app/webapp/tests/test_intake.py           |  32 +--
+ app/webapp/tests/test_one_job.py          |   3 +-
+ app/webapp/tests/test_runner.py           |   7 +-
+ app/webapp/tests/test_stuck.py            | 371 ++++++++++++++++++++++++++++++
+ app/webapp/tests/test_worker_face.py      |  78 +++----
+ suggestions/README.md                     |  11 +-
+ 21 files changed, 1156 insertions(+), 447 deletions(-)
