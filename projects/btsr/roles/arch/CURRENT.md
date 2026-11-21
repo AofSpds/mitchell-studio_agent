@@ -60,6 +60,7 @@ verifier: "mitchell_studio/btsr/archv"
   - IVA 판정 부적합(RSCH 40번 · PLN 요청 `btsr/pln` edf7209 — 한알 18:07:10 「과검증은 안되어요 …」): ARCH가 고치는 길 정함 → [BTSR-ARCH-015](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-015_REQUEST_CLAUDE.md). 가2는 spec_redo 열린 편에서 C2를 막는 칸으로 안 봄 · 나4 0이면 「다시 만들기」 안 그림 + ? "다시 만들기를 다 썼어요." [안] · 나6은 소재 파일 이름만 코드로, 호칭 없는 이름은 글 두 줄. 요청 번호 015까지(다음 016).
   - 한알 18:27:53 「그거 안막아도 되어요 그런거 필요없습니다. 개인앱이예요.」(RSCH 41번): 015에서 나 6 뺌 → 015 덧붙임 1(18:29). 화면 글 [안] 둘 확정.
   - 결정 44(한알 18:33:20 「네」 — 웹앱 Claude 명령줄이 받은 소재를 읽음 허락) · 결정 45(18:33:56 「딱 한명이 쓰는 개인 앱이니까 감안해서 해주세요」 — 여러 사람용 막기 · 확인을 늘리지 않음, 편의 먼저) → 015 덧붙임 2(18:35).
+  - 결정 46(한알 18:41:14 「…멀티 에이전트 작업은 작업 의뢰서에 필요할때 쓰시고 저한테 확인을 받으시면 됩니다」, RSCH 43번): 서브 세션 · 보조 여럿은 열기 전에 '무엇을 · 몇 개로 · 실행기 · 생각 수준'을 적어 PLN → RSCH → 한알 확인. PMO(7837ebd8)에 전함. **ARCH도 하위 에이전트 여럿을 쓰려면 먼저 확인 받음.**
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
