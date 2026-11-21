@@ -3,9 +3,9 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T15:55:00+09:00"
+updated: "2026-11-21T16:09:00+09:00"
 base_commit: "fa2b7aa"
-now: "묶음 4-a 반환함(15:55, PMO ed11f5a 대조 — 92 OK) · 4-a-2 1.1판(PLN 짚은 둘 고침) → PMO에 BTSR-ARCH-010"
+now: "ARCH-010 반환 기다림. 한알 16:05:36 — 지금 일이 끝나면 새 세션으로 바꾸심(PMO는 아스트라 · IVA 새로) → 넘김 칸 씀(16:09). PMO에 말씀 전함"
 next: "ARCH-010 반환 대조 → PLN에 → 6(011) → 4-b(012). 묶음 8-2 설계(템플릿 r2 바뀌는 글 한 장 · 다시 만들기 횟수 한 수) — 다11 · 다14 답 뒤. 요청 번호 다음 011"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-010 반환 (5fbbea06)", "owner:다11 과정 영상 · 다14 뒷모습 조건 (RSCH 여쭘 중)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
@@ -28,30 +28,33 @@ verifier: "mitchell_studio/btsr/archv"
 | 게시판 | 없음 — `board/`가 아직 없어 요청서·받음을 작업 칸 주제 폴더에 둠 (PLN·RSCH와 같은 꼴, 규칙 16과 다름 — 숨기지 않음) |
 | 앞 세션 | Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Claude `df7a3d93-e2ee-4c76-8467-16606825f451` (`~/.claude-max/projects/…`) · claude-google · 2026-11-19 22:28 ~ 2026-11-21 13:56 KST (CLOSED, 넘긴 커밋 75a8ac5). 그 앞: Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
 
-## 넘김 (2026-11-21 13:56 KST — 옛 세션 → 새 세션)
+## 넘김 (2026-11-21 16:09 KST 씀 — 지금 세션 d9520b95 → 다음 ARCH 세션)
 
-- **받음** (13:58 KST, 새 세션 d9520b95): 아래 1–5 차례로 함. 새 PLN Paseo ID `a6fd0155-25ef-4bc7-91b0-394849d6776e`(옛 071c15f3 CLOSED, `btsr/pln` 1eb6c95 — 옛 ARCH가 전함). 새 PMO Paseo ID `5fbbea06-93d9-48b2-8930-e101d4603429`(옛 f3cf6938, `btsr/pmo` 3857a2c · ARCH-008은 제품 가지 e4323cf에서 멈춤). 셋(PLN a6fd0155 · RSCH 14d04ad1 · PMO 5fbbea06)에 새 ARCH ID 알림 13:59. RSCH도 승계 — 새 RSCH Paseo ID `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(Fable 5.2, 옛 14d04ad1 곧 CLOSED) — RSCH 알림은 이 ID로. 한알 13:57:21 「1 1 1 1 1」 — 5번이 컴퓨터 유즈 범위 승인(CapCut ⑥ 그 작업 프로젝트 하나 · ChatGPT 앱 AI 얼굴 새 대화 하나 · 사진 복사본 한 장 · 최대 3번, 돌리는 것은 1차 끝 맥 시험) — RSCH가 PLN에 전하는 중, PLN 전달을 받으면 묶음 5 + 3-2 설계 5번을 닫음.
-
-- **까닭**: 한알 13:55:17 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」 (RSCH 14d04ad1이 전함, 원문 에이전트 저장소 main `b9c976b` `owner/utterances/2026-11-21.md`). 새 세션 제공자는 Paseo `claude`(이름표 claude-naver — 한알 13:24:06 · 13:35:34), 모델 · 생각 수준 그대로(Opus 5.5 · high), 제목 `MITCHELL_STUDIO/BTSR/ARCH`.
-- **옛 세션**: Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · 작업 공간 `wks_6dc6b9d13807b202` · Claude 세션 `df7a3d93-e2ee-4c76-8467-16606825f451` · claude-google. 넘긴 커밋 = 이 CURRENT가 든 커밋. 멈춘 곳: 묶음 5 + 3-2를 PMO에 맡긴 뒤(ARCH-008), 묶음 4 · 6 설계 전 — 하다 만 파일 없음.
-- **지금 열린 일**:
-  1. **PMO BTSR-ARCH-008**(묶음 5 + 3-2) 구현 중 — 반환이 오면 받아들임 기준 1–9와 대조(제품 가지를 fetch → `git archive`로 저장소 전부를 따로 풀어 **환경 값 없이** `python -m unittest discover -s app/webapp/tests`) → 반환서를 `design/webapp-phase1/`에 → PLN에 알림. PMO도 승계 중 — PMO의 새 Paseo ID는 PMO 쪽 알림으로 받음.
-  2. **한알 승인 대기**: 묶음 5 + 3-2 설계 5번 '컴퓨터 유즈 범위' 한 장(PLN → RSCH → 한알). 승인 전 맥에서 돌리지 않음.
-  3. **다음 설계**(PLN-002 차례): 묶음 4-a(진행 보기 · '지금' 한 줄 · 화면 스스로 바뀜) · 4-b(https 켬 — **맥 손일 · 명령 · 하지 말 것을 한 장으로**, 결정 05 · 1.2판) · 묶음 6(다 된 뒤 고치기 · 판마다 CapCut 프로젝트 · **R6.4 규격이 다르면 승인해도 완성 아님**, 1.7판 결정 14). 묶음 7은 뒤로(결정 04).
+- **까닭**: 한알 16:05:36 「일단 pln arch pmo 모두 지금 작업이 끝나면 새로운 세션으로 바꿀께요. pmo는 아스트라로 바꿀께요 아스트라 iva 세션도 신설해서 최종 작업물을 나오면 검증/리뷰하는걸로 진행하겠습니다.」(RSCH 요청서 003 23번, 에이전트 main 1b2daf8 — PLN 전함). 세션을 바꾸는 것은 한알이 하심 · 하던 일을 멈추라는 말씀이 아님 → 이 칸은 '지금 일이 끝나면 다음 세션이 이어받게' 미리 씀. 바꾸실 때까지는 이 세션이 계속함(그 사이 바뀐 것은 아래 '지금'과 YAML에).
+- **지금 세션**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high.
+- **알고 있는 다른 세션**(바뀌면 새 ID가 알려 옴): PLN `a6fd0155-25ef-4bc7-91b0-394849d6776e` · RSCH `a97bebab-51e4-4b70-b968-2177d6fe4f2e` · PMO `5fbbea06-93d9-48b2-8930-e101d4603429`(다음은 아스트라 — codex `gpt-6.2-astra`) · IVA는 새로 생김(1차 마지막 결과물 검증 · 리뷰 — 누가 여는지 · 무엇을 넘기는지는 PLN 알림을 기다림).
+- **남은 차례(webapp-phase1, BTSR-PLN-002)**:
+  1. **PMO BTSR-ARCH-010**(묶음 4-a-2, 바탕 main `ed11f5a`) 반환 대조 → [4-a-2 설계 1.1판](design/webapp-phase1/WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md) 10번 기준 1–10 · 3-1(가짜 원격 — main에 든 커밋의 부모 = 원격 main, 바꾼 경로 = `suggestions/` 글 하나). 제품 가지 fetch → `git archive <가지> | tar -x -C <새 임시 폴더>` → 그 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests` → 반환서 `design/webapp-phase1/WEBAPP_PHASE1_B4A2_BTSR-PLN-002_RETURN_CLAUDE.md` → PLN에.
+  2. **묶음 6 → PMO BTSR-ARCH-011**: [설계 2.2판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md)(PLN 받음). 요청서는 ARCH-009 · 010 꼴로. 바탕은 그때의 main. 4-a-2가 바꾼 것(막힘 길 · `busy`)과 맞물림 — 010 반환을 보고 6번 '규격 다시 뽑기 두 번 다르면 개발자에게'를 `jobs.stop(to = dev)`로 잇게 한 줄 더함.
+  3. **4-b → PMO BTSR-ARCH-012**: [설계 2.1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) + [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md)(PLN 받음, 결정 33 · 34). `cryptography`가 이 PC에 없음 — 대조 때 따로 만든 가상 환경에 깔아 시험 4 · 5를 다시 돌림.
+  4. **묶음 8-2 '지시 글 맞춤' 설계**(요구 2.10판 R82.1–R82.3): [19번 자리](design/webapp-phase1/WEBAPP_PHASE1_SIM19_ALLOC_CLAUDE.md) 1번 표의 '8-2' 줄 전부 · 다시 만들기 횟수 한 수(ARCH-009 물음 ① — `FACE_REMAKES` · face.md · ? 글) · **템플릿 r2에서 바뀌는 글을 한 장으로**(PLN 요청 — 한알 확정본이라 RSCH가 구현 전에 보여 드림) · 결정 36(시술 과정 영상은 1차에서 쓰지 않음 — 와도 묻지 않고 뺌, r2에 과정 장면 없음). **다14(뒷모습 합격 조건)는 여쭘 중** — 답 뒤.
+  5. 차례가 끝나면 1차 끝 맥 시험(`app/webapp/MAC_RUN_PHASE1.md`, 결정 08) · IVA 검증 — PLN 알림대로.
+- **열린 것**: 다14 답(RSCH) · 「⚙ 기본 옵션」(빈 Jobs — RSCH가 한알께 알림, 다른 말씀 없으면 그대로) · IVA의 꼴.
 - **받는 세션이 할 것**:
-  1. 첫 줄 `[MITCHELL_STUDIO/BTSR/ARCH · 규칙 판 v0.14 받음]`. 이 저장소 `AGENTS.md` → 이 CURRENT → `INDEX.md` · `ROADMAP.md` → AAA 규칙 판(dev 폴더의 `AAA/AGENTS.md`, 읽기만) → `projects/btsr/roles/rsch/knowhow.md`(이 PC 환경)만 읽고 시작. 설계 파일은 필요한 것만.
-  2. 받음을 적음: 이 CURRENT의 YAML(`state`, `updated`, `now`)과 위 PRIMARY 칸을 새 Paseo 에이전트 ID · 작업 공간 ID · Claude 세션 ID(transcript 폴더에서 첫 user 줄이 여는 글인 `.jsonl`)로 고치고, 앞 세션 칸에 옛 세션 ID를 더함 → 커밋 · push(`btsr/arch`, 자기 폴더만 이름으로 add).
-  3. 옛 세션 제목을 `MITCHELL_STUDIO/BTSR/ARCH CLOSED`로 바꿈(Paseo `update_agent`, AAA 규칙 10).
-  4. PLN(071c15f3)과 RSCH(14d04ad1)에 '승계 끝 · 새 Paseo ID'만 알림. **PMO에도 새 ID를 알림** — ARCH-008 반환이 새 세션으로 오게(요청 길 ARCH → PMO, 규칙 15).
-  5. 그 뒤 위 '지금 열린 일' 차례대로.
-- **알아 둘 것(이 세션에서 배운 것)**:
-  - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`.
-  - 제품 저장소(dev 폴더의 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 읽음 — 그 작업 사본(main `0636fa0`에 멈춰 있음)은 건드리지 않음. 시험은 `git archive <가지> | tar -x -C <새 임시 폴더>` 뒤 그 안에서 — **저장소 전부를 풀어야** 함(`test_words`가 매뉴얼을 읽음).
-  - 제품 main 합치기: PLN이 정하고 **RSCH가 앞으로 감기 push**(1.6판 결정 13). ARCH · PMO는 main push 안 함. 맥 일은 1차 끝 맥 시험에 한 번(결정 08).
-  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–010까지 씀(다음 011).
-  - 큰 읽기(남의 저장소 · 긴 기획)는 하위 에이전트(Explore)에 맡기고 결론만 받음. 일하는 PMO에게 새 요청을 보내면 그 차례에 끼어드므로, 작은 급한 것만 끼우고 나머지는 반환 뒤.
-  - 묶음마다 반환 전에 그 사이 바뀐 한알 말씀과 요청서 기준이 맞는지 다시 봄(규칙 37).
-  - 이 PC의 Bash heredoc 파이썬 안에 윈도 경로(역슬래시 + U)를 넣으면 스크립트가 안 돎 — 경로가 든 글은 파일 쓰기 도구로.
+  1. 첫 줄 `[MITCHELL_STUDIO/BTSR/ARCH · 규칙 판 v0.14 받음]`. 이 저장소 `AGENTS.md` → 이 CURRENT → `INDEX.md` → AAA 규칙 판(dev 폴더 `AAA/AGENTS.md`, 읽기만) → `projects/btsr/roles/rsch/knowhow.md`(이 PC 환경)만 읽고 시작. 설계 파일은 위 차례에 드는 것만.
+  2. 받음 적기: YAML(`state` · `updated` · `now`) · PRIMARY 칸을 새 Paseo 에이전트 ID · 작업 공간 ID(`wks_6dc6b9d13807b202` 그대로일 것) · Claude 세션 ID(transcript 폴더에서 첫 user 줄이 여는 글인 `.jsonl` — 제공자에 따라 `~/.claude/projects/…` 또는 `~/.claude-max/projects/…`)로, 앞 세션 칸에 이 세션 ID → 커밋 · push(`btsr/arch`, 자기 폴더만 이름으로 add).
+  3. 이 세션 제목을 `MITCHELL_STUDIO/BTSR/ARCH CLOSED`로(Paseo `update_agent`, AAA 규칙 10).
+  4. PLN · RSCH · PMO(그때의 ID)에 '승계 끝 · 새 Paseo ID'만 알림.
+  5. 위 '남은 차례' 1부터.
+- **알아 둘 것(이 PC · 이 일에서 배운 것)**:
+  - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
+  - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
+  - 제품 main 합치기: PLN이 정하고 RSCH가 앞으로 감기 push(결정 13). ARCH · PMO는 main push 안 함.
+  - 게시판이 없어 요청서 · 받음 · 반환을 `design/webapp-phase1/`에 파일로, Paseo 알림으로 경로만. 보낸 요청서는 본문을 고치지 않고 '덧붙임' 칸으로 기준만 더함(ARCH-009가 두 번 그렇게 했고 PMO가 한 차례에 넣음). 요청 번호 BTSR-ARCH-001–010까지 씀(다음 011).
+  - 큰 읽기(제품 코드 · 시안 · 시뮬레이션 대조)는 하위 에이전트(Explore · general-purpose)에 맡기고 결론 · 줄 번호만 받음. 하위 에이전트의 줄 번호는 판단에 쓰기 전에 `grep`으로 한두 개 다시 봄.
+  - 요구가 자주 바뀜(이 세션 동안 1.8 → 2.10판). 설계는 요구 판 · 결정 번호 · 시안 판을 머리에 적고, 고칠 때 머리 '판' 칸에 바뀐 것을 한 줄로.
+  - 시안은 RSCH SUB S8 3판(`sub/s8_uiux_rework/`, 화면 16개) — **3판에 없는 것은 만들지 않음**. 미첼 화면은 현황과 단추만(결정 21), 이름은 영어(결정 22).
+  - Bash heredoc 파이썬 안에 윈도 경로(역슬래시 + U)를 넣지 않음 — 경로가 든 글은 파일 쓰기 도구로.
 
 ## 지금
 
@@ -72,6 +75,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
   - **묶음 4-a**: PMO 반환 `btsr/pmo` 7f63e44(가지 `feat/webapp-b4a-one-job-bar-20261121` ed11f5a) → ARCH 대조(저장소 전부 · 환경 값 없이 92 OK · grep 기준 1–12) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B4A_BTSR-PLN-002_RETURN_CLAUDE.md) 15:55. PMO 물음 셋: ① ? 표 '3번 더'는 값에서 세는 그대로(횟수 맞춤은 8-2) ② 빈 Jobs 「⚙ 기본 옵션」 남김 ③ 가진 사진 올리기는 4-a-2에서 걷음.
+  - RSCH 요청서 003 23번(main 1b2daf8): 한알 16:05:36 세션 바꾸심 예고 · PMO는 아스트라 · IVA 새로 → PMO(5fbbea06)에 말씀 그대로 전함(규칙 15) · 넘김 칸 씀. 결정 36 · 요구 2.10판 R82.3: 시술 과정 영상은 1차에서 쓰지 않음(한알 16:06:41) → 8-2.
   - 4-a 반환 PLN 받음(`btsr/pln` 398419c) → **제품 main `ed11f5a`**(RSCH push, 에이전트 main 41416d5 요청서 22번 · PLN 16:02 ls-remote) — ARCH-010 바탕 = 지금 main. PMO 물음 셋 판단 받음(「⚙ 기본 옵션」은 RSCH가 한알께 보여 드릴지 봄). 4-a-2 1.1판 고친 줄 받음 — ARCH-010 그대로.
   - 4-a-2 PLN 대조(`btsr/pln` 4edd054, 요구 2.9판): 고칠 것 둘 — push는 맥 사본과 따로 둔 index에서 origin/main 위에 글 하나만(기능 가지 커밋이 main에 안 섞이게, 기준 3-1) · 파일 이름은 작업 id만 · 모든 글 거른 뒤 → 1.1판 → PMO에 [BTSR-ARCH-010](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-010_REQUEST_CLAUDE.md) (바탕 ed11f5a).
   - 요구 2.7 · 2.8판(`btsr/pln` 5c086f5): 19번 자리 받음 · 묶음 8-2 칸(R82.1 720×1280 → 1080×1920 · R82.2 글 맞춤) — **8-2 설계 때 템플릿 r2에서 바뀌는 글을 한 장으로**(한알 확정본이라 RSCH가 보여 드림). 결정 35 R32.4 거둠(화면 5 단추 둘 · 다시 만들기 다 쓰면 dev · 넘기기/올리기 고르기 걷음 → 4-a-2 2-1). 20번 [안] 여섯 안대로 확정.
