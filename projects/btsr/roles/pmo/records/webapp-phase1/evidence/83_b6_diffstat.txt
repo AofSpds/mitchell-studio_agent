@@ -1,0 +1,15 @@
+ agents/creative_director/manual-webapp.md |   4 +-
+ app/webapp/README.md                      |   6 +-
+ app/webapp/jobs.py                        | 127 ++++++++++++++++++--
+ app/webapp/prompts/caption.md             |  15 +++
+ app/webapp/prompts/edit.md                |   2 +-
+ app/webapp/reel_api.py                    |  86 ++++++++++++-
+ app/webapp/runner.py                      |  72 +++++++++--
+ app/webapp/static/app.html                |  51 ++++++--
+ app/webapp/tests/fake_claude.py           |  21 +++-
+ app/webapp/tests/fake_codex.py            |  10 +-
+ app/webapp/tests/test_one_job.py          |   3 +-
+ app/webapp/tests/test_runner.py           |  15 ++-
+ app/webapp/tests/test_versions.py         | 193 ++++++++++++++++++++++++++++++
+ app/webapp/tests/words_allow.json         |   6 -
+ 14 files changed, 554 insertions(+), 57 deletions(-)

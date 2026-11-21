@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T07:30:00Z"
+updated: "2026-11-21T08:02:00Z"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-011(묶음 6 — 고칠 점 → 다음 판 · 판마다 새 캡컷 프로젝트 · 완성 = 승인 + 규격 · caption 일) 받음 · 하는 중. 바탕 제품 가지 243cff0. ARCH-010 수용"
-next: "설계 2.2판 9 · 9-1 + 요청 12–14대로 → 반환(ARCH d9520b95). 세션이 바뀌면 넘김 (2)대로"
-waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-011 반환함(17:00 KST) — 제품 가지 feat/webapp-b6-fix-versions-20261121 e512fcd · 시험 125/125 · 화면 15/15. 승계 중 — 새 PMO(아스트라 · full-access)를 이 세션이 엶(한알 16:45:26 · 16:54:50 · 16:55:05)"
+next: "새 PMO가 넘김 (2) 0번대로 — 커밋 · push 확인 → 받음 → 옛 세션 CLOSED → 012(4-b) · 013(8-2)"
+waiting_for: ["arch:BTSR-ARCH-011-acceptance", "successor:take-over", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -20,7 +20,7 @@ verifier: "mitchell_studio/btsr/pmov"
 |---|---|
 | 역할 | 구현(규칙 5·20). 지금 맡은 일: 아래 '받은 요청' |
 | 프로젝트 | BTSR(부트스트랩) — MITCHELL_STUDIO 도메인 |
-| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` — 옛 9d298a54 CLOSED). RSCH는 Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(옛 14d04ad1). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
+| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4` — 옛 d9520b95 · 9d298a54 CLOSED). PLN Paseo `be41b33c-5441-48f7-9202-9bb7c21b13a3`. RSCH는 Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(옛 14d04ad1). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
 | 짝 검증자 | PMOV (비상설, 여는 이 ARCH, 규칙 7). 아직 열리지 않음 |
 | PRIMARY | `MITCHELL_STUDIO/BTSR/PMO` — Paseo(claude · auto) · Opus 5.5 (claude-opus-5-5) · high. Paseo 에이전트 `5fbbea06-93d9-48b2-8930-e101d4603429` · Paseo 작업 공간 `wks_2dc964d20c5cca11` · Claude 세션 `2e566876-0221-4fb1-90e1-2ac53bf8a621` (2026-11-21 13:59 KST 승계로 받음. 옛 PRIMARY Paseo `f3cf6938-049e-45f7-bb68-a64e06bff385` · Claude 세션 `ac64c01a-d76a-418c-b6d9-1ff2b1f205e4` — CLOSED). 작업 폴더 `dev\mitchell-studio_agent\worktrees\btsr-pmo`, 브랜치 `btsr/pmo` (main fa2b7aa에서) |
 | 개설 | RSCH의 SUB `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES`(Paseo 5641fdf4)가 엶 — 요청서 main 폴더 `projects/btsr/roles/rsch/sub/s1_open_roles/OPEN_PMO_요청.md` 판 2. 앞 세션(Paseo a73bc1c9, 옛 꼴)은 요청서에 따라 CLOSED — 이어받음 |
@@ -40,7 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
-| BTSR-ARCH-011_webapp-b6-fix-versions — 고칠 점 → 다음 판 · 판마다 새 이름 캡컷 프로젝트 · 완성 = 승인 + 규격 · 판 고르기 · ? 둘 · 승인 뒤 caption 일 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` d5f3369 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md` 2.2판 | 2026-11-21 (커밋 시각, 세션 메시지 cbbb6f7d) | **하는 중** — 바탕 제품 가지 243cff0 (main은 ed11f5a) |
+| BTSR-ARCH-011_webapp-b6-fix-versions — 고칠 점 → 다음 판 · 판마다 새 이름 캡컷 프로젝트 · 완성 = 승인 + 규격 · 판 고르기 · ? 둘 · 승인 뒤 caption 일 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` d5f3369 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md` 2.2판 | 2026-11-21 (커밋 시각, 세션 메시지 cbbb6f7d) | **반환함** 17:00 KST — 제품 가지 `feat/webapp-b6-fix-versions-20261121` e512fcd(코드 bdbd66e · 시험 e512fcd, 바탕 243cff0), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B6_RETURN_CLAUDE.md). 시험 125/125(PYTHONUTF8 없이) · 화면 15/15 · 반환은 새 ARCH 7621f3de로 |
 | BTSR-ARCH-010_webapp-b4a2-stuck-restart — 막힘 길 하나 · dev는 suggestions/ push · 처음부터 시작 · 보내는 중 · 흐린 사진 · 접수 · 틈새 · resume · 가진 사진 올리기 걷음 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` a6d7f34 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-010_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (커밋 시각, 세션 메시지 064065fd) | **반환함** 16:30 KST — 제품 가지 `feat/webapp-b4a2-stuck-restart-20261121` 243cff0(코드 6a7d3c6 · 시험 243cff0, 바탕 ed11f5a), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md). 시험 116/116(PYTHONUTF8 없이) · 화면 18/18. **ARCH 수용**(message-id cbbb6f7d) |
 | BTSR-ARCH-009_webapp-b4a-one-job-bar — 한 번에 한 편 · 하는 일 한 줄 + 바 · 화면 스스로 바뀜 · 여러 편 걷기 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` 3da95c5 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-009_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A_DESIGN_CLAUDE.md` 2판(3e6eee5) · 화면 시안 3판 main `projects/btsr/roles/rsch/sub/s8_uiux_rework/` | 2026-11-21 (커밋 시각, 세션 메시지 0eddd3f3) | **반환함** 16:00 KST — 제품 가지 `feat/webapp-b4a-one-job-bar-20261121` ed11f5a(코드 ebc3e66 · c49596e, 시험 627d872 · ed11f5a, 바탕 main 3072e7e), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4A_RETURN_CLAUDE.md). 시험 92/92(PYTHONUTF8 없이) · 화면 27/27. 덧붙임 3-1(cacb410) · 2(7701eb4) 반영. **ARCH 수용**(message-id 064065fd — 여쭘 ① 그대로 ② 남김 ③ 가진 사진 올리기는 ARCH-010에서 걷음) |
 | BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | **반환함** 14:30 KST — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` 3072e7e(코드 449f378 · 시험 3072e7e, 앞 부분 e4323cf는 옛 PRIMARY), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md). 시험 78/78(PYTHONUTF8 없이) · 화면 21/21. 13:58 승계로 멈췄다가 13:59 새 PRIMARY 5fbbea06가 이어 함 |
@@ -123,42 +123,49 @@ verifier: "mitchell_studio/btsr/pmov"
 - 이 PC: 긴 고침은 `btsr-pmo-work/tools/pt.py`(줄끝을 지키며 정확히 한 번씩 바꿈, 못 찾으면 멈춤)에 고침 파일을 써서 돌림 — 편집 도구는 먼저 읽어야 하고 큰 파일은 읽기가 무거움.
 - 이 PC: Git Bash `kill $!`은 `nohup`만 죽이고 그 아래 python은 남음 → 포트 주인을 찾아 끔.
 
-## 넘김 (2) — 다음 PMO에게 (2026-11-21 16:30 KST, PRIMARY Paseo 5fbbea06가 씀)
+## 넘김 (2) — 다음 PMO에게 (고친 판 2026-11-21 17:02 KST, PRIMARY Paseo 5fbbea06가 씀)
 
-근거: 한알 16:05:36 「일단 pln arch pmo 모두 지금 작업이 끝나면 새로운 세션으로 바꿀께요. pmo는 아스트라로 바꿀께요 아스트라 iva 세션도 신설해서 최종 작업물을 나오면 검증/리뷰하는걸로 진행하겠습니다.」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」 — ARCH(d9520b95)가 전함(RSCH 요청서 003 23번 · 25번, 에이전트 main 1b2daf8 · 45a1ada). 세션을 바꾸는 것은 한알이 하심 — 이 세션은 011 · 012 · 013을 받는 대로 계속함.
+근거: 한알 16:05:36 「…pmo는 아스트라로 바꿀께요 아스트라 iva 세션도 신설해서 최종 작업물을 나오면 검증/리뷰하는걸로 진행하겠습니다.」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」 · 16:45:26 「새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다 …」 · 16:54:50 「미리 허락합니다.」 · 16:55:05 「권고안 승인합니다.」 — ARCH · RSCH가 전함(에이전트 main `projects/btsr/roles/rsch/requests/BTSR-RSCH-003_webapp-phase1-capcut/요청.md` 23 · 25 · 30 · 31번, 1b2daf8 · 45a1ada · 60a2ee9 · a1f2e84). **승계는 세션이 스스로 함** — 이 세션(5fbbea06)이 011을 반환한 뒤 새 PMO를 `create_agent`로 엶: 제공자 `codex` · 모델 `gpt-6.2-astra` · 생각 수준 high · **모드 `full-access`**(31번 — IVA 아스트라 세션이 auto-review에서 `git add`의 `.git/index.lock` 권한에 막혔음) · 같은 작업 공간 `wks_2dc964d20c5cca11` · 부모 라벨 비움.
 
-### 0. 다음 PMO(아스트라 · codex `gpt-6.2-astra`)가 먼저 할 것
-1. **커밋이 되는지부터 확인** — RSCH가 겪음: Paseo codex 세션이 `.git/index.lock` 권한에 막혀 커밋을 못 했음. 이 작업 폴더(`worktrees/btsr-pmo`, 가지 `btsr/pmo`)와 제품 사본(`C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`) 둘 다에서 add · commit · push가 되는지 먼저 보고, 안 되면 우회하지 말고 RSCH(a97bebab) · ARCH(d9520b95)에 알림.
-2. 이 파일 맨 위 → 이 칸 → `C:\Users\ms1pk\dev\AAA\AGENTS.md`(규칙 판 v0.14, 읽기만) → `records/webapp-phase1/`의 마지막 반환서(B4A2).
+### 0. 새 PMO(아스트라)가 먼저 할 것
+1. **커밋 · push가 되는지부터 확인** — 이 작업 폴더(`C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-pmo`, 가지 `btsr/pmo`)와 제품 사본(`C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`) 둘 다에서 add · commit · push. 에이전트 쪽은 '받음' 커밋이 그 시험이 됨. 제품 쪽은 지금 가지(`feat/webapp-b6-fix-versions-20261121`)에서 `git status` · `git fetch` 뒤, 012 요청을 받으면 새 가지 첫 커밋으로 확인(빈 시험 커밋을 기능 가지에 올리지 않음). **안 되면 돌아가지 말고 멈추고 RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에 알림** — 권한을 넓히는 것은 한알께 여쭌 답대로.
+2. 읽기: 이 파일 맨 위 → 이 칸 → `C:\Users\ms1pk\dev\AAA\AGENTS.md`(규칙 판 v0.14, 읽기만) → `records/webapp-phase1/`의 마지막 반환서 둘(B4A2 · B6).
 3. 받음을 이 칸 아래에 적음(새 Paseo ID · 작업 공간 · 세션 ID · 모델 — 짐작하지 말고 확인) · 표의 PRIMARY 칸 고침 · 커밋 · push(자기 역할 폴더만, 파일 이름으로 add).
-4. 옛 PRIMARY(Paseo `5fbbea06-93d9-48b2-8930-e101d4603429`) 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로, ARCH(`d9520b95`) · RSCH(`a97bebab`)에 '승계 끝 · 새 ID'만 알림.
+4. 옛 PRIMARY(Paseo `5fbbea06-93d9-48b2-8930-e101d4603429`) 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로, ARCH(`7621f3de-7d3e-4f12-87e1-98fe95e32fd4`) · RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에 '승계 끝 · 새 Paseo ID'만 알림(PLN은 `be41b33c-5441-48f7-9202-9bb7c21b13a3`).
+5. 그 뒤 ARCH가 보내는 **012(4-b) → 013(8-2)**을 이어 감 — ARCH가 반환을 대조할 때마다 다음 요청서를 보냄. 다 끝나면 한알이 기획안 초안을 먼저 보심.
+
+### 역할 규칙 (그대로)
+- 제품 main push 안 함(합치기는 RSCH 몫) · 맥 일 안 함(1차 끝 맥 시험에 한 번 — 결정 08) · **쓰는 곳은 이 역할 폴더(`projects/btsr/roles/pmo/`)와 제품 사본의 기능 가지뿐** · Git 위험 명령 안 씀(강제 push · reset --hard · 원격 가지 지우기 · rebase로 남의 커밋 바꾸기 등).
+- codex 명령줄 값(`worker_model.MODEL_CLI` 등)은 지어내지 않음(비워 둠) · 진짜 원격에 개발자 글 push 안 함(`WEBAPP_DEV_PUSH` 기본 꺼짐, 시험은 가짜 원격).
+- 코드 커밋과 시험 커밋 따로 · 시험 명령과 환경 값을 반환서에 그대로(AAA 규칙 24) · 반환서 6항목(결과 · 증거 · 바뀐 것 · 남은 것 · 배운 것 · 다음).
+- 손님 정보 · 키 · 비밀 값은 어디에도 적지 않음 · 시각은 한국 시각을 확인해서.
 
 ### 1. 지금
-- 열린 요청: **BTSR-ARCH-011(묶음 6)** — 하는 중(위 '받은 요청' 줄). 010은 ARCH 수용. 다음 차례(ARCH가 반환을 대조할 때마다 보냄): **011(묶음 6) → 012(4-b) → 013(8-2)** → 다 끝나면 한알이 기획안 초안을 먼저 보심.
-- 제품: main = `3072e7e`(묶음 5 + 3-2까지). 그 위 가지 사슬(main에 아직 안 들어감 — 합치기는 RSCH 몫): `feat/webapp-b4a-one-job-bar-20261121` ed11f5a(4-a, ARCH 수용) → `feat/webapp-b4a2-stuck-restart-20261121` 243cff0(4-a-2). 다음 요청의 바탕은 요청서가 말한 가지(보통 바로 앞 가지 끝) — main이 앞서 있으면 main.
-- 늘 지킬 것: 제품 main push 안 함 · 맥 일 안 함 · codex 명령줄 값(`worker_model.MODEL_CLI` 등) 지어내지 않음(비워 둠) · 진짜 원격에 개발자 글 push 안 함(`WEBAPP_DEV_PUSH` 기본 꺼짐, 시험은 가짜 원격) · 코드 커밋과 시험 커밋 따로 · 시험 명령과 환경 값을 반환서에 그대로(AAA 규칙 24).
+- 열린 요청: 없음(011 반환 · 새 ARCH 7621f3de 대조 기다림).
+- 제품: main = `ed11f5a`(4-a까지). 그 위 가지 사슬(합치기는 RSCH): `feat/webapp-b4a2-stuck-restart-20261121` 243cff0(4-a-2, ARCH 수용) → `feat/webapp-b6-fix-versions-20261121` e512fcd(묶음 6). 다음 요청의 바탕은 요청서가 말한 가지 — main이 앞서 있으면 main.
 
 ### 2. 열린 것
-- BTSR-ARCH-010: ARCH 대조 기다림.
+- BTSR-ARCH-011: ARCH 대조 기다림.
 - BTSR-RSCH-001(OpenCut 시험 코드): 반환 · 수용, 건은 열림 — 맥 결과 대기.
-- `app/webapp/MAC_RUN_PHASE1.md`: 써 두기만(1차 끝 맥 시험에 한 번 — 결정 08). 맥 0 결과로 `worker_model.py` 명령줄 값 · 권한 플래그 · `WEBAPP_DEV_PUSH=1` 설정 줄을 PMO가 넣음.
-- 4-a-2 남은 것: 화면 15 작은 그림은 맥 `sips`로(이 PC 화면 시험에서는 빈 칸) · 흐린 사진 판정 품질은 맥에서.
+- `app/webapp/MAC_RUN_PHASE1.md`: 써 두기만(1차 끝 맥 시험). 맥 0 결과로 `worker_model.py` 명령줄 값 · 권한 플래그 · `WEBAPP_DEV_PUSH=1` 설정 줄을 PMO가 넣음.
+- [맥에서 확인] 남은 것: 새 이름 캡컷 프로젝트(묶음 6) · 화면 15 작은 그림(`sips`) · 흐린 사진 판정 · 캡션 품질.
 
 ### 3. 이 PC (git 밖) — 일하는 법
-- 제품 사본 `C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`(지금 가지 `feat/webapp-b4a2-stuck-restart-20261121`). 새 요청은 `git checkout -b <새 가지> origin/<바탕>`.
-- 고치기는 `btsr-pmo-work/tools/pt.py`로 — 고칠 쌍(옛 글 → 새 글)을 파이썬 파일에 써서 tools 폴더에서 `PYTHONIOENCODING=utf-8 python -I -c "import sys; sys.path.insert(0, '.'); exec(open('<파일>', encoding='utf-8').read())"`. 정확히 한 번 나와야 바꾸고 줄끝(CRLF/LF)을 지킴. **Bash heredoc 안의 역슬래시는 깨짐**(이번에도 두 번) — 파이썬 글은 늘 파일로 쓴 뒤 돌림.
-- 시험: 제품 사본 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests -v` (지금 116). 시험들이 같은 시험 폴더를 쓰므로 '한 편만' 규칙 때문에 새 시험 class는 `setUp`에서 `_env.idle()`(남은 편을 치움)을 부름 — 안 그러면 순서에 따라 흔들림.
-- 화면 시험: 시험 서버를 `WEBAPP_ENV_FILE`(시험용 PIN · SECRET) · `WEBAPP_HOST=127.0.0.1` · 빈 포트 · `WEBAPP_RUNNER=0` · `WEBAPP_TICK_SECONDS=0` · `WEBAPP_DEV_PUSH=0` · 시험 데이터 폴더로 띄우고 헤드리스 Chrome + DevTools 스크립트(본보기 `records/webapp-phase1/evidence/screen_b4a2_test.mjs` · `screen_b4a2_state.py` — 상태 스크립트로 한 편을 때마다 바꿈). node `C:\Users\ms1pk\DevEnvBackup-tools\node-v24.22.0\node-v24.22.0-win-x64\node`, Chrome `C:\Program Files\Google\Chrome\Application\chrome.exe`.
+- 제품 사본 `C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`. 새 요청은 `git checkout -b <새 가지> origin/<바탕>`.
+- 고치기 도구 `btsr-pmo-work/tools/pt.py` — 고칠 쌍(옛 글 → 새 글)을 파이썬 파일에 써서 tools 폴더에서 `PYTHONIOENCODING=utf-8 python -I -c "import sys; sys.path.insert(0, '.'); exec(open('<파일>', encoding='utf-8').read())"`. 정확히 한 번 나와야 바꾸고 줄끝(CRLF/LF)을 지킴. **Bash heredoc 안의 역슬래시는 깨짐**(이 세션에서 세 번) — 파이썬 글은 늘 파일로 쓴 뒤 돌림.
+- 시험: 제품 사본 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests -v` (지금 125). 새 시험 class는 `setUp`에서 `_env.idle()`(한 번에 한 편 — 남은 편을 치움). `_env`는 `WEBAPP_DEV_PUSH=0`. 시험 폴더를 남겨 보려면 `MITCHELL_TEST_TMP`와 `WEBAPP_DATA_DIR` 등을 미리 만든 폴더로 줌(B6 판 기록을 그렇게 뽑음).
+- 화면 시험: 시험 서버(`WEBAPP_ENV_FILE` 시험용 PIN · SECRET · `WEBAPP_HOST=127.0.0.1` · 빈 포트 · `WEBAPP_RUNNER=0` · `WEBAPP_TICK_SECONDS=0` · `WEBAPP_DEV_PUSH=0` · 시험 데이터 폴더) + 헤드리스 Chrome DevTools 스크립트 — 본보기 `records/webapp-phase1/evidence/screen_b6_test.mjs` · `screen_b6_state.py`(상태 스크립트로 한 편을 때마다 바꿈). node `C:\Users\ms1pk\DevEnvBackup-tools\node-v24.22.0\node-v24.22.0-win-x64\node`, Chrome `C:\Program Files\Google\Chrome\Application\chrome.exe`. 그림은 반환 전에 직접 열어 봄.
 - 시험 서버 끄기: Git Bash `kill $!`은 `nohup`만 죽이고 python은 남음 → PowerShell로 명령줄에 `app/webapp/server.py`가 든 프로세스를 끄고 포트가 빈 것을 확인.
-- 화면 그림은 반환 전에 직접 열어 봄(B5의 같은 글 두 번 · B4A2의 화면 9 배지 — 그림 · 시험으로 찾음).
-- 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`로(Git Bash `TZ=Asia/Seoul date`는 틀리게 나옴).
-- 에이전트 저장소 push가 가끔 `remote rejected (failed)` — 곧바로 한 번 더 하면 됨(이번에 두 번).
+- 시각: PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`(Git Bash `TZ=Asia/Seoul date`는 틀림).
+- 에이전트 저장소 push가 가끔 `remote rejected (failed)` — 곧바로 한 번 더 하면 됨.
 
-### 4. 배운 것 (모음 — 반환서 '배운 것'에서)
+### 4. 배운 것 (모음)
 - 사람 손을 없앨 때는 사람이 맞춰 주던 것(CapCut 목록 맨 위 등)을 일꾼이 직접 맞춰야 함.
 - '모름'과 '틀림'을 한 칸에 두면 자동 문이 처음부터 닫힘(점검 `known`).
 - 상태를 바꾸는 길이 여럿이면 기록은 저장 한 곳에서 이전 값과 견줘 씀(`save_status` → `log_event`).
 - 이미 계산해 둔 물음 목록은 답 뒤에 낡을 수 있음 — 답이 표를 바꾸면 다시 셈.
-- 배지 같은 '고를 것' 판정은 단추 유무가 아니라 미첼의 답을 기다리느냐로.
-- 원격 main에 글 하나만 올리기: 따로 둔 index + `commit-tree -p FETCH_HEAD` — 작업 사본을 건드리지 않음(가짜 원격으로 시험).
+- '고를 것' 판정은 단추 유무가 아니라 미첼의 답을 기다리느냐로.
+- 원격 main에 글 하나만 올리기: 따로 둔 index + `commit-tree -p FETCH_HEAD`(가짜 원격으로 시험).
+- running인 같은 일이 있으면 enqueue는 그것을 돌려줌 — 다음 일을 넣는 쪽의 '끝' 판정이 틀리면 이어지지 않음(B6 다시 뽑기).
+- 가짜 작업자도 카드가 정한 이름만 쓰게 — 아니면 시험이 거짓으로 깨지거나 통과함.
 - 이 PC: 제품 사본은 CRLF로 꺼내짐(`core.autocrlf=true`) — 섞여도 커밋은 LF. 윈도 시험은 PYTHONUTF8 없이도 한 번.

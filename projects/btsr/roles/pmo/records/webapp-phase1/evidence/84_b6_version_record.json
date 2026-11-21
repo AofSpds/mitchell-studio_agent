@@ -1,0 +1,177 @@
+{
+ "fixes": [
+  {
+   "n": 1,
+   "from_v": 1,
+   "to_v": 2,
+   "feedback": "feedback/done_2026-11-21_1655.txt",
+   "at": "2026-11-21T16:55:03+09:00",
+   "changed": [
+    "장면 1"
+   ],
+   "state": "done",
+   "got_v": 2,
+   "done_at": "2026-11-21T16:55:04+09:00"
+  },
+  {
+   "n": 2,
+   "from_v": 2,
+   "to_v": 3,
+   "feedback": "feedback/done_2026-11-21_1655_2.txt",
+   "at": "2026-11-21T16:55:04+09:00",
+   "changed": [
+    "장면 2"
+   ],
+   "state": "done",
+   "got_v": 3,
+   "done_at": "2026-11-21T16:55:04+09:00"
+  }
+ ],
+ "exports": [
+  {
+   "v": 1,
+   "file": "2099-02-01_vf3_v1.mp4",
+   "checked_at": "2026-11-21T16:55:03+09:00",
+   "spec": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30,
+    "audio": true,
+    "dur": 14.4,
+    "fmt": "mp4"
+   },
+   "spec_ok": true,
+   "spec_bad": [],
+   "checks": {
+    "voice_overlap": 0,
+    "outside": false
+   },
+   "project": "2099-02-01_vf3_v1",
+   "options": {
+    "voice": "알아서 골라요",
+    "speed": "1.5배",
+    "music": "알아서 골라요",
+    "ending": "켬",
+    "length": "14초",
+    "preview_check": "켬",
+    "where": "5곳 모두"
+   },
+   "picked": {
+    "voice": "시험 목소리",
+    "music": "시험 곡"
+   }
+  },
+  {
+   "v": 2,
+   "file": "2099-02-01_vf3_v2.mp4",
+   "checked_at": "2026-11-21T16:55:04+09:00",
+   "spec": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30,
+    "audio": true,
+    "dur": 14.4,
+    "fmt": "mp4"
+   },
+   "spec_ok": true,
+   "spec_bad": [],
+   "checks": {
+    "voice_overlap": 0,
+    "outside": false
+   },
+   "project": "2099-02-01_vf3_v2",
+   "options": {
+    "voice": "알아서 골라요",
+    "speed": "1.5배",
+    "music": "알아서 골라요",
+    "ending": "켬",
+    "length": "14초",
+    "preview_check": "켬",
+    "where": "5곳 모두"
+   },
+   "picked": {
+    "voice": "시험 목소리",
+    "music": "시험 곡"
+   }
+  },
+  {
+   "v": 3,
+   "file": "2099-02-01_vf3_v3.mp4",
+   "checked_at": "2026-11-21T16:55:04+09:00",
+   "spec": {
+    "w": 720,
+    "h": 1280,
+    "fps": 30,
+    "audio": true,
+    "dur": 14.2,
+    "fmt": "mp4"
+   },
+   "spec_ok": false,
+   "spec_bad": [
+    "화면 크기가 낮아요 (720×1280) — 1080×1920으로 다시 내보내기"
+   ],
+   "checks": {
+    "voice_overlap": 0,
+    "outside": false
+   },
+   "project": "2099-02-01_vf3_v3",
+   "options": {
+    "voice": "알아서 골라요",
+    "speed": "1.5배",
+    "music": "알아서 골라요",
+    "ending": "켬",
+    "length": "14초",
+    "preview_check": "켬",
+    "where": "5곳 모두"
+   },
+   "picked": {
+    "voice": "시험 목소리",
+    "music": "시험 곡"
+   }
+  },
+  {
+   "v": 4,
+   "file": "2099-02-01_vf3_v4.mp4",
+   "checked_at": "2026-11-21T16:55:05+09:00",
+   "spec": {
+    "w": 720,
+    "h": 1280,
+    "fps": 30,
+    "audio": true,
+    "dur": 14.2,
+    "fmt": "mp4"
+   },
+   "spec_ok": false,
+   "spec_bad": [
+    "화면 크기가 낮아요 (720×1280) — 1080×1920으로 다시 내보내기"
+   ],
+   "checks": {
+    "voice_overlap": 0,
+    "outside": false
+   },
+   "project": "2099-02-01_vf3_v3",
+   "options": {
+    "voice": "알아서 골라요",
+    "speed": "1.5배",
+    "music": "알아서 골라요",
+    "ending": "켬",
+    "length": "14초",
+    "preview_check": "켬",
+    "where": "5곳 모두"
+   },
+   "picked": {
+    "voice": "시험 목소리",
+    "music": "시험 곡"
+   }
+  }
+ ],
+ "approvals": [
+  {
+   "v": 3,
+   "file": "2099-02-01_vf3_v3.mp4",
+   "at": "2026-11-21T16:55:05+09:00",
+   "spec_ok_at_approval": false,
+   "kind": "opinion"
+  }
+ ]
+}
