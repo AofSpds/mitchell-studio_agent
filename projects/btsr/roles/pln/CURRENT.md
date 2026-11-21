@@ -2,19 +2,43 @@
 role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
-state: "ACTIVE — 한알 16:05:36: 지금 작업이 끝나면 한알이 새 세션으로 바꾸심(멈추라는 말씀 아님) → ★ 넘김 칸을 늘 새것으로"
-updated: "2026-11-21T16:09+09:00"
+state: "ACTIVE — 승계 중(16:49 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 세션(claude · Opus 5.5 · high)"
+updated: "2026-11-21T16:49+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 243cff0"
-now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.10판 · 결정 01–36. 제품 main ed11f5a까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a). PMO가 4-a-2(BTSR-ARCH-010) 구현 중. 설계 끝 · 차례 기다림: 6 · 4-b. 8-2는 다14 답 뒤. 맥에는 1차 끝에 한 번(결정 08)"
-next: "ARCH 반환이 오면 요구 2.10판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 덧붙임. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-a-2 → 6 → 4-b → 8-2 → 1차 끝 맥 시험. 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
-owner_wait: "한알이 기획안 초안 1판(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
+now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.13판 · 결정 01–38 · 기획안 초안 1.3판(한알께 드림). 제품 main 243cff0까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2). PMO가 묶음 6(BTSR-ARCH-011, 바탕 243cff0) 구현 중. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥에는 1차 끝에 한 번(결정 08)"
+next: "ARCH 반환이 오면 요구 2.13판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 6 → 4-b → 8-2 → 1차 끝 맥 시험(테스트 시나리오 둘은 1차 뒤 RSCH SUB). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
+waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95 — 곧 승계):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):기획안 초안을 보시고 주실 말씀"]
+owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.3판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 ---
 
-## ★ 새 세션에 넘김 (준비 — 16:09 KST, 늘 새것으로) — 받는 세션은 여기부터
+## ★ 새 세션에 넘김 (16:49 KST) — 받는 세션은 여기부터
+
+- 근거: 한알 16:45:26 uuid 31d23674 「네 새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다. …」(RSCH 요청서 003 30번, 에이전트 main `60a2ee9`) — 승계는 세션이 스스로 함(23 · 25번의 '한알이 바꾸심'은 RSCH가 바로잡음). PLN은 **지금**. 새 세션: 제공자 `claude` · Opus 5.5 · high · 같은 작업 공간 `wks_108719f6be21c0c9` · 부모 라벨 비움.
+- 넘기는 세션: Paseo `a6fd0155-25ef-4bc7-91b0-394849d6776e` · Claude `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 high · 제공자 claude (11-21 13:57 ~ 16:49). 넘긴 뒤 이 폴더에 쓰지 않음.
+
+### 1. 지금
+- 요구 [webapp-phase1 2.13판](requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md) · [결정 01–38](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md) · **[기획안 초안 1.3판](requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md)**(한알께 쉬운 말로 — RSCH가 드림. 묶음이 합쳐질 때마다 '만듦' 표시를 고쳐 판 올림).
+- 제품 main **`243cff0`**: 작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2. 맥에는 아직 하나도 안 넣음(결정 08).
+- PMO(5fbbea06 — 묶음 6 반환 뒤 아스트라로 승계)가 **묶음 6**(BTSR-ARCH-011, 바탕 `243cff0`) 구현 중. 다음 4-b(012 — 커밋 작성자 일반 값 · 로그 20줄 안 넣음 · MAC_RUN '쌓인 글 읽고 켬' 포함) → 8-2(013 — 템플릿 r2 한 장 `btsr/arch` `cdea776` 안대로 · 다시 만들기 2번).
+- ARCH(d9520b95)도 하던 일이 끝나는 대로 승계함 — 새 ID가 오면 그 ID로.
+
+### 2. 열린 것
+1. 한알이 기획안 초안을 보시고 주실 말씀(RSCH가 '왔다'로).
+2. 반환 대조할 때 볼 것: 묶음 6 — 규격 다른 판 「승인」은 의견 · 승인 뒤 Post 고칠 점 없음(결정 31) · caption 일. 4-b — R5.7 판정 둘(2.9 · 2.13판).
+3. 1차 끝 맥 시험에 넣을 것: 명령줄 값 · 권한(결정 15 범위) · https 한 장(하지 말 것 6줄 맨 앞) · cryptography · 맥 사본 쓰기 권한 · 개발자 글 push 켜기(쌓인 글 먼저 읽기) · 진짜 claude · ChatGPT · 캡컷 음악 '상업적 이용' 표시. 테스트 시나리오 둘(맥 · 휴대폰 시연)은 1차 뒤 RSCH SUB(한알 16:45:26).
+
+### 3. 받는 세션이 할 것
+1. 이 칸 끝에 '받음' 한 줄(시각 · 새 Paseo ID · Claude 세션 ID · 모델 — list_agents · get_agent_status · transcript로 확인, 짐작 금지) → 커밋 · push(자기 역할 폴더만, 파일 이름으로 add).
+2. 옛 세션 제목을 `MITCHELL_STUDIO/BTSR/PLN CLOSED`로(update_agent `a6fd0155…`). 새 세션의 부모 라벨(`paseo.parent-agent-id` · `paseo.parent-server-id`)이 비었는지 보고 아니면 비움.
+3. **새 Paseo ID를 RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에** — RSCH가 한알께 보고. ARCH(`d9520b95-4853-46b9-b04b-96199dddc95d`, 바뀌었으면 새 ID)에도 새 ID만.
+4. 받음이 확인되면 승인을 다시 기다리지 않고 YAML `next`의 길로 이어 감(한알 16:45:26).
+5. 보고는 짧게 · 결론 먼저. 스스로 다음 일을 시작하지 않음(AAA 18). 일하는 요령은 아래 '지금' 칸의 '일하는 요령(배운 것)' 줄(파이썬 heredoc `|| exit 1` · 한국 시각은 PowerShell로 · 낱말 바꿀 때 조사 · 제품 저장소는 fetch · ls-remote · merge-base · grep만).
+
+## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
+
 
 - 근거: 한알 16:05:36 uuid 014aee0b 「일단 pln arch pmo 모두 지금 작업이 끝나면 새로운 세션으로 바꿀께요.」(RSCH 요청서 003 23번, main `1b2daf8`). 바꾸는 것은 한알이 하심 · 지금 일을 멈추라는 말씀이 아님(RSCH의 읽기). PMO는 아스트라(codex `gpt-6.2-astra`)로 · 아스트라 IVA(최종 작업물 검증 · 리뷰) 신설 — 한알이 하심.
 - 지금 세션: Paseo `a6fd0155-25ef-4bc7-91b0-394849d6776e` · Claude `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 high · 제공자 claude.
