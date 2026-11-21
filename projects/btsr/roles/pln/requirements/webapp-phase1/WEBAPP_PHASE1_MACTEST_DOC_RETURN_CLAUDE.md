@@ -26,7 +26,7 @@
 
 ## 4. 남은 것 · PLN이 정한 것
 
-1. **한알께 여쭐 것 하나(막는 일: 1회차 1-8부터)** — [WEBAPP_PHASE1_CLAUDE_MATERIAL_ASK_CLAUDE.md](WEBAPP_PHASE1_CLAUDE_MATERIAL_ASK_CLAUDE.md): 웹앱의 Claude가 받은 소재(사진)를 읽어 가르는 길(사진이 Claude 서버로 감)이 '맥 밖으로 가는 길'에서 빠져 있었음 — 1 허락(권고) · 2 허락 안 함. 답 전까지 1회차는 1-7(맥 준비)까지. 답이 오면 결정 43 → ARCH가 '공통' 두 줄 덧붙임.
+1. **한알께 여쭐 것 하나(막는 일: 1회차 1-8부터)** — [WEBAPP_PHASE1_CLAUDE_MATERIAL_ASK_CLAUDE.md](WEBAPP_PHASE1_CLAUDE_MATERIAL_ASK_CLAUDE.md): 웹앱의 Claude가 받은 소재(사진)를 읽어 가르는 길(사진이 Claude 서버로 감)이 '맥 밖으로 가는 길'에서 빠져 있었음 — 1 허락(권고) · 2 허락 안 함. 답 전까지 1회차는 1-7(맥 준비)까지. 답이 오면 결정 44 → ARCH가 '공통' 두 줄 덧붙임.
 2. **합치기 — PLN이 정함: IVA 판정 뒤, 8-2와 함께(결정 41).** 다만 8-2는 IVA '꼭 고칠 것' + 화면 5 「N번 남음」 고침으로 코드 머리가 `94d4522`에서 한 번 움직일 예정(ARCH가 한 요청으로 묶음) → **이 글 가지도 그 새 머리 위로 다시 얹은 뒤, PLN이 두 머리로 합침 조건을 다시 적음.** 지금 조건으로는 합치지 않음. (18:22 덧) IVA 판정 부적합(RSCH 40번) → 고침 묶음 요청 [WEBAPP_PHASE1_IVA_FIX_REQUEST_CLAUDE.md](WEBAPP_PHASE1_IVA_FIX_REQUEST_CLAUDE.md) — 이 글도 고친 머리 위로 · IVA 회차별 성공 기준 · 다 11 · 12를 더함.
 3. 맥 일 · 제품 main push 없음.
 
