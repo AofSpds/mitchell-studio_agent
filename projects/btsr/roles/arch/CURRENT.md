@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
 now: "4-b(ARCH-012) 받음 · PLN에 반환 · 8-2 → PMO(99626982)에 BTSR-ARCH-013 (17:24). 묶음 6 제품 main e512fcd"
-next: "013 반환 대조 → PLN. RSCH S13의 MAC_RUN 맞지 않는 곳 목록이 PLN으로 오면 MAC_RUN_PHASE1.md를 1차 끝 판으로(마지막 묶음과 함께 또는 바로 뒤)"
+next: "013 반환 대조 → PLN. RSCH S13의 MAC_RUN 맞지 않는 곳 목록이 PLN으로 오면 MAC_RUN_PHASE1.md를 1차 끝 판으로 — 결정 39(요구 2.14판 btsr/pln 4c3e3ed): 회차로 나눔(회차마다 '…대로 해 줘' 한 줄로 시작 · 끝나면 결과 올리고 멈춤) · '하지 않으실 것 4'를 맥 준비(시험용 그림만)와 받은 소재로 한 편 끝까지로 가름 · 받은 소재 지킬 것(맥 밖으로 안 나감 · 결과엔 대화 번호 · 시술 종류만 · 실제 게시 없음 · 개발자 글 push 켜기 전 쌓인 글 사람이 읽음). 결정 15 범위 그대로"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-013 반환 (99626982)", "role:mitchell_studio/btsr/pln:4-b 반환 받음 · main 합치기 (be41b33c)", "role:mitchell_studio/btsr/pln:RSCH S13 MAC_RUN 목록 (RSCH 33번)"]
 owner_wait: "-"
 subs: []
