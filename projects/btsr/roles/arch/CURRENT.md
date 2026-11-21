@@ -2,11 +2,11 @@
 role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
-state: "ACTIVE"
-updated: "2026-11-21T16:34:00+09:00"
+state: "HANDOFF"
+updated: "2026-11-21T16:49:00+09:00"
 base_commit: "fa2b7aa"
-now: "묶음 4-a-2 반환함(16:34, PMO 243cff0 대조 — 116 OK) → 묶음 6을 PMO에 BTSR-ARCH-011. 한알 16:21:44 — 끝까지 한 뒤 기획안 초안 먼저"
-next: "ARCH-011 반환 대조 → PLN에 → 4-b(012) → 8-2(013). 요청 번호 다음 012"
+now: "승계 중 — 한알 16:45:26 (RSCH 30번). 아래 넘김 칸. ARCH-011(묶음 6)은 PMO가 하는 중"
+next: "새 세션: 받음 → 보고 → ARCH-011 반환 대조 → 012(4-b + 8번) → 013(8-2)"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-011 반환 (5fbbea06)"] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
@@ -28,25 +28,23 @@ verifier: "mitchell_studio/btsr/archv"
 | 게시판 | 없음 — `board/`가 아직 없어 요청서·받음을 작업 칸 주제 폴더에 둠 (PLN·RSCH와 같은 꼴, 규칙 16과 다름 — 숨기지 않음) |
 | 앞 세션 | Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Claude `df7a3d93-e2ee-4c76-8467-16606825f451` (`~/.claude-max/projects/…`) · claude-google · 2026-11-19 22:28 ~ 2026-11-21 13:56 KST (CLOSED, 넘긴 커밋 75a8ac5). 그 앞: Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
 
-## 넘김 (2026-11-21 16:09 KST 씀 — 지금 세션 d9520b95 → 다음 ARCH 세션)
+## 넘김 (2026-11-21 16:49 KST 씀 — 지금 세션 d9520b95 → 다음 ARCH 세션)
 
-- **한알 16:21:44** 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」(RSCH 25번, 에이전트 main 45a1ada — PLN 전함, PMO에 ARCH가 전함): 멈추지 않고 끝까지(010 → 011 → 012 → 013) → 다 끝나면 한알이 기획안 초안(PLN이 씀)을 먼저 보심 → 그 뒤 새 세션.
-- **까닭**: 한알 16:05:36 「일단 pln arch pmo 모두 지금 작업이 끝나면 새로운 세션으로 바꿀께요. pmo는 아스트라로 바꿀께요 아스트라 iva 세션도 신설해서 최종 작업물을 나오면 검증/리뷰하는걸로 진행하겠습니다.」(RSCH 요청서 003 23번, 에이전트 main 1b2daf8 — PLN 전함). 세션을 바꾸는 것은 한알이 하심 · 하던 일을 멈추라는 말씀이 아님 → 이 칸은 '지금 일이 끝나면 다음 세션이 이어받게' 미리 씀. 바꾸실 때까지는 이 세션이 계속함(그 사이 바뀐 것은 아래 '지금'과 YAML에).
-- **지금 세션**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high.
-- **알고 있는 다른 세션**(바뀌면 새 ID가 알려 옴): PLN `a6fd0155-25ef-4bc7-91b0-394849d6776e` · RSCH `a97bebab-51e4-4b70-b968-2177d6fe4f2e` · PMO `5fbbea06-93d9-48b2-8930-e101d4603429`(다음은 아스트라 — codex `gpt-6.2-astra`) · IVA는 새로 생김(1차 마지막 결과물 검증 · 리뷰 — 누가 여는지 · 무엇을 넘기는지는 PLN 알림을 기다림).
-- **남은 차례(webapp-phase1, BTSR-PLN-002)**:
-  1. ~~ARCH-010~~ **반환함**(16:34 → 위 now) — 이제 1번은 **ARCH-011(묶음 6, 바탕 243cff0) 반환 대조**(기준 1–14 · 반환서 `WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md`). 아래는 010 때의 메모: **PMO BTSR-ARCH-010**(묶음 4-a-2, 바탕 main `ed11f5a`) 반환 대조 → [4-a-2 설계 1.1판](design/webapp-phase1/WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md) 10번 기준 1–10 · 3-1(가짜 원격 — main에 든 커밋의 부모 = 원격 main, 바꾼 경로 = `suggestions/` 글 하나). 제품 가지 fetch → `git archive <가지> | tar -x -C <새 임시 폴더>` → 그 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests` → 반환서 `design/webapp-phase1/WEBAPP_PHASE1_B4A2_BTSR-PLN-002_RETURN_CLAUDE.md` → PLN에.
-  2. ~~묶음 6 → PMO BTSR-ARCH-011~~ 보냄 — [요청서](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md)(기준 12에 jobs.stop 잇기 넣음). 메모: **묶음 6 → PMO BTSR-ARCH-011**: [설계 2.2판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md)(PLN 받음). 요청서는 ARCH-009 · 010 꼴로. 바탕은 그때의 main. 4-a-2가 바꾼 것(막힘 길 · `busy`)과 맞물림 — 010 반환을 보고 6번 '규격 다시 뽑기 두 번 다르면 개발자에게'를 `jobs.stop(to = dev)`로 잇게 한 줄 더함.
-  3. **4-b → PMO BTSR-ARCH-012** — 설계 8번(R5.7 판정 둘 + MAC_RUN 한 줄)도 이 건에 넣음.: [설계 2.1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) + [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md)(PLN 받음, 결정 33 · 34). `cryptography`가 이 PC에 없음 — 대조 때 따로 만든 가상 환경에 깔아 시험 4 · 5를 다시 돌림.
-  4. **묶음 8-2** — [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B82_DESIGN_CLAUDE.md) + [템플릿 r2 한 장](design/webapp-phase1/WEBAPP_PHASE1_B82_TEMPLATE_R2_SHEET_CLAUDE.md) 씀 → 한알 답 뒤 PMO에(4-a-2 · 6 · 4-b 뒤). 아래는 설계 때 쓴 메모: **묶음 8-2 '지시 글 맞춤' 설계**(요구 2.10판 R82.1–R82.3): [19번 자리](design/webapp-phase1/WEBAPP_PHASE1_SIM19_ALLOC_CLAUDE.md) 1번 표의 '8-2' 줄 전부 · 다시 만들기 횟수 한 수(ARCH-009 물음 ① — `FACE_REMAKES` · face.md · ? 글) · **템플릿 r2에서 바뀌는 글을 한 장으로**(PLN 요청 — 한알 확정본이라 RSCH가 구현 전에 보여 드림) · 결정 36(시술 과정 영상은 1차에서 쓰지 않음 — 와도 묻지 않고 뺌, r2에 과정 장면 없음). **다14(뒷모습 합격 조건)는 여쭘 중** — 답 뒤.
-  5. 차례가 끝나면 1차 끝 맥 시험(`app/webapp/MAC_RUN_PHASE1.md`, 결정 08) · IVA 검증 — PLN 알림대로.
-- **열린 것**: 다14 답(RSCH) · 「⚙ 기본 옵션」(빈 Jobs — RSCH가 한알께 알림, 다른 말씀 없으면 그대로) · IVA의 꼴.
+- **까닭**: 한알 16:45:26 「네 새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다. 1차가 만들어지면 맥에서 테스트 진행할께요. …」(RSCH 요청서 003 30번, 에이전트 main 60a2ee9 — RSCH가 전함). 앞서 16:05:36 「…지금 작업이 끝나면 새로운 세션으로…」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」. 30번이 바로잡음: **승계는 옛 세션이 `create_agent`로 진행**(한알이 하시는 것이 아님). ARCH는 '지금 하던 일이 끝나는 대로' — 이 세션은 ARCH-011 반환을 기다리는 중이라 하다 만 일 없이 지금 넘김.
+- **옛 세션(이 세션)**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · 작업 공간 `wks_6dc6b9d13807b202` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high. 넘긴 커밋 = 이 칸이 든 커밋.
+- **다른 세션**(바뀌면 새 ID가 알려 옴): PLN `a6fd0155-25ef-4bc7-91b0-394849d6776e`(PLN도 지금 승계 중 — 새 ID가 오면 그쪽으로) · RSCH `a97bebab-51e4-4b70-b968-2177d6fe4f2e` · PMO `5fbbea06-93d9-48b2-8930-e101d4603429`(묶음 6 반환 뒤 아스트라 `codex/gpt-6.2-astra`로 승계 — 새 PMO ID가 오면 그쪽으로).
+- **남은 차례(webapp-phase1, BTSR-PLN-002)** — 제품 main `243cff0`(4-a-2까지):
+  1. **PMO BTSR-ARCH-011(묶음 6) 반환 대조** — [요청서](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md) 기준 1–14 · [설계 2.2판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) 9 · 9-1. 제품 가지 fetch → `git archive <가지> | tar -x -C <새 임시 폴더>` → 그 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests` → grep 대조 → 반환서 `design/webapp-phase1/WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md`(꼴은 [4-a-2 반환](design/webapp-phase1/WEBAPP_PHASE1_B4A2_BTSR-PLN-002_RETURN_CLAUDE.md)) → PLN에.
+  2. **4-b → PMO BTSR-ARCH-012** — [설계 2.1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) **+ 8번(R5.7 판정 둘: devpush 커밋 일반 이름 · 개발자 글 기록 줄임 · MAC_RUN 한 줄)** · [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md). 요청서는 ARCH-011 꼴로. `cryptography`가 이 PC에 없음 — 대조 때 따로 만든 가상 환경에 깔아 RFC 8291 시험을 다시 돌림.
+  3. **8-2 → PMO BTSR-ARCH-013** — [설계 1.1판](design/webapp-phase1/WEBAPP_PHASE1_B82_DESIGN_CLAUDE.md) + [r2 한 장 1.1판](design/webapp-phase1/WEBAPP_PHASE1_B82_TEMPLATE_R2_SHEET_CLAUDE.md) — **한알 답 받음(결정 38: 다시 만들기 2번 · r2 다섯 줄 안대로 · ⑤ 음악 줄은 맥 시험에서 캡컷 표시 확인)**.
+  4. 그 뒤: 1차 끝 맥 시험(`app/webapp/MAC_RUN_PHASE1.md`, 결정 08) · 테스트 시나리오 둘(맥 · 오늘 밤 휴대폰 시연 — RSCH가 SUB로 만듦) · IVA(아스트라 — RSCH가 검증 요청서와 함께 엶). ARCH는 PLN 알림대로.
+- **열린 것**: 「⚙ 기본 옵션」(빈 Jobs — RSCH가 한알께 알림, 다른 말씀 없으면 그대로) · ⑤ 음악 표시(맥 시험) · IVA가 ARCH에 무엇을 물을지.
 - **받는 세션이 할 것**:
   1. 첫 줄 `[MITCHELL_STUDIO/BTSR/ARCH · 규칙 판 v0.14 받음]`. 이 저장소 `AGENTS.md` → 이 CURRENT → `INDEX.md` → AAA 규칙 판(dev 폴더 `AAA/AGENTS.md`, 읽기만) → `projects/btsr/roles/rsch/knowhow.md`(이 PC 환경)만 읽고 시작. 설계 파일은 위 차례에 드는 것만.
   2. 받음 적기: YAML(`state` · `updated` · `now`) · PRIMARY 칸을 새 Paseo 에이전트 ID · 작업 공간 ID(`wks_6dc6b9d13807b202` 그대로일 것) · Claude 세션 ID(transcript 폴더에서 첫 user 줄이 여는 글인 `.jsonl` — 제공자에 따라 `~/.claude/projects/…` 또는 `~/.claude-max/projects/…`)로, 앞 세션 칸에 이 세션 ID → 커밋 · push(`btsr/arch`, 자기 폴더만 이름으로 add).
   3. 이 세션 제목을 `MITCHELL_STUDIO/BTSR/ARCH CLOSED`로(Paseo `update_agent`, AAA 규칙 10).
-  4. PLN · RSCH · PMO(그때의 ID)에 '승계 끝 · 새 Paseo ID'만 알림.
-  5. 위 '남은 차례' 1부터.
+  4. **RSCH(a97bebab)와 PLN(그때의 ID)에 '승계 끝 · 새 Paseo ID'를 보고**(한알 16:45:26 「승계되면 보고」) · PMO(그때의 ID)에도 새 ARCH ID.
+  5. 받음이 확인되면(RSCH · PLN 답) **바로** 위 '남은 차례' 1부터 — ARCH-011 반환은 새 ID로 옴.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
