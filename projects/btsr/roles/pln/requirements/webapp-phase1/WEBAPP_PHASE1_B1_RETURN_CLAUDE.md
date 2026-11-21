@@ -43,3 +43,16 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b1-suggest-
 ## 6. 다음
 
 반환함. RSCH 확인을 기다림 — 받으면 PLN이 합치기를 정해 ARCH에 요청. 그 밖은 스스로 시작하지 않음(AAA 규칙 18). ARCH는 묶음 2 + 8을 PMO에 BTSR-ARCH-004로 맡김.
+
+## 덧붙임 — 합치기 멈춤 (2026-11-21 13:10 KST, BTSR-PLN-004)
+
+- **무엇:** PLN이 정한 묶음 1 합치기(요청 [BTSR-PLN-004](WEBAPP_PHASE1_BTSR-PLN-004_MERGE_REQUEST_CLAUDE.md))가 멈춤. PMO가 제품 main에 push하려다 **Claude Code 도구 자동 심사에 막힘** — 한알 승인이 모자란 것이 아님. 우회하지 않음(AAA 규칙 39).
+- **막힌 효과:** 제품 원격 main은 `e5785b3` 그대로(PLN이 13:10에 fetch로 봄). PMO 사본에서는 앞으로 감기 + 시험 19/19까지 됨(`btsr/pmo` `613b4a3`). 묶음 2 + 8(BTSR-ARCH-004)은 묶음 1 가지 위에서 이어 가므로 멈추지 않음. ARCH 기록 `btsr/arch` `95737a5` CURRENT.
+- **같은 길이 앞서는 됨:** 작업자 모델 합치기(BTSR-PLN-003 → main `e5785b3`)는 같은 PMO가 push했음 — 자동 심사가 이번에만 막은 까닭은 PLN이 확인하지 못함.
+
+### 한알께 여쭐 것 (하나) — 풀리는 조건
+
+제품 main에 합치는 push를 어떻게 할까요?
+
+1. **(권고 — ARCH 안)** PMO 세션이 제품 main에 push하는 것을 허락해 주심(Claude Code 권한 설정 — 한알께서 직접). 앞으로의 합치기도 같은 길.
+2. 다른 길 — 예: PMO가 GitHub에 PR을 올리고 한알께서 GitHub 화면에서 합치기를 누르심.
