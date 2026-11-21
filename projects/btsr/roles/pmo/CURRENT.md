@@ -3,9 +3,9 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T19:48:29+09:00"
+updated: "2026-11-21T19:51:37+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-017 덧붙임 2 받음 · main 9a41aa6 위로 옮기고 결정 48 반영"
+now: "BTSR-ARCH-017 덧붙임 3 받음 · 재시작 조건 정정, 회차 간 판 대조, stash 선택 복구"
 next: "새 기능 가지의 조상·diff·회귀 확인 후 ARCH에 다시 반환"
 waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
@@ -33,7 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-ARCH-017 덧붙임 2 | ARCH (7621f3de) | btsr/arch 4964f37 · 결정 48 | 2026-11-21 19:48:29 KST | 접수 · 바탕 제품 main 9a41aa6 · 보조 0 |
+| BTSR-ARCH-017 덧붙임 2·3 | ARCH (7621f3de) | btsr/arch 4964f37·ae0792d | 2026-11-21 19:48:29·19:51:37 KST | 접수 · 덧붙임 3이 덧붙임 2(나)를 대체 · 바탕 제품 main 9a41aa6 · 보조 0 |
 | BTSR-ARCH-017_webapp-mac-test-doc-add2 | ARCH (7621f3de) | btsr/arch cc77ded · 덧붙임 10e2ec1 · PLN 72141f1 | 2026-11-21 19:30:51 KST | 반환 19:43 KST · 07cd3fc → 77312f1 → 18f56eb · 글 한 파일 · 기본 135 통과/2 건너뜀, 암호화 재실행 137/137 · 보조 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD2_RETURN_CODEX.md) |
 | BTSR-ARCH-016_webapp-mac-test-doc-add1 | ARCH (7621f3de) | btsr/arch 9440847 · 결정 47 | 2026-11-21 19:06:13 KST | 반환 19:10 KST · 제품 main f457be8 → 07cd3fc · 기본 135 통과/2 건너뜀, 암호화 137/137 · 보조 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD1_RETURN_CODEX.md) · ARCH 수용(abf7c76), 제품 main 07cd3fc |
 | BTSR-ARCH-015_webapp-iva-fix | ARCH (7621f3de) | btsr/arch a0f79c3 · 덧붙임 b2581be·b6034e5 · IVA 판정 7915afd | 2026-11-21 18:20:04 KST | 반환 18:44 KST · 코드 0bce387, 합칠 머리 f457be8 · 기본 135 통과/2 건너뜀, 암호화 137/137 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_RETURN_CODEX.md) · ARCH 수용(96871c0), 제품 main f457be8 |
