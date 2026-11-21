@@ -3,7 +3,7 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-21T16:50+09:00"
+updated: "2026-11-21T16:57+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 243cff0"
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.13판 · 결정 01–38 · 기획안 초안 1.3판(한알께 드림). 제품 main 243cff0까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2). PMO가 묶음 6(BTSR-ARCH-011, 바탕 243cff0) 구현 중. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.13판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 6 → 4-b → 8-2 → 1차 끝 맥 시험(테스트 시나리오 둘은 1차 뒤 RSCH SUB). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
@@ -40,6 +40,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **받음** (2026-11-21 16:50 KST) — 새 PRIMARY: Paseo 에이전트 `be41b33c-5441-48f7-9202-9bb7c21b13a3`(제공자 `claude`, 작업 공간 `wks_108719f6be21c0c9`, 07:50:04Z 생성, 부모 라벨 둘 다 빈 값) · Claude 세션 `1bcf0ba5-1698-49f1-bac5-e0666d363d11` · Opus 5.5 (`claude-opus-5-5`) high. list_agents · get_agent_status · transcript 파일로 확인. 옛 a6fd0155 → CLOSED.
 - **ARCH도 승계함** (옛 PLN 알림, 16:50) — 새 ARCH Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4`(get_agent_status로 확인 — 제목 MITCHELL_STUDIO/BTSR/ARCH · `btsr-arch` 폴더 · Claude 세션 `3733e26f`; 옛 d9520b95, 넘김 칸 `btsr/arch` `840675f`). ARCH-011(묶음 6) 반환은 7621f3de에서 옴. 새 PLN ID는 RSCH(a97bebab)와 ARCH(7621f3de)에 알림.
 - **RSCH가 받음 확인 · 한알께 보고함** (16:52 KST 받음) — 하던 차례 그대로. 알아 둘 것: PMO(5fbbea06)는 묶음 6 반환 뒤 아스트라로 · 검증자 IVA(아스트라)를 RSCH가 여는 중(개설 요청 에이전트 main `e855693` `projects/btsr/roles/rsch/requests/BTSR-RSCH-004_iva-open-webapp-phase1/요청.md` — 검증 요청서는 1차가 다 만들어진 뒤) · RSCH도 승계 준비 중(새 ID가 오면 그 ID로).
+- **31번 받음** (RSCH 요청서 003 31번, 에이전트 main `a1f2e84`; 한알 16:54:50 「미리 허락합니다.」 · 16:55:05 「권고안 승인합니다.」) — PMO의 아스트라 세션 하나를 처음부터 Paseo 모드 `full-access`로 엶(30번의 auto-review를 바꿈). 역할 규칙은 그대로. 제품 요구 · 결정은 안 바뀜(세션 권한 일이라 webapp-phase1 결정으로 적지 않음). PMO에는 RSCH가 알림 · ARCH(7621f3de)에도 알림. IVA Paseo `9b3e4897`(`btsr/iva` edb56e6).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
