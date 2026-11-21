@@ -15,4 +15,4 @@
 | 번호 | 무엇 | 근거 | 맡긴 일 | 지금 |
 |---|---|---|---|---|
 | 1 | 작업자 모델을 GPT-6.2 Sol High로, 설정 한 곳에서 (요구 worker-model 1판 R01–R07) | 한알 결정 worker-model 04 (11-21 03:23:56) | ARCH ← [BTSR-PLN-001](requirements/worker-model/WORKER_MODEL_BTSR-PLN-001_REQUEST_CLAUDE.md) | 됨 — ARCH 반환 6cf028a 받음, RSCH에 반환. 제품 main `e5785b3`에 합침([BTSR-PLN-003](requirements/worker-model/WORKER_MODEL_BTSR-PLN-003_MERGE_REQUEST_CLAUDE.md), 결정 05). 남음: 맥 확인 |
-| 2 | 웹앱 1차 캡컷 길 — 묶음 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → 4-b → 6 (요구 webapp-phase1 1판), 7 보류 | 한알 결정 webapp-phase1 01–03 | ARCH ← [BTSR-PLN-002](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_REQUEST_CLAUDE.md) | 묶음 1 → PMO BTSR-ARCH-002 · 묶음 2 + 8 설계 1판(5d1184a) → PMO ARCH-004 예정 · 한알 물음 1 · 2 답(7 뒤로 · https 켬), 3–7 남음 |
+| 2 | 웹앱 1차 캡컷 길 — 묶음 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → 4-b → 6 (요구 webapp-phase1 1판), 7 보류 | 한알 결정 webapp-phase1 01–03 | ARCH ← [BTSR-PLN-002](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-002_REQUEST_CLAUDE.md) | 묶음 1 됨(가지 `6cfbc5f`, RSCH에 반환 — 확인 뒤 합치기) · 묶음 2 + 8 → PMO BTSR-ARCH-004 ·  한알 물음 1 · 2 답(7 뒤로 · https 켬), 3–7 남음 |
