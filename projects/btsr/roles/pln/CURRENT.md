@@ -8,7 +8,7 @@ base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.10판 · 결정 01–36. 제품 main ed11f5a까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a). PMO가 4-a-2(BTSR-ARCH-010) 구현 중. 설계 끝 · 차례 기다림: 6 · 4-b. 8-2는 다14 답 뒤. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.10판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 덧붙임. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-a-2 → 6 → 4-b → 8-2 → 1차 끝 맥 시험. 7은 뒤로. 그 밖은 스스로 시작하지 않음"
 waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-010(4-a-2) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
-owner_wait: "없음 — 다11 · 다14 답 받음(결정 36 · 37). 8-2 설계가 나오면 템플릿 r2 바뀌는 글 한 장 + 시안 화면 17을 RSCH → 한알께"
+owner_wait: "1 — 템플릿 r2 한 장(btsr/arch cdea776 WEBAPP_PHASE1_B82_TEMPLATE_R2_SHEET_CLAUDE.md, 5줄 + 다시 만들기 2번 [안]) + 시안 화면 17 — RSCH가 한알께"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -74,6 +74,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **ARCH가 PMO에 전함 · ARCH 넘김 칸 씀** (`btsr/arch` `72449a3`) — ARCH 남은 차례: 010 대조 → 6(011) → 4-b(012) → 8-2 설계. PMO는 010 반환 뒤 넘김 칸. IVA를 누가 열고 무엇을 넘기는지 정해지면 ARCH에 알림.
 - **24번 받음** (RSCH main `13a45dd`, 16:17) → 결정 37 · 요구 2.11판: 얼굴이 보이는 시술 후 사진이 없으면 앞모습을 지어내지 않고 알림 → 확인 받으면 AI 얼굴 없이(R3.7 · R32.5). 다11 · 다14 끝 — 8-2 설계에 기다리던 답이 다 옴 → ARCH에 알림.
 - **묶음 8-2 설계 1판 + 템플릿 r2 한 장 받음** (ARCH `5b538c0`, 16:20) — R82.1–R82.3 · R3.7 · R32.5 · 결정 36 · 37 대조, 받음. 짚은 것 하나: 한 장 2번이 소재에서 'AI 얼굴 사진'을 뺌 ↔ 결정 35 [안](가진 얼굴 사진은 보낼 때 함께 올리면 씀) — 남길지 뺄지 한 장에 한 줄로 ARCH가 정해 RSCH → 한알께. 한 장(5줄 + 다시 만들기 2번 [안])은 시안 화면 17과 함께 RSCH → 한알께. PMO에는 4-a-2 · 6 · 4-b 뒤, 한 장 답 뒤.
+- **ARCH 고친 줄** (`btsr/arch` `cdea776`) — 가진 AI 얼굴 사진 길은 **남김**(한 장 2번에 한 마디 · 설계 3번 · 기준 3, 1.1판). 한 장을 RSCH에 넘김 → 시안 화면 17과 함께 한알께.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
