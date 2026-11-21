@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "021(올리기 고침 2 — S14 1–8) 반환함 02:38(제품 가지 5bbe272 · Playwright 169 OK 건너뜀 0) → RSCH 합침 기다림. PMO 승계 끝 — 새 PMO 512aef6d(받음 btsr/pmo 417fbe3 · 부모 라벨 비움). 제품 main 8b0d084"
-next: "휴대폰 테스트 결과 · PLN 알림대로. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022 · PMO는 512aef6d로"
-waiting_for: ["role:mitchell_studio/btsr/rsch:021 제품 main 합침 (5bbe272)"]
+now: "PMO(512aef6d)에 BTSR-ARCH-022(고침 3 — 작업자 사용량 가림 · C8 · 카드 3분, 급함) 03:15. 021(5bbe272)은 RSCH 합침 기다림. 맥의 그 편은 아침 7시 기다림 — 옛 판에서 풀면 다시 가림이라 고침 3 새 판 뒤 한 줄로 풂(PLN에 알림)"
+next: "022 반환 대조(Playwright 깐 곳 · 가짜 작업자가 카드를 되찍는 꼴 · 넷 칸 · C8 · (나) 한 줄) → PLN(합칠 머리 · 새 판 + (나) 한 줄). 라(승인 창)는 한알 말씀 뒤. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-022 반환 (512aef6d)", "role:mitchell_studio/btsr/rsch:021 제품 main 합침 (5bbe272)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
