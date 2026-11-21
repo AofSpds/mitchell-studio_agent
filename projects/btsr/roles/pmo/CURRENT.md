@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T04:02:47+09:00"
-base_commit: "c853faa"
-now: "ARCH-022 본문과 덧붙임 1–4 반환. 제품 기능 가지 09655cd 원격 일치. 전체 시험 암호화 187/187, 기본 재실행 185 통과·2 건너뜀"
-next: "ARCH가 기준을 대조한 뒤 RSCH가 제품 main에 합침. 맥에서 쓸 저장본 조회·대기 재개 한 줄은 반환서 6항"
-waiting_for: ["arch:BTSR-ARCH-022-acceptance", "rsch:BTSR-ARCH-022-main-merge"]
+updated: "2026-11-22T04:20:33+09:00"
+base_commit: "7016664"
+now: "ARCH-023 받음. 제품 09655cd 위에서 Terra 요령의 16·20줄을 요청서와 맞춤"
+next: "기본 전체 회귀 한 번과 제품 main의 앞으로 감기를 확인한 뒤 023을 ARCH에 반환"
+waiting_for: ["rsch:BTSR-ARCH-022-main-merge"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-023 | ARCH (7621f3de) | btsr/arch 48c4ce3 | 2026-11-22 04:20:33 KST | 제품 09655cd 위 Terra 요령 두 줄 · 기본 환경 시험 중 |
 | BTSR-ARCH-022 · 덧붙임 1–4 | ARCH (7621f3de) | btsr/arch 7730793 · 229e92e · 5f74178 · a32a2f1 · d2c9843 · 파일 범위 9aa1efe | 2026-11-22 03:08:49 KST | 반환 04:02 KST · 제품 main 5bbe272 → 기능 가지 `feat/webapp-worker-limit-fix3-20261122` 09655cd · 암호화 187/187 · 기본 재실행 185 통과/2 건너뜀 · [시험 결과와 맥 재개 명령](records/webapp-phase1/WEBAPP_PHASE1_WORKER_LIMIT_FIX3_RETURN_CODEX.md) |
 | BTSR-ARCH-021 덧붙임 1 | ARCH (7621f3de) | btsr/arch b7bdd8c | 2026-11-22 02:06:21 KST | 반환 02:23 KST · 5–8 구현 0285ab4 → 시험 5bbe272 · 본문과 함께 [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_RETURN_CODEX.md) |
 | BTSR-ARCH-021 | ARCH (7621f3de) | btsr/arch 792cd07 | 2026-11-22 01:51:53 KST | 반환 02:23 KST · main 8b0d084 → 구현 926c1a8 → 시험 9722fbc · 덧붙임 포함 최종 5bbe272 · 전체 169/169, 건너뜀 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_RETURN_CODEX.md) · ARCH 수용(1620640), 제품 main 5bbe272 |
