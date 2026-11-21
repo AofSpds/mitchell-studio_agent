@@ -124,3 +124,13 @@
 - RSCH 확인 · 합침: 에이전트 저장소 main `37e5393` RSCH 요청서 003 69번 — 제품 main 앞으로 감기 `5bbe272..09655cd`(04:30:29 · 강제 아님 · push 직전 main 그대로 · 바뀐 줄 1,260줄을 다 읽음 · `venv_b4b` 187 OK 건너뜀 0을 두 번 · `test_login`도 통과 · 결과 가지 `c215651` 그대로). PLN이 04:32에 제품 원격 main 머리 = `09655cd`를 ls-remote로 봄.
 - RSCH가 읽으며 본 것 3 – 6 — **PLN이 정함: 고치지 않음(겪으시면 그때 · 결정 45).** 3 얼굴 카드 뒤 CapCut 종료 요청 · 4 잠금 순서의 좁은 틈 · 5 rc ≠ 0이면서 풀이 글에 '사용량'이 든 드문 경우 · 6 그 편이 새 판에서 Voice를 '됨'으로 두고 음악으로 가는 길(코드 · 시험으로 따라감 — 맥에서 봄). 1 · 2는 덧붙임 5대로.
 - 다음: 고침 3-1(BTSR-ARCH-023) 반환 → PLN 대조 → RSCH 합침(04:55쯤) → 한알 맥 한 줄.
+
+## 반환 — 고침 3-1 PLN 대조 (2026-11-22 04:33 KST)
+
+- ARCH 반환 `btsr/arch` `1de438d` `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_TERRA_EXPERIENCE_BTSR-PLN-002_RETURN_CLAUDE.md` (BTSR-ARCH-023). **받음.**
+- PLN이 직접 본 것(04:32 KST, 제품 저장소 fetch · ls-remote · merge-base · diff만): 원격 main `09655cd` · 가지 `feat/webapp-terra-experience-20261122` 머리 **`c364bf0`** · main이 그 부모(앞으로 감기) · 커밋 하나 · `agents/_terra/experience.md` +2 −2뿐 — 16줄 「카드의 Cmd+Q: CapCut에 Cmd+Q를 보낸 뒤 바로 결과 줄을 쓴다. 꺼졌는지는 웹앱이 본다 (`pgrep`은 작업자 안에서 `sysmond service not found`로 안 됨 — 2026-11-22 맥).」 · 20줄 「… (화면 보기 포함). 작업 로그 쓰기는 세지 않는다.」 ✔ (결정 49 · 덧붙임 5 ②와 맞음). 코드 0 — 시험은 09655cd의 187 OK가 그대로 닿음.
+- **합치기 — PLN이 정함: RSCH가 한 파일 두 줄뿐인지 보면 합침.** 조건: 제품 main `09655cd` 그대로 · 머리 `c364bf0`(앞으로 감기) · push 직전 main 다시 봄(움직였으면 합치지 말고 PLN에). 시험은 다시 돌리지 않아도 됨(글만).
+- **합친 뒤 한알께 맥 한 줄**(「코덱스 excutor」에 붙여 넣기만 — 첫머리는 덧붙임 5 ① · 나머지는 고침 3 반환서 4번 그대로):
+  > fetch 하고 origin/main의 MAC_RUN 글대로 1-3(새 판 받기)을 다시 한 뒤, 제품 사본 맨 위에서 `python3 -c "import sys; sys.path.insert(0,'app/webapp'); import jobs as J, runner; job=J.busy(); print(J.project_picks(J.project_name(job)) if job else None); print(runner.resume_wait_usage())"` 를 한 번 실행해 두 줄 출력을 그대로 적어 줘. 이어서 바꾸지 말고 읽기만: `codex --version` · `grep -n computer_use ~/.codex/config.toml`(없으면 '없음') · ChatGPT 설정 Computer Use의 '항상 허용한 앱' 목록. 그 편이 음악 · 내보내기로 이어 가는 동안 허락 창이 뜨면 누르지 말고 창 맨 위 앱 이름과 단추 글을 그대로 적은 뒤 나에게 알려 줘 — 허용은 내가 맥에서 한 번 누름.
+  - 맥 세션이 '작업 중인데 웹앱을 다시 켤까요?'를 물으면 1(진행).
+  - 둘째 출력이 「… 다음 돌기에 이어 갑니다.」면 됨 · 첫 출력의 목소리 이름이 「느긋한 언니」와 다르면 PLN에(자 → 꼭).
