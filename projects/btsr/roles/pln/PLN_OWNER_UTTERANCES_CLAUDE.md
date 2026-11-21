@@ -58,3 +58,9 @@
 - 맥락: PLN이 짧은 한 줄 · 붙여 넣기를 드린 뒤. 글 없이 사진 한 장 — 맥의 「코덱스 excutor」 화면(19:23): 한알이 넣으신 줄 「깃 페치만 하고 오리진 메인의 맥런페이즈1.md 파일 1회차대로 해야합니다. 부탁해요」 → 세션 답 'git fetch origin을 마쳤고 origin/main의 07cd3fc에서 … 1회차 절차를 확인 · CapCut과 ChatGPT 설치됨 · **1-2에 중단 조건 — 맥 사본에 작업자 설정 파일 외의 수정이 14개** · 시나리오대로 멈춤 · pull 안 함 · 웹앱 테스트 시작 전'.
 - 원문: (글 없음 — 사진 한 장. 사진의 글은 맥 세션 화면이라 한알 말씀이 아님. 한알이 맥에 넣으신 줄은 위 맥락에 옮김)
 - 뒤 처리: 14개의 이름부터 보게 하는 짧은 한 줄을 드림 → 무엇인지 보고 치울 길(지우지 않고 맥 안에 따로 보관)을 정함. RSCH에 알림.
+
+## 2026-11-21 19:26:28 KST — uuid 4bcda727-be90-47fd-8ead-1b499285c37d
+
+- 맥락: PLN이 「수정 14개 파일 이름만 보여 줘. 내용은 말고.」를 드린 뒤. 글 없이 사진 한 장 — 맥 「코덱스 excutor」 화면(19:25): 한알이 넣으신 줄 「수정 14개 패 파일 이름만 보여줘 내용은 말고」 → 목록 14: `agents/{capcut,creative_director,ffmpeg,higgsfield,pln,pmo,rsch,tester,uploader}/dashboard.html` · `agents/creative_director/folder-tree.md` · `agents/creative_director/status.json` · `agents/rsch/knowhow.md` · `agents/rsch/logs/2026-11-09_claude-session-start.md` · `agents/rsch/research/2026-11-21_chatgpt-attachments-catalog.md`(앞 두 글자는 안 보임).
+- 원문: (글 없음 — 사진 한 장)
+- 뒤 처리: 모두 `agents/` 아래 맥 기록(웹앱 코드 아님) · 분류표는 맥의 새 판일 수 있음 → 지우지 않고 `git stash`로 맥 안에 보관(추적 파일만 · worker_model.py 뺌 · push 없음) · `??`는 그대로 · 점검은 추적 파일만 → 1-2부터 다시, 한 줄로 드림. RSCH 보탬(19:26 — `??` · `__pycache__`)과 같은 길.
