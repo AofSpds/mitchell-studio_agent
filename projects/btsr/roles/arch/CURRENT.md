@@ -2,10 +2,10 @@
 role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
-state: "ACTIVE"
-updated: "2026-11-21T13:52:00+09:00"
+state: "HANDOFF"
+updated: "2026-11-21T13:56:27+09:00"
 base_commit: "fa2b7aa"
-now: "묶음 5 + 3-2 설계 1판 → PMO에 BTSR-ARCH-008(맥 일 없음). 컴퓨터 유즈 범위 한 장은 PLN을 거쳐 한알께"
+now: "승계 중 — 한알 13:55:17 (RSCH 전함). 아래 넘김 칸"
 next: "PMO의 ARCH-008 반환 대조 → PLN에. 그사이 묶음 4-a · 4-b(https 맥 손일 + 하지 말 것 한 장) · 묶음 6(R6.4) 설계"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환", "owner:컴퓨터 유즈 범위 승인(설계 5번, PLN → RSCH)"]
 owner_wait: "-"
@@ -27,6 +27,29 @@ verifier: "mitchell_studio/btsr/archv"
 | 작업 칸 | `design/` (규칙 20) — 주제 목록은 [INDEX](INDEX.md) |
 | 게시판 | 없음 — `board/`가 아직 없어 요청서·받음을 작업 칸 주제 폴더에 둠 (PLN·RSCH와 같은 꼴, 규칙 16과 다름 — 숨기지 않음) |
 | 앞 세션 | Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
+
+## 넘김 (2026-11-21 13:56 KST — 옛 세션 → 새 세션)
+
+- **까닭**: 한알 13:55:17 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」 (RSCH 14d04ad1이 전함, 원문 에이전트 저장소 main `b9c976b` `owner/utterances/2026-11-21.md`). 새 세션 제공자는 Paseo `claude`(이름표 claude-naver — 한알 13:24:06 · 13:35:34), 모델 · 생각 수준 그대로(Opus 5.5 · high), 제목 `MITCHELL_STUDIO/BTSR/ARCH`.
+- **옛 세션**: Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · 작업 공간 `wks_6dc6b9d13807b202` · Claude 세션 `df7a3d93-e2ee-4c76-8467-16606825f451` · claude-google. 넘긴 커밋 = 이 CURRENT가 든 커밋. 멈춘 곳: 묶음 5 + 3-2를 PMO에 맡긴 뒤(ARCH-008), 묶음 4 · 6 설계 전 — 하다 만 파일 없음.
+- **지금 열린 일**:
+  1. **PMO BTSR-ARCH-008**(묶음 5 + 3-2) 구현 중 — 반환이 오면 받아들임 기준 1–9와 대조(제품 가지를 fetch → `git archive`로 저장소 전부를 따로 풀어 **환경 값 없이** `python -m unittest discover -s app/webapp/tests`) → 반환서를 `design/webapp-phase1/`에 → PLN에 알림. PMO도 승계 중 — PMO의 새 Paseo ID는 PMO 쪽 알림으로 받음.
+  2. **한알 승인 대기**: 묶음 5 + 3-2 설계 5번 '컴퓨터 유즈 범위' 한 장(PLN → RSCH → 한알). 승인 전 맥에서 돌리지 않음.
+  3. **다음 설계**(PLN-002 차례): 묶음 4-a(진행 보기 · '지금' 한 줄 · 화면 스스로 바뀜) · 4-b(https 켬 — **맥 손일 · 명령 · 하지 말 것을 한 장으로**, 결정 05 · 1.2판) · 묶음 6(다 된 뒤 고치기 · 판마다 CapCut 프로젝트 · **R6.4 규격이 다르면 승인해도 완성 아님**, 1.7판 결정 14). 묶음 7은 뒤로(결정 04).
+- **받는 세션이 할 것**:
+  1. 첫 줄 `[MITCHELL_STUDIO/BTSR/ARCH · 규칙 판 v0.14 받음]`. 이 저장소 `AGENTS.md` → 이 CURRENT → `INDEX.md` · `ROADMAP.md` → AAA 규칙 판(dev 폴더의 `AAA/AGENTS.md`, 읽기만) → `projects/btsr/roles/rsch/knowhow.md`(이 PC 환경)만 읽고 시작. 설계 파일은 필요한 것만.
+  2. 받음을 적음: 이 CURRENT의 YAML(`state`, `updated`, `now`)과 위 PRIMARY 칸을 새 Paseo 에이전트 ID · 작업 공간 ID · Claude 세션 ID(transcript 폴더에서 첫 user 줄이 여는 글인 `.jsonl`)로 고치고, 앞 세션 칸에 옛 세션 ID를 더함 → 커밋 · push(`btsr/arch`, 자기 폴더만 이름으로 add).
+  3. 옛 세션 제목을 `MITCHELL_STUDIO/BTSR/ARCH CLOSED`로 바꿈(Paseo `update_agent`, AAA 규칙 10).
+  4. PLN(071c15f3)과 RSCH(14d04ad1)에 '승계 끝 · 새 Paseo ID'만 알림. **PMO에도 새 ID를 알림** — ARCH-008 반환이 새 세션으로 오게(요청 길 ARCH → PMO, 규칙 15).
+  5. 그 뒤 위 '지금 열린 일' 차례대로.
+- **알아 둘 것(이 세션에서 배운 것)**:
+  - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`.
+  - 제품 저장소(dev 폴더의 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 읽음 — 그 작업 사본(main `0636fa0`에 멈춰 있음)은 건드리지 않음. 시험은 `git archive <가지> | tar -x -C <새 임시 폴더>` 뒤 그 안에서 — **저장소 전부를 풀어야** 함(`test_words`가 매뉴얼을 읽음).
+  - 제품 main 합치기: PLN이 정하고 **RSCH가 앞으로 감기 push**(1.6판 결정 13). ARCH · PMO는 main push 안 함. 맥 일은 1차 끝 맥 시험에 한 번(결정 08).
+  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–008까지 씀(다음 009).
+  - 큰 읽기(남의 저장소 · 긴 기획)는 하위 에이전트(Explore)에 맡기고 결론만 받음. 일하는 PMO에게 새 요청을 보내면 그 차례에 끼어드므로, 작은 급한 것만 끼우고 나머지는 반환 뒤.
+  - 묶음마다 반환 전에 그 사이 바뀐 한알 말씀과 요청서 기준이 맞는지 다시 봄(규칙 37).
+  - 이 PC의 Bash heredoc 파이썬 안에 윈도 경로(역슬래시 + U)를 넣으면 스크립트가 안 돎 — 경로가 든 글은 파일 쓰기 도구로.
 
 ## 지금
 
