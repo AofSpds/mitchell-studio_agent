@@ -5,9 +5,9 @@ rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. A
 state: "ACTIVE"
 updated: "2026-11-21T05:31:00Z"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-008 반환함(14:30 KST) — 제품 가지 feat/webapp-b5-b32-worker-face-20261121 3072e7e. 시험 78/78(PYTHONUTF8 없이) · 화면 21/21. 열린 요청 없음"
-next: "ARCH(d9520b95) 대조 기다림 — 다음 일은 스스로 시작하지 않음"
-waiting_for: ["arch:BTSR-ARCH-008-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-009(묶음 4-a — 한 번에 한 편 · 한 줄 + 바 · 화면 스스로 바뀜) 받음 · 하는 중. 바탕 제품 main 3072e7e. ARCH-008은 반환함(3072e7e — RSCH가 main에 올림)"
+next: "설계 2판 9번 1–13대로 구현 → 반환(ARCH d9520b95)"
+waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -40,6 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
+| BTSR-ARCH-009_webapp-b4a-one-job-bar — 한 번에 한 편 · 하는 일 한 줄 + 바 · 화면 스스로 바뀜 · 여러 편 걷기 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` 3da95c5 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-009_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A_DESIGN_CLAUDE.md` 2판(3e6eee5) · 화면 시안 3판 main `projects/btsr/roles/rsch/sub/s8_uiux_rework/` | 2026-11-21 (커밋 시각, 세션 메시지 0eddd3f3) | **하는 중** — 바탕 제품 main 3072e7e에서 새 가지 |
 | BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | **반환함** 14:30 KST — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` 3072e7e(코드 449f378 · 시험 3072e7e, 앞 부분 e4323cf는 옛 PRIMARY), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md). 시험 78/78(PYTHONUTF8 없이) · 화면 21/21. 13:58 승계로 멈췄다가 13:59 새 PRIMARY 5fbbea06가 이어 함 |
 | BTSR-ARCH-005_webapp-b1-merge — 묶음 1 가지 6cfbc5f를 제품 main에 (앞으로 감기, 맥에는 넣지 않음) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` db1f7e8 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-005_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (80ab702) | **닫힘** (ARCH 58c9c95) — 한알 13:13:30 「직접 하세요.」로 RSCH가 main을 6cfbc5f로 push. PMO의 push는 자동 심사에서 막혔고 우회 안 함. 이 PC 로컬 main = origin/main 6cfbc5f 확인 |
 | BTSR-ARCH-003_worker-model-merge — 제품 가지 `fix/worker-model-sol-20261121` 3495f7e를 제품 main에 합침 (PLN이 정함, 한알 03:47:04) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` bc710d7 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (34a5007) | **반환함** 12:54 KST — 제품 main `e5785b3` (첫 부모 3bd6cdd), [반환서](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) |
