@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T13:37+09:00"
+updated: "2026-11-21T13:45+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 100ffa5"
-now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 100ffa5까지 합침: 작업자 모델 · 묶음 1 · 2 + 8 · 1-1. 묶음 3은 ARCH → PMO BTSR-ARCH-007. 한알께 여쭐 것 1–7 모두 답 받음(요구 1.7판). 맥에는 아직 넣지 않음(1차 끝에 한 번 — 결정 08)"
+now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 100ffa5까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1). 묶음 3 반환 받아 RSCH에 반환(가지 32b55dc, RSCH 확인되면 합침). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.7판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(14d04ad1)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch:묶음 3 반환(BTSR-ARCH-007)"]
+waiting_for: ["role:mitchell_studio/btsr/rsch:묶음 3 확인 → RSCH가 main push", "role:mitchell_studio/btsr/arch:묶음 5 + 3-2 반환"]
 owner_wait: "0"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -58,6 +58,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 1-1 합쳐짐 — 제품 main `100ffa5`** (RSCH 확인 · push, main `bb1198a` 요청서 10번, 13:36 PLN이 봄).
 - **한알이 이 창에서 하신 말씀**은 [PLN_OWNER_UTTERANCES_CLAUDE.md](PLN_OWNER_UTTERANCES_CLAUDE.md)에 원문 그대로(13:35:53 「저장하세요 압축합니다.」).
 - **일하는 요령(배운 것):** 파일을 고치는 파이썬 heredoc 뒤에는 `|| exit 1`을 붙여 실패하면 커밋까지 가지 않게 한다(11fef29 · c3fdf49에서 반쪽 커밋이 나감). heredoc 안에 윈도 경로를 역슬래시로 쓰지 않는다(유니코드 오류). 한국 시각은 PowerShell ConvertTimeBySystemTimeZoneId로. 제품 저장소는 C:/Users/ms1pk/dev/mitchell-studio에서 fetch · ls-remote · merge-base만(작업 사본은 안 건드림).
+- **묶음 3 반환 받음 → RSCH에 반환** (ARCH `004d5cc`, 13:45) — 제품 가지 `feat/webapp-b3-intake-20261121` `32b55dc`, R3.1–R3.6. RSCH 확인되면 main 합침(조건 main `100ffa5` · 가지 `32b55dc`). 합치면 main의 숨은 결함(같은 분 두 번째 묶음 400) 고침도 들어감. [WEBAPP_PHASE1_B3_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md)
 - 제품 저장소는 시키시기 전에 읽지 않음 — 합치기 조건 대조로 제품 원격을 fetch · log · merge-tree만 봄(12:49, 작업 사본은 건드리지 않음). rsch `studies/`는 RSCH-003이 가리킨 글만 읽음.
 
 ## 세션
