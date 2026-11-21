@@ -1,0 +1,97 @@
+test_1_unsure_material_only (test_intake.Intake.test_1_unsure_material_only) ... ok
+test_2_only_age_asked (test_intake.Intake.test_2_only_age_asked) ... ok
+test_2b_other_text (test_intake.Intake.test_2b_other_text) ... ok
+test_3_missing_before_as_is (test_intake.Intake.test_3_missing_before_as_is) ... ok
+test_4_no_ai_face_no_question (test_intake.Intake.test_4_no_ai_face_no_question) ... ok
+test_6_script_fix (test_intake.Intake.test_6_script_fix) ... ok
+test_7_approval_hash_and_captions (test_intake.Intake.test_7_approval_hash_and_captions) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:126: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\working\\2099-02-07_ap\\script.md' mode='r' encoding='utf-8'>
+  txt = open(p, encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:127: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\working\\2099-02-07_ap\\script.md' mode='w' encoding='utf-8'>
+  open(p, "w", encoding="utf-8").write(txt.replace("첫 문장", "첫   문장"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:130: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\working\\2099-02-07_ap\\script.md' mode='w' encoding='utf-8'>
+  open(p, "w", encoding="utf-8").write(txt.replace("첫 문장", "바뀐 첫 문장"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_8_script_check_always (test_intake.Intake.test_8_script_check_always) ... ok
+test_9_stale_intake_fails (test_intake.Intake.test_9_stale_intake_fails) ... ok
+test_intake_shape_check (test_intake.Intake.test_intake_shape_check) ... ok
+test_more_then_reintake (test_intake.MoreUpload.test_more_then_reintake) ... ok
+test_batch_done (test_runner.BatchDone.test_batch_done) ... ok
+test_flags_follow_help (test_runner.Claude.test_flags_follow_help) ... ok
+test_limit_no_retry (test_runner.Claude.test_limit_no_retry) ... ok
+test_login (test_runner.Claude.test_login) ... ok
+test_no_bin (test_runner.Claude.test_no_bin) ... ok
+test_nofile (test_runner.Claude.test_nofile) ... ok
+test_ok (test_runner.Claude.test_ok) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\working\\2099-02-14_ok\\.fake_argv.json' mode='r' encoding='utf-8'>
+  argv = json.load(open(os.path.join(J.job_dir(job), ".fake_argv.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_rc1 (test_runner.Claude.test_rc1) ... ok
+test_retry_then_ok (test_runner.Claude.test_retry_then_ok) ... ok
+test_timeout (test_runner.Claude.test_timeout) ... ok
+test_edit_waits_for_capcut (test_runner.Edit.test_edit_waits_for_capcut) ... ok
+test_exports_and_approvals (test_runner.ExportsApprovals.test_exports_and_approvals) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:293: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\output\\2099-02-20_exp_v1.mp4'>
+  open(p, "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:293: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\output\\2099-02-20_exp_v2.mp4'>
+  open(p, "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_one_fails_other_goes (test_runner.Lanes.test_one_fails_other_goes) ... ok
+test_recover (test_runner.Lanes.test_recover) ... ok
+test_same_job_kind_not_twice (test_runner.Lanes.test_same_job_kind_not_twice) ... ok
+test_two_processes (test_runner.Lock.test_two_processes) ... ok
+test_second_batch_same_minute (test_runner.SameMinuteBatch.test_second_batch_same_minute) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:234: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\data\\incoming\\2099-06-01_1200_2\\a.jpg'>
+  open(os.path.join(J.INCOMING, b, "a.jpg"), "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_tick_reads_result (test_runner.SixTick.test_tick_reads_result) ... ok
+test_rev_pinned (test_runner.Templates.test_rev_pinned) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:263: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\templates\\reel-main\\r1.md'>
+  r1_sha = hashlib.sha256(open(real, "rb").read()).hexdigest()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:269: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\tmpwze7fvsz\\templates\\reel-main\\r2.md' mode='w' encoding='utf-8'>
+  open(os.path.join(tdir, "r2.md"), "w", encoding="utf-8").write("판 2\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:270: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\tmpwze7fvsz\\templates\\reel-main\\TEMPLATE.json' mode='r' encoding='utf-8'>
+  meta = json.load(open(os.path.join(tdir, "TEMPLATE.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:272: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\tmpwze7fvsz\\templates\\reel-main\\TEMPLATE.json' mode='w' encoding='utf-8'>
+  json.dump(meta, open(os.path.join(tdir, "TEMPLATE.json"), "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:280: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-30f1f7c_\\tmpwze7fvsz\\templates\\reel-main\\r1.md'>
+  self.assertEqual(hashlib.sha256(open(os.path.join(tdir, "r1.md"), "rb").read()).hexdigest(), r1_sha, "옛 판 그대로")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_auth_and_header (test_suggest.Api.test_auth_and_header) ... ok
+test_job_kept_only_if_real (test_suggest.Api.test_job_kept_only_if_real) ... ok
+test_recent (test_suggest.Api.test_recent) ... ok
+test_rejects (test_suggest.Api.test_rejects) ... ok
+test_three_kinds_saved (test_suggest.Api.test_three_kinds_saved) ... ok
+test_upload_job_fix (test_suggest.Regression.test_upload_job_fix) ... ok
+test_same_second (test_suggest.SameSecond.test_same_second) ... ok
+test_anonymized_publish (test_suggest.Tool.test_anonymized_publish)
+설계 BTSR-ARCH-006 시험 1: 이름 둘(같은 이름 두 번) + 전화 + 메일 + 긴 숫자 → 별명 · 지움 표시, 원래 글자 0, 원본은 published/에 그대로. ... ok
+test_clean_publish (test_suggest.Tool.test_clean_publish) ... ok
+test_clean_text_unchanged (test_suggest.Tool.test_clean_text_unchanged)
+시험 3: 깨끗한 글은 그대로 · replaced 0. ... ok
+test_dates_and_short_numbers_stay (test_suggest.Tool.test_dates_and_short_numbers_stay)
+시험 2: 날짜 · 시각 · 짧은 숫자는 그대로. ... ok
+test_hold_keeps (test_suggest.Tool.test_hold_keeps) ... ok
+test_left_over_stops (test_suggest.Tool.test_left_over_stops)
+바꾼 뒤에도 꼴이 남으면 올리지 않음 (inbox에 그대로). ... ok
+test_reviewed_publish (test_suggest.Tool.test_reviewed_publish) ... ok
+test_allow_rows_have_bundle (test_words.Words.test_allow_rows_have_bundle) ... ok
+test_no_new_dev_words (test_words.Words.test_no_new_dev_words) ... ok
+test_current_value (test_worker_model.Matches.test_current_value) ... ok
+test_matches (test_worker_model.Matches.test_matches) ... ok
+test_sol_then_terra (test_worker_model.OnePlace.test_sol_then_terra) ... ok
+test_practice_result (test_worker_model.ResultLines.test_practice_result) ... ok
+test_six_result_sol_passes (test_worker_model.ResultLines.test_six_result_sol_passes) ... ok
+test_six_result_terra_fails (test_worker_model.ResultLines.test_six_result_terra_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 15.970s
+
+OK
