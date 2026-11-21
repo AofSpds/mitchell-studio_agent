@@ -1,0 +1,17 @@
+ agents/creative_director/manual-webapp.md |  34 +--
+ app/webapp/MAC_RUN_PHASE1.md              |  10 +-
+ app/webapp/README.md                      |   2 +-
+ app/webapp/jobs.py                        | 251 ++++++++++++++++---
+ app/webapp/preflight.py                   |  13 +-
+ app/webapp/reel_api.py                    |  35 ++-
+ app/webapp/runner.py                      |  32 ++-
+ app/webapp/server.py                      |  39 +++
+ app/webapp/static/app.html                | 393 ++++++++++++------------------
+ app/webapp/tests/_env.py                  |  10 +
+ app/webapp/tests/test_one_job.py          | 311 +++++++++++++++++++++++
+ app/webapp/tests/test_runner.py           |   9 +-
+ app/webapp/tests/test_suggest.py          |   1 +
+ app/webapp/tests/test_words.py            |   6 +
+ app/webapp/tests/test_worker_face.py      |  21 +-
+ app/webapp/tests/words_allow.json         |  12 -
+ 16 files changed, 838 insertions(+), 341 deletions(-)

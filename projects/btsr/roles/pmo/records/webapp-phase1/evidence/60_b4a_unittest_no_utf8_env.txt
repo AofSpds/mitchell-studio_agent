@@ -1,0 +1,299 @@
+test_1_unsure_material_only (test_intake.Intake.test_1_unsure_material_only) ... ok
+test_2_only_age_asked (test_intake.Intake.test_2_only_age_asked) ... ok
+test_2b_other_text (test_intake.Intake.test_2b_other_text) ... ok
+test_3_missing_before_as_is (test_intake.Intake.test_3_missing_before_as_is) ... ok
+test_4_no_ai_face_no_question (test_intake.Intake.test_4_no_ai_face_no_question) ... ok
+test_6_script_fix (test_intake.Intake.test_6_script_fix) ... ok
+test_7_approval_hash_and_captions (test_intake.Intake.test_7_approval_hash_and_captions) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:126: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-07_ap\\script.md' mode='r' encoding='utf-8'>
+  txt = open(p, encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:127: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-07_ap\\script.md' mode='w' encoding='utf-8'>
+  open(p, "w", encoding="utf-8").write(txt.replace("첫 문장", "첫   문장"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_intake.py:130: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-07_ap\\script.md' mode='w' encoding='utf-8'>
+  open(p, "w", encoding="utf-8").write(txt.replace("첫 문장", "바뀐 첫 문장"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_8_script_check_always (test_intake.Intake.test_8_script_check_always) ... ok
+test_9_stale_intake_fails (test_intake.Intake.test_9_stale_intake_fails) ... ok
+test_intake_shape_check (test_intake.Intake.test_intake_shape_check) ... ok
+test_more_then_reintake (test_intake.MoreUpload.test_more_then_reintake) ... ok
+test_3_3_runner_skips_hidden_and_shelved (test_one_job.Busy.test_3_3_runner_skips_hidden_and_shelved)
+덧붙임 3-3 \u2014 화면에서 빠진 · 치운 편의 일은 일꾼이 집지 않음 (차례표에서 지우지도 않음). ... ok
+test_5_1_six_line_from_parts_and_fit_saved_before_run (test_one_job.Busy.test_5_1_six_line_from_parts_and_fit_saved_before_run)
+덧붙임 5-1 \u2014 ⑥ 한 줄은 칸 상태로 · 간격 맞추기는 실행 전에 상태를 저장(맞추는 동안 화면 한 줄). ... [2026-11-21T15:52:05+09:00] 2099-02-12_fit 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.0초
+ok
+test_busy_states (test_one_job.Busy.test_busy_states) ... ok
+test_events_and_waits (test_one_job.Busy.test_events_and_waits)
+기준 8 \u2014 접수 → 원고 → 확인 → 답: kind 차례 · 기다린 초 · started_at · 화면에는 없음. ... ok
+test_face_help_counts_remakes (test_one_job.Busy.test_face_help_counts_remakes) ... ok
+test_now_line_table (test_one_job.Busy.test_now_line_table)
+기준 5 · 6 · 10 \u2014 설계 4번 표의 때마다 text · ask · buttons · 바 n / 9 (글은 3판 그대로). ... ok
+test_3_1_more_inside_missing_question (test_one_job.Http.test_3_1_more_inside_missing_question)
+기준 3-1 \u2014 빠진 자료 물음(확인 기다림) 가운데 「더 보내기」가 받아지고 Send는 흐린 채. ... ok
+test_409_while_busy_and_more_in_same_job (test_one_job.Http.test_409_while_busy_and_more_in_same_job) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_one_job.py:238: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-07-01_1200\\x.jpg'>
+  open(os.path.join(J.INCOMING, other, "x.jpg"), "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_7_approve_frees_send (test_one_job.Http.test_7_approve_frees_send) ... ok
+test_9_changes (test_one_job.Http.test_9_changes) ... ok
+test_dev_then_new_send_hides_old (test_one_job.Http.test_dev_then_new_send_hides_old) ... ok
+test_app_html (test_one_job.Screen.test_app_html) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_one_job.py:169: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\app\\webapp\\static\\app.html' mode='r' encoding='utf-8'>
+  html = open(os.path.join(J.ROOT, "app", "webapp", "static", "app.html"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_mac_run_question_1 (test_one_job.Screen.test_mac_run_question_1) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_one_job.py:178: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\app\\webapp\\MAC_RUN_PHASE1.md' mode='r' encoding='utf-8'>
+  t = open(os.path.join(J.ROOT, "app", "webapp", "MAC_RUN_PHASE1.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_batch_done (test_runner.BatchDone.test_batch_done) ... ok
+test_flags_follow_help (test_runner.Claude.test_flags_follow_help) ... ok
+test_limit_waits (test_runner.Claude.test_limit_waits)
+묶음 5부터 한도는 failed 대신 wait_usage \u2014 길이 쉬었다가 저절로 (BTSR-ARCH-008 2-6, 자세히는 test_worker_face.Usage). ... ok
+test_login (test_runner.Claude.test_login) ... ok
+test_no_bin (test_runner.Claude.test_no_bin) ... ok
+test_nofile (test_runner.Claude.test_nofile) ... ok
+test_ok (test_runner.Claude.test_ok) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-21_ok\\.fake_argv.json' mode='r' encoding='utf-8'>
+  argv = json.load(open(os.path.join(J.job_dir(job), ".fake_argv.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_rc1 (test_runner.Claude.test_rc1) ... ok
+test_retry_then_ok (test_runner.Claude.test_retry_then_ok) ... ok
+test_timeout (test_runner.Claude.test_timeout) ... ok
+test_edit_waits_for_capcut (test_runner.Edit.test_edit_waits_for_capcut) ... ok
+test_exports_and_approvals (test_runner.ExportsApprovals.test_exports_and_approvals) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:298: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\output\\2099-02-26_exp_v1.mp4'>
+  open(p, "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:298: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\output\\2099-02-26_exp_v2.mp4'>
+  open(p, "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_one_fails_other_goes (test_runner.Lanes.test_one_fails_other_goes) ... ok
+test_recover (test_runner.Lanes.test_recover) ... ok
+test_same_job_kind_not_twice (test_runner.Lanes.test_same_job_kind_not_twice) ... ok
+test_two_processes (test_runner.Lock.test_two_processes) ... ok
+test_second_batch_same_minute (test_runner.SameMinuteBatch.test_second_batch_same_minute) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:239: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-06-01_1200_2\\a.jpg'>
+  open(os.path.join(J.INCOMING, b, "a.jpg"), "wb").write(b"x")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_tick_reads_result (test_runner.SixTick.test_tick_reads_result) ... ok
+test_rev_pinned (test_runner.Templates.test_rev_pinned) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:268: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\templates\\reel-main\\r1.md'>
+  r1_sha = hashlib.sha256(open(real, "rb").read()).hexdigest()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:274: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\tmpc5tje2oc\\templates\\reel-main\\r2.md' mode='w' encoding='utf-8'>
+  open(os.path.join(tdir, "r2.md"), "w", encoding="utf-8").write("판 2\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:275: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\tmpc5tje2oc\\templates\\reel-main\\TEMPLATE.json' mode='r' encoding='utf-8'>
+  meta = json.load(open(os.path.join(tdir, "TEMPLATE.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:277: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\tmpc5tje2oc\\templates\\reel-main\\TEMPLATE.json' mode='w' encoding='utf-8'>
+  json.dump(meta, open(os.path.join(tdir, "TEMPLATE.json"), "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_runner.py:285: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\tmpc5tje2oc\\templates\\reel-main\\r1.md'>
+  self.assertEqual(hashlib.sha256(open(os.path.join(tdir, "r1.md"), "rb").read()).hexdigest(), r1_sha, "옛 판 그대로")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_auth_and_header (test_suggest.Api.test_auth_and_header) ... ok
+test_job_kept_only_if_real (test_suggest.Api.test_job_kept_only_if_real) ... ok
+test_recent (test_suggest.Api.test_recent) ... ok
+test_rejects (test_suggest.Api.test_rejects) ... ok
+test_three_kinds_saved (test_suggest.Api.test_three_kinds_saved) ... ok
+test_upload_job_fix (test_suggest.Regression.test_upload_job_fix) ... ok
+test_same_second (test_suggest.SameSecond.test_same_second) ... ok
+test_anonymized_publish (test_suggest.Tool.test_anonymized_publish)
+설계 BTSR-ARCH-006 시험 1: 이름 둘(같은 이름 두 번) + 전화 + 메일 + 긴 숫자 → 별명 · 지움 표시, 원래 글자 0, 원본은 published/에 그대로. ... ok
+test_clean_publish (test_suggest.Tool.test_clean_publish) ... ok
+test_clean_text_unchanged (test_suggest.Tool.test_clean_text_unchanged)
+시험 3: 깨끗한 글은 그대로 · replaced 0. ... ok
+test_dates_and_short_numbers_stay (test_suggest.Tool.test_dates_and_short_numbers_stay)
+시험 2: 날짜 · 시각 · 짧은 숫자는 그대로. ... ok
+test_hold_keeps (test_suggest.Tool.test_hold_keeps) ... ok
+test_left_over_stops (test_suggest.Tool.test_left_over_stops)
+바꾼 뒤에도 꼴이 남으면 올리지 않음 (inbox에 그대로). ... ok
+test_reviewed_publish (test_suggest.Tool.test_reviewed_publish) ... ok
+test_allow_rows_have_bundle (test_words.Words.test_allow_rows_have_bundle) ... ok
+test_no_guide_lines (test_words.Words.test_no_guide_lines)
+R1.7(결정 21) \u2014 화면에서 뺀 안내 글이 다시 들어오지 않게 (BTSR-ARCH-009 7번). ... ok
+test_no_new_dev_words (test_words.Words.test_no_new_dev_words) ... ok
+test_7_face_made_shown_approved (test_worker_face.Face.test_7_face_made_shown_approved) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:307: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-01_1200\\a.jpg'>
+  open(os.path.join(J.INCOMING, batch, "a.jpg"), "wb").write(b"\xff\xd8\xff\xe0 after")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:314: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-01_f1\\script.md' mode='w' encoding='utf-8'>
+  open(os.path.join(J.job_dir(job), "script.md"), "w", encoding="utf-8").write("첫 문장\n둘째 문장\n가 · 나 · 다\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-01_f1\\.fake_codex_card_1.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_7_have_face_skips_face_step (test_worker_face.Face.test_7_have_face_skips_face_step) ... ok
+test_7_no_after_photo_asks (test_worker_face.Face.test_7_no_after_photo_asks) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:307: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-02_1200\\a.jpg'>
+  open(os.path.join(J.INCOMING, batch, "a.jpg"), "wb").write(b"\xff\xd8\xff\xe0 after")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:314: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-02_f4\\script.md' mode='w' encoding='utf-8'>
+  open(os.path.join(J.job_dir(job), "script.md"), "w", encoding="utf-8").write("첫 문장\n둘째 문장\n가 · 나 · 다\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_7_not_9_16_retry_then_fail_ask_upload (test_worker_face.Face.test_7_not_9_16_retry_then_fail_ask_upload) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:307: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-03_1200\\a.jpg'>
+  open(os.path.join(J.INCOMING, batch, "a.jpg"), "wb").write(b"\xff\xd8\xff\xe0 after")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:314: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-03_f3\\script.md' mode='w' encoding='utf-8'>
+  open(os.path.join(J.job_dir(job), "script.md"), "w", encoding="utf-8").write("첫 문장\n둘째 문장\n가 · 나 · 다\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-03_f3\\.fake_codex_card_2.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:380: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-03_1200\\mine.jpg'>
+  open(os.path.join(J.INCOMING, b, "mine.jpg"), "wb").write(b"\xff\xd8\xff\xe0 mine")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_7_remake_keeps_old_hair_band_and_limit (test_worker_face.Face.test_7_remake_keeps_old_hair_band_and_limit) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:307: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-04_1200\\a.jpg'>
+  open(os.path.join(J.INCOMING, batch, "a.jpg"), "wb").write(b"\xff\xd8\xff\xe0 after")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:314: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-04_f2\\script.md' mode='w' encoding='utf-8'>
+  open(os.path.join(J.job_dir(job), "script.md"), "w", encoding="utf-8").write("첫 문장\n둘째 문장\n가 · 나 · 다\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_8_ai_marks (test_worker_face.Face.test_8_ai_marks) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:418: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-37_f7\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"scenes": [{"ai": False}]}, open(p, "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:420: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-37_f7\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"scenes": [{"ai": True, "label": "얼굴 : AI 합성"}]}, open(p, "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:422: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-37_f7\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"scenes": [{"ai": True, "label": "시술 후"}]}, open(p, "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_8_old_eight_step_job_reads_face_done (test_worker_face.Face.test_8_old_eight_step_job_reads_face_done) ... ok
+test_5_capcut_on_waits (test_worker_face.Gate.test_5_capcut_on_waits) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-39_g2\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_5_disk_low_not_launched (test_worker_face.Gate.test_5_disk_low_not_launched) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-40_g1\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_face_http (test_worker_face.Http.test_face_http) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:307: ResourceWarning: unclosed file <_io.BufferedWriter name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\incoming\\2099-09-05_1200\\a.jpg'>
+  open(os.path.join(J.INCOMING, batch, "a.jpg"), "wb").write(b"\xff\xd8\xff\xe0 after")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:314: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-09-05_h1\\script.md' mode='w' encoding='utf-8'>
+  open(os.path.join(J.job_dir(job), "script.md"), "w", encoding="utf-8").write("첫 문장\n둘째 문장\n가 · 나 · 다\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_1_whole_six_without_hands (test_worker_face.Six.test_1_whole_six_without_hands) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:33+09:00] 2099-02-41_s1 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:39: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\.fake_codex_calls' mode='r' encoding='cp949'>
+  return int(open(p).read()) if os.path.exists(p) else 0
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\.fake_codex_card_1.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\.fake_codex_card_2.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\.fake_codex_card_3.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:116: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-41_s1\\.fake_codex_argv.json' mode='r' encoding='utf-8'>
+  argv = json.load(open(os.path.join(J.job_dir(job), ".fake_codex_argv.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_6_empty_cli_value_not_ready (test_worker_face.Six.test_6_empty_cli_value_not_ready) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-42_s6b\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_6_flag_not_in_help_is_dropped (test_worker_face.Six.test_6_flag_not_in_help_is_dropped) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-43_s6\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:126: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-43_s6\\.fake_codex_argv.json' mode='r' encoding='utf-8'>
+  argv = json.load(open(os.path.join(J.job_dir(job), ".fake_codex_argv.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:128: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working/2099-02-43_s6/runs/000076_six_t1.log' mode='r' encoding='utf-8'>
+  log = open(os.path.join(J.DATA, st(job)["runs"][0]["log"]), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_repo_cli_values_are_empty (test_worker_face.Six.test_repo_cli_values_are_empty)
+저장소의 명령줄 값은 비어 있음 \u2014 지어내지 않음 (맥 0에서 채움). ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:142: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\app\\webapp\\worker_model.py' mode='r' encoding='utf-8'>
+  src = open(os.path.join(J.ROOT, "app", "webapp", "worker_model.py"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_josa (test_worker_face.Small.test_josa) ... ok
+test_retry_at (test_worker_face.Small.test_retry_at) ... ok
+test_screen_removed_and_added (test_worker_face.Small.test_screen_removed_and_added) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:441: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\app\\webapp\\static\\app.html' mode='r' encoding='utf-8'>
+  html = open(os.path.join(J.ROOT, "app", "webapp", "static", "app.html"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:446: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\dev\\btsr-pmo-work\\mitchell-studio\\app\\webapp\\tests\\words_allow.json' mode='r' encoding='utf-8'>
+  allow = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "words_allow.json"), encoding="utf-8"))["allow"]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_2_two_stops_dev (test_worker_face.Stops.test_2_two_stops_dev)
+두 번 멈추면 개발자 · 저절로 다시 안 함 (묶음 4-a부터 한 번에 한 편 \u2014 '다른 작업은 완성'은 걷고 새로 보내기 409는 test_one_job). ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-44_s2a\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:39: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-44_s2a\\.fake_codex_calls' mode='r' encoding='cp949'>
+  return int(open(p).read()) if os.path.exists(p) else 0
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_3a_first_stop_new_conversation_with_reason (test_worker_face.Stops.test_3a_first_stop_new_conversation_with_reason) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-45_s3a\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:35+09:00] 2099-02-45_s3a 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-45_s3a\\.fake_codex_card_2.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_3b2_similar_song_answer_goes_on_card (test_worker_face.Stops.test_3b2_similar_song_answer_goes_on_card) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-46_s3c\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:36+09:00] 2099-02-46_s3c 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:43: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-46_s3c\\.fake_codex_card_4.md' mode='r' encoding='utf-8'>
+  return open(os.path.join(J.job_dir(job), f".fake_codex_card_{n}.md"), encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_3b_music_missing_ask_then_without_music (test_worker_face.Stops.test_3b_music_missing_ask_then_without_music) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-47_s3b\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:37+09:00] 2099-02-47_s3b 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+ok
+test_3c_not_choosable_dev_keeps_files_then_resume (test_worker_face.Stops.test_3c_not_choosable_dev_keeps_files_then_resume) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-48_s3d\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:205: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\drafts\\2099-02-48_s3d_v1\\made.txt' mode='r' encoding='utf-8'>
+  self.assertEqual(len(open(made, encoding="utf-8").read().splitlines()), 2, "만들던 것은 그대로")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:39+09:00] 2099-02-48_s3d 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+ok
+test_3d_fit_long_ask_shorten_script (test_worker_face.Stops.test_3d_fit_long_ask_shorten_script) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-49_s3e\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:39+09:00] 2099-02-49_s3e 간격 맞추기 멈춤: 목소리가 영상보다 1.2초 길어요
+ok
+test_4_claude_lane_waits_too (test_worker_face.Usage.test_4_claude_lane_waits_too) ... ok
+test_4_limit_output_time (test_worker_face.Usage.test_4_limit_output_time) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-51_u3\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_4_usage_line_waits_and_resumes (test_worker_face.Usage.test_4_usage_line_waits_and_resumes) ... C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-52_u1\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-53_u2\\scenes.json' mode='w' encoding='utf-8'>
+  json.dump({"project": f"{job}_v1", "scenes": [], "captions": []},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio\app\webapp\tests\test_worker_face.py:39: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\ms1pk\\AppData\\Local\\Temp\\webapp-test-qxc8_tsf\\data\\working\\2099-02-52_u1\\.fake_codex_calls' mode='r' encoding='cp949'>
+  return int(open(p).read()) if os.path.exists(p) else 0
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[2026-11-21T15:52:41+09:00] 2099-02-52_u1 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+[2026-11-21T15:52:41+09:00] 2099-02-53_u2 간격 맞추기 끝 · 겹침 0.4초 → 0초 · 영상 14.0초 → 14.0초 · 마지막 목소리 끝 13.2초
+ok
+test_current_value (test_worker_model.Matches.test_current_value) ... ok
+test_matches (test_worker_model.Matches.test_matches) ... ok
+test_sol_then_terra (test_worker_model.OnePlace.test_sol_then_terra) ... ok
+test_practice_result (test_worker_model.ResultLines.test_practice_result) ... ok
+test_six_result_sol_passes (test_worker_model.ResultLines.test_six_result_sol_passes) ... ok
+test_six_result_terra_fails (test_worker_model.ResultLines.test_six_result_terra_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 92 tests in 52.060s
+
+OK
