@@ -10,7 +10,7 @@
 | 묶음 | 결정 파일 |
 |---|---|
 | worker-model | [requirements/worker-model/WORKER_MODEL_DECISIONS_CLAUDE.md](requirements/worker-model/WORKER_MODEL_DECISIONS_CLAUDE.md) — 01 작업자 모델 6.2 Sol High, 02 변수 + enum, 03 Terra 자리만·운영 전 그냥 고침, 04 PLN → ARCH → PMO, 05 제품 main 합치기 = RSCH 확인 → PLN 정함 |
-| webapp-phase1 | [requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md) — 01 캡컷 길, 02 테스트하며 구현 안 된 기능 모두, 03 PLN 기획 · ARCH 설계 · PMO 구현, 04 묶음 7 뒤로, 05 https 켬, 06 AI 얼굴 확인 받음 · 단추 「이 사진으로 갈게요 →」, 07 막히면 운영자 먼저 → 개발자, 08 맥 시험 뒤로, 09 묶음 1 합치기는 RSCH가 직접, 10 건의의 손님 정보는 걸러 내기 · 맥에만 · 별명 |
+| webapp-phase1 | [requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md) — 01 캡컷 길, 02 테스트하며 구현 안 된 기능 모두, 03 PLN 기획 · ARCH 설계 · PMO 구현, 04 묶음 7 뒤로, 05 https 켬, 06 AI 얼굴 확인 받음 · 단추 「이 사진으로 갈게요 →」, 07 막히면 운영자 먼저 → 개발자, 08 맥 시험 뒤로, 09 묶음 1 합치기는 RSCH가 직접, 10 건의의 손님 정보는 걸러 내기 · 맥에만 · 별명, 11 AI 얼굴 사진이 없으면 웹앱이 만든 뒤 확인, 12 단추 「건의하기」, 13 앞으로 합치기 push는 RSCH |
 
 ## 기획(PLN)이 따르는 다른 곳의 결정 (경로만)
 
