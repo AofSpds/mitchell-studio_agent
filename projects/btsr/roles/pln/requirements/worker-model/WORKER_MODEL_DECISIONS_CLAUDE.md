@@ -43,3 +43,12 @@
     > 진행하시구요.
 - 정한 것: ① = 1(네). 이 일은 PLN이 받아 ARCH에 넘기고, ARCH가 PMO에 맡긴다(AAA 규칙 15).
 - 반영: 요청 [BTSR-PLN-001](WORKER_MODEL_BTSR-PLN-001_REQUEST_CLAUDE.md)
+
+## 05 제품 main 합치기 — RSCH 확인 → PLN이 정함 (일단)
+
+- 상태: 정함 ("일단")
+- 날짜 · 원문: 2026-11-21 03:47:04 KST, uuid bb2416cf-9880-4d5d-a7e7-668618ab06a5 (RSCH 창, Paseo 14d04ad1) — 맥락: RSCH가 PLN의 여쭐 것 '제품 main 합치기를 누가 정하나 — 1 한알이 건마다(권고) · 2 PLN이 정하고 알림만'을 여쭌 뒤.
+  > rsch가 확인하고 pln이 일단 합니다. 사용량이 다 됐군요. 아....
+- 정한 것: RSCH가 반환을 확인하면 PLN이 합치기를 정하고, 아래 역할(ARCH → PMO)이 합친다. 앞으로도 일단 같은 길(RSCH 요청서 6번 덧붙임, main `3c3708e`).
+- 넓이: BTSR의 모든 제품 main 합치기(일하는 방식) — 이 도메인에 DPM · 게시판이 아직 없어 카드 요청 길은 없음. RSCH가 자기 지침에 더함(RSCH 알림).
+- 반영: 요청 [BTSR-PLN-003](WORKER_MODEL_BTSR-PLN-003_MERGE_REQUEST_CLAUDE.md)
