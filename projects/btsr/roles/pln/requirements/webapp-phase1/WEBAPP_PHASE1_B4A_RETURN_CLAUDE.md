@@ -46,3 +46,9 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b4a-one-job
 ## 6. 다음
 
 반환함. RSCH 확인 → RSCH가 앞으로 감기 push. PMO 차례: 4-a-2(ARCH-010, 바탕 `ed11f5a` — PLN이 짚은 push 길 · 파일 이름 거르기 고침) → 6 → 4-b. 묶음 8-2는 다11 · 다14 답 뒤.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 16:02 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `41416d5` RSCH 요청서 003 22번 — 제품 main 앞으로 감기 `3072e7e..ed11f5a`(결정 13, RSCH가 가지를 저장소 밖에 풀어 시험 92 OK를 다시 봄). PLN이 16:02에 제품 원격 main 머리 = `ed11f5a`를 ls-remote로 봄. 맥에는 넣지 않음(결정 08).
+- 「⚙ 기본 옵션」은 RSCH가 한알께 한 줄로 알려 드림(다른 말씀 없으면 그대로).
+
