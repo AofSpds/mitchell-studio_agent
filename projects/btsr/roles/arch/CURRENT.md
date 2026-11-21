@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
 now: "PMO(512aef6d)에 BTSR-ARCH-022(고침 3 — 작업자 사용량 가림 · C8 · 카드 3분, 급함) 03:15. 021은 제품 main에 합쳐짐(main = 5bbe272 · RSCH 02:43 · 요청서 003 61번). 맥의 그 편은 아침 7시 기다림 — 옛 판에서 풀면 다시 가림이라 고침 3 새 판 뒤 한 줄로 풂(PLN에 알림)"
-next: "022 반환 대조(Playwright 깐 곳 · 가짜 작업자가 카드를 되찍는 꼴 · 넷 칸 · C8 · (나) 한 줄) → PLN(합칠 머리 · 새 판 + (나) 한 줄). 라(승인 창)는 한알 말씀 뒤. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023"
+next: "022 반환 대조(Playwright 깐 곳 · 가짜 작업자가 카드를 되찍는 꼴 · 넷 칸 · C8 · 덧붙임 1 허락 창 줄 · (나) runner.resume_wait_usage() 한 줄) → PLN(합칠 머리 · 새 판 + (나) 한 줄 + 라 ⑤ 맥 확인 줄). 라(승인 창 주인)는 맥 확인 뒤 고침 4로 따로. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-022 반환 (512aef6d)"]
 owner_wait: "-"
 subs: []
