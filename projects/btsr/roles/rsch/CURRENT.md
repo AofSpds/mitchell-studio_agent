@@ -48,6 +48,7 @@
 5. 한알께 짧게: "넘겨받았습니다. 첫째 지침(캡컷 웹앱 오늘 완성)대로 갑니다." 그 뒤 PLN 알림을 기다리며 위 열린 일대로.
 
 - **받음 (2026-11-21 14:05 KST):** 새 세션 Paseo a97bebab · Claude bb014593 · Fable 5.2 xhigh · 제공자 claude(claude-naver)가 받음(Paseo가 연 시각 14:03:24). 1 읽기 끝(AGENTS · 이 칸 · directives 모두 · knowhow 끝 10줄 · 말씀 11-21 끝 60줄 · 요청서 003 6–12번). 이 칸의 '14:05'는 실제 넘김 커밋 ed83e00 14:02:55 · afa595d 14:03:09. Paseo로 봄(14:04): PLN a6fd0155 · ARCH d9520b95 쉼 · PMO 5fbbea06 도는 중. 이 세션 transcript는 `~/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/bb014593-….jsonl`(`.claude-max` 아님). 다음: 옛 세션 제목 CLOSED → 도우미 transcript 바꾸기 → 한알께 알림 → PLN 알림 기다림.
+- **지금 (14:05 KST):** 3 · 4 끝 — 옛 세션 14d04ad1 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`(Paseo로 확인) · 도우미 `last_utt.py` · `check_utt.py` transcript를 이 세션 것으로 바꿈(`check_utt.py` 기본 말씀 파일도 2026-11-21.md로 — 돌려 봄). 한알께 알림. 이 세션에 온 한알 말씀은 아직 없음. 기다림: PLN 알림(묶음 5 + 3-2 반환).
 
 ## ★ 새 세션에 넘김 (2026-11-21 03:40 KST) — 받는 세션은 여기부터. 아래 ★ 칸들은 지난 기록(필요할 때만)
 
