@@ -3,10 +3,10 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T02:23:48+09:00"
+updated: "2026-11-22T02:25:53+09:00"
 base_commit: "fa2b7aa"
-now: "021 본문·덧붙임 1의 1–8 반환 · 제품 기능 가지 5bbe272"
-next: "ARCH 수용 및 실제 아이폰 확인 결과 대기"
+now: "021 통합 반환을 ARCH가 받음 · 넘김 (4) 저장"
+next: "새 PRIMARY 받음 커밋 대조 후 ARCH에 새 연락처 전달"
 waiting_for: ["arch:BTSR-ARCH-021-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
@@ -205,3 +205,45 @@ verifier: "mitchell_studio/btsr/pmov"
 - Paseo 상태와 세션 환경에서 새 에이전트 `7837ebd8-33f1-4729-bafe-e9a3e72f45d6`, 작업 공간 `wks_2dc964d20c5cca11`, Codex 세션 `01a1fd46-60cf-7d52-80da-caa5e42882b2`를 대조했다. 실행 설정은 `gpt-6.2-astra / ultra / full-access`, 작업 가지는 `btsr/pmo`다.
 - 받음 시점에 ARCH는 013 제품 `94d4522`의 대조 결과가 일치해 PLN 반환서를 작성 중이었다. 확인한 ARCH 원격 끝은 `9874857`이다. MAC_RUN 개정은 ARCH의 정식 요청을 기다린다.
 - 받음 커밋 `049fe8e`의 원격 반영 뒤 옛 PMO 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로 바꾸고 새 PMO 제목을 확인했다. ARCH와 RSCH가 새 연락처를 수신했다. RSCH에는 한알 말씀 원문과 수신시각을 함께 보냈고 옛 PMO에도 전환 결과를 전했다. ARCH는 `btsr/arch`의 `93300f0`에 새 연락처를 기록했다.
+
+## 넘김 (4) — 2026-11-22 · PMO 7837ebd8
+
+2026-11-22 02:25:53 KST에 저장했다. 한알 02:13:24 「네 완료 보고 받으시면 승계 시키세요」, RSCH 요청서 003 60번(에이전트 main `de0b276`), PLN `815aa99`에 따른다. ARCH는 제품 `5bbe272`와 PMO 반환 `7cd7e37`을 받았고 여덟 기준을 대조 중이라고 알려 왔다.
+
+### 제품과 여덟 기준
+
+제품 가지 `feat/webapp-upload-stall2-20261122`는 push 직전 main `8b0d084` 위에 있다. 1–4는 구현 `926c1a8` · 시험 `9722fbc`, 5–8은 구현 `0285ab4` · 시험 `5bbe272`다. 로컬과 원격 기능 가지의 머리가 일치했다. 기준별 시험 이름과 파일 네 개의 diff는 [021 통합 반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_RETURN_CODEX.md)에 있다.
+
+| 기준 | 휴대폰 크기 브라우저와 시험 서버에서 확인한 동작 |
+|---|---|
+| 1 | 로그인이 풀린 채 Send를 누르면 만료 안내와 PIN이 뜬다. 서버가 거절한 POST 연결을 닫고 다음 PIN 요청에 200을 준다. |
+| 2 | 업로드 중 새로 고치면 요청 글과 재선택 안내가 돌아온다. 같은 세 장을 다시 골라도 이미 받은 파일을 건너뛰어 한 묶음·한 작업으로 끝난다. |
+| 3 | 세 장 중 한 장이 도착한 뒤 둘째가 끊기면 막대가 33%에 머문다. |
+| 4 | 연결에 실패하면 휴대폰 와이파이·Tailscale·맥북을 확인하라는 안내가 뜬다. |
+| 5 | Jobs의 「더 보내기」와 「사진 다시 올리기」도 전송이 30초간 멎으면 받은 파일인지 확인하고 한 번 다시 보낸다. 두 번 실패하거나 PIN을 다시 넣은 뒤에도 같은 물음에서 이어 간다. |
+| 6 | 같은 이름·크기에 내용이 다른 두 장을 다시 골라도 원래 두 장만 남는다. 서버는 원래 이름과 `_2`, `_3` 등 순번 붙은 이름까지 대조한다. |
+| 7 | Manual은 가진 AI 얼굴 사진을 처음 보낼 때 함께 보내도록 안내한다. 「다시 만들기」는 코드와 같은 2번이다. |
+| 8 | 큰 글자에서도 물음표·건의하기·판 고르기 누름 영역이 44×44px 이상이고 「알림 켜기」의 낱말이 중간에서 갈리지 않는다. |
+
+### 시험 다시 돌리는 법
+
+제품 사본 맨 위에서 Git Bash로 실행한다. Python은 Playwright·cryptography가 설치되고 Chromium·WebKit을 실행할 수 있는 환경을 사용한다. 커밋을 새 폴더에 풀고 **그 폴더 맨 위**에서 실행해야 테스트 환경이 제품 파일을 찾는다.
+
+```bash
+run_dir=$(mktemp -d)
+git archive --format=tar --output="$run_dir/source.tar" 5bbe272
+tar -xf "$run_dir/source.tar" -C "$run_dir"
+(cd "$run_dir" && env -u PYTHONPATH -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests -v)
+```
+
+최종 머리에서 Playwright + cryptography 전체 169개 통과·건너뜀 0. cryptography 없는 기본 환경은 167개 통과·Web Push 2개 건너뜀. 390px Chromium과 iPhone 14 크기 WebKit에서 새 기준 화면 시험 각 9개, 서버 시험 2개를 확인했다.
+
+### 대기와 연락처
+
+ARCH의 021 대조 결과와 RSCH의 제품 main 합침을 기다린다. 실제 아이폰에서 앱 전환 뒤 새로 고침과 가게 와이파이·Tailscale은 휴대폰 시험에서 확인한다. 연락은 ARCH `7621f3de-7d3e-4f12-87e1-98fe95e32fd4`, PLN `be41b33c-5441-48f7-9202-9bb7c21b13a3`, RSCH `ed5ef600-f1ab-4f47-8728-a19091c32e6a`로 한다.
+
+다음 묶음도 Send·Jobs처럼 같은 코드를 함께 고치는 일이면 PRIMARY 한 곳에서 한다. 독립적으로 검증할 일이 생기면 무엇을 몇 개로 나눌지, 실행기와 생각 수준을 의뢰서에 적고 한알 확인 뒤 서브 세션을 연다(결정 46, PMO 의견).
+
+### 새 PRIMARY가 받는 자리
+
+같은 작업 공간 `wks_2dc964d20c5cca11`, 작업 폴더 `C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-pmo`, 가지 `btsr/pmo`에서 이어 받는다. 새 PRIMARY가 자신의 Paseo·Codex 세션 ID와 실행 설정을 확인해 바로 아래에 받음을 적고 이 파일의 PRIMARY 표·앞머리를 갱신한다. 받음 커밋의 원격 반영을 확인한 뒤 옛 PRIMARY가 세션 제목을 닫고 ARCH에 새 연락처를 전한다.
