@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 19:14 KST
+- 확인 시각: 2026-11-21 19:15 KST
 - 세션 열림(지금 세션): 2026-11-21 16:57 KST — Paseo 에이전트 ID ed5ef600-f1ab-4f47-8728-a19091c32e6a · Claude 세션 ID 9281f0ee-13b1-464d-a5e0-cdf4f156a14e · 모델 Fable 5.2 (claude-fable-5-2) · 생각 수준 xhigh · Paseo 제공자 claude(claude-naver) — 옛 세션 a97bebab에게서 넘겨받음(아래 '★★★★ 새 세션에 넘김 (16:57)' 칸 끝 '받음' 줄)
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-21 14:03 KST — Paseo 에이전트 ID a97bebab-51e4-4b70-b968-2177d6fe4f2e · Claude 세션 ID bb014593-1f51-4b36-aeac-c7a72356e466 · 모델 Fable 5.2 (claude-fable-5-2) · 생각 수준 xhigh · Paseo 제공자 claude(claude-naver) — 옛 세션 14d04ad1에게서 넘겨받음(아래 '★ 새 세션에 넘김 (14:05)' 칸 끝 '받음' 줄)
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-21 03:34 KST — Paseo 에이전트 ID 14d04ad1-7592-436b-82c2-69ad9d02e2ae · Claude 세션 ID 63630d2c-42de-4b75-ad4b-a9af9eb005b5 · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 xhigh — 옛 세션 7993ff28에게서 넘겨받음(아래 '★ 새 세션에 넘김' 칸 끝 '받음' 줄)
@@ -85,6 +85,7 @@
 - **19:05 KST — PLN 알림(44번 받음):** `btsr/pln` 514a77c — IVA 고침 반환서에 합쳐짐 덧붙임 · 결정 47(실행 세션 「코덱스 excutor」) · 요구 2.20판 · **기획안 초안 1.9판(19:06 — 1차 묶음 모두 '만듦' · 맥 테스트 줄 '따라 할 글은 만듦 · 맥에서 하실 일을 드림')** · 맥 테스트 글 덧붙임 둘(세션 이름 · 1회차 한 줄은 원격 main 글 읽기)은 ARCH에 요청(`WEBAPP_PHASE1_MACTEST_DOC_ADD1_REQUEST_CLAUDE.md` · 급하지 않음 — 반환이 오면 PLN이 조건을 적어 줌 → RSCH가 차이가 `MAC_RUN_PHASE1.md` 한 파일뿐인지 보고 앞으로 감기). 19:05 한알께 '맥에서 하실 일'을 드림(1회차 한 줄은 origin/main의 글을 읽게 · 2 · 3회차는 글의 한 줄 그대로). 한알께 기획안 초안 1.9판을 한 줄로 알림.
 - **19:07 KST — 한알 물음(기획안을 깃헙 미첼 스튜디오에서도 볼 수 있나):** 한알 19:07:25(uuid b24137d2 · owner/에 옮김) 「기획안  깃헙 미첼 스튜디오에서도 볼수 있나요」 → 확인: 제품 저장소(AofSpds/mitchell-studio) main f457be8에는 웹앱 1차 기획안 · 요구 · 결정 글이 없음 · 기획안 초안은 에이전트 저장소 가지 `btsr/pln`(`projects/btsr/roles/pln/requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md` · 514a77c)에만 있음 → 답: 지금은 못 보심 · 에이전트 저장소 주소를 드림 · **여쭘(답 기다림): 1 지금 그대로 · 2 제품 저장소에도 올림(글만 — PLN → ARCH · PMO → RSCH 합침 · 답이 2면 요청서 003 다음 번호로).**
 - **19:14 KST — 맥 테스트 글 덧붙임 합침(45번): 제품 main = `07cd3fc`** — PLN 반환(`btsr/pln` 6363a86 · BTSR-ARCH-016 · 결정 47) → RSCH 확인: 원격 main f457be8 그대로 · 가지 `feat/webapp-mac-test-doc-add1-20261121` 머리 07cd3fc · 커밋 하나 · `app/webapp/MAC_RUN_PHASE1.md` 한 파일 +5 −1(바뀐 줄을 다 읽음 — '이끄는 ChatGPT = 맥의 세션 「코덱스 excutor」' 두 자리 · 1회차 한 줄 = 한알께 드린 줄 그대로 · 2 · 3회차 그대로) → 19:14 `git push origin 07cd3fc…:refs/heads/main`(강제 아님 · 앞으로 감기) → `ls-remote` main = 07cd3fc. 코드는 안 바뀜(시험은 다시 안 돌림 · ARCH 137 OK). 요청서 003 **45번** → PLN '왔다'. 한알께 드린 '맥에서 하실 일'의 세 줄은 그대로 맞음. **한알께 여쭌 것(하나 · 19:09 · 답 기다림): 기획안을 제품 저장소에도 올릴지 — 1 지금 그대로 · 2 올림(권고).**
+- **19:15 KST — 한알(기획안 최종본 url):** 한알 19:14:48(uuid 0e9d2ec2 · owner/에 옮김) 「아 기획안 최종본 일단 url주세요」 → 가장 새 판 = **1.9판(19:06)** · 원격 `btsr/pln`(머리 6363a86)에 있음을 `ls-remote`와 글 첫머리로 확인 → 주소를 드림: `https://github.com/AofSpds/mitchell-studio_agent/blob/btsr/pln/projects/btsr/roles/pln/requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md`. '제품 저장소에도 올릴지(1 · 2)'의 답은 아직(말씀의 '일단').
 
 ## ★★★ 압축 뒤 여기부터 (2026-11-21 15:54 KST — 한알 15:52:01 「일단 압축을 언제하면 좋을까요 지금 할거면 저장하시죠. 중간에 들어온 작업은 미뤄둡니다.」) — 아래 15:02 칸과 그 밑의 시각 줄들은 지난 기록
 
