@@ -3,10 +3,10 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T17:39:15+09:00"
+updated: "2026-11-21T17:42:38+09:00"
 base_commit: "fa2b7aa"
-now: "013 반환 · 제품 94d4522 · ARCH 대조 대기"
-next: "ARCH의 013 대조 결과 대기"
+now: "013 반환 뒤 PRIMARY 승계 중 · 넘김 (3)"
+next: "새 PMO 받음과 연락처 전환 → ARCH 대조 결과·요청 대기"
 waiting_for: ["arch:BTSR-ARCH-013-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
@@ -177,3 +177,14 @@ verifier: "mitchell_studio/btsr/pmov"
 - Paseo 상태 조회와 세션 환경에서 새 에이전트 `99626982-1190-4151-8cf5-b052ce8644c4`, 작업 공간 `wks_2dc964d20c5cca11`, Codex 세션 `01a1fd1f-0a3d-7752-9625-b5a4b1bdcf1c` 확인. 모델 `gpt-6.2-astra` · high · full-access.
 - 옛 PMO `5fbbea06-93d9-48b2-8930-e101d4603429`에게서 받음. RSCH 받음 기록 `5584987`에 따라 넘김 (2)의 연락처를 새 RSCH로 고침.
 - 에이전트 가지는 이 받음으로 커밋·push를 확인한다. 제품 사본은 011 기능 가지에서 status·fetch 성공. 제품 커밋·push 확인은 012 요청을 받은 뒤 첫 기능 변경 때 진행한다.
+
+## 넘김 (3) — 2026-11-21, PMO 99626982
+
+한알 말씀 원문 (Paseo 수신 17:41:20 KST)
+> 저장하고 승계하세요
+
+- 떠나는 PRIMARY는 Paseo `99626982-1190-4151-8cf5-b052ce8644c4`, Codex `01a1fd1f-0a3d-7752-9625-b5a4b1bdcf1c`이다. 같은 작업 공간 `wks_2dc964d20c5cca11`과 작업 폴더·가지 `worktrees/btsr-pmo` · `btsr/pmo`를 이어 쓴다. Paseo 런타임에서 승계 직전 확인한 설정은 `codex / gpt-6.2-astra / ultra / full-access`다.
+- 012는 ARCH 수용 후 제품 main `7127393`에 반영됐다. 013은 제품 기능 가지 `feat/webapp-b82-template-r2-20261121`의 `94d4522`, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B82_RETURN_CODEX.md)와 증거는 에이전트 `cf2f50d`. 전체 회귀는 기본 133 통과·2 건너뜀, 암호화 환경 135/135. ARCH에 반환 알림을 보냈다. 17:41 KST 확인한 ARCH 기록은 `btsr/arch 9874857`; 013 수용과 후속 구현 요청은 이 시점에 미접수다.
+- 제품 사본 `C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`는 013 기능 가지와 원격 끝이 같다. 추적 파일 변경 없음. 기존 미추적 Python 캐시 세 폴더는 그대로 두었다. 기능 가지 push 권한은 012·013 실제 커밋으로 확인했다.
+- 남은 일은 ARCH의 013 대조와 다음 요청 접수, RSCH의 맥 시험 결과 대기다. S13 시나리오 3판은 에이전트 main `ffe451d`. MAC_RUN 개정은 ARCH가 요청할 때 맡는다. 제품 main 합치기는 RSCH 몫이고 PMO의 맥 실기 범위는 열려 있지 않다.
+- 받는 PRIMARY는 이 파일·두 반환서와 AAA 규칙 판 v0.14를 읽고 실제 세션 정보를 확인한다. 이 아래에 받음을 남기고 PRIMARY 표·앞머리를 갱신해 이 파일만 커밋·push한다. 옛 세션 제목에 CLOSED를 붙이고 ARCH·RSCH에 새 연락처를 알린다. 저장 뒤 받은 새 요청은 새 PRIMARY가 맡는다.
