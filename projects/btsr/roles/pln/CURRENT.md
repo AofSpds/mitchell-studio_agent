@@ -3,7 +3,7 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T13:26+09:00"
+updated: "2026-11-21T13:35+09:00"
 base_commit: "fa2b7aa"
 now: "ARCH에 둘 넘김 — BTSR-PLN-001 작업자 모델(급함) · BTSR-PLN-002 웹앱 1차 캡컷 길 기획 1판(차례 0→1→2+8→3→5+3-2→4-a→4-b→6, 7 보류). RSCH-003 기획 몫 반환함, 한알께 여쭐 것 7개는 RSCH를 거쳐"
 next: "ARCH 반환을 요구(worker-model R01–R07 · webapp-phase1 R1.1–R6.4)와 대조해 받기 → RSCH에 반환(맥 길 한 줄) · 한알 답(물음 1–7)과 웹앱 시험 결과가 오면 webapp-phase1 2판. 그 밖은 스스로 시작하지 않음(규칙 18)"
@@ -54,6 +54,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **물음 7 답 받음 → 여쭐 것 1–7 끝** (RSCH 덧붙임 main `a682d68`) — 규격이 다르면 완성이 아님(13:20:30이 13:20:12를 바로잡음 — 결정 14 → 요구 1.7판 R6.4).
 - **묶음 2 + 8 반환 받음 → RSCH에 반환** (ARCH `e198ffc`, 13:24) — 제품 가지 `feat/webapp-b2-b8-runner-20261121` `658ec1d`(가짜 claude로 됨). PLN이 정함: 진짜 claude 맥 한 번은 1차 끝 맥 시험에(결정 08) · RSCH 확인되면 main 합침(조건 main `6cfbc5f` · 가지 `658ec1d`). [WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md)
 - **묶음 2 + 8 합쳐짐 — 제품 main `658ec1d`** (RSCH 확인 · push, main `2e79e33` 요청서 9번, 13:26 PLN이 봄). 맥에는 안 넣음.
+- **묶음 1-1 반환 받음 → RSCH에 반환** (ARCH `2eafcf7`, 13:35) — 제품 가지 `feat/webapp-b1-1-anon-20261121` `100ffa5`, R1.4 · R1.5. RSCH 확인되면 main 합침(조건 main `658ec1d` · 가지 `100ffa5`). [WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 묶음 3 → PMO BTSR-ARCH-007.
 - 제품 저장소는 시키시기 전에 읽지 않음 — 합치기 조건 대조로 제품 원격을 fetch · log · merge-tree만 봄(12:49, 작업 사본은 건드리지 않음). rsch `studies/`는 RSCH-003이 가리킨 글만 읽음.
 
 ## 세션
