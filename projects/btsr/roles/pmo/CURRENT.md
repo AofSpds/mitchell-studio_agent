@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T04:17:00Z"
+updated: "2026-11-21T04:58:05Z"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-007(묶음 3 접수 표 · 하나씩 묻기 · 원고 늘 확인) 반환함 13:42 KST — 제품 가지 feat/webapp-b3-intake-20261121 32b55dc. 맥 일은 1차 끝(결정 08). BTSR-RSCH-001 맥 결과 대기"
-next: "ARCH의 다음 요청(묶음 5 + 3-2 설계) · BTSR-RSCH-001 맥 결과를 받으면 이어 함 — 스스로 시작하지 않음(규칙 18)"
-waiting_for: ["arch:next-request-b5-b3-2", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "승계 중 — 한알 13:55:17 「…Pln arch pmo 모두 저장하고 승계하도록 하세요」. BTSR-ARCH-008은 멈출 수 있는 곳에서 멈춤(제품 가지 feat/webapp-b5-b32-worker-face-20261121 e4323cf push). 새 세션(Paseo 제공자 claude · 이름표 claude-naver)이 아래 넘김대로 이어 받음"
+next: "새 PRIMARY: 받음 적기 → 옛 세션 제목 CLOSED → ARCH · RSCH(14d04ad1)에 승계 끝 · 새 Paseo ID → BTSR-ARCH-008 이어 하기(넘김 3번)"
+waiting_for: ["successor:take-over", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -40,7 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
-| BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | 받음 · 하는 중. 바탕 main 32b55dc · 맥 일 X · 가짜 작업자만 · codex 값은 비워 둠 · 제품 main push X |
+| BTSR-ARCH-008_webapp-b5-b32-worker-face — 작업자 한 대화 한 카드 · 막힘 흐름 · 사용량 저절로 · Face 단계 · 조사 을/를 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` b5d64f2 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (커밋 시각) | **하는 중 · 승계로 멈춤** 13:58 KST — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` e4323cf(push, 바탕 main 32b55dc). 넘김 3번 |
 | BTSR-ARCH-005_webapp-b1-merge — 묶음 1 가지 6cfbc5f를 제품 main에 (앞으로 감기, 맥에는 넣지 않음) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` db1f7e8 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-005_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (80ab702) | **닫힘** (ARCH 58c9c95) — 한알 13:13:30 「직접 하세요.」로 RSCH가 main을 6cfbc5f로 push. PMO의 push는 자동 심사에서 막혔고 우회 안 함. 이 PC 로컬 main = origin/main 6cfbc5f 확인 |
 | BTSR-ARCH-003_worker-model-merge — 제품 가지 `fix/worker-model-sol-20261121` 3495f7e를 제품 main에 합침 (PLN이 정함, 한알 03:47:04) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` bc710d7 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (34a5007) | **반환함** 12:54 KST — 제품 main `e5785b3` (첫 부모 3bd6cdd), [반환서](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) |
 
@@ -56,3 +56,50 @@ verifier: "mitchell_studio/btsr/pmov"
 - 제품 저장소 원래 사본(`C:\Users\ms1pk\dev\mitchell-studio`)은 읽기만(pull --ff-only 한 번). 제품 저장소의 `agents/pmo`는 맥에서 도는 제품 쪽 에이전트이고 이 세션이 아님.
 - 막힌 것: 휴대용 ffmpeg 받기가 자동 심사에서 막힘 — 우회하지 않음. ffprobe 대신 MP4 상자를 읽어 확인함.
 - main 합치기를 누가 정하는지 말씀 없음 — 스스로 합치지 않음.
+
+## 넘김 (승계 — 2026-11-21 13:58 KST, 옛 PRIMARY Paseo f3cf6938가 씀)
+
+근거: 한알 2026-11-21 13:55:17 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」 · 13:24:06 「…다하면 네이버로 여세요.」 · 13:35:34 「…이 세션도 네이버로 승계할께요.」 — RSCH(14d04ad1)가 전함, 원문은 에이전트 저장소 main `owner/utterances/2026-11-21.md`(b9c976b).
+
+### 1. 지금
+- 열린 요청은 **BTSR-ARCH-008** 하나(묶음 5 + 3-2). ARCH-001 · 002 · 003 · 004 · 006 · 007은 ARCH가 수용, 005는 닫힘. BTSR-RSCH-001(OpenCut 시험 코드)은 반환 · 수용, 건은 열려 있고 맥 결과 대기.
+- 제품 main = `32b55dc`(묶음 3까지). 제품 main push는 PMO가 하지 않음(1.6판 — RSCH 몫, ARCH-005 때 자동 심사에서도 막힘).
+- 맥 일은 하지 않음 — 1차 끝 맥 시험에서(PLN 결정 08). 컴퓨터 유즈는 한알 승인 전(설계 BTSR-ARCH-008 5번).
+
+### 2. 이 PC (git 밖)
+- 작업 폴더 `C:\Users\ms1pk\dev\btsr-pmo-work\`: `mitchell-studio/`(제품 저장소 사본 — 지금 가지 `feat/webapp-b5-b32-worker-face-20261121`) · `opencut-classic/`(OpenCut 포크 사본, 커밋 0457760) · `tools/bun-1.2.18/` · 시험 출력 폴더들. 개발 서버 · 시험 서버는 모두 꺼 둠.
+- 시험 명령(윈도도 환경 값 없이): 제품 사본 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests -v` → e4323cf에서 52/52.
+- 화면 시험: 시험용 웹앱(`WEBAPP_DATA_DIR` 등 시험 폴더 · `WEBAPP_HOST=127.0.0.1` · 빈 포트 · 시험용 PIN/SECRET · `WEBAPP_RUNNER=0`)을 띄우고 화면 없는 Chrome + DevTools 프로토콜 스크립트로 — 본보기 `records/webapp-phase1/evidence/screen_b3_test.mjs`.
+
+### 3. BTSR-ARCH-008 — 한 것 · 남은 것 (설계 `btsr/arch` b5d64f2 `WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md` 1판)
+- **한 것(제품 가지 `feat/webapp-b5-b32-worker-face-20261121` e4323cf, 바탕 main 32b55dc):**
+  1. Face 단계 — `jobs.STEPS` 맨 끝(번호 8)에 `face`, 보이는 차례 `jobs.ORDER = [0,1,2,8,3,4,5,6,7]`, 옛 8단계 작업은 `fill_face`로 Face `done`("해당 없음"), `next_step` · `summary`가 ORDER로 돎(옛 번호 0–7은 그대로라 다른 코드 안 깨짐).
+  2. 조사 `jobs.josa(word, "을를"|"이가"…)` — `intake.py` 물음 · `preflight.py` C8에 씀.
+  3. `worker_model.py`에 `MODEL_CLI` · `EFFORT_CLI` · `PERMISSION_CLI` **빈 값**(지어내지 않음, 맥 0에서 채움) + `cli_values()`(하나라도 비면 None).
+  4. `preflight.py` 수동 칸 C3 · C4 · C7을 점검에서 뺌(MANUAL_ITEMS · set_manual은 남김) + `gate(job)`.
+  5. 새 `worker.py`: codex 실행 파일 찾기 · `codex exec --help`에 있는 플래그만 · 값 비면 `not_ready` · timeout · 한도/로그인 가름 · `retry_at`(출력의 시각 또는 다음 아침 7시 KST) · Codex 기록에서 모델 읽기 · 로그.
+  6. `prompts/face.md`(AI 얼굴 카드).
+- **남은 것(차례 [제안]):**
+  1. `runner.py`: 길 `mac_gui`에 `six` · `face`(`LANES`), 길 쉼 `PAUSE[lane]` + 일 상태 `wait_usage`(`retry_ts` 지나면 저절로) — 길 `claude`의 한도도 `failed` 대신 `wait_usage`(지금 `test_runner.Claude.test_limit_no_retry`는 옛 동작을 봄 → 고칠 것), `not_before`(Fit 기다림 등).
+  2. `six` 일: 시작 전 `J.tick` → `card_part` 없으면 조금 뒤 다시 · `preflight.gate` → `J.handoff_text` 카드(+다시 할 때 "앞에서 멈춘 까닭: …, 다른 길로" · 운영자가 고른 답 한 줄) → `worker.run("six", …)` → `J.tick`으로 결과 줄 · 프로젝트 파일 확인(시험은 `RESULT_SETTLE` · `EXPORT_WAIT` 0) → 칸 done이면 다음 `six`. 멈추면 2-5 흐름: 첫 번째 → 새 대화로 다시 · 두 번째 → 고르는 물음(음악 못 찾음 「비슷한 곡으로 · 음악 없이 · 개발자에게 넘기기」 · 목소리 「비슷한 목소리로 · 개발자에게 넘기기」 · Fit code 2 원고 김 「원고 줄이기(→ `save_feedback(script)`로 ③ 다시) · 개발자에게 넘기기」 — PMO가 더 지은 것은 반환서에 표로) · 그래도/고를 것 아니면 ⑥ `stop` + `dev: true`, 만들던 것 그대로 · 저절로 다시 안 함. 편집 끝나면 `six`를 차례표에.
+  3. `face` 일: `intake.json` after 첫 장을 `for_chatgpt/after.<확장자>`로 복사 → `face.md` 카드 → `worker.run("face", …)` → `for_chatgpt/face_<N>.png`가 이번 실행 뒤 · 9:16(±2%) · 그림 파일인지 + 결과 줄(설계는 같은 정규식에 `얼굴:` 더함 — 따로 파일로 할지 정해 반환서에) → `face_candidates`에 쌓고 Face `check`.
+  4. `reel_api`: 원고 「좋아요」 → `ai_face.have`면 Face done(올린 사진) → edit / 아니면 Face now → `face` 일 · `POST /api/job/face {id, action: approve|remake|upload}`(다시 만들기 3번 넘으면 개발자) · 「가진 사진 올리기」는 묶음 3의 「더 보내기」 길 · ⑥ 물음 답 주소 · `jobs.py resume <작업> <칸>`(개발자 명령).
+  5. 편집: 일 글에 승인한 얼굴 파일(장면 1 · AI 구간마다 합성 표시), 확인에 `ai: true` 장면 합성 표시.
+  6. 화면: Face 칸(화5-2 — 나란히 · 「이 사진으로 갈게요 →」 · 「다시 만들기」(남은 횟수) · 「가진 사진 올리기」 · 머리 다름 노랑 띠 · 잠긴 합성 표시 줄) · ⑥ '지금' 줄 · 고르는 물음(화7 가) · 개발자(화7 나) · 사용량(화7 다) · 띠 · Copy Prompt · 「시작 전 점검」 · Do It Myself · Mark Done · Helpdesk 다른 앱 열기 없앰 → `words_allow.json`의 묶음 5 줄 12개를 0으로. app.html `STEPS`에 9번째(Face) · 그리기는 ORDER · 번호(①…)는 보이는 자리로.
+  7. 시험: `tests/fake_codex.py`(정한 대로 결과 줄 · 프로젝트 파일 · 내보낸 파일 · 얼굴 그림) + 설계 7번 1–11 · 화면 시험.
+  8. `MAC_RUN_PHASE1.md` 한 장(맨 위 '하지 않으실 것' · 맥 0 → 1 → 2 → 3, `MAC_RUN_B2.md`를 합침) — **돌리지 않음**.
+  9. 반환서 6항목 + 맥 길 한 줄(적어 두기만), `records/webapp-phase1/`.
+- 지킬 것: 제품 main push 안 함 · 맥 일 안 함 · codex 명령줄 값 지어내지 않음 · 시험 명령과 환경 값을 반환서에 그대로 · 저장되는 값을 바꾸면 옛 값도 읽히게.
+
+### 4. 받는 세션이 할 것 (한알 13:55:17 · RSCH 전함)
+1. 이 파일과 `records/`의 반환서들을 읽고 받음을 이 칸 아래에 적음(새 Paseo 에이전트 ID · 작업 공간 · Claude 세션 ID — 짐작하지 말고 확인).
+2. 옛 세션(Paseo `f3cf6938-049e-45f7-bb68-a64e06bff385`)의 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로.
+3. ARCH(9d298a54)와 RSCH(14d04ad1)에 '승계 끝 · 새 Paseo ID'만 알림.
+4. 그 뒤 BTSR-ARCH-008을 3번 차례로 이어 함.
+
+### 5. 배운 것 (이 세션에서 — 반환서들의 '배운 것' 모음)
+- 이 PC: Bash heredoc 안의 역슬래시가 반으로 줄어 파이썬 글이 깨질 때가 있음(`C:\Users` → `\U` 오류 포함) → 긴 고침 스크립트는 편집 도구로 파일을 쓰고 `python <파일>`로.
+- 이 PC 제품 사본은 CRLF로 꺼내짐 → 고칠 때 줄끝을 지키는 도구로.
+- 윈도 시험은 `PYTHONUTF8` · `PYTHONIOENCODING` 없이도 한 번 돌림(cp949).
+- 화면 글을 바꿀 때 그 글이 저장되는 값인지 먼저 봄(옵션 `AUTO` · 목소리 출처 `src`).
+- 제품 main push는 자동 심사에서 막힐 수 있음 — 막히면 우회하지 않고 멈추고 알림.
