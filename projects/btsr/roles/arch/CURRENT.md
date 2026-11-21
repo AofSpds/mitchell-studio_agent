@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T15:28:00+09:00"
+updated: "2026-11-21T15:30:00+09:00"
 base_commit: "fa2b7aa"
-now: "4-a · 4-b · 6 설계 2판(15:28, 요구 2.1판 · 시안 3판) → PLN 대조 기다림. 막힘 · 틈새 쪽(화면 8 · 9 · R5.5 · R5.6 · 맥 연결 · 빈 Jobs)은 RSCH 요청서 003 17번 뒤 — 4-a-2로"
-next: "PLN 대조 → ARCH-009(4-a 2판, 바탕 main 3072e7e)를 PMO(5fbbea06)에 → 반환 대조 → 4-b · 6. 17번이 오면 4-a-2 설계"
-waiting_for: ["role:mitchell_studio/btsr/pln:4-a · 4-b · 6 설계 2판 대조", "role:mitchell_studio/btsr/pln:RSCH 요청서 003 17번(막힘 · 틈새 시나리오 — S9)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
+now: "PLN 대조 끝(d872789) — 4-a 2판 → PMO에 BTSR-ARCH-009(15:30). 4-b 받음(4-a 반환 · 알림 물음 답 뒤 PMO). 6 2.1판(기준 4 · 5-1 바로잡음, R6.3 안쪽 판정)"
+next: "ARCH-009 반환 대조 → PLN에. 그 뒤 4-b(알림 답 뒤) · 6을 PMO에. 17번이 오면 4-a-2 설계. 요청 번호 다음 010"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-009 반환 (5fbbea06)", "role:mitchell_studio/btsr/pln:RSCH 요청서 003 17번(막힘 · 틈새)", "owner:4-b 알림 글 셋 · cryptography"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -48,7 +48,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`.
   - 제품 저장소(dev 폴더의 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 읽음 — 그 작업 사본(main `0636fa0`에 멈춰 있음)은 건드리지 않음. 시험은 `git archive <가지> | tar -x -C <새 임시 폴더>` 뒤 그 안에서 — **저장소 전부를 풀어야** 함(`test_words`가 매뉴얼을 읽음).
   - 제품 main 합치기: PLN이 정하고 **RSCH가 앞으로 감기 push**(1.6판 결정 13). ARCH · PMO는 main push 안 함. 맥 일은 1차 끝 맥 시험에 한 번(결정 08).
-  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–008까지 씀(다음 009).
+  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–009까지 씀(다음 010).
   - 큰 읽기(남의 저장소 · 긴 기획)는 하위 에이전트(Explore)에 맡기고 결론만 받음. 일하는 PMO에게 새 요청을 보내면 그 차례에 끼어드므로, 작은 급한 것만 끼우고 나머지는 반환 뒤.
   - 묶음마다 반환 전에 그 사이 바뀐 한알 말씀과 요청서 기준이 맞는지 다시 봄(규칙 37).
   - 이 PC의 Bash heredoc 파이썬 안에 윈도 경로(역슬래시 + U)를 넣으면 스크립트가 안 돎 — 경로가 든 글은 파일 쓰기 도구로.
@@ -71,6 +71,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 5 + 3-2 반환 PLN 받음(`btsr/pln` cb548e0) → **제품 main `3072e7e`**(RSCH push, 에이전트 main d766ed3). 남은 것 1 · 2는 ARCH-009에(PLN 받음).
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
+  - PLN 대조(`btsr/pln` d872789): 4-a 받음 → [BTSR-ARCH-009](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-009_REQUEST_CLAUDE.md) PMO에(15:30, 바탕 main 3072e7e) · 4-b 받음 · 6 받음 — 기준 4(승인 단추 있고 opinion) · 5-1 바 네 칸 바로잡아 2.1판 · R6.3은 안쪽 기록(요구 2.2판).
   - **설계 2판** (15:28): [4-a](design/webapp-phase1/WEBAPP_PHASE1_B4A_DESIGN_CLAUDE.md) 다시 씀(한 번에 한 편 · `busy()` — 만드는 중 · 미첼 확인 기다림만, 개발자에게 넘어가면 Send 켜짐 · 넘어간 편은 새로 보내면 화면에서 빠짐 · 하는 일 한 줄 + 아홉 칸 바 n/9 · 여러 편 화면 · 길 걷기를 **이 건에**(ARCH가 정함) · events · now_line은 안쪽 · ? 표 화면 5 · R1.7 글 걷기 · MAC_RUN 물음 1) · [4-b](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) 4-1만(켜기는 Manual 탭) · [6](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) 5 · 5-1 · 6 · 7(3판 화면 10–13, 설정 줄은 안쪽 — R6.3 PLN께 짚음). 요구 2.1판(`btsr/pln` 37b73bf, 결정 27) 반영.
   - **보류 풀림**(PLN — RSCH 요청서 003 15번 main ed67f92): 요구 **2판** · 결정 20–26(`btsr/pln` 0933ad0) — 20 미첼 · 21 R1.7 현황과 단추만(? 표 셋) · 22 R1.6 영어 그대로(결정 16 거둠) · 23 R2.3 한 번에 한 편(R5.3 거둠) · 24 R4.1–4.3 하는 일 한 줄 + 바(진행 기록 · 템플릿 줄 화면에 없음, R8.4 화면 줄도 거둠) · 25 4-b 알림 설명 없음 · 26 R6.6 끝난 영상은 Post. 화면 참고 시안 3판 `sub/s8_uiux_rework/`.
   - **보류**(PLN, `btsr/pln` ca4233f · RSCH 요청서 003 14번 main b45f67e): 4-a · 4-b · 6 구현 요청(ARCH → PMO) 보내지 않음. 한알 말씀 다섯(확정 아님 — 시안 3판 → 중간점검 → 15번 → 요구 2판). 설계 읽기 · 준비만. [닿는 곳 메모](design/webapp-phase1/WEBAPP_PHASE1_HOLD_003-14_IMPACT_CLAUDE.md).
