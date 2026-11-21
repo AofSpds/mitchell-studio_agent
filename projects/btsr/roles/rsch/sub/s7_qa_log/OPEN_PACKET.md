@@ -56,3 +56,10 @@ RSCH PRIMARY가 한알 말씀에 답하기 전에 기록부터 하다가 답이 
 1. 오늘 14:09:39부터 지금까지의 질답을 `질답.md`에 적는다. 그 앞의 일은 `projects/btsr/roles/rsch/CURRENT.md` 맨 위 '★ 새 세션에 넘김 (14:05)' 칸 끝의 줄들만 훑어본다(더 읽지 않음).
 2. `owner/utterances/2026-11-21.md`에는 14:23:51까지 적혀 있다. 그 뒤 것(14:25:05 a00ec79b · 14:32:58 8886f54b부터)을 `말씀_붙일것.md`에 쓴다.
 3. 열린 물음 표를 만든다. 패킷을 쓰는 지금 열린 것: (가) 탭 · 단계 이름 — 1 원래대로 영어(권고) · 2 한글 (나) 진행 기록 자리 — 1 단계 아래 · 2 단계 위 · 3 운영자 화면에서 뺌. 아직 여쭙지 않은 것: PLN 묶음 4-b 두 물음(휴대폰 알림 글 셋 · 맥 파이썬에 `cryptography`).
+
+## 덧붙임 (2026-11-21 14:40 KST, PRIMARY)
+
+- 근거: 한알이 14:37:52에 이 SUB 창에서 직접 물으심("템플릿 1 프로세스가 어떻게 되나요?") — 이 창을 묻고 답하는 자리로도 쓰심.
+- **한알이 이 창에서 물으시면 답한다.** 답부터, 짧고 쉬운 말로. 모르면 모른다고 하고 PRIMARY 창을 알려 드린다. 정하는 일(결정 · 승인)은 받지 않는다 — 그런 말씀은 원문을 적고 "RSCH PRIMARY 창에 전하겠습니다"라고 답한 뒤 답 끝에 PRIMARY가 볼 수 있게 `질답.md` 맨 위 '열린 물음' 표에 올린다.
+- 답하려고 읽어도 되는 것(읽기만): 이 저장소 전부 · 제품 저장소는 `git -C C:/Users/ms1pk/dev/mitchell-studio show origin/main:<경로>`와 `git -C … grep`만(fetch · checkout · pull · 파일 고치기 안 함). 확정 템플릿: 제품 `agents/rsch/templates/reel-workflow.md`(11-09 승인 · 정본은 `templates/reel-main/`로 옮겨짐) · 바탕 `agents/rsch/research/2026-11-09_video-workflow-requirements.md`. 1차 기획: `git show origin/btsr/pln:projects/btsr/roles/pln/requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md`.
+- 그 창에서 하신 말씀과 답도 `질답.md` · `말씀_붙일것.md`에 같은 꼴로 적는다('어느 창'은 S7_QA_LOG 창).
