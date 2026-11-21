@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
 now: "ARCH-018(기획안 사본) · 019(맥 글 덧붙임 3) 받음 · PLN에 반환(21:27) — 합칠 머리 896abae(main e095396 위 커밋 둘)"
-next: "PLN 알림대로. 다음 요청 번호 020"
+next: "PLN 알림대로. **다음 맥 글 덧붙임이 생기면 함께: 3-2와 개발자 글 전송 켜기를 3회차에서 떼어 '나중에 따로'로**(PLN RSCH 53번 — 그 일만으로 덧붙임 열지 않음). 다음 요청 번호 020"
 waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 다음 결과 · 다음 요청 (be41b33c)"]
 owner_wait: "-"
 subs: []
@@ -63,6 +63,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 결정 46(한알 18:41:14 「…멀티 에이전트 작업은 작업 의뢰서에 필요할때 쓰시고 저한테 확인을 받으시면 됩니다」, RSCH 43번): 서브 세션 · 보조 여럿은 열기 전에 '무엇을 · 몇 개로 · 실행기 · 생각 수준'을 적어 PLN → RSCH → 한알 확인. PMO(7837ebd8)에 전함. **ARCH도 하위 에이전트 여럿을 쓰려면 먼저 확인 받음.**
   - **IVA 고침**: PMO 반환 `btsr/pmo` a6e3beb(가지 `feat/webapp-iva-fix-20261121` f457be8, 바탕 94d4522) → ARCH 대조(137 OK skip 2 · cryptography 137 OK · grep 가1 · 가2 · 나3 · 나4 · 나5 · 글) → [반환](design/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_BTSR-PLN-002_RETURN_CLAUDE.md) 18:49.
   - 웹앱 1차 모두 제품 main f457be8(RSCH 19:02 · 44번). 맥 테스트 글 덧붙임(결정 47): PMO 반환 `btsr/pmo` bebc290(07cd3fc) → ARCH 대조(한 파일 +5 −1 · 137 OK skip 2) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD1_BTSR-PLN-002_RETURN_CLAUDE.md) 19:13. 요청 번호 016까지(다음 017).
+  - RSCH 53번(PLN 알림): 한알 내일(11-22) 휴대폰 테스트 — PLN 한 장 세 줄(1-6부터 1회차 · 3-4만 · 3-6부터). ARCH 대조 넷을 PLN에 드림('묻지 말고'는 2회차로 이어 감 · 3-4 앞에 3-3 앞 절반(HTTPS Certificates) · 3-5는 한알 손일 · 3-6 전송 꺼져도 로컬 대기로 넘어감).
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
