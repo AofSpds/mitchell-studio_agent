@@ -3,12 +3,12 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(13:57 KST): 새 Paseo a6fd0155 · Claude 1a72e654, 옛 071c15f3 CLOSED"
-updated: "2026-11-21T13:57+09:00"
+updated: "2026-11-21T13:59+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 32b55dc"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.7판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(14d04ad1)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch:묶음 5 + 3-2 반환"]
-owner_wait: "1 — 컴퓨터 유즈 사전 승인(AAA 43, 묶음 5 + 3-2) — requirements/webapp-phase1/WEBAPP_PHASE1_CU_ASK_CLAUDE.md, 권고 1"
+waiting_for: ["role:mitchell_studio/btsr/arch:묶음 5 + 3-2 반환 (새 ARCH Paseo d9520b95)"]
+owner_wait: "0 — 컴퓨터 유즈 사전 승인 받음(13:57:21 「1 1 1 1 1」, 결정 15)"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -31,11 +31,12 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 ### 3. 받는 세션이 할 것
 1. 이 칸 끝에 '받음' 한 줄(시각 · 새 Paseo 에이전트 ID · Claude 세션 ID · 모델 — ID는 list_agents와 transcript에서 확인, 짐작하지 않음)을 적고 커밋 · push.
 2. 옛 세션 제목을 `MITCHELL_STUDIO/BTSR/PLN CLOSED`로(update_agent `071c15f3…`).
-3. RSCH(`14d04ad1-7592-436b-82c2-69ad9d02e2ae`)에 '승계 끝 · 새 Paseo ID'만 알림. ARCH(`9d298a54-66dd-4bdd-8617-78f6c234c7ce`)에도 새 ID를 알림.
+3. RSCH(`14d04ad1-7592-436b-82c2-69ad9d02e2ae`)에 '승계 끝 · 새 Paseo ID'만 알림. ARCH(`9d298a54-66dd-4bdd-8617-78f6c234c7ce`)에도 새 ID를 알림. — ARCH도 승계함: 새 ARCH Paseo `d9520b95-4853-46b9-b04b-96199dddc95d`(옛 9d298a54 CLOSED, `btsr/arch` `c8d0b55`).
 4. 일하는 길(지금까지): ARCH 반환이 오면 요구 R과 대조 → `requirements/webapp-phase1/`에 반환서(6항목 + 맥 길) → RSCH에 알림. 합치기는 PLN이 반환서에 조건(main · 가지 머리, 앞으로 감기)을 적어 정하고, RSCH가 확인 · push(결정 05 · 13). 합쳐지면 제품 원격을 fetch로 보고 덧붙임. 한알이 이 창에 말씀하시면 [PLN_OWNER_UTTERANCES_CLAUDE.md](PLN_OWNER_UTTERANCES_CLAUDE.md)에 원문 그대로.
 5. 보고는 짧게 · 결론 먼저. 스스로 다음 일을 시작하지 않음(AAA 18).
 
 - **받음** (2026-11-21 13:57 KST) — 새 PRIMARY: Paseo 에이전트 `a6fd0155-25ef-4bc7-91b0-394849d6776e`(제공자 `claude`, 부모 `071c15f3`) · Claude 세션 `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 (`claude-opus-5-5`) high. list_agents와 transcript에서 확인. 옛 071c15f3 → CLOSED.
+- **한알 답 다섯 받음** (RSCH 요청서 003 12번, 에이전트 저장소 main `ee3d6a8`; 13:57:21 「1 1 1 1 1」) — 결정 15(컴퓨터 유즈 사전 승인, CU_ASK 범위 그대로 · 돌리는 것은 1차 끝 맥 시험) · 16 탭 · 단계 이름 한글로 · 17 템플릿 고르는 칸 지금 숨김 · 18 규격 다른 판 「사진 앱에 저장」 막음 · 19 원고 단추 「이 원고로 갈게요 →」 → 요구 1.8판(R1.6 · R2.5 · R6.5 · R8.4). 시안 S6(`00e3845`)은 화면 참고. ARCH(d9520b95)에 알림. 열린 일 1 끝.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
@@ -93,5 +94,5 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 | MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo a6fd0155, Claude 세션 1a72e654, 제공자 claude — 11-21 13:57 승계) | ARCH 반환 · 한알 답 기다림 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo 071c15f3, Claude 세션 269c8b89, claude-google) | 닫힘 11-21 13:57 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/RSCH | 아래 역할 PRIMARY (요청을 보내 온 쪽) | Claude (Paseo 14d04ad1 — 11-21 03:32:07 한알 말씀으로 승계, 옛 7993ff28 CLOSED; RSCH CURRENT main에서 확인) | 알림 · 반환은 14d04ad1로 | `../rsch/` (main) |
-| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo 9d298a54) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
+| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo d9520b95 — 11-21 승계, 옛 9d298a54 CLOSED, `btsr/arch` c8d0b55) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo) | 닫힘 — Paseo 에이전트 `769642ae`, Claude 세션 `6123ff97` (옛 기록 기준), Paseo 작업 공간 `wks_b17624602f48a73b`(제목 PLN-CLOSED) | [archive/](archive/) |
