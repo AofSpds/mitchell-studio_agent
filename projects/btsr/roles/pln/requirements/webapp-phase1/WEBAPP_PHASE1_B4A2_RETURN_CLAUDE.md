@@ -45,3 +45,9 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b4a2-stuck-
 ## 6. 다음
 
 반환함. RSCH 확인 → RSCH가 앞으로 감기 push. PMO 차례: 묶음 6(BTSR-ARCH-011, 바탕 `243cff0`) → 4-b(012) → 8-2(013). 합쳐지면 기획안 초안의 '막혔을 때'를 '만듦'으로 판을 올림.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 16:41 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `5cd241c` RSCH 요청서 003 29번 — 제품 main 앞으로 감기 `ed11f5a..243cff0`(결정 13, RSCH가 가지를 저장소 밖에 풀어 시험 116 OK를 다시 봄 · `devpush.py`를 다 읽음). PLN이 16:41에 제품 원격 main 머리 = `243cff0`를 ls-remote로 봄. 맥에는 넣지 않음(결정 08).
+- RSCH가 맥 시험 전에 볼 것 둘(ARCH에 넘김 — 요구 2.13판 R5.7 판정): ① 웹앱이 짓는 커밋의 이름 · 메일을 늘 일반 이름으로 ② 개발자 글의 일 로그 끝 20줄 — 켜기 전에 쌓인 글을 사람이 한 번 읽기 · 꼭 올려야 하는지.
+

@@ -4,10 +4,10 @@ session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 한알 16:05:36: 지금 작업이 끝나면 한알이 새 세션으로 바꾸심(멈추라는 말씀 아님) → ★ 넘김 칸을 늘 새것으로"
 updated: "2026-11-21T16:09+09:00"
-base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 ed11f5a"
+base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 243cff0"
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.10판 · 결정 01–36. 제품 main ed11f5a까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a). PMO가 4-a-2(BTSR-ARCH-010) 구현 중. 설계 끝 · 차례 기다림: 6 · 4-b. 8-2는 다14 답 뒤. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.10판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 덧붙임. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-a-2 → 6 → 4-b → 8-2 → 1차 끝 맥 시험. 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/rsch (a97bebab):4-a-2 확인 · main 합침", "role:mitchell_studio/btsr/arch (d9520b95):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
+waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
 owner_wait: "한알이 기획안 초안 1판(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -80,6 +80,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **기획안 초안 1.1판** (16:30) — ARCH 짚음: 접수 '만들 수 없는 것만 묻기'(R3.5)는 4-a-2에 들어 만드는 중 → 나눠 고침. PLN이 더 찾음: 1번 차례에서 물음(화면 4 · 17)을 원고 확인(화면 16) 앞으로(R3.3 — 고르기 전엔 원고를 안 씀). 시안 3판 글 '원고 확인은 화면 3과 4 사이'가 R3.3과 어긋나 보임 → RSCH에 짚음.
 - **28번 받음 → 기획안 초안 1.2판** (16:31, RSCH main `df8eef2`) — ① 물음이 원고 앞(1.1판에서 고침, 시안 글은 RSCH가 고치는 중) ② AI 얼굴 줄에 '얼굴이 보이는 시술 후 사진의 얼굴만 모델 얼굴로 바꿔 만든 것' 한 마디.
 - **묶음 4-a-2 반환 받음 → RSCH에 반환** (ARCH `d5f3369`, 16:36) — 제품 가지 `feat/webapp-b4a2-stuck-restart-20261121` `243cff0`, R2.3 · R2.7 · R3.5 · R5.5–R5.7 · R32.4 대조(push는 원격 main 위 글 하나 · 기본 꺼짐 · 제품 CLAUDE.md 예외 한 줄). RSCH 확인되면 main 합침(조건 main `ed11f5a` · 가지 `243cff0`). [WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md). 묶음 6 → PMO BTSR-ARCH-011(바탕 243cff0). 합쳐지면 기획안 초안 판 올림.
+- **묶음 4-a-2 합쳐짐 — 제품 main `243cff0`** (RSCH 확인 · push, main `5cd241c` 요청서 29번, 16:41 PLN이 봄). 맥에는 안 넣음. RSCH가 짚은 둘 → 요구 2.13판 R5.7 판정(커밋 이름 · 메일 늘 일반 · 로그 줄 최소 · 켜기 전 사람이 읽기) → ARCH. 기획안 초안 1.3판(막혔을 때 · 접수 물음 = 만듦).
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
