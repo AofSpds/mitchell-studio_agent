@@ -2,12 +2,12 @@
 role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
-state: "ACTIVE — 승계 중(16:49 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 세션(claude · Opus 5.5 · high)"
-updated: "2026-11-21T16:49+09:00"
+state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
+updated: "2026-11-21T16:50+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 243cff0"
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.13판 · 결정 01–38 · 기획안 초안 1.3판(한알께 드림). 제품 main 243cff0까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2). PMO가 묶음 6(BTSR-ARCH-011, 바탕 243cff0) 구현 중. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.13판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 6 → 4-b → 8-2 → 1차 끝 맥 시험(테스트 시나리오 둘은 1차 뒤 RSCH SUB). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95 — 곧 승계):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):기획안 초안을 보시고 주실 말씀"]
+waiting_for: ["role:mitchell_studio/btsr/arch (7621f3de — 16:50 승계, 옛 d9520b95):ARCH-011(묶음 6) 반환", "owner(via rsch a97bebab):기획안 초안을 보시고 주실 말씀"]
 owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.3판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -36,6 +36,9 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 3. **새 Paseo ID를 RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에** — RSCH가 한알께 보고. ARCH(`d9520b95-4853-46b9-b04b-96199dddc95d`, 바뀌었으면 새 ID)에도 새 ID만.
 4. 받음이 확인되면 승인을 다시 기다리지 않고 YAML `next`의 길로 이어 감(한알 16:45:26).
 5. 보고는 짧게 · 결론 먼저. 스스로 다음 일을 시작하지 않음(AAA 18). 일하는 요령은 아래 '지금' 칸의 '일하는 요령(배운 것)' 줄(파이썬 heredoc `|| exit 1` · 한국 시각은 PowerShell로 · 낱말 바꿀 때 조사 · 제품 저장소는 fetch · ls-remote · merge-base · grep만).
+
+- **받음** (2026-11-21 16:50 KST) — 새 PRIMARY: Paseo 에이전트 `be41b33c-5441-48f7-9202-9bb7c21b13a3`(제공자 `claude`, 작업 공간 `wks_108719f6be21c0c9`, 07:50:04Z 생성, 부모 라벨 둘 다 빈 값) · Claude 세션 `1bcf0ba5-1698-49f1-bac5-e0666d363d11` · Opus 5.5 (`claude-opus-5-5`) high. list_agents · get_agent_status · transcript 파일로 확인. 옛 a6fd0155 → CLOSED.
+- **ARCH도 승계함** (옛 PLN 알림, 16:50) — 새 ARCH Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4`(get_agent_status로 확인 — 제목 MITCHELL_STUDIO/BTSR/ARCH · `btsr-arch` 폴더 · Claude 세션 `3733e26f`; 옛 d9520b95, 넘김 칸 `btsr/arch` `840675f`). ARCH-011(묶음 6) 반환은 7621f3de에서 옴. 새 PLN ID는 RSCH(a97bebab)와 ARCH(7621f3de)에 알림.
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
@@ -160,8 +163,9 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 
 | 세션 | 지위 | 실행기 | 상태 | 칸 |
 |---|---|---|---|---|
-| MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo a6fd0155, Claude 세션 1a72e654, 제공자 claude — 11-21 13:57 승계) | ARCH 반환 · 한알 답 기다림 | 이 폴더 |
+| MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo be41b33c, Claude 세션 1bcf0ba5, 제공자 claude — 11-21 16:50 승계) | ARCH 반환 · 한알 말씀 기다림 | 이 폴더 |
+| MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo a6fd0155, Claude 세션 1a72e654, 제공자 claude) | 닫힘 11-21 16:50 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo 071c15f3, Claude 세션 269c8b89, claude-google) | 닫힘 11-21 13:57 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/RSCH | 아래 역할 PRIMARY (요청을 보내 온 쪽) | Claude (Paseo **a97bebab-51e4-4b70-b968-2177d6fe4f2e** — 11-21 14:01:51 「네 페이블로 승계할께요.」 승계, Fable 5.2 · claude, get_agent_status로 확인; 앞 14d04ad1 — 11-21 03:32:07 한알 말씀으로 승계, 옛 7993ff28 CLOSED; RSCH CURRENT main에서 확인) | 알림 · 반환은 a97bebab로 | `../rsch/` (main) |
-| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo d9520b95 — 11-21 승계, 옛 9d298a54 CLOSED, `btsr/arch` c8d0b55) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
+| MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo **7621f3de-7d3e-4f12-87e1-98fe95e32fd4** — 11-21 16:50 승계, 옛 d9520b95 · 넘김 `btsr/arch` 840675f; 그 앞 9d298a54 CLOSED) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo) | 닫힘 — Paseo 에이전트 `769642ae`, Claude 세션 `6123ff97` (옛 기록 기준), Paseo 작업 공간 `wks_b17624602f48a73b`(제목 PLN-CLOSED) | [archive/](archive/) |
