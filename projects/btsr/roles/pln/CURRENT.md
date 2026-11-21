@@ -3,12 +3,12 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T13:03+09:00"
+updated: "2026-11-21T13:06+09:00"
 base_commit: "fa2b7aa"
 now: "ARCH에 둘 넘김 — BTSR-PLN-001 작업자 모델(급함) · BTSR-PLN-002 웹앱 1차 캡컷 길 기획 1판(차례 0→1→2+8→3→5+3-2→4-a→4-b→6, 7 보류). RSCH-003 기획 몫 반환함, 한알께 여쭐 것 7개는 RSCH를 거쳐"
 next: "ARCH 반환을 요구(worker-model R01–R07 · webapp-phase1 R1.1–R6.4)와 대조해 받기 → RSCH에 반환(맥 길 한 줄) · 한알 답(물음 1–7)과 웹앱 시험 결과가 오면 webapp-phase1 2판. 그 밖은 스스로 시작하지 않음(규칙 18)"
-waiting_for: ["role:mitchell_studio/btsr/rsch:묶음 1 반환 확인(→ 합치기)", "role:mitchell_studio/btsr/arch:BTSR-PLN-002 받음·반환", "owner(RSCH 거쳐):webapp-phase1 물음 1–7", "role:mitchell_studio/btsr/rsch:WEBAPP_RESULTS"]
-owner_wait: "5 — webapp-phase1 물음 3–7 (RSCH가 하나씩 여쭘). 물음 1 · 2와 합치기는 답 받음"
+waiting_for: ["role:mitchell_studio/btsr/arch:BTSR-PLN-004 합치기 반환", "role:mitchell_studio/btsr/arch:BTSR-PLN-002 받음·반환", "owner(RSCH 거쳐):webapp-phase1 물음 1–7", "role:mitchell_studio/btsr/rsch:WEBAPP_RESULTS"]
+owner_wait: "3 — webapp-phase1 물음 5–7 (RSCH가 하나씩 여쭘) · 건의 단추 영어 'Feedback'(RSCH가 여쭘 중)"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -46,6 +46,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **ARCH가 BTSR-PLN-003 받음** (`btsr/arch` `bc710d7`, PMO에 BTSR-ARCH-003 — 묶음 1보다 먼저). 묶음 2 + 8 설계 1판(`5d1184a`, PMO에는 ARCH-004로) — 설계 7번 물음 '④ 편집도 서버가 시작?'에 **1 넣음**으로 답함 → 요구 1.3판 R2.5.
 - **BTSR-PLN-003 반환 받음 → 제품 main `e5785b3`에 합쳐짐** (ARCH `ceffefa`, 12:56 KST) — PLN이 원격 main 머리 · 두 부모 · `worker_model.py` blob을 봄. RSCH에 덧붙여 반환: [WORKER_MODEL_RETURN_CLAUDE.md](requirements/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) 끝 '덧붙임'(합친 커밋 · 맥 길 main).
 - **묶음 1 반환 받음 → RSCH에 반환** (ARCH `96d66a1`, 13:03 KST) — 제품 가지 `feat/webapp-b1-suggest-20261121` `6cfbc5f`, R1.1–R1.3 대조. [WEBAPP_PHASE1_B1_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B1_RETURN_CLAUDE.md). RSCH 확인이 오면 합치기를 정함(결정 05). 묶음 2 + 8은 PMO에 BTSR-ARCH-004.
+- **RSCH 덧붙임 받음** (main `5df0643`) — 한알 답: 물음 3 확인 받음 · 단추 「이 사진으로 갈게요 →」 · 물음 4 네 · 맥 웹앱 시험은 뒤로(결정 06–08 → 요구 1.4판). RSCH가 묶음 1을 확인 → **PLN이 묶음 1 합치기를 정함** → ARCH에 [BTSR-PLN-004](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-004_MERGE_REQUEST_CLAUDE.md) (main `e5785b3` → 가지 `6cfbc5f` 앞으로 감기, 13:04 확인). 맥에는 넣지 않음.
 - 제품 저장소는 시키시기 전에 읽지 않음 — 합치기 조건 대조로 제품 원격을 fetch · log · merge-tree만 봄(12:49, 작업 사본은 건드리지 않음). rsch `studies/`는 RSCH-003이 가리킨 글만 읽음.
 
 ## 세션
