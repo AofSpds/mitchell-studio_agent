@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=446">
+<meta name="robots" content="noindex">
+<title>웹앱 1차 — 바뀐 화면 시안 (S6_UIUX_DRAFT · 2026-11-21)</title>
+<style>
+/* 색 · 글꼴 · 모서리 값은 지금 웹앱(제품 main 6cfbc5f · app/webapp/static/app.html 18–24줄)의 것을 그대로 옮김.
+   바깥 글꼴 · 그림 · 스크립트 없음. 밝은 모드만 그림. 사람 그림은 모두 이 파일 안에서 그린 것(실제 사진 아님). */
+:root {
+  --bg:#efebe5; --card:#faf8f5; --ink:#2b2420; --soft:#7a6f66; --line:#ddd5cb; --bar:#e6e0d8;
+  --accent:#4a3a30; --accent2:#8b6a4f; --ok:#5d8a6b; --okbg:#e3ece4; --wait:#9a6f12; --waitbg:#f3e7c8;
+  --bad:#a8473f; --badbg:#f4e0dc; --grad1:#3a2e27; --grad2:#7a5c45; --onaccent:#faf8f5;
+  --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  --mark:"Baskerville","Libre Baskerville","Times New Roman",serif;
+  --new:#ffd84d; --newline:#d39e00;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:#cfc8be; color:var(--ink); font-family:var(--font); font-size:17px; line-height:1.45; }
+svg { display:block; }
+
+/* ── 시안 틀(웹앱 화면이 아닌 곳) ── */
+.top { max-width:1740px; margin:0 auto; padding:26px 24px 0; }
+.top h1 { font-size:26px; margin:0 0 8px; }
+.top p { margin:5px 0; font-size:15px; color:#4d443d; }
+.top .demo { display:inline-block; background:var(--waitbg); color:var(--wait); border-radius:10px; padding:4px 10px; font-size:14px; font-weight:600; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:10px 0 2px; font-size:14px; color:#4d443d; }
+.legend span.k { display:inline-block; position:static; margin-right:6px; }
+.grid { max-width:1740px; margin:0 auto; padding:22px 24px 60px; display:grid; grid-template-columns:repeat(auto-fill, 406px); gap:36px 28px; justify-content:center; }
+.shot { width:406px; scroll-margin-top:12px; }
+.shot .hd { font-size:15px; font-weight:700; margin:0 4px 8px; min-height:44px; }
+.shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
+.shot .hd .gp { display:block; font-weight:400; color:#5a5048; font-size:13px; margin-top:2px; }
+.shot .ft { font-size:13px; color:#3f3731; margin:8px 4px 0; min-height:96px; }
+.shot .ft b { color:var(--bad); }
+.shot .ft .src { display:block; margin-top:4px; font-size:11.5px; color:#6a6058; }
+/* 한 화면만 보기: 주소 끝에 #s1 … #s16 */
+body:has(.shot:target) .top, body:has(.shot:target) .shot:not(:target) { display:none; }
+body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
+
+/* ── 바뀐 곳 표시 ── */
+.chg { position:relative; outline:2px dashed var(--newline); outline-offset:2px; }
+.tg { position:absolute; top:-10px; right:10px; z-index:3; background:var(--new); color:#3a2e00; font:700 11px/1.55 var(--font); padding:0 7px; border-radius:6px; white-space:nowrap; letter-spacing:0; text-decoration:none; }
+.tg.l { right:auto; left:10px; }
+.tg.del { background:#2b2420; color:#fff; }
+.tg.q { background:#fff; color:#2b2420; outline:1.5px dashed #2b2420; }
+.chg.del { outline-color:#2b2420; }
+.chg.q { outline-color:#2b2420; }
+.gone { text-decoration:line-through; text-decoration-thickness:1.5px; color:var(--soft); }
+.oldbox { position:relative; border-radius:16px; padding:10px 14px; font-size:13.5px; background:transparent; outline:2px dashed #2b2420; outline-offset:-1px; margin-bottom:10px; }
+
+/* ── 휴대폰 틀 ── */
+.phone { width:390px; height:844px; box-sizing:content-box; background:var(--bg); border:8px solid #2b2420; border-radius:44px; overflow:hidden; position:relative; display:flex; flex-direction:column; }
+.scr { flex:1; min-height:0; overflow:hidden; padding:8px 16px 0; position:relative; }
+.scr.more::after { content:""; position:absolute; left:0; right:0; bottom:0; height:34px; background:linear-gradient(rgba(239,235,229,0), var(--bg)); }
+.dimmed { filter:brightness(.97); }
+
+/* ── 웹앱 부품(지금 것 그대로) ── */
+.brand { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; padding:6px 0 10px; border-bottom:1px solid var(--line); margin-bottom:8px; }
+.wm { font-family:var(--mark); font-weight:700; font-size:22px; line-height:1.05; letter-spacing:.01em; }
+.brand .br { font-size:12px; color:var(--soft); text-align:right; letter-spacing:.02em; flex:1; }
+.fbk { flex:none; position:relative; border:1px solid var(--line); background:var(--bar); color:var(--ink); border-radius:12px; padding:8px 10px; font-size:13px; font-weight:700; line-height:1.15; text-align:center; }
+.tabs { display:flex; gap:6px; background:var(--card); border-top:1px solid var(--line); padding:8px 16px 14px; position:relative; }
+.tabs > span { flex:1; text-align:center; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:16px; padding:11px 0; border-radius:14px; position:relative; color:var(--soft); }
+.tabs > span.on { background:var(--bar); color:var(--ink); }
+.badge { position:absolute; top:3px; right:10%; min-width:18px; height:18px; padding:0 4px; border-radius:9px; background:var(--bad); color:#fff; font:700 11px/18px var(--font); text-align:center; }
+h1.s { font-size:26px; margin:8px 0 6px; font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
+h2 { font-size:20px; margin:0 0 8px; }
+.eh { font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
+.hint { color:var(--soft); font-size:15px; }
+.note { color:var(--soft); font-size:13px; }
+.card { background:var(--card); border-radius:20px; padding:13px 16px; margin-bottom:10px; }
+.big { height:96px; border-radius:28px; background:linear-gradient(160deg,var(--grad1),var(--grad2)); color:#faf8f5; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:32px; display:flex; align-items:center; justify-content:center; margin:6px 0 10px; }
+.btn { display:flex; align-items:center; justify-content:center; text-align:center; padding:13px 10px; border-radius:16px; background:var(--accent); color:var(--onaccent); font-weight:600; font-size:17px; }
+.btn.soft { background:var(--bar); color:var(--ink); }
+.btn.line { background:transparent; color:var(--soft); font-weight:500; }
+.btn.sm { padding:9px 8px; font-size:15px; }
+.btn.off { opacity:.42; }
+.row { display:flex; gap:10px; margin-top:10px; }
+.row > * { flex:1; }
+.alert { background:var(--waitbg); border-radius:16px; padding:11px 14px; font-size:15px; margin-bottom:10px; }
+.err { background:var(--badbg); border-radius:16px; padding:11px 14px; font-size:15px; margin-bottom:10px; }
+.okb { background:var(--okbg); border-radius:16px; padding:11px 14px; font-size:15px; margin-bottom:10px; }
+.pill { display:inline-block; border-radius:10px; padding:3px 9px; font-size:13px; font-weight:600; background:var(--bar); color:var(--accent); white-space:nowrap; }
+.pill.done { background:var(--okbg); color:var(--ok); }
+.pill.wait { background:var(--waitbg); color:var(--wait); }
+.pill.stop { background:var(--badbg); color:var(--bad); }
+.pill.todo { background:var(--bar); color:var(--soft); }
+.dots { display:flex; gap:6px; margin:7px 0 6px; }
+.dot { width:22px; height:8px; border-radius:4px; background:var(--bar); flex:none; }
+.dot.done { background:var(--ok); } .dot.now { background:var(--accent); } .dot.stop { background:var(--bad); } .dot.ask { background:var(--wait); }
+.job { border-left:6px solid transparent; }
+.job .tt { font-weight:700; font-size:18px; display:flex; justify-content:space-between; gap:8px; }
+.job .tt span:last-child { font-weight:400; font-size:13px; color:var(--soft); white-space:nowrap; }
+.sech { font-size:13px; color:var(--soft); font-weight:700; margin:10px 4px 6px; position:relative; }
+.jt { display:flex; align-items:center; gap:8px; margin:2px 0 8px; }
+.jt .bk { font-size:15px; color:var(--soft); flex:none; }
+.jt .ti { font-size:19px; font-weight:700; flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.jt .gear { background:var(--card); border-radius:14px; padding:7px 11px; font-size:14px; font-weight:600; white-space:nowrap; flex:none; }
+.step { display:flex; gap:10px; align-items:center; background:var(--card); border-radius:18px; padding:7px 12px; margin-bottom:6px; position:relative; }
+.step.dim { opacity:.6; }
+.num { flex:none; width:26px; height:26px; border-radius:50%; background:var(--bar); color:var(--soft); font-size:13px; font-weight:700; text-align:center; line-height:26px; }
+.num.done { background:var(--ok); color:var(--onaccent); } .num.now { background:var(--accent); color:var(--onaccent); } .num.stop { background:var(--bad); color:var(--onaccent); }
+.step .nm { font-weight:700; font-size:15px; flex:1; min-width:0; }
+.step .nm small { font-weight:400; font-size:12.5px; color:var(--soft); margin-left:4px; }
+.nowband { background:var(--card); border-radius:20px; padding:12px 16px; margin-bottom:10px; border-left:6px solid var(--accent2); position:relative; }
+.nowband.w { border-left-color:var(--wait); } .nowband.b { border-left-color:var(--bad); }
+.nowband .l1 { font-size:18px; font-weight:700; }
+.log { font-size:14.5px; }
+.log div { display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); }
+.log div:first-child { border-top:0; }
+.log time { flex:none; width:66px; font-size:13px; color:var(--soft); padding-top:1px; }
+.thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:8px 0; }
+.th { aspect-ratio:9/16; border-radius:10px; overflow:hidden; position:relative; background:var(--bar); }
+.th svg { width:100%; height:100%; }
+.th i { position:absolute; left:3px; right:3px; bottom:3px; font-style:normal; font-size:10.5px; text-align:center; border-radius:6px; background:rgba(250,248,245,.92); padding:1px 0; }
+.th.none { background:none; border:2px dashed var(--wait); }
+.th.none i { background:none; color:var(--wait); font-weight:700; bottom:40%; }
+.th.make { background:none; border:2px dashed var(--soft); }
+.th.make i { background:none; color:var(--soft); font-weight:700; bottom:36%; }
+.th.ask { outline:3px solid var(--bad); outline-offset:1px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.chip { border:1.5px solid var(--line); border-radius:999px; padding:6px 12px; font-size:14px; background:var(--card); position:relative; }
+.chip.on { background:var(--accent); color:var(--onaccent); border-color:var(--accent); }
+.kv { display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:15px; position:relative; }
+.kv.first { border-top:0; }
+.kv > span:first-child { color:var(--soft); flex:none; }
+.w3 { padding:6px 0; border-top:1px solid var(--line); font-size:15px; }
+.w3.first { border-top:0; padding-top:0; }
+.w3 .lb { font-size:12.5px; color:var(--soft); }
+.ta { border:2px solid var(--line); border-radius:16px; background:var(--card); padding:10px 12px; min-height:60px; font-size:15px; color:var(--soft); margin:6px 0 4px; }
+.ta.w { color:var(--ink); }
+.sheet { position:absolute; inset:0; background:rgba(30,26,22,.5); display:flex; align-items:flex-end; }
+.box { width:100%; background:var(--bg); border-radius:24px 24px 0 0; padding:18px 16px 20px; position:relative; }
+.vid { width:150px; aspect-ratio:9/16; border-radius:14px; overflow:hidden; position:relative; flex:none; background:#5a4a3f; }
+.vid svg.pic { width:100%; height:100%; }
+.vid .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:rgba(250,248,245,.9); font-size:30px; }
+.vid em, .aim { font-style:normal; font-size:11px; font-weight:700; color:#fff; background:rgba(168,71,63,.92); border-radius:6px; padding:1px 6px; }
+.vid em { position:absolute; left:6px; bottom:6px; }
+.vid u { position:absolute; left:6px; top:6px; text-decoration:none; font-size:11px; background:rgba(250,248,245,.92); border-radius:6px; padding:1px 6px; }
+.vid .cap { position:absolute; left:8px; right:8px; bottom:28px; text-align:center; color:#fff; font-size:11px; font-weight:700; text-shadow:0 1px 2px #000; }
+.side { display:flex; gap:12px; align-items:flex-start; }
+.lock { color:var(--soft); font-size:13px; margin-top:8px; }
+.ai { color:var(--bad); font-weight:700; }
+.ok { color:var(--ok); font-weight:700; }
+.warn { color:var(--wait); font-weight:700; }
+.o { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:8px 0; border-top:1px solid var(--line); font-size:15px; position:relative; }
+.o small { display:block; color:var(--soft); font-size:12px; }
+.sel { border:2px solid var(--line); border-radius:12px; padding:5px 10px; font-size:14px; background:var(--bg); white-space:nowrap; }
+.tpl { display:flex; gap:12px; align-items:center; border:1.5px solid var(--line); border-radius:16px; padding:10px 12px; margin-top:8px; position:relative; background:var(--card); }
+.tpl.on { border:2px solid var(--accent); }
+.tpl .ic { flex:none; width:38px; aspect-ratio:9/16; border-radius:8px; background:linear-gradient(170deg,var(--grad1),var(--grad2)); display:grid; grid-template-rows:1fr 1fr 1fr 1fr; gap:2px; padding:3px; }
+.tpl .ic i { background:rgba(250,248,245,.55); border-radius:2px; }
+.tpl .ic.b i:nth-child(2) { grid-row:span 2; }
+.tpl .tn { font-weight:700; font-size:16px; }
+.tpl .td { font-size:12.5px; color:var(--soft); line-height:1.35; }
+.tpl .rv { margin-left:auto; flex:none; text-align:right; font-size:13px; color:var(--soft); }
+.lockscr { background:linear-gradient(170deg,#3a2e27,#1b1715); border-radius:20px; padding:12px 12px 8px; margin-top:6px; }
+.lockscr .clock { color:#f0e9e1; text-align:center; font-size:32px; font-weight:300; margin-bottom:6px; line-height:1.1; }
+.push { background:rgba(250,248,245,.93); border-radius:16px; padding:8px 12px; margin-bottom:6px; font-size:14px; line-height:1.35; }
+.push b { display:block; font-size:14px; }
+.push small { float:right; color:var(--soft); font-size:11px; }
+.toast { position:absolute; left:16px; right:16px; bottom:14px; background:var(--ink); color:var(--bg); border-radius:14px; padding:10px 14px; font-size:15px; text-align:center; z-index:4; }
+.steps3 { list-style:none; margin:6px 0 0; padding:0; font-size:14.5px; }
+.steps3 li { display:grid; grid-template-columns:26px 1fr; gap:8px; padding:4px 0; align-items:start; }
+.steps3 .num { width:24px; height:24px; line-height:24px; font-size:12px; }
+.share { background:#e9e7e4; border-radius:16px; padding:10px; margin-top:8px; position:relative; }
+.share .apps { display:flex; gap:10px; margin-bottom:8px; }
+.share .apps i { width:38px; height:38px; border-radius:10px; background:#c9c5c0; display:block; }
+.share .li { background:#f8f7f5; padding:8px 12px; font-size:14px; border-bottom:1px solid #dedbd6; display:flex; justify-content:space-between; }
+.share .li:first-of-type { border-radius:10px 10px 0 0; } .share .li:last-of-type { border-radius:0 0 10px 10px; border-bottom:0; }
+.share .li.pick { font-weight:700; outline:2.5px solid var(--bad); outline-offset:-2px; border-radius:8px; }
+.fb { background:var(--bar); border-radius:12px; padding:8px 12px; font-size:14px; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<!-- 이 파일 안에서 그린 그림(실제 사진 아님) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="p-after" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#d9cfc3"/>
+    <path d="M10 160 Q12 122 45 118 Q78 122 80 160Z" fill="#b8a898"/>
+    <path d="M45 26 C20 26 14 52 16 78 C17 100 14 118 22 130 C30 124 34 132 45 128 C56 132 60 124 68 130 C76 118 73 100 74 78 C76 52 70 26 45 26Z" fill="#6b4a36"/>
+    <path d="M28 60 Q34 80 28 100 M40 56 Q46 82 40 110 M52 56 Q58 82 52 110 M63 60 Q68 80 62 100" stroke="#8a6248" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-before" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#cfc6bb"/>
+    <path d="M10 160 Q12 122 45 118 Q78 122 80 160Z" fill="#a99a8b"/>
+    <path d="M45 30 C26 30 22 52 23 78 L24 126 L66 126 L67 78 C68 52 64 30 45 30Z" fill="#5a4234"/>
+    <path d="M34 50 V120 M45 48 V122 M56 50 V120" stroke="#6f5443" stroke-width="2" fill="none"/>
+  </symbol>
+  <symbol id="p-face" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#e0d6ca"/>
+    <path d="M8 160 Q10 124 45 120 Q80 124 82 160Z" fill="#b8a898"/>
+    <path d="M45 22 C18 22 13 50 16 80 C17 102 15 116 24 128 L66 128 C75 116 73 102 74 80 C77 50 72 22 45 22Z" fill="#6b4a36"/>
+    <rect x="39" y="94" width="12" height="28" rx="5" fill="#e6c6ad"/>
+    <ellipse cx="45" cy="72" rx="19" ry="25" fill="#f0d5bf"/>
+    <path d="M26 68 C24 44 38 37 50 39 C61 41 66 52 64 68 C58 56 48 50 38 52 C32 54 28 60 26 68Z" fill="#6b4a36"/>
+  </symbol>
+  <symbol id="p-blur" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#d4cabe"/>
+    <ellipse cx="45" cy="84" rx="34" ry="54" fill="#8a6c58" opacity=".55"/>
+    <ellipse cx="49" cy="80" rx="30" ry="50" fill="#6b4a36" opacity=".35"/>
+    <ellipse cx="41" cy="88" rx="30" ry="50" fill="#6b4a36" opacity=".3"/>
+  </symbol>
+</svg>
+
+<div class="top">
+  <h1>웹앱 1차 — 바뀐 화면 시안</h1>
+  <p><span class="demo">보여 드리는 그림입니다 · 눌러도 움직이지 않습니다 · 안의 작업 · 글 · 사람 그림은 모두 지어낸 예시입니다(실제 손님 · 사진 없음)</span></p>
+  <p>MITCHELL_STUDIO/BTSR/RSCH/S6_UIUX_DRAFT · 2026-11-21 · 바탕 = 지금 웹앱(제품 main <code>6cfbc5f</code>의 <code>app.html</code>)의 색 · 글꼴 · 부품 그대로. 차례: 올리기 → 접수 → AI 얼굴 확인 → 진행 · 알림 → 막힘 → 다 됨 · 저장 · 고칠 점 → 건의하기.</p>
+  <div class="legend">
+    <span><span class="tg k">새로</span><span class="tg k">고침</span>노란 띠 + 노란 점선 = 오늘까지 정해진 대로 바뀌는 곳 (근거는 화면 아래 작은 글씨)</span>
+    <span><span class="tg del k">없앰</span>검은 띠 + 줄 그은 글 = 지금 화면에서 사라지는 것</span>
+    <span><span class="tg q k">안</span>흰 띠 + 검은 점선 = 정해지지 않아 시안에서 골라 둔 것 (반환.md '여쭐 것' 번호)</span>
+  </div>
+  <p>넣지 않은 것: 휴대폰에서 영상을 직접 고치는 화면(묶음 7 — 뒤로 미룸, 결정 04) · OpenCut · OpenChatCut. 아래 탭과 단계 이름을 한글로 적은 것은 정해진 것이 아니라 <b>안</b>입니다(여쭐 것 1) — 모든 화면에 같이 적용해 그렸습니다. 화면 하나만 보려면 주소 끝에 <code>#s1</code> … <code>#s16</code>.</p>
+</div>
+
+<div class="grid">
+
+<!-- ───────── 1 보내기 ───────── -->
+<div class="shot" id="s1">
+  <div class="hd"><span class="no">1</span>보내기 — 올리기 전<span class="gp">① 올리기 · 고침</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk chg">건의하기<span class="tg">고침</span></span></div>
+    <h1 class="s">보내기</h1>
+    <p class="hint chg" style="margin:0 0 4px;border-radius:8px">찍은 사진·영상을 보내면 <b style="color:var(--ink)">바로 만들기 시작해요.</b> 확인할 것이 생기면 알려 드려요.<span class="tg">고침</span></p>
+    <div class="big">보내기</div>
+    <div class="card chg">
+      <span class="tg">새로</span>
+      <div style="font-weight:600">템플릿 <span class="hint" style="font-weight:400">영상의 틀 (안 골라도 돼요)</span></div>
+      <div class="tpl on" style="margin-top:6px">
+        <div class="ic"><i></i><i></i><i></i><i></i></div>
+        <div><div class="tn">시술 전후 릴스 <span class="pill done" style="font-size:11px;padding:1px 6px">기본</span></div><div class="td">AI 얼굴 → 시술 후 → 시술 전 → 다시 시술 후 · 14초</div></div>
+        <div class="rv">2판<br>바꾸기 ›</div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-weight:600">요청 사항 <span class="hint" style="font-weight:400">(안 적어도 돼요)</span></div>
+      <div class="ta" style="min-height:46px">예) 디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조</div>
+      <div class="note">손님 이름·전화번호는 쓰지 마세요 · 키보드의 🎤로 말해도 돼요</div>
+    </div>
+    <div class="card" style="padding-bottom:10px">
+      <div style="display:flex;justify-content:space-between;font-weight:600"><span>옵션</span><span class="hint" style="font-weight:400;font-size:14px">기본값 그대로 두면 돼요 ▴</span></div>
+      <div class="o" style="margin-top:8px"><div>목소리</div><div class="sel">알아서 골라요 · 기본 ▾</div></div>
+      <div class="o chg del" style="border-radius:8px"><div class="gone">원고 확인</div><div class="sel gone">켬 ▾</div><span class="tg del">없앰 — 늘 확인받아요</span></div>
+    </div>
+  </div>
+  <div class="tabs chg q"><span class="tg q l">안 · 여쭐 것 1 — 탭 이름 한글</span><span class="on">보내기</span><span>작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> 머리 단추가 「건의하기」만(영어 뺌) · 안내 한 줄("바로 만들기 시작해요") · 템플릿 칸이 생김(고른 템플릿과 판이 보임) · 옵션의 '원고 확인' 줄을 없앰.
+    <span class="src">근거: 묶음 1 R1.5(결정 12) · 묶음 2 R2.1 · 묶음 8 R8.1 · R8.2 · 묶음 3(원고 확인 끔 옵션 없앰). 템플릿 설명 글은 지어낸 예시. 운영자가 템플릿을 고르는지는 여쭐 것 2.</span></div>
+</div>
+
+<!-- ───────── 2 템플릿 고르기 ───────── -->
+<div class="shot" id="s2">
+  <div class="hd"><span class="no">2</span>템플릿 고르기 · 판<span class="gp">① 올리기 · 새로</span></div>
+  <div class="phone"><div class="scr dimmed">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <h1 class="s">보내기</h1>
+    <div class="big">보내기</div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>템플릿 고르기</h2>
+    <div class="hint">이번 영상에 쓸 틀을 골라 주세요. 고르지 않으면 「기본」으로 만들어요.</div>
+    <div class="tpl on chg">
+      <span class="tg">새로 — 여러 템플릿</span>
+      <div class="ic"><i></i><i></i><i></i><i></i></div>
+      <div><div class="tn">시술 전후 릴스 <span class="pill done" style="font-size:11px;padding:1px 6px">기본</span></div><div class="td">AI 얼굴 → 시술 후 → 시술 전 → 다시 시술 후 · 14초</div></div>
+      <div class="rv"><b style="color:var(--ink)">2판</b> ✓</div>
+    </div>
+    <div class="chg" style="margin:8px 0 0 50px;border-radius:12px;padding:6px 10px;font-size:13.5px;background:var(--card)">
+      <span class="tg">새로 — 판</span>
+      <div style="display:flex;justify-content:space-between"><span><b>2판</b> · 지금 쓰는 판</span><span class="note">끝 장면을 1초 줄였어요</span></div>
+      <div style="display:flex;justify-content:space-between;color:var(--soft)"><span>1판 · 지난 판 (남아 있어요)</span><span class="note">처음 정한 틀</span></div>
+    </div>
+    <div class="tpl">
+      <div class="ic b"><i></i><i></i><i></i></div>
+      <div><div class="tn">뒷모습 강조 릴스</div><div class="td">AI 얼굴 → 시술 후 뒷모습을 길게 → 시술 전 · 12초</div></div>
+      <div class="rv">1판</div>
+    </div>
+    <div class="note" style="margin-top:10px">만들기 시작한 영상은 시작할 때의 판을 끝까지 써요. 템플릿을 고쳐도 지난 판은 지우지 않아요.</div>
+    <div class="note chg q" style="margin-top:8px;border-radius:8px;padding:2px 4px">시험 중인 템플릿은 여기에 나오지 않아요.<span class="tg q">안</span></div>
+    <div class="row"><div class="btn soft">닫기</div><div class="btn">이 템플릿으로</div></div>
+  </div></div>
+  </div>
+  <div class="ft"><b>새로:</b> 템플릿을 여럿 둘 수 있고, 템플릿마다 판(1판 · 2판)이 쌓입니다. 지난 판은 지우지 않고, 영상마다 어느 템플릿의 어느 판으로 만들었는지 남습니다.
+    <span class="src">근거: 묶음 8 R8.1 · R8.2 · 판 규칙 [안]. 1차의 템플릿은 대표 하나 — '뒷모습 강조 릴스'와 판 설명 글은 꼴을 보이려 지어낸 예시. 시험용을 운영자에게 숨기는 것은 시안의 안.</span></div>
+</div>
+
+<!-- ───────── 3 보낸 뒤 바로 시작 ───────── -->
+<div class="shot" id="s3">
+  <div class="hd"><span class="no">3</span>다 보내면 — 바로 시작<span class="gp">① 올리기 · 고침</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband chg">
+      <span class="tg">새로 — '지금' 한 줄</span>
+      <div class="l1">보내신 것을 살펴보는 중이에요</div><div class="hint">하실 일 없어요 · 확인할 것이 생기면 알려 드려요</div>
+    </div>
+    <div class="oldbox"><span class="tg del">없앰 — 다른 앱에 말 걸기</span><span class="gone">받았어요. Claude 앱에 “업로드 확인”이라고만 보내 주세요 — 그러면 Jobs에 작업이 생겨요.</span></div>
+    <div class="card">
+      <div style="font-weight:600">보낸 것</div>
+      <div class="thumbs">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>영상</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><i>사진</i></div>
+      </div>
+      <div style="font-size:15px">영상 1 · 사진 3 · 요청: “디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조”</div>
+      <div class="kv chg" style="margin-top:6px;border-radius:6px"><span>템플릿</span><span>시술 전후 릴스 · 2판</span><span class="tg">새로</span></div>
+    </div>
+    <div class="step"><div class="num done">✓</div><div class="nm">보내기 <small>사진·영상을 보냈어요</small></div><span class="pill done">완료</span></div>
+    <div class="step"><div class="num now">2</div><div class="nm">살펴보기 <small>보내신 것을 살펴봐요</small></div><span class="pill">진행 중</span></div>
+    <div class="step dim"><div class="num">3</div><div class="nm">원고 <small>써서 확인받아요</small></div><span class="pill todo">아직</span></div>
+    <div class="toast chg">받았어요 — 바로 시작할게요<span class="tg">고침</span></div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> 다 보내면 「받았어요」 화면에 서지 않고 방금 만든 작업 화면으로 곧바로 갑니다. 다른 앱에 “업로드 확인”이라고 보내라는 안내가 없어집니다. 작업에 쓴 템플릿과 판이 보입니다.
+    <span class="src">근거: 묶음 2 R2.1(올리면 바로 시작 — 손 인계 ② 없앰) · 묶음 8 R8.2 · 묶음 4-a R4.1('지금' 한 줄).</span></div>
+</div>
+
+<!-- ───────── 4 접수 — 묻지 않음 ───────── -->
+<div class="shot" id="s4">
+  <div class="hd"><span class="no">4</span>접수 — AI 얼굴 사진이 없어도 묻지 않음<span class="gp">② 접수 · 고침</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband">
+      <div class="l1">원고를 쓰는 중이에요</div><div class="hint">하실 일 없어요 · 다 쓰면 확인해 달라고 알려 드려요</div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700">살펴보기 <span class="hint" style="font-weight:400">이렇게 나눴어요</span></span><span class="pill done">완료</span></div>
+      <div class="thumbs">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><i>시술 전</i></div>
+        <div class="th make chg" style="outline-offset:3px"><i>AI 얼굴<br>만들 예정</i><span class="tg" style="right:-4px">새로</span></div>
+      </div>
+      <div class="kv first"><span>시술</span><span>디지털펌</span></div>
+      <div class="kv"><span>보여줄 변화</span><span>뒷볼륨</span></div>
+      <div class="kv"><span>모델 연령</span><span>50대</span></div>
+      <div class="kv"><span>시술 전 · 시술 후</span><span class="ok">있어요 ✓</span></div>
+      <div class="kv chg" style="border-radius:6px"><span>AI 얼굴</span><span><b>만들 예정</b></span><span class="tg">새로 — 묻지 않음</span></div>
+      <div class="note" style="margin-top:6px">AI 얼굴 사진은 안 보내셔도 돼요. 웹앱이 만들어서 보여 드리고, 그때 확인받아요.</div>
+    </div>
+    <div class="oldbox" style="margin-top:12px"><span class="tg del">없앰</span><span class="gone">올리기 전에 다른 앱에서 AI 얼굴 사진을 따로 받아 오기</span></div>
+    <div class="step"><div class="num now">3</div><div class="nm">원고 <small>써서 확인받아요</small></div><span class="pill">진행 중</span></div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> AI 얼굴 사진을 안 올려도 '빠졌어요'라고 묻지 않습니다. 접수 결과에 「AI 얼굴: 만들 예정」 한 줄만 보이고 그대로 원고로 넘어갑니다. 물을 것이 없으면 접수는 서지 않습니다.
+    <span class="src">근거: 묶음 3 R3.6(결정 11 — 13:18:52 「권고안 모두 승인」) · R3.2(이미 아는 것은 다시 묻지 않음) · 묶음 3-2 R32.1.</span></div>
+</div>
+
+<!-- ───────── 5 접수 — 빠졌어요 ───────── -->
+<div class="shot" id="s5">
+  <div class="hd"><span class="no">5</span>접수 — 웹앱이 만들 수 없는 것이 빠졌을 때만 물음<span class="gp">② 접수 · 새로</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w chg">
+      <span class="tg">새로</span>
+      <div class="l1">확인해 주세요</div><div class="hint">고르실 때까지 기다리고 있어요</div>
+    </div>
+    <div class="card chg">
+      <span class="tg">새로 — 빠졌어요</span>
+      <div style="font-weight:700">살펴보기 <span class="hint" style="font-weight:400">이렇게 나눴어요</span></div>
+      <div class="thumbs">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th none"><i>시술 전<br>없음</i></div>
+        <div class="th make"><i>AI 얼굴<br>만들 예정</i></div>
+      </div>
+      <div style="font-size:18px;font-weight:700;margin-top:6px">시술 전 사진이 없어요</div>
+      <div class="hint">어떻게 할지 골라 주세요.</div>
+      <div class="row"><div class="btn soft">더 보내기</div><div class="btn">이대로 만들기</div></div>
+      <div class="note" style="margin-top:8px">이대로 만들면 '시술 전' 장면 없이 만들어요. 없는 장면을 지어내지 않아요.</div>
+    </div>
+    <div class="card" style="padding:8px 16px">
+      <div class="kv first"><span>AI 얼굴</span><span><b>만들 예정</b> <span class="note">· 묻지 않아요</span></span></div>
+    </div>
+    <div class="step dim"><div class="num">3</div><div class="nm">원고 <small>고르시면 쓰기 시작해요</small></div><span class="pill todo">아직</span></div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> '빠졌어요'는 웹앱이 만들 수 없는 자료(시술 전 · 시술 후 사진 등)가 빠졌을 때만 묻습니다. 고를 때까지 원고를 쓰지 않고, '이대로'면 가짜 '전' 장면 없이 만듭니다. AI 얼굴은 같은 화면에서도 묻지 않습니다.
+    <span class="src">근거: 묶음 3 R3.3 · R3.6(결정 11) · R3.5 [안](한 번에 한 물음 · 고르는 답). 단추 둘 가운데 어느 쪽이 주 단추인지는 지난 시안(11-20)의 꼴을 따름.</span></div>
+</div>
+
+<!-- ───────── 6 AI 얼굴 확인 ───────── -->
+<div class="shot" id="s6">
+  <div class="hd"><span class="no">6</span>AI 얼굴 확인<span class="gp">③ AI 얼굴 · 새로</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">확인해 주세요</div><div class="hint">AI 얼굴 사진을 만들었어요</div>
+    </div>
+    <div class="card chg">
+      <span class="tg">새로</span>
+      <div style="font-weight:700">AI 얼굴 <span class="hint" style="font-weight:400">머리 색과 모양이 같은지 봐 주세요</span></div>
+      <div class="side" style="margin-top:10px;justify-content:center">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><u>시술 후 사진</u></div>
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><u>만든 AI 얼굴</u><em>얼굴 : AI 합성</em></div>
+      </div>
+      <div class="note" style="margin-top:8px">머리는 그대로 두고 얼굴만 새로 만들었어요. 실제 손님 얼굴이 아니에요.</div>
+      <div class="row chg" style="border-radius:16px"><span class="tg">새로 — 단추 둘</span><div class="btn" style="flex:1.65;font-size:16px;padding:13px 6px">이 사진으로 갈게요 →</div><div class="btn soft" style="font-size:16px;padding:13px 6px">다시 만들기</div></div>
+      <div class="note chg q" style="margin-top:8px;border-radius:6px;padding:1px 4px">다시 만들기는 2번 더 할 수 있어요.<span class="tg q">안</span></div>
+      <div class="lock"><span class="ai">「얼굴 : AI 합성」</span> 표시는 사진에도 영상에도 항상 들어가요 🔒</div>
+    </div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 웹앱이 만든 AI 얼굴 사진을 시술 후 사진과 나란히 보여 주고 확인받습니다. 단추는 둘 — 「이 사진으로 갈게요 →」(주) · 「다시 만들기」. 'AI 합성' 표시는 늘 보입니다.
+    <span class="src">근거: 묶음 3-2 R32.2 · R32.3(결정 06 — 12:51:15 「1」 · 결정 11). 다시 만들기 횟수(최대 2번)는 R32.3에 적힌 값이나 화면 문구는 시안의 안. 그림은 이 파일에서 그린 것(실제 사진 · 얼굴 아님).</span></div>
+</div>
+
+<!-- ───────── 7 작업 목록 ───────── -->
+<div class="shot" id="s7">
+  <div class="hd"><span class="no">7</span>작업 목록 — 보실 것 · 저절로 가는 중<span class="gp">④ 진행 · 알림 · 고침</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center"><h1 class="s">작업</h1><span class="jt" style="margin:0"><span class="gear">⚙ 기본 옵션</span></span></div>
+    <div class="oldbox" style="margin-top:6px"><span class="tg del">없앰 — 맥 앞에서 하던 일</span><span class="gone">목소리·음악 넣기 기다리는 작업 1건 · 「Copy Prompt」 · 시작 전 점검</span></div>
+    <div class="sech chg" style="border-radius:6px;padding:0 4px;margin-left:0">보실 것 2<span class="tg">새로 — 둘로 나눔</span></div>
+    <div class="card job" style="border-left-color:var(--wait)">
+      <div class="tt"><span>디지털펌 · 뒷볼륨</span><span>오후 2:10</span></div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot ask"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill wait">확인해 주세요</span> <span class="hint">AI 얼굴 사진을 만들었어요</span>
+    </div>
+    <div class="card job" style="border-left-color:var(--bad)">
+      <div class="tt"><span>레이어드 컷</span><span>오전 11:40</span></div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot stop"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill stop">잠깐 멈춤</span> <span class="hint">사진 한 장을 다시 올려 주세요</span>
+    </div>
+    <div class="sech">저절로 가는 중 1</div>
+    <div class="card job chg">
+      <span class="tg">새로 — '지금' 한 줄</span>
+      <div class="tt"><span>애쉬 브라운 염색</span><span>오후 3:05</span></div>
+      <div class="dots"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot now"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="pill">진행 중</span> <span class="hint">목소리를 넣는 중이에요</span>
+    </div>
+    <div class="sech">끝난 것 4 ▾</div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> 목록을 '보실 것'과 '저절로 가는 중'으로 나눕니다(끝난 것은 접어 둠). 카드마다 '지금 무엇을 하는 중' 한 줄. 목록도 스스로 바뀝니다. 맥 앞에서 하던 일(한 줄 복사 · 시작 전 점검)은 운영자 화면에서 사라집니다.
+    <span class="src">근거: 묶음 4-a R4.1(작업 목록 둘로 · 화면이 스스로 바뀜) · 묶음 5 R5.1(손 인계 ③ 없앰). 점 8개 가운데 넷째가 AI 얼굴 단계 — 단계의 수와 자리는 설계에서 정함.</span></div>
+</div>
+
+<!-- ───────── 8 진행 보기 ───────── -->
+<div class="shot" id="s8">
+  <div class="hd"><span class="no">8</span>진행 보기 — 지금 한 줄 · 진행 기록<span class="gp">④ 진행 · 알림 · 고침</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">애쉬 브라운 염색</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband chg">
+      <span class="tg">새로 — 지금 무엇을 하는 중</span>
+      <div class="l1">목소리를 넣는 중이에요</div><div class="hint">하실 일 없어요 · 다 되면 알려 드려요</div>
+      <div class="note" style="margin-top:2px">이 화면은 스스로 바뀌어요 — 새로 고치지 않아도 돼요.</div>
+    </div>
+    <div class="sech" style="margin-top:4px">진행 기록</div>
+    <div class="card log chg" style="padding:6px 14px">
+      <span class="tg">새로 — 진행 기록</span>
+      <div><time>오후 3:31</time><span>목소리를 넣기 시작했어요</span></div>
+      <div><time>오후 3:27</time><span>장면을 다 이어 붙였어요</span></div>
+      <div><time>오후 3:21</time><span>AI 얼굴 사진을 확인해 주셨어요</span></div>
+      <div><time>오후 3:16</time><span>원고를 확인해 주셨어요</span></div>
+      <div><time>오후 3:05</time><span>사진 3장 · 영상 1개를 받았어요</span></div>
+    </div>
+    <div class="chg q" style="border-radius:18px">
+      <span class="tg q">안 · 여쭐 것 1 — 단계 이름 한글</span>
+      <div class="step"><div class="num done">✓</div><div class="nm">보내기 <small>사진·영상을 보냈어요</small></div><span class="pill done">완료</span></div>
+      <div class="step"><div class="num done">✓</div><div class="nm">살펴보기 <small>보내신 것을 살펴봐요</small></div><span class="pill done">완료</span></div>
+      <div class="step"><div class="num done">✓</div><div class="nm">원고 <small>써서 확인받아요</small></div><span class="pill done">완료</span></div>
+      <div class="step"><div class="num done">✓</div><div class="nm">AI 얼굴 <small>만들어서 확인받아요</small></div><span class="pill done">완료</span></div>
+      <div class="step"><div class="num done">✓</div><div class="nm">장면 잇기 <small>장면을 이어 붙여요</small></div><span class="pill done">완료</span></div>
+      <div class="step"><div class="num now">6</div><div class="nm">목소리 · 음악 · 영상 뽑기</div><span class="pill">진행 중</span></div>
+      <div class="step dim"><div class="num">7</div><div class="nm">다 됨 <small>확인해 주세요</small></div><span class="pill todo">아직</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> 작업 화면 맨 위에 '지금' 한 줄 · 쉬운 말 진행 기록(시각 + 한 줄, 새 것이 위) · 화면이 스스로 바뀜(지금은 20초마다 다시 읽음). 자세한 기록은 운영자 화면에 보이지 않고 안에 따로 남습니다.
+    <span class="src">근거: 묶음 4-a R4.1 · R4.2 · R4.3 [안]. '지금' 띠와 진행 기록 가운데 무엇을 위에 둘지는 지난 시안과 달리 기록을 위로 올려 그림(한 화면에 보이게) — 꼴은 설계에서. 지금의 다섯째 단계(2단계에서 생기는 미리보기)와 여덟째 '올리기'는 그림에서 줄임.</span></div>
+</div>
+
+<!-- ───────── 9 알림 ───────── -->
+<div class="shot" id="s9">
+  <div class="hd"><span class="no">9</span>휴대폰 알림 — 처음 한 번 허락<span class="gp">④ 진행 · 알림 · 새로</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="card chg" style="margin-top:10px">
+      <span class="tg">새로 — 알림 받기</span>
+      <div style="font-size:20px;font-weight:700">알림을 받을까요?</div>
+      <div class="hint" style="margin:4px 0 0">확인할 것이 생기거나 영상이 다 되면 알려 드려요. 웹앱을 닫아 두어도 받아요.</div>
+      <div class="row"><div class="btn soft">나중에</div><div class="btn">알림 받기</div></div>
+      <div class="note" style="margin-top:6px">누르면 아이폰이 한 번 더 물어요 → 「허용」을 눌러 주세요.</div>
+    </div>
+    <div class="card chg">
+      <span class="tg">새로 — 홈 화면에 추가</span>
+      <div style="font-weight:700">아이폰은 홈 화면에 추가해야 알림이 와요</div>
+      <ol class="steps3">
+        <li><span class="num">1</span><span>사파리 아래 가운데 <b>공유 단추</b>(네모에 위 화살표)를 눌러요</span></li>
+        <li><span class="num">2</span><span><b>「홈 화면에 추가」</b>를 눌러요</span></li>
+        <li><span class="num">3</span><span>홈 화면에 생긴 <b>미첼 스튜디오</b>로 열고 「알림 받기」</span></li>
+      </ol>
+    </div>
+    <div class="sech">잠금 화면에는 이렇게 보여요</div>
+    <div class="lockscr chg" style="outline-offset:3px">
+      <span class="tg">새로 — 알림 글</span>
+      <div class="clock">3:09</div>
+      <div class="push"><small>지금</small><b>확인해 주세요</b>AI 얼굴 사진을 만들었어요</div>
+      <div class="push"><small>12분 전</small><b>다 됐어요</b>영상을 확인해 주세요</div>
+      <div class="push"><small>1시간 전</small><b>잠깐 멈췄어요</b>하나만 도와주시면 이어 가요</div>
+    </div>
+    <div class="note" style="margin:8px 4px 0">알림 글에는 손님 정보 · 시술 내용 · 원고 글을 넣지 않아요.</div>
+  </div>
+  <div class="tabs"><span class="on">보내기</span><span>작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 지금은 알림이 없습니다. 안전한 주소(https)를 켜기로 해서 휴대폰 알림이 됩니다 — 처음 한 번 「알림 받기」 허락, 아이폰은 '홈 화면에 추가'한 웹앱에서만. 알릴 일은 셋(확인 · 다 됨 · 문제).
+    <span class="src">근거: 묶음 4-b R4.4 · R4.5(결정 05 — 03:47:20 「https 켜세요」) · 알릴 일 셋 [안]. 아이폰에서 실제로 되는지는 맥 시험 전(해 보지 않음). 언제 이 카드를 띄우는지(처음 열 때 / 첫 영상을 보낸 뒤)는 정해지지 않음 — 그림은 처음 열 때.</span></div>
+</div>
+
+<!-- ───────── 10 막힘 가 ───────── -->
+<div class="shot" id="s10">
+  <div class="hd"><span class="no">10</span>막혔을 때 ① — 먼저 쉬운 말로 물음<span class="gp">⑤ 막힘 · 새로</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband b chg">
+      <span class="tg">새로</span>
+      <div class="l1">잠깐 멈췄어요</div><div class="hint">하나만 도와주시면 이어 가요</div>
+    </div>
+    <div class="card chg">
+      <span class="tg">새로 — 쉬운 말로 먼저 물음</span>
+      <div class="side">
+        <div class="th ask" style="width:74px;flex:none"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-blur"/></svg><i>이 사진</i></div>
+        <div style="flex:1">
+          <div class="w3 first"><div class="lb">무슨 일이 있었나요</div><div style="font-weight:700">시술 후 사진 한 장이 흐려요.</div></div>
+          <div class="w3"><div class="lb">지금</div><div>다른 것은 다 됐어요. 이 사진만 있으면 이어서 만들어요.</div></div>
+        </div>
+      </div>
+      <div class="w3" style="margin-top:6px"><div class="lb">하실 일</div><div style="font-weight:700">다시 올려 주세요.</div></div>
+      <div class="btn" style="margin-top:8px">사진 다시 올리기</div>
+      <div class="btn soft" style="margin-top:8px">이 사진 빼고 만들기</div>
+      <div class="btn line sm" style="margin-top:2px">모르겠어요 — 개발자에게 알리기</div>
+    </div>
+    <div class="note" style="margin:0 4px 8px">만들던 것은 지우지 않아요 · 다른 작업은 그대로 진행돼요.</div>
+    <div class="oldbox"><span class="tg del">없앰 — 맥 앞에서 직접 하기</span><span class="gone">「Do It Myself」 맥에서 아래 순서로 직접 해 주세요 · 「Mark Done」 · 「Helpdesk」(다른 앱 열기)</span></div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 막히면 웹앱이 먼저 다시 해 보고, 안 되면 운영자에게 쉬운 말로 묻습니다 — 늘 세 마디(무슨 일 · 지금 · 하실 일)와 고르는 단추. 맥 앞에서 직접 하라는 안내는 사라집니다.
+    <span class="src">근거: 묶음 5 R5.6(결정 07 — 12:52:43 「1」) · R5.2 · R5.3(그 작업만 멈춤). 「이 사진 빼고 만들기」 같은 고르는 답의 종류는 지어낸 예시 — 막힌 까닭마다 다름.</span></div>
+</div>
+
+<!-- ───────── 11 막힘 나 ───────── -->
+<div class="shot" id="s11">
+  <div class="hd"><span class="no">11</span>막혔을 때 ② — 개발자에게 알렸어요<span class="gp">⑤ 막힘 · 새로</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="card chg" style="border-left:6px solid var(--bad)">
+      <span class="tg">새로</span>
+      <div style="font-size:19px;font-weight:700">개발자에게 알렸어요</div>
+      <div class="hint">하실 일 없어요.</div>
+      <div class="w3" style="margin-top:8px"><div class="lb">무슨 일이 있었나요</div><div>사진을 다시 올려 주셨는데도 장면을 이어 붙이지 못했어요.</div></div>
+      <div class="w3"><div class="lb">지금</div><div><b>만들던 것은 지우지 않고 그대로 남겨 두었어요.</b> 개발자가 본 뒤 멈춘 곳부터 이어서 만들어요.</div></div>
+      <div class="w3"><div class="lb">다른 작업</div><div>그대로 진행돼요.</div></div>
+      <div class="btn soft sm" style="margin-top:8px">여기까지 만든 것 보기</div>
+    </div>
+    <div class="sech">진행 기록</div>
+    <div class="card log chg" style="padding:6px 14px">
+      <span class="tg">새로 — 무엇을 해 봤는지 남음</span>
+      <div><time>오후 1:02</time><span>개발자에게 알렸어요</span></div>
+      <div><time>오후 1:01</time><span>새 사진으로 다시 해 봤어요 — 안 됐어요</span></div>
+      <div><time>오후 12:55</time><span>사진을 다시 올려 주셨어요</span></div>
+      <div><time>오후 12:20</time><span>시술 후 사진 한 장이 흐려요 — 다시 올려 주세요</span></div>
+      <div><time>오후 12:19</time><span>두 번 다시 해 봤어요</span></div>
+    </div>
+    <div class="step"><div class="num stop">5</div><div class="nm">장면 잇기</div><span class="pill stop">개발자가 보는 중</span></div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 운영자의 답을 받고도 안 풀리면 그 작업만 세우고 「개발자에게 알렸어요」. 만들던 것은 지우지 않고 남기며, 다시 잇는 것은 개발자가 본 뒤(저절로 다시 시작하지 않음). 다른 작업은 계속 갑니다.
+    <span class="src">근거: 묶음 5 R5.6(결정 07) · R5.2(해 본 것 · 고른 것 · 안 풀린 곳이 같은 작업의 기록에) · R5.3. 작업 탭의 빨간 숫자에서 이 작업을 빼는 것(하실 일 없음)은 시안의 안.</span></div>
+</div>
+
+<!-- ───────── 12 다 됨 ───────── -->
+<div class="shot" id="s12">
+  <div class="hd"><span class="no">12</span>다 됐어요 — 영상 보기 · 사진 앱에 저장<span class="gp">⑥ 다 된 뒤 · 고침</span></div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">다 됐어요</div><div class="hint">영상을 확인해 주세요</div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><div class="cap">뿌리 볼륨을 살린 디지털펌</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:700">다 됨 <span class="pill done">완성</span></div>
+          <div class="chips chg" style="border-radius:999px;margin:10px 0 8px"><span class="tg">새로 — 판 고르기</span><span class="chip">v1</span><span class="chip on">v2</span></div>
+          <div class="note">v2 · 14.4초<br>고친 것: 자막 더 크게</div>
+          <div class="note chg" style="margin-top:8px;border-radius:6px;padding:1px 3px"><span class="tg">새로</span><span class="ok">릴스 규격에 맞아요 ✓</span><br>세로 1080×1920 · 1초에 30장</div>
+        </div>
+      </div>
+      <div class="btn" style="margin-top:12px">승인</div>
+      <div class="row"><div class="btn soft chg">사진 앱에 저장<span class="tg">고침</span></div><div class="btn soft">고칠 점 적기</div></div>
+    </div>
+    <div class="share chg">
+      <span class="tg">새로 — 공유 창 → 비디오 저장</span>
+      <div class="note" style="margin:0 2px 6px;color:#4d443d">「사진 앱에 저장」을 누르면 아이폰의 공유 창이 열려요 (그림)</div>
+      <div class="apps"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="li"><span>복사</span><span>⧉</span></div>
+      <div class="li pick"><span>비디오 저장</span><span>⤓</span></div>
+      <div class="li"><span>파일에 저장</span><span>▭</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업<span class="badge">1</span></span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>바뀐 것:</b> 판 고르기(v1 · v2를 번갈아 봄 — 지금은 가장 새 판만) · 규격 줄 · 「영상 저장」이 「사진 앱에 저장」으로(안전한 주소라 공유 창 → 「비디오 저장」 한 번에. 지금은 파일 앱에 내려받은 뒤 옮김).
+    <span class="src">근거: 묶음 6 R6.1 · R6.4(규격 판정과 승인을 따로) · 묶음 8 R8.3 · 결정 05(https). 「승인」은 지금 그대로('이 판을 완성본으로' [안 — 미4]). 저장 단추는 지금 '올리기' 탭에만 있음 — 작업 화면에도 두는 것은 시안의 안. '1초에 30장' = 30fps를 쉬운 말로 적은 것(안).</span></div>
+</div>
+
+<!-- ───────── 13 고칠 점 적기 ───────── -->
+<div class="shot" id="s13">
+  <div class="hd"><span class="no">13</span>고칠 점 적기<span class="gp">⑥ 다 된 뒤 · 고침</span></div>
+  <div class="phone"><div class="scr dimmed">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w"><div class="l1">다 됐어요</div><div class="hint">영상을 확인해 주세요</div></div>
+    <div class="card"><div class="side"><div class="vid" style="width:110px"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div><div><div style="font-weight:700">다 됨</div><div class="chips"><span class="chip on">v1</span></div></div></div></div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>고칠 점 적기</h2>
+    <div class="hint chg" style="border-radius:8px">적어서 보내면 <b style="color:var(--ink)">새 영상(v2)</b>으로 만들어 드려요. 지금 영상(v1)은 그대로 남아요.<span class="tg">고침</span></div>
+    <div class="ta w" style="min-height:84px;margin-top:10px">자막을 더 크게 해 주세요. 마지막 2초는 빼 주세요.</div>
+    <div class="note">🎤로 말해도 돼요 · 손님 이름은 쓰지 마세요</div>
+    <div class="row"><div class="btn soft">취소</div><div class="btn">보내기</div></div>
+    <div class="oldbox" style="margin:14px 0 0"><span class="tg del">없앰 — 다른 앱에 말 걸기</span><span class="gone">받았어요. Claude 앱에 “작업 확인”이라고 보내 주세요 — 그러면 고쳐요</span></div>
+    <div class="note" style="margin-top:8px">보내면 → <b style="color:var(--ink)">“받았어요 — 바로 고칠게요. 다 되면 알려 드려요.”</b></div>
+  </div></div>
+  </div>
+  <div class="ft"><b>바뀐 것:</b> 시트의 꼴은 지금 그대로. 보내면 다른 앱에 “작업 확인”이라고 말하러 가지 않고 바로 고치기 시작합니다. 새 판(v2)이 생기고 앞 판은 덮어쓰지 않는다는 안내가 붙습니다.
+    <span class="src">근거: 묶음 6 R6.1 · R6.2(손 인계 ④ 없앰 · 앞 판을 덮어쓰지 않음 — 운영자 기준 기3). 고치기는 한 편에 3번까지 [안 — 미16]는 그리지 않음.</span></div>
+</div>
+
+<!-- ───────── 14 새 판 만드는 중 ───────── -->
+<div class="shot" id="s14">
+  <div class="hd"><span class="no">14</span>새 판(v2)을 만드는 중<span class="gp">⑥ 다 된 뒤 · 새로</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband chg">
+      <span class="tg">새로</span>
+      <div class="l1">v2를 만드는 중이에요</div><div class="hint">하실 일 없어요 · 다 되면 알려 드려요</div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:700">다 됨</div>
+          <div class="chips chg" style="border-radius:999px;margin:10px 0 8px"><span class="tg">새로</span><span class="chip on">v1</span><span class="chip" style="border-style:dashed;color:var(--soft)">v2 만드는 중</span></div>
+          <div class="note">v1 · 14.2초 · 지금 보고 있는 판<br><span class="ok">릴스 규격에 맞아요 ✓</span></div>
+          <div class="note" style="margin-top:8px">v1은 그대로 남아요. v2가 되면 번갈아 볼 수 있어요.</div>
+        </div>
+      </div>
+      <div class="fb">✎ 자막을 더 크게 해 주세요. 마지막 2초는 빼 주세요. <span class="note">오후 4:02</span></div>
+      <div class="row"><div class="btn soft">사진 앱에 저장</div><div class="btn soft off">고칠 점 적기</div></div>
+    </div>
+    <div class="sech">진행 기록</div>
+    <div class="card log" style="padding:6px 14px">
+      <div><time>오후 4:02</time><span>고칠 점을 받았어요 — v2를 만들기 시작했어요</span></div>
+      <div><time>오후 3:48</time><span>v1이 다 됐어요 — 확인해 주세요</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업</span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 고칠 점을 보내면 사람 손 없이 새 판이 만들어집니다. 만드는 동안 앞 판(v1)은 그대로 보고 저장할 수 있고, 다 되면 알림이 옵니다. 판마다 편집 상태가 맥에 남습니다(화면에는 보이지 않음).
+    <span class="src">근거: 묶음 6 R6.1 · R6.2 · 묶음 4(알림 「다 고쳤어요」 [안]). 만드는 동안 「고칠 점 적기」를 잠그는 것은 시안의 안.</span></div>
+</div>
+
+<!-- ───────── 15 규격이 다름 ───────── -->
+<div class="shot" id="s15">
+  <div class="hd"><span class="no">15</span>규격이 다르면 — 완성이 아님<span class="gp">⑥ 다 된 뒤 · 새로</span></div>
+  <div class="phone"><div class="scr more">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="bk">← 작업</span><span class="ti">애쉬 브라운 염색</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w chg">
+      <span class="tg">새로 — 규격 맞추는 중</span>
+      <div class="l1">규격을 맞추는 중이에요</div><div class="hint">아직 완성이 아니에요 · 하실 일 없어요</div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:700">다 됨 <span class="pill wait chg" style="outline-offset:1px">규격 맞추는 중<span class="tg" style="top:-14px;right:-6px">새로</span></span></div>
+          <div class="chips" style="margin:10px 0 8px"><span class="chip on">v1</span></div>
+          <div class="note"><span class="warn">⚠ 릴스 규격과 달라요</span><br>지금: 세로 720×1280<br>맞출 것: 세로 1080×1920 · 1초에 30장</div>
+        </div>
+      </div>
+      <div class="alert" style="margin:10px 0 0;font-size:14px">보실 수는 있어요. <b>규격을 맞춘 판이 나와야 '완성'</b>이에요 — 나오면 알려 드려요.</div>
+      <div class="btn off chg" style="margin-top:10px">승인<span class="tg">새로 — 규격이 맞아야 눌러요</span></div>
+      <div class="row"><div class="btn soft off chg q">사진 앱에 저장<span class="tg q l">안 · 여쭐 것 3</span></div><div class="btn soft chg">의견 · 고칠 점 적기<span class="tg">의견은 받음</span></div></div>
+      <div class="fb">✎ 화면은 괜찮아 보여요. <span class="note">오후 5:10 · 의견으로 받아 두었어요</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>보내기</span><span class="on">작업</span><span>올리기</span><span>도움말</span></div></div>
+  <div class="ft"><b>새로:</b> 규격(세로 1080×1920 · 30fps)이 다르면 운영자가 괜찮다고 해도 완성이 아닙니다. 의견은 받되 「규격 맞추는 중」으로 보이고 「승인」은 잠깁니다. 규격을 맞춘 판만 '완성'.
+    <span class="src">근거: 묶음 6 R6.4(결정 14 — 13:20:30 「아 규격이 다르면 안되어요」가 13:20:12를 바로잡음) · 묶음 8 R8.3. 지금 화면은 "그래도 괜찮으면 「승인」을 눌러도 돼요"(app.html 622줄) — 없어짐. 규격 다른 판의 저장을 잠그는 것은 여쭐 것 3. '720×1280'은 지어낸 예시.</span></div>
+</div>
+
+<!-- ───────── 16 건의하기 ───────── -->
+<div class="shot" id="s16">
+  <div class="hd"><span class="no">16</span>건의하기<span class="gp">⑦ 건의하기 · 고침</span></div>
+  <div class="phone"><div class="scr dimmed">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk" style="background:var(--accent);color:var(--onaccent)">건의하기</span></div>
+    <h1 class="s">보내기</h1>
+    <div class="big">보내기</div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2 class="chg" style="border-radius:8px;display:inline-block;padding:0 4px">건의하기<span class="tg" style="right:-64px;top:4px">고침 — 영어 뺌</span></h2>
+    <div class="note" style="margin-top:0">웹앱을 쓰며 불편한 점, 바라는 점, 좋은 점을 보내 주세요. 개발자가 읽어요.</div>
+    <div class="chips"><span class="chip">안 돼요</span><span class="chip on">이랬으면 해요</span><span class="chip">이건 좋아요</span></div>
+    <div class="ta w" style="min-height:70px">원고 확인할 때 글자를 더 크게 볼 수 있으면 좋겠어요</div>
+    <div class="alert chg" style="margin:8px 0 0;font-size:14px">
+      <span class="tg">새로 — 별명으로 바뀜</span>
+      손님 이름 · 연락처는 안 쓰셔도 돼요. 적혀 있으면 <b>'손님 A' 같은 별명으로 바뀌어 저장돼요.</b></div>
+    <div class="row"><div class="btn soft">닫기</div><div class="btn">보내기</div></div>
+    <h2 style="margin-top:16px;font-size:18px">내가 보낸 건의</h2>
+    <div class="log" style="font-size:13.5px">
+      <div><time>11-20 14:05</time><span>안 돼요 · <b>손님 A</b>가 영상 저장이 안 된다고 하셨어요 <span class="pill wait chg" style="font-size:11px;padding:1px 6px;outline-offset:1px">별명으로 바뀜</span></span></div>
+      <div><time>11-19 10:30</time><span>이건 좋아요 · 원고 글자 수가 바로 보여서 편해요</span></div>
+    </div>
+  </div></div>
+  </div>
+  <div class="ft"><b>바뀐 것:</b> 머리 단추와 시트 제목이 「건의하기」만(지금은 'Feedback 건의하기'). 손님 이름 · 연락처가 적혀 있으면 별명('손님 A')으로 바뀌어 저장된다는 안내. 원문은 맥에만 남고 깃헙에는 별명으로 바뀐 글만 올라갑니다.
+    <span class="src">근거: 묶음 1 R1.5(결정 12) · R1.4(결정 10 — 13:15:22 「필터링하거나 git ignore로 맥 로컬에만 저장하고 적절한 익명이나 별명을 쓰세요.」). 지금 글 "손님 이름·전화번호는 쓰지 마세요"를 바꿔 적은 문구와 '별명으로 바뀜' 딱지는 시안의 안. 도움말 탭의 "맨 위 「Feedback」으로"(app.html 708줄)도 함께 바뀜 — 그리지 않음.</span></div>
+</div>
+
+</div>
+</body>
+</html>
