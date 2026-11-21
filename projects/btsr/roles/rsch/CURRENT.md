@@ -48,6 +48,7 @@
 - **13:14 KST:** 묶음 1 합치기가 PMO push에서 자동 심사에 막힘 → 한알 13:13:30 「직접 하세요.」 → RSCH가 제품 main 앞으로 감기 push `e5785b3..6cfbc5f`(요청서 003 8번). 답 기다림: 5/7 · 6/7 · 건의 단추 글(「건의하기」만 권고).
 - **13:21 KST:** 여쭐 것 1–7 모두 답 받음(요청서 003 6번) · 합치기 push는 RSCH(지침 13:18:52). 다음: PLN이 정한 합치기를 RSCH가 앞으로 감기 push · 묶음 2 + 8 반환 확인 · [안]으로 둔 것(미4 · 미8 · 미13 · 미16 · R3.5 · 판 규칙 · 알릴 일)은 그 묶음 구현 전에 한알께 보여 드림.
 - **13:24 KST:** 한알 13:21:46 「변경된 ui/ux 시안을 페이블 서브세션으로」 → SUB `MITCHELL_STUDIO/BTSR/RSCH/S6_UIUX_DRAFT` 엶 — Paseo 33750c05-53b0-4f7e-8b5c-1bd69e1a99a5 · Fable 5.2 · auto · high · 패킷 `sub/s6_uiux_draft/OPEN_PACKET.md`(49e31d9). 끝나면 5항목으로 받고 한알께 시안을 보여 드림.
+- **13:27 KST:** 한알 13:24:06 「페이블 한도 체크 계속 시키고 다하면 네이버로 여세요.」 → S6에 중간 커밋 · `PROGRESS.md` 덧붙임 · **S6 오류/끝 알림이 오면 get_agent_status로 까닭을 보고, 한도면 제공자 `claude`(claude-naver) · claude-fable-5-2 · auto · high로 새 SUB(같은 칸, PROGRESS.md부터)** · 지침에 더함. 묶음 2 + 8 확인 → RSCH가 main 합침 `6cfbc5f..658ec1d`(요청서 003 9번). 시안 보여 드릴 때 「좋아요」(R2.5) 단추 글도 여쭘.
 
 ## ★★★★★★★★★★★★★★ 지금 자리 (2026-11-21 03:27 KST, Paseo 7993ff28 · Opus 5.5 · Max) — 압축 뒤 여기부터
 
