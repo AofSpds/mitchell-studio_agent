@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 테스트 글(ARCH-014) 받음 · PLN에 반환(18:14) + 한알께 여쭐 것 하나(받은 소재를 웹앱 Claude가 읽는 길 — 결정 39의 셋째 길, 권고 1 허락). 8-2 IVA 판정 기다림"
-next: "여쭘 답 → 014 덧붙임 3(MAC_RUN 공통 :31–32). IVA 판정 → 꼭 고칠 것 + 화면 5 「N번 남음」 ? 안으로 → PMO 요청 하나(BTSR-ARCH-015) · 그때 MAC_RUN 머리 '제품 기준'도"
-waiting_for: ["owner:받은 소재를 웹앱 Claude 명령줄이 읽는 것 허락 (PLN → RSCH)", "role:mitchell_studio/btsr/pln:8-2 IVA 판정 (be41b33c)"]
+now: "IVA 부적합(btsr/iva 7915afd) 고침 → PMO(7837ebd8)에 BTSR-ARCH-015 (18:19, 바탕 94d4522 · 가1 · 가2 · 나3 · 나4+A1 · 나5 · 나6 작은 것 + 맥 테스트 글 다시 얹기). 어림 19:40 KST 합침(PLN에 알림)"
+next: "015 반환 대조(코드 머리 · 글 머리 · 됨마다 시험) → PLN. 한알 답(웹앱 Claude가 받은 소재 읽음) 오면 015 덧붙임(MAC_RUN 공통 :31–32)"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-015 반환 (7837ebd8)", "owner:받은 소재를 웹앱 Claude 명령줄이 읽는 것 (CLAUDE_MATERIAL_ASK — RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -57,6 +57,7 @@ verifier: "mitchell_studio/btsr/archv"
   - RSCH 38번(PLN 알림, 17:56): 014 덧붙임 1(12 물음 차례 17 → 4 · 13 worker_model 값은 저장소 밖 사본 · 14 명령 줄 대조 · 15 확인 못 한 둘은 1-1에서). 8-2 IVA 검증 중(판정 18:30쯤). **ARCH 정함: 화면 5 「N번 남음」은 시안대로 ? 풀이 안으로 옮김 — IVA '꼭 고칠 것'과 한 번에(코드 머리 한 번만), 판정 뒤 PMO 요청에 함께.** 물음 차례 17 → 4는 코드대로(PLN 받음).
   - 결정 42 · 요구 2.17판(btsr/pln 28f2077, RSCH 39번 — 한알 17:57:01 「네 그럼요.」): 이끄는 맥 ChatGPT의 컴퓨터 유즈 승인(웹앱 화면 · Send 파일 고르기, 세 회차) → 014 덧붙임 2(17:59 — '승인 뒤' 걷고 표를 글 맨 위에). 새 판 넣기 [안] 확정.
   - **맥 테스트 글**: PMO 반환 `btsr/pmo` ec3a37c(가지 `feat/webapp-mac-test-doc-20261121` 28e779e, 바탕 94d4522, MAC_RUN 한 파일만) → ARCH 대조(글뿐 · 시험 OK skip 2 · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_BTSR-PLN-002_RETURN_CLAUDE.md) 18:14 + 여쭘 하나.
+  - IVA 판정 부적합(RSCH 40번 · PLN 요청 `btsr/pln` edf7209 — 한알 18:07:10 「과검증은 안되어요 …」): ARCH가 고치는 길 정함 → [BTSR-ARCH-015](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-015_REQUEST_CLAUDE.md). 가2는 spec_redo 열린 편에서 C2를 막는 칸으로 안 봄 · 나4 0이면 「다시 만들기」 안 그림 + ? "다시 만들기를 다 썼어요." [안] · 나6은 소재 파일 이름만 코드로, 호칭 없는 이름은 글 두 줄. 요청 번호 015까지(다음 016).
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
