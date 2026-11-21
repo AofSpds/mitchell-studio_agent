@@ -6,7 +6,7 @@
 | 받은 요청 | BTSR-PLN-002 — 요구 webapp-phase1 1.7판 R3.1–R3.6 (`btsr/pln` `5b85d56`), 결정 11(R3.6) |
 | 바탕 | 초안(main `45f8b7b`) 묶음 3(:207-213) · 화5(:392-397) · 화6(:411-415) · 나-4 · 나-10 · 라5(보완 :75) · 템플릿 `templates/reel-main/r1.md` §1 · §2(:28-36) · §3 |
 | 본 코드 | 제품 main `658ec1d` (묶음 2 + 8이 든 것, 읽기만) |
-| 맡김 | PMO가 BTSR-ARCH-006을 반환한 뒤 BTSR-ARCH-007로 (같은 `app.html`을 고치므로 006 가지 위에 쌓음) |
+| 맡김 | PMO에 [BTSR-ARCH-007](WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md) (바탕 006 가지 `100ffa5`) |
 
 ## 0. 지금 (658ec1d에서 본 것)
 
