@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T02:28:05+09:00"
-base_commit: "33a37be"
-now: "새 PRIMARY 512aef6d가 넘김 (4)를 받음. ARCH는 021 제품 5bbe272의 여덟 기준을 살폈고 회귀시험 결과를 기다림"
-next: "ARCH 수용 뒤 RSCH가 제품 main에 합침. PMO는 ARCH의 다음 정식 요청을 기다림"
-waiting_for: ["arch:BTSR-ARCH-021-acceptance", "rsch:BTSR-ARCH-021-main-merge", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+updated: "2026-11-22T03:08:49+09:00"
+base_commit: "417fbe3"
+now: "021 제품 main 5bbe272 확인. ARCH-022 작업자 사용량 판정·시작 전 점검 대기를 받음"
+next: "022를 제품 기능 가지에서 고치고 두 환경 회귀와 맥 재개 한 줄을 ARCH에 반환"
+waiting_for: []
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-022 | ARCH (7621f3de) | btsr/arch 7730793 | 2026-11-22 03:08:49 KST | 구현 중 · 바탕 제품 main 5bbe272 · 가지 `feat/webapp-worker-limit-fix3-20261122` |
 | BTSR-ARCH-021 덧붙임 1 | ARCH (7621f3de) | btsr/arch b7bdd8c | 2026-11-22 02:06:21 KST | 반환 02:23 KST · 5–8 구현 0285ab4 → 시험 5bbe272 · 본문과 함께 [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_RETURN_CODEX.md) |
 | BTSR-ARCH-021 | ARCH (7621f3de) | btsr/arch 792cd07 | 2026-11-22 01:51:53 KST | 반환 02:23 KST · main 8b0d084 → 구현 926c1a8 → 시험 9722fbc · 덧붙임 포함 최종 5bbe272 · 전체 169/169, 건너뜀 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_RETURN_CODEX.md) |
 | BTSR-ARCH-020 | ARCH (7621f3de) | btsr/arch 3fa3d5c | 2026-11-22 00:10:02 KST | 반환 00:26 KST · main 896abae → 구현 ce56711 → 시험 8b0d084 · 390px 12개, 전체 기본 147 통과/2 건너뜀 · 암호화 149/149 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL_RETURN_CODEX.md) · ARCH 수용(949b704), main 8b0d084 |
