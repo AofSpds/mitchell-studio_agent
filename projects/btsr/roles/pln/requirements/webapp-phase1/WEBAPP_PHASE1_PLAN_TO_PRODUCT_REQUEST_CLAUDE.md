@@ -30,3 +30,8 @@
 - 결과: 제품 가지 `feat/webapp-plan-phase1-20261121` **`896abae`** — main `e095396` 위 커밋 둘(fe1e241 018 기획안 사본 · 896abae 019 맥 글 덧붙임 3) · 세 파일뿐(`app/webapp/PLAN_PHASE1.md` +138 · `README.md` +1 · `MAC_RUN_PHASE1.md` +24 −13) · ARCH 137 OK(skip 2).
 - PLN이 직접 본 것(21:28 KST, 제품 저장소 fetch · ls-remote · merge-base · diff만): 원격 main `e095396` · 가지 머리 `896abae` · main이 그 조상(앞으로 감기) · **`PLAN_PHASE1.md` ↔ 원본 1.9판(`92aacb5`) 차이는 두 곳뿐** — 맨 위 사본 한 줄 · '이 글의 바탕' 경로 한 줄. 사본 줄에 요청한 끝말 '고칠 말씀은 기획에 주세요.'가 빠짐 — 막는 일 아님(결정 45 · 다음에 판을 옮길 때 넣음).
 - **합치기 — PLN이 정함: RSCH가 세 파일뿐인지 보면 합침.** 조건: 제품 main `e095396` 그대로 · 가지 머리 `896abae`(앞으로 감기). push 직전 main을 다시 봄 — 움직였으면 합치지 말고 PLN에. 합친 뒤 한알께 주소: 깃헙 mitchell-studio `app/webapp/PLAN_PHASE1.md`.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 21:33 KST)
+
+- RSCH 확인 · 합침: RSCH 요청서 003 52번 — 제품 main 앞으로 감기 `e095396..896abae`(21:29 · push 직전 main 그대로 · 세 파일뿐 · 기획안 사본이 원본 1.9판과 두 곳만 다름을 견줌). PLN이 21:33에 제품 원격 main 머리를 ls-remote로 봄. RSCH가 한알께 주소(깃헙 mitchell-studio `app/webapp/PLAN_PHASE1.md`)를 드림.
+- 앞으로: 기획안 원본(에이전트 저장소 PLN 글) 판이 오르면 같은 길(글뿐 덧붙임)로 사본을 옮김 — 그때 사본 줄에 '고칠 말씀은 기획에 주세요.'를 넣음.
