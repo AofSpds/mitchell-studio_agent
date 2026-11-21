@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "올리기 멎음 고침(ARCH-020) 받음 · PLN에 반환(00:31) — 합칠 머리 8b0d084(main 896abae 위 · app.html + 시험). Playwright 깐 곳에서 149 OK"
-next: "PLN 알림대로. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 021"
-waiting_for: ["role:mitchell_studio/btsr/pln:휴대폰 테스트 결과 · 다음 요청 (be41b33c)"]
+now: "올리기 고침 2(S14 · RSCH 57번 · PLN 260d377) → PMO에 BTSR-ARCH-021(01:50, 1 POST 401 연결 닫기 · 2 보내는 중 새로 고침 이어 가기 · 3 막대 · 4 연결 안 됨 글). 어림 03:15 합침. 제품 main 8b0d084(020 합쳐짐)"
+next: "021 반환 대조(Playwright 깐 곳) → PLN. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-021 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
