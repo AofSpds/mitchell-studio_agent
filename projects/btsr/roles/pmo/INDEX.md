@@ -11,7 +11,7 @@
 | 항목 | 무엇 | 상태 | 정본 | 출처 |
 |---|---|---|---|---|
 | opencut-test | OpenCut 옛 판 시험 3·4용 시험 코드 C1–C5 — 반환서 · 이 PC 시험 증거 | 반환함 (2026-11-20 14:22 KST). 맥 시험 남음 | [records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) · [evidence/](records/opencut-test/evidence/) | 요청 BTSR-RSCH-001_opencut-test-code (RSCH). 코드는 제품 저장소 가지 `test/opencut-classic-20261120` c2d21a6 |
-| worker-model | 작업자 모델 GPT-6.2 Sol · 생각 High, 설정 한 곳 `app/webapp/worker_model.py` — 반환서 · 시험 증거 | 반환함 (2026-11-21 03:39 KST). main 합치기 · 맥 확인 남음 | [records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md](records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) · [evidence/](records/worker-model/evidence/) | 요청 BTSR-ARCH-001_worker-model-sol (ARCH). 코드는 제품 저장소 가지 `fix/worker-model-sol-20261121` 3495f7e |
+| worker-model | 작업자 모델 GPT-6.2 Sol · 생각 High, 설정 한 곳 `app/webapp/worker_model.py` — 반환서 · 시험 증거 | 반환함 (2026-11-21 03:39 KST) · 제품 main에 합침 `e5785b3` (BTSR-ARCH-003, 12:54 KST). 맥 확인 남음 | [records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md](records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) · [합치기 반환](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) · [evidence/](records/worker-model/evidence/) | 요청 BTSR-ARCH-001_worker-model-sol (ARCH). 코드는 제품 저장소 가지 `fix/worker-model-sol-20261121` 3495f7e |
 
 ## archive
 
