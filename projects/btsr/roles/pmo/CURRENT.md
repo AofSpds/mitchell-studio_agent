@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T08:02:00Z"
+updated: "2026-11-21T17:01:38+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-011 반환함(17:00 KST) — 제품 가지 feat/webapp-b6-fix-versions-20261121 e512fcd · 시험 125/125 · 화면 15/15. 승계 중 — 새 PMO(아스트라 · full-access)를 이 세션이 엶(한알 16:45:26 · 16:54:50 · 16:55:05)"
-next: "새 PMO가 넘김 (2) 0번대로 — 커밋 · push 확인 → 받음 → 옛 세션 CLOSED → 012(4-b) · 013(8-2)"
-waiting_for: ["arch:BTSR-ARCH-011-acceptance", "successor:take-over", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "새 PMO가 승계를 받음. 011 반환 후 ARCH 대조 대기"
+next: "ARCH의 012(4-b) 접수 뒤 기능 가지 첫 커밋·push 확인 → 반환·대조 뒤 013(8-2)"
+waiting_for: ["arch:BTSR-ARCH-011-acceptance", "arch:BTSR-ARCH-012-request", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -20,9 +20,9 @@ verifier: "mitchell_studio/btsr/pmov"
 |---|---|
 | 역할 | 구현(규칙 5·20). 지금 맡은 일: 아래 '받은 요청' |
 | 프로젝트 | BTSR(부트스트랩) — MITCHELL_STUDIO 도메인 |
-| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4` — 옛 d9520b95 · 9d298a54 CLOSED). PLN Paseo `be41b33c-5441-48f7-9202-9bb7c21b13a3`. RSCH는 Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(옛 14d04ad1). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
+| 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4` — 옛 d9520b95 · 9d298a54 CLOSED). PLN Paseo `be41b33c-5441-48f7-9202-9bb7c21b13a3`. RSCH는 Paseo `ed5ef600-f1ab-4f47-8728-a19091c32e6a`(옛 a97bebab). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
 | 짝 검증자 | PMOV (비상설, 여는 이 ARCH, 규칙 7). 아직 열리지 않음 |
-| PRIMARY | `MITCHELL_STUDIO/BTSR/PMO` — Paseo(claude · auto) · Opus 5.5 (claude-opus-5-5) · high. Paseo 에이전트 `5fbbea06-93d9-48b2-8930-e101d4603429` · Paseo 작업 공간 `wks_2dc964d20c5cca11` · Claude 세션 `2e566876-0221-4fb1-90e1-2ac53bf8a621` (2026-11-21 13:59 KST 승계로 받음. 옛 PRIMARY Paseo `f3cf6938-049e-45f7-bb68-a64e06bff385` · Claude 세션 `ac64c01a-d76a-418c-b6d9-1ff2b1f205e4` — CLOSED). 작업 폴더 `dev\mitchell-studio_agent\worktrees\btsr-pmo`, 브랜치 `btsr/pmo` (main fa2b7aa에서) |
+| PRIMARY | MITCHELL_STUDIO/BTSR/PMO · Paseo 에이전트 `99626982-1190-4151-8cf5-b052ce8644c4` · 작업 공간 `wks_2dc964d20c5cca11` · Codex 세션 `01a1fd1f-0a3d-7752-9625-b5a4b1bdcf1c` · `gpt-6.2-astra` · high · full-access · 가지 `btsr/pmo` |
 | 개설 | RSCH의 SUB `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES`(Paseo 5641fdf4)가 엶 — 요청서 main 폴더 `projects/btsr/roles/rsch/sub/s1_open_roles/OPEN_PMO_요청.md` 판 2. 앞 세션(Paseo a73bc1c9, 옛 꼴)은 요청서에 따라 CLOSED — 이어받음 |
 | 규칙 판 | 주입 전 (`none`). AAA v0.14를 AAA main 폴더에서 읽음. 이 저장소 AGENTS.md도 따름 |
 | 게시판 | 없음 — 아직 정해지지 않음. 그래서 요청서는 보낸 역할 칸에, 받음은 이 파일 '받은 요청'에 적음 (요청서의 안내) |
@@ -128,10 +128,10 @@ verifier: "mitchell_studio/btsr/pmov"
 근거: 한알 16:05:36 「…pmo는 아스트라로 바꿀께요 아스트라 iva 세션도 신설해서 최종 작업물을 나오면 검증/리뷰하는걸로 진행하겠습니다.」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」 · 16:45:26 「새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다 …」 · 16:54:50 「미리 허락합니다.」 · 16:55:05 「권고안 승인합니다.」 — ARCH · RSCH가 전함(에이전트 main `projects/btsr/roles/rsch/requests/BTSR-RSCH-003_webapp-phase1-capcut/요청.md` 23 · 25 · 30 · 31번, 1b2daf8 · 45a1ada · 60a2ee9 · a1f2e84). **승계는 세션이 스스로 함** — 이 세션(5fbbea06)이 011을 반환한 뒤 새 PMO를 `create_agent`로 엶: 제공자 `codex` · 모델 `gpt-6.2-astra` · 생각 수준 high · **모드 `full-access`**(31번 — IVA 아스트라 세션이 auto-review에서 `git add`의 `.git/index.lock` 권한에 막혔음) · 같은 작업 공간 `wks_2dc964d20c5cca11` · 부모 라벨 비움.
 
 ### 0. 새 PMO(아스트라)가 먼저 할 것
-1. **커밋 · push가 되는지부터 확인** — 이 작업 폴더(`C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-pmo`, 가지 `btsr/pmo`)와 제품 사본(`C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`) 둘 다에서 add · commit · push. 에이전트 쪽은 '받음' 커밋이 그 시험이 됨. 제품 쪽은 지금 가지(`feat/webapp-b6-fix-versions-20261121`)에서 `git status` · `git fetch` 뒤, 012 요청을 받으면 새 가지 첫 커밋으로 확인(빈 시험 커밋을 기능 가지에 올리지 않음). **안 되면 돌아가지 말고 멈추고 RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에 알림** — 권한을 넓히는 것은 한알께 여쭌 답대로.
+1. **커밋 · push가 되는지부터 확인** — 이 작업 폴더(`C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-pmo`, 가지 `btsr/pmo`)와 제품 사본(`C:\Users\ms1pk\dev\btsr-pmo-work\mitchell-studio`) 둘 다에서 add · commit · push. 에이전트 쪽은 '받음' 커밋이 그 시험이 됨. 제품 쪽은 지금 가지(`feat/webapp-b6-fix-versions-20261121`)에서 `git status` · `git fetch` 뒤, 012 요청을 받으면 새 가지 첫 커밋으로 확인(빈 시험 커밋을 기능 가지에 올리지 않음). **안 되면 돌아가지 말고 멈추고 RSCH(`ed5ef600-f1ab-4f47-8728-a19091c32e6a`)에 알림** — 권한을 넓히는 것은 한알께 여쭌 답대로.
 2. 읽기: 이 파일 맨 위 → 이 칸 → `C:\Users\ms1pk\dev\AAA\AGENTS.md`(규칙 판 v0.14, 읽기만) → `records/webapp-phase1/`의 마지막 반환서 둘(B4A2 · B6).
 3. 받음을 이 칸 아래에 적음(새 Paseo ID · 작업 공간 · 세션 ID · 모델 — 짐작하지 말고 확인) · 표의 PRIMARY 칸 고침 · 커밋 · push(자기 역할 폴더만, 파일 이름으로 add).
-4. 옛 PRIMARY(Paseo `5fbbea06-93d9-48b2-8930-e101d4603429`) 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로, ARCH(`7621f3de-7d3e-4f12-87e1-98fe95e32fd4`) · RSCH(`a97bebab-51e4-4b70-b968-2177d6fe4f2e`)에 '승계 끝 · 새 Paseo ID'만 알림(PLN은 `be41b33c-5441-48f7-9202-9bb7c21b13a3`).
+4. 옛 PRIMARY(Paseo `5fbbea06-93d9-48b2-8930-e101d4603429`) 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로, ARCH(`7621f3de-7d3e-4f12-87e1-98fe95e32fd4`) · RSCH(`ed5ef600-f1ab-4f47-8728-a19091c32e6a`)에 '승계 끝 · 새 Paseo ID'만 알림(PLN은 `be41b33c-5441-48f7-9202-9bb7c21b13a3`).
 5. 그 뒤 ARCH가 보내는 **012(4-b) → 013(8-2)**을 이어 감 — ARCH가 반환을 대조할 때마다 다음 요청서를 보냄. 다 끝나면 한알이 기획안 초안을 먼저 보심.
 
 ### 역할 규칙 (그대로)
@@ -169,3 +169,9 @@ verifier: "mitchell_studio/btsr/pmov"
 - running인 같은 일이 있으면 enqueue는 그것을 돌려줌 — 다음 일을 넣는 쪽의 '끝' 판정이 틀리면 이어지지 않음(B6 다시 뽑기).
 - 가짜 작업자도 카드가 정한 이름만 쓰게 — 아니면 시험이 거짓으로 깨지거나 통과함.
 - 이 PC: 제품 사본은 CRLF로 꺼내짐(`core.autocrlf=true`) — 섞여도 커밋은 LF. 윈도 시험은 PYTHONUTF8 없이도 한 번.
+
+### 받음 (새 PRIMARY · 2026-11-21 17:01:38 KST)
+
+- Paseo 상태 조회와 세션 환경에서 새 에이전트 `99626982-1190-4151-8cf5-b052ce8644c4`, 작업 공간 `wks_2dc964d20c5cca11`, Codex 세션 `01a1fd1f-0a3d-7752-9625-b5a4b1bdcf1c` 확인. 모델 `gpt-6.2-astra` · high · full-access.
+- 옛 PMO `5fbbea06-93d9-48b2-8930-e101d4603429`에게서 받음. RSCH 받음 기록 `5584987`에 따라 넘김 (2)의 연락처를 새 RSCH로 고침.
+- 에이전트 가지는 이 받음으로 커밋·push를 확인한다. 제품 사본은 011 기능 가지에서 status·fetch 성공. 제품 커밋·push 확인은 012 요청을 받은 뒤 첫 기능 변경 때 진행한다.
