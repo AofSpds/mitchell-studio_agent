@@ -8,7 +8,7 @@ base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.10판 · 결정 01–36. 제품 main ed11f5a까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a). PMO가 4-a-2(BTSR-ARCH-010) 구현 중. 설계 끝 · 차례 기다림: 6 · 4-b. 8-2는 다14 답 뒤. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.10판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 덧붙임. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-a-2 → 6 → 4-b → 8-2 → 1차 끝 맥 시험. 7은 뒤로. 그 밖은 스스로 시작하지 않음"
 waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-010(4-a-2) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
-owner_wait: "1 — 템플릿 r2 한 장(btsr/arch cdea776 WEBAPP_PHASE1_B82_TEMPLATE_R2_SHEET_CLAUDE.md, 5줄 + 다시 만들기 2번 [안]) + 시안 화면 17 — RSCH가 한알께"
+owner_wait: "한알이 기획안 초안 1판(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -76,6 +76,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 8-2 설계 1판 + 템플릿 r2 한 장 받음** (ARCH `5b538c0`, 16:20) — R82.1–R82.3 · R3.7 · R32.5 · 결정 36 · 37 대조, 받음. 짚은 것 하나: 한 장 2번이 소재에서 'AI 얼굴 사진'을 뺌 ↔ 결정 35 [안](가진 얼굴 사진은 보낼 때 함께 올리면 씀) — 남길지 뺄지 한 장에 한 줄로 ARCH가 정해 RSCH → 한알께. 한 장(5줄 + 다시 만들기 2번 [안])은 시안 화면 17과 함께 RSCH → 한알께. PMO에는 4-a-2 · 6 · 4-b 뒤, 한 장 답 뒤.
 - **ARCH 고친 줄** (`btsr/arch` `cdea776`) — 가진 AI 얼굴 사진 길은 **남김**(한 장 2번에 한 마디 · 설계 3번 · 기준 3, 1.1판). 한 장을 RSCH에 넘김 → 시안 화면 17과 함께 한알께.
 - **25번 받음** (RSCH main `45a1ada`, 16:24) — 한알 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」: 세 역할은 끝까지 · 넘김 칸 갖춤 → 다 끝나면 한알이 기획안 초안을 먼저 확인 → 그 뒤 새 세션. **PLN이 할 것: 1차가 완결되면(마지막 묶음 반환 · 합침 뒤) 한알께 드릴 기획안 초안을 쉬운 말로 따로 씀** — 자리 `btsr/pln` `projects/btsr/roles/pln/requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md`(영어 · 약어 · 번호 없이, 지금 정해진 것만 — 지난 판 기록은 요구 글에). 쓰면 커밋을 RSCH에. ARCH에 전함(PMO에는 ARCH가).
+- **26 · 27번 받음** (RSCH main `f95f5ee` · `55f45cf`, 16:28) — 기획안 초안을 **지금** 씀(26번) · 결정 38 · 요구 2.12판: 「다시 만들기」 2번 · 템플릿 r2 다섯 줄 안대로(R82.4). **기획안 초안 1판** → [WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md) (쉬운 말 · 정하심 / 안 / 만듦 · 아직 가림 · 시안 3판 화면 번호). 뒤에 바뀌면 이 글에 판을 올림. RSCH에 알림 · ARCH에 결정 38.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
