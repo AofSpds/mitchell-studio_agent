@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T14:39:00+09:00"
 base_commit: "fa2b7aa"
-now: "**구현 요청 보류**(4-a · 4-b · 6 — RSCH 요청서 003 14번, PLN 14:5x). 한알 말씀 다섯(미첼 · 설명 걷기 · 영어 그대로 · 목록 없음 + 프로그레스 바 · 알림 설명 없음) 확정 기다림. 닿는 곳 메모만 씀"
-next: "요구 2판(PLN) 받으면 4-a · 4-b · 6 설계를 고쳐(메모 WEBAPP_PHASE1_HOLD_003-14_IMPACT_CLAUDE.md) PLN에 → PLN이 풀면 ARCH-009부터 PMO에"
-waiting_for: ["role:mitchell_studio/btsr/pln:요구 2판 (한알 말씀 다섯 확정 — RSCH 요청서 003 15번)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
+now: "보류 풀림 — 요구 2판 · 결정 20–26(`btsr/pln` 0933ad0) 받음. 4-a · 4-b · 6 설계를 2판 · 시안 3판(S8 fc31856)으로 다시 잡는 중"
+next: "4-a · 4-b · 6 설계 2판 → PLN 대조 → ARCH-009(4-a)부터 PMO에. [안] 잡을 것: 빈 Jobs · 바가 차는 법 · 고칠 때 · 규격 맞출 때의 바 · 승인 뒤 Jobs. R2.3 · R5.3 거둠(여러 편 화면 · 길 걷기)을 어느 건에 넣을지 ARCH가 정함"
+waiting_for: [] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -71,6 +71,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 5 + 3-2 반환 PLN 받음(`btsr/pln` cb548e0) → **제품 main `3072e7e`**(RSCH push, 에이전트 main d766ed3). 남은 것 1 · 2는 ARCH-009에(PLN 받음).
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
+  - **보류 풀림**(PLN — RSCH 요청서 003 15번 main ed67f92): 요구 **2판** · 결정 20–26(`btsr/pln` 0933ad0) — 20 미첼 · 21 R1.7 현황과 단추만(? 표 셋) · 22 R1.6 영어 그대로(결정 16 거둠) · 23 R2.3 한 번에 한 편(R5.3 거둠) · 24 R4.1–4.3 하는 일 한 줄 + 바(진행 기록 · 템플릿 줄 화면에 없음, R8.4 화면 줄도 거둠) · 25 4-b 알림 설명 없음 · 26 R6.6 끝난 영상은 Post. 화면 참고 시안 3판 `sub/s8_uiux_rework/`.
   - **보류**(PLN, `btsr/pln` ca4233f · RSCH 요청서 003 14번 main b45f67e): 4-a · 4-b · 6 구현 요청(ARCH → PMO) 보내지 않음. 한알 말씀 다섯(확정 아님 — 시안 3판 → 중간점검 → 15번 → 요구 2판). 설계 읽기 · 준비만. [닿는 곳 메모](design/webapp-phase1/WEBAPP_PHASE1_HOLD_003-14_IMPACT_CLAUDE.md).
   - PLN 14:4x(`btsr/pln` 0be8934, 요구 1.9판): R8.4 — 1차는 고르는 칸 안 만듦 · 작업 화면 "템플릿 ○ · n판"은 넣음. **조건: 둘째 템플릿을 들이는 건에 고르는 칸을 함께, 기준에 '둘이면 나타나고 고른 id가 작업에 박힘'** (잊지 말 것). 묶음 6 설계 1판 PLN 받음 — [안] 둘은 RSCH가 (가)(나) · 4-b 뒤에.
   - 묶음 4-a 설계 PLN 받음(`btsr/pln` f1fc16f — 낱말 물음 WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md를 RSCH a97bebab에, 권고 1 · 1).
