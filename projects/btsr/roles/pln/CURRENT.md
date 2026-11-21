@@ -8,7 +8,7 @@ base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.10판 · 결정 01–36. 제품 main ed11f5a까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a). PMO가 4-a-2(BTSR-ARCH-010) 구현 중. 설계 끝 · 차례 기다림: 6 · 4-b. 8-2는 다14 답 뒤. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.10판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 덧붙임. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-a-2 → 6 → 4-b → 8-2 → 1차 끝 맥 시험. 7은 뒤로. 그 밖은 스스로 시작하지 않음"
 waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-010(4-a-2) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
-owner_wait: "RSCH가 여쭘: 다14 뒷모습 AI 얼굴 합격 조건(묶음 8-2). 8-2 설계가 나오면 템플릿 r2 바뀌는 글 한 장을 RSCH → 한알께"
+owner_wait: "없음 — 다11 · 다14 답 받음(결정 36 · 37). 8-2 설계가 나오면 템플릿 r2 바뀌는 글 한 장 + 시안 화면 17을 RSCH → 한알께"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -18,8 +18,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 
 - 근거: 한알 16:05:36 uuid 014aee0b 「일단 pln arch pmo 모두 지금 작업이 끝나면 새로운 세션으로 바꿀께요.」(RSCH 요청서 003 23번, main `1b2daf8`). 바꾸는 것은 한알이 하심 · 지금 일을 멈추라는 말씀이 아님(RSCH의 읽기). PMO는 아스트라(codex `gpt-6.2-astra`)로 · 아스트라 IVA(최종 작업물 검증 · 리뷰) 신설 — 한알이 하심.
 - 지금 세션: Paseo `a6fd0155-25ef-4bc7-91b0-394849d6776e` · Claude `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 high · 제공자 claude.
-- **지금:** 요구 [webapp-phase1 2.10판](requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md) · [결정 01–36](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md). 제품 main `ed11f5a`(4-a까지). PMO가 4-a-2(ARCH-010, 바탕 `ed11f5a`) 구현 중. 6 · 4-b는 설계 끝(PMO 차례 4-a-2 → 6 → 4-b). 8-2(지시 글 맞춤 · 템플릿 r2)는 다14 답 뒤 · r2 바뀌는 글은 구현 전 한알께.
-- **열린 것:** 다14(RSCH가 여쭘) · 1차 끝 맥 시험에 넣을 것(명령줄 값 · 권한 · https 한 장 · cryptography · 맥 사본 쓰기 권한(R5.7) · 진짜 claude · ChatGPT).
+- **지금:** 요구 [webapp-phase1 2.10판](requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md) · [결정 01–36](requirements/webapp-phase1/WEBAPP_PHASE1_DECISIONS_CLAUDE.md). 제품 main `ed11f5a`(4-a까지). PMO가 4-a-2(ARCH-010, 바탕 `ed11f5a`) 구현 중. 6 · 4-b는 설계 끝(PMO 차례 4-a-2 → 6 → 4-b). 8-2(지시 글 맞춤 · 템플릿 r2 · R3.7 · R32.5)는 답 다 옴 — ARCH 설계 차례 · r2 바뀌는 글과 시안 화면 17은 구현 전 한알께.
+- **열린 것:** 1차 끝 맥 시험에 넣을 것(명령줄 값 · 권한 · https 한 장 · cryptography · 맥 사본 쓰기 권한(R5.7) · 진짜 claude · ChatGPT).
 - **받는 세션이 할 것:** 이 칸 끝에 '받음' 한 줄(시각 · 새 Paseo ID · Claude 세션 ID · 모델 — list_agents · transcript로 확인) · 커밋 · push(자기 역할 폴더만) → 옛 세션 제목 `MITCHELL_STUDIO/BTSR/PLN CLOSED` → RSCH(a97bebab)와 ARCH(d9520b95, 바뀌었으면 새 ID)에 새 ID만 알림 → YAML `next`의 길로 기다림.
 - 일하는 요령은 아래 '지금' 칸 끝 줄과 '일하는 요령(배운 것)'.
 
@@ -72,6 +72,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 4-a 합쳐짐 — 제품 main `ed11f5a`** (RSCH 확인 · push, main `41416d5` 요청서 22번, 16:02 PLN이 봄). 맥에는 안 넣음. 다11 · 다14는 RSCH가 여쭘.
 - **23번 받음** (RSCH main `1b2daf8`, 16:09) → 결정 36 · 요구 2.10판: 시술 과정 영상은 1차에서 쓰지 않음(R82.3). 한알 16:05:36 — PLN · ARCH · PMO는 지금 작업이 끝나면 새 세션으로(한알이 바꾸심) · PMO는 아스트라 · IVA 신설 → ★ 넘김 칸을 새로 씀 · ARCH에 전함(PMO에는 ARCH가 — 규칙 15).
 - **ARCH가 PMO에 전함 · ARCH 넘김 칸 씀** (`btsr/arch` `72449a3`) — ARCH 남은 차례: 010 대조 → 6(011) → 4-b(012) → 8-2 설계. PMO는 010 반환 뒤 넘김 칸. IVA를 누가 열고 무엇을 넘기는지 정해지면 ARCH에 알림.
+- **24번 받음** (RSCH main `13a45dd`, 16:17) → 결정 37 · 요구 2.11판: 얼굴이 보이는 시술 후 사진이 없으면 앞모습을 지어내지 않고 알림 → 확인 받으면 AI 얼굴 없이(R3.7 · R32.5). 다11 · 다14 끝 — 8-2 설계에 기다리던 답이 다 옴 → ARCH에 알림.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
