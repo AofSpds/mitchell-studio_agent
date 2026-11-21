@@ -2,10 +2,10 @@
 role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
-state: "HANDOFF"
-updated: "2026-11-21T16:49:00+09:00"
+state: "ACTIVE"
+updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "승계 중 — 한알 16:45:26 (RSCH 30번). 아래 넘김 칸. ARCH-011(묶음 6)은 PMO가 하는 중"
+now: "승계 받음 16:51 (새 세션 7621f3de) — RSCH · PLN · PMO에 새 ID 보고, 답 오면 ARCH-011 반환 대조. ARCH-011(묶음 6)은 PMO가 하는 중"
 next: "새 세션: 받음 → 보고 → ARCH-011 반환 대조 → 012(4-b + 8번) → 013(8-2)"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-011 반환 (5fbbea06)"] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
@@ -22,13 +22,15 @@ verifier: "mitchell_studio/btsr/archv"
 | 상위 | PLN (`MITCHELL_STUDIO/BTSR/PLN`). 역할 트리 PLN > RSCH · ARCH > PMO (규칙 5) |
 | 아래 | PMO. 요청은 바로 아래 역할로만 (규칙 15). PMO 결과를 받을 때 PMOV를 ARCH가 엶 (규칙 7) |
 | 짝 검증자 | ARCHV (비상설, 규칙 7) — 아직 없음 |
-| PRIMARY | `MITCHELL_STUDIO/BTSR/ARCH` — 2026-11-21 13:57 KST 승계로 열림(Paseo createdAt 04:57:40 UTC). Paseo 에이전트 ID `d9520b95-4853-46b9-b04b-96199dddc95d` · Paseo 작업 공간 ID `wks_6dc6b9d13807b202` (list_agents·list_workspaces에서 제목으로 찾음) · Claude 세션 ID `384694fd-f946-4121-9161-77042e392294` (`~/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent-worktrees-btsr-arch/`의 파일 중 첫 user 줄이 여는 글 message-id a0707d68인 것) · 모델 Opus 5.5 (`claude-opus-5-5`) · high · 실행기 Paseo · claude(이름표 claude-naver). 연 이: 옛 ARCH 9d298a54(한알 13:55:17 승계 말씀) |
+| PRIMARY | `MITCHELL_STUDIO/BTSR/ARCH` — 2026-11-21 16:50 KST 승계로 열림(Paseo createdAt 07:50:15 UTC). Paseo 에이전트 ID `7621f3de-7d3e-4f12-87e1-98fe95e32fd4` · Paseo 작업 공간 ID `wks_6dc6b9d13807b202`(옛 세션과 같은 작업 사본 — 이 세션에서 list_workspaces로 다시 보지 않음) · Claude 세션 ID `3733e26f-6e03-4ab9-8d4d-990e0bedb162` (`~/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent-worktrees-btsr-arch/`의 파일 중 첫 user 줄이 여는 글 message-id 3a81532d인 것) · 모델 Opus 5.5 (`claude-opus-5-5`) · high · 실행기 Paseo · claude. 연 이: 옛 ARCH d9520b95(한알 16:45:26 승계 말씀, RSCH 30번) |
 | 작업 사본 | `C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-arch` · 가지 `btsr/arch` (main fa2b7aa에서). 일과 커밋은 여기서만 (규칙 19). main 합치기는 스스로 하지 않음 — 누가 정하는지 아직 말씀 없음 |
 | 작업 칸 | `design/` (규칙 20) — 주제 목록은 [INDEX](INDEX.md) |
 | 게시판 | 없음 — `board/`가 아직 없어 요청서·받음을 작업 칸 주제 폴더에 둠 (PLN·RSCH와 같은 꼴, 규칙 16과 다름 — 숨기지 않음) |
-| 앞 세션 | Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Claude `df7a3d93-e2ee-4c76-8467-16606825f451` (`~/.claude-max/projects/…`) · claude-google · 2026-11-19 22:28 ~ 2026-11-21 13:56 KST (CLOSED, 넘긴 커밋 75a8ac5). 그 앞: Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
+| 앞 세션 | Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · Claude `384694fd-f946-4121-9161-77042e392294` (`~/.claude/projects/…`) · claude(이름표 claude-naver) · 2026-11-21 13:57 ~ 16:50 KST (CLOSED, 넘긴 커밋 840675f). 그 앞: Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Claude `df7a3d93-e2ee-4c76-8467-16606825f451` (`~/.claude-max/projects/…`) · claude-google · 2026-11-19 22:28 ~ 2026-11-21 13:56 KST (CLOSED, 넘긴 커밋 75a8ac5). 그 앞: Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
 
-## 넘김 (2026-11-21 16:49 KST 씀 — 지금 세션 d9520b95 → 다음 ARCH 세션)
+## 넘김 (2026-11-21 16:49 KST 씀 — 옛 세션 d9520b95 → 새 세션 7621f3de, 16:51 받음)
+
+- **받음(16:51, 새 세션 7621f3de)**: 1 읽음(AGENTS · CURRENT · INDEX · AAA v0.14 · rsch knowhow) · 2 이 커밋 · 3 옛 세션 제목 CLOSED · 4 보고 — RSCH a97bebab · PLN(새 세션 be41b33c가 07:50:04 UTC에 열림, 옛 a6fd0155에도) · PMO 5fbbea06 · 5 답 기다림.
 
 - **까닭**: 한알 16:45:26 「네 새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다. 1차가 만들어지면 맥에서 테스트 진행할께요. …」(RSCH 요청서 003 30번, 에이전트 main 60a2ee9 — RSCH가 전함). 앞서 16:05:36 「…지금 작업이 끝나면 새로운 세션으로…」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」. 30번이 바로잡음: **승계는 옛 세션이 `create_agent`로 진행**(한알이 하시는 것이 아님). ARCH는 '지금 하던 일이 끝나는 대로' — 이 세션은 ARCH-011 반환을 기다리는 중이라 하다 만 일 없이 지금 넘김.
 - **옛 세션(이 세션)**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · 작업 공간 `wks_6dc6b9d13807b202` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high. 넘긴 커밋 = 이 칸이 든 커밋.
