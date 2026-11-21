@@ -18,8 +18,8 @@
 - 끝나면 맥에 결과가 올라갑니다.
 
 **2. 맥 보안 주소 준비**
-- 먼저 휴대폰: Safari에서 `login.tailscale.com/admin/dns` → ☰ → DNS → 맨 아래 HTTPS Certificates. 'Enable HTTPS'면 누르고, 'Disable HTTPS…'로 보이면 이미 켜진 것이니 그대로 두세요.
-- 그다음 맥: `origin/main의 MAC_RUN 글대로 3-4만 해 주고, 아이폰에서 열 주소를 알려 줘.`
+- Tailscale의 HTTPS는 이미 켜져 있습니다(11-21 19:53 사진에서 확인) — 다시 안 하셔도 됩니다.
+- 맥: `origin/main의 MAC_RUN 글대로 3-4만 해 주고, 아이폰에서 열 주소를 알려 줘.`
 - 나온 주소를 휴대폰으로 보내 두세요(메모나 카톡 '나와의 채팅').
 
 **3. 휴대폰 (맥은 안 만짐)**
@@ -39,3 +39,4 @@
 
 - (23:27 고침 — RSCH가 짚음) 맥 사본의 MAC_RUN 글은 07cd3fc 때 것이라 1-6 새 기준 · 3-3 HTTPS 곳이 없음 → 세 줄 모두 'origin/main의 MAC_RUN 글대로'로. RSCH가 한알께 드린 1번 줄과 같음.
 - (23:31 고침 — ARCH가 세 줄을 MAC_RUN `896abae`와 대조) ① '묻지 말고'는 맡겨 두기로 읽혀 2회차로 이어 감 → 1번 줄에 「2회차는 하지 마.」(2회차는 휴대폰 뒤에 따로) ② 3-4 앞에 3-3 앞 절반(Tailscale HTTPS Certificates 켜기 — 한알 휴대폰 손일)이 먼저 — 오늘 https가 안 열린 까닭일 수 있음 → 2번에 넣음 ③ 3-5(휴대폰 걸음)는 한 장에 그대로 ④ 3-6 · 3-8은 전송이 꺼져 있으면 '맥에 대기까지만'으로 적고 넘어감 · 3-7은 1회차가 된 뒤라야 함(차례대로 됨).
+- (23:36 고침 — RSCH가 짚음) ARCH ②의 HTTPS Certificates 손일은 뺌 — 한알 19:53:55 아이폰 사진에서 'Disable HTTPS…' · 'Disable MagicDNS…'(이미 켜짐 · 요청서 003 49번). 오늘 주소가 안 열린 까닭은 맥 쪽 3-4(`tailscale serve`)를 아직 안 해서로 봄.
