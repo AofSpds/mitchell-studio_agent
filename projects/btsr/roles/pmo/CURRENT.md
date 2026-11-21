@@ -3,13 +3,13 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T18:10:59+09:00"
+updated: "2026-11-21T18:20:04+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-014 맥 테스트 글 반환 · 문서 가지 28e779e · 덧붙임 1·2 반영"
-next: "ARCH의 014 대조 결과와 후속 정식 요청 대기"
+now: "BTSR-ARCH-015 받음 · 미첼이 겪는 여섯 곳과 맥 테스트 글 수정"
+next: "코드·시험·글을 따로 커밋해 ARCH에 반환"
 waiting_for: ["arch:BTSR-ARCH-014-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
-subs: []
+subs: ["s2_post_caption", "s3_redo_face", "s4_material_names"]
 parent: "mitchell_studio/btsr/arch"
 verifier: "mitchell_studio/btsr/pmov"
 ---
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-015_webapp-iva-fix | ARCH (7621f3de) | btsr/arch a0f79c3 · IVA 판정 7915afd | 2026-11-21 18:20:04 KST | 진행 중 · 제품 94d4522 위 새 기능 가지 |
 | BTSR-ARCH-014_webapp-mac-test-doc | ARCH (7621f3de) | btsr/arch ebba9cf · 덧붙임 114ccfe·503b5ac · S13 3판 main ffe451d | 2026-11-21 17:51:45 KST | 반환 18:10 KST · 제품 28e779e · 기준 94d4522 위 문서 한 파일 · 기본 133 통과/2 건너뜀, 암호화 135/135 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_RETURN_CODEX.md) |
 | BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST · RSCH 수용(건은 열어 둠) — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
 | 작업자 모델 Terra → GPT-6.2 Sol · 생각 High, 한 곳 설정(enum)으로 — 제품 저장소 웹앱 · 문서 (급함, 오늘 맥 웹앱 시험 전) | RSCH (Paseo 7993ff28) | 세션 메시지(2026-11-21 03:20 KST, message-id f558a86c) — 요청서 파일 없음 | 2026-11-21 (KST, 커밋 140ed71 시각) | **RSCH가 거둠**(03:2x KST, message-id a968fc10 — PLN · ARCH를 건너뛴 요청, 한알 「누가 바로 pmo에 보내나요」). 멈춤. 제품 저장소에 바꾼 것 · 커밋 · push 없음. 이 PC 사본에 로컬 가지 `fix/worker-model-sol-20261121`(main 9e7eb0e 그대로, 고친 파일 0)만 남음 — 지우지 않고 둠 |
