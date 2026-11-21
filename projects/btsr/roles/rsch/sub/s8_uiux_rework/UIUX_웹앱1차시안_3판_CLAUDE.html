@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=446">
+<meta name="robots" content="noindex">
+<title>웹앱 1차 — 화면 시안 3판 (2026-11-21)</title>
+<style>
+/* 색 · 글꼴 · 모서리 · 부품은 지금 웹앱(제품 main 3072e7e · app/webapp/static/app.html)의 것을 그대로 옮김.
+   진행 바는 지금 웹앱의 보내는 중 바(.barw · .barf)와 같은 것. 바깥 글꼴 · 그림 · 스크립트 없음.
+   사람 그림은 모두 이 파일 안에서 그린 것(실제 사진 아님). */
+:root {
+  --bg:#efebe5; --card:#faf8f5; --ink:#2b2420; --soft:#7a6f66; --line:#ddd5cb; --bar:#e6e0d8;
+  --accent:#4a3a30; --accent2:#8b6a4f; --ok:#5d8a6b; --okbg:#e3ece4; --wait:#9a6f12; --waitbg:#f3e7c8;
+  --bad:#a8473f; --badbg:#f4e0dc; --grad1:#3a2e27; --grad2:#7a5c45; --onaccent:#faf8f5;
+  --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  --mark:"Baskerville","Libre Baskerville","Times New Roman",serif;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:#cfc8be; color:var(--ink); font-family:var(--font); font-size:17px; line-height:1.45; }
+svg { display:block; }
+
+/* ── 시안 틀(웹앱 화면이 아닌 곳) ── */
+.top { max-width:1800px; margin:0 auto; padding:26px 24px 0; }
+.top h1 { font-size:26px; margin:0 0 8px; }
+.top p { margin:5px 0; font-size:15px; color:#4d443d; }
+.top .demo { display:inline-block; background:var(--waitbg); color:var(--wait); border-radius:10px; padding:4px 10px; font-size:14px; font-weight:600; }
+.grid { max-width:1800px; margin:0 auto; padding:22px 24px 60px; display:grid; grid-template-columns:repeat(auto-fill, 406px); gap:36px 28px; justify-content:center; }
+.shot { width:406px; scroll-margin-top:12px; }
+.shot .hd { font-size:15px; font-weight:700; margin:0 4px 8px; min-height:24px; }
+.shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
+.shot .ft { font-size:14px; color:#3f3731; margin:8px 4px 0; min-height:66px; }
+.shot .ft b { color:var(--ink); }
+/* 한 화면만 보기: 주소 끝에 #s1 … #s13 */
+body:has(.shot:target) .top, body:has(.shot:target) .shot:not(:target) { display:none; }
+body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
+
+/* ── 휴대폰 틀 ── */
+.phone { width:390px; height:844px; box-sizing:content-box; background:var(--bg); border:8px solid #2b2420; border-radius:44px; overflow:hidden; position:relative; display:flex; flex-direction:column; }
+.scr { flex:1; min-height:0; overflow:hidden; padding:8px 16px 0; position:relative; }
+.dimmed { filter:brightness(.97); }
+
+/* ── 웹앱 부품(지금 것 그대로) ── */
+.brand { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; padding:6px 0 10px; border-bottom:1px solid var(--line); margin-bottom:8px; }
+.wm { font-family:var(--mark); font-weight:700; font-size:22px; line-height:1.05; letter-spacing:.01em; }
+.brand .br { font-size:12px; color:var(--soft); text-align:right; letter-spacing:.02em; flex:1; }
+.fbk { flex:none; border:1px solid var(--line); background:var(--bar); color:var(--ink); border-radius:12px; padding:8px 10px; font-size:13px; font-weight:700; line-height:1.15; text-align:center; }
+.tabs { display:flex; gap:6px; background:var(--card); border-top:1px solid var(--line); padding:8px 16px 14px; position:relative; }
+.tabs > span { flex:1; text-align:center; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:16px; padding:11px 0; border-radius:14px; position:relative; color:var(--soft); }
+.tabs > span.on { background:var(--bar); color:var(--ink); }
+.badge { position:absolute; top:3px; right:10%; min-width:18px; height:18px; padding:0 4px; border-radius:9px; background:var(--bad); color:#fff; font:700 11px/18px var(--font); text-align:center; }
+h1.s { font-size:26px; margin:8px 0 6px; font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
+h2 { font-size:20px; margin:0 0 8px; }
+.eh { font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
+.note { color:var(--soft); font-size:13px; }
+.card { background:var(--card); border-radius:20px; padding:13px 16px; margin-bottom:10px; }
+.big { height:84px; border-radius:28px; background:linear-gradient(160deg,var(--grad1),var(--grad2)); color:#faf8f5; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:32px; display:flex; align-items:center; justify-content:center; margin:6px 0 10px; }
+.btn { display:flex; align-items:center; justify-content:center; text-align:center; padding:13px 10px; border-radius:16px; background:var(--accent); color:var(--onaccent); font-weight:600; font-size:17px; }
+.btn.soft { background:var(--bar); color:var(--ink); }
+.btn.line { background:transparent; color:var(--soft); font-weight:500; }
+.btn.sm { padding:9px 8px; font-size:15px; }
+.btn.off { background:#b5aca4; color:#f1ece6; }
+.btn.soft.off { background:var(--bar); color:#b9b0a8; }
+.row { display:flex; gap:10px; margin-top:10px; }
+.row > * { flex:1; }
+.pill { display:inline-block; border-radius:10px; padding:3px 9px; font-size:13px; font-weight:600; background:var(--bar); color:var(--accent); white-space:nowrap; }
+.pill.done { background:var(--okbg); color:var(--ok); }
+.pill.wait { background:var(--waitbg); color:var(--wait); }
+.jt { display:flex; align-items:center; gap:8px; margin:6px 0 10px; }
+.jt .ti { font-size:20px; font-weight:700; flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.jt .gear { background:var(--card); border-radius:14px; padding:7px 11px; font-size:14px; font-weight:600; white-space:nowrap; flex:none; }
+.nowband { background:var(--card); border-radius:20px; padding:14px 16px 12px; margin-bottom:10px; border-left:6px solid var(--accent2); }
+.nowband.w { border-left-color:var(--wait); } .nowband.b { border-left-color:var(--bad); }
+.nowband .l1 { font-size:18px; font-weight:700; }
+.nowband .l2 { font-size:15px; }
+.barw { height:10px; background:var(--bar); border-radius:6px; overflow:hidden; margin-top:10px; }
+.barf { height:100%; width:0; background:linear-gradient(90deg,var(--grad1),var(--grad2)); }
+.barf.stop { background:var(--bad); }
+.pg { display:flex; justify-content:space-between; gap:10px; font-size:13px; color:var(--soft); margin-top:6px; }
+.thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:8px 0; }
+.th { aspect-ratio:9/16; border-radius:10px; overflow:hidden; position:relative; background:var(--bar); }
+.th svg { width:100%; height:100%; }
+.th i { position:absolute; left:3px; right:3px; bottom:3px; font-style:normal; font-size:10.5px; text-align:center; border-radius:6px; background:rgba(250,248,245,.92); padding:1px 0; }
+.th.none, .th.make { overflow:visible; }
+.th.none { background:none; border:2px dashed var(--wait); }
+.th.none i { background:none; color:var(--wait); font-weight:700; bottom:40%; }
+.th.make { background:none; border:2px dashed var(--soft); }
+.th.make i { background:none; color:var(--soft); font-weight:700; bottom:36%; }
+.th.ask { outline:3px solid var(--bad); outline-offset:1px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.chip { border:1.5px solid var(--line); border-radius:999px; padding:6px 12px; font-size:14px; background:var(--card); }
+.chip.on { background:var(--accent); color:var(--onaccent); border-color:var(--accent); }
+.kv { display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:15px; }
+.kv.first { border-top:0; }
+.kv > span:first-child { color:var(--soft); flex:none; }
+.ta { border:2px solid var(--line); border-radius:16px; background:var(--card); padding:10px 12px; min-height:60px; font-size:15px; color:var(--soft); margin:6px 0 4px; }
+.ta.w { color:var(--ink); }
+.sheet { position:absolute; inset:0; background:rgba(30,26,22,.5); display:flex; align-items:flex-end; }
+.box { width:100%; background:var(--bg); border-radius:24px 24px 0 0; padding:18px 16px 20px; position:relative; }
+.vid { width:150px; aspect-ratio:9/16; border-radius:14px; overflow:hidden; position:relative; flex:none; background:#5a4a3f; }
+.vid svg.pic { width:100%; height:100%; }
+.vid .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:rgba(250,248,245,.9); font-size:30px; }
+.vid em { position:absolute; left:6px; bottom:6px; font-style:normal; font-size:11px; font-weight:700; color:#fff; background:rgba(168,71,63,.92); border-radius:6px; padding:1px 6px; }
+.vid u { position:absolute; left:6px; top:6px; text-decoration:none; font-size:11px; background:rgba(250,248,245,.92); border-radius:6px; padding:1px 6px; }
+.vid .cap { position:absolute; left:8px; right:8px; bottom:28px; text-align:center; color:#fff; font-size:11px; font-weight:700; text-shadow:0 1px 2px #000; }
+.side { display:flex; gap:12px; align-items:flex-start; }
+.ok { color:var(--ok); font-weight:700; }
+.warn { color:var(--wait); font-weight:700; }
+.log { font-size:13.5px; }
+.log div { display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); }
+.log div:first-child { border-top:0; }
+.log time { flex:none; width:82px; font-size:13px; color:var(--soft); padding-top:1px; }
+.fb { background:var(--bar); border-radius:12px; padding:8px 12px; font-size:14px; margin-top:8px; }
+/* ? 표 — 누르면 풀이가 뜸(풀이 글은 화면 밖 아래에 적음) */
+.q { display:inline-block; width:20px; height:20px; border-radius:50%; background:var(--bar); color:var(--soft); font:700 13px/20px var(--font); text-align:center; vertical-align:2px; margin-left:4px; }
+</style>
+</head>
+<body>
+
+<!-- 이 파일 안에서 그린 그림(실제 사진 아님) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="p-after" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#d9cfc3"/>
+    <path d="M10 160 Q12 122 45 118 Q78 122 80 160Z" fill="#b8a898"/>
+    <path d="M45 26 C20 26 14 52 16 78 C17 100 14 118 22 130 C30 124 34 132 45 128 C56 132 60 124 68 130 C76 118 73 100 74 78 C76 52 70 26 45 26Z" fill="#6b4a36"/>
+    <path d="M28 60 Q34 80 28 100 M40 56 Q46 82 40 110 M52 56 Q58 82 52 110 M63 60 Q68 80 62 100" stroke="#8a6248" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-before" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#cfc6bb"/>
+    <path d="M10 160 Q12 122 45 118 Q78 122 80 160Z" fill="#a99a8b"/>
+    <path d="M45 30 C26 30 22 52 23 78 L24 126 L66 126 L67 78 C68 52 64 30 45 30Z" fill="#5a4234"/>
+    <path d="M34 50 V120 M45 48 V122 M56 50 V120" stroke="#6f5443" stroke-width="2" fill="none"/>
+  </symbol>
+  <symbol id="p-face" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#e0d6ca"/>
+    <path d="M8 160 Q10 124 45 120 Q80 124 82 160Z" fill="#b8a898"/>
+    <path d="M45 22 C18 22 13 50 16 80 C17 102 15 116 24 128 L66 128 C75 116 73 102 74 80 C77 50 72 22 45 22Z" fill="#6b4a36"/>
+    <rect x="39" y="94" width="12" height="28" rx="5" fill="#e6c6ad"/>
+    <ellipse cx="45" cy="72" rx="19" ry="25" fill="#f0d5bf"/>
+    <path d="M26 68 C24 44 38 37 50 39 C61 41 66 52 64 68 C58 56 48 50 38 52 C32 54 28 60 26 68Z" fill="#6b4a36"/>
+  </symbol>
+  <symbol id="p-blur" viewBox="0 0 90 160">
+    <rect width="90" height="160" fill="#d4cabe"/>
+    <ellipse cx="45" cy="84" rx="34" ry="54" fill="#8a6c58" opacity=".55"/>
+    <ellipse cx="49" cy="80" rx="30" ry="50" fill="#6b4a36" opacity=".35"/>
+    <ellipse cx="41" cy="88" rx="30" ry="50" fill="#6b4a36" opacity=".3"/>
+  </symbol>
+</svg>
+
+<div class="top">
+  <h1>웹앱 1차 — 화면 시안 (3판)</h1>
+  <p><span class="demo">보여 드리는 그림입니다 · 눌러도 움직이지 않습니다 · 안의 작업 · 글 · 사람 그림은 모두 지어낸 예시입니다(실제 손님 · 사진 없음)</span></p>
+  <p>쓰는 사람은 미첼입니다. 화면에는 현황과 단추만 두었고, 설명은 화면 밖 아래 글에 적었습니다. 작업 목록과 알림 설명 화면은 뺐습니다(알림 켜는 법은 Manual 탭).</p>
+</div>
+
+<div class="grid">
+
+<!-- ───────── 1 Send ───────── -->
+<div class="shot" id="s1">
+  <div class="hd"><span class="no">1</span>Send — 올리기 전</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <h1 class="s">Send</h1>
+    <div class="big">Send</div>
+    <div class="card">
+      <div class="eh">Request</div>
+      <div class="ta" style="min-height:46px;margin-bottom:0">예) 디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조</div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="eh">Options</span><span style="font-size:15px;color:var(--soft)">기본값 ▾</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 안내 글을 모두 뺐습니다. 큰 단추는 Send, Options 줄은 '기본값'만입니다. Request 칸의 흐린 글은 적기 시작하면 사라지는 예시입니다.</div>
+</div>
+
+<!-- ───────── 2 다 보내면 ───────── -->
+<div class="shot" id="s2">
+  <div class="hd"><span class="no">2</span>다 보내면 — 바로 시작</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband">
+      <div class="l1">보내신 것을 살펴보는 중이에요</div>
+      <div class="barw"><div class="barf" style="width:22%"></div></div>
+      <div class="pg"><span class="eh">Intake</span><span>2 / 9</span></div>
+    </div>
+    <div class="card">
+      <div style="font-weight:600">보낸 것</div>
+      <div class="thumbs">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>영상</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><i>사진</i></div>
+      </div>
+      <div style="font-size:15px">영상 1 · 사진 3 · 요청: “디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조”</div>
+      <div class="kv" style="margin-top:6px"><span>템플릿</span><span>시술 전후 릴스 · 2판</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 다 보내면 Jobs의 그 한 편으로 곧바로 갑니다. 하는 일 한 줄과 바만 보입니다 — 바 아래는 지금 단계 이름과 아홉 단계 가운데 몇째인지입니다. 단계 줄과 "하실 일 없어요" 글은 뺐습니다.</div>
+</div>
+
+<!-- ───────── 3 Intake — 묻지 않음 ───────── -->
+<div class="shot" id="s3">
+  <div class="hd"><span class="no">3</span>AI 얼굴 사진이 없어도 묻지 않음</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband">
+      <div class="l1">원고를 쓰는 중이에요</div>
+      <div class="barw"><div class="barf" style="width:33%"></div></div>
+      <div class="pg"><span class="eh">Script</span><span>3 / 9</span></div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700">Intake</span><span class="pill done">완료</span></div>
+      <div class="thumbs">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><i>시술 전</i></div>
+        <div class="th make"><i>AI 얼굴<br>만들 예정</i></div>
+      </div>
+      <div class="kv first"><span>시술</span><span>디지털펌</span></div>
+      <div class="kv"><span>보여줄 변화</span><span>뒷볼륨</span></div>
+      <div class="kv"><span>모델 연령</span><span>50대</span></div>
+      <div class="kv"><span>시술 전 · 시술 후</span><span class="ok">있어요 ✓</span></div>
+      <div class="kv"><span>AI 얼굴</span><span><b>만들 예정</b></span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 설명 글과 단계 줄을 뺐습니다. AI 얼굴 사진을 안 올려도 묻지 않고, 나눈 결과에 「AI 얼굴 · 만들 예정」 한 줄만 보인 채 원고로 넘어갑니다.</div>
+</div>
+
+<!-- ───────── 4 Intake — 빠진 자료 ───────── -->
+<div class="shot" id="s4">
+  <div class="hd"><span class="no">4</span>빠진 자료 — 웹앱이 만들 수 없는 것만 물음</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">확인해 주세요</div>
+      <div class="barw"><div class="barf" style="width:22%"></div></div>
+      <div class="pg"><span class="eh">Intake</span><span>2 / 9</span></div>
+    </div>
+    <div class="card">
+      <div class="thumbs" style="margin-top:0">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th none"><i>시술 전<br>없음</i></div>
+        <div class="th make"><i>AI 얼굴<br>만들 예정</i></div>
+      </div>
+      <div style="font-size:18px;font-weight:700;margin-top:8px">시술 전 사진이 없어요</div>
+      <div class="row"><div class="btn soft">더 보내기</div><div class="btn">이대로 만들기</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 물음 한 줄과 단추 둘만 남겼습니다. 미첼이 고를 때까지 바는 그 자리에 서 있습니다. 「이대로 만들기」면 '시술 전' 장면 없이 만듭니다. AI 얼굴은 여기서도 묻지 않습니다.</div>
+</div>
+
+<!-- ───────── 5 Face ───────── -->
+<div class="shot" id="s5">
+  <div class="hd"><span class="no">5</span>AI 얼굴 확인</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">확인해 주세요</div>
+      <div class="barw"><div class="barf" style="width:44%"></div></div>
+      <div class="pg"><span class="eh">Face</span><span>4 / 9</span></div>
+    </div>
+    <div class="card">
+      <div style="font-size:18px;font-weight:700">머리 색과 모양이 같은가요?<span class="q">?</span></div>
+      <div class="side" style="margin-top:10px;justify-content:center">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><u>시술 후 사진</u></div>
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><u>만든 AI 얼굴</u><em>얼굴 : AI 합성</em></div>
+      </div>
+      <div class="row" style="margin-top:12px"><div class="btn" style="flex:1.65;font-size:16px;padding:13px 6px">이 사진으로 갈게요 →</div><div class="btn soft" style="font-size:16px;padding:13px 6px">다시 만들기</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 풀이 글 셋을 빼고 물음 한 줄 · 사진 둘 · 단추 둘만 남겼습니다. <b>? 를 누르면:</b> "머리는 그대로 두고 얼굴만 새로 만든 사진이에요. 다시 만들기는 2번 더 할 수 있어요."</div>
+</div>
+
+<!-- ───────── 6 만드는 중 ───────── -->
+<div class="shot" id="s6">
+  <div class="hd"><span class="no">6</span>만드는 중 — 한 줄과 바</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband">
+      <div class="l1">목소리를 넣는 중이에요</div>
+      <div class="barw"><div class="barf" style="width:78%"></div></div>
+      <div class="pg"><span class="eh">Voice · Music · Fit · Export</span><span>7 / 9</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 작업 목록 화면을 없앴습니다. Jobs에는 지금 만드는 한 편만 보입니다. 진행 기록과 단계 줄도 빼고 하는 일 한 줄과 바만 두었습니다. 화면은 스스로 바뀝니다.</div>
+</div>
+
+<!-- ───────── 7 막힘 ① ───────── -->
+<div class="shot" id="s7">
+  <div class="hd"><span class="no">7</span>막혔을 때 ① — 미첼에게 물음</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband b">
+      <div class="l1">잠깐 멈췄어요</div>
+      <div class="barw"><div class="barf stop" style="width:56%"></div></div>
+      <div class="pg"><span class="eh">Edit</span><span>5 / 9</span></div>
+    </div>
+    <div class="card">
+      <div class="side" style="align-items:center">
+        <div class="th ask" style="width:74px;flex:none"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-blur"/></svg><i>이 사진</i></div>
+        <div style="flex:1;font-size:18px;font-weight:700">시술 후 사진 한 장이 흐려요</div>
+      </div>
+      <div class="btn" style="margin-top:12px">사진 다시 올리기</div>
+      <div class="btn soft" style="margin-top:8px">이 사진 빼고 만들기</div>
+      <div class="btn line sm" style="margin-top:2px">모르겠어요 — 개발자에게 알리기</div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 세 마디 풀이(무슨 일 · 지금 · 하실 일)를 한 줄로 줄이고 고르는 단추만 남겼습니다. 웹앱이 먼저 다시 해 보고, 안 될 때만 미첼에게 묻습니다. 바는 멈춘 자리에 빨갛게 섭니다.</div>
+</div>
+
+<!-- ───────── 8 막힘 ② ───────── -->
+<div class="shot" id="s8">
+  <div class="hd"><span class="no">8</span>막혔을 때 ② — 개발자에게 알렸어요</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband b">
+      <div class="l1">개발자에게 알렸어요</div>
+      <div class="l2">장면을 이어 붙이지 못했어요</div>
+      <div class="barw"><div class="barf stop" style="width:56%"></div></div>
+      <div class="pg"><span class="eh">Edit</span><span>5 / 9</span></div>
+    </div>
+    <div class="btn soft">여기까지 만든 것 보기</div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 풀이 글과 진행 기록을 뺐습니다. 미첼이 답해도 안 풀리면 개발자에게 알리고 멈춥니다. 만들던 것은 지우지 않고, 개발자가 본 뒤 멈춘 곳부터 이어 만듭니다.</div>
+</div>
+
+<!-- ───────── 9 Done ───────── -->
+<div class="shot" id="s9">
+  <div class="hd"><span class="no">9</span>다 됐어요 — 영상 보기 · 사진 앱에 저장</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">다 됐어요 — 확인해 주세요</div>
+      <div class="barw"><div class="barf" style="width:89%"></div></div>
+      <div class="pg"><span class="eh">Done</span><span>8 / 9</span></div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid" style="width:118px"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><div class="cap" style="font-size:10px">뿌리 볼륨 디지털펌</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div class="chips" style="margin:0 0 8px"><span class="chip">v1</span><span class="chip on">v2</span></div>
+          <div class="note">v2 · 14.4초</div>
+          <div class="note" style="margin-top:6px"><span class="ok">릴스 규격에 맞아요 ✓</span></div>
+        </div>
+      </div>
+      <div class="btn" style="margin-top:12px">승인</div>
+      <div class="row"><div class="btn soft">사진 앱에 저장</div><div class="btn soft">고칠 점 적기</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 규격 숫자와 공유 창 그림을 뺐습니다. 미첼이 영상을 보고 고릅니다. 「사진 앱에 저장」을 누르면 아이폰 공유 창이 열리고 「비디오 저장」으로 사진 앱에 들어갑니다. 고친 판이 있으면 v1 · v2를 번갈아 봅니다.</div>
+</div>
+
+<!-- ───────── 10 고칠 점 적기 ───────── -->
+<div class="shot" id="s10">
+  <div class="hd"><span class="no">10</span>고칠 점 적기</div>
+  <div class="phone"><div class="scr dimmed">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">다 됐어요 — 확인해 주세요</div>
+      <div class="barw"><div class="barf" style="width:89%"></div></div>
+      <div class="pg"><span class="eh">Done</span><span>8 / 9</span></div>
+    </div>
+    <div class="card"><div class="side"><div class="vid" style="width:110px"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div><div><div class="chips" style="margin-top:0"><span class="chip on">v1</span></div></div></div></div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>고칠 점 적기<span class="q">?</span></h2>
+    <div class="ta w" style="min-height:84px;margin-top:10px">자막을 더 크게 해 주세요. 끝의 2초는 잘라 주세요.</div>
+    <div class="row"><div class="btn soft">취소</div><div class="btn">보내기</div></div>
+  </div></div>
+  </div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 안내 글 셋을 뺐습니다. 보내면 바로 고치기 시작합니다. <b>? 를 누르면:</b> "보내면 새 영상(v2)으로 만들어요. 지금 영상(v1)은 그대로 남아요."</div>
+</div>
+
+<!-- ───────── 11 v2 만드는 중 ───────── -->
+<div class="shot" id="s11">
+  <div class="hd"><span class="no">11</span>고친 판(v2)을 만드는 중</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband">
+      <div class="l1">v2를 만드는 중이에요</div>
+      <div class="barw"><div class="barf" style="width:40%"></div></div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div class="chips" style="margin:0 0 8px"><span class="chip on">v1</span><span class="chip" style="border-style:dashed;color:var(--soft)">v2 만드는 중</span></div>
+          <div class="note">v1 · 14.2초</div>
+          <div class="note" style="margin-top:6px"><span class="ok">릴스 규격에 맞아요 ✓</span></div>
+        </div>
+      </div>
+      <div class="fb">✎ 자막을 더 크게 해 주세요. 끝의 2초는 잘라 주세요. <span class="note">오후 4:02</span></div>
+      <div class="row"><div class="btn soft">사진 앱에 저장</div><div class="btn soft off">고칠 점 적기</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 풀이 글과 진행 기록을 빼고 바를 넣었습니다. 고쳐 만드는 동안 앞 판(v1)은 그대로 보고 저장할 수 있습니다. 다 되면 v2가 켜집니다.</div>
+</div>
+
+<!-- ───────── 12 규격이 다름 ───────── -->
+<div class="shot" id="s12">
+  <div class="hd"><span class="no">12</span>규격이 다르면 — 완성이 아님</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">애쉬 브라운 염색</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">규격을 맞추는 중이에요<span class="q">?</span></div>
+      <div class="barw"><div class="barf" style="width:60%"></div></div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><em>얼굴 : AI 합성</em></div>
+        <div style="flex:1;min-width:0">
+          <div class="chips" style="margin:0 0 8px"><span class="chip on">v1</span></div>
+          <div class="note"><span class="warn">⚠ 릴스 규격과 달라요</span><br>지금 세로 720×1280</div>
+        </div>
+      </div>
+      <div class="btn off" style="margin-top:12px">승인</div>
+      <div class="row"><div class="btn soft off">사진 앱에 저장</div><div class="btn soft">의견 · 고칠 점 적기</div></div>
+      <div class="fb">✎ 화면은 괜찮아 보여요. <span class="note">오후 5:10 · 의견으로 받아 두었어요</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 풀이 글을 ? 표 하나로 줄였습니다. 규격(세로 1080×1920)이 다르면 미첼이 괜찮다고 해도 완성이 아닙니다 — 「승인」과 저장이 잠깁니다. <b>? 를 누르면:</b> "규격을 맞춘 영상이 나와야 승인할 수 있어요."</div>
+</div>
+
+<!-- ───────── 13 건의하기 ───────── -->
+<div class="shot" id="s13">
+  <div class="hd"><span class="no">13</span>건의하기</div>
+  <div class="phone"><div class="scr dimmed">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk" style="background:var(--accent);color:var(--onaccent)">건의하기</span></div>
+    <h1 class="s">Send</h1>
+    <div class="big">Send</div>
+  </div>
+  <div class="sheet"><div class="box">
+    <h2>건의하기</h2>
+    <div class="chips"><span class="chip">안 돼요</span><span class="chip on">이랬으면 해요</span><span class="chip">이건 좋아요</span></div>
+    <div class="ta w" style="min-height:70px">원고 확인할 때 글자를 더 크게 볼 수 있으면 좋겠어요</div>
+    <div class="row"><div class="btn soft">닫기</div><div class="btn">보내기</div></div>
+    <h2 style="margin-top:16px;font-size:18px">내가 보낸 건의</h2>
+    <div class="log">
+      <div><time>11-20 14:05</time><span>안 돼요 · <b>손님 A</b>가 영상 저장이 안 된다고 하셨어요 <span class="pill wait" style="font-size:11px;padding:1px 6px">별명으로 바뀜</span></span></div>
+      <div><time>11-19 10:30</time><span>이건 좋아요 · 원고 글자 수가 바로 보여서 편해요</span></div>
+    </div>
+  </div></div>
+  </div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 안내 글 둘을 뺐습니다. 손님 이름이 적혀 있으면 웹앱이 별명('손님 A')으로 바꿔 저장하고, 보낸 건의 줄에 「별명으로 바뀜」만 붙습니다.</div>
+</div>
+
+</div>
+</body>
+</html>
