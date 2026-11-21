@@ -36,3 +36,11 @@
 - 맥 기록 한 줄(한알이 맥에 그대로): 「~/Library/Logs/mitchell-upload.log에서 '올리기 끊김' · '올리기 덜 됨' · '받음' · ' 401 ' 줄만 최근 40줄 보여 줘. 파일 이름 말고 시각 · 낱말 · 숫자만.」(서버 `log_message` → launchd `StandardErrorPath`).
 - PLN이 RSCH에 넘김(한알께 그대로).
 - (00:2x) PMO가 BTSR-ARCH-020 받음 — 서버 고침 없이 Send 화면만으로 1–4 모두 · 01:45 합침 어림 그대로. 맥 기록 한 줄 PMO 안(횟수만 — 파일 이름 · 시각 안 나옴)도 RSCH에 넘김 · PLN 권고는 ARCH 줄(때까지 보임).
+
+## 반환 — PLN 대조 (2026-11-22 00:34 KST)
+
+- ARCH 반환 `btsr/arch` `949b704` `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL_BTSR-PLN-002_RETURN_CLAUDE.md` (BTSR-ARCH-020). **받음.**
+- 결과: 제품 가지 `feat/webapp-upload-stall-20261122` **`8b0d084`** — main `896abae` 위 커밋 둘(ce56711 `app.html` · 8b0d084 시험) · 두 파일뿐(`app/webapp/static/app.html` +186 −54 · `app/webapp/tests/test_upload_stall.py` 새로) · 서버 0 · 새 화면 · 단추 0. ARCH: 기본 파이썬 149 OK(skipped 14 — 새 390px 시험 12개가 Playwright 없어 건너뜀) · 저장소 밖 가상 환경(Playwright · cryptography) **149 OK 건너뜀 0**.
+- 됨의 기준 대조(ARCH 반환 · PLN이 diff로 본 것): 1 — 30초(`UPLOAD_STALL_MS = 30000`) 나아가지 않으면 끊고 한 번 스스로 · `have()` 15초(`HAVE_TIMEOUT_MS = 15000`) ✔ / 2 — 두 번째 실패부터 「사진 · 영상을 다시 골라 주세요」 · 받은 것 건너뜀 · 묶음 하나 · 작업 하나 ✔ / 3 — 401은 「로그인이 풀렸어요 — PIN을 넣은 뒤 사진 · 영상을 다시 골라 주세요」 한 줄 뒤 PIN · 묶음 · 요청 글 이어 감 ✔ / 4 — 한 편이 도는 중 Send는 「지금 만드는 한 편이 끝나면 보낼 수 있어요」 ✔. 새 화면 글 셋은 [안] — RSCH가 한알께 보여 드림(결정 45 · 다른 말씀 없으면 안대로).
+- PLN이 직접 본 것(00:32 KST, 제품 저장소 fetch · ls-remote · merge-base · diff · grep만): 원격 main `896abae` · 가지 머리 `8b0d084` · main이 그 조상(앞으로 감기) · 두 파일 · 위 값과 글. 시험은 다시 돌리지 않음.
+- **합치기 — PLN이 정함: RSCH가 차이를 읽고 시험을 다시 돌리면 합침(IVA 다시 안 함).** 조건: 제품 main `896abae` 그대로 · 가지 머리 `8b0d084`(앞으로 감기) · push 직전 main 다시 봄. ⚠ 시험할 때 Playwright가 없으면 새 시험 12개가 '건너뜀'으로만 나옴 — 건너뛴 수(14)를 보거나 Playwright 깐 곳에서. 합친 뒤 한알이 맥에 새 판 받기 한 줄.
