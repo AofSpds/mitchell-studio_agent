@@ -31,7 +31,7 @@ svg { display:block; }
 .shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
 .shot .ft { font-size:14px; color:#3f3731; margin:8px 4px 0; min-height:66px; }
 .shot .ft b { color:var(--ink); }
-/* 한 화면만 보기: 주소 끝에 #s1 … #s13 */
+/* 한 화면만 보기: 주소 끝에 #s1 … #s14 */
 body:has(.shot:target) .top, body:has(.shot:target) .shot:not(:target) { display:none; }
 body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
 
@@ -61,6 +61,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 .btn.sm { padding:9px 8px; font-size:15px; }
 .btn.off { background:#b5aca4; color:#f1ece6; }
 .btn.soft.off { background:var(--bar); color:#b9b0a8; }
+.big.off { background:#b5aca4; color:#f1ece6; }
+.offc { opacity:.45; }
 .row { display:flex; gap:10px; margin-top:10px; }
 .row > * { flex:1; }
 .pill { display:inline-block; border-radius:10px; padding:3px 9px; font-size:13px; font-weight:600; background:var(--bar); color:var(--accent); white-space:nowrap; }
@@ -297,9 +299,31 @@ h2 { font-size:20px; margin:0 0 8px; }
   <div class="ft"><b>2판에서 바뀐 것:</b> 작업 목록 화면을 없앴습니다. Jobs에는 지금 만드는 한 편만 보입니다. 진행 기록과 단계 줄도 빼고 하는 일 한 줄과 바만 두었습니다. 화면은 스스로 바뀝니다.</div>
 </div>
 
-<!-- ───────── 7 막힘 ① ───────── -->
+<!-- ───────── 7 만드는 중의 Send ───────── -->
 <div class="shot" id="s7">
-  <div class="hd"><span class="no">7</span>막혔을 때 ① — 미첼에게 물음</div>
+  <div class="hd"><span class="no">7</span>만드는 중의 Send — 새로 보내지 못함</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <h1 class="s">Send</h1>
+    <div class="nowband">
+      <div class="l1">지금 한 편을 만드는 중이에요</div>
+    </div>
+    <div class="big off">Send</div>
+    <div class="card offc">
+      <div class="eh">Request</div>
+      <div class="ta" style="min-height:46px;margin-bottom:0">예) 디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조</div>
+    </div>
+    <div class="card offc">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="eh">Options</span><span style="font-size:15px;color:var(--soft)">기본값 ▾</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로 넣은 화면:</b> 한 편을 만드는 동안에는 새로 보내지 못합니다. Send 단추가 흐려져 눌리지 않고, 그 한 편이 끝나면 다시 켜집니다.</div>
+</div>
+
+<!-- ───────── 7 막힘 ① ───────── -->
+<div class="shot" id="s8">
+  <div class="hd"><span class="no">8</span>막혔을 때 ① — 미첼에게 물음</div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
@@ -323,8 +347,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 8 막힘 ② ───────── -->
-<div class="shot" id="s8">
-  <div class="hd"><span class="no">8</span>막혔을 때 ② — 개발자에게 알렸어요</div>
+<div class="shot" id="s9">
+  <div class="hd"><span class="no">9</span>막혔을 때 ② — 개발자에게 알렸어요</div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">레이어드 컷</span><span class="gear">옵션 바꾸기</span></div>
@@ -341,8 +365,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 9 Done ───────── -->
-<div class="shot" id="s9">
-  <div class="hd"><span class="no">9</span>다 됐어요 — 영상 보기 · 사진 앱에 저장</div>
+<div class="shot" id="s10">
+  <div class="hd"><span class="no">10</span>다 됐어요 — 영상 보기 · 사진 앱에 저장</div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
@@ -369,8 +393,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 10 고칠 점 적기 ───────── -->
-<div class="shot" id="s10">
-  <div class="hd"><span class="no">10</span>고칠 점 적기</div>
+<div class="shot" id="s11">
+  <div class="hd"><span class="no">11</span>고칠 점 적기</div>
   <div class="phone"><div class="scr dimmed">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
@@ -391,8 +415,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 11 v2 만드는 중 ───────── -->
-<div class="shot" id="s11">
-  <div class="hd"><span class="no">11</span>고친 판(v2)을 만드는 중</div>
+<div class="shot" id="s12">
+  <div class="hd"><span class="no">12</span>고친 판(v2)을 만드는 중</div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
@@ -418,8 +442,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 12 규격이 다름 ───────── -->
-<div class="shot" id="s12">
-  <div class="hd"><span class="no">12</span>규격이 다르면 — 완성이 아님</div>
+<div class="shot" id="s13">
+  <div class="hd"><span class="no">13</span>규격이 다르면 — 완성이 아님</div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
     <div class="jt"><span class="ti">애쉬 브라운 염색</span><span class="gear">옵션 바꾸기</span></div>
@@ -445,8 +469,8 @@ h2 { font-size:20px; margin:0 0 8px; }
 </div>
 
 <!-- ───────── 13 건의하기 ───────── -->
-<div class="shot" id="s13">
-  <div class="hd"><span class="no">13</span>건의하기</div>
+<div class="shot" id="s14">
+  <div class="hd"><span class="no">14</span>건의하기</div>
   <div class="phone"><div class="scr dimmed">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk" style="background:var(--accent);color:var(--onaccent)">건의하기</span></div>
     <h1 class="s">Send</h1>
