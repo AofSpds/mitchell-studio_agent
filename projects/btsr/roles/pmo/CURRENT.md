@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T00:10:02+09:00"
+updated: "2026-11-22T00:26:15+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-020 받음 · 휴대폰 올리기 멈춤·재선택·PIN 복구"
-next: "Send 구현, 390px 브라우저에서 네 기준 및 전체 회귀 후 ARCH 반환"
-waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-020 반환 · Send 재시도·재선택·PIN 복구, 제품 8b0d084 원격 일치"
+next: "ARCH 대조와 RSCH 반영 뒤 휴대폰 테스트 결과 대기"
+waiting_for: ["arch:BTSR-ARCH-020-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,7 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-ARCH-020 | ARCH (7621f3de) | btsr/arch 3fa3d5c | 2026-11-22 00:10:02 KST | 받음 · 사진·영상 재전송 및 PIN 뒤 이어 보내기 |
+| BTSR-ARCH-020 | ARCH (7621f3de) | btsr/arch 3fa3d5c | 2026-11-22 00:10:02 KST | 반환 00:26 KST · main 896abae → 구현 ce56711 → 시험 8b0d084 · 390px 12개, 전체 기본 147 통과/2 건너뜀 · 암호화 149/149 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL_RETURN_CODEX.md) |
 | BTSR-ARCH-019 | ARCH (7621f3de) | btsr/arch f9dbf31 | 2026-11-21 21:19:08 KST | 반환 21:24 KST · fe1e241 → 896abae · 맥 글 한 파일 · 전체 137/137 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD3_RETURN_CODEX.md) · ARCH 수용(2f1c78a), main 896abae |
 | BTSR-ARCH-018 | ARCH (7621f3de) | btsr/arch 89256e6 · PLN 92aacb5 | 2026-11-21 21:19:08 KST | 반환 21:24 KST · main e095396 → fe1e241 · 원문 대조 두 곳 · 기본 135 통과/2 건너뜀 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_PLAN_COPY_RETURN_CODEX.md) · ARCH 수용(2f1c78a), main 896abae |
 | BTSR-ARCH-017 덧붙임 2·3 | ARCH (7621f3de) | btsr/arch 4964f37·ae0792d | 2026-11-21 19:48:29·19:51:37 KST | 최종 반환 19:57 KST · 9a41aa6 → e095396 · add2b 새 가지, 한 파일 +62/−30 · 기본 135 통과/2 건너뜀, 암호화 재실행 137/137 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD2_RETURN_CODEX.md) · ARCH 수용(2b171eb), 제품 main e095396 |
