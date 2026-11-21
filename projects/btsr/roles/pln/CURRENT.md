@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-22T00:34+09:00"
-base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 896abae"
-now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.20판 · 결정 01–48 · 기획안 초안 1.9판(한알께 드림). 제품 main 896abae까지 합침 — 웹앱 1차 모두(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b · 8-2 · IVA 고침 · 맥 테스트 글 + 덧붙임). 한알이 맥 테스트(세 회차 · 실행 세션 「코덱스 excutor」)를 하실 차례. 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
+updated: "2026-11-22T00:48+09:00"
+base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 8b0d084"
+now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.20판 · 결정 01–48 · 기획안 초안 1.9판(한알께 드림). 제품 main 8b0d084까지 합침 — 웹앱 1차 모두(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b · 8-2 · IVA 고침 · 맥 테스트 글 + 덧붙임). 한알이 맥 테스트(세 회차 · 실행 세션 「코덱스 excutor」)를 하실 차례. 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
 next: "ARCH 반환이 오면 요구 2.20판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(ed5ef600)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례(결정 41): 8-2 반환함 → IVA 검증(RSCH 005) → 판정 뒤 맥 테스트 글(ARCH-014, 94d4522 위 따로 가지 · 글만)과 함께 RSCH가 main 합침 → RSCH가 한알께 맥에서 하실 일 → 1차 끝 맥 시험(맥 시나리오는 RSCH S13이 지금 씀 · 휴대폰 시연은 1차 뒤). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/rsch (ed5ef600):보내기 멎음 고침 8b0d084 합침 896abae..8b0d084", "owner(via rsch ed5ef600):11-22 릴스 한 편 · 휴대폰 테스트 결과 · 멎은 곳(아이폰/맥 · http)", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
+waiting_for: ["owner(via rsch ed5ef600):11-22 릴스 한 편 · 휴대폰 테스트 결과 · 멎은 곳(아이폰/맥 · http)", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
 owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.9판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -80,7 +80,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **52번 — 기획안 사본 + 맥 글 덧붙임 3 합쳐짐: 제품 main `896abae`** (RSCH 21:29 · PLN 21:33 ls-remote) · RSCH가 한알께 주소를 드림. 기획안 판이 오르면 사본도 옮김(사본 줄 끝말 그때 넣음). 맥 결과 가지는 아직 b9ceefc(19:49) — 1-6부터 다시 도는지 모름(RSCH가 21:19에 새 기준 한 줄 드림).
 - **53번 받음 → 내일(11-22) 한 장** (에이전트 main `d38d219`; 한알 23:10:12 「연결됨.」 「내일 핸드폰 테스트를 합니다 안되는게 많더라구요」) — 릴스 한 편은 아직 못 만듦(결과 가지 b9ceefc 그대로) · 아이폰에서 맥 https 안 열림(3-4 아직인 듯). PLN이 정함: 3-2 · 개발자 글 전송 켜기는 휴대폰 테스트에서 뺌(전송 꺼 둔 채) · 차례 = 릴스 한 편(1-6부터) → 맥 3-4 + 주소 → 휴대폰(Safari · 홈 화면 · 알림) → 3-6부터. [WEBAPP_PHASE1_PHONE_TEST_DAY2_SHEET_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_PHONE_TEST_DAY2_SHEET_CLAUDE.md) → RSCH가 한알께. ARCH에는 다음 맥 글 덧붙임 때 3회차에서 3-2 · 전송 켜기를 떼게(급하지 않음). (23:27 · 23:31 · 23:36 고침: 맥 줄은 'origin/main의 MAC_RUN 글대로' · 1번 끝 「2회차는 하지 마.」 · HTTPS는 이미 켜짐.)
 - **54번 받음 — 보내기가 멎고 다시 올리기가 안 됨** (에이전트 main `4267cee`; 한알 11-22 00:01:42 「무반응이고 파일 재업로드가 안됐어요」) → ARCH에 고침 요청 [WEBAPP_PHASE1_UPLOAD_STALL_FIX_REQUEST_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL_FIX_REQUEST_CLAUDE.md): 1 꼭(멎으면 끊고 한 줄 + 다시 보내기 · 한 번은 스스로) · 2 꼭(다시 골라 주세요로 이음 · 같은 묶음에서 받은 것은 건너뜀) · 3 · 4 작으면(401 까닭 · 말없는 단추 까닭). 오늘 휴대폰 테스트 전 될 것 · 걸릴 때를 ARCH가 먼저 한 줄로.
-- **보내기 멎음 고침 반환 → RSCH** (ARCH `949b704` BTSR-ARCH-020, 00:34 — 어림보다 일찍) — 가지 `feat/webapp-upload-stall-20261122` `8b0d084`(896abae 위 · app.html + 시험 · 서버 0 · 149 OK · Playwright 깐 곳 건너뜀 0) · 1–4 됨의 기준 맞음 · 새 화면 글 셋 [안]은 RSCH가 한알께. 조건: main `896abae` · 머리 `8b0d084` · 앞으로 감기 · push 직전 main 다시 봄 · Playwright 없으면 새 시험 12개 건너뜀 주의. RSCH가 그 차이만 확인(IVA 다시 안 함).
+- **보내기 멎음 고침 반환 → RSCH** (ARCH `949b704` BTSR-ARCH-020, 00:34 — 어림보다 일찍) — 가지 `feat/webapp-upload-stall-20261122` `8b0d084`(896abae 위 · app.html + 시험 · 서버 0 · 149 OK · Playwright 깐 곳 건너뜀 0) · 1–4 됨의 기준 맞음 · 새 화면 글 셋 [안]은 RSCH가 한알께. 조건: main `896abae` · 머리 `8b0d084` · 앞으로 감기 · push 직전 main 다시 봄 · Playwright 없으면 새 시험 12개 건너뜀 주의.
+- **55번 — 보내기 멎음 고침 합쳐짐: 제품 main `8b0d084`** (RSCH 00:44:48 · 149 OK 건너뜀 0 · PLN 00:48 ls-remote). 읽으며 본 것 여섯은 이번에 안 고침 — 오늘 겪으시면 그때(②한 편 안 「더 보내기」가 먼저). 오늘 한 장 1번 줄 = 「fetch 하고 origin/main의 MAC_RUN 글대로 1-3(새 판 받기)을 다시 한 뒤 1-6부터 1회차 끝까지 해 줘. 묻지 말고. 2회차는 하지 마.」(RSCH가 드린 줄 그대로). RSCH가 그 차이만 확인(IVA 다시 안 함).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
