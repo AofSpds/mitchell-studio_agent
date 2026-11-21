@@ -2,8 +2,8 @@
 role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
-state: "ACTIVE"
-updated: "2026-11-21T13:50+09:00"
+state: "ACTIVE — 승계 중(옛 071c15f3 → 새 세션, claude-naver)"
+updated: "2026-11-21T13:56+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 32b55dc"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.7판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(14d04ad1)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
@@ -13,6 +13,27 @@ subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 ---
+
+## ★ 새 세션에 넘김 (2026-11-21 13:56 KST) — 받는 세션은 여기부터
+
+- 근거: 한알 13:55:17 uuid 01aadf35 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」(RSCH가 전함, 원문 main `owner/utterances/2026-11-21.md` `b9c976b`). 새 세션 제공자 `claude`(claude-naver) — 13:24:06 「…다하면 네이버로 여세요.」 · 13:35:34 「…이 세션도 네이버로 승계할께요.」.
+- 넘기는 세션: Paseo `071c15f3-6835-479a-828c-c55e6d0a5e18` · Claude `269c8b89-c00c-40ae-9e74-1ae60967ec9e` · Opus 5.5 high · claude-google (11-19 22:24 ~ 11-21 13:56). 넘긴 뒤 이 폴더에 쓰지 않음.
+
+### 1. 지금
+- 웹앱 1차(캡컷 길) — 요구 [webapp-phase1 1.7판](requirements/webapp-phase1/WEBAPP_PHASE1_REQUIREMENTS_CLAUDE.md), 결정 01–14. 제품 main `32b55dc`까지 합침: 작업자 모델(worker-model) · 묶음 1 · 1-1 · 2 + 8 · 3. 맥에는 아직 넣지 않음(결정 08 — 1차 끝에 한 번).
+- 묶음 5 + 3-2: ARCH 설계 1판 `btsr/arch` `b5d64f2` → PMO BTSR-ARCH-008 진행 중.
+
+### 2. 열린 일
+1. **한알께 여쭌 것(RSCH가 여쭘):** 컴퓨터 유즈 사전 승인(AAA 43) — [WEBAPP_PHASE1_CU_ASK_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_CU_ASK_CLAUDE.md), 권고 1. 답은 RSCH 요청서 003에 덧붙여 '왔다'로 옴 → 결정 15로 적고 ARCH에 알림.
+2. **기다림:** ARCH의 묶음 5 + 3-2 반환. 남은 차례 4-a → 4-b(https 켬 — 맥 손일은 하지 말 것 목록을 먼저 한 장으로) → 6. 묶음 7은 뒤로(결정 04).
+3. 1차 끝 맥 시험에 넣을 것: 진짜 claude(`app/webapp/MAC_RUN_B2.md`) · codex 명령줄 화면 조작(맥 0) · 화면 글 "GPT-6.2 Sol · 생각 High" · python 3.9.6 · 건의 별명(님 · 손님 없는 이름) · 「건의하기」 화면.
+
+### 3. 받는 세션이 할 것
+1. 이 칸 끝에 '받음' 한 줄(시각 · 새 Paseo 에이전트 ID · Claude 세션 ID · 모델 — ID는 list_agents와 transcript에서 확인, 짐작하지 않음)을 적고 커밋 · push.
+2. 옛 세션 제목을 `MITCHELL_STUDIO/BTSR/PLN CLOSED`로(update_agent `071c15f3…`).
+3. RSCH(`14d04ad1-7592-436b-82c2-69ad9d02e2ae`)에 '승계 끝 · 새 Paseo ID'만 알림. ARCH(`9d298a54-66dd-4bdd-8617-78f6c234c7ce`)에도 새 ID를 알림.
+4. 일하는 길(지금까지): ARCH 반환이 오면 요구 R과 대조 → `requirements/webapp-phase1/`에 반환서(6항목 + 맥 길) → RSCH에 알림. 합치기는 PLN이 반환서에 조건(main · 가지 머리, 앞으로 감기)을 적어 정하고, RSCH가 확인 · push(결정 05 · 13). 합쳐지면 제품 원격을 fetch로 보고 덧붙임. 한알이 이 창에 말씀하시면 [PLN_OWNER_UTTERANCES_CLAUDE.md](PLN_OWNER_UTTERANCES_CLAUDE.md)에 원문 그대로.
+5. 보고는 짧게 · 결론 먼저. 스스로 다음 일을 시작하지 않음(AAA 18).
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
