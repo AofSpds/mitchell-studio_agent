@@ -5,8 +5,8 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "PMO(7837ebd8)가 BTSR-ARCH-021(올리기 고침 2 — S14) 받아 하는 중(Chrome · WebKit 27.2 390px, 40분 안팎 · 03:15 KST 합침 목표). 제품 main 8b0d084. 대화 압축 전 저장"
-next: "021 반환 대조(Playwright 깐 곳) → PLN. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
+now: "PMO(7837ebd8)가 BTSR-ARCH-021(올리기 고침 2 — S14) + 덧붙임 1(5–8, 같은 가지, 02:08) 하는 중. 반환 03:05쯤 · 합침 03:40 KST 목표(PLN에 알림). 제품 main 8b0d084"
+next: "021 반환 대조(Playwright 깐 곳 · 1–8, 8은 빠질 수 있음) → PLN. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-021 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
