@@ -3,12 +3,12 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T13:15+09:00"
+updated: "2026-11-21T13:17+09:00"
 base_commit: "fa2b7aa"
 now: "ARCH에 둘 넘김 — BTSR-PLN-001 작업자 모델(급함) · BTSR-PLN-002 웹앱 1차 캡컷 길 기획 1판(차례 0→1→2+8→3→5+3-2→4-a→4-b→6, 7 보류). RSCH-003 기획 몫 반환함, 한알께 여쭐 것 7개는 RSCH를 거쳐"
 next: "ARCH 반환을 요구(worker-model R01–R07 · webapp-phase1 R1.1–R6.4)와 대조해 받기 → RSCH에 반환(맥 길 한 줄) · 한알 답(물음 1–7)과 웹앱 시험 결과가 오면 webapp-phase1 2판. 그 밖은 스스로 시작하지 않음(규칙 18)"
 waiting_for: ["role:mitchell_studio/btsr/arch:묶음 2 + 8 반환(BTSR-ARCH-004)", "role:mitchell_studio/btsr/arch:BTSR-PLN-002 받음·반환", "owner(RSCH 거쳐):webapp-phase1 물음 1–7", "role:mitchell_studio/btsr/rsch:WEBAPP_RESULTS"]
-owner_wait: "3 — webapp-phase1 물음 5–7 (RSCH가 하나씩 여쭘) · 건의 단추 영어 'Feedback'(RSCH가 여쭘 중)"
+owner_wait: "3 — webapp-phase1 물음 5(바로잡아 다시) · 7 (RSCH가 하나씩 여쭘) · 건의 단추 영어 'Feedback'(RSCH가 여쭘 중)"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -48,6 +48,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 1 반환 받음 → RSCH에 반환** (ARCH `96d66a1`, 13:03 KST) — 제품 가지 `feat/webapp-b1-suggest-20261121` `6cfbc5f`, R1.1–R1.3 대조. [WEBAPP_PHASE1_B1_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B1_RETURN_CLAUDE.md). RSCH 확인이 오면 합치기를 정함(결정 05). 묶음 2 + 8은 PMO에 BTSR-ARCH-004.
 - **RSCH 덧붙임 받음** (main `5df0643`) — 한알 답: 물음 3 확인 받음 · 단추 「이 사진으로 갈게요 →」 · 물음 4 네 · 맥 웹앱 시험은 뒤로(결정 06–08 → 요구 1.4판). RSCH가 묶음 1을 확인 → **PLN이 묶음 1 합치기를 정함** → ARCH에 [BTSR-PLN-004](requirements/webapp-phase1/WEBAPP_PHASE1_BTSR-PLN-004_MERGE_REQUEST_CLAUDE.md) (main `e5785b3` → 가지 `6cfbc5f` 앞으로 감기, 13:04 확인). 맥에는 넣지 않음.
 - **묶음 1 합쳐짐 — 제품 main `6cfbc5f`** (13:14). PMO push가 도구 자동 심사에 막혀 여쭘 → 한알 13:13:30 「직접 하세요.」 → RSCH가 앞으로 감기 push(결정 09). 맥에는 안 넣음 → [B1 반환 덧붙임](requirements/webapp-phase1/WEBAPP_PHASE1_B1_RETURN_CLAUDE.md).
+- **물음 6 답 받음** (RSCH 덧붙임 main `55134a2`) — 손님 정보는 걸러 내거나 맥에만, 남는 글은 별명(결정 10 → 요구 1.5판 R1.4, ARCH에 알림). 물음 5는 PLN의 물음이 틀려(템플릿은 모든 영상에 AI 얼굴) RSCH가 바로잡아 다시 여쭘.
 - 제품 저장소는 시키시기 전에 읽지 않음 — 합치기 조건 대조로 제품 원격을 fetch · log · merge-tree만 봄(12:49, 작업 사본은 건드리지 않음). rsch `studies/`는 RSCH-003이 가리킨 글만 읽음.
 
 ## 세션
