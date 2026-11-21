@@ -3,7 +3,7 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-21T19:32+09:00"
+updated: "2026-11-21T19:36+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 07cd3fc"
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.20판 · 결정 01–47 · 기획안 초안 1.9판(한알께 드림). 제품 main 07cd3fc까지 합침 — 웹앱 1차 모두(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b · 8-2 · IVA 고침 · 맥 테스트 글 + 덧붙임). 한알이 맥 테스트(세 회차 · 실행 세션 「코덱스 excutor」)를 하실 차례. 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
 next: "ARCH 반환이 오면 요구 2.20판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(ed5ef600)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례(결정 41): 8-2 반환함 → IVA 검증(RSCH 005) → 판정 뒤 맥 테스트 글(ARCH-014, 94d4522 위 따로 가지 · 글만)과 함께 RSCH가 main 합침 → RSCH가 한알께 맥에서 하실 일 → 1차 끝 맥 시험(맥 시나리오는 RSCH S13이 지금 씀 · 휴대폰 시연은 1차 뒤). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
@@ -67,7 +67,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **맥 테스트 글 덧붙임 반환 받음 → RSCH에** (ARCH `btsr/arch` `abf7c76` BTSR-ARCH-016, 19:14) — 제품 가지 `feat/webapp-mac-test-doc-add1-20261121` `07cd3fc`(f457be8 위 커밋 하나 · MAC_RUN 한 파일 +5 −1). 조건: main `f457be8` · 머리 `07cd3fc` · 앞으로 감기(19:13 ls-remote). 요청서 끝 '반환 — PLN 대조'.
 - **45번 받음 — 맥 테스트 글 덧붙임 합쳐짐: 제품 main `07cd3fc`** (RSCH 19:14 · PLN 19:16 ls-remote). 한알 19:07:25 「기획안  깃헙 미첼 스튜디오에서도 볼수 있나요」 · 19:14:48 「아 기획안 최종본 일단 url주세요」 — RSCH가 1.9판 주소(에이전트 저장소 `btsr/pln`)를 드리고 '제품 저장소에도 올릴지(1 그대로 · 2 올림)'를 여쭘 · 답 아직(2면 다음 번호 — PLN이 제품 저장소로 옮기는 길을 그때 정함).
 - **맥 1회차 시작 · 1-2 멈춤** (한알이 PLN 창에 사진 19:24:42 · 19:26:28) — 맥 사본에 `agents/` 아래 수정 14개 → PLN이 stash 한 줄을 드림(지우지 않고 보관 · 추적 파일만 · `??` 그대로 · 1-2부터 다시). 한알이 RSCH 창으로 옮기심(19:27:30) — **맥 테스트 물음은 이제 RSCH 창**(PLN 창으로 오면 RSCH에 알림).
-- **46번 받음 → 맥 테스트 글 덧붙임 2 → ARCH** [WEBAPP_PHASE1_MACTEST_DOC_ADD2_REQUEST_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD2_REQUEST_CLAUDE.md) (에이전트 main `24b816f`) — 점검은 추적 파일만(`--untracked-files=no`) · 추적 파일 수정은 stash로 보관하고 이어 감 · 한 줄 표를 짧은 줄로. 바탕 07cd3fc · 한 파일 · 급하지 않음. RSCH가 그 차이만 확인(IVA 다시 안 함).
+- **46번 받음 → 맥 테스트 글 덧붙임 2 → ARCH** [WEBAPP_PHASE1_MACTEST_DOC_ADD2_REQUEST_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD2_REQUEST_CLAUDE.md) (에이전트 main `24b816f`) — 점검은 추적 파일만(`--untracked-files=no`) · 추적 파일 수정은 stash로 보관하고 이어 감 · 한 줄 표를 짧은 줄로. 바탕 07cd3fc · 한 파일 · 급하지 않음.
+- **47번 받음** (에이전트 main `3d5725c`) — 맥 1회차: 14개는 `stash@{0}`(fd3b44b)에 보관 · 1-3 직전 한 번 더 멈춤(맥 옛 판에 worker_model.py 없음) → RSCH가 1(새 판 받고 1-5에서 값) 권함. 한알 19:31:55 「모두 예약작업 가능할까요 일단 잠깐 두고 가야 해서요. 그리고 https 알림하려면 아이폰 필요하다면서요」 → 1 · 2회차는 맡겨 두고 3회차는 돌아오신 뒤(RSCH 한 줄). 덧붙임 2에 4(worker_model.py 없을 때) · 5(맡겨 두는 길 — PLN이 공통에 한 줄로 정함) 더해 ARCH에. RSCH가 그 차이만 확인(IVA 다시 안 함).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
