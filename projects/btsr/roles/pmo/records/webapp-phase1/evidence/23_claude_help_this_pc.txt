@@ -1,0 +1,5 @@
+  --allowedTools, --allowed-tools <tools...>
+  --output-format <format>              Output format (only works with --print):
+  --permission-mode <mode>              Permission mode to use for the session
+  -p, --print                           Print response and exit (useful for
+claude 2.1.292 (Claude Code)

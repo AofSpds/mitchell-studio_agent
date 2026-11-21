@@ -1,0 +1,20 @@
+ agents/creative_director/manual-webapp.md |   4 +-
+ agents/rsch/templates/reel-workflow.md    |   2 +
+ app/webapp/MAC_RUN_B2.md                  |  54 +++++
+ app/webapp/jobs.py                        | 146 +++++++++++-
+ app/webapp/prompts/edit.md                |  19 ++
+ app/webapp/prompts/intake_script.md       |  23 ++
+ app/webapp/reel_api.py                    |  55 ++++-
+ app/webapp/runner.py                      | 359 ++++++++++++++++++++++++++++++
+ app/webapp/server.py                      |   2 +
+ app/webapp/static/app.html                |  29 ++-
+ app/webapp/tests/_env.py                  |   2 +
+ app/webapp/tests/fake_claude.py           |  83 +++++++
+ app/webapp/tests/test_runner.py           | 339 ++++++++++++++++++++++++++++
+ app/webapp/tests/test_words.py            |   6 +-
+ app/webapp/tests/test_worker_model.py     |   2 +-
+ app/webapp/tests/words_allow.json         |  22 +-
+ templates/README.md                       |  24 ++
+ templates/reel-main/TEMPLATE.json         |  14 ++
+ templates/reel-main/r1.md                 |  78 +++++++
+ 19 files changed, 1230 insertions(+), 33 deletions(-)
