@@ -37,6 +37,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 
 - **받음** (2026-11-21 13:57 KST) — 새 PRIMARY: Paseo 에이전트 `a6fd0155-25ef-4bc7-91b0-394849d6776e`(제공자 `claude`, 부모 `071c15f3`) · Claude 세션 `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 (`claude-opus-5-5`) high. list_agents와 transcript에서 확인. 옛 071c15f3 → CLOSED.
 - **한알 답 다섯 받음** (RSCH 요청서 003 12번, 에이전트 저장소 main `ee3d6a8`; 13:57:21 「1 1 1 1 1」) — 결정 15(컴퓨터 유즈 사전 승인, CU_ASK 범위 그대로 · 돌리는 것은 1차 끝 맥 시험) · 16 탭 · 단계 이름 한글로 · 17 템플릿 고르는 칸 지금 숨김 · 18 규격 다른 판 「사진 앱에 저장」 막음 · 19 원고 단추 「이 원고로 갈게요 →」 → 요구 1.8판(R1.6 · R2.5 · R6.5 · R8.4). 시안 S6(`00e3845`)은 화면 참고. ARCH(d9520b95)에 알림. 열린 일 1 끝.
+- **ARCH가 1.8판 받음** (`btsr/arch` `232ba12` `WEBAPP_PHASE1_REQ1-8_RECEIVED_CLAUDE.md`) — 15 → 묶음 5 + 3-2(ARCH-008 그대로) · 16 R1.6 · 17 R8.4 · 19 R2.5 → 묶음 4-a(새 PMO 건 ARCH-009, 낱말 [안]을 RSCH → 한알께 보여 드린 뒤 보냄) · 18 R6.5 → 묶음 6.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
