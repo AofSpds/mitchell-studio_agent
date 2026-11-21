@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T13:44:00+09:00"
+updated: "2026-11-21T13:52:00+09:00"
 base_commit: "fa2b7aa"
-now: "묶음 3 반환함(가지 feat/webapp-b3-intake-20261121 32b55dc). PMO에 맡긴 일 없음. 다음 설계 묶음 5 + 3-2"
-next: "묶음 5 + 3-2 설계(컴퓨터 유즈 목적·대상·범위 · R5.1–R5.6 · R32.1–R32.4 · 물음 조사 을/를) → PMO에 BTSR-ARCH-008 · 묶음 4-a · 4-b(https 맥 손일 + 하지 말 것 한 장) · 6(R6.4)"
-waiting_for: []
+now: "묶음 5 + 3-2 설계 1판 → PMO에 BTSR-ARCH-008(맥 일 없음). 컴퓨터 유즈 범위 한 장은 PLN을 거쳐 한알께"
+next: "PMO의 ARCH-008 반환 대조 → PLN에. 그사이 묶음 4-a · 4-b(https 맥 손일 + 하지 말 것 한 장) · 묶음 6(R6.4) 설계"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환", "owner:컴퓨터 유즈 범위 승인(설계 5번, PLN → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -38,6 +38,8 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 2 + 8: [설계 1.1판](design/webapp-phase1/WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md) → PMO [BTSR-ARCH-004](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md) → PMO 반환 `btsr/pmo` 26adad6(가지 658ec1d) → ARCH 대조(저장소 전부 · `PYTHONUTF8=1`로 38 OK — 없이는 윈도 글자판 탓 8 실패) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B2_B8_BTSR-PLN-002_RETURN_CLAUDE.md). 맥 시험 9(진짜 claude)는 **1차 끝 맥 시험에**(PLN 답 — 한알 13:02:58 결정 08, `btsr/pln` 5b85d56). PLN 받음. 합치기는 RSCH가 확인 뒤 앞으로 감기.
   - 묶음 2 + 8 제품 main `658ec1d`(RSCH 앞으로 감기 push, PLN 13:26 확인 — `btsr/pln` da8f683).
   - 묶음 3: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md) → PMO [BTSR-ARCH-007](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md) → PMO 반환 `btsr/pmo` 19fb285(가지 32b55dc) → ARCH 대조(`PYTHONUTF8` 없이 52 OK) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B3_BTSR-PLN-002_RETURN_CLAUDE.md). main `658ec1d`의 숨은 결함(같은 분 두 번째 묶음 400)은 이 가지에서 고쳐짐 — PLN에 알림.
+  - 묶음 3 제품 main `32b55dc`(RSCH push — `btsr/pln` 419bce0).
+  - 묶음 5 + 3-2: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B5_B32_DESIGN_CLAUDE.md) → PMO [BTSR-ARCH-008](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-008_REQUEST_CLAUDE.md) (바탕 main 32b55dc). 설계 5번 = 컴퓨터 유즈 범위 한 장 — 승인 전 맥에서 안 돌림.
   - 요구 1.6판(`btsr/pln` c735395): R3.6 AI 얼굴 사진 없으면 웹앱이 만듦 · R1.5 단추 글 「건의하기」만 · **제품 main push는 RSCH**(PMO는 안 함). 1.7판(023a35e): R6.4 규격 다르면 승인해도 완성 아님. 한알께 여쭐 것 1–7 모두 답 받음. PLN 답: ④ 편집도 넣음(요구 1.3판 R2.5) — 설계 1.1판에 반영.
 - **BTSR-PLN-003 받음** (12:50) — 제품 main 합치기(PLN이 정함, 한알 03:47:04). [받음](design/worker-model/WORKER_MODEL_BTSR-PLN-003_RECEIVED_CLAUDE.md) → PMO [BTSR-ARCH-003](design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md) → 합쳐짐 제품 main `e5785b3`(PMO 반환 `btsr/pmo` affef3f, ARCH가 부모·나무·blob·시험 6/6 다시 봄) → [반환](design/worker-model/WORKER_MODEL_BTSR-PLN-003_RETURN_CLAUDE.md). 묶음 2 + 8은 ARCH-004로.
 - 요구 webapp-phase1 1.2판(`btsr/pln` 3248983): 묶음 7 뒤로 · https 켬 — 4-b 설계는 맥 손일 · 명령 · 하지 말 것을 한 장으로.
