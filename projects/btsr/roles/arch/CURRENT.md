@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
 now: "4-b(ARCH-012) 받음 · PLN에 반환 · 8-2 → PMO(99626982)에 BTSR-ARCH-013 (17:24). 묶음 6 제품 main e512fcd"
-next: "013 반환 대조 → PLN. RSCH S13의 MAC_RUN 맞지 않는 곳 목록이 PLN으로 오면 MAC_RUN_PHASE1.md를 1차 끝 판으로 — 결정 39(요구 2.14판 btsr/pln 4c3e3ed): 회차로 나눔(회차마다 '…대로 해 줘' 한 줄로 시작 · 끝나면 결과 올리고 멈춤) · '하지 않으실 것 4'를 맥 준비(시험용 그림만)와 받은 소재로 한 편 끝까지로 가름 · 받은 소재 지킬 것(맥 밖으로 안 나감 · 결과엔 대화 번호 · 시술 종류만 · 실제 게시 없음 · 개발자 글 push 켜기 전 쌓인 글 사람이 읽음). 결정 15 범위 그대로"
+next: "013 반환 대조 → PLN. RSCH S13의 MAC_RUN 맞지 않는 곳 목록이 PLN으로 오면 MAC_RUN_PHASE1.md를 1차 끝 판으로 — 결정 39(요구 2.14판 btsr/pln 4c3e3ed): 회차로 나눔(회차마다 '…대로 해 줘' 한 줄로 시작 · 끝나면 결과 올리고 멈춤) · '하지 않으실 것 4'를 맥 준비(시험용 그림만)와 받은 소재로 한 편 끝까지로 가름 · 받은 소재 지킬 것(맥 밖으로 안 나감 · 결과엔 대화 번호 · 시술 종류만 · 실제 게시 없음 · 개발자 글 push 켜기 전 쌓인 글 사람이 읽음). 결정 15 범위 그대로 · 결정 40(요구 2.15판, PLN 94786bb — 한알 17:31:36 「맥 테스트는 챗gpt에서 진행을 할께요.」): MAC_RUN을 맥 ChatGPT가 따라 하는 글로(S13 3판 회차 표 · 고칠 곳 목록 받아서) — 이끄는 ChatGPT와 작업자(codex)가 같은 맥 화면을 다툼(작업자가 화면 쓰는 동안 기다림) · 맥 0-가 · 0-나도 ChatGPT가, 차례 · 멈추는 곳 그대로 · 결정 15 범위(캡컷 그 프로젝트 하나 · ChatGPT 앱 AI 얼굴 새 대화 하나)를 넘는 걸음(예: 웹앱 화면 누르기)은 '승인 뒤' 표시. 맥 시험에서 볼 것(RSCH 35번): (가) 캡션이 거르기에 끝내 걸리면 Post는 '캡션을 준비하는 중이에요'만 — 걸리는 일이 있으면 미첼 화면 한 줄 · 개발자 알림 길을 정함 (나) Manual 맨 위 Tailscale · Safari https 한 줄만으로 켤 수 있는지"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-013 반환 (99626982)", "role:mitchell_studio/btsr/pln:4-b 반환 받음 · main 합치기 (be41b33c)", "role:mitchell_studio/btsr/pln:RSCH S13 MAC_RUN 목록 (RSCH 33번)"]
 owner_wait: "-"
 subs: []
@@ -49,6 +49,7 @@ verifier: "mitchell_studio/btsr/archv"
   5. 받음이 확인되면(RSCH · PLN 답) **바로** 위 '남은 차례' 1부터 — ARCH-011 반환은 새 ID로 옴.
   - **묶음 6**: PMO 반환 `btsr/pmo` 5bead7e(가지 `feat/webapp-b6-fix-versions-20261121` e512fcd, 바탕 243cff0 = 지금 main) → ARCH 대조(저장소 전부 · 환경 값 없이 125 OK · 기준 1–14 grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md) 17:04. → PMO(99626982)에 [BTSR-ARCH-012](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-012_REQUEST_CLAUDE.md)(4-b 2.1판 + 8번, 바탕 e512fcd).
   - 묶음 6 제품 main `e512fcd`(RSCH 17:08 · 요청서 003 32번). PLN 알림 17:10: 캡션 거르기 → ARCH가 정함, 012 덧붙임 1(aed1d11).
+  - 묶음 4-b 제품 main `7127393`(RSCH 17:31 · 요청서 003 35번 · PLN 17:34). 013 바탕 그대로.
   - **묶음 4-b**: PMO 반환 `btsr/pmo` 4f5b0ed(가지 `feat/webapp-b4b-https-push-20261121` 7127393, 바탕 e512fcd) → ARCH 대조(저장소 전부 · 환경 값 없이 131 OK skip 2 · 따로 깐 cryptography 50.0.2 가상 환경 131 OK · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B4B_BTSR-PLN-002_RETURN_CLAUDE.md). → PMO에 [BTSR-ARCH-013](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-013_REQUEST_CLAUDE.md)(8-2 1.1판 + 결정 38, 바탕 7127393).
   - RSCH 요청서 003 33번(한알 17:17:28 「맥 테스트 시나리오 작성해주시고 그전까지 만들어주세요」): 맥 시나리오는 RSCH S13 · 4-b → 8-2 차례 그대로 · S13의 MAC_RUN 맞지 않는 곳 목록 → PLN → ARCH가 1차 끝 판으로 고침.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
