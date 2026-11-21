@@ -58,6 +58,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 결정 42 · 요구 2.17판(btsr/pln 28f2077, RSCH 39번 — 한알 17:57:01 「네 그럼요.」): 이끄는 맥 ChatGPT의 컴퓨터 유즈 승인(웹앱 화면 · Send 파일 고르기, 세 회차) → 014 덧붙임 2(17:59 — '승인 뒤' 걷고 표를 글 맨 위에). 새 판 넣기 [안] 확정.
   - **맥 테스트 글**: PMO 반환 `btsr/pmo` ec3a37c(가지 `feat/webapp-mac-test-doc-20261121` 28e779e, 바탕 94d4522, MAC_RUN 한 파일만) → ARCH 대조(글뿐 · 시험 OK skip 2 · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_BTSR-PLN-002_RETURN_CLAUDE.md) 18:14 + 여쭘 하나.
   - IVA 판정 부적합(RSCH 40번 · PLN 요청 `btsr/pln` edf7209 — 한알 18:07:10 「과검증은 안되어요 …」): ARCH가 고치는 길 정함 → [BTSR-ARCH-015](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-015_REQUEST_CLAUDE.md). 가2는 spec_redo 열린 편에서 C2를 막는 칸으로 안 봄 · 나4 0이면 「다시 만들기」 안 그림 + ? "다시 만들기를 다 썼어요." [안] · 나6은 소재 파일 이름만 코드로, 호칭 없는 이름은 글 두 줄. 요청 번호 015까지(다음 016).
+  - 한알 18:27:53 「그거 안막아도 되어요 그런거 필요없습니다. 개인앱이예요.」(RSCH 41번): 015에서 나 6 뺌 → 015 덧붙임 1(18:29). 화면 글 [안] 둘 확정.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
