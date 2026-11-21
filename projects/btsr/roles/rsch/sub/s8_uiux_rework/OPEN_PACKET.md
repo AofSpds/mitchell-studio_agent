@@ -57,3 +57,8 @@
 4. `반환.md` — 짧게: 고친 것 다섯(말씀 → 한 일) · 뺀 화면 · 남긴 ? 표와 그 풀이 · **중간점검 때 여쭐 것**(번호로 답할 수 있게 · 권고를 1번에 · 셋 안) · 확인하지 않은 것.
 5. 커밋은 자기 칸만 경로로: `git add -- projects/btsr/roles/rsch/sub/s8_uiux_rework/` → `git commit -m "S8_UIUX_REWORK: …" -- projects/btsr/roles/rsch/sub/s8_uiux_rework/` → `git push origin main`(막히면 `git pull --rebase` 뒤 다시 · 강제 push 금지). 같은 작업 사본을 PRIMARY · S7과 함께 쓴다 — 늘 경로를 준다. 커밋 끝 줄 `Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>`.
 6. 끝나면 마지막 답에 결론 한 줄 + 커밋 해시 + 깃헙에서 볼 주소. 첫 답 첫 줄은 `[MITCHELL_STUDIO/BTSR/RSCH/S8_UIUX_REWORK · 규칙 판 v0.14 받음]`.
+
+## 덧붙임 (2026-11-21 15:01 KST, PRIMARY — 한알이 RSCH 창에서 더 정하심)
+
+- 14:59:10 c27cbd09: "알림 설정은 따로 메뉴얼로 빼시고요." → 고칠 것 5 그대로(알림 켜는 법은 Manual 탭의 일 — 화면 밖 설명에 한 줄).
+- 15:00:25 ebf400b0: "막아야죠" — RSCH가 '한 편이 만들어지는 동안 새로 보내면: 1 막음(권고) · 2 받아 두고 차례로 만듦'을 여쭌 답. → **한 편이 만들어지는 동안에는 새로 보내지 못한다.** 시안에 '만드는 중일 때의 Send 화면' 한 장을 넣는다: 큰 Send 단추가 눌리지 않는 꼴(흐리게) + 현황 한 줄(예: "지금 한 편을 만드는 중이에요"). 설명 글을 더하지 않는다. '중간점검 때 여쭐 것'에서 이 물음은 뺀다.
