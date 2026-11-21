@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-21T17:22+09:00"
+updated: "2026-11-21T17:26+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 e512fcd"
-now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.13판 · 결정 01–38 · 기획안 초안 1.4판(한알께 드림). 제품 main e512fcd까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6). 4-b(012, 바탕 e512fcd)는 ARCH가 새 PMO(아스트라 99626982)에. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥에는 1차 끝에 한 번(결정 08)"
+now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.13판 · 결정 01–38 · 기획안 초안 1.4판(한알께 드림). 제품 main e512fcd까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6). 4-b 반환 받음(가지 7127393) → RSCH 확인 · 합치기 기다림. 8-2(013)는 ARCH가 PMO(99626982)에. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 2.13판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(ed5ef600)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례: 4-b → 8-2 → MAC_RUN 1차 끝 판(S13 목록이 오면 ARCH에) → 1차 끝 맥 시험(맥 시나리오는 RSCH S13이 지금 씀 · 휴대폰 시연은 1차 뒤). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (7621f3de):ARCH-012(묶음 4-b) 반환", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
+waiting_for: ["role:mitchell_studio/btsr/rsch (ed5ef600):묶음 4-b 반환 확인 · 제품 main 앞으로 감기 e512fcd..7127393 push", "role:mitchell_studio/btsr/arch (7621f3de):ARCH-013(묶음 8-2) 반환 · MAC_RUN 1차 끝 판", "role:mitchell_studio/btsr/rsch (ed5ef600):S13 맥 테스트 시나리오 · MAC_RUN 맞지 않는 곳 목록", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
 owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.4판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -46,6 +46,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 6 합쳐짐 — 제품 main `e512fcd`** (RSCH 확인 · push 17:08, 에이전트 main `566e593` 요청서 32번, 17:10 PLN이 ls-remote로 봄). 맥에는 안 넣음. 기획안 초안 1.4판(17:12, 고치기 · 규격 · 저장 · 캡션 → 만듦) → RSCH에 알림. 맥 시험에 넣을 것 하나 더(진짜 캡션에 손님 정보 없는지 — 서버가 캡션을 거르는지 못 봄) → ARCH에 넘김. 새 PMO = 아스트라 `99626982-1190-4151-8cf5-b052ce8644c4`(full-access · 받음 `btsr/pmo` 40e5900).
 - **캡션 거르기 — ARCH가 정함** (`btsr/arch` `aed1d11` BTSR-ARCH-012 덧붙임 1, 17:14 무렵 알림): `verify(caption)`에서 `pii_hits`로 거름(uploader 지침에 글자 그대로 있는 가게 정보는 뺌) · 걸리면 별명으로 바꾸지 않고 Post에 영상만 · MAC_RUN에 '진짜 캡션에 손님 이름 · 연락처가 없는지 사람이 본다' 한 줄. 요구 · 결정 안 바뀜(R1.4 · 결정 10 안). 4-b 반환 대조 때 함께 봄.
 - **33번 받음** (RSCH 요청서 003 33번, 에이전트 main `c7e8b49`; 한알 17:17:28 「맥 테스트 시나리오 작성해주시고 그전까지 만들어주세요」) — 맥 테스트 시나리오는 지금 RSCH SUB S13이 씀(30번 '1차 뒤'를 앞당김 · 휴대폰 시연은 그대로 1차 뒤) · 4-b → 8-2는 하던 차례 그대로 맥 테스트 전까지 · S13이 제품 `app/webapp/MAC_RUN_PHASE1.md`의 맞지 않는 곳 목록을 내면(다음 번호) PLN이 ARCH에 넘기고 ARCH가 1차 끝 판으로 고침(마지막 묶음과 함께 또는 바로 뒤). ARCH에 미리 알림.
+- **묶음 4-b 반환 받음 → RSCH에 반환** (ARCH `btsr/arch` `298d19a`, 17:26) — 제품 가지 `feat/webapp-b4b-https-push-20261121` `7127393`(131 OK · cryptography 깐 가상 환경도 131 OK), R4.4 · R4.5 · R5.7 판정 둘 · 결정 05 · 25 · 32–34 · 캡션 거르기 대조. RSCH 확인되면 main 합침(조건 main `e512fcd` · 가지 `7127393`, 앞으로 감기 — 17:25 ls-remote). [WEBAPP_PHASE1_B4B_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4B_RETURN_CLAUDE.md). ARCH 다음: 8-2(013, 바탕 7127393).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
