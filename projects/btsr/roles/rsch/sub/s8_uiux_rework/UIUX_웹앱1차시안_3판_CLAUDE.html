@@ -31,7 +31,7 @@ svg { display:block; }
 .shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
 .shot .ft { font-size:14px; color:#3f3731; margin:8px 4px 0; min-height:66px; }
 .shot .ft b { color:var(--ink); }
-/* 한 화면만 보기: 주소 끝에 #s1 … #s14 */
+/* 한 화면만 보기: 주소 끝에 #s1 … #s15 */
 body:has(.shot:target) .top, body:has(.shot:target) .shot:not(:target) { display:none; }
 body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
 
@@ -89,6 +89,7 @@ h2 { font-size:20px; margin:0 0 8px; }
 .th.make { background:none; border:2px dashed var(--soft); }
 .th.make i { background:none; color:var(--soft); font-weight:700; bottom:36%; }
 .th.ask { outline:3px solid var(--bad); outline-offset:1px; }
+.th b.x { position:absolute; top:3px; right:3px; width:18px; height:18px; border-radius:50%; background:rgba(250,248,245,.92); color:var(--ink); font:700 12px/18px var(--font); text-align:center; }
 .chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
 .chip { border:1.5px solid var(--line); border-radius:999px; padding:6px 12px; font-size:14px; background:var(--card); }
 .chip.on { background:var(--accent); color:var(--onaccent); border-color:var(--accent); }
@@ -291,9 +292,10 @@ h2 { font-size:20px; margin:0 0 8px; }
     <div class="card offc">
       <div style="display:flex;justify-content:space-between;align-items:center"><span class="eh">Options</span><span style="font-size:15px;color:var(--soft)">기본값 ▾</span></div>
     </div>
+    <div class="btn line">처음부터 시작</div>
   </div>
   <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
-  <div class="ft"><b>새로 넣은 화면:</b> 한 편을 만드는 동안에는 새로 보내지 못합니다 — Send 단추가 흐려져 눌리지 않습니다. 미첼의 확인을 기다리는 때(화면 4 · 5 · 8 · 10)에도 막혀 있다가 미첼이 답하면 풀리고, 개발자에게 넘어간 때(화면 9)에는 다시 켜집니다.</div>
+  <div class="ft"><b>새로 넣은 화면:</b> 한 편을 만드는 동안에는 새로 보내지 못합니다 — Send 단추가 흐려져 눌리지 않습니다. 미첼의 확인을 기다리는 때(화면 4 · 5 · 8 · 10)에도 막혀 있다가 답하면 풀리고, 개발자에게 넘어간 때(화면 9)에는 다시 켜집니다. 「처음부터 시작」을 누르면 한 번 더 묻고, 지금 편을 멈춘 뒤 올린 것이 그대로 든 Send 화면(화면 15)으로 돌아갑니다.</div>
 </div>
 
 <!-- ───────── 7 막힘 ① ───────── -->
@@ -337,7 +339,7 @@ h2 { font-size:20px; margin:0 0 8px; }
     <div class="btn soft" style="margin-top:8px">여기까지 만든 것 보기</div>
   </div>
   <div class="tabs"><span>Send</span><span class="on">Jobs</span><span>Post</span><span>Manual</span></div></div>
-  <div class="ft"><b>2판에서 바뀐 것:</b> 미첼이 답해도 안 풀리면 개발자에게 알리고 멈춥니다. 「처음부터 시작」을 누르면 올려 둔 사진 · 영상 그대로 처음부터 다시 만듭니다. 이때 Send 탭도 다시 켜져 다른 것을 새로 보낼 수 있고, 새로 보내면 멈춘 편은 미첼 화면에서 빠집니다(개발자는 그 편에서 까닭만 봅니다).</div>
+  <div class="ft"><b>2판에서 바뀐 것:</b> 미첼이 답해도 안 풀리면 개발자에게 알리고 멈춥니다. 「처음부터 시작」을 누르면 한 번 더 묻고 Send 화면으로 돌아갑니다 — 올린 사진 · 영상과 요청 글이 그대로 들어 있습니다(화면 15). 이때는 Send 탭도 켜져 있어 다른 것을 새로 보낼 수도 있고, 새로 보내면 멈춘 편은 미첼 화면에서 빠집니다(개발자는 그 편에서 까닭만 봅니다).</div>
 </div>
 
 <!-- ───────── 9 Done ───────── -->
@@ -465,6 +467,34 @@ h2 { font-size:20px; margin:0 0 8px; }
   </div></div>
   </div>
   <div class="ft"><b>2판에서 바뀐 것:</b> 안내 글 둘을 뺐습니다. 손님 이름이 적혀 있으면 웹앱이 별명('손님 A')으로 바꿔 저장하고, 보낸 건의 줄에 「별명으로 바뀜」만 붙습니다.</div>
+</div>
+
+<!-- ───────── 15 「처음부터 시작」 뒤의 Send ───────── -->
+<div class="shot" id="s15">
+  <div class="hd"><span class="no">15</span>「처음부터 시작」 뒤의 Send — 올린 것이 그대로</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <h1 class="s">Send</h1>
+    <div class="big">Send</div>
+    <div class="card">
+      <div class="thumbs" style="grid-template-columns:repeat(5,1fr);margin:0">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><b class="x">×</b><i>영상</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><b class="x">×</b><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><b class="x">×</b><i>사진</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><b class="x">×</b><i>사진</i></div>
+        <div class="th make"><i style="font-size:22px;bottom:30%">+</i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="eh">Request</div>
+      <div class="ta w" style="min-height:46px;margin-bottom:0">레이어드 컷, 긴 머리, 가볍게 떨어지는 느낌</div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="eh">Options</span><span style="font-size:15px;color:var(--soft)">기본값 ▾</span></div>
+    </div>
+  </div>
+  <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로 넣은 화면:</b> 「처음부터 시작」을 누르면 오는 화면입니다. 올린 사진 · 영상과 Request 글이 그대로 들어 있고 Send 단추가 켜져 있습니다. 미첼은 그대로 Send를 누르거나, ×로 빼고 +로 더한 뒤 보냅니다.</div>
 </div>
 
 </div>
