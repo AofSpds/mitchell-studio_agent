@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-20T18:39:48Z"
+updated: "2026-11-21T03:58:00Z"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-001 반환함(03:39 KST) — 작업자 모델 GPT-6.2 Sol · 생각 High 설정 한 곳, 제품 가지 fix/worker-model-sol-20261121 3495f7e. BTSR-RSCH-001은 맥 결과 대기"
-next: "ARCH의 수용 · 합치기 결정 · 맥 확인 결과, 그리고 BTSR-RSCH-001 맥 결과를 받으면 이어 함 — 스스로 시작하지 않음(규칙 18)"
-waiting_for: ["arch:BTSR-ARCH-001-accept", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-002(묶음 1 Feedback·쉬운 말) 반환함 — 제품 가지 feat/webapp-b1-suggest-20261121 6cfbc5f. ARCH-003 합침(main e5785b3). BTSR-RSCH-001은 맥 결과 대기"
+next: "ARCH의 수용 · 합치기 결정, BTSR-RSCH-001 맥 결과를 받으면 이어 함 — 스스로 시작하지 않음(규칙 18)"
+waiting_for: ["arch:BTSR-ARCH-002-accept", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -36,7 +36,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST · RSCH 수용(건은 열어 둠) — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
 | 작업자 모델 Terra → GPT-6.2 Sol · 생각 High, 한 곳 설정(enum)으로 — 제품 저장소 웹앱 · 문서 (급함, 오늘 맥 웹앱 시험 전) | RSCH (Paseo 7993ff28) | 세션 메시지(2026-11-21 03:20 KST, message-id f558a86c) — 요청서 파일 없음 | 2026-11-21 (KST, 커밋 140ed71 시각) | **RSCH가 거둠**(03:2x KST, message-id a968fc10 — PLN · ARCH를 건너뛴 요청, 한알 「누가 바로 pmo에 보내나요」). 멈춤. 제품 저장소에 바꾼 것 · 커밋 · push 없음. 이 PC 사본에 로컬 가지 `fix/worker-model-sol-20261121`(main 9e7eb0e 그대로, 고친 파일 0)만 남음 — 지우지 않고 둠 |
 | BTSR-ARCH-001_worker-model-sol — 작업자 모델 GPT-6.2 Sol · 생각 High, 설정 한 곳 `app/webapp/worker_model.py` (급함) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` aee2291 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-001_REQUEST_CLAUDE.md` · 설계 `WORKER_MODEL_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (9cff201) | **반환함** 03:39 KST — [반환서](records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) · 제품 가지 `fix/worker-model-sol-20261121` 3495f7e (main 합치기 안 함) |
-| BTSR-ARCH-002_webapp-b1-suggest-words — 웹앱 「Feedback」 건의함 + 쉬운 말 (묶음 1) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 6cf028a `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-002_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (ea8da0d) | 하는 중 — 제품 가지 `feat/webapp-b1-suggest-20261121` 08727a7(로컬, 시험 17/17). ARCH-003 먼저 하느라 잠시 멈춤. ARCH-001은 ARCH가 수용 |
+| BTSR-ARCH-002_webapp-b1-suggest-words — 웹앱 「Feedback」 건의함 + 쉬운 말 (묶음 1) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 6cf028a `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-002_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (ea8da0d) | **반환함** 12:58 KST — 제품 가지 `feat/webapp-b1-suggest-20261121` 6cfbc5f (main 합치기 안 함), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1_RETURN_CLAUDE.md) |
 | BTSR-ARCH-003_worker-model-merge — 제품 가지 `fix/worker-model-sol-20261121` 3495f7e를 제품 main에 합침 (PLN이 정함, 한알 03:47:04) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` bc710d7 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (34a5007) | **반환함** 12:54 KST — 제품 main `e5785b3` (첫 부모 3bd6cdd), [반환서](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) |
 
 - 근거: 한알 말씀 2026-11-20 13:50:27 KST uuid 3092e5a9-024e-4187-8f17-50ff69f1a54e 「Pmo가 합니다. / 네 설치하세요 / Https 반드시 켜야 하나요」 — main `owner/utterances/2026-11-20.md` (RSCH 창에서 하신 말씀). [DECISIONS.md](DECISIONS.md)에서 가리킴.

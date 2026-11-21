@@ -1,0 +1,14 @@
+ agents/creative_director/manual-webapp.md |  61 +++++----
+ agents/creative_director/manual.md        |  13 +-
+ app/webapp/jobs.py                        |  34 ++---
+ app/webapp/reel_api.py                    |   7 +-
+ app/webapp/static/app.html                | 153 ++++++++++++++++------
+ app/webapp/suggest.py                     | 106 ++++++++++++++++
+ app/webapp/suggest_store.py               | 124 ++++++++++++++++++
+ app/webapp/tests/_env.py                  |  87 +++++++++++++
+ app/webapp/tests/test_suggest.py          | 204 ++++++++++++++++++++++++++++++
+ app/webapp/tests/test_words.py            | 132 +++++++++++++++++++
+ app/webapp/tests/test_worker_model.py     |  17 +--
+ app/webapp/tests/words_allow.json         | 149 ++++++++++++++++++++++
+ suggestions/README.md                     |  37 ++++++
+ 13 files changed, 1017 insertions(+), 107 deletions(-)

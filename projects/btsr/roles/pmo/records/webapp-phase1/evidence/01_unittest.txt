@@ -1,0 +1,24 @@
+test_auth_and_header (test_suggest.Api.test_auth_and_header) ... ok
+test_job_kept_only_if_real (test_suggest.Api.test_job_kept_only_if_real) ... ok
+test_recent (test_suggest.Api.test_recent) ... ok
+test_rejects (test_suggest.Api.test_rejects) ... ok
+test_three_kinds_saved (test_suggest.Api.test_three_kinds_saved) ... ok
+test_upload_job_fix (test_suggest.Regression.test_upload_job_fix) ... ok
+test_same_second (test_suggest.SameSecond.test_same_second) ... ok
+test_clean_publish (test_suggest.Tool.test_clean_publish) ... ok
+test_hold_keeps (test_suggest.Tool.test_hold_keeps) ... ok
+test_pii_blocks_publish (test_suggest.Tool.test_pii_blocks_publish) ... ok
+test_reviewed_publish (test_suggest.Tool.test_reviewed_publish) ... ok
+test_allow_rows_have_bundle (test_words.Words.test_allow_rows_have_bundle) ... ok
+test_no_new_dev_words (test_words.Words.test_no_new_dev_words) ... ok
+test_current_value (test_worker_model.Matches.test_current_value) ... ok
+test_matches (test_worker_model.Matches.test_matches) ... ok
+test_sol_then_terra (test_worker_model.OnePlace.test_sol_then_terra) ... ok
+test_practice_result (test_worker_model.ResultLines.test_practice_result) ... ok
+test_six_result_sol_passes (test_worker_model.ResultLines.test_six_result_sol_passes) ... ok
+test_six_result_terra_fails (test_worker_model.ResultLines.test_six_result_terra_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.275s
+
+OK

@@ -1,0 +1,47 @@
+app/webapp/static/app.html:197	모델	<textarea id="req0" maxlength="1000" placeholder="예) 디지털펌, 얇은 손상모, 50대 모델, 뒷볼륨 강조"></textarea>
+app/webapp/static/app.html:230	Claude	<div class="alert">받았어요. Claude 앱에 <b>“업로드 확인”</b>이라고만 보내 주세요 — 그러면 Jobs에 작업이 생겨요.</div>
+app/webapp/static/app.html:518	Codex	<p class="note" style="margin:0">맥의 Codex 앱 새 창에서 ${WORKER}를 고르고 “작업 카드대로 해 줘”라고 보내 주세요 (이어서 할 때는 “다음 카드 해 줘”). 안 되면 「Copy Prompt」로 복사한 한 줄을 붙여 넣어요.</p></div>`;
+app/webapp/static/app.html:518	카드	<p class="note" style="margin:0">맥의 Codex 앱 새 창에서 ${WORKER}를 고르고 “작업 카드대로 해 줘”라고 보내 주세요 (이어서 할 때는 “다음 카드 해 줘”). 안 되면 「Copy Prompt」로 복사한 한 줄을 붙여 넣어요.</p></div>`;
+app/webapp/static/app.html:518	카드	<p class="note" style="margin:0">맥의 Codex 앱 새 창에서 ${WORKER}를 고르고 “작업 카드대로 해 줘”라고 보내 주세요 (이어서 할 때는 “다음 카드 해 줘”). 안 되면 「Copy Prompt」로 복사한 한 줄을 붙여 넣어요.</p></div>`;
+app/webapp/static/app.html:522	카드	const today = p.cards.length ? p.cards.map(c => `${esc(c.k)} ${esc(c.name)} ${esc(PSTATE[c.state] || c.state)}${c.reason && c.state !== "pass" ? ` (${esc(c.reas
+app/webapp/static/app.html:524	Practice	return `<b>Practice</b> · 오늘: ${today}${p.note ? ` · ${esc(p.note)}` : ""}${p.outside ? `<br>⚠ 작업 밖 파일이 바뀌었어요 (${esc(p.outside)})` : ""}<br>${sk}<br><span class
+app/webapp/static/app.html:524	카드	return `<b>Practice</b> · 오늘: ${today}${p.note ? ` · ${esc(p.note)}` : ""}${p.outside ? `<br>⚠ 작업 밖 파일이 바뀌었어요 (${esc(p.outside)})` : ""}<br>${sk}<br><span class
+app/webapp/static/app.html:530	Claude	$("pfSum").textContent = `시작 전 점검 · ${bad.length ? `❌ ${bad.length}개 — 아직 시작하지 마세요. Claude 앱에 “Preflight 봐 줘”라고 보내 주세요` : "모두 ✅ — 시작해도 돼요"}`;
+app/webapp/static/app.html:530	Preflight	$("pfSum").textContent = `시작 전 점검 · ${bad.length ? `❌ ${bad.length}개 — 아직 시작하지 마세요. Claude 앱에 “Preflight 봐 줘”라고 보내 주세요` : "모두 ✅ — 시작해도 돼요"}`;
+app/webapp/static/app.html:541	Claude	$("todoAlert").textContent = n ? `확인하거나 기다리는 작업 ${n}개` : (JOBS.length ? "지금 확인할 작업이 없어요" : "아직 작업이 없어요. Send로 사진·영상을 보낸 뒤 Claude 앱에 “업로드 확인”이라고 보내 주세요.");
+app/webapp/static/app.html:558	프로젝트	const SRC_WORD = { "CapCut 프로젝트": "CapCut에 저장된 것", "ChatGPT 결과": "결과 줄" };
+app/webapp/static/app.html:558	ChatGPT	const SRC_WORD = { "CapCut 프로젝트": "CapCut에 저장된 것", "ChatGPT 결과": "결과 줄" };
+app/webapp/static/app.html:574	ChatGPT	+ (pc && pk.src !== "ChatGPT 결과" && ((pc.voice && pc.voice !== pk.voice) || (pc.music && pc.music !== pk.music)) ? `<p class="note">결과 줄에는 ${esc(pc.voice || "-"
+app/webapp/static/app.html:579	모델	const model = x.model && !x.model.ok ? `<div class="why w">⚠ 고른 모델이 달랐어요 (${esc(x.model.name)}) — 다음엔 ${WORKER}로 골라 주세요</div>` : "";
+app/webapp/static/app.html:621	Codex	if (state === "stop") body += `<div class="why ${/사용량/.test(st.reason || "") ? "w" : ""}">⚠ ${esc(st.reason || "멈췄어요")}${i === 5 && /사용량/.test(st.reason || "") 
+app/webapp/static/app.html:621	카드	if (state === "stop") body += `<div class="why ${/사용량/.test(st.reason || "") ? "w" : ""}">⚠ ${esc(st.reason || "멈췄어요")}${i === 5 && /사용량/.test(st.reason || "") 
+app/webapp/static/app.html:621	ChatGPT	if (state === "stop") body += `<div class="why ${/사용량/.test(st.reason || "") ? "w" : ""}">⚠ ${esc(st.reason || "멈췄어요")}${i === 5 && /사용량/.test(st.reason || "") 
+app/webapp/static/app.html:621	Codex	if (state === "stop") body += `<div class="why ${/사용량/.test(st.reason || "") ? "w" : ""}">⚠ ${esc(st.reason || "멈췄어요")}${i === 5 && /사용량/.test(st.reason || "") 
+app/webapp/static/app.html:621	카드	if (state === "stop") body += `<div class="why ${/사용량/.test(st.reason || "") ? "w" : ""}">⚠ ${esc(st.reason || "멈췄어요")}${i === 5 && /사용량/.test(st.reason || "") 
+app/webapp/static/app.html:713	Claude	<button class="btn ${is.to === "claude" ? "" : "soft"}" type="button" data-hd="claude">Claude${is.to === "claude" ? '<span class="rec">추천</span>' : ""}</button>
+app/webapp/static/app.html:714	ChatGPT	<button class="btn ${is.to === "gpt" ? "" : "soft"}" type="button" data-hd="gpt">ChatGPT${is.to === "gpt" ? '<span class="rec">추천</span>' : ""}</button>
+app/webapp/static/app.html:716	Claude	<p class="note" style="margin:0">위 글을 복사하고 앱을 열어요. 대화창에 붙여 넣기만 하세요. Claude 앱에서는 「Creative Director」 대화에 붙여 넣어 주세요.</p>`;
+app/webapp/static/app.html:802	Codex	if (line) toast(copyText(line) ? "한 줄을 복사했어요 — Codex 앱에 붙여 넣어 주세요" : "복사가 안 됐어요. 한 번 더 눌러 주세요"); return; }
+app/webapp/static/app.html:810	Claude	try { await api("/api/job/fix", { ...data, text }); closeSheet(); toast("받았어요. Claude 앱에 “작업 확인”이라고 보내 주세요 — 그러면 고쳐요"); if (view === "job") loadJob(); }
+app/webapp/jobs.py:1314	카드	## 지킬 것 (모든 카드 공통)
+- 맥 허락 창 허용, 맥·앱 설정 바꾸기, 결제·구독 버튼은 누르지 않습니다. 그런 창이 뜨면 누르지 말고 바로 멈춥니다.
+- 구매·업그레이드 **안내창**(닫을 수 있는 광고·안내)은 X나 「나중에」로 **닫고 계속**합니다. 결제 버튼만 누르지 않
+app/webapp/jobs.py:1314	카드	## 지킬 것 (모든 카드 공통)
+- 맥 허락 창 허용, 맥·앱 설정 바꾸기, 결제·구독 버튼은 누르지 않습니다. 그런 창이 뜨면 누르지 말고 바로 멈춥니다.
+- 구매·업그레이드 **안내창**(닫을 수 있는 광고·안내)은 X나 「나중에」로 **닫고 계속**합니다. 결제 버튼만 누르지 않
+app/webapp/jobs.py:1314	프로젝트	## 지킬 것 (모든 카드 공통)
+- 맥 허락 창 허용, 맥·앱 설정 바꾸기, 결제·구독 버튼은 누르지 않습니다. 그런 창이 뜨면 누르지 말고 바로 멈춥니다.
+- 구매·업그레이드 **안내창**(닫을 수 있는 광고·안내)은 X나 「나중에」로 **닫고 계속**합니다. 결제 버튼만 누르지 않
+app/webapp/jobs.py:1314	프로젝트	## 지킬 것 (모든 카드 공통)
+- 맥 허락 창 허용, 맥·앱 설정 바꾸기, 결제·구독 버튼은 누르지 않습니다. 그런 창이 뜨면 누르지 말고 바로 멈춥니다.
+- 구매·업그레이드 **안내창**(닫을 수 있는 광고·안내)은 X나 「나중에」로 **닫고 계속**합니다. 결제 버튼만 누르지 않
+app/webapp/jobs.py:1490	Codex	준비됐어요 — 맥의 Codex 앱에서
+app/webapp/jobs.py:1490	카드	를 고르고 "작업 카드대로 해 줘"라고 보내 주세요 (이어서 할 때는 "다음 카드 해 줘")
+app/webapp/jobs.py:1490	카드	를 고르고 "작업 카드대로 해 줘"라고 보내 주세요 (이어서 할 때는 "다음 카드 해 줘")
+agents/creative_director/manual-webapp.md:17	ChatGPT	1. **찍어요** — 시술 전 사진·영상, 시술 후 뒷머리 영상. AI 얼굴 사진은 ChatGPT 앱에 시술 후 사진을 올리고 "50대 모델, 머리 그대로"라고 해서 받아요.
+agents/creative_director/manual-webapp.md:17	모델	1. **찍어요** — 시술 전 사진·영상, 시술 후 뒷머리 영상. AI 얼굴 사진은 ChatGPT 앱에 시술 후 사진을 올리고 "50대 모델, 머리 그대로"라고 해서 받아요.
+agents/creative_director/manual-webapp.md:18	Claude	2. **보내요** — **Send**에서 사진·영상을 고르고, 바라는 점이 있으면 한 줄 적어요. 다 보내면 Claude 앱에 "업로드 확인"이라고 보내 주세요.
+agents/creative_director/manual-webapp.md:19	Codex	3. **Jobs에서 봐요** — 원고가 오면 「좋아요」, 다 된 영상은 「승인」. 목소리·음악 차례가 오면 맥의 Codex 앱 새 창에서 Jobs 맨 위에 적힌 대로 "작업 카드대로 해 줘"라고 보내 주세요 (오전 7시 이후, 여러 작업을 모아 한 번에).
+agents/creative_director/manual-webapp.md:19	카드	3. **Jobs에서 봐요** — 원고가 오면 「좋아요」, 다 된 영상은 「승인」. 목소리·음악 차례가 오면 맥의 Codex 앱 새 창에서 Jobs 맨 위에 적힌 대로 "작업 카드대로 해 줘"라고 보내 주세요 (오전 7시 이후, 여러 작업을 모아 한 번에).
+agents/creative_director/manual-webapp.md:32	Claude	- **멈췄을 때:** 아래 **Helpdesk**에서 문제를 고르면 상황이 저절로 적혀요. 단추를 누르면 그 글이 복사된 채로 도와줄 앱이 열려요. 붙여 넣고 보내면 돼요. Claude 앱에서는 **Creative Director** 대화에 붙여 넣어 주세요. Jobs의 ⚠ 단계에 있
+agents/creative_director/manual-webapp.md:33	Claude	- **웹앱이 아예 안 열리면:** Claude 앱에 "웹앱 안 열려"라고 보내 주세요. 맥북이 켜져 있고 뚜껑이 열려 있는지, 가게 와이파이 또는 Tailscale인지도 봐 주세요.

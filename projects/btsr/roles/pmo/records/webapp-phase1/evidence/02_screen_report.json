@@ -1,0 +1,75 @@
+[
+ {
+  "name": "Feedback 단추가 스크롤 뒤에도 보임 · up",
+  "ok": true
+ },
+ {
+  "name": "Feedback 시트가 열림 · up",
+  "ok": true
+ },
+ {
+  "name": "Feedback 단추가 스크롤 뒤에도 보임 · jobs",
+  "ok": true
+ },
+ {
+  "name": "Feedback 시트가 열림 · jobs",
+  "ok": true
+ },
+ {
+  "name": "Feedback 단추가 스크롤 뒤에도 보임 · post",
+  "ok": true
+ },
+ {
+  "name": "Feedback 시트가 열림 · post",
+  "ok": true
+ },
+ {
+  "name": "Feedback 단추가 스크롤 뒤에도 보임 · man",
+  "ok": true
+ },
+ {
+  "name": "Feedback 시트가 열림 · man",
+  "ok": true
+ },
+ {
+  "name": "시험 작업이 Jobs에 보임",
+  "ok": true,
+  "detail": "2099-01-05_screen-test"
+ },
+ {
+  "name": "단계 설명 줄이 쉬운 말",
+  "ok": true,
+  "detail": "사진·영상을 보냈어요 / 보내신 것을 살펴봐요 / 원고를 써요 — 확인해 주세요 / 장면을 이어 붙여요 / 2단계에서 생겨요 / 목소리와 음악을 넣고 영상을 뽑아요 / 다 됐어요 — 확인해 주세요 / 캡션을 준비해요 — 올려 주세요"
+ },
+ {
+  "name": "작업 화면에서 열면 고칠 점 안내 줄",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "갈래를 고르기 전에는 보내기 꺼짐",
+  "ok": true
+ },
+ {
+  "name": "갈래를 고르면 보내기 켜짐",
+  "ok": true
+ },
+ {
+  "name": "보낸 뒤 toast",
+  "ok": true,
+  "detail": "받았어요. 개발자가 읽어요."
+ },
+ {
+  "name": "「내가 보낸 건의」에 보임",
+  "ok": true,
+  "detail": "11-21 12:57 · 이랬으면 해요 · 화면 시험 — 보내기 단추가 더 컸으면 해요"
+ },
+ {
+  "name": "Manual 맨 아래 「개발자용」이 접혀 있음",
+  "ok": true
+ },
+ {
+  "name": "Jobs의 연습 줄은 숨김",
+  "ok": true
+ }
+]
