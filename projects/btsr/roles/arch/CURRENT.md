@@ -3,9 +3,9 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T16:51:00+09:00"
+updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "올리기 고침 2(S14 · RSCH 57번 · PLN 260d377) → PMO에 BTSR-ARCH-021(01:50, 1 POST 401 연결 닫기 · 2 보내는 중 새로 고침 이어 가기 · 3 막대 · 4 연결 안 됨 글). 어림 03:15 합침. 제품 main 8b0d084(020 합쳐짐)"
+now: "PMO(7837ebd8)가 BTSR-ARCH-021(올리기 고침 2 — S14) 받아 하는 중(Chrome · WebKit 27.2 390px, 40분 안팎 · 03:15 KST 합침 목표). 제품 main 8b0d084. 대화 압축 전 저장"
 next: "021 반환 대조(Playwright 깐 곳) → PLN. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-021 반환 (7837ebd8)"]
 owner_wait: "-"
@@ -64,6 +64,17 @@ verifier: "mitchell_studio/btsr/archv"
   - **IVA 고침**: PMO 반환 `btsr/pmo` a6e3beb(가지 `feat/webapp-iva-fix-20261121` f457be8, 바탕 94d4522) → ARCH 대조(137 OK skip 2 · cryptography 137 OK · grep 가1 · 가2 · 나3 · 나4 · 나5 · 글) → [반환](design/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_BTSR-PLN-002_RETURN_CLAUDE.md) 18:49.
   - 웹앱 1차 모두 제품 main f457be8(RSCH 19:02 · 44번). 맥 테스트 글 덧붙임(결정 47): PMO 반환 `btsr/pmo` bebc290(07cd3fc) → ARCH 대조(한 파일 +5 −1 · 137 OK skip 2) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD1_BTSR-PLN-002_RETURN_CLAUDE.md) 19:13. 요청 번호 016까지(다음 017).
   - RSCH 53번(PLN 알림): 한알 내일(11-22) 휴대폰 테스트 — PLN 한 장 세 줄(1-6부터 1회차 · 3-4만 · 3-6부터). ARCH 대조 넷을 PLN에 드림('묻지 말고'는 2회차로 이어 감 · 3-4 앞에 3-3 앞 절반(HTTPS Certificates) · 3-5는 한알 손일 · 3-6 전송 꺼져도 로컬 대기로 넘어감).
+- **압축 뒤 이어 갈 것 (11-22 01:5x 저장)**:
+  1. 021 반환이 오면: 제품 \`git fetch\` → \`ls-remote\`로 가지 머리 · main 확인 → \`merge-base --is-ancestor <main> <머리>\` → \`diff --stat\`(server.py 한 곳 · app.html · 시험) → \`git archive <머리> | tar -x\` 새 임시 폴더에서 **기본 파이썬 + 저장소 밖 임시 가상 환경(\`pip install playwright cryptography\`)** 둘로 \`env -u PYTHONIOENCODING -u PYTHONUTF8 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s app/webapp/tests\` — **건너뜀 0**을 봄 → grep(send_json 연결 닫는 조건 · 이어 가기 기록을 보내기 시작 때 · 막대 · NO_MAC 글) → 반환서 \`design/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_BTSR-PLN-002_RETURN_CLAUDE.md\`(꼴은 \`…UPLOAD_STALL_BTSR-PLN-002_RETURN_CLAUDE.md\`) → CURRENT · 커밋 · push → PLN(be41b33c)에 한 줄(합칠 머리 · 시험 · 걸린 것).
+  2. 다음 맥 글 덧붙임이 생기면 함께: 3-2 · 개발자 글 전송 켜기를 3회차에서 떼어 '나중에 따로'(PLN · RSCH 53번).
+  3. 요청 번호 BTSR-ARCH-021까지 씀(다음 022).
+- **오늘 밤 흐름의 꼴(되풀이됨)**: PLN이 '요청 왔다'(btsr/pln 요청서 경로) → 급하면 **먼저 한 줄(될 것 · 안 될 것 · 걸릴 때)** → ARCH가 고치는 길을 정해 \`design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-0NN_REQUEST_CLAUDE.md\` → PMO(7837ebd8)에 경로 알림 → PMO 반환 → ARCH 대조 → 반환서 → PLN. 덧붙임은 요청서 끝 '## 덧붙임 N'(본문 그대로). 이미 한 일은 '빼라'가 와도 되돌리지 않음.
+- **이 PC · 이 일에서 새로 배운 것(11-21 밤 ~ 11-22)**:
+  - 제품 main은 **맥 세션이 바로 올림**(agents/ 글) — 대조 · 반환 때 늘 \`ls-remote\`로 main을 다시 보고 '앞으로 감기 되나'를 적음. 요청서 바탕은 'push 직전 origin/main'.
+  - 화면만 고친 건은 브라우저 시험(Playwright)이 이 PC 기본 파이썬에선 '건너뜀'으로 통과해 보임 — 임시 가상 환경에 playwright를 깔면 Chrome(channel)으로 돎. 건너뛴 수를 늘 봄.
+  - 시험 첫 실행에만 한 번 실패(test_recent · test_nofile 순서) — 다시 하면 OK, 고치지 않음(결정 45).
+  - 결정 45(개인 앱 — 여러 사람용 막기 · 확인 늘리지 않음) · 46(멀티 에이전트는 열기 전 한알 확인 — ARCH도) · 44(웹앱 Claude가 받은 소재 읽음 허락) · 42(이끄는 맥 ChatGPT 컴퓨터 유즈) · 47(맥 세션 「코덱스 excutor」) · 48은 RSCH 48번이 바로잡음(웹앱 재시작은 처리 중일 때만 여쭘).
+  - 맥 로그: \`~/Library/Logs/mitchell-upload.log\`(launchd plist StandardErrorPath — server.py log_message).
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
