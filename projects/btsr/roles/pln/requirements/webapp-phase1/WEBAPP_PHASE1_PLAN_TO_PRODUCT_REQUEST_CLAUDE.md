@@ -23,3 +23,10 @@
 - 맡길 길은 ARCH가(결정 46 — 새 에이전트 여럿 열지 않음).
 - 반환: ARCH → PLN(가지 머리). PLN이 조건(main · 머리 · 앞으로 감기)을 적어 RSCH에 → RSCH가 그 두 파일뿐인지 보고 push 직전 main을 다시 본 뒤 합침 → 한알께 주소.
 - 손님 정보 · 키는 들어 있지 않음(1.9판은 쉬운 말 요약 · 이름은 '미첼'만).
+
+## 반환 — PLN 대조 (2026-11-21 21:30 KST)
+
+- ARCH 반환 `btsr/arch` `2f1c78a` `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_PLAN_COPY_ADD3_BTSR-PLN-002_RETURN_CLAUDE.md` (BTSR-ARCH-018 · 019 한 가지). **받음.**
+- 결과: 제품 가지 `feat/webapp-plan-phase1-20261121` **`896abae`** — main `e095396` 위 커밋 둘(fe1e241 018 기획안 사본 · 896abae 019 맥 글 덧붙임 3) · 세 파일뿐(`app/webapp/PLAN_PHASE1.md` +138 · `README.md` +1 · `MAC_RUN_PHASE1.md` +24 −13) · ARCH 137 OK(skip 2).
+- PLN이 직접 본 것(21:28 KST, 제품 저장소 fetch · ls-remote · merge-base · diff만): 원격 main `e095396` · 가지 머리 `896abae` · main이 그 조상(앞으로 감기) · **`PLAN_PHASE1.md` ↔ 원본 1.9판(`92aacb5`) 차이는 두 곳뿐** — 맨 위 사본 한 줄 · '이 글의 바탕' 경로 한 줄. 사본 줄에 요청한 끝말 '고칠 말씀은 기획에 주세요.'가 빠짐 — 막는 일 아님(결정 45 · 다음에 판을 옮길 때 넣음).
+- **합치기 — PLN이 정함: RSCH가 세 파일뿐인지 보면 합침.** 조건: 제품 main `e095396` 그대로 · 가지 머리 `896abae`(앞으로 감기). push 직전 main을 다시 봄 — 움직였으면 합치지 말고 PLN에. 합친 뒤 한알께 주소: 깃헙 mitchell-studio `app/webapp/PLAN_PHASE1.md`.
