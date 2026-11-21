@@ -7,7 +7,7 @@ updated: "2026-11-21T13:59+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 3072e7e"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.8판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-009(4-a) 반환", "owner(via rsch a97bebab):R32.4 「가진 사진 올리기」"]
+waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):ARCH-009(4-a) 반환", "owner(via rsch a97bebab):8-2 다11 과정 영상 · 다14 뒷모습 조건 (구현 전 템플릿 r2 글)"]
 owner_wait: "RSCH가 하나씩 여쭘 — Send 막는 때 · 4-b 둘(WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md) · [안] 넷 (요구 2판 4번 끝). 4-a 낱말 장은 결정 22로 쓰지 않음"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -57,6 +57,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **19번 받음** (RSCH main `2b3b203`, 15:43) — 영상 제작 시뮬레이션 S10–S12 결과 → 요구 2.5판(R3.5 [안] · 4번 끝 자리 나눔) · ARCH에 넘김(파일 · 줄 확인 뒤 구현). RSCH에 작업 계획 세 줄 · 한알께 여쭐 수 있는 것 둘(다11 · 다14). PMO는 ARCH-009 받음(`btsr/pmo` `72f6772`).
 - **20번 받음** (RSCH main `f8f9c98`, 15:48) → **결정 31–34 · 요구 2.6판**: Post의 고칠 점 뺌(R6.7) · 건의 · 개발자 알림은 제품 main `suggestions/`에 바로(이 폴더만 검토 없이) · 알림 글 셋 · cryptography 깖. K6 = 결정 05. 시안 3판 화면 16개. [안]들은 보여 드림. 남은 여쭘: R32.4 하나. **4-a-2 · 4-b 설계에 기다리던 것이 다 옴** → ARCH에 알림.
 - **ARCH 19번 확인 · 자리** (`btsr/arch` `7701eb4`, 15:51) — 대개 ✔. 가3 캡션 → 묶음 6 · 다13 Edit 확인 차례 → 4-a-2 · 나5 · 나9 → ARCH-009 덧붙임 2 · **새 묶음 8-2 '지시 글 맞춤'**(템플릿 r2 — 720×1280 → 1080×1920 · 글 맞춤, 4-a-2 · 6 뒤) → 요구 2.7판. RSCH에: 다11 · 다14 여쭘 + 템플릿 r2 글은 구현 전에 보여 드림.
+- **21번 받음** (RSCH main `15f2e57`, 15:51) → 결정 35 · 요구 2.8판: R32.4 거둠(화면 5 단추 둘) · 20번 [안] 여섯 안대로. 남은 한알 여쭘: 8-2의 다11 · 다14(RSCH에 넘김). RSCH: 4-a가 돌아오면 '반환'으로 알려 달라.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
