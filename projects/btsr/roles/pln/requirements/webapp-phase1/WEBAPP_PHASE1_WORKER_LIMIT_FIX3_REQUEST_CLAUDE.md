@@ -89,3 +89,20 @@
 - **카 (한알 지침):** 네 카드의 글에 '한 일을 로그로 자세히' — 적을 것 · 뺄 것 · 자리 · 셈은 결정 49대로. 시험: 로그가 없거나 덜 써져도 멈춤으로 세지 않음 · 손님 파일 이름이 로그에 안 들어감(가짜 작업자로).
 - 때: 카드 글만 바꾸는 작은 것이면 **고침 3에 함께**(다음 맥 시험부터 쓰이게). 05:10을 얼마나 미는지 ARCH가 먼저 한 줄로 — 많이 밀면 카만 고침 3 바로 뒤로.
 - **ARCH 덧붙임 4 먼저 한 줄 (03:4x 받음):** 합침 05:10 → **05:20 KST쯤**(+10분 · 고침 3에 함께). 카드 글(네 카드 공통 `rules_text` 한 곳) + 서버 두 곳: ① 자리 = 그 편 폴더 `runs/`의 실행 기록 곁 · 실행마다 `<순번>_<종류>_t<번째>.worker.md`(data/ 아래 — 깃헙에 안 감 · PMO가 .gitignore 확인) · 카드에 그 경로를 적어 줌 ② 개발자에게 넘길 때 로그 끝 20줄 — 받은 소재 파일 이름은 '소재 N'으로 바꿔 붙임. 3분 · 20번에 안 셈 · 로그 없어도 멈춤 아님. 시험: 로그 없음 → 멈춤 0 · 가짜 로그의 손님 파일 이름 → 개발자 글에 '소재 N'. **PLN 받음**(결정 49와 맞음).
+
+## 반환 — PLN 대조 (2026-11-22 04:15 KST)
+
+- ARCH 반환 `btsr/arch` `4bf967b` `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_WORKER_LIMIT_FIX3_BTSR-PLN-002_RETURN_CLAUDE.md` (BTSR-ARCH-022 + 덧붙임 1–4). **받음.**
+- 결과: 제품 가지 `feat/webapp-worker-limit-fix3-20261122` **`09655cd`** — main `5bbe272` 위 커밋 열(6e29ab8 … 09655cd) · 여섯 파일(`app/webapp/worker.py` · `runner.py` · `jobs.py` · `devpush.py` · `tests/fake_codex.py` · `tests/test_worker_face.py`) +763 −99. 화면(`app.html`) 0 · 새 화면 · 단추 0. ARCH: Playwright + cryptography 자리 187 OK 건너뜀 0 · 기본 187 OK skipped 32 (`test_login`이 처음 한 번 지는 일이 PMO에서 있었음 — ARCH 두 실행에서 통과).
+- 됨의 기준 대조(ARCH 반환 · PLN이 diff로 본 것):
+  - **가** ✔ — `worker.py`: 카드 줄을 뺀 출력(`diagnostic`)에 한도 말 + 0이 아닌 종료일 때만 limit · 카드 글 `CARD_USAGE`(한도 안내가 떴을 때만 「멈춤 · 사용량」 한 줄만) · runner가 결과 파일을 먼저 · 카드를 되찍는 `fake_codex`로 네 단계 시험.
+  - **나 · 바** ✔ — `runner.resume_wait_usage()`(맥 재개 명령과 서버가 같은 파일 잠금으로 대기 한 건만) · 맥 한 줄은 합친 뒤(반환서 4번).
+  - **다** ✔ — `CARD_TIMING`: 3분은 CapCut 편집 화면이 뜬 뒤부터 · 도구 20번 · 첫 걸음 '켜고 → 목록 대조 → 편집 화면 확인' · 첫 연결 시간 초과가 되풀이되면 `PERMISSION_STOP` 「맥에 허락 창이 떠 있어요 — 맥 앞에서 한 번 허용해 주세요」.
+  - **마** ✔ — 시작 전 점검(C8 등)은 `_wait_preflight`로 멈춤에 세지 않고 까닭(`gate_note`)을 현황 줄에 띄운 채 다시 봄.
+  - **사 · 차** ✔ — 카드에서 `pgrep` 걷음(Cmd+Q 뒤 바로 결과 줄) · 서버가 `osascript` 정상 종료 한 번 → `CAPCUT_QUIT_WAIT = 30`초 → 아니면 「CapCut이 꺼지지 않았어요 — 맥에서 CapCut을 꺼 주세요」(덮이지 않게) · 꺼지면 이어 감.
+  - **아** ✔ — 멈춘 목소리 · 음악은 다시 하기 전에 저장본(`check_voice` · `check_music`)을 봄 · 6/6이면 됨으로 다음.
+  - **카** ✔ — 실행마다 `runs/…worker.md`(data/ 아래 · 깃헙 안 감) · 개발자 글에 끝 20줄 · 소재 파일 이름은 '소재 N' · 로그 없어도 멈춤 아님.
+  - **자 · 라** — 코드 0(맥 한 줄의 읽기로 봄 · 그 뒤 PLN이 정함).
+- PLN이 직접 본 것(04:14 KST, 제품 저장소 fetch · ls-remote · merge-base · diff · grep만): 원격 main `5bbe272` · 가지 머리 `09655cd` · main이 그 조상(앞으로 감기) · 여섯 파일 · 위 값과 글. 시험은 다시 돌리지 않음.
+- **합치기 — PLN이 정함: RSCH가 차이를 읽고 Playwright 깐 곳에서 시험을 다시 돌리면 합침(IVA 다시 안 함).** 조건: 제품 main `5bbe272` 그대로 · 가지 머리 `09655cd`(앞으로 감기) · push 직전 main 다시 봄(움직였으면 합치지 말고 PLN에) · 건너뜀 0을 봄(Playwright 없으면 32). `test_login`이 처음 한 번 지면 다시 돌려 봄(막는 일 아님 · 두 번 지면 PLN에).
+- **합친 뒤 맥 한 줄:** ARCH 반환서 4번 그대로 — RSCH가 한알께(「코덱스 excutor」에 붙여 넣기만 · 허용은 한알이 맥에서 한 번 · 결정 42). 둘째 출력이 「… 다음 돌기에 이어 갑니다.」면 됨 · 첫 출력의 목소리 이름이 「느긋한 언니」와 다르면 자를 꼭으로(PLN에). 웹앱 다시 켜기는 한알이 이 줄을 넣으시는 것으로 여쭘을 대신함(결정 48 — 기다리는 그 편을 잇기 위한 것).
