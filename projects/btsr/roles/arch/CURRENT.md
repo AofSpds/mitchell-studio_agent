@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "ARCH-018(기획안 사본) · 019(맥 글 덧붙임 3) 받음 · PLN에 반환(21:27) — 합칠 머리 896abae(main e095396 위 커밋 둘)"
-next: "PLN 알림대로. **다음 맥 글 덧붙임이 생기면 함께: 3-2와 개발자 글 전송 켜기를 3회차에서 떼어 '나중에 따로'로**(PLN RSCH 53번 — 그 일만으로 덧붙임 열지 않음). 다음 요청 번호 020"
-waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 다음 결과 · 다음 요청 (be41b33c)"]
+now: "올리기 멎음 고침(한알 11-22 00:01:42 · RSCH 54번 · PLN 1d86231) → PMO에 BTSR-ARCH-020(00:08, 30초 안 나아가면 끊고 한 번 스스로 · 두 번째부터 다시 고름 · 401 한 줄 · 말없는 단추 한 줄). 어림 01:45 합침(PLN에 알림)"
+next: "020 반환 대조 → PLN. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 021"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-020 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
