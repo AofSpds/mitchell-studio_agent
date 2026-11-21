@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "ARCH-011(묶음 6) 받음 · PLN에 반환(17:04) · 4-b → PMO(99626982)에 BTSR-ARCH-012. ARCH-011(묶음 6)은 PMO가 하는 중"
-next: "새 세션: 받음 → 보고 → ARCH-011 반환 대조 → 012(4-b + 8번) → 013(8-2)"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-012 받음 · 반환 (99626982)", "role:mitchell_studio/btsr/pln:묶음 6 반환 받음 (be41b33c)"]
+now: "4-b(ARCH-012) 받음 · PLN에 반환 · 8-2 → PMO(99626982)에 BTSR-ARCH-013 (17:24). 묶음 6 제품 main e512fcd"
+next: "013 반환 대조 → PLN. RSCH S13의 MAC_RUN 맞지 않는 곳 목록이 PLN으로 오면 MAC_RUN_PHASE1.md를 1차 끝 판으로(마지막 묶음과 함께 또는 바로 뒤)"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-013 반환 (99626982)", "role:mitchell_studio/btsr/pln:4-b 반환 받음 · main 합치기 (be41b33c)", "role:mitchell_studio/btsr/pln:RSCH S13 MAC_RUN 목록 (RSCH 33번)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -48,6 +48,9 @@ verifier: "mitchell_studio/btsr/archv"
   4. **RSCH(a97bebab)와 PLN(그때의 ID)에 '승계 끝 · 새 Paseo ID'를 보고**(한알 16:45:26 「승계되면 보고」) · PMO(그때의 ID)에도 새 ARCH ID.
   5. 받음이 확인되면(RSCH · PLN 답) **바로** 위 '남은 차례' 1부터 — ARCH-011 반환은 새 ID로 옴.
   - **묶음 6**: PMO 반환 `btsr/pmo` 5bead7e(가지 `feat/webapp-b6-fix-versions-20261121` e512fcd, 바탕 243cff0 = 지금 main) → ARCH 대조(저장소 전부 · 환경 값 없이 125 OK · 기준 1–14 grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md) 17:04. → PMO(99626982)에 [BTSR-ARCH-012](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-012_REQUEST_CLAUDE.md)(4-b 2.1판 + 8번, 바탕 e512fcd).
+  - 묶음 6 제품 main `e512fcd`(RSCH 17:08 · 요청서 003 32번). PLN 알림 17:10: 캡션 거르기 → ARCH가 정함, 012 덧붙임 1(aed1d11).
+  - **묶음 4-b**: PMO 반환 `btsr/pmo` 4f5b0ed(가지 `feat/webapp-b4b-https-push-20261121` 7127393, 바탕 e512fcd) → ARCH 대조(저장소 전부 · 환경 값 없이 131 OK skip 2 · 따로 깐 cryptography 50.0.2 가상 환경 131 OK · grep) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B4B_BTSR-PLN-002_RETURN_CLAUDE.md). → PMO에 [BTSR-ARCH-013](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-013_REQUEST_CLAUDE.md)(8-2 1.1판 + 결정 38, 바탕 7127393).
+  - RSCH 요청서 003 33번(한알 17:17:28 「맥 테스트 시나리오 작성해주시고 그전까지 만들어주세요」): 맥 시나리오는 RSCH S13 · 4-b → 8-2 차례 그대로 · S13의 MAC_RUN 맞지 않는 곳 목록 → PLN → ARCH가 1차 끝 판으로 고침.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
