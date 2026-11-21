@@ -31,7 +31,7 @@ svg { display:block; }
 .shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
 .shot .ft { font-size:14px; color:#3f3731; margin:8px 4px 0; min-height:66px; }
 .shot .ft b { color:var(--ink); }
-/* 한 화면만 보기: 주소 끝에 #s1 … #s16 */
+/* 한 화면만 보기: 주소 끝에 #s1 … #s17 */
 body:has(.shot:target) .top, body:has(.shot:target) .shot:not(:target) { display:none; }
 body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
 
@@ -297,7 +297,7 @@ ol.scr7 { margin:0; padding-left:22px; display:flex; flex-direction:column; gap:
     <div class="btn line">처음부터 시작</div>
   </div>
   <div class="tabs"><span class="on">Send</span><span>Jobs</span><span>Post</span><span>Manual</span></div></div>
-  <div class="ft"><b>새로 넣은 화면:</b> 한 편을 만드는 동안에는 새로 보내지 못합니다 — Send 단추가 흐려져 눌리지 않습니다. 미첼의 확인을 기다리는 때(화면 4 · 5 · 8 · 10 · 16)에도 막혀 있다가 답하면 풀리고, 개발자에게 넘어간 때(화면 9)에는 다시 켜집니다. 「처음부터 시작」을 누르면 한 번 더 묻고, 지금 편을 멈춘 뒤 올린 것이 그대로 든 Send 화면(화면 15)으로 돌아갑니다.</div>
+  <div class="ft"><b>새로 넣은 화면:</b> 한 편을 만드는 동안에는 새로 보내지 못합니다 — Send 단추가 흐려져 눌리지 않습니다. 미첼의 확인을 기다리는 때(화면 4 · 5 · 8 · 10 · 16 · 17)에도 막혀 있다가 답하면 풀리고, 개발자에게 넘어간 때(화면 9)에는 다시 켜집니다. 「처음부터 시작」을 누르면 한 번 더 묻고, 지금 편을 멈춘 뒤 올린 것이 그대로 든 Send 화면(화면 15)으로 돌아갑니다.</div>
 </div>
 
 <!-- ───────── 7 막힘 ① ───────── -->
@@ -526,6 +526,32 @@ ol.scr7 { margin:0; padding-left:22px; display:flex; flex-direction:column; gap:
   </div>
   <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
   <div class="ft"><b>새로 넣은 화면:</b> 원고를 다 쓰면 미첼이 읽고 고릅니다 — 차례로는 화면 3과 4 사이의 걸음입니다. 「이 원고로 갈게요 →」면 이어서 만들고, 「고칠 점 적기」면 원고를 고쳐 다시 보여 줍니다. 원고 아래 숫자는 글자 수입니다.</div>
+</div>
+
+<!-- ───────── 17 얼굴이 보이는 사진이 없을 때 ───────── -->
+<div class="shot" id="s17">
+  <div class="hd"><span class="no">17</span>얼굴이 보이는 사진이 없을 때</div>
+  <div class="phone"><div class="scr">
+    <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
+    <div class="jt"><span class="ti">디지털펌 · 뒷볼륨</span><span class="gear">옵션 바꾸기</span></div>
+    <div class="nowband w">
+      <div class="l1">확인해 주세요</div>
+      <div class="barw"><div class="barf" style="width:22%"></div></div>
+      <div class="pg"><span class="eh">Intake</span><span>2 / 9</span></div>
+    </div>
+    <div class="card">
+      <div class="thumbs" style="margin-top:0">
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-after"/></svg><i>시술 후</i></div>
+        <div class="th"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-before"/></svg><i>시술 전</i></div>
+        <div class="th none"><i>얼굴 사진<br>없음</i></div>
+      </div>
+      <div style="font-size:18px;font-weight:700;margin-top:8px">얼굴이 보이는 시술 후 사진이 없어요</div>
+      <div class="row"><div class="btn" style="flex:1.9;font-size:16px;padding:13px 6px">AI 얼굴 없이 갈게요 →</div><div class="btn soft" style="font-size:16px;padding:13px 6px">더 보내기</div></div>
+    </div>
+  </div>
+  <div class="tabs"><span>Send</span><span class="on">Jobs<span class="badge">1</span></span><span>Post</span><span>Manual</span></div></div>
+  <div class="ft"><b>새로 넣은 화면:</b> 시술 후 사진이 뒷모습뿐이면 웹앱은 앞모습을 지어내지 않고 미첼에게 알립니다. 「AI 얼굴 없이 갈게요 →」면 AI 얼굴 장면과 AI 표시 없이 만들고 화면 5는 건너뜁니다. 「더 보내기」로 얼굴이 보이는 사진을 더하면 AI 얼굴을 만들어 화면 5에서 확인받습니다. 차례로는 화면 4와 같은 자리(자료를 받은 바로 뒤)입니다.</div>
 </div>
 
 </div>
