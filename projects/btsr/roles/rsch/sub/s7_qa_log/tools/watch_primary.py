@@ -9,7 +9,7 @@ KST = dt.timezone(dt.timedelta(hours=9))
 QUIET = 120
 
 def kind(o):
-    if o.get("isMeta"):
+    if o.get("isMeta") or o.get("isCompactSummary") or o.get("isVisibleInTranscriptOnly"):
         return None
     t = o.get("type")
     if t == "user":

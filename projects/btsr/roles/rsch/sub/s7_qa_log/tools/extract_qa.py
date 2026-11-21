@@ -33,7 +33,7 @@ def main():
             elif t.strftime("%H:%M:%S") < since:
                 continue
             typ = o.get("type")
-            if o.get("isMeta"):
+            if o.get("isMeta") or o.get("isCompactSummary") or o.get("isVisibleInTranscriptOnly"):
                 continue  # 도구가 붙인 글(예: RSCH가 그림 파일을 읽은 [Image: …]) — 한알 말씀 아님
             if typ == "user":
                 c = o.get("message", {}).get("content")
