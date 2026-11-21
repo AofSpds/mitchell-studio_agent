@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 테스트 글 덧붙임 둘(ARCH-016) 받음 · PLN에 반환(19:13) — 합칠 머리 07cd3fc(main f457be8 위 한 커밋). 웹앱 1차 ARCH 차례 모두 끝, 맥 테스트 기다림"
-next: "PLN 알림대로 — 맥 테스트 결과가 오면 고칠 것 설계 → PMO"
-waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 결과 · 다음 요청 (be41b33c)"]
+now: "맥 1회차 시작 · 1-2 멈춤(추적 파일 수정 14개, PLN stash로 이어 감). 맥 테스트 글 덧붙임 2 → PMO에 BTSR-ARCH-017(19:30, 바탕 main 07cd3fc)"
+next: "017 반환 대조(한 파일 · 커밋 하나) → PLN. 맥 테스트 결과 오면 고칠 것 설계"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-017 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
