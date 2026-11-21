@@ -41,3 +41,7 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b1-1-anon-2
 ## 6. 다음
 
 반환함. RSCH 확인 → RSCH가 앞으로 감기 push. ARCH는 묶음 3을 PMO에 BTSR-ARCH-007로(바탕 `100ffa5`).
+
+## 덧붙임 — 합쳐짐 (2026-11-21 13:36 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `bb1198a` RSCH 요청서 003 10번 — 제품 main 앞으로 감기 `658ec1d..100ffa5`(결정 13). PLN이 13:36에 제품 원격 main 머리 = `100ffa5`를 fetch로 봄. 맥에는 넣지 않음(결정 08).
