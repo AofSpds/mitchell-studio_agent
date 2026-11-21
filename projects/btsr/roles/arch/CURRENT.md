@@ -2,10 +2,10 @@
 role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
-state: "HANDOFF"
-updated: "2026-11-21T13:56:27+09:00"
+state: "ACTIVE"
+updated: "2026-11-21T13:58:28+09:00"
 base_commit: "fa2b7aa"
-now: "승계 중 — 한알 13:55:17 (RSCH 전함). 아래 넘김 칸"
+now: "승계 받음 (새 세션 Paseo d9520b95, 13:58). PMO의 ARCH-008 반환 기다리는 사이 묶음 4-a 설계"
 next: "PMO의 ARCH-008 반환 대조 → PLN에. 그사이 묶음 4-a · 4-b(https 맥 손일 + 하지 말 것 한 장) · 묶음 6(R6.4) 설계"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-008 반환", "owner:컴퓨터 유즈 범위 승인(설계 5번, PLN → RSCH)"]
 owner_wait: "-"
@@ -22,13 +22,15 @@ verifier: "mitchell_studio/btsr/archv"
 | 상위 | PLN (`MITCHELL_STUDIO/BTSR/PLN`). 역할 트리 PLN > RSCH · ARCH > PMO (규칙 5) |
 | 아래 | PMO. 요청은 바로 아래 역할로만 (규칙 15). PMO 결과를 받을 때 PMOV를 ARCH가 엶 (규칙 7) |
 | 짝 검증자 | ARCHV (비상설, 규칙 7) — 아직 없음 |
-| PRIMARY | `MITCHELL_STUDIO/BTSR/ARCH` — 2026-11-19 22:28 KST 열림(Paseo createdAt 13:28:24 UTC). Paseo 에이전트 ID `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Paseo 작업 공간 ID `wks_6dc6b9d13807b202` (list_agents·list_workspaces에서 제목으로 찾음) · Claude 세션 ID `df7a3d93-e2ee-4c76-8467-16606825f451` (transcript 폴더 `C--Users-ms1pk-dev-mitchell-studio-agent-worktrees-btsr-arch`의 파일 중 첫 user 줄이 여는 글 message-id 1248a149인 것) · 모델 Opus 5.5 (`claude-opus-5-5`) · high · 실행기 Paseo · claude-google. 연 이: RSCH의 SUB(S1_OPEN_ROLES, Paseo 5641fdf4) |
+| PRIMARY | `MITCHELL_STUDIO/BTSR/ARCH` — 2026-11-21 13:57 KST 승계로 열림(Paseo createdAt 04:57:40 UTC). Paseo 에이전트 ID `d9520b95-4853-46b9-b04b-96199dddc95d` · Paseo 작업 공간 ID `wks_6dc6b9d13807b202` (list_agents·list_workspaces에서 제목으로 찾음) · Claude 세션 ID `384694fd-f946-4121-9161-77042e392294` (`~/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent-worktrees-btsr-arch/`의 파일 중 첫 user 줄이 여는 글 message-id a0707d68인 것) · 모델 Opus 5.5 (`claude-opus-5-5`) · high · 실행기 Paseo · claude(이름표 claude-naver). 연 이: 옛 ARCH 9d298a54(한알 13:55:17 승계 말씀) |
 | 작업 사본 | `C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-arch` · 가지 `btsr/arch` (main fa2b7aa에서). 일과 커밋은 여기서만 (규칙 19). main 합치기는 스스로 하지 않음 — 누가 정하는지 아직 말씀 없음 |
 | 작업 칸 | `design/` (규칙 20) — 주제 목록은 [INDEX](INDEX.md) |
 | 게시판 | 없음 — `board/`가 아직 없어 요청서·받음을 작업 칸 주제 폴더에 둠 (PLN·RSCH와 같은 꼴, 규칙 16과 다름 — 숨기지 않음) |
-| 앞 세션 | Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
+| 앞 세션 | Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · Claude `df7a3d93-e2ee-4c76-8467-16606825f451` (`~/.claude-max/projects/…`) · claude-google · 2026-11-19 22:28 ~ 2026-11-21 13:56 KST (CLOSED, 넘긴 커밋 75a8ac5). 그 앞: Paseo `c9827256-268c-4e58-8b69-1f48229a0dc8` · Claude `0863506d-d9d7-47c5-a1cc-b3b64aaadafd` (CLOSED, 이 저장소의 옛 꼴로 자리를 만듦). 그 파일은 `archive/`로 옮김 — [archive/MOVES.tsv](archive/MOVES.tsv) |
 
 ## 넘김 (2026-11-21 13:56 KST — 옛 세션 → 새 세션)
+
+- **받음** (13:58 KST, 새 세션 d9520b95): 아래 1–5 차례로 함. 새 PLN Paseo ID `a6fd0155-25ef-4bc7-91b0-394849d6776e`(옛 071c15f3 CLOSED, `btsr/pln` 1eb6c95 — 옛 ARCH가 전함). PMO 새 ID는 PMO 알림을 기다림.
 
 - **까닭**: 한알 13:55:17 「네 일단 그전에 Pln arch pmo 모두 저장하고 승계하도록 하세요」 (RSCH 14d04ad1이 전함, 원문 에이전트 저장소 main `b9c976b` `owner/utterances/2026-11-21.md`). 새 세션 제공자는 Paseo `claude`(이름표 claude-naver — 한알 13:24:06 · 13:35:34), 모델 · 생각 수준 그대로(Opus 5.5 · high), 제목 `MITCHELL_STUDIO/BTSR/ARCH`.
 - **옛 세션**: Paseo `9d298a54-66dd-4bdd-8617-78f6c234c7ce` · 작업 공간 `wks_6dc6b9d13807b202` · Claude 세션 `df7a3d93-e2ee-4c76-8467-16606825f451` · claude-google. 넘긴 커밋 = 이 CURRENT가 든 커밋. 멈춘 곳: 묶음 5 + 3-2를 PMO에 맡긴 뒤(ARCH-008), 묶음 4 · 6 설계 전 — 하다 만 파일 없음.
