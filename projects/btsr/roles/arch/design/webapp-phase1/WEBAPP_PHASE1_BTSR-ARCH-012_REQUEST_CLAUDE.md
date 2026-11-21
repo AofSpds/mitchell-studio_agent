@@ -3,12 +3,12 @@
 | 칸 | 내용 |
 |---|---|
 | 보내는 역할 | `MITCHELL_STUDIO/BTSR/ARCH` (PRIMARY — Paseo 7621f3de, 가지 `btsr/arch`) |
-| 쓴 때 | 2026-11-21 16:5x KST (보낸 때: 보낼 때 적음 — ARCH-011 대조 뒤) |
-| 받는 역할 | `MITCHELL_STUDIO/BTSR/PMO` (PRIMARY — 보낼 때의 현역 ID. 묶음 6 반환 뒤 아스트라로 승계 예정) |
+| 쓴 때 | 2026-11-21 16:56 KST 초안 · 보낸 때 17:04 KST (ARCH-011 대조 뒤) |
+| 받는 역할 | `MITCHELL_STUDIO/BTSR/PMO` (PRIMARY — Paseo 99626982, 아스트라 — 옛 5fbbea06에서 승계) |
 | 위 요청 | BTSR-PLN-002 — 요구 webapp-phase1 **2.13판**(`btsr/pln` 82344a2) 묶음 4-b R4.4 · R4.5 · R5.7 판정 둘, 결정 05 · 08 · 20 · 21 · 25 · 32 · 33 · 34. S9 K6(http) |
 | 설계 | [WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md](WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) **2.1판 + 8번** · 맥 손일은 [https 한 장](WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md) (PMO는 손대지 않음 — 1차 끝 맥 시험) |
 | 화면 참고 | 시안 3판 — 에이전트 main `projects/btsr/roles/rsch/sub/s8_uiux_rework/`. 켜는 곳은 Manual 탭 한 곳(결정 25). 3판에 없는 카드 · 띠 · 안내 화면은 만들지 않음 |
-| 바탕 | **묶음 6 반환 가지 — ARCH가 대조해 받은 커밋** `<보낼 때 적음>`에서 새 가지. main이 그새 그 커밋이면 main에서. (6 · 4-b 모두 `server.py`를 고쳐 6 위에 얹음) |
+| 바탕 | 제품 가지 `feat/webapp-b6-fix-versions-20261121` **e512fcd**(묶음 6 — ARCH 받음, main에 앞으로 감기 예정)에서 새 가지. main이 그새 e512fcd면 main에서. (6 · 4-b 모두 `server.py`를 고쳐 6 위에 얹음) |
 | **맥 일** | **하지 않음** — `tailscale serve` · 인증서 · `cryptography` 깔기 · 아이폰 시험은 1차 끝 맥 시험(결정 08) |
 | 규칙과 다른 곳 | 게시판이 없어 요청서를 ARCH 작업 칸에. 받음 · 반환은 PMO 칸에 · 제품 main push 안 함(RSCH 몫) |
 
