@@ -7,8 +7,8 @@ updated: "2026-11-21T13:59+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 3072e7e"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
 next: "ARCH 반환이 오면 요구 1.8판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/rsch (a97bebab):요청서 003 15번 — 시안 3판 중간점검 뒤 확정"]
-owner_wait: "2 — 묶음 4-a 낱말 · 진행 기록 자리(WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md) · 4-b 알림 글 · cryptography(WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md), 모두 권고 1"
+waiting_for: ["role:mitchell_studio/btsr/arch (d9520b95):4-a · 4-b · 6 설계를 요구 2판으로 다시 잡음", "owner(via rsch a97bebab):16번부터 — Send 막는 때 · 4-b 둘 · [안] 넷"]
+owner_wait: "RSCH가 하나씩 여쭘 — Send 막는 때 · 4-b 둘(WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md) · [안] 넷 (요구 2판 4번 끝). 4-a 낱말 장은 결정 22로 쓰지 않음"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
 verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
@@ -46,6 +46,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **R8.4 판정 → 요구 1.9판** (14:42) — ARCH(74edd67)가 '고르는 칸을 1차에 만들지 않음'으로 읽어도 되는지 물음 → 받음, 조건: 둘째 템플릿 건에 고르는 칸을 반드시 함께. ARCH 4-a 1.1판 고칠 것(영어로 정해지면 3번 표 · 기준 6 뺌)도 봄.
 - **묶음 6 설계 1판 받음** (ARCH `5064bc3`, 바탕 3072e7e) — R6.1–R6.5 대조, 그대로 받음: 고칠 점 → ④를 다음 판으로 차례표에(손 인계 ④ 없앰) · 판마다 새 이름 캡컷 프로젝트(복제는 승인 범위 밖이라 안 씀 — 결정 15 안) · 완성 = 승인 + 규격 · 규격 다른 판은 의견 + 다시 뽑기 · 저장은 승인한 규격 맞는 판(지금 가장 새 판을 쓰는 결함 고침). [안] 둘(고치기 3번 미16 · 판 이름 v1)은 구현 전 RSCH가 보여 드림 — (가) · (나) · 4-b 뒤에. PMO에는 4-a 반환 뒤.
 - **한알 말씀 다섯 — 아직 확정 아님** (RSCH 요청서 003 14번, main `b45f67e`, 14:56 받음; 원문 14:41:51–14:52:33) — 쓰는 사람 = 미첼 · 화면 속 설명 걷기(? 표 툴팁) · 이름은 영어 그대로(결정 16 · R1.6 거둠 예정) · 작업 목록 없음 · 한 번에 하나 · 프로그레스 바 · 알림 설명 화면 없음. 시안 3판(RSCH SUB S8) → 한알 중간점검 → 15번으로 확정. **그때까지 4-a · 4-b · 6 구현 요청 보류** — ARCH에 알림. 15번이 오면 결정 20~ · 요구 2판(R1.6 · R4.1–R4.3 · R5.3 · 4-b 화면 · '운영자' → '미첼').
+- **15번 받음 — 중간점검 끝, 시안 3판으로 확정** (RSCH 요청서 003 15번, main `ed67f92`; 한알 15:08:02 · 15:12:00 「네 일단 1차는 그냥 갑시다.」) → **결정 20–26 · 요구 2판** (15:21): 20 미첼 · 21 현황과 단추만(? 표) · 22 영어 그대로(결정 16 거둠) · 23 한 번에 한 편 · 만드는 중 Send 막음 · 24 한 줄 + 바만 · 25 알림 설명 화면 없음 · 26 Post 탭에서 다시 봄. 보류 풀림 — ARCH에 알림(4-a · 4-b · 6을 2판으로 다시 잡기). 결정 17의 '작업 화면에 늘 보임'은 24로 바뀐 것으로 읽음 — RSCH에 짚음. 열린 것 다섯은 요구 4번 끝.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
@@ -90,7 +91,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 1-1 반환 받음 → RSCH에 반환** (ARCH `2eafcf7`, 13:35) — 제품 가지 `feat/webapp-b1-1-anon-20261121` `100ffa5`, R1.4 · R1.5. RSCH 확인되면 main 합침(조건 main `658ec1d` · 가지 `100ffa5`). [WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 묶음 3 → PMO BTSR-ARCH-007.
 - **묶음 1-1 합쳐짐 — 제품 main `100ffa5`** (RSCH 확인 · push, main `bb1198a` 요청서 10번, 13:36 PLN이 봄).
 - **한알이 이 창에서 하신 말씀**은 [PLN_OWNER_UTTERANCES_CLAUDE.md](PLN_OWNER_UTTERANCES_CLAUDE.md)에 원문 그대로(13:35:53 「저장하세요 압축합니다.」).
-- **일하는 요령(배운 것):** 파일을 고치는 파이썬 heredoc 뒤에는 `|| exit 1`을 붙여 실패하면 커밋까지 가지 않게 한다(11fef29 · c3fdf49에서 반쪽 커밋이 나감). heredoc 안에 윈도 경로를 역슬래시로 쓰지 않는다(유니코드 오류). 한국 시각은 PowerShell ConvertTimeBySystemTimeZoneId로. 제품 저장소는 C:/Users/ms1pk/dev/mitchell-studio에서 fetch · ls-remote · merge-base만(작업 사본은 안 건드림).
+- **일하는 요령(배운 것):** 파일을 고치는 파이썬 heredoc 뒤에는 `|| exit 1`을 붙여 실패하면 커밋까지 가지 않게 한다(11fef29 · c3fdf49에서 반쪽 커밋이 나감). heredoc 안에 윈도 경로를 역슬래시로 쓰지 않는다(유니코드 오류). 낱말을 통째로 바꿀 때는 조사를 본다(운영자가 → 미첼이 — 받침이 달라짐). 한국 시각은 PowerShell ConvertTimeBySystemTimeZoneId로. 제품 저장소는 C:/Users/ms1pk/dev/mitchell-studio에서 fetch · ls-remote · merge-base만(작업 사본은 안 건드림).
 - **묶음 3 반환 받음 → RSCH에 반환** (ARCH `004d5cc`, 13:45) — 제품 가지 `feat/webapp-b3-intake-20261121` `32b55dc`, R3.1–R3.6. RSCH 확인되면 main 합침(조건 main `100ffa5` · 가지 `32b55dc`). 합치면 main의 숨은 결함(같은 분 두 번째 묶음 400) 고침도 들어감. [WEBAPP_PHASE1_B3_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md)
 - **묶음 3 합쳐짐 — 제품 main `32b55dc`** (RSCH 확인 · push, main `fc6ebb9` 요청서 11번).
 - **묶음 5 + 3-2 설계 1판 → PMO BTSR-ARCH-008** (ARCH `b5d64f2`, 바탕 main `32b55dc`, 맥 일 없음). 컴퓨터 유즈 사전 승인(AAA 43)을 한알께 여쭘 → [WEBAPP_PHASE1_CU_ASK_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_CU_ASK_CLAUDE.md).
