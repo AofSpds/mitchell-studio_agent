@@ -1,0 +1,47 @@
+{
+  "materials": [
+    {
+      "file": "after-01.jpg",
+      "kind": "after",
+      "sure": true
+    },
+    {
+      "file": "after-02.jpg",
+      "kind": "after",
+      "sure": true
+    },
+    {
+      "file": "before-01.jpg",
+      "kind": "before",
+      "sure": true
+    },
+    {
+      "file": "process.mp4",
+      "kind": "other",
+      "sure": true
+    }
+  ],
+  "facts": {
+    "treatment": {
+      "value": "디지털펌",
+      "from": "request",
+      "sure": true
+    },
+    "change": {
+      "value": "뒷볼륨 강조",
+      "from": "request",
+      "sure": true
+    },
+    "model_age": {
+      "value": "50대",
+      "from": "request",
+      "sure": true
+    }
+  },
+  "ai_face": {
+    "have": false,
+    "plan": "make"
+  },
+  "missing": [],
+  "missing_ok": []
+}
