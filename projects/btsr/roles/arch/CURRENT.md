@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "022(고침 3 + 덧붙임 1–4) 반환함 04:12(제품 가지 09655cd · Playwright 187 OK 건너뜀 0) → RSCH 합침 기다림 → 맥 한 줄(반환서 4번: 새 판 · resume_wait_usage · project_picks · 라 읽기). 제품 main 5bbe272"
-next: "맥 한 줄 결과(라 읽기 셋 · tone_type) → PLN이 고침 4 정함 · allow는 한알께. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023 · PMO 512aef6d"
-waiting_for: ["role:mitchell_studio/btsr/rsch:022 제품 main 합침 (09655cd)"]
+now: "022 반환함(09655cd) → RSCH 합침 중. PMO(512aef6d)에 BTSR-ARCH-023(고침 3-1 — Terra 요령 두 줄, pgrep) 맡김 · 04:55 KST쯤 합침 어림. 맥 한 줄(022 반환서 4번)은 3-1까지 합친 뒤 한 번에. 제품 main 5bbe272"
+next: "023 반환 대조(diff 한 파일 2줄 · grep pgrep · 기본 회귀) → PLN. 그 뒤 맥 한 줄 결과(라 읽기 셋 · tone_type) → PLN이 고침 4. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 024 · PMO 512aef6d"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-023 반환 (512aef6d)", "role:mitchell_studio/btsr/rsch:022 제품 main 합침 (09655cd)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
