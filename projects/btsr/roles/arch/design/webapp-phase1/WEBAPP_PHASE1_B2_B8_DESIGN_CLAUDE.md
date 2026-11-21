@@ -6,7 +6,7 @@
 | 받은 요청 | BTSR-PLN-002 (요구 webapp-phase1 1.3판, 가지 `btsr/pln` `48bff6b`) — 묶음 2 R2.1–R2.5 · 묶음 8 R8.1–R8.3 · 요청 3번 1 · 3 |
 | 바탕 | RSCH 기획안 초안(main `45f8b7b`) 묶음 2(:188-198) · 묶음 8(:200-205) · 3 · 3-2 · 5 · 6의 서버 쪽 메모, 템1–템5, 다-요24 · 다-템2 · 다-템4 |
 | 본 코드 | 제품 `origin/fix/worker-model-sol-20261121` `3495f7e` (읽기만). 묶음 1(BTSR-ARCH-002) 가지 위에 얹음 |
-| 맡김 | PMO가 BTSR-ARCH-002를 반환한 뒤 BTSR-ARCH-004로 |
+| 맡김 | PMO에 [BTSR-ARCH-004](WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md) |
 
 ## 0. 지금 (코드에서 본 것)
 
