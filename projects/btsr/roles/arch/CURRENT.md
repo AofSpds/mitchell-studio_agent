@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T14:39:00+09:00"
 base_commit: "fa2b7aa"
-now: "묶음 6 설계 1판(14:39). 4-a는 한알 답(R1.6 다시 여쭘 · 진행 기록 자리) 전까지 보류. 묶음 5 + 3-2는 제품 main 3072e7e"
-next: "4-a 낱말 답 뒤 PMO에 ARCH-009(4-a + 008 남은 것 1 · 2, 바탕 main 3072e7e) → 반환 대조 → 4-b · 6 차례로 PMO에. 묶음 6 [안](3번 · v1) 은 PLN → RSCH가 보여 드림"
-waiting_for: ["owner:묶음 4-a 낱말 [안] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
+now: "**구현 요청 보류**(4-a · 4-b · 6 — RSCH 요청서 003 14번, PLN 14:5x). 한알 말씀 다섯(미첼 · 설명 걷기 · 영어 그대로 · 목록 없음 + 프로그레스 바 · 알림 설명 없음) 확정 기다림. 닿는 곳 메모만 씀"
+next: "요구 2판(PLN) 받으면 4-a · 4-b · 6 설계를 고쳐(메모 WEBAPP_PHASE1_HOLD_003-14_IMPACT_CLAUDE.md) PLN에 → PLN이 풀면 ARCH-009부터 PMO에"
+waiting_for: ["role:mitchell_studio/btsr/pln:요구 2판 (한알 말씀 다섯 확정 — RSCH 요청서 003 15번)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -71,6 +71,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 5 + 3-2 반환 PLN 받음(`btsr/pln` cb548e0) → **제품 main `3072e7e`**(RSCH push, 에이전트 main d766ed3). 남은 것 1 · 2는 ARCH-009에(PLN 받음).
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
+  - **보류**(PLN, `btsr/pln` ca4233f · RSCH 요청서 003 14번 main b45f67e): 4-a · 4-b · 6 구현 요청(ARCH → PMO) 보내지 않음. 한알 말씀 다섯(확정 아님 — 시안 3판 → 중간점검 → 15번 → 요구 2판). 설계 읽기 · 준비만. [닿는 곳 메모](design/webapp-phase1/WEBAPP_PHASE1_HOLD_003-14_IMPACT_CLAUDE.md).
   - PLN 14:4x(`btsr/pln` 0be8934, 요구 1.9판): R8.4 — 1차는 고르는 칸 안 만듦 · 작업 화면 "템플릿 ○ · n판"은 넣음. **조건: 둘째 템플릿을 들이는 건에 고르는 칸을 함께, 기준에 '둘이면 나타나고 고른 id가 작업에 박힘'** (잊지 말 것). 묶음 6 설계 1판 PLN 받음 — [안] 둘은 RSCH가 (가)(나) · 4-b 뒤에.
   - 묶음 4-a 설계 PLN 받음(`btsr/pln` f1fc16f — 낱말 물음 WEBAPP_PHASE1_B4A_WORDS_ASK_CLAUDE.md를 RSCH a97bebab에, 권고 1 · 1).
   - 묶음 4-b: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) + 한알께 [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md) (14:10) — https는 `tailscale serve`(Funnel 안 씀) · 서버는 프록시 뒤 손님 주소(X-Forwarded-For, 이 맥에서 온 것만 믿음) · PIN 잠금 주소별 · Secure 쿠키 · Web Push(`cryptography` 하나, RFC 8291 시험 값) · 알림 글에 손님 정보 없음. 4-a 반환 뒤 PMO에. 맥 손일은 1차 끝 맥 시험. 남은 물음: 알릴 일 셋 글 [안] · 맥에 `cryptography` 까는 것 → PLN 받음 · 한알께 여쭘(`btsr/pln` 9038754 WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md, 권고 1 · 1, RSCH a97bebab로).
