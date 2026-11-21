@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T03:43:05+09:00"
+updated: "2026-11-21T12:50:17+09:00"
 base_commit: "fa2b7aa"
-now: "PLN-001 반환함(작업자 모델 — 제품 가지 fix/worker-model-sol-20261121 3495f7e). PLN-002 묶음 1 설계 → PMO에 BTSR-ARCH-002"
-next: "묶음 2 + 8 설계(서버가 일을 시작시키는 구조 · 템플릿 자리). PMO의 ARCH-002 반환을 기준 1–7과 대조 → PLN에"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-002_webapp-b1-suggest-words 반환", "role:mitchell_studio/btsr/pln:묶음 1 R1.3 판정 확인 · 미16 두 뜻"]
+now: "PLN-002 묶음 2 + 8 설계 1판 씀(차례표 + 길마다 일꾼 · 맥 Claude 명령줄로 접수 · 원고 · templates/<id>/r<N>.md). PMO는 묶음 1(ARCH-002) 구현 중"
+next: "PMO의 ARCH-002 반환 대조 → PLN에 · 그 뒤 PMO에 BTSR-ARCH-003(묶음 2 + 8). 묶음 3 설계"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-002 반환", "role:mitchell_studio/btsr/pln:묶음 2에 ④ 편집 넣을지"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -30,6 +30,8 @@ verifier: "mitchell_studio/btsr/archv"
 
 ## 지금
 
-- **BTSR-PLN-001 반환함** — [반환](design/worker-model/WORKER_MODEL_BTSR-PLN-001_RETURN_CLAUDE.md). PMO 반환(`btsr/pmo` e13f82f)을 기준 1–7과 대조해 받음 — 제품 가지 `fix/worker-model-sol-20261121` `3495f7e`, ARCH가 검색·시험(6/6)을 다시 돌림. 제품 main 합치기 안 함(누가 정하는지 말씀 없음).
-- **BTSR-PLN-002** (받음 03:34) — 묶음 1 설계 1판 [WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md](design/webapp-phase1/WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md) → PMO에 [BTSR-ARCH-002](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-002_REQUEST_CLAUDE.md). PLN에 알릴 것 둘(R1.3은 묶음 2·5·6 뒤에 다 채워짐 · 초안 미16이 두 뜻) — 설계 7번.
-- 다음 설계: 묶음 2 + 8.
+- **BTSR-PLN-001 반환함** — [반환](design/worker-model/WORKER_MODEL_BTSR-PLN-001_RETURN_CLAUDE.md). PLN 받음(R01–R07 대조). 제품 main 합치기는 PLN이 한알께 여쭘 — 답 전까지 합치지 않음.
+- **BTSR-PLN-002** — 요구 1.1판(`btsr/pln` 065e0f4): 묶음 1 R1.3은 '손 인계 밖 개발 말 0 + 남은 말 목록'으로 받음(전체는 묶음 6 반환 때), 미16은 묶음 6 = 고치기 · 재계획 횟수.
+  - 묶음 1: [설계](design/webapp-phase1/WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md) → PMO [BTSR-ARCH-002](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-002_REQUEST_CLAUDE.md) — PMO 받음(`btsr/pmo` ea8da0d), 사용량 한도로 멈췄다가 12:47 다시 감.
+  - 묶음 2 + 8: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md) — PMO에는 ARCH-002 반환 뒤(일하는 중에 보내면 그 차례에 끼어듦). PLN께 하나 여쭘(④ 편집도 서버가 시작시킬지 — 설계 7번).
+- 한알 12:46:31 「재개 하세요. 다른 세션도 재개시키시구요.」(RSCH 전함) — 멈춘 곳(묶음 2 + 8 설계)부터 이어 감.

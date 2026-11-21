@@ -14,4 +14,4 @@
 | 건 | 무엇 | 지금 |
 |---|---|---|
 | BTSR-PLN-001_worker-model-sol | 작업자 모델 설정 한 곳 (요구 R01–R07) | PMO 반환(btsr/pmo e13f82f) 받음 → PLN에 반환함. 끝 (제품 main 합치기는 PLN 몫) |
-| BTSR-PLN-002_webapp-phase1-capcut | 웹앱 1차 캡컷 길 (요구 1판). 차례 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → (4-b) → 6, 7은 한알 답 뒤 | 묶음 1: 설계 1판 → PMO에 BTSR-ARCH-002. 다음 설계: 묶음 2 + 8 |
+| BTSR-PLN-002_webapp-phase1-capcut | 웹앱 1차 캡컷 길 (요구 1판). 차례 1 → 2 + 8 → 3 → 5 + 3-2 → 4-a → (4-b) → 6, 7은 한알 답 뒤 | 묶음 1: 설계 1판 → PMO에 BTSR-ARCH-002 (PMO 받음 ea8da0d). 묶음 2 + 8: 설계 1판 — PMO에는 ARCH-002 반환 뒤 BTSR-ARCH-003. PLN께 ④ 편집 넣을지 여쭘. 다음 설계: 묶음 3 |
