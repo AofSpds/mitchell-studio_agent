@@ -47,3 +47,8 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b2-b8-runne
 ## 6. 다음
 
 반환함. RSCH 확인 → RSCH가 앞으로 감기 push(위 조건). 그 밖은 스스로 시작하지 않음(AAA 규칙 18). ARCH는 ARCH-006(R1.4 · R1.5, 바탕 `658ec1d`) · 묶음 3 설계로 이어 감.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 13:26 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `2e79e33` RSCH 요청서 003 9번 — 제품 main 앞으로 감기 `6cfbc5f..658ec1d`(결정 13). PLN이 13:26에 제품 원격 main 머리 = `658ec1d`를 fetch로 봄.
+- 맥에는 넣지 않음(결정 08).
