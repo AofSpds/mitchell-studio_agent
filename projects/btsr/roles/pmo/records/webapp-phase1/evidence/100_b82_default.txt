@@ -1,0 +1,6 @@
+git archive 94d4522 (full repository)
+Python 3.13.14 | cryptography absent
+python -m unittest discover -s app/webapp/tests -v
+PYTHONUTF8, PYTHONIOENCODING, PYTHONPATH unset
+Ran 135 tests in 217.413s
+OK (skipped=2)
