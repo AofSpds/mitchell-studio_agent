@@ -7,7 +7,7 @@ updated: "2026-11-21T16:19:00+09:00"
 base_commit: "fa2b7aa"
 now: "묶음 8-2 설계 1판 + 템플릿 r2 바뀌는 글 한 장(16:19) → PLN. ARCH-010 반환 기다림. 한알 16:05:36 — 지금 일이 끝나면 새 세션(넘김 칸 씀)"
 next: "ARCH-010 반환 대조 → PLN에 → 6(011) → 4-b(012). 묶음 8-2 설계(템플릿 r2 바뀌는 글 한 장 · 다시 만들기 횟수 한 수) — 다11 · 다14 답 뒤. 요청 번호 다음 011"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-010 반환 (5fbbea06)", "owner:템플릿 r2 한 장 · 다시 만들기 2번 [안] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-010 반환 (5fbbea06)"] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -76,6 +76,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
   - **묶음 4-a**: PMO 반환 `btsr/pmo` 7f63e44(가지 `feat/webapp-b4a-one-job-bar-20261121` ed11f5a) → ARCH 대조(저장소 전부 · 환경 값 없이 92 OK · grep 기준 1–12) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B4A_BTSR-PLN-002_RETURN_CLAUDE.md) 15:55. PMO 물음 셋: ① ? 표 '3번 더'는 값에서 세는 그대로(횟수 맞춤은 8-2) ② 빈 Jobs 「⚙ 기본 옵션」 남김 ③ 가진 사진 올리기는 4-a-2에서 걷음.
+  - 요구 2.12판(`btsr/pln` 6bc476e, 결정 38 — 한알 16:25:57 「권고안 승인합니다.」): 다시 만들기 2번까지 · r2 다섯 줄 안대로(⑤ 음악은 맥 시험에서 확인) → 8-2 한 장 답 받음, 4-a-2 · 6 · 4-b 뒤 PMO(013). PLN 기획안 초안 1판(`requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md`) — 접수 '확인할 것만 묻기 = 만듦'이 틀림(main은 아직 사실도 물음, 4-a-2에서) 짚어 드림.
   - 요구 2.11판(`btsr/pln` 157fad8, RSCH 24번 · 결정 37 — 한알 16:14:32 앞모습 새로 그리기를 물리심): R3.7 얼굴 보이는 시술 후 사진이 없으면 알리고 확인 받아 AI 얼굴 없이 · R32.5 [안] 얼굴 바탕 = 얼굴 보이는 시술 후 사진. 다14 둘 일 없어짐 → **[8-2 설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B82_DESIGN_CLAUDE.md) · [r2 한 장](design/webapp-phase1/WEBAPP_PHASE1_B82_TEMPLATE_R2_SHEET_CLAUDE.md)** 씀.
   - RSCH 요청서 003 23번(main 1b2daf8): 한알 16:05:36 세션 바꾸심 예고 · PMO는 아스트라 · IVA 새로 → PMO(5fbbea06)에 말씀 그대로 전함(규칙 15) · 넘김 칸 씀. 결정 36 · 요구 2.10판 R82.3: 시술 과정 영상은 1차에서 쓰지 않음(한알 16:06:41) → 8-2.
   - 4-a 반환 PLN 받음(`btsr/pln` 398419c) → **제품 main `ed11f5a`**(RSCH push, 에이전트 main 41416d5 요청서 22번 · PLN 16:02 ls-remote) — ARCH-010 바탕 = 지금 main. PMO 물음 셋 판단 받음(「⚙ 기본 옵션」은 RSCH가 한알께 보여 드릴지 봄). 4-a-2 1.1판 고친 줄 받음 — ARCH-010 그대로.
