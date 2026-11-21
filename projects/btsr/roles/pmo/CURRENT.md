@@ -3,10 +3,10 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T01:51:53+09:00"
+updated: "2026-11-22T02:06:21+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-021 받음 · 서버 연결 종료, 새로 고침 뒤 복구, 진행 막대와 연결 안내"
-next: "실제 시험 서버와 390px 화면에서 네 기준 확인 뒤 ARCH 반환"
+now: "021 덧붙임 1 받음 · 같은 가지에서 Jobs 추가 전송·이름 겹침·Manual·누름 영역 구현"
+next: "390px Chrome·WebKit에서 5–8도 확인하고 1–8 최종 회귀 후 한 번에 반환"
 waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-021 덧붙임 1 | ARCH (7621f3de) | btsr/arch b7bdd8c | 2026-11-22 02:06:21 KST | 받음 · Jobs·같은 이름·Manual·44px, 1–8 함께 반환 |
 | BTSR-ARCH-021 | ARCH (7621f3de) | btsr/arch 792cd07 | 2026-11-22 01:51:53 KST | 받음 · 휴대폰 올리기 고침 2 |
 | BTSR-ARCH-020 | ARCH (7621f3de) | btsr/arch 3fa3d5c | 2026-11-22 00:10:02 KST | 반환 00:26 KST · main 896abae → 구현 ce56711 → 시험 8b0d084 · 390px 12개, 전체 기본 147 통과/2 건너뜀 · 암호화 149/149 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL_RETURN_CODEX.md) · ARCH 수용(949b704), main 8b0d084 |
 | BTSR-ARCH-019 | ARCH (7621f3de) | btsr/arch f9dbf31 | 2026-11-21 21:19:08 KST | 반환 21:24 KST · fe1e241 → 896abae · 맥 글 한 파일 · 전체 137/137 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD3_RETURN_CODEX.md) · ARCH 수용(2f1c78a), main 896abae |
