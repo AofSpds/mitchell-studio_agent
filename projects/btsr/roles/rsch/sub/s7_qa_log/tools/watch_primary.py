@@ -4,7 +4,7 @@
 쓰임: python -I -u watch_primary.py
 """
 import json, os, sys, time, datetime as dt
-TR = "C:/Users/ms1pk/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/bb014593-1f51-4b36-aeac-c7a72356e466.jsonl"
+TR = "C:/Users/ms1pk/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/9281f0ee-13b1-464d-a5e0-cdf4f156a14e.jsonl"
 KST = dt.timezone(dt.timedelta(hours=9))
 QUIET = 120
 
