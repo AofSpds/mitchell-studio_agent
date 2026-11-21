@@ -71,6 +71,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 4-a 반환 받음 → RSCH에 반환** (ARCH `a6d7f34`, 15:58) — 제품 가지 `feat/webapp-b4a-one-job-bar-20261121` `ed11f5a`, R1.6 · R1.7 · R2.3 · R2.5 · R4.1–R4.3 · R8.4 대조. RSCH 확인되면 main 합침(조건 main `3072e7e` · 가지 `ed11f5a`). [WEBAPP_PHASE1_B4A_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4A_RETURN_CLAUDE.md). 빈 Jobs 「⚙ 기본 옵션」 남음 — RSCH가 보아 달라 함. 4-a-2 고친 줄(1.1판 — 따로 둔 index · commit-tree -p origin/main · 파일 이름은 작업 id) 받음 → ARCH-010 PMO에 감.
 - **묶음 4-a 합쳐짐 — 제품 main `ed11f5a`** (RSCH 확인 · push, main `41416d5` 요청서 22번, 16:02 PLN이 봄). 맥에는 안 넣음. 다11 · 다14는 RSCH가 여쭘.
 - **23번 받음** (RSCH main `1b2daf8`, 16:09) → 결정 36 · 요구 2.10판: 시술 과정 영상은 1차에서 쓰지 않음(R82.3). 한알 16:05:36 — PLN · ARCH · PMO는 지금 작업이 끝나면 새 세션으로(한알이 바꾸심) · PMO는 아스트라 · IVA 신설 → ★ 넘김 칸을 새로 씀 · ARCH에 전함(PMO에는 ARCH가 — 규칙 15).
+- **ARCH가 PMO에 전함 · ARCH 넘김 칸 씀** (`btsr/arch` `72449a3`) — ARCH 남은 차례: 010 대조 → 6(011) → 4-b(012) → 8-2 설계. PMO는 010 반환 뒤 넘김 칸. IVA를 누가 열고 무엇을 넘기는지 정해지면 ARCH에 알림.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
