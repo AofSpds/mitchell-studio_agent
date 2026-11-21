@@ -3,10 +3,10 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T17:46:49+09:00"
+updated: "2026-11-21T17:51:45+09:00"
 base_commit: "fa2b7aa"
-now: "PRIMARY 7837ebd8 승계 완료 · ARCH가 013을 수용해 PLN에 반환 (22b2c61)"
-next: "MAC_RUN 개정은 ARCH의 정식 요청을 받으면 진행"
+now: "BTSR-ARCH-014 받음 · 맥 테스트 글 1차 끝 판 작성"
+next: "세 회차 38걸음을 제품 94d4522와 대조하고 전체 회귀 뒤 ARCH에 반환"
 waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-014_webapp-mac-test-doc | ARCH (7621f3de) | btsr/arch ebba9cf · S13 3판 main ffe451d | 2026-11-21 17:51:45 KST | 진행 중 · 제품 94d4522 위 별도 문서 가지 |
 | BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST · RSCH 수용(건은 열어 둠) — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
 | 작업자 모델 Terra → GPT-6.2 Sol · 생각 High, 한 곳 설정(enum)으로 — 제품 저장소 웹앱 · 문서 (급함, 오늘 맥 웹앱 시험 전) | RSCH (Paseo 7993ff28) | 세션 메시지(2026-11-21 03:20 KST, message-id f558a86c) — 요청서 파일 없음 | 2026-11-21 (KST, 커밋 140ed71 시각) | **RSCH가 거둠**(03:2x KST, message-id a968fc10 — PLN · ARCH를 건너뛴 요청, 한알 「누가 바로 pmo에 보내나요」). 멈춤. 제품 저장소에 바꾼 것 · 커밋 · push 없음. 이 PC 사본에 로컬 가지 `fix/worker-model-sol-20261121`(main 9e7eb0e 그대로, 고친 파일 0)만 남음 — 지우지 않고 둠 |
 | BTSR-ARCH-001_worker-model-sol — 작업자 모델 GPT-6.2 Sol · 생각 High, 설정 한 곳 `app/webapp/worker_model.py` (급함) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` aee2291 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-001_REQUEST_CLAUDE.md` · 설계 `WORKER_MODEL_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (9cff201) | **반환함** 03:39 KST — [반환서](records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) · 제품 가지 `fix/worker-model-sol-20261121` 3495f7e (main 합치기 안 함) |
