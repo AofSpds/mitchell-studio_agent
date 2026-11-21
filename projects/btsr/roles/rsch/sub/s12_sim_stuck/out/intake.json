@@ -1,0 +1,16 @@
+{
+  "materials": [
+    {"file": "after_blur.jpg", "kind": "after", "sure": false, "why": "시술 후 사진으로 보이지만 머리 색과 모양이 잘 보이지 않아요"},
+    {"file": "after_clear.jpg", "kind": "after", "sure": true},
+    {"file": "after_15s.mp4", "kind": "after", "sure": true},
+    {"file": "before.jpg", "kind": "before", "sure": true}
+  ],
+  "facts": {
+    "treatment": {"value": "애쉬 브라운 염색", "from": "request", "sure": true},
+    "change": {"value": null, "from": null, "sure": false},
+    "model_age": {"value": null, "from": null, "sure": false, "choices": ["20대", "30대", "40대", "50대"]}
+  },
+  "ai_face": {"have": false, "plan": "make"},
+  "missing": [],
+  "missing_ok": []
+}

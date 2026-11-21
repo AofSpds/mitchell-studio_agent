@@ -1,0 +1,20 @@
+{
+  "project": "2099-04-01_1200-2_v1",
+  "length": 14,
+  "scenes": [
+    {"n": 1, "role": "ai_face", "file": "data/working/2099-04-01_1200-2/for_chatgpt/face_1.png", "start": 0, "end": 2, "ai": true, "label": "얼굴 : AI 합성"},
+    {"n": 2, "role": "after_back", "file": "data/incoming/2099-04-01_1200/after_15s.mp4", "start": 2, "end": 6, "src_start": 0},
+    {"n": 3, "role": "before", "file": "data/incoming/2099-04-01_1200/before.jpg", "start": 6, "end": 8, "label": "염색 전"},
+    {"n": 4, "role": "after", "file": "data/incoming/2099-04-01_1200/after_clear.jpg", "start": 8, "end": 10},
+    {"n": 5, "role": "repeat", "start": 10, "end": 14, "repeat_of": [0, 1]}
+  ],
+  "captions": [
+    {"n": 1, "start": 0, "end": 2, "text": "애쉬 브라운은 어떤 느낌일까요?"},
+    {"n": 2, "start": 2, "end": 4, "text": "염색 후 색을 먼저 볼게요."},
+    {"n": 3, "start": 4, "end": 6, "text": "옆에서 본 머리색이에요."},
+    {"n": 4, "start": 6, "end": 8, "text": "염색 전 모습도 함께 볼게요."},
+    {"n": 5, "start": 8, "end": 10, "text": "다시 염색 후 모습이에요."},
+    {"n": 6, "start": 10, "end": 12, "text": "뒷머리 색도 살펴보세요."},
+    {"n": 7, "start": 12, "end": 13.8, "text": "애쉬 브라운으로 염색했어요."}
+  ]
+}
