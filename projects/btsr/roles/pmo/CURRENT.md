@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T17:44:51+09:00"
+updated: "2026-11-21T17:46:49+09:00"
 base_commit: "fa2b7aa"
-now: "새 PRIMARY 7837ebd8가 넘김 (3)을 받음 · 013 제품 94d4522 반환"
-next: "ARCH의 013 수용 기록과 후속 정식 요청 대기"
-waiting_for: ["arch:BTSR-ARCH-013-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "PRIMARY 7837ebd8 승계 완료 · ARCH가 013을 수용해 PLN에 반환 (22b2c61)"
+next: "MAC_RUN 개정은 ARCH의 정식 요청을 받으면 진행"
+waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -40,7 +40,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
 | BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 · ARCH 수용 |
 | BTSR-ARCH-007_webapp-b3-intake-confirm — intake.json · 서버가 하나씩 고르는 답으로 묻기 · 원고 늘 확인 · 승인 hash | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 2eafcf7 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-007_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B3_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (194fea1) | **반환함** 13:42 KST — 제품 가지 `feat/webapp-b3-intake-20261121` 32b55dc, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B3_RETURN_CLAUDE.md). 시험 52/52(PYTHONUTF8 없이) · 화면 9/9 · ARCH 수용. 「을(를)」 → 받침 따라 고르기는 다음 요청(묶음 5 + 3-2)에 |
-| BTSR-ARCH-013_webapp-b82-template-r2 | ARCH (7621f3de) | btsr/arch 298d19a · 설계와 r2 한 장 1.1판 | 2026-11-21 17:25:32 KST | 반환함 17:39 KST · 제품 94d4522 · 기본 133 통과/2 건너뜀, 암호화 135/135 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_B82_RETURN_CODEX.md) |
+| BTSR-ARCH-013_webapp-b82-template-r2 | ARCH (7621f3de) | btsr/arch 298d19a · 설계와 r2 한 장 1.1판 | 2026-11-21 17:25:32 KST | 반환함 17:39 KST · 제품 94d4522 · 기본 133 통과/2 건너뜀, 암호화 135/135 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_B82_RETURN_CODEX.md) · ARCH 수용 및 PLN 반환 17:45 KST (btsr/arch 22b2c61) |
 | BTSR-ARCH-012_webapp-b4b-https-push | ARCH (7621f3de) | btsr/arch 9b579c3 · 설계 2.1판 + 8번 | 2026-11-21 17:05:18 KST | 반환함 17:17 KST · 덧붙임 aed1d11 · 제품 7127393 · 기본 129 통과/2 건너뜀, 암호화 131/131 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4B_RETURN_CODEX.md) · ARCH 수용, PLN 반환(013 요청) |
 | BTSR-ARCH-011_webapp-b6-fix-versions — 고칠 점 → 다음 판 · 판마다 새 이름 캡컷 프로젝트 · 완성 = 승인 + 규격 · 판 고르기 · ? 둘 · 승인 뒤 caption 일 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` d5f3369 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md` 2.2판 | 2026-11-21 (커밋 시각, 세션 메시지 cbbb6f7d) | **반환함** 17:00 KST — 제품 가지 `feat/webapp-b6-fix-versions-20261121` e512fcd(코드 bdbd66e · 시험 e512fcd, 바탕 243cff0), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B6_RETURN_CLAUDE.md). 시험 125/125(PYTHONUTF8 없이) · 화면 15/15 · 새 ARCH 수용(012 요청 9b579c3) |
 | BTSR-ARCH-010_webapp-b4a2-stuck-restart — 막힘 길 하나 · dev는 suggestions/ push · 처음부터 시작 · 보내는 중 · 흐린 사진 · 접수 · 틈새 · resume · 가진 사진 올리기 걷음 | ARCH (Paseo d9520b95) | 가지 `btsr/arch` a6d7f34 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-010_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (커밋 시각, 세션 메시지 064065fd) | **반환함** 16:30 KST — 제품 가지 `feat/webapp-b4a2-stuck-restart-20261121` 243cff0(코드 6a7d3c6 · 시험 243cff0, 바탕 ed11f5a), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md). 시험 116/116(PYTHONUTF8 없이) · 화면 18/18. **ARCH 수용**(message-id cbbb6f7d) |
@@ -194,3 +194,4 @@ verifier: "mitchell_studio/btsr/pmov"
 - 옛 PMO `99626982-1190-4151-8cf5-b052ce8644c4`의 넘김 `80d81ee`와 Paseo 메시지 `f56fd3de-e01f-46d9-8daf-c6766637545a`를 받았다. 저장소 규칙, AAA 규칙 판 v0.14, 012·013 반환서를 읽었다.
 - Paseo 상태와 세션 환경에서 새 에이전트 `7837ebd8-33f1-4729-bafe-e9a3e72f45d6`, 작업 공간 `wks_2dc964d20c5cca11`, Codex 세션 `01a1fd46-60cf-7d52-80da-caa5e42882b2`를 대조했다. 실행 설정은 `gpt-6.2-astra / ultra / full-access`, 작업 가지는 `btsr/pmo`다.
 - 받음 시점에 ARCH는 013 제품 `94d4522`의 대조 결과가 일치해 PLN 반환서를 작성 중이었다. 확인한 ARCH 원격 끝은 `9874857`이다. MAC_RUN 개정은 ARCH의 정식 요청을 기다린다.
+- 받음 커밋 `049fe8e`의 원격 반영 뒤 옛 PMO 제목을 `MITCHELL_STUDIO/BTSR/PMO CLOSED`로 바꾸고 새 PMO 제목을 확인했다. ARCH와 RSCH가 새 연락처를 수신했다. RSCH에는 한알 말씀 원문과 수신시각을 함께 보냈고 옛 PMO에도 전환 결과를 전했다. ARCH는 `btsr/arch`의 `93300f0`에 새 연락처를 기록했다.
