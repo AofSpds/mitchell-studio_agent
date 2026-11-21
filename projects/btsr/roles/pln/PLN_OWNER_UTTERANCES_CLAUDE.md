@@ -64,3 +64,10 @@
 - 맥락: PLN이 「수정 14개 파일 이름만 보여 줘. 내용은 말고.」를 드린 뒤. 글 없이 사진 한 장 — 맥 「코덱스 excutor」 화면(19:25): 한알이 넣으신 줄 「수정 14개 패 파일 이름만 보여줘 내용은 말고」 → 목록 14: `agents/{capcut,creative_director,ffmpeg,higgsfield,pln,pmo,rsch,tester,uploader}/dashboard.html` · `agents/creative_director/folder-tree.md` · `agents/creative_director/status.json` · `agents/rsch/knowhow.md` · `agents/rsch/logs/2026-11-09_claude-session-start.md` · `agents/rsch/research/2026-11-21_chatgpt-attachments-catalog.md`(앞 두 글자는 안 보임).
 - 원문: (글 없음 — 사진 한 장)
 - 뒤 처리: 모두 `agents/` 아래 맥 기록(웹앱 코드 아님) · 분류표는 맥의 새 판일 수 있음 → 지우지 않고 `git stash`로 맥 안에 보관(추적 파일만 · worker_model.py 뺌 · push 없음) · `??`는 그대로 · 점검은 추적 파일만 → 1-2부터 다시, 한 줄로 드림. RSCH 보탬(19:26 — `??` · `__pycache__`)과 같은 길.
+
+## 2026-11-22 01:36:39 KST — uuid 3a431c79-bcac-466b-bc93-c9c2679512b9
+
+- 맥락: PLN이 요청서 003 55번(보내기 멎음 고침 합쳐짐 · 오늘 한 장 1번 줄)을 보고한 뒤.
+- 뒤 처리: PLN · ARCH · PMO · IVA의 문맥 사용량을 Paseo 상태 · 대화 기록에서 재어 답함(01:40).
+
+> 압축이나 승계가 필요한 세션 조사하세요 본세션 포함 pmo iva arch입니다
