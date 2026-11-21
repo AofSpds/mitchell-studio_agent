@@ -77,6 +77,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **ARCH 고친 줄** (`btsr/arch` `cdea776`) — 가진 AI 얼굴 사진 길은 **남김**(한 장 2번에 한 마디 · 설계 3번 · 기준 3, 1.1판). 한 장을 RSCH에 넘김 → 시안 화면 17과 함께 한알께.
 - **25번 받음** (RSCH main `45a1ada`, 16:24) — 한알 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」: 세 역할은 끝까지 · 넘김 칸 갖춤 → 다 끝나면 한알이 기획안 초안을 먼저 확인 → 그 뒤 새 세션. **PLN이 할 것: 1차가 완결되면(마지막 묶음 반환 · 합침 뒤) 한알께 드릴 기획안 초안을 쉬운 말로 따로 씀** — 자리 `btsr/pln` `projects/btsr/roles/pln/requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md`(영어 · 약어 · 번호 없이, 지금 정해진 것만 — 지난 판 기록은 요구 글에). 쓰면 커밋을 RSCH에. ARCH에 전함(PMO에는 ARCH가).
 - **26 · 27번 받음** (RSCH main `f95f5ee` · `55f45cf`, 16:28) — 기획안 초안을 **지금** 씀(26번) · 결정 38 · 요구 2.12판: 「다시 만들기」 2번 · 템플릿 r2 다섯 줄 안대로(R82.4). **기획안 초안 1판** → [WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md) (쉬운 말 · 정하심 / 안 / 만듦 · 아직 가림 · 시안 3판 화면 번호). 뒤에 바뀌면 이 글에 판을 올림. RSCH에 알림 · ARCH에 결정 38.
+- **기획안 초안 1.1판** (16:30) — ARCH 짚음: 접수 '만들 수 없는 것만 묻기'(R3.5)는 4-a-2에 들어 만드는 중 → 나눠 고침. PLN이 더 찾음: 1번 차례에서 물음(화면 4 · 17)을 원고 확인(화면 16) 앞으로(R3.3 — 고르기 전엔 원고를 안 씀). 시안 3판 글 '원고 확인은 화면 3과 4 사이'가 R3.3과 어긋나 보임 → RSCH에 짚음.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
