@@ -134,3 +134,8 @@
   > fetch 하고 origin/main의 MAC_RUN 글대로 1-3(새 판 받기)을 다시 한 뒤, 제품 사본 맨 위에서 `python3 -c "import sys; sys.path.insert(0,'app/webapp'); import jobs as J, runner; job=J.busy(); print(J.project_picks(J.project_name(job)) if job else None); print(runner.resume_wait_usage())"` 를 한 번 실행해 두 줄 출력을 그대로 적어 줘. 이어서 바꾸지 말고 읽기만: `codex --version` · `grep -n computer_use ~/.codex/config.toml`(없으면 '없음') · ChatGPT 설정 Computer Use의 '항상 허용한 앱' 목록. 그 편이 음악 · 내보내기로 이어 가는 동안 허락 창이 뜨면 누르지 말고 창 맨 위 앱 이름과 단추 글을 그대로 적은 뒤 나에게 알려 줘 — 허용은 내가 맥에서 한 번 누름.
   - 맥 세션이 '작업 중인데 웹앱을 다시 켤까요?'를 물으면 1(진행).
   - 둘째 출력이 「… 다음 돌기에 이어 갑니다.」면 됨 · 첫 출력의 목소리 이름이 「느긋한 언니」와 다르면 PLN에(자 → 꼭).
+
+## 덧붙임 — 고침 3-1 합쳐짐 (2026-11-22 04:36 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `b77c1da` RSCH 요청서 003 70번 — 제품 main 앞으로 감기 `09655cd..c364bf0`(04:34 · 한 파일 두 줄뿐 · 강제 아님 · 결과 가지 `c215651` 그대로). PLN이 04:36에 제품 원격 main 머리를 ls-remote로 봄. RSCH가 한알께 맥 한 줄(위 완성본)을 드림 — 결과는 결과 가지 또는 RSCH 창으로 · 오면 71번.
+- 다음: 맥 결과로 PLN이 정할 것 — 자(목소리 이름) · 라(허락 창 — 주인 · 설정 allow를 여쭐지 · 고침 4) · 음악 · 내보내기가 끝까지 가는지.
