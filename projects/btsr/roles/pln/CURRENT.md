@@ -39,6 +39,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 
 - **받음** (2026-11-21 16:50 KST) — 새 PRIMARY: Paseo 에이전트 `be41b33c-5441-48f7-9202-9bb7c21b13a3`(제공자 `claude`, 작업 공간 `wks_108719f6be21c0c9`, 07:50:04Z 생성, 부모 라벨 둘 다 빈 값) · Claude 세션 `1bcf0ba5-1698-49f1-bac5-e0666d363d11` · Opus 5.5 (`claude-opus-5-5`) high. list_agents · get_agent_status · transcript 파일로 확인. 옛 a6fd0155 → CLOSED.
 - **ARCH도 승계함** (옛 PLN 알림, 16:50) — 새 ARCH Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4`(get_agent_status로 확인 — 제목 MITCHELL_STUDIO/BTSR/ARCH · `btsr-arch` 폴더 · Claude 세션 `3733e26f`; 옛 d9520b95, 넘김 칸 `btsr/arch` `840675f`). ARCH-011(묶음 6) 반환은 7621f3de에서 옴. 새 PLN ID는 RSCH(a97bebab)와 ARCH(7621f3de)에 알림.
+- **RSCH가 받음 확인 · 한알께 보고함** (16:52 KST 받음) — 하던 차례 그대로. 알아 둘 것: PMO(5fbbea06)는 묶음 6 반환 뒤 아스트라로 · 검증자 IVA(아스트라)를 RSCH가 여는 중(개설 요청 에이전트 main `e855693` `projects/btsr/roles/rsch/requests/BTSR-RSCH-004_iva-open-webapp-phase1/요청.md` — 검증 요청서는 1차가 다 만들어진 뒤) · RSCH도 승계 준비 중(새 ID가 오면 그 ID로).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
