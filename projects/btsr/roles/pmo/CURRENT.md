@@ -5,9 +5,9 @@ rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. A
 state: "ACTIVE"
 updated: "2026-11-21T04:17:00Z"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-004(묶음 2+8) 반환함 — 제품 가지 feat/webapp-b2-b8-runner-20261121 658ec1d, 시험 38/38 · 화면 5/5. 맥 시험 9는 MAC_RUN_B2.md로 손 필요. ARCH-005 닫힘(main 6cfbc5f). BTSR-RSCH-001 맥 결과 대기"
+now: "BTSR-ARCH-006(묶음 1-1 별명 · 건의하기 · UTF-8) 반환함 13:31 KST — 제품 가지 feat/webapp-b1-1-anon-20261121 100ffa5. 맥 일은 PLN 답 전까지 안 함. BTSR-RSCH-001 맥 결과 대기"
 next: "ARCH의 수용 · 합치기 결정, BTSR-RSCH-001 맥 결과를 받으면 이어 함 — 스스로 시작하지 않음(규칙 18)"
-waiting_for: ["arch:BTSR-ARCH-004-accept", "mac:MAC_RUN_B2_RESULT", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+waiting_for: ["arch:BTSR-ARCH-006-accept", "pln:mac-test-9-timing", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -38,7 +38,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | BTSR-ARCH-001_worker-model-sol — 작업자 모델 GPT-6.2 Sol · 생각 High, 설정 한 곳 `app/webapp/worker_model.py` (급함) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` aee2291 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-001_REQUEST_CLAUDE.md` · 설계 `WORKER_MODEL_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (9cff201) | **반환함** 03:39 KST — [반환서](records/worker-model/WORKER_MODEL_RETURN_CLAUDE.md) · 제품 가지 `fix/worker-model-sol-20261121` 3495f7e (main 합치기 안 함) |
 | BTSR-ARCH-002_webapp-b1-suggest-words — 웹앱 「Feedback」 건의함 + 쉬운 말 (묶음 1) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 6cf028a `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-002_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1_DESIGN_CLAUDE.md` 1판 | 2026-11-21 (ea8da0d) | **반환함** 12:58 KST — 제품 가지 `feat/webapp-b1-suggest-20261121` 6cfbc5f (main 합치기 안 함), [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1_RETURN_CLAUDE.md) · ARCH 수용 |
 | BTSR-ARCH-004_webapp-b2-b8-runner-templates — 서버가 작업을 만들고 맥 Claude를 명령줄로 불러 접수·원고·④ 편집까지(템플릿 판) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` 96d66a1 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-004_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B2_B8_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (975a4c1) | **반환함** 13:17 KST — 제품 가지 `feat/webapp-b2-b8-runner-20261121` 658ec1d, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B2_B8_RETURN_CLAUDE.md) · ARCH 수용(기준 1–9·11). 맥 시험 9는 PLN 답 전까지 하지 않음 |
-| BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (커밋 시각) | 받음 · 하는 중. 바탕 658ec1d · 제품 main push 안 함 |
+| BTSR-ARCH-006_webapp-b1-1-anon-button — 건의 글 손님 정보를 별명으로 · 단추 글 「건의하기」만 · 가짜 claude UTF-8 | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` e198ffc `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-006_REQUEST_CLAUDE.md` · 설계 `WEBAPP_PHASE1_B1-1_ANON_DESIGN_CLAUDE.md` 1.1판 | 2026-11-21 (552365c) | **반환함** 13:31 KST — 제품 가지 `feat/webapp-b1-1-anon-20261121` 100ffa5, [반환서](records/webapp-phase1/WEBAPP_PHASE1_B1-1_RETURN_CLAUDE.md). 시험 41/41(PYTHONUTF8 없이) · 화면 20/20 |
 | BTSR-ARCH-005_webapp-b1-merge — 묶음 1 가지 6cfbc5f를 제품 main에 (앞으로 감기, 맥에는 넣지 않음) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` db1f7e8 `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-005_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (80ab702) | **닫힘** (ARCH 58c9c95) — 한알 13:13:30 「직접 하세요.」로 RSCH가 main을 6cfbc5f로 push. PMO의 push는 자동 심사에서 막혔고 우회 안 함. 이 PC 로컬 main = origin/main 6cfbc5f 확인 |
 | BTSR-ARCH-003_worker-model-merge — 제품 가지 `fix/worker-model-sol-20261121` 3495f7e를 제품 main에 합침 (PLN이 정함, 한알 03:47:04) | ARCH (Paseo 9d298a54) | 가지 `btsr/arch` bc710d7 `projects/btsr/roles/arch/design/worker-model/WORKER_MODEL_BTSR-ARCH-003_MERGE_REQUEST_CLAUDE.md` | 2026-11-21 (34a5007) | **반환함** 12:54 KST — 제품 main `e5785b3` (첫 부모 3bd6cdd), [반환서](records/worker-model/WORKER_MODEL_MERGE_RETURN_CLAUDE.md) |
 

@@ -1,0 +1,92 @@
+[
+ {
+  "name": "머리 단추 글이 「건의하기」만 · up",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "화면에 「Feedback」 글자 없음 · up",
+  "ok": true
+ },
+ {
+  "name": "시트가 열리고 제목이 「건의하기」 · up",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "시트에도 「Feedback」 글자 없음 · up",
+  "ok": true
+ },
+ {
+  "name": "머리 단추 글이 「건의하기」만 · jobs",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "화면에 「Feedback」 글자 없음 · jobs",
+  "ok": true
+ },
+ {
+  "name": "시트가 열리고 제목이 「건의하기」 · jobs",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "시트에도 「Feedback」 글자 없음 · jobs",
+  "ok": true
+ },
+ {
+  "name": "머리 단추 글이 「건의하기」만 · job",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "화면에 「Feedback」 글자 없음 · job",
+  "ok": true
+ },
+ {
+  "name": "시트가 열리고 제목이 「건의하기」 · job",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "시트에도 「Feedback」 글자 없음 · job",
+  "ok": true
+ },
+ {
+  "name": "머리 단추 글이 「건의하기」만 · post",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "화면에 「Feedback」 글자 없음 · post",
+  "ok": true
+ },
+ {
+  "name": "시트가 열리고 제목이 「건의하기」 · post",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "시트에도 「Feedback」 글자 없음 · post",
+  "ok": true
+ },
+ {
+  "name": "머리 단추 글이 「건의하기」만 · man",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "화면에 「Feedback」 글자 없음 · man",
+  "ok": true
+ },
+ {
+  "name": "시트가 열리고 제목이 「건의하기」 · man",
+  "ok": true,
+  "detail": "건의하기"
+ },
+ {
+  "name": "시트에도 「Feedback」 글자 없음 · man",
+  "ok": true
+ }
+]
