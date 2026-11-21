@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "PMO(7837ebd8)가 BTSR-ARCH-021(올리기 고침 2 — S14) + 덧붙임 1(5–8, 같은 가지, 02:08) 하는 중. 반환 03:05쯤 · 합침 03:40 KST 목표(PLN에 알림). 제품 main 8b0d084"
-next: "021 반환 오면 곧바로 둘을 함께: (가) PMO에 저장 · 승계 걺(한알 02:13:24 · RSCH 60번 · PLN 815aa99 — PMO가 스스로 create_agent: codex · gpt-6.2-astra · ultra · full-access · 같은 작업 공간 wks_2dc964d20c5cca11 · 승계 글에 고침 2 가지 · 됨 8개 · 시험 돌리는 법 · 새 PMO 받음 줄 · 옛 PMO CLOSED → 새 id · 받음 커밋을 ARCH가 PLN · RSCH ed5ef600에 한 줄) (나) 대조(Playwright 깐 곳, 1–8 하나씩 diff — 맥락 90%에서 만든 것) → PLN 반환(PMO 승계 생각 한 줄 포함). 승계로 합침을 늦추지 않음. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-021 반환 (7837ebd8)"]
+now: "021(올리기 고침 2 — S14 1–8) 반환함 02:38(제품 가지 5bbe272 · Playwright 169 OK 건너뜀 0) → RSCH 합침 기다림. PMO 승계 끝 — 새 PMO 512aef6d(받음 btsr/pmo 417fbe3 · 부모 라벨 비움). 제품 main 8b0d084"
+next: "휴대폰 테스트 결과 · PLN 알림대로. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 022 · PMO는 512aef6d로"
+waiting_for: ["role:mitchell_studio/btsr/rsch:021 제품 main 합침 (5bbe272)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -34,7 +34,7 @@ verifier: "mitchell_studio/btsr/archv"
 
 - **까닭**: 한알 16:45:26 「네 새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다. 1차가 만들어지면 맥에서 테스트 진행할께요. …」(RSCH 요청서 003 30번, 에이전트 main 60a2ee9 — RSCH가 전함). 앞서 16:05:36 「…지금 작업이 끝나면 새로운 세션으로…」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」. 30번이 바로잡음: **승계는 옛 세션이 `create_agent`로 진행**(한알이 하시는 것이 아님). ARCH는 '지금 하던 일이 끝나는 대로' — 이 세션은 ARCH-011 반환을 기다리는 중이라 하다 만 일 없이 지금 넘김.
 - **옛 세션(이 세션)**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · 작업 공간 `wks_6dc6b9d13807b202` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high. 넘긴 커밋 = 이 칸이 든 커밋.
-- **다른 세션**(바뀌면 새 ID가 알려 옴): PLN `be41b33c-5441-48f7-9202-9bb7c21b13a3`(16:50 승계, 옛 a6fd0155 CLOSED) · RSCH `ed5ef600-f1ab-4f47-8728-a19091c32e6a`(16:56:21 승계, 옛 a97bebab CLOSED) · PMO `7837ebd8-33f1-4729-bafe-e9a3e72f45d6`(8-2 반환 뒤 승계 · 받음 `btsr/pmo` 049fe8e — 그 앞 99626982 아스트라, 또 그 앞 5fbbea06은 묶음 6 반환 뒤 아스트라 `codex/gpt-6.2-astra`로 승계, 처음부터 Paseo full-access — 한알 16:54:50 · 16:55:05, RSCH 31번 에이전트 main a1f2e84 — 새 PMO ID가 오면 그쪽으로) · IVA `9b3e4897`(PLN 알림).
+- **다른 세션**(바뀌면 새 ID가 알려 옴): PLN `be41b33c-5441-48f7-9202-9bb7c21b13a3`(16:50 승계, 옛 a6fd0155 CLOSED) · RSCH `ed5ef600-f1ab-4f47-8728-a19091c32e6a`(16:56:21 승계, 옛 a97bebab CLOSED) · PMO `512aef6d-4b2e-4bea-9ffc-f934fbc9756c`(11-22 02:28 받음 커밋 · 받음 `btsr/pmo` 417fbe3 · 한알 02:13:24 · RSCH 60번 — 옛 7837ebd8 CLOSED; 그 앞: 7837ebd8 8-2 반환 뒤 승계 · 받음 `btsr/pmo` 049fe8e — 그 앞 99626982 아스트라, 또 그 앞 5fbbea06은 묶음 6 반환 뒤 아스트라 `codex/gpt-6.2-astra`로 승계, 처음부터 Paseo full-access — 한알 16:54:50 · 16:55:05, RSCH 31번 에이전트 main a1f2e84 — 새 PMO ID가 오면 그쪽으로) · IVA `9b3e4897`(PLN 알림).
 - **남은 차례(webapp-phase1, BTSR-PLN-002)** — 제품 main `243cff0`(4-a-2까지):
   1. **PMO BTSR-ARCH-011(묶음 6) 반환 대조** — [요청서](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md) 기준 1–14 · [설계 2.2판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) 9 · 9-1. 제품 가지 fetch → `git archive <가지> | tar -x -C <새 임시 폴더>` → 그 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests` → grep 대조 → 반환서 `design/webapp-phase1/WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md`(꼴은 [4-a-2 반환](design/webapp-phase1/WEBAPP_PHASE1_B4A2_BTSR-PLN-002_RETURN_CLAUDE.md)) → PLN에.
   2. **4-b → PMO BTSR-ARCH-012** — [설계 2.1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) **+ 8번(R5.7 판정 둘: devpush 커밋 일반 이름 · 개발자 글 기록 줄임 · MAC_RUN 한 줄)** · [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md). 요청서는 ARCH-011 꼴로. `cryptography`가 이 PC에 없음 — 대조 때 따로 만든 가상 환경에 깔아 RFC 8291 시험을 다시 돌림.
