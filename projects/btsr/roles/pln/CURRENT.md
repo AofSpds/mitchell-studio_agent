@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-21T17:50+09:00"
+updated: "2026-11-21T17:56+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 7127393"
 now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.16판 · 결정 01–41 · 기획안 초안 1.7판(한알께 드림). 제품 main 7127393까지 합침(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b). 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
 next: "ARCH 반환이 오면 요구 2.16판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(ed5ef600)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례(결정 41): 8-2 반환함 → IVA 검증(RSCH 005) → 판정 뒤 맥 테스트 글(ARCH-014, 94d4522 위 따로 가지 · 글만)과 함께 RSCH가 main 합침 → RSCH가 한알께 맥에서 하실 일 → 1차 끝 맥 시험(맥 시나리오는 RSCH S13이 지금 씀 · 휴대폰 시연은 1차 뒤). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/arch (7621f3de):맥 테스트 글(BTSR-ARCH-014) 반환", "role:mitchell_studio/btsr/rsch (ed5ef600):IVA 판정(BTSR-RSCH-005) · 8-2 합치기", "role:mitchell_studio/btsr/rsch (ed5ef600):컴퓨터 유즈(이끄는 ChatGPT의 웹앱 탭 · 파일 고르기) 한알 답", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
+waiting_for: ["role:mitchell_studio/btsr/arch (7621f3de):맥 테스트 글(BTSR-ARCH-014 · PMO 7837ebd8) 반환", "role:mitchell_studio/btsr/rsch (ed5ef600):IVA 판정(BTSR-RSCH-005) · 8-2 합치기", "role:mitchell_studio/btsr/rsch (ed5ef600):컴퓨터 유즈(이끄는 ChatGPT의 웹앱 탭 · 파일 고르기) 한알 답", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
 owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.7판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -52,6 +52,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **37번 받음 → 결정 41 · 요구 2.16판 · 기획안 초안 1.7판** (에이전트 main `192a661`; 한알 17:38:40 · 17:38:46 · 17:39:35 · 17:42:06) — 8-2 → 합치지 않고 IVA(BTSR-RSCH-005) → 판정 뒤 맥 테스트 글까지 넣어 main → 한알께 맥에서 하실 일.
 - **묶음 8-2 반환 받음 → RSCH에 반환** (ARCH `btsr/arch` `22b2c61`, 17:50) — 제품 가지 `feat/webapp-b82-template-r2-20261121` `94d4522`(135 OK), R82.1–R82.4 · R3.7 · R32.5 · 결정 36–38 대조. 합침 조건: **IVA 판정 뒤** · main `7127393` · 가지 `94d4522`(17:46 ls-remote). [WEBAPP_PHASE1_B82_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B82_RETURN_CLAUDE.md). **웹앱 1차 묶음 구현 끝.**
 - **맥 테스트 글 → ARCH에 요청** [WEBAPP_PHASE1_MACTEST_DOC_REQUEST_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_REQUEST_CLAUDE.md) — 바탕 S13 3판(main `ffe451d`, 고칠 곳 15건) · 맥의 ChatGPT가 물음 없이 따라 하는 회차 글 · ARCH → PMO BTSR-ARCH-014 · `94d4522` 위 따로 가지(글만) · 컴퓨터 유즈 넘는 걸음은 '승인 뒤'(RSCH가 여쭘 중).
+- **ARCH가 맥 테스트 글 받음 → PMO BTSR-ARCH-014** (`btsr/arch` `ebba9cf`, 17:55 무렵 알림) — 자리 `app/webapp/MAC_RUN_PHASE1.md` 한 파일(머리 · 한알 한 줄 셋 · 공통 · 1 · 2 · 3회차) · 걸음마다 다섯 칸 · S13 걸음 번호 그대로 · 결과는 맥 웹앱 사본을 건드리지 않고 따로 둔 worktree에서 제품 가지 `mactest/webapp-phase1-results`에 결과 글 하나(커밋 이름 일반 값) · 가지 `feat/webapp-mac-test-doc-20261121`(94d4522 위 · 글만) · 넘는 걸음은 '승인 뒤' + 닿으면 멈추고 한 줄. PMO는 `7837ebd8`로 다시 승계됨(ARCH 알림 — PLN이 Paseo로 직접 보지 않음). 컴퓨터 유즈 답 · S13 3판 고칠 것은 PLN이 넘김 → 014 덧붙임.
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 
