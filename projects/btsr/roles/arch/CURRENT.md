@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/arch"
 session: "MITCHELL_STUDIO/BTSR/ARCH"
 rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14를 AAA main 폴더(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)에서 읽음(읽기만)"
 state: "ACTIVE"
-updated: "2026-11-21T15:52:00+09:00"
+updated: "2026-11-21T15:55:00+09:00"
 base_commit: "fa2b7aa"
-now: "4-a-2 설계 1판(15:52) · 4-b 2.1판 · 6 2.2판 → PLN 대조 기다림. ARCH-009는 PMO가 하는 중(덧붙임 둘)"
-next: "ARCH-009 반환 대조 → PLN에 → 4-a-2 · 6 · 4-b를 PMO에 차례로(010 · 011 · 012). 묶음 8-2 설계 — 템플릿 r2에서 바뀌는 글을 한 장으로(PLN 2.8판 요청), 다11 · 다14 답 뒤"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-009 반환 (5fbbea06)", "role:mitchell_studio/btsr/pln:4-a-2 · 4-b 2.1 · 6 2.2 대조", "owner:다11 과정 영상 · 다14 뒷모습 조건 (RSCH 여쭘 중)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
+now: "묶음 4-a 반환함(15:55, PMO ed11f5a 대조 — 92 OK) · 4-a-2 1.1판(PLN 짚은 둘 고침) → PMO에 BTSR-ARCH-010"
+next: "ARCH-010 반환 대조 → PLN에 → 6(011) → 4-b(012). 묶음 8-2 설계(템플릿 r2 바뀌는 글 한 장 · 다시 만들기 횟수 한 수) — 다11 · 다14 답 뒤. 요청 번호 다음 011"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-010 반환 (5fbbea06)", "owner:다11 과정 영상 · 다14 뒷모습 조건 (RSCH 여쭘 중)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -48,7 +48,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`.
   - 제품 저장소(dev 폴더의 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 읽음 — 그 작업 사본(main `0636fa0`에 멈춰 있음)은 건드리지 않음. 시험은 `git archive <가지> | tar -x -C <새 임시 폴더>` 뒤 그 안에서 — **저장소 전부를 풀어야** 함(`test_words`가 매뉴얼을 읽음).
   - 제품 main 합치기: PLN이 정하고 **RSCH가 앞으로 감기 push**(1.6판 결정 13). ARCH · PMO는 main push 안 함. 맥 일은 1차 끝 맥 시험에 한 번(결정 08).
-  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–009까지 씀(다음 010).
+  - 게시판이 없어 요청서 · 받음 · 반환 · 닫음을 `design/<주제>/`에 파일로 두고 Paseo 알림으로 경로만 보냄. 요청 번호 BTSR-ARCH-001–010까지 씀(다음 011).
   - 큰 읽기(남의 저장소 · 긴 기획)는 하위 에이전트(Explore)에 맡기고 결론만 받음. 일하는 PMO에게 새 요청을 보내면 그 차례에 끼어드므로, 작은 급한 것만 끼우고 나머지는 반환 뒤.
   - 묶음마다 반환 전에 그 사이 바뀐 한알 말씀과 요청서 기준이 맞는지 다시 봄(규칙 37).
   - 이 PC의 Bash heredoc 파이썬 안에 윈도 경로(역슬래시 + U)를 넣으면 스크립트가 안 돎 — 경로가 든 글은 파일 쓰기 도구로.
@@ -71,6 +71,8 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 5 + 3-2 반환 PLN 받음(`btsr/pln` cb548e0) → **제품 main `3072e7e`**(RSCH push, 에이전트 main d766ed3). 남은 것 1 · 2는 ARCH-009에(PLN 받음).
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
+  - **묶음 4-a**: PMO 반환 `btsr/pmo` 7f63e44(가지 `feat/webapp-b4a-one-job-bar-20261121` ed11f5a) → ARCH 대조(저장소 전부 · 환경 값 없이 92 OK · grep 기준 1–12) → [반환](design/webapp-phase1/WEBAPP_PHASE1_B4A_BTSR-PLN-002_RETURN_CLAUDE.md) 15:55. PMO 물음 셋: ① ? 표 '3번 더'는 값에서 세는 그대로(횟수 맞춤은 8-2) ② 빈 Jobs 「⚙ 기본 옵션」 남김 ③ 가진 사진 올리기는 4-a-2에서 걷음.
+  - 4-a-2 PLN 대조(`btsr/pln` 4edd054, 요구 2.9판): 고칠 것 둘 — push는 맥 사본과 따로 둔 index에서 origin/main 위에 글 하나만(기능 가지 커밋이 main에 안 섞이게, 기준 3-1) · 파일 이름은 작업 id만 · 모든 글 거른 뒤 → 1.1판 → PMO에 [BTSR-ARCH-010](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-010_REQUEST_CLAUDE.md) (바탕 ed11f5a).
   - 요구 2.7 · 2.8판(`btsr/pln` 5c086f5): 19번 자리 받음 · 묶음 8-2 칸(R82.1 720×1280 → 1080×1920 · R82.2 글 맞춤) — **8-2 설계 때 템플릿 r2에서 바뀌는 글을 한 장으로**(한알 확정본이라 RSCH가 보여 드림). 결정 35 R32.4 거둠(화면 5 단추 둘 · 다시 만들기 다 쓰면 dev · 넘기기/올리기 고르기 걷음 → 4-a-2 2-1). 20번 [안] 여섯 안대로 확정.
   - [4-a-2 설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B4A2_DESIGN_CLAUDE.md) (15:52): 막힘 길 하나 `jobs.stop(to = ask | dev)` · 까닭 덮어쓰기 0 · dev → `suggestions/dev/` 글 한 장 push(그 경로만, 건의도) · 제품 규칙 글 예외 · resume 걷음 · 「처음부터 시작」 → 화면 15(올린 것 베껴 새 편) · 보내는 중 · 흐린 사진 · 접수는 빠진 소재만 · 틈새(advance · reconcile · Edit 확인 먼저 · 깨어난 Edit 캡컷 확인 · Face 번호) · R32.4 거둠. 4-b 2.1판(결정 33 · 34) · 6 2.2판(R6.7 · caption 일).
   - 19번 [줄 확인 · 자리](design/webapp-phase1/WEBAPP_PHASE1_SIM19_ALLOC_CLAUDE.md) (15:50): 대개 ✔(±2줄), △ 둘(나10 한도 — 빠지는 것은 Edit 하나 · 나8은 결함 아니라 ARCH-007 설계, R3.5가 바꿈). 가1 → 맥 0 · 가2 · 가3(승인 뒤 caption 일) · 가4 → 6 · 나5 · 나9 → ARCH-009 덧붙임 2 · 나6 · 나7 · 나8 · 나10 · Edit 확인 차례 → 4-a-2 · 다11–14 + 720×1280 → **새 묶음 8-2 지시 글 맞춤**(템플릿 r2, 4-a-2 · 6 뒤).
