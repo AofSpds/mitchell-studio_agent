@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T02:25:53+09:00"
-base_commit: "fa2b7aa"
-now: "021 통합 반환을 ARCH가 받음 · 넘김 (4) 저장"
-next: "새 PRIMARY 받음 커밋 대조 후 ARCH에 새 연락처 전달"
-waiting_for: ["arch:BTSR-ARCH-021-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+updated: "2026-11-22T02:28:05+09:00"
+base_commit: "33a37be"
+now: "새 PRIMARY 512aef6d가 넘김 (4)를 받음. ARCH는 021 제품 5bbe272의 여덟 기준을 살폈고 회귀시험 결과를 기다림"
+next: "ARCH 수용 뒤 RSCH가 제품 main에 합침. PMO는 ARCH의 다음 정식 요청을 기다림"
+waiting_for: ["arch:BTSR-ARCH-021-acceptance", "rsch:BTSR-ARCH-021-main-merge", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -22,7 +22,7 @@ verifier: "mitchell_studio/btsr/pmov"
 | 프로젝트 | BTSR(부트스트랩) — MITCHELL_STUDIO 도메인 |
 | 상위 | ARCH (`MITCHELL_STUDIO/BTSR/ARCH`, Paseo `7621f3de-7d3e-4f12-87e1-98fe95e32fd4` — 옛 d9520b95 · 9d298a54 CLOSED). PLN Paseo `be41b33c-5441-48f7-9202-9bb7c21b13a3`. RSCH는 Paseo `ed5ef600-f1ab-4f47-8728-a19091c32e6a`(옛 a97bebab). 역할 트리 PLN > RSCH · ARCH > PMO, 요청은 바로 아래로만 (규칙 5·15) |
 | 짝 검증자 | PMOV (비상설, 여는 이 ARCH, 규칙 7). 아직 열리지 않음 |
-| PRIMARY | MITCHELL_STUDIO/BTSR/PMO · Paseo 에이전트 `7837ebd8-33f1-4729-bafe-e9a3e72f45d6` · 작업 공간 `wks_2dc964d20c5cca11` · Codex 세션 `01a1fd46-60cf-7d52-80da-caa5e42882b2` · `gpt-6.2-astra` · ultra · full-access · 가지 `btsr/pmo` |
+| PRIMARY | MITCHELL_STUDIO/BTSR/PMO · Paseo 에이전트 `512aef6d-4b2e-4bea-9ffc-f934fbc9756c` · 작업 공간 `wks_2dc964d20c5cca11` · Codex 세션 `01a1ff25-8250-7f20-843c-a3ee221c9d4c` · `codex/gpt-6.2-astra` · ultra · full-access · 가지 `btsr/pmo` |
 | 개설 | RSCH의 SUB `MITCHELL_STUDIO/BTSR/RSCH/S1_OPEN_ROLES`(Paseo 5641fdf4)가 엶 — 요청서 main 폴더 `projects/btsr/roles/rsch/sub/s1_open_roles/OPEN_PMO_요청.md` 판 2. 앞 세션(Paseo a73bc1c9, 옛 꼴)은 요청서에 따라 CLOSED — 이어받음 |
 | 규칙 판 | 주입 전 (`none`). AAA v0.14를 AAA main 폴더에서 읽음. 이 저장소 AGENTS.md도 따름 |
 | 게시판 | 없음 — 아직 정해지지 않음. 그래서 요청서는 보낸 역할 칸에, 받음은 이 파일 '받은 요청'에 적음 (요청서의 안내) |
@@ -247,3 +247,7 @@ ARCH의 021 대조 결과와 RSCH의 제품 main 합침을 기다린다. 실제 
 ### 새 PRIMARY가 받는 자리
 
 같은 작업 공간 `wks_2dc964d20c5cca11`, 작업 폴더 `C:\Users\ms1pk\dev\mitchell-studio_agent\worktrees\btsr-pmo`, 가지 `btsr/pmo`에서 이어 받는다. 새 PRIMARY가 자신의 Paseo·Codex 세션 ID와 실행 설정을 확인해 바로 아래에 받음을 적고 이 파일의 PRIMARY 표·앞머리를 갱신한다. 받음 커밋의 원격 반영을 확인한 뒤 옛 PRIMARY가 세션 제목을 닫고 ARCH에 새 연락처를 전한다.
+
+**받음 · 2026-11-22 02:28:05 KST.** 새 PRIMARY `512aef6d-4b2e-4bea-9ffc-f934fbc9756c`가 넘김 커밋 `33a37be`를 받았다. Paseo에서 위 PRIMARY 표의 제목·두 세션 ID·작업 공간·모델·생각 수준·모드를 확인했고, 실제 작업 폴더와 가지도 위 기록과 일치했다.
+
+ARCH는 PMO 반환서 `7cd7e37`과 제품 `5bbe272`를 받았다. 받음 시점에 ARCH는 기준 1–8의 코드와 시험을 대조해 빠진 항목을 찾지 못했고, 자체 회귀시험 결과를 기다리고 있었다. PMO 반환서의 전체 시험 결과는 169개 통과·건너뜀 0이다. 제품 원격 기능 가지 `feat/webapp-upload-stall2-20261122`는 `5bbe272`, 원격 `main`은 `8b0d084`로 확인했다. ARCH의 수용과 RSCH의 합침을 기다린다.
