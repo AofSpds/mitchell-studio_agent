@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 1회차 시작 · 1-2 멈춤(추적 파일 수정 14개, PLN stash로 이어 감). 맥 테스트 글 덧붙임 2 → PMO에 BTSR-ARCH-017(19:30, 바탕 main 07cd3fc)"
+now: "ARCH-017 받음 · PLN에 반환(19:46) — 걸린 것 둘: 제품 main 9a41aa6로 움직여 18f56eb 앞으로 감기 안 됨 · 맥 말씀 19:43(웹앱 재시작 · 3-3–3-5 먼저 여쭘, main e175217 기록)"
 next: "017 반환 대조(한 파일 · 커밋 하나) → PLN. 맥 테스트 결과 오면 고칠 것 설계"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-017 반환 (7837ebd8)"]
+waiting_for: ["role:mitchell_studio/btsr/pln:19:43 맥 말씀 확인 → 017 덧붙임 2(9a41aa6 위로 · 먼저 여쭘) (be41b33c)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
