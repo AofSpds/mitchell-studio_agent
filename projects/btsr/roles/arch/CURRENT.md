@@ -5,7 +5,7 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "승계 받음 16:51 (새 세션 7621f3de) — RSCH · PLN · PMO에 새 ID 보고, 답 오면 ARCH-011 반환 대조. ARCH-011(묶음 6)은 PMO가 하는 중"
+now: "승계 받음 확인(RSCH · PLN). ARCH-011 반환 기다리는 동안 ARCH-012(4-b) 요청서 준비. ARCH-011(묶음 6)은 PMO가 하는 중"
 next: "새 세션: 받음 → 보고 → ARCH-011 반환 대조 → 012(4-b + 8번) → 013(8-2)"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-011 반환 (5fbbea06)"] (PLN → RSCH, 시안 화면 17과 함께)"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
@@ -30,11 +30,11 @@ verifier: "mitchell_studio/btsr/archv"
 
 ## 넘김 (2026-11-21 16:49 KST 씀 — 옛 세션 d9520b95 → 새 세션 7621f3de, 16:51 받음)
 
-- **받음(16:51, 새 세션 7621f3de)**: 1 읽음(AGENTS · CURRENT · INDEX · AAA v0.14 · rsch knowhow) · 2 이 커밋 · 3 옛 세션 제목 CLOSED · 4 보고 — RSCH a97bebab · PLN(새 세션 be41b33c가 07:50:04 UTC에 열림, 옛 a6fd0155에도) · PMO 5fbbea06 · 5 답 기다림.
+- **받음(16:51, 새 세션 7621f3de)**: 1 읽음(AGENTS · CURRENT · INDEX · AAA v0.14 · rsch knowhow) · 2 이 커밋 · 3 옛 세션 제목 CLOSED · 4 보고 — RSCH a97bebab · PLN(새 세션 be41b33c가 07:50:04 UTC에 열림, 옛 a6fd0155에도) · PMO 5fbbea06 · 5 답 받음 — PLN 현역 be41b33c(옛 a6fd0155 CLOSED) · RSCH 확인(한알께 보고함). PMO에 새 ID 알림(011 반환이 7621f3de로 오게).
 
 - **까닭**: 한알 16:45:26 「네 새세션으로 승계되면 보고 하시고 확인되면 바로 진행하시면 됩니다. 1차가 만들어지면 맥에서 테스트 진행할께요. …」(RSCH 요청서 003 30번, 에이전트 main 60a2ee9 — RSCH가 전함). 앞서 16:05:36 「…지금 작업이 끝나면 새로운 세션으로…」 · 16:21:44 「모두 진행하시고 완결되면 일단 기획안 초안을 제가 확인합니다」. 30번이 바로잡음: **승계는 옛 세션이 `create_agent`로 진행**(한알이 하시는 것이 아님). ARCH는 '지금 하던 일이 끝나는 대로' — 이 세션은 ARCH-011 반환을 기다리는 중이라 하다 만 일 없이 지금 넘김.
 - **옛 세션(이 세션)**: Paseo `d9520b95-4853-46b9-b04b-96199dddc95d` · 작업 공간 `wks_6dc6b9d13807b202` · Claude `384694fd-f946-4121-9161-77042e392294` · claude(이름표 claude-naver) · Opus 5.5 · high. 넘긴 커밋 = 이 칸이 든 커밋.
-- **다른 세션**(바뀌면 새 ID가 알려 옴): PLN `a6fd0155-25ef-4bc7-91b0-394849d6776e`(PLN도 지금 승계 중 — 새 ID가 오면 그쪽으로) · RSCH `a97bebab-51e4-4b70-b968-2177d6fe4f2e` · PMO `5fbbea06-93d9-48b2-8930-e101d4603429`(묶음 6 반환 뒤 아스트라 `codex/gpt-6.2-astra`로 승계 — 새 PMO ID가 오면 그쪽으로).
+- **다른 세션**(바뀌면 새 ID가 알려 옴): PLN `be41b33c-5441-48f7-9202-9bb7c21b13a3`(16:50 승계, 옛 a6fd0155 CLOSED) · RSCH `a97bebab-51e4-4b70-b968-2177d6fe4f2e` · PMO `5fbbea06-93d9-48b2-8930-e101d4603429`(묶음 6 반환 뒤 아스트라 `codex/gpt-6.2-astra`로 승계 — 새 PMO ID가 오면 그쪽으로).
 - **남은 차례(webapp-phase1, BTSR-PLN-002)** — 제품 main `243cff0`(4-a-2까지):
   1. **PMO BTSR-ARCH-011(묶음 6) 반환 대조** — [요청서](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-011_REQUEST_CLAUDE.md) 기준 1–14 · [설계 2.2판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) 9 · 9-1. 제품 가지 fetch → `git archive <가지> | tar -x -C <새 임시 폴더>` → 그 맨 위에서 `env -u PYTHONIOENCODING -u PYTHONUTF8 python -m unittest discover -s app/webapp/tests` → grep 대조 → 반환서 `design/webapp-phase1/WEBAPP_PHASE1_B6_BTSR-PLN-002_RETURN_CLAUDE.md`(꼴은 [4-a-2 반환](design/webapp-phase1/WEBAPP_PHASE1_B4A2_BTSR-PLN-002_RETURN_CLAUDE.md)) → PLN에.
   2. **4-b → PMO BTSR-ARCH-012** — [설계 2.1판](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) **+ 8번(R5.7 판정 둘: devpush 커밋 일반 이름 · 개발자 글 기록 줄임 · MAC_RUN 한 줄)** · [https 한 장](design/webapp-phase1/WEBAPP_PHASE1_B4B_HTTPS_SHEET_CLAUDE.md). 요청서는 ARCH-011 꼴로. `cryptography`가 이 PC에 없음 — 대조 때 따로 만든 가상 환경에 깔아 RFC 8291 시험을 다시 돌림.
