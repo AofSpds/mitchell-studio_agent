@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
 now: "PMO(512aef6d)에 BTSR-ARCH-022(고침 3 — 작업자 사용량 가림 · C8 · 카드 3분, 급함) 03:15. 021은 제품 main에 합쳐짐(main = 5bbe272 · RSCH 02:43 · 요청서 003 61번). 맥의 그 편은 아침 7시 기다림 — 옛 판에서 풀면 다시 가림이라 고침 3 새 판 뒤 한 줄로 풂(PLN에 알림)"
-next: "022 반환 대조(Playwright 깐 곳 · 가짜 작업자가 카드를 되찍는 꼴 · 넷 칸 · C8 · 덧붙임 1 허락 창 줄 · (나) runner.resume_wait_usage() 한 줄) → PLN(합칠 머리 · 새 판 + (나) 한 줄 + 라 맥 읽기 줄). 라: 공식 문서상 computer_use.macos.bundle_ids(allow/deny) · 앱 설정 '항상 허용한 앱'이 있으나 한알이 본 '코덱스는 외부 앱' 창은 바깥에서 띄운 codex exec를 묻는 꼴(openai/codex #20851) — 맥 읽기 결과 뒤 고침 4 · 설정 바꿈은 한알께 먼저. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023"
+next: "022 반환 대조(Playwright 깐 곳 · 가짜 작업자가 카드를 되찍는 꼴 · 넷 칸 · C8 · 덧붙임 1 허락 창 줄 · (나) runner.resume_wait_usage()) → PLN에 반환과 함께 **맥 한 줄 하나**(PLN e618371): 새 판 받기 + 기다리는 일을 지금으로 + 창이 뜨면 맨 위 앱 이름 · 단추 글 적고 한 번 허용 + codex --version · grep -n computer_use ~/.codex/config.toml · ChatGPT 설정 '항상 허용한 앱' 목록(읽기만). config allow는 그 결과 뒤 한알께 · 고침 4는 PLN이 정함. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 023"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-022 반환 (512aef6d)"]
 owner_wait: "-"
 subs: []
