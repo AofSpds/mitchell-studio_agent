@@ -56,3 +56,9 @@ cd ~/mitchell_studio && git fetch origin && git checkout feat/webapp-b1-suggest-
 
 1. **(권고 — ARCH 안)** PMO 세션이 제품 main에 push하는 것을 허락해 주심(Claude Code 권한 설정 — 한알께서 직접). 앞으로의 합치기도 같은 길.
 2. 다른 길 — 예: PMO가 GitHub에 PR을 올리고 한알께서 GitHub 화면에서 합치기를 누르심.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 13:14 KST)
+
+- 한알 13:13:30 「직접 하세요.」([결정 09](WEBAPP_PHASE1_DECISIONS_CLAUDE.md)) → RSCH가 제품 main을 앞으로 감기로 push: **main = `6cfbc5f`** (`e5785b3..6cfbc5f`, 강제 아님 — RSCH 요청서 8번, main `05b0689`). PLN이 13:14에 제품 원격 main 머리 `6cfbc5f`를 fetch로 봄.
+- 위 '여쭐 것 하나'는 이 답으로 닫힘. BTSR-PLN-004는 PMO가 push하지 않아도 됨(같은 커밋).
+- 맥에는 넣지 않음(결정 08). 맥 길(1차 끝에 한 번): `cd ~/mitchell_studio && git fetch origin && git checkout main && git pull --ff-only && launchctl kickstart -k gui/$(id -u)/com.mitchellstudio.upload`
