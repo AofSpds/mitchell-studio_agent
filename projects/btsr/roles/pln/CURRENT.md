@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pln"
 session: "MITCHELL_STUDIO/BTSR/PLN"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA-RULES v0.14(지문 6fef504a)를 AAA main 폴더 C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md에서 읽음(읽기만)"
 state: "ACTIVE — 승계 끝(16:50 KST, 한알 16:45:26 · RSCH 요청서 003 30번): 옛 a6fd0155 → 새 be41b33c(claude · Opus 5.5 · high). ARCH 반환 · 한알 말씀 기다림"
-updated: "2026-11-21T19:14+09:00"
-base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 f457be8"
-now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.20판 · 결정 01–47 · 기획안 초안 1.9판(한알께 드림). 제품 main f457be8까지 합침 — 웹앱 1차 모두(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b · 8-2 · IVA 고침 · 맥 테스트 글). 한알이 맥 테스트(세 회차 · 실행 세션 「코덱스 excutor」)를 하실 차례. 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
+updated: "2026-11-21T19:16+09:00"
+base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 07cd3fc"
+now: "웹앱 1차(캡컷 길) — 요구 webapp-phase1 2.20판 · 결정 01–47 · 기획안 초안 1.9판(한알께 드림). 제품 main 07cd3fc까지 합침 — 웹앱 1차 모두(작업자 모델 · 묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 · 4-a · 4-a-2 · 6 · 4-b · 8-2 · IVA 고침 · 맥 테스트 글 + 덧붙임). 한알이 맥 테스트(세 회차 · 실행 세션 「코덱스 excutor」)를 하실 차례. 8-2 반환 받음(가지 94d4522) → RSCH에 반환 · 합치기는 IVA 판정 뒤(결정 41). 웹앱 1차 묶음 구현 끝. 설계 끝 · 차례 기다림: 4-b(012 — R5.7 판정 둘 포함) · 8-2(013 — 템플릿 r2 한 장 답 받음). 맥 테스트는 1차를 다 만든 뒤 여러 회차(결정 39 — 08의 '한 번' 대체)"
 next: "ARCH 반환이 오면 요구 2.20판 R과 대조 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(ed5ef600)에 '반환' · 합치기는 PLN이 반환서에 조건(main · 가지 머리 · 앞으로 감기)을 적어 정하고 RSCH가 확인 · push(결정 05 · 13) · 합쳐지면 ls-remote로 보고 반환서에 덧붙임 + 기획안 초안의 '만듦' 표시 판 올림. RSCH '왔다'(요청서 003 N번)는 결정 · 요구 판으로 적고 ARCH에 알림. 남은 차례(결정 41): 8-2 반환함 → IVA 검증(RSCH 005) → 판정 뒤 맥 테스트 글(ARCH-014, 94d4522 위 따로 가지 · 글만)과 함께 RSCH가 main 합침 → RSCH가 한알께 맥에서 하실 일 → 1차 끝 맥 시험(맥 시나리오는 RSCH S13이 지금 씀 · 휴대폰 시연은 1차 뒤). 7은 뒤로. 그 밖은 스스로 시작하지 않음"
-waiting_for: ["role:mitchell_studio/btsr/rsch (ed5ef600):맥 테스트 글 덧붙임 07cd3fc 앞으로 감기 f457be8..07cd3fc", "owner(via rsch ed5ef600):맥 테스트 결과 · 막힘", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
+waiting_for: ["owner(via rsch ed5ef600):맥 테스트 결과 · 막힘", "owner(via rsch ed5ef600):기획안 초안을 보시고 주실 말씀"]
 owner_wait: "한알이 기획안 초안(WEBAPP_PHASE1_PLAN_DRAFT_CLAUDE.md 1.9판)을 보심 — 말씀이 오면 그 글 · 요구 · 결정을 고침"
 subs: []
 parent: "미정 — 한알 말씀 대기 (규칙 5의 자리는 도메인 DPM. Paseo 작업 공간 목록에 MITCHELL_STUDIO DPM 없음, 22:24 KST 확인)"
@@ -64,7 +64,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **43번 받음 → 결정 46** (에이전트 main `27fec59`; 한알 18:41:14 「아 네 알겠습니다. 멀티 에이전트 작업은 작업 의뢰서에 필요할때 쓰시고 저한테 확인을 받으시면 됩니다」) — 여러 에이전트로 나눠 하는 일은 의뢰서에 '무엇을 · 몇 개로 · 어느 실행기 · 생각 수준'을 적고 열기 전에 한알 확인(RSCH가 여쭘). PMO 보조 넷은 그대로 마침 · 015에서 더 열지 않음. ARCH에 알림(→ PMO).
 - **IVA 고침 반환 받음 → RSCH에 반환** (ARCH `btsr/arch` `96871c0`, 18:52) — **합칠 머리 하나 `feat/webapp-iva-fix-20261121` `f457be8`**(코드 `0bce387` · 바탕 94d4522 · 137 OK) — 가 1 · 가 2 · 나 3 · 나 4 · 나 5 고침 · 나 6은 PMO가 이미 함(되돌리지 않음) · 맥 테스트 글 결정 44 세 곳 · IVA 성공 기준 셋. 합침 조건: main `7127393` · 머리 `f457be8` · 앞으로 감기(18:50 ls-remote) · RSCH가 `94d4522..f457be8` 차이만 확인. 94d4522 · 28e779e는 대체. [WEBAPP_PHASE1_IVA_FIX_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_RETURN_CLAUDE.md).
 - **44번 받음 — 웹앱 1차 모두 합쳐짐: 제품 main `f457be8`** (RSCH 19:02 · 137 OK 다시 봄 · 처음 한 번 실패 1(출력 없음, 뒤 다섯 번 OK) · PLN 19:04 ls-remote) → 결정 47(한알 18:55:45 「실행자 세션명은 코덱스 excutor입니다. 반영해주세요.」) · 요구 2.20판 · 기획안 초안 1.9판(1차 모두 만듦) · 맥 테스트 글 덧붙임 둘(세션 이름 · 1회차 한 줄은 원격 main의 글을 읽게) → ARCH에 [WEBAPP_PHASE1_MACTEST_DOC_ADD1_REQUEST_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD1_REQUEST_CLAUDE.md). RSCH가 한알께 맥에서 하실 일을 드림.
-- **맥 테스트 글 덧붙임 반환 받음 → RSCH에** (ARCH `btsr/arch` `abf7c76` BTSR-ARCH-016, 19:14) — 제품 가지 `feat/webapp-mac-test-doc-add1-20261121` `07cd3fc`(f457be8 위 커밋 하나 · MAC_RUN 한 파일 +5 −1). 조건: main `f457be8` · 머리 `07cd3fc` · 앞으로 감기(19:13 ls-remote). 요청서 끝 '반환 — PLN 대조'. RSCH가 그 차이만 확인(IVA 다시 안 함).
+- **맥 테스트 글 덧붙임 반환 받음 → RSCH에** (ARCH `btsr/arch` `abf7c76` BTSR-ARCH-016, 19:14) — 제품 가지 `feat/webapp-mac-test-doc-add1-20261121` `07cd3fc`(f457be8 위 커밋 하나 · MAC_RUN 한 파일 +5 −1). 조건: main `f457be8` · 머리 `07cd3fc` · 앞으로 감기(19:13 ls-remote). 요청서 끝 '반환 — PLN 대조'.
+- **45번 받음 — 맥 테스트 글 덧붙임 합쳐짐: 제품 main `07cd3fc`** (RSCH 19:14 · PLN 19:16 ls-remote). 한알 19:07:25 「기획안  깃헙 미첼 스튜디오에서도 볼수 있나요」 · 19:14:48 「아 기획안 최종본 일단 url주세요」 — RSCH가 1.9판 주소(에이전트 저장소 `btsr/pln`)를 드리고 '제품 저장소에도 올릴지(1 그대로 · 2 올림)'를 여쭘 · 답 아직(2면 다음 번호 — PLN이 제품 저장소로 옮기는 길을 그때 정함). RSCH가 그 차이만 확인(IVA 다시 안 함).
 
 ## (끝남) 넘김 준비 16:09 KST — 한알이 바꾸신다는 읽기(23번)는 30번에서 바로잡힘
 

@@ -29,3 +29,7 @@
 - PLN이 직접 본 것(19:13 KST, 제품 저장소 fetch · ls-remote · merge-base · diff만): 원격 main `f457be8` · 가지 머리 `07cd3fc` · main이 그 조상(앞으로 감기) · 더한 줄 '이끄는 ChatGPT = 맥의 세션 「코덱스 excutor」' 두 자리 · 1회차 한 줄이 1번 그대로(「~/mitchell_studio에서 git fetch origin만 하고(pull은 하지 말고), git show origin/main:app/webapp/MAC_RUN_PHASE1.md 로 나온 글의 공통과 1회차대로 해 줘.」) · 2 · 3회차 줄 그대로.
 - **합치기 — PLN이 정함: RSCH가 차이가 그 한 파일뿐인지 보면 합침.** 조건: 제품 main `f457be8` 그대로 · 가지 머리 `07cd3fc`(앞으로 감기). 다르면 합치지 말고 알려 주세요. push는 RSCH(결정 13).
 - 다음: 합치면 한알 1회차 한 줄이 위 줄로 됨. ARCH 차례 끝 — 맥 테스트 결과가 오면 이어 감.
+
+## 덧붙임 — 합쳐짐 (2026-11-21 19:16 KST)
+
+- RSCH 확인 · 합침: 에이전트 저장소 main `44d9804` RSCH 요청서 003 45번 — 제품 main 앞으로 감기 `f457be8..07cd3fc`(19:14 KST · 한 파일 +5 −1을 다 읽음). PLN이 19:16에 제품 원격 main 머리 = `07cd3fc`를 ls-remote로 봄.
