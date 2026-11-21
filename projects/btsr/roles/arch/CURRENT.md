@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-21T15:30:00+09:00"
 base_commit: "fa2b7aa"
 now: "PLN 대조 끝(d872789) — 4-a 2판 → PMO에 BTSR-ARCH-009(15:30). 4-b 받음(4-a 반환 · 알림 물음 답 뒤 PMO). 6 2.1판(기준 4 · 5-1 바로잡음, R6.3 안쪽 판정)"
-next: "ARCH-009 반환 대조 → PLN에. 그 뒤 4-b(알림 답 뒤) · 6을 PMO에. 17번이 오면 4-a-2 설계. 요청 번호 다음 010"
+next: "ARCH-009 반환 대조 → PLN에. 4-a-2 설계는 S8의 화면 7 · 9 · 돌아간 Send 새 시안과 여쭘 중 셋(K4 · K6 · 건의 push 가지)이 온 뒤 — 그 사이 바뀔 곳이 커서. 4-b(알림 답 뒤) · 6(K4 답 뒤)을 PMO에. 요청 번호 다음 010"
 waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-009 반환 (5fbbea06)", "role:mitchell_studio/btsr/pln:RSCH 요청서 003 17번(막힘 · 틈새)", "owner:4-b 알림 글 셋 · cryptography"] (설계 3번, PLN → RSCH)", "owner:묶음 4-b 알림 글 셋 · 맥에 cryptography (설계 7번, PLN 9038754 → RSCH)"]
 owner_wait: "-"
 subs: []
@@ -71,6 +71,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 묶음 5 + 3-2 반환 PLN 받음(`btsr/pln` cb548e0) → **제품 main `3072e7e`**(RSCH push, 에이전트 main d766ed3). 남은 것 1 · 2는 ARCH-009에(PLN 받음).
   - 묶음 6: [설계 1판](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) (14:39) — 고칠 점 → 서버가 `edit`(다음 판)을 차례표에 · 판마다 새 이름 캡컷 프로젝트를 다시 만듦(복제 안 함) · 완성 = 승인 + 규격 · 규격 다른 판은 다시 뽑기 · 저장 · 올리기는 승인한 규격 맞는 판 · 판 고르기 · 이번 판 설정 줄 · 고치기 3번. 4-a 반환 뒤 PMO에.
   - **4-a 보류**(PLN 14:40, `btsr/pln` ba70cc7): 한알 「탭 이름 왜 한글인가요?」 → R1.6 다시 여쭘((가) 영어 그대로 권고 · (나) 진행 기록 아래/위/뺌). 화면 참고는 시안 2판(`v2/`, 992a833) — 2판에 없는 것은 만들지 않음 → 4-a 7번 고르는 칸 뺌. 고칠 것은 설계 머리 ⚠ 칸에. 4-b 물음 둘은 (가)(나) 뒤.
+  - 요구 2.4판(`btsr/pln` ba05ee5, RSCH 요청서 003 18번 main 5363184): 결정 29(K1 — 막힌 Send 화면 7 · 화면 9에 「처음부터 시작」 → 한 번 더 묻고 지금 편을 멈추고 Send로 돌아감, 올린 자료 · 요청 글 그대로) · 30(K3 — 개발자는 멈춘 편을 이어 만들지 않음, R5.6 잇기 거둠, 만들던 것은 남김) · R2.7 [안] 보내는 중 화면(「보내는 중 3 / 5」 + 바 + 「그만 보내기」 / 「보내다 끊겼어요」 + 「다시 보내기」). **ARCH가 정함(4-a-2 설계에 적을 것): `jobs.py resume`은 걷음** — 결정 30으로 이어 만들기 길이 없어지고, 남기면 개발자가 옛 편을 이어 만들어 새 편과 겹침(K3)이 다시 생김. 코드 · 시험만 걷고 git 이력에 남음. 같은 판 안의 저절로 다시(막힘 ① 다시 한 번)는 그대로. 여쭘 중: K4 · K6 · 건의 push 가지. S8이 화면 7 · 9 고치고 '돌아간 Send' 더함.
   - 요구 2.3판(`btsr/pln` 5fe065a, 결정 28 R5.7 — 개발자에게 넘어간 편의 까닭을 깃헙 건의 폴더에 push, 가지는 여쭘 중) → 4-a-2와 함께(18번 뒤). S9 재검토 K1–K6(확정 전, main 70c85e4) 미리 봄 — **K2(「더 보내기」가 막힌 Send로 감)는 ARCH-009가 만드는 결함이라 요청서에 덧붙임 기준 3-1**, K1 · K3 · K5 → 4-a-2, K4(Post 고칠 점) → 묶음 6, K6(http) → 4-b.
   - PLN 대조(`btsr/pln` d872789): 4-a 받음 → [BTSR-ARCH-009](design/webapp-phase1/WEBAPP_PHASE1_BTSR-ARCH-009_REQUEST_CLAUDE.md) PMO에(15:30, 바탕 main 3072e7e) · 4-b 받음 · 6 받음 — 기준 4(승인 단추 있고 opinion) · 5-1 바 네 칸 바로잡아 2.1판 · R6.3은 안쪽 기록(요구 2.2판).
   - **설계 2판** (15:28): [4-a](design/webapp-phase1/WEBAPP_PHASE1_B4A_DESIGN_CLAUDE.md) 다시 씀(한 번에 한 편 · `busy()` — 만드는 중 · 미첼 확인 기다림만, 개발자에게 넘어가면 Send 켜짐 · 넘어간 편은 새로 보내면 화면에서 빠짐 · 하는 일 한 줄 + 아홉 칸 바 n/9 · 여러 편 화면 · 길 걷기를 **이 건에**(ARCH가 정함) · events · now_line은 안쪽 · ? 표 화면 5 · R1.7 글 걷기 · MAC_RUN 물음 1) · [4-b](design/webapp-phase1/WEBAPP_PHASE1_B4B_DESIGN_CLAUDE.md) 4-1만(켜기는 Manual 탭) · [6](design/webapp-phase1/WEBAPP_PHASE1_B6_DESIGN_CLAUDE.md) 5 · 5-1 · 6 · 7(3판 화면 10–13, 설정 줄은 안쪽 — R6.3 PLN께 짚음). 요구 2.1판(`btsr/pln` 37b73bf, 결정 27) 반영.
