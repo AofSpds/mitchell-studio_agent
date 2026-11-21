@@ -22,7 +22,10 @@ def kind(o):
             return "HANAL"
     elif t == "attachment":
         a = o.get("attachment", {})
-        if a.get("type") == "queued_command" and not str(a.get("prompt", "")).startswith("<"):
+        pr = a.get("prompt", "")
+        if isinstance(pr, list):
+            pr = "".join(b.get("text", "") for b in pr if isinstance(b, dict))
+        if a.get("type") == "queued_command" and pr and not str(pr).startswith("<"):
             return "HANAL"
     elif t == "assistant":
         c = o.get("message", {}).get("content", [])
