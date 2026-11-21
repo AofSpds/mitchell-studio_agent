@@ -57,7 +57,7 @@ def main():
                     p = a.get("prompt")
                     if isinstance(p, list):
                         p = "".join(b.get("text", "") for b in p if isinstance(b, dict))
-                    kind = "OTHER_Q" if str(p).startswith("<paseo-system") else "HANAL_Q"
+                    kind = "OTHER_Q" if str(p).startswith("<") else "HANAL_Q"  # <paseo-system> · <task-notification> 등은 말씀 아님
                     out.append((t, kind, a.get("source_uuid"), p if kind == "HANAL_Q" else str(p)[:1500]))
             elif typ == "assistant":
                 c = o.get("message", {}).get("content", [])
