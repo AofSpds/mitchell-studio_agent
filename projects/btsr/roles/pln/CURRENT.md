@@ -6,7 +6,7 @@ state: "ACTIVE — 승계 끝(13:57 KST): 새 Paseo a6fd0155 · Claude 1a72e654,
 updated: "2026-11-21T13:59+09:00"
 base_commit: "fa2b7aa (이 가지가 갈라 나온 main) — 제품 main 지금 32b55dc"
 now: "웹앱 1차(캡컷 길) 진행 중 — 제품 main 32b55dc까지 합침(작업자 모델 · 묶음 1 · 2 + 8 · 1-1 · 3). ARCH는 묶음 5 + 3-2 설계. 한알께 여쭐 것 없음. 맥에는 1차 끝에 한 번(결정 08)"
-next: "ARCH 반환이 오면 요구 1.7판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(14d04ad1)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
+next: "ARCH 반환이 오면 요구 1.8판 R과 대조해 받기 → requirements/webapp-phase1/에 반환서(6항목 + 맥 길) → RSCH(a97bebab)에 알림 · 합치기는 PLN이 정해 반환서에 조건을 적음, RSCH가 확인 · push(결정 05 · 13). 남은 차례: 3 → 5 + 3-2 → 4-a → 4-b(https) → 6, 7은 뒤로. 1차 끝에 맥 시험(진짜 claude · MAC_RUN_B2 · 화면 글 · python 3.9). 그 밖은 스스로 시작하지 않음"
 waiting_for: ["role:mitchell_studio/btsr/arch:묶음 5 + 3-2 반환 (새 ARCH Paseo d9520b95)"]
 owner_wait: "0 — 컴퓨터 유즈 사전 승인 받음(13:57:21 「1 1 1 1 1」, 결정 15)"
 subs: []
@@ -38,6 +38,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **받음** (2026-11-21 13:57 KST) — 새 PRIMARY: Paseo 에이전트 `a6fd0155-25ef-4bc7-91b0-394849d6776e`(제공자 `claude`, 부모 `071c15f3`) · Claude 세션 `1a72e654-b49e-4562-8c91-3bba52a6dc6c` · Opus 5.5 (`claude-opus-5-5`) high. list_agents와 transcript에서 확인. 옛 071c15f3 → CLOSED.
 - **한알 답 다섯 받음** (RSCH 요청서 003 12번, 에이전트 저장소 main `ee3d6a8`; 13:57:21 「1 1 1 1 1」) — 결정 15(컴퓨터 유즈 사전 승인, CU_ASK 범위 그대로 · 돌리는 것은 1차 끝 맥 시험) · 16 탭 · 단계 이름 한글로 · 17 템플릿 고르는 칸 지금 숨김 · 18 규격 다른 판 「사진 앱에 저장」 막음 · 19 원고 단추 「이 원고로 갈게요 →」 → 요구 1.8판(R1.6 · R2.5 · R6.5 · R8.4). 시안 S6(`00e3845`)은 화면 참고. ARCH(d9520b95)에 알림. 열린 일 1 끝.
 - **ARCH가 1.8판 받음** (`btsr/arch` `232ba12` `WEBAPP_PHASE1_REQ1-8_RECEIVED_CLAUDE.md`) — 15 → 묶음 5 + 3-2(ARCH-008 그대로) · 16 R1.6 · 17 R8.4 · 19 R2.5 → 묶음 4-a(새 PMO 건 ARCH-009, 낱말 [안]을 RSCH → 한알께 보여 드린 뒤 보냄) · 18 R6.5 → 묶음 6.
+- **RSCH 승계** (14:03 KST 알림) — 새 RSCH Paseo `a97bebab-51e4-4b70-b968-2177d6fe4f2e`(Fable 5.2), 옛 14d04ad1 곧 CLOSED. 앞으로 RSCH 알림 · 반환은 새 ID로.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
@@ -94,6 +95,6 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 |---|---|---|---|---|
 | MITCHELL_STUDIO/BTSR/PLN | PRIMARY | Claude (Paseo a6fd0155, Claude 세션 1a72e654, 제공자 claude — 11-21 13:57 승계) | ARCH 반환 · 한알 답 기다림 | 이 폴더 |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo 071c15f3, Claude 세션 269c8b89, claude-google) | 닫힘 11-21 13:57 | 이 폴더 |
-| MITCHELL_STUDIO/BTSR/RSCH | 아래 역할 PRIMARY (요청을 보내 온 쪽) | Claude (Paseo 14d04ad1 — 11-21 03:32:07 한알 말씀으로 승계, 옛 7993ff28 CLOSED; RSCH CURRENT main에서 확인) | 알림 · 반환은 14d04ad1로 | `../rsch/` (main) |
+| MITCHELL_STUDIO/BTSR/RSCH | 아래 역할 PRIMARY (요청을 보내 온 쪽) | Claude (Paseo **a97bebab-51e4-4b70-b968-2177d6fe4f2e** — 11-21 14:01:51 「네 페이블로 승계할께요.」 승계, Fable 5.2 · claude, get_agent_status로 확인; 앞 14d04ad1 — 11-21 03:32:07 한알 말씀으로 승계, 옛 7993ff28 CLOSED; RSCH CURRENT main에서 확인) | 알림 · 반환은 a97bebab로 | `../rsch/` (main) |
 | MITCHELL_STUDIO/BTSR/ARCH | 아래 역할 PRIMARY | Claude (Paseo d9520b95 — 11-21 승계, 옛 9d298a54 CLOSED, `btsr/arch` c8d0b55) | PLN-001 반환함(6cf028a) → PLN이 받아 RSCH에 반환 · PLN-002 받음(btsr/arch c288301, 묶음 1 설계 시작 — PMO에는 ARCH-001 반환 뒤) | `../arch/` (가지 `btsr/arch`) |
 | MITCHELL_STUDIO/BTSR/PLN CLOSED | 앞 세션 | Claude (Paseo) | 닫힘 — Paseo 에이전트 `769642ae`, Claude 세션 `6123ff97` (옛 기록 기준), Paseo 작업 공간 `wks_b17624602f48a73b`(제목 PLN-CLOSED) | [archive/](archive/) |
