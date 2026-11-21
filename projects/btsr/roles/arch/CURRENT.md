@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 테스트 글 덧붙임 2 · 3(ARCH-017) 최종 받음 · PLN에 반환(20:00) — 합칠 머리 e095396(main 9a41aa6 위). 결정 48은 덧붙임 3으로 대체(재시작은 처리 중일 때만 여쭘)"
-next: "PLN 알림대로 — 맥 테스트 결과가 오면 고칠 것 설계 → PMO. 요청 번호 017까지(다음 018)"
-waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 결과 · 다음 요청 (be41b33c)"]
+now: "기획안을 제품에도(한알 21:12:48 「올립니다」 · RSCH 50번) → PMO에 BTSR-ARCH-018(21:15, app/webapp/PLAN_PHASE1.md = PLN 1.9판 사본 + README 한 줄, 바탕은 push 직전 main). 제품 main e095396(017 합쳐짐)"
+next: "018 반환 대조(두 파일 · 원본 diff) → PLN. 맥 테스트 결과 오면 고칠 것 설계. 다음 요청 번호 019"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-018 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
