@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "웹앱 1차 모두 합쳐짐 — 제품 main f457be8(RSCH 19:02, 44번). 맥 테스트 글 덧붙임 둘(결정 47 세션 이름 「코덱스 excutor」 · 1회차 한 줄) → PMO에 BTSR-ARCH-016(19:05)"
-next: "016 반환 대조(한 파일 · 바뀐 줄 둘) → PLN. 그 뒤 맥 테스트 결과 오면 고칠 것 설계"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-016 반환 (7837ebd8)"]
+now: "맥 테스트 글 덧붙임 둘(ARCH-016) 받음 · PLN에 반환(19:13) — 합칠 머리 07cd3fc(main f457be8 위 한 커밋). 웹앱 1차 ARCH 차례 모두 끝, 맥 테스트 기다림"
+next: "PLN 알림대로 — 맥 테스트 결과가 오면 고칠 것 설계 → PMO"
+waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 결과 · 다음 요청 (be41b33c)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -62,6 +62,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 결정 44(한알 18:33:20 「네」 — 웹앱 Claude 명령줄이 받은 소재를 읽음 허락) · 결정 45(18:33:56 「딱 한명이 쓰는 개인 앱이니까 감안해서 해주세요」 — 여러 사람용 막기 · 확인을 늘리지 않음, 편의 먼저) → 015 덧붙임 2(18:35).
   - 결정 46(한알 18:41:14 「…멀티 에이전트 작업은 작업 의뢰서에 필요할때 쓰시고 저한테 확인을 받으시면 됩니다」, RSCH 43번): 서브 세션 · 보조 여럿은 열기 전에 '무엇을 · 몇 개로 · 실행기 · 생각 수준'을 적어 PLN → RSCH → 한알 확인. PMO(7837ebd8)에 전함. **ARCH도 하위 에이전트 여럿을 쓰려면 먼저 확인 받음.**
   - **IVA 고침**: PMO 반환 `btsr/pmo` a6e3beb(가지 `feat/webapp-iva-fix-20261121` f457be8, 바탕 94d4522) → ARCH 대조(137 OK skip 2 · cryptography 137 OK · grep 가1 · 가2 · 나3 · 나4 · 나5 · 글) → [반환](design/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_BTSR-PLN-002_RETURN_CLAUDE.md) 18:49.
+  - 웹앱 1차 모두 제품 main f457be8(RSCH 19:02 · 44번). 맥 테스트 글 덧붙임(결정 47): PMO 반환 `btsr/pmo` bebc290(07cd3fc) → ARCH 대조(한 파일 +5 −1 · 137 OK skip 2) → [반환](design/webapp-phase1/WEBAPP_PHASE1_MACTEST_DOC_ADD1_BTSR-PLN-002_RETURN_CLAUDE.md) 19:13. 요청 번호 016까지(다음 017).
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
