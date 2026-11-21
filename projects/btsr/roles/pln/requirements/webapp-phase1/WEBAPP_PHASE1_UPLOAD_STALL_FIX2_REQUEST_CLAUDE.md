@@ -46,3 +46,20 @@
 - **이번에는 고치지 않음** (오늘 겪으시면 그때 고침 — 결정 45 · 과검증 아님): E5(같은 사진을 두 번 고르면 두 장이 들어감) · E33(안내 글이 잠깐 겹침) · E4(문서 · 소리 파일을 섞어도 알리지 않음 — 아이폰 고르기 창은 사진 · 영상만 보여 줌).
 - 진짜 아이폰에서만 볼 것 셋은 오늘 한 장에 넣음(PLN).
 - ARCH 한 줄 (btsr/arch `b7bdd8c` · BTSR-ARCH-021 덧붙임 1): PMO에 지금 더함 · 같은 가지 `feat/webapp-upload-stall2-20261122`에 이어서. 될 것 5(「더 보내기」 · 「사진 다시 올리기」를 Send와 같은 올리기로) · 6(`upload_check`가 `_2` · `_3` 붙은 것까지 견줌) · 7(`manual-webapp.md` Face 줄 글만) · 8(넣을 수 있으면). 안 될 것 없음. **합칠 때 03:15 → 03:40 KST쯤** — 휴대폰 테스트 전에 됨. PLN이 RSCH에 넘김.
+
+## 반환 — PLN 대조 (2026-11-22 02:41 KST)
+
+- ARCH 반환 `btsr/arch` `1620640` `projects/btsr/roles/arch/design/webapp-phase1/WEBAPP_PHASE1_UPLOAD_STALL2_BTSR-PLN-002_RETURN_CLAUDE.md` (BTSR-ARCH-021 + 덧붙임 1). **받음.**
+- 결과: 제품 가지 `feat/webapp-upload-stall2-20261122` **`5bbe272`** — main `8b0d084` 위 커밋 넷(926c1a8 · 9722fbc · 0285ab4 · 5bbe272) · 네 파일뿐(`app/webapp/server.py` +17 −9 · `app/webapp/static/app.html` +146 쪽 · `agents/creative_director/manual-webapp.md` 두 줄 · `app/webapp/tests/test_upload_stall.py` 새 시험 11개). 새 화면 · 새 단추 0. ARCH: Playwright + cryptography 자리 169 OK 건너뜀 0(390px Chromium · WebKit) · 기본 파이썬 169 OK skipped 32.
+- 됨의 기준 대조(PMO 맥락 약 90%에서 만든 것으로 보고 하나씩 — ARCH 반환 · PLN이 diff로 본 것):
+  1. `send_json`이 200이 아니면 POST · PUT(401 · 403은 어떤 요청이든) 연결을 닫음 — 시험 `test_rejected_post_closes_connection_then_pin_page_loads`(같은 연결로 다음 GET → PIN 화면) ✔
+  2. 보내는 중 화면을 떠나도 묶음 · 요청 글을 sessionStorage에 남김 → 「보내던 것이 있어요 — 사진 · 영상을 다시 골라 주세요」 · 받은 것 건너뜀 — `test_reload_resumes_one_batch_and_skips_received` ✔ (홈 화면 앱을 아예 닫았다 열면 남는지는 진짜 아이폰에서 — 오늘 한 장 '휴대폰에서만 볼 수 있는 것' 첫째)
+  3. 끊긴 파일은 0으로 · 막대 = 다 받은 파일 수 — `test_failed_second_file_shows_one_third`(33%) ✔ (다시 고르면 그 파일을 처음부터 보내므로 맞는 표시 — ARCH 받음)
+  4. 「맥에 연결할 수 없어요. 휴대폰 와이파이 · Tailscale과 맥북을 확인해 주세요.」 — `test_offline_send_mentions_wifi_tailscale_and_mac` ✔
+  5. 「더 보내기」 · 「사진 다시 올리기」도 Send와 같은 올리기(끊음 · 한 번 스스로 · 다시 고르기 · 받은 것 건너뜀 · PIN 뒤 같은 물음으로) — `test_job_more_stall_reselect_skips_numbered_photos` · `test_job_blurry_stall_retries_and_finishes` · `test_job_pin_returns_to_same_question_and_skips_received` ✔
+  6. `upload_check`가 `_2` · `_3` 붙은 것까지 견줌(`numbered_paths`) — `test_received_check_finds_third_numbered_name` ✔
+  7. Manual Face 줄: 가진 사진은 처음 보낼 때 · 「다시 만들기」 2번까지(Daily 1도 「이 원고로 갈게요 →」로 맞춤) — `test_manual_face_matches_remake_limit_and_initial_send` ✔
+  8. 물음표 · 건의하기 · 판 고르기 누름 자리 44 이상 · 단추 글 `word-break:keep-all` — `test_large_text_touch_targets_and_whole_button_words` ✔
+- PLN이 직접 본 것(02:41 KST, 제품 저장소 fetch · ls-remote · merge-base · diff · grep만): 원격 main `8b0d084` · 가지 머리 `5bbe272` · main이 그 조상(앞으로 감기) · 네 파일 · 위 값과 글 · 시험 이름 11개. 시험은 다시 돌리지 않음.
+- **합치기 — PLN이 정함: RSCH가 차이를 읽고 Playwright 깐 곳에서 시험을 다시 돌리면 합침(IVA 다시 안 함).** 조건: 제품 main `8b0d084` 그대로 · 가지 머리 `5bbe272`(앞으로 감기) · push 직전 main 다시 봄 — 움직였으면 합치지 말고 PLN에. ⚠ Playwright 없이 돌리면 건너뜀 32 — 건너뜀 0을 봄. 합친 뒤 한알이 맥에 새 판 받기 한 줄(오늘 한 장 1번 줄 그대로 — 1-3 다시). `manual-webapp.md`가 `agents/` 폴더라 맥 사본의 stash `before-mactest`(agents/ 14개)를 되살리지 않음.
+- PMO 승계 · 서브 세션: ARCH · PMO 생각 같음 — 같은 코드는 PRIMARY 하나 · 크거나 따로 검증할 일만 의뢰서 + 한알 확인(결정 46). PLN도 같음.
