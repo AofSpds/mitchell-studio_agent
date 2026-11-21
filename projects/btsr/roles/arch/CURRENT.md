@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "IVA 부적합(btsr/iva 7915afd) 고침 → PMO(7837ebd8)에 BTSR-ARCH-015 (18:19, 바탕 94d4522 · 가1 · 가2 · 나3 · 나4+A1 · 나5 · 나6 작은 것 + 맥 테스트 글 다시 얹기). 어림 19:40 KST 합침(PLN에 알림)"
-next: "015 반환 대조(코드 머리 · 글 머리 · 됨마다 시험 · 덧붙임 1 · 2) → PLN"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-015 반환 (7837ebd8)"]
+now: "IVA 고침(ARCH-015) 받음 · PLN에 반환(18:49) — 합칠 머리 f457be8(코드 0bce387 · 글 f457be8), main 7127393에서 앞으로 감기. RSCH가 차이 확인 뒤 합침"
+next: "PLN 알림대로 — 맥 테스트(한알 · 맥 ChatGPT 세 회차) 결과가 오면 고칠 것 설계"
+waiting_for: ["role:mitchell_studio/btsr/pln:IVA 고침 반환 받음 · 합침 (be41b33c)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
@@ -61,6 +61,7 @@ verifier: "mitchell_studio/btsr/archv"
   - 한알 18:27:53 「그거 안막아도 되어요 그런거 필요없습니다. 개인앱이예요.」(RSCH 41번): 015에서 나 6 뺌 → 015 덧붙임 1(18:29). 화면 글 [안] 둘 확정.
   - 결정 44(한알 18:33:20 「네」 — 웹앱 Claude 명령줄이 받은 소재를 읽음 허락) · 결정 45(18:33:56 「딱 한명이 쓰는 개인 앱이니까 감안해서 해주세요」 — 여러 사람용 막기 · 확인을 늘리지 않음, 편의 먼저) → 015 덧붙임 2(18:35).
   - 결정 46(한알 18:41:14 「…멀티 에이전트 작업은 작업 의뢰서에 필요할때 쓰시고 저한테 확인을 받으시면 됩니다」, RSCH 43번): 서브 세션 · 보조 여럿은 열기 전에 '무엇을 · 몇 개로 · 실행기 · 생각 수준'을 적어 PLN → RSCH → 한알 확인. PMO(7837ebd8)에 전함. **ARCH도 하위 에이전트 여럿을 쓰려면 먼저 확인 받음.**
+  - **IVA 고침**: PMO 반환 `btsr/pmo` a6e3beb(가지 `feat/webapp-iva-fix-20261121` f457be8, 바탕 94d4522) → ARCH 대조(137 OK skip 2 · cryptography 137 OK · grep 가1 · 가2 · 나3 · 나4 · 나5 · 글) → [반환](design/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_BTSR-PLN-002_RETURN_CLAUDE.md) 18:49.
 - **알아 둘 것(이 PC · 이 일에서 배운 것)**:
   - 한국 시각은 PowerShell `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'Korea Standard Time')`. 글에 시각 자리('15:5x')를 먼저 적고 나중에 `sed`로 채우는 길을 썼음 — 커밋 전에 `grep 'x KST'`로 남은 것이 없는지 봄.
   - 제품 저장소(dev 폴더 `mitchell-studio`)는 `git fetch` · `show` · `grep` · `archive`로만 — 그 작업 사본은 건드리지 않음. 시험은 **저장소 전부를 풀어서**(`test_words`가 매뉴얼을 읽음), **환경 값 없이**.
