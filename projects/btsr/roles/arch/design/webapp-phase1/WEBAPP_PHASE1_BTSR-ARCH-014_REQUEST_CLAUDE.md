@@ -45,3 +45,11 @@ S13 3판을 바탕으로, **맥의 ChatGPT(이끄는 쪽)가 이 글만 읽고 �
 ## 5. 반환
 
 6항목 + **회차마다 한알이 넣으실 한 줄 목록**(PLN 6번) + 기준 1 · 8 · 10의 표. 반환은 ARCH(Paseo 7621f3de)로.
+
+## 덧붙임 1 — S13 3판 끝까지 읽은 것 (17:56 KST, ARCH 7621f3de · 본문은 그대로)
+
+- **까닭**: PLN 알림(RSCH 요청서 003 38번, 에이전트 main 81d5aad) — RSCH가 S13 3판(ffe451d)을 끝까지 읽음. 같은 차례에 넣어 주세요.
+- **12 (물음 차례)**: 얼굴이 보이는 사진도 시술 전 사진도 없을 때 물음 차례는 **코드(`intake.compute`) 그대로 화면 17 → 화면 4**(PLN 받음). 2-11의 '화면 4 → 17'을 17 → 4로.
+- **13 (작업자 명령줄 값의 자리 — ARCH가 정함)**: 1-5에서 찾은 값(`worker_model.py`의 `MODEL_CLI` · `EFFORT_CLI` · `PERMISSION_CLI`)은 맥 사본에만 넣고 커밋하지 않으며, **저장소 밖 사본 `~/oc-test/worker_model.local.py`를 원본으로 둔다**(1-5 끝에 `cp`). 맥 사본을 받는 걸음(1-3 · 3-1 등 `git pull --ff-only` 앞)마다: ① `cp app/webapp/worker_model.py ~/oc-test/worker_model.local.py` ② `git checkout -- app/webapp/worker_model.py` ③ 받기 ④ `git diff <받기 전 HEAD> HEAD -- app/webapp/worker_model.py`가 비었으면 사본을 되씌움, 비지 않았으면 되씌우지 말고 멈추고 한알께 한 줄(값을 새 꼴에 다시 넣을지). 1-2의 '고치지 않은 파일'에서는 이 파일만 뺌(본문 기준 6). 값은 결과에 그대로 적음(키 · 비밀 아님 — 명령줄 플래그). 코드로 값을 저장소 밖으로 빼는 일은 이 건 밖(글만).
+- **14 (명령 줄 대조)**: S13 '맥의 ChatGPT가 볼 것'의 명령 — 웹앱 다시 켜기(`launchctl kickstart …` 의 이름) · 보안 주소 켜기/되돌리기(`tailscale serve --bg 8765` · `serve status` · 되돌리는 줄) · 개발자 글 올리기 켜는 설정(본문 기준 9) · 결과 가지(본문 2번) — 를 94d4522의 실제 코드 · 설치 글(`start.sh` · launchd 글 · `MAC_RUN` · https 한 장)과 대조해 맞는 줄만 씀. 코드에서 확인할 수 없는 맥 쪽 값(예: Tailscale 앱 경로)은 그 걸음에 '맥에서 먼저 확인' 칸으로. 본문 기준 10 표에 더함.
+- **15 (확인 못 한 것 둘)**: 이끄는 ChatGPT가 명령을 돌릴 수 있는 앱인지 · 작업자와 화면을 나눠 쓸 수 있는지 — **1회차 첫 걸음(1-1)에서 먼저**, 안 되면 멈추고 한알께 한 줄(본문 기준 4를 1-1 자리로 못 박음).
