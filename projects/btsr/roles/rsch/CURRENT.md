@@ -1,7 +1,7 @@
 # MITCHELL_STUDIO/BTSR/RSCH 지금 상태
 
 - 자리: projects/btsr/roles/rsch/ (MITCHELL_STUDIO 도메인 · BTSR 프로젝트 · RSCH 역할)
-- 확인 시각: 2026-11-21 14:39 KST
+- 확인 시각: 2026-11-21 15:02 KST
 - 세션 열림(지금 세션): 2026-11-21 14:03 KST — Paseo 에이전트 ID a97bebab-51e4-4b70-b968-2177d6fe4f2e · Claude 세션 ID bb014593-1f51-4b36-aeac-c7a72356e466 · 모델 Fable 5.2 (claude-fable-5-2) · 생각 수준 xhigh · Paseo 제공자 claude(claude-naver) — 옛 세션 14d04ad1에게서 넘겨받음(아래 '★ 새 세션에 넘김 (14:05)' 칸 끝 '받음' 줄)
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-21 03:34 KST — Paseo 에이전트 ID 14d04ad1-7592-436b-82c2-69ad9d02e2ae · Claude 세션 ID 63630d2c-42de-4b75-ad4b-a9af9eb005b5 · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 xhigh — 옛 세션 7993ff28에게서 넘겨받음(아래 '★ 새 세션에 넘김' 칸 끝 '받음' 줄)
 - 세션 열림(옛 세션, 넘기고 끝 — 제목 `MITCHELL_STUDIO/BTSR/RSCH CLOSED`): 2026-11-20 09:15 KST — Paseo 에이전트 ID 7993ff28-d6b5-425c-bf4c-d16f4d68ea88 · Claude 세션 ID db1af991-8faf-4cca-b367-15ffddfef21c · 모델 Opus 5.5 (claude-opus-5-5) · 생각 수준 max (기록: logs/2026-11-20-session-handover.md) — 옛 세션 3233ba1f에게서 넘겨받음
@@ -9,6 +9,16 @@
 - 세션 열림(그 앞 옛 세션, 넘기고 끝): 2026-11-18 21:54 KST — Paseo 에이전트 ID cf9609b1-2ef0-4dd8-8c6d-dbb02c81d09c · Claude 세션 ID 18eaf458-8c63-4874-ac8f-9c2a16abfbe3 · 모델 Fable 5.2 (기록: logs/2026-11-18-session-open.md)
 - 제품 저장소: 이 PC `C:\Users\ms1pk\dev\mitchell-studio`(AofSpds/mitchell-studio, main 0636fa0 — 마지막 커밋 2026-11-12 18:14 KST, 11-19 01:08에도 그대로). 읽기만, 읽기 전 `pull --ff-only`.
 
+
+## ★★ 압축 뒤 여기부터 (2026-11-21 15:02 KST — 한알 15:01:36 「하나만 제대로 합니다. 일단 저장하세요 압축합니다.」)
+
+- **나:** MITCHELL_STUDIO/BTSR/RSCH PRIMARY — Paseo a97bebab-51e4-4b70-b968-2177d6fe4f2e · Claude bb014593 · Fable 5.2 · xhigh · 제공자 claude(claude-naver). 첫째 지침: **캡컷 기반 웹앱을 오늘(11-21) 완성한다.** 한알: **하나만 제대로**(directives 끝).
+- **일하는 법(오늘 배운 것 — knowhow 끝 넉 줄):** ① 한알이 물으시면 답부터, **답은 그 차례의 마지막 글로**(도구 앞에 쓴 글은 안 갈 수 있음) — 답에 꼭 필요한 확인만 한두 번. ② 적는 일은 SUB S7에 「적어 주세요」(send_agent_prompt · notifyOnFinish false) → S7이 `sub/s7_qa_log/질답.md`(맨 위 열린 물음 표) · `말씀_붙일것.md`를 씀 → **말씀 원문은 RSCH가 `owner/utterances/`에 옮겨 붙이고**(transcript와 대조 · CRLF · `###`부터 · 빈 줄로 끝) S7에 '붙였습니다'. ③ 웹앱을 쓰는 사람은 **미첼**('운영자'라고 하지 않음). ④ 시안은 화면만 · 설명은 화면 밖 아래 · 화면이 바뀌는 물음은 그림과 함께 하나씩. ⑤ 짧고 쉬운 말 · 결론 → 할 일 → 정해 주실 것 · 번호로 · 권고 1번 · 한알 사용량 아낌.
+- **Paseo:** PLN `a6fd0155` · ARCH `d9520b95` · PMO `5fbbea06`(claude-naver · Opus 5.5 · high) · SUB S7_QA_LOG `fd5d63e1-51d9-4e72-8ef6-3b1bec48c89c`(Opus 5.5 · 질답 적기 · 한알이 그 창에서 직접 물으시기도 함 — 패킷 덧붙임 7fc74b2) · SUB S8_UIUX_REWORK `e1f33218-ce0c-415d-ac73-b9f15b15d087`(Fable 5.2 · 시안 3판 그리는 중 — 패킷 8bd51fa + 덧붙임 d069374). 다른 역할에는 요청서에 덧붙인 뒤 '왔다'만(AAA 15 · 16 · 17), SUB에는 패킷(40).
+- **제품 main `3072e7e`**(묶음 1 · 1-1 · 2 + 8 · 3 · 5 + 3-2 — 모두 가짜로만 시험 · 맥에는 안 넣음). 합치는 법은 아래 14:05 칸 2-3. 요청서 `requests/BTSR-RSCH-003_webapp-phase1-capcut/요청.md` 13번(합침) · 14번(한알 말씀 다섯 — 확정 아님).
+- **오늘 14:09 뒤 한알이 정하신 것**(원문 owner/utterances 14:09:39 –): 시안은 화면만 · 옵션은 원래 안(접힌 칸, 「기본값」만) · 템플릿 칸 · 아이콘 없음 · **이름은 영어 그대로**(13:57의 '한글로'를 거둠) · **화면 속 설명 걷기**(현황과 단추만, 풀이는 ? 표) · **작업 목록 없음 · 한 번에 한 편 · 진행 중에는 프로그레스 바** · **만드는 동안 새로 보내기는 막음**(15:00:25) · **알림 설정은 Manual로**(알림 설명 화면 없음) · 쓰는 사람 = 미첼. RSCH의 읽기(중간점검에서 확인): 프로그레스 바가 진행 기록 · 단계 카드 줄을 갈음함((나)의 답) · 미첼이 고르는 화면의 물음 한 줄과 단추는 남김.
+- **지금 기다리는 것 → 할 일:** ① **S8 끝 알림** → 5항목으로 받음(자기 칸만 썼는지 `git show --stat` · 화면 그림을 눈으로 · 말씀 다섯 + 덧붙임대로인지) → 한알께 깃헙 주소 `https://github.com/AofSpds/mitchell-studio_agent/tree/main/projects/btsr/roles/rsch/sub/s8_uiux_rework` → **한알 중간점검**(14:51:14 「여기까지 재작업 하고 중간점검 하겠습니다.」) → 요청서 003 **15번**으로 확정(한 번에 한 편 · Send 막음 → 이미 합친 '여러 편이 함께 가는' 부분(R5.3 · Jobs 목록)을 걷는 고침 · 4-a(낱말 표 버림 · '지금' 한 줄만 · 프로그레스 바) · 4-b(알림 켜는 법은 Manual) · R1.6 거둠) → PLN에 '왔다'. PLN · ARCH는 14번으로 4-a · 4-b · 6 구현 요청을 멈춘 채 기다림. ② 그 뒤 한알께 여쭐 것(하나씩 · 그림과 함께): PLN 4-b 둘(휴대폰 알림 글 셋 · 맥 파이썬 `cryptography` — `btsr/pln` 9038754) · 정하신 적 없이 들어간 [안] 둘(R32.4 「가진 사진 올리기」 · R5.5 한도 기다림 — 14:41에 알려 드림) · 묶음 6 [안] 둘(고치기 한 편 3번까지 · 판 이름 v1 · v2 — ARCH 5064bc3). ③ 1차가 다 되면 맥 시험(아래 14:05 칸 4 — 승인 받고, 하지 말 것 목록 먼저).
+- **도구(저장소 밖 `%TEMP%/rsch_scratch/`):** `rec_utts.py list`(이 세션 transcript의 한알 말씀 시각 · uuid) · `build_v2.py`(시안 2판 만든 법) · 줄 끝: CURRENT · directives · 요청서 003 = CRLF, knowhow · SUB 칸 = LF, owner/utterances/2026-11-21.md = 섞임(CRLF로 붙임). 같은 작업 사본을 S7 · S8과 함께 씀 — 커밋은 늘 경로를 주어.
 
 ## ★ 새 세션에 넘김 (2026-11-21 14:05 KST) — 받는 세션은 여기부터. 아래 ★ 칸들은 지난 기록(필요할 때만)
 
