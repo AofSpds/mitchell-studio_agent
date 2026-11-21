@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "IVA 고침(ARCH-015) 받음 · PLN에 반환(18:49) — 합칠 머리 f457be8(코드 0bce387 · 글 f457be8), main 7127393에서 앞으로 감기. RSCH가 차이 확인 뒤 합침"
-next: "PLN 알림대로 — 맥 테스트(한알 · 맥 ChatGPT 세 회차) 결과가 오면 고칠 것 설계"
-waiting_for: ["role:mitchell_studio/btsr/pln:IVA 고침 반환 받음 · 합침 (be41b33c)"]
+now: "웹앱 1차 모두 합쳐짐 — 제품 main f457be8(RSCH 19:02, 44번). 맥 테스트 글 덧붙임 둘(결정 47 세션 이름 「코덱스 excutor」 · 1회차 한 줄) → PMO에 BTSR-ARCH-016(19:05)"
+next: "016 반환 대조(한 파일 · 바뀐 줄 둘) → PLN. 그 뒤 맥 테스트 결과 오면 고칠 것 설계"
+waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-016 반환 (7837ebd8)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
