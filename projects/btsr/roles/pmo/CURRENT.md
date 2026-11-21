@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-21T19:10:02+09:00"
+updated: "2026-11-21T19:30:51+09:00"
 base_commit: "fa2b7aa"
-now: "BTSR-ARCH-016 반환 · 맥 테스트 글 한 파일 07cd3fc 원격 확인"
-next: "ARCH의 016 대조 결과와 다음 정식 요청 대기"
-waiting_for: ["arch:BTSR-ARCH-016-acceptance", "rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
+now: "BTSR-ARCH-017 받음 · 맥 테스트 시작 문구와 추적 파일 보관 절차"
+next: "글의 Git 절차와 전체 회귀를 확인하고 ARCH에 반환"
+waiting_for: ["rsch:macbook-test-T0-T2-and-MAC_RUN-result"]
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,7 +33,8 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-ARCH-016_webapp-mac-test-doc-add1 | ARCH (7621f3de) | btsr/arch 9440847 · 결정 47 | 2026-11-21 19:06:13 KST | 반환 19:10 KST · 제품 main f457be8 → 07cd3fc · 기본 135 통과/2 건너뜀, 암호화 137/137 · 보조 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD1_RETURN_CODEX.md) |
+| BTSR-ARCH-017_webapp-mac-test-doc-add2 | ARCH (7621f3de) | btsr/arch cc77ded · PLN 72141f1 | 2026-11-21 19:30:51 KST | 접수 · 바탕 제품 main 07cd3fc · 보조 0 |
+| BTSR-ARCH-016_webapp-mac-test-doc-add1 | ARCH (7621f3de) | btsr/arch 9440847 · 결정 47 | 2026-11-21 19:06:13 KST | 반환 19:10 KST · 제품 main f457be8 → 07cd3fc · 기본 135 통과/2 건너뜀, 암호화 137/137 · 보조 0 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_ADD1_RETURN_CODEX.md) · ARCH 수용(abf7c76), 제품 main 07cd3fc |
 | BTSR-ARCH-015_webapp-iva-fix | ARCH (7621f3de) | btsr/arch a0f79c3 · 덧붙임 b2581be·b6034e5 · IVA 판정 7915afd | 2026-11-21 18:20:04 KST | 반환 18:44 KST · 코드 0bce387, 합칠 머리 f457be8 · 기본 135 통과/2 건너뜀, 암호화 137/137 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_IVA_FIX_RETURN_CODEX.md) · ARCH 수용(96871c0), 제품 main f457be8 |
 | BTSR-ARCH-014_webapp-mac-test-doc | ARCH (7621f3de) | btsr/arch ebba9cf · 덧붙임 114ccfe·503b5ac · S13 3판 main ffe451d | 2026-11-21 17:51:45 KST | 반환 18:10 KST · 제품 28e779e · 기준 94d4522 위 문서 한 파일 · 기본 133 통과/2 건너뜀, 암호화 135/135 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_TEST_DOC_RETURN_CODEX.md) · ARCH 수용(2fc10f5) |
 | BTSR-RSCH-001_opencut-test-code — OpenCut 옛 판(cf5e79e) 시험 3·4용 시험 코드 C1 변환 · C2 되받기 · C3 들여오기 · C4 화면 조작 없이 뽑기 · C5 포크 고침 (웹앱에는 넣지 않음) | RSCH (Paseo 7993ff28) | main `projects/btsr/roles/rsch/requests/BTSR-RSCH-001_opencut-test-code/요청.md` (main 8723a4f) | 2026-11-20 13:56 KST | **반환함** 14:22 KST · RSCH 수용(건은 열어 둠) — [반환서](records/opencut-test/OPENCUT_TEST_RETURN_CLAUDE.md) |
