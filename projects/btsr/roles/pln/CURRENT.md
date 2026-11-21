@@ -43,6 +43,8 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **묶음 4-b 설계 1판 + https 한 장 받음** (ARCH `baa3dff`, R4.4 · R4.5 · 결정 05 · 08 대조함 — `tailscale serve` · Funnel 안 씀 · 하지 말 것 6줄이 맨 앞, 한 장은 1차 끝 맥 시험 때) → 알림 글 · `cryptography` 깔기를 한알께 여쭐 것 한 장 → [WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4B_PUSH_ASK_CLAUDE.md) (권고 1 · 1, 4-a 다음에 여쭈어도 됨), RSCH에 넘김 (14:12).
 - **묶음 5 + 3-2 반환 받음 → RSCH에 반환** (ARCH `1f8f075`, 14:36) — 제품 가지 `feat/webapp-b5-b32-worker-face-20261121` `3072e7e`, R5.x · R32.1–R32.4 · R3.6 대조(Face 9단계 그림 · AI 합성 표시 확인). RSCH 확인되면 main 합침(조건 main `32b55dc` · 가지 `3072e7e`). [WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B5_B32_RETURN_CLAUDE.md)
 - **묶음 5 + 3-2 합쳐짐 — 제품 main `3072e7e`** (RSCH 확인 · push, main `d766ed3` 요청서 13번, 14:40 PLN이 봄). 맥에는 안 넣음. 같은 덧붙임: **4-a 낱말(ARCH-009)은 한알 답까지 보내지 않음** — 한알이 시안을 보시고 「탭 이름 왜 한글인가요?」 → RSCH가 (가) 탭 · 단계 이름 영어/한글 (나) 진행 기록 아래/위/뺌을 다시 여쭘(결정 16 · R1.6이 바뀔 수 있음, PLN의 4-a 장은 대체됨). 화면 참고는 시안 **2판** `v2/`(main `992a833`). 4-b 두 물음은 (가) · (나) 뒤에.
+- **R8.4 판정 → 요구 1.9판** (14:42) — ARCH(74edd67)가 '고르는 칸을 1차에 만들지 않음'으로 읽어도 되는지 물음 → 받음, 조건: 둘째 템플릿 건에 고르는 칸을 반드시 함께. ARCH 4-a 1.1판 고칠 것(영어로 정해지면 3번 표 · 기준 6 뺌)도 봄.
+- **묶음 6 설계 1판 받음** (ARCH `5064bc3`, 바탕 3072e7e) — R6.1–R6.5 대조, 그대로 받음: 고칠 점 → ④를 다음 판으로 차례표에(손 인계 ④ 없앰) · 판마다 새 이름 캡컷 프로젝트(복제는 승인 범위 밖이라 안 씀 — 결정 15 안) · 완성 = 승인 + 규격 · 규격 다른 판은 의견 + 다시 뽑기 · 저장은 승인한 규격 맞는 판(지금 가장 새 판을 쓰는 결함 고침). [안] 둘(고치기 3번 미16 · 판 이름 v1)은 구현 전 RSCH가 보여 드림 — (가) · (나) · 4-b 뒤에. PMO에는 4-a 반환 뒤.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
