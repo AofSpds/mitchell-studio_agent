@@ -21,13 +21,13 @@ body { margin:0; background:#cfc8be; color:var(--ink); font-family:var(--font); 
 svg { display:block; }
 
 /* ── 시안 틀(웹앱 화면이 아닌 곳) ── */
-.top { max-width:1740px; margin:0 auto; padding:26px 24px 0; }
+.top { max-width:1800px; margin:0 auto; padding:26px 24px 0; }
 .top h1 { font-size:26px; margin:0 0 8px; }
 .top p { margin:5px 0; font-size:15px; color:#4d443d; }
 .top .demo { display:inline-block; background:var(--waitbg); color:var(--wait); border-radius:10px; padding:4px 10px; font-size:14px; font-weight:600; }
 .legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:10px 0 2px; font-size:14px; color:#4d443d; }
 .legend span.k { display:inline-block; position:static; margin-right:6px; }
-.grid { max-width:1740px; margin:0 auto; padding:22px 24px 60px; display:grid; grid-template-columns:repeat(auto-fill, 406px); gap:36px 28px; justify-content:center; }
+.grid { max-width:1800px; margin:0 auto; padding:22px 24px 60px; display:grid; grid-template-columns:repeat(auto-fill, 406px); gap:36px 28px; justify-content:center; }
 .shot { width:406px; scroll-margin-top:12px; }
 .shot .hd { font-size:15px; font-weight:700; margin:0 4px 8px; min-height:44px; }
 .shot .hd .no { display:inline-block; background:var(--accent); color:var(--onaccent); border-radius:8px; padding:1px 8px; margin-right:6px; font-size:13px; }
@@ -62,7 +62,7 @@ body:has(.shot:target) .grid { display:block; padding:16px 20px 20px; }
 .brand .br { font-size:12px; color:var(--soft); text-align:right; letter-spacing:.02em; flex:1; }
 .fbk { flex:none; position:relative; border:1px solid var(--line); background:var(--bar); color:var(--ink); border-radius:12px; padding:8px 10px; font-size:13px; font-weight:700; line-height:1.15; text-align:center; }
 .tabs { display:flex; gap:6px; background:var(--card); border-top:1px solid var(--line); padding:8px 16px 14px; position:relative; }
-.tabs > span { flex:1; text-align:center; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:16px; padding:11px 0; border-radius:14px; position:relative; color:var(--soft); }
+.tabs > span:not(.tg) { flex:1; text-align:center; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:16px; padding:11px 0; border-radius:14px; position:relative; color:var(--soft); }
 .tabs > span.on { background:var(--bar); color:var(--ink); }
 .badge { position:absolute; top:3px; right:10%; min-width:18px; height:18px; padding:0 4px; border-radius:9px; background:var(--bad); color:#fff; font:700 11px/18px var(--font); text-align:center; }
 h1.s { font-size:26px; margin:8px 0 6px; font-family:var(--mark); font-weight:700; letter-spacing:.02em; }
@@ -71,12 +71,13 @@ h2 { font-size:20px; margin:0 0 8px; }
 .hint { color:var(--soft); font-size:15px; }
 .note { color:var(--soft); font-size:13px; }
 .card { background:var(--card); border-radius:20px; padding:13px 16px; margin-bottom:10px; }
-.big { height:96px; border-radius:28px; background:linear-gradient(160deg,var(--grad1),var(--grad2)); color:#faf8f5; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:32px; display:flex; align-items:center; justify-content:center; margin:6px 0 10px; }
+.big { height:84px; border-radius:28px; background:linear-gradient(160deg,var(--grad1),var(--grad2)); color:#faf8f5; font-family:var(--mark); font-weight:700; letter-spacing:.02em; font-size:32px; display:flex; align-items:center; justify-content:center; margin:6px 0 10px; }
 .btn { display:flex; align-items:center; justify-content:center; text-align:center; padding:13px 10px; border-radius:16px; background:var(--accent); color:var(--onaccent); font-weight:600; font-size:17px; }
 .btn.soft { background:var(--bar); color:var(--ink); }
 .btn.line { background:transparent; color:var(--soft); font-weight:500; }
 .btn.sm { padding:9px 8px; font-size:15px; }
-.btn.off { opacity:.42; }
+.btn.off { background:#b5aca4; color:#f1ece6; }
+.btn.soft.off { background:var(--bar); color:#b9b0a8; }
 .row { display:flex; gap:10px; margin-top:10px; }
 .row > * { flex:1; }
 .alert { background:var(--waitbg); border-radius:16px; padding:11px 14px; font-size:15px; margin-bottom:10px; }
@@ -110,11 +111,13 @@ h2 { font-size:20px; margin:0 0 8px; }
 .log { font-size:14.5px; }
 .log div { display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); }
 .log div:first-child { border-top:0; }
+.log.lg2 time { width:82px; }
 .log time { flex:none; width:66px; font-size:13px; color:var(--soft); padding-top:1px; }
 .thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:8px 0; }
 .th { aspect-ratio:9/16; border-radius:10px; overflow:hidden; position:relative; background:var(--bar); }
 .th svg { width:100%; height:100%; }
 .th i { position:absolute; left:3px; right:3px; bottom:3px; font-style:normal; font-size:10.5px; text-align:center; border-radius:6px; background:rgba(250,248,245,.92); padding:1px 0; }
+.th.none, .th.make { overflow:visible; }
 .th.none { background:none; border:2px dashed var(--wait); }
 .th.none i { background:none; color:var(--wait); font-weight:700; bottom:40%; }
 .th.make { background:none; border:2px dashed var(--soft); }
@@ -244,8 +247,7 @@ h2 { font-size:20px; margin:0 0 8px; }
     </div>
     <div class="card" style="padding-bottom:10px">
       <div style="display:flex;justify-content:space-between;font-weight:600"><span>옵션</span><span class="hint" style="font-weight:400;font-size:14px">기본값 그대로 두면 돼요 ▴</span></div>
-      <div class="o" style="margin-top:8px"><div>목소리</div><div class="sel">알아서 골라요 · 기본 ▾</div></div>
-      <div class="o chg del" style="border-radius:8px"><div class="gone">원고 확인</div><div class="sel gone">켬 ▾</div><span class="tg del">없앰 — 늘 확인받아요</span></div>
+      <div class="o chg del" style="border-radius:8px;margin-top:10px"><div class="gone">원고 확인</div><div class="sel gone">켬 ▾</div><span class="tg del">없앰 — 늘 확인받아요</span></div>
     </div>
   </div>
   <div class="tabs chg q"><span class="tg q l">안 · 여쭐 것 1 — 탭 이름 한글</span><span class="on">보내기</span><span>작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
@@ -487,20 +489,20 @@ h2 { font-size:20px; margin:0 0 8px; }
   <div class="hd"><span class="no">9</span>휴대폰 알림 — 처음 한 번 허락<span class="gp">④ 진행 · 알림 · 새로</span></div>
   <div class="phone"><div class="scr">
     <div class="brand"><div class="wm">Mitchell<br>Studio</div><div class="br">미첼헤어폼<br>이문아이파크자이점</div><span class="fbk">건의하기</span></div>
-    <div class="card chg" style="margin-top:10px">
+    <div class="card chg" style="margin-top:12px;padding-bottom:10px">
       <span class="tg">새로 — 알림 받기</span>
       <div style="font-size:20px;font-weight:700">알림을 받을까요?</div>
-      <div class="hint" style="margin:4px 0 0">확인할 것이 생기거나 영상이 다 되면 알려 드려요. 웹앱을 닫아 두어도 받아요.</div>
+      <div class="hint" style="margin:2px 0 0">확인할 것이 생기거나 영상이 다 되면 알려 드려요. 웹앱을 닫아 두어도 받아요.</div>
       <div class="row"><div class="btn soft">나중에</div><div class="btn">알림 받기</div></div>
-      <div class="note" style="margin-top:6px">누르면 아이폰이 한 번 더 물어요 → 「허용」을 눌러 주세요.</div>
+      <div class="note" style="margin-top:6px">누르면 아이폰이 한 번 더 물어요 → 「허용」</div>
     </div>
     <div class="card chg">
       <span class="tg">새로 — 홈 화면에 추가</span>
       <div style="font-weight:700">아이폰은 홈 화면에 추가해야 알림이 와요</div>
       <ol class="steps3">
-        <li><span class="num">1</span><span>사파리 아래 가운데 <b>공유 단추</b>(네모에 위 화살표)를 눌러요</span></li>
+        <li><span class="num">1</span><span>사파리 아래 <b>공유 단추</b>(네모에 화살표)를 눌러요</span></li>
         <li><span class="num">2</span><span><b>「홈 화면에 추가」</b>를 눌러요</span></li>
-        <li><span class="num">3</span><span>홈 화면에 생긴 <b>미첼 스튜디오</b>로 열고 「알림 받기」</span></li>
+        <li><span class="num">3</span><span>홈 화면의 <b>미첼 스튜디오</b>로 열고 「알림 받기」</span></li>
       </ol>
     </div>
     <div class="sech">잠금 화면에는 이렇게 보여요</div>
@@ -511,7 +513,7 @@ h2 { font-size:20px; margin:0 0 8px; }
       <div class="push"><small>12분 전</small><b>다 됐어요</b>영상을 확인해 주세요</div>
       <div class="push"><small>1시간 전</small><b>잠깐 멈췄어요</b>하나만 도와주시면 이어 가요</div>
     </div>
-    <div class="note" style="margin:8px 4px 0">알림 글에는 손님 정보 · 시술 내용 · 원고 글을 넣지 않아요.</div>
+    <div class="note" style="margin:6px 4px 0">알림 글에는 손님 정보 · 시술 내용 · 원고 글을 넣지 않아요.</div>
   </div>
   <div class="tabs"><span class="on">보내기</span><span>작업<span class="badge">2</span></span><span>올리기</span><span>도움말</span></div></div>
   <div class="ft"><b>새로:</b> 지금은 알림이 없습니다. 안전한 주소(https)를 켜기로 해서 휴대폰 알림이 됩니다 — 처음 한 번 「알림 받기」 허락, 아이폰은 '홈 화면에 추가'한 웹앱에서만. 알릴 일은 셋(확인 · 다 됨 · 문제).
@@ -592,7 +594,7 @@ h2 { font-size:20px; margin:0 0 8px; }
     </div>
     <div class="card">
       <div class="side">
-        <div class="vid"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><div class="cap">뿌리 볼륨을 살린 디지털펌</div><em>얼굴 : AI 합성</em></div>
+        <div class="vid" style="width:118px"><svg class="pic" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><use href="#p-face"/></svg><div class="play">▶</div><div class="cap" style="font-size:10px">뿌리 볼륨 디지털펌</div><em>얼굴 : AI 합성</em></div>
         <div style="flex:1;min-width:0">
           <div style="font-weight:700">다 됨 <span class="pill done">완성</span></div>
           <div class="chips chg" style="border-radius:999px;margin:10px 0 8px"><span class="tg">새로 — 판 고르기</span><span class="chip">v1</span><span class="chip on">v2</span></div>
@@ -605,8 +607,7 @@ h2 { font-size:20px; margin:0 0 8px; }
     </div>
     <div class="share chg">
       <span class="tg">새로 — 공유 창 → 비디오 저장</span>
-      <div class="note" style="margin:0 2px 6px;color:#4d443d">「사진 앱에 저장」을 누르면 아이폰의 공유 창이 열려요 (그림)</div>
-      <div class="apps"><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="note" style="display:block;margin:0 2px 6px;color:#4d443d">누르면 아이폰의 공유 창이 열려요 (그림)</span>
       <div class="li"><span>복사</span><span>⧉</span></div>
       <div class="li pick"><span>비디오 저장</span><span>⤓</span></div>
       <div class="li"><span>파일에 저장</span><span>▭</span></div>
@@ -629,7 +630,7 @@ h2 { font-size:20px; margin:0 0 8px; }
   <div class="sheet"><div class="box">
     <h2>고칠 점 적기</h2>
     <div class="hint chg" style="border-radius:8px">적어서 보내면 <b style="color:var(--ink)">새 영상(v2)</b>으로 만들어 드려요. 지금 영상(v1)은 그대로 남아요.<span class="tg">고침</span></div>
-    <div class="ta w" style="min-height:84px;margin-top:10px">자막을 더 크게 해 주세요. 마지막 2초는 빼 주세요.</div>
+    <div class="ta w" style="min-height:84px;margin-top:10px">자막을 더 크게 해 주세요. 끝의 2초는 잘라 주세요.</div>
     <div class="note">🎤로 말해도 돼요 · 손님 이름은 쓰지 마세요</div>
     <div class="row"><div class="btn soft">취소</div><div class="btn">보내기</div></div>
     <div class="oldbox" style="margin:14px 0 0"><span class="tg del">없앰 — 다른 앱에 말 걸기</span><span class="gone">받았어요. Claude 앱에 “작업 확인”이라고 보내 주세요 — 그러면 고쳐요</span></div>
@@ -660,7 +661,7 @@ h2 { font-size:20px; margin:0 0 8px; }
           <div class="note" style="margin-top:8px">v1은 그대로 남아요. v2가 되면 번갈아 볼 수 있어요.</div>
         </div>
       </div>
-      <div class="fb">✎ 자막을 더 크게 해 주세요. 마지막 2초는 빼 주세요. <span class="note">오후 4:02</span></div>
+      <div class="fb">✎ 자막을 더 크게 해 주세요. 끝의 2초는 잘라 주세요. <span class="note">오후 4:02</span></div>
       <div class="row"><div class="btn soft">사진 앱에 저장</div><div class="btn soft off">고칠 점 적기</div></div>
     </div>
     <div class="sech">진행 기록</div>
@@ -713,7 +714,7 @@ h2 { font-size:20px; margin:0 0 8px; }
     <div class="big">보내기</div>
   </div>
   <div class="sheet"><div class="box">
-    <h2 class="chg" style="border-radius:8px;display:inline-block;padding:0 4px">건의하기<span class="tg" style="right:-64px;top:4px">고침 — 영어 뺌</span></h2>
+    <h2 class="chg" style="border-radius:8px;display:inline-block;padding:0 4px">건의하기<span class="tg" style="right:auto;left:100%;margin-left:10px;top:5px">고침 — 영어 뺌</span></h2>
     <div class="note" style="margin-top:0">웹앱을 쓰며 불편한 점, 바라는 점, 좋은 점을 보내 주세요. 개발자가 읽어요.</div>
     <div class="chips"><span class="chip">안 돼요</span><span class="chip on">이랬으면 해요</span><span class="chip">이건 좋아요</span></div>
     <div class="ta w" style="min-height:70px">원고 확인할 때 글자를 더 크게 볼 수 있으면 좋겠어요</div>
@@ -722,7 +723,7 @@ h2 { font-size:20px; margin:0 0 8px; }
       손님 이름 · 연락처는 안 쓰셔도 돼요. 적혀 있으면 <b>'손님 A' 같은 별명으로 바뀌어 저장돼요.</b></div>
     <div class="row"><div class="btn soft">닫기</div><div class="btn">보내기</div></div>
     <h2 style="margin-top:16px;font-size:18px">내가 보낸 건의</h2>
-    <div class="log" style="font-size:13.5px">
+    <div class="log lg2" style="font-size:13.5px">
       <div><time>11-20 14:05</time><span>안 돼요 · <b>손님 A</b>가 영상 저장이 안 된다고 하셨어요 <span class="pill wait chg" style="font-size:11px;padding:1px 6px;outline-offset:1px">별명으로 바뀜</span></span></div>
       <div><time>11-19 10:30</time><span>이건 좋아요 · 원고 글자 수가 바로 보여서 편해요</span></div>
     </div>
