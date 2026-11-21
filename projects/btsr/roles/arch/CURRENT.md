@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-21T16:51:00+09:00"
 base_commit: "fa2b7aa"
-now: "맥 1 · 2회차 결과(1-6 멈춤 — 작업자 답 Claude · 이끄는 쪽 전면 앱 ChatGPT) → ARCH 판단: 코드 결함 아님 · 1-6 기준이 OS 활성 앱과 화면 맨 위 창을 견줘 어긋남 → BTSR-ARCH-019(21:17) 맥 글 덧붙임 3 + 1-6 기준 바로잡음. 018(기획안 사본) PMO 중"
-next: "018 · 019 반환 대조 → PLN. 다음 요청 번호 020"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-018 · 019 반환 (7837ebd8)"]
+now: "ARCH-018(기획안 사본) · 019(맥 글 덧붙임 3) 받음 · PLN에 반환(21:27) — 합칠 머리 896abae(main e095396 위 커밋 둘)"
+next: "PLN 알림대로. 다음 요청 번호 020"
+waiting_for: ["role:mitchell_studio/btsr/pln:맥 테스트 다음 결과 · 다음 요청 (be41b33c)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
