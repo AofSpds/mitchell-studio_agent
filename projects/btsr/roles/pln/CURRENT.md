@@ -81,6 +81,7 @@ verifier: "mitchell_studio/btsr/plnv (비상설, 열리지 않음)"
 - **28번 받음 → 기획안 초안 1.2판** (16:31, RSCH main `df8eef2`) — ① 물음이 원고 앞(1.1판에서 고침, 시안 글은 RSCH가 고치는 중) ② AI 얼굴 줄에 '얼굴이 보이는 시술 후 사진의 얼굴만 모델 얼굴로 바꿔 만든 것' 한 마디.
 - **묶음 4-a-2 반환 받음 → RSCH에 반환** (ARCH `d5f3369`, 16:36) — 제품 가지 `feat/webapp-b4a2-stuck-restart-20261121` `243cff0`, R2.3 · R2.7 · R3.5 · R5.5–R5.7 · R32.4 대조(push는 원격 main 위 글 하나 · 기본 꺼짐 · 제품 CLAUDE.md 예외 한 줄). RSCH 확인되면 main 합침(조건 main `ed11f5a` · 가지 `243cff0`). [WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md](requirements/webapp-phase1/WEBAPP_PHASE1_B4A2_RETURN_CLAUDE.md). 묶음 6 → PMO BTSR-ARCH-011(바탕 243cff0). 합쳐지면 기획안 초안 판 올림.
 - **묶음 4-a-2 합쳐짐 — 제품 main `243cff0`** (RSCH 확인 · push, main `5cd241c` 요청서 29번, 16:41 PLN이 봄). 맥에는 안 넣음. RSCH가 짚은 둘 → 요구 2.13판 R5.7 판정(커밋 이름 · 메일 늘 일반 · 로그 줄 최소 · 켜기 전 사람이 읽기) → ARCH. 기획안 초안 1.3판(막혔을 때 · 접수 물음 = 만듦).
+- **ARCH: R5.7 판정 둘 → ARCH-012(4-b)에** — 커밋 작성자 · 커미터 늘 일반 값 · 로그 끝 20줄은 넣지 않음(까닭 원문 · events 마지막 5줄 · 작업자 멈춤 줄 하나, 거르기 뒤 — 날 로그는 맥에) · MAC_RUN에 '쌓인 글 읽고 켬'. 맥 시험 전(012 → 013 → 맥 시험). 4-b 반환 때 이 셋을 대조.
 
 # PLN — MITCHELL_STUDIO BTSR 기획 (상설)
 
