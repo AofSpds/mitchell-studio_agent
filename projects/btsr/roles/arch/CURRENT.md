@@ -6,7 +6,7 @@ state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
 now: "023(고침 3-1) 반환함(c364bf0). 022는 제품 main 09655cd에 합쳐짐. RSCH가 c364bf0 앞으로 감기 → 한알 맥 한 줄(022 반환서 4번)"
-next: "맥 한 줄 결과(그 편 음악부터 이어 감 · tone_type · 라 읽기 셋) → PLN이 고침 4 정함 · allow는 한알께. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 024 · PMO 512aef6d"
+next: "맥 결과(새 한 편 · 라 읽기 셋 · tone_type) → PLN이 고침 4 정함 · allow는 한알께. 맥 그 편은 07:00 옛 판이 done/dev로(결과 2c82371) — 결정 30대로 잇지 않음. 다음 고침 때 시험 하나: retry_ts 지난 wait_usage → step → 음악 카드(시각으로 깨는 갈래). **결정 50: 한알께 맥 줄은 짧은 한 문장 · 긴 것은 제품 맥 글 칸에.** 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 024 · PMO 512aef6d"
 waiting_for: ["role:mitchell_studio/btsr/rsch:023 제품 main 합침 (c364bf0)", "owner:맥 한 줄 결과"]
 owner_wait: "-"
 subs: []
