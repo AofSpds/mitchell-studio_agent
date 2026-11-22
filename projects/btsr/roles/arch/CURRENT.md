@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "PMO(512aef6d)에 BTSR-ARCH-026(MAC_NOW 판 3 — 맥 세션이 한 편을 끝까지 + 덧붙임 1 「테스트해주세요」 · AGENTS.md, 글뿐) 17:35 · 18:05 KST쯤 합침 어림. 제품 main 9c3b1c1(025 합쳐짐)"
+now: "026(MAC_NOW 판 3 · 「테스트해주세요」) 반환함(제품 가지 1427a37 · 두 파일 글뿐) → RSCH 합침 기다림 → 한알께 두 말(처음 「저장소 새로 받고 약속 글대로 테스트해주세요」 · 그 뒤 「테스트해주세요」). 제품 main 9c3b1c1"
 next: "맥 읽기 결과(다섯 — codex 판 · computer_use · 항상 허용한 앱 · tone_type · 서버 부모) → PLN이 고침 4 범위. 한알 말(판 3 뒤): 처음 한 번 「저장소 새로 받고 약속 글대로 테스트해주세요」 · 그 뒤 「테스트해주세요」. MAC_NOW 새 판은 PLN 요청 → 같은 길(판 줄 올림). 다음 고침 때 시험 하나: retry_ts 지난 wait_usage → step → 음악 카드. 결정 50: 맥 줄은 짧은 한 문장. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 027 · PMO 512aef6d"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-026 반환 (512aef6d)", "owner:맥 테스트 결과"]
+waiting_for: ["role:mitchell_studio/btsr/rsch:026 제품 main 합침 (1427a37)", "owner:맥 테스트 결과"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
