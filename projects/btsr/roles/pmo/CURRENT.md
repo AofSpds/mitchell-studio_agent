@@ -3,11 +3,11 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T14:58:10+09:00"
-base_commit: "e287b4b"
-now: "ARCH-024 본문·덧붙임 1·2 통합 반환. 제품 기능 가지 0cb507a 원격 일치, 문서 셋 바이트 대조 통과"
-next: "ARCH가 반환서를 대조하고 RSCH가 제품 main에 합침"
-waiting_for: ["arch:BTSR-ARCH-024-acceptance", "rsch:BTSR-ARCH-024-main-merge"]
+updated: "2026-11-22T15:02:22+09:00"
+base_commit: "94dd01c"
+now: "ARCH-025 받음. 원격 제품 main의 024 합침 0cb507a 확인"
+next: "MAC_NOW.md 판 2의 세 곳을 대조해 ARCH에 반환"
+waiting_for: []
 owner_wait: "0"
 subs: []
 parent: "mitchell_studio/btsr/arch"
@@ -33,6 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
+| BTSR-ARCH-025 | ARCH (7621f3de) | btsr/arch 0bd82e0 | 2026-11-22 15:02:22 KST | 제품 0cb507a 위에서 맥 할 일 판 2 원문 대조 중 |
 | BTSR-ARCH-024 · 덧붙임 1·2 | ARCH (7621f3de) | btsr/arch 51f9f02 · c1ad252 · 137bd4b | 2026-11-22 14:54:37 KST | 반환 · 제품 c364bf0 → 0cb507a · 문서 셋 바이트 일치 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_NOW_RETURN_CODEX.md) |
 | BTSR-ARCH-023 | ARCH (7621f3de) | btsr/arch 48c4ce3 | 2026-11-22 04:20:33 KST | 반환 · 제품 09655cd → c364bf0 · Terra 요령 16·20줄 · 기본 184 통과, 오류 1(단독 통과), 건너뜀 2 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_TERRA_EXPERIENCE_RETURN_CODEX.md) |
 | BTSR-ARCH-022 · 덧붙임 1–4 | ARCH (7621f3de) | btsr/arch 7730793 · 229e92e · 5f74178 · a32a2f1 · d2c9843 · 파일 범위 9aa1efe | 2026-11-22 03:08:49 KST | 반환 04:02 KST · 제품 main 5bbe272 → 기능 가지 `feat/webapp-worker-limit-fix3-20261122` 09655cd · 암호화 187/187 · 기본 재실행 185 통과/2 건너뜀 · [시험 결과와 맥 재개 명령](records/webapp-phase1/WEBAPP_PHASE1_WORKER_LIMIT_FIX3_RETURN_CODEX.md) |
