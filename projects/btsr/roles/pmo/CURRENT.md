@@ -3,9 +3,9 @@ role: "mitchell_studio/btsr/pmo"
 session: "MITCHELL_STUDIO/BTSR/PMO"
 rules: "none — 이 저장소에는 규칙 판이 아직 주입되지 않음. AAA 규칙 판 v0.14(C:\\Users\\ms1pk\\dev\\AAA\\AGENTS.md)를 AAA main 폴더에서 읽기만 함"
 state: "ACTIVE"
-updated: "2026-11-22T15:03:51+09:00"
-base_commit: "394d650"
-now: "ARCH-025 반환. 제품 기능 가지 9b8b9f3 원격 일치, 맥 할 일 판 2 한 파일 바이트 대조 통과"
+updated: "2026-11-22T15:07:07+09:00"
+base_commit: "5e993c3"
+now: "ARCH-025 본문·덧붙임 1 통합 반환. 제품 기능 가지 9c3b1c1 원격 일치, 가짜 자료 다섯 경우에서 목소리·현황 명령 확인"
 next: "ARCH가 판 2를 대조하고 RSCH가 제품 main에 합침"
 waiting_for: ["arch:BTSR-ARCH-025-acceptance", "rsch:BTSR-ARCH-025-main-merge"]
 owner_wait: "0"
@@ -33,7 +33,7 @@ verifier: "mitchell_studio/btsr/pmov"
 
 | 건 | 보낸 역할 | 원본 | 받음 | 상태 |
 |---|---|---|---|---|
-| BTSR-ARCH-025 | ARCH (7621f3de) | btsr/arch 0bd82e0 | 2026-11-22 15:02:22 KST | 반환 · 제품 0cb507a → 9b8b9f3 · MAC_NOW.md 세 곳 · 바이트 일치 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_NOW_V2_RETURN_CODEX.md) |
+| BTSR-ARCH-025 · 덧붙임 1 | ARCH (7621f3de) | btsr/arch 0bd82e0 · bd3deee | 2026-11-22 15:02:22 KST | 통합 반환 · 제품 0cb507a → 9b8b9f3 → 9c3b1c1 · MAC_NOW.md 한 파일 · 두 명령 가짜 자료 다섯 경우 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_NOW_V2_RETURN_CODEX.md) |
 | BTSR-ARCH-024 · 덧붙임 1·2 | ARCH (7621f3de) | btsr/arch 51f9f02 · c1ad252 · 137bd4b | 2026-11-22 14:54:37 KST | 반환 · 제품 c364bf0 → 0cb507a · 문서 셋 바이트 일치 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_MAC_NOW_RETURN_CODEX.md) |
 | BTSR-ARCH-023 | ARCH (7621f3de) | btsr/arch 48c4ce3 | 2026-11-22 04:20:33 KST | 반환 · 제품 09655cd → c364bf0 · Terra 요령 16·20줄 · 기본 184 통과, 오류 1(단독 통과), 건너뜀 2 · [반환서](records/webapp-phase1/WEBAPP_PHASE1_TERRA_EXPERIENCE_RETURN_CODEX.md) |
 | BTSR-ARCH-022 · 덧붙임 1–4 | ARCH (7621f3de) | btsr/arch 7730793 · 229e92e · 5f74178 · a32a2f1 · d2c9843 · 파일 범위 9aa1efe | 2026-11-22 03:08:49 KST | 반환 04:02 KST · 제품 main 5bbe272 → 기능 가지 `feat/webapp-worker-limit-fix3-20261122` 09655cd · 암호화 187/187 · 기본 재실행 185 통과/2 건너뜀 · [시험 결과와 맥 재개 명령](records/webapp-phase1/WEBAPP_PHASE1_WORKER_LIMIT_FIX3_RETURN_CODEX.md) |
