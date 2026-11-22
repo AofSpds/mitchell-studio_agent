@@ -5,9 +5,9 @@ rules: "none — 이 저장소에 규칙 판이 아직 주입되지 않음. AAA 
 state: "ACTIVE"
 updated: "2026-11-22T01:54:00+09:00"
 base_commit: "fa2b7aa"
-now: "PMO(512aef6d)에 BTSR-ARCH-024(맥 할 일 한 장 — MAC_NOW.md · README · AGENTS.md, 글뿐 · 결정 51) 14:58 · 15:30 KST쯤 합침 어림. 제품 main c364bf0(고침 3 · 3-1 합쳐짐). 한알 새 한 편 도는 중"
-next: "024 반환 대조(세 파일 · 바이트 · 판 줄) → PLN. 처음 한 번만 한알 「git fetch 하고 origin/main의 app/webapp/MAC_NOW.md 대로 해 줘」 → 그 뒤 「맥 할 일대로 해 줘」(PLN에 알림). 맥 결과(라 읽기 셋 · tone_type) → PLN이 고침 4. 다음 고침 때 시험 하나: retry_ts 지난 wait_usage → step → 음악 카드. 결정 50: 맥 줄은 짧은 한 문장. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 025"
-waiting_for: ["role:mitchell_studio/btsr/pmo:BTSR-ARCH-024 반환 (512aef6d)"]
+now: "024(맥 할 일 한 장 — MAC_NOW · README · AGENTS) 반환함(제품 가지 0cb507a · 글뿐) → RSCH 합침 기다림. 제품 main c364bf0. 한알 새 한 편 도는 중"
+next: "맥 읽기 결과(다섯 — codex 판 · computer_use · 항상 허용한 앱 · tone_type · 서버 부모) → PLN이 고침 4 범위. 한알 말: 처음 한 번 「저장소를 새로 받아서 '지금 맥에서 할 일' 글대로 해 줘」 · 그 뒤 「맥 할 일대로 해 줘」. MAC_NOW 새 판은 PLN 요청 → 같은 길(판 줄 올림). 다음 고침 때 시험 하나: retry_ts 지난 wait_usage → step → 음악 카드. 결정 50: 맥 줄은 짧은 한 문장. 다음 맥 글 덧붙임 때 3-2 · 전송 켜기 '나중에 따로'. 다음 요청 번호 025 · PMO 512aef6d"
+waiting_for: ["role:mitchell_studio/btsr/rsch:024 제품 main 합침 (0cb507a)", "owner:맥 할 일 읽기 결과(다섯)"]
 owner_wait: "-"
 subs: []
 parent: "mitchell_studio/btsr/pln"
