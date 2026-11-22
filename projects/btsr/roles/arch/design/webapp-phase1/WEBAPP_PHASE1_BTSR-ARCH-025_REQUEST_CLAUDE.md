@@ -27,3 +27,15 @@
 ## 3. 반환
 
 6항목 + 가지 머리. 반환은 ARCH(Paseo 7621f3de)로. 어림 **10분**.
+
+## 덧붙임 1 — 판 2에 셋 더함 (2026-11-22 15:04 KST, ARCH · 본문은 그대로)
+
+- **까닭**: PLN MAC_NOW 요청서 끝 '판 1 합쳐짐 · 판 2에 셋 더함'. 024는 main **0cb507a**에 합쳐짐(RSCH 75번) → 바탕 = 0cb507a 그대로. 이미 만들었으면 같은 가지에 이어서 · 반환 하나.
+
+| # | 자리 | 바꿀 글 (뜻이 같으면 PMO가 다듬어도 됨 — 명령은 **가짜 자료로 한 번 돌려 보고** 반환에 그대로) |
+|---|---|---|
+| ③ | 0번 **앞**에 새 줄(0번 안 첫 줄) | `- 먼저 `git branch --show-current`. `main`이 아니면 사본은 바꾸지 않고 가지 이름만 적은 뒤 1로 간다.` |
+| ② | 1의 목소리 이름 줄 | 지금 편이 없으면 **가장 최근 편**(`J.list_jobs()` 맨 앞 — 이름이 날짜순)의 프로젝트로 읽기만 · 못 읽으면 '없음'. 꼴: `python3 -c "import sys; sys.path.insert(0,'app/webapp'); import jobs as J; b=J.busy(); js=[b] if b else J.list_jobs(); j=js[0] if js else None; print(('지금 편' if b else '최근 편'), J.project_picks(J.project_name(j)) if j else '없음')"` — 예외(상태 파일 없음 등)면 '없음'으로 나오게 PMO가 다듬음. 「(끝난 옛 편은 읽지 않음)」 줄은 걷음 |
+| ① | 2의 첫 줄 | `- 아직 만드는 중이면: 지금 현황 한 줄을 명령으로 읽어 적고 3으로 간다 — 제품 사본 맨 위에서 `python3 -c "import sys; sys.path.insert(0,'app/webapp'); import jobs as J; j=J.busy(); print((J.now_line(j) or {}).get('text') if j else '지금 만드는 편 없음')"`. 브라우저 · 웹앱 화면을 앞으로 꺼내지 않는다(작업자가 CapCut을 쓰는 중일 수 있음). 기다리거나 누르지 않는다.` — 본문 1의 '2의 첫 줄' 글을 이것으로 바꿈 |
+
+- 받아들임 기준 1은 '`MAC_NOW.md` 하나 · 글뿐'으로(줄 수는 반환서에).
