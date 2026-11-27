@@ -3,7 +3,8 @@
 """
 import json, sys, datetime as dt
 
-TR = "C:/Users/ms1pk/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/9281f0ee-13b1-464d-a5e0-cdf4f156a14e.jsonl"
+# 옛 RSCH(Paseo ed5ef600 · 11-21 16:58 – 11-28 01:25): "C:/Users/ms1pk/.claude/projects/C--Users-ms1pk-dev-mitchell-studio-agent/9281f0ee-13b1-464d-a5e0-cdf4f156a14e.jsonl"
+TR = "C:/Users/ms1pk/.claude-max/projects/C--Users-ms1pk-dev-mitchell-studio-agent/263f25e7-262c-41af-a244-677f9ac1ca21.jsonl"  # 새 RSCH(Paseo ae883848 · 11-28 01:23 뒤)
 KST = dt.timezone(dt.timedelta(hours=9))
 
 def kst(ts):

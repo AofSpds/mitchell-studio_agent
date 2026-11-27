@@ -76,3 +76,4 @@ git push -q origin main   # 원격이 한 번 'failed'로 거절한 적 있음 �
 ## 9. 받음
 
 - 받음: 2026-11-22 02:18:23 KST — 새 S7(Claude 세션 1af28c73-09c1-4135-b276-f7a3afea2881 · Paseo f6ef2ff6-1713-410f-8b72-2568d58733d8 · Opus 5.5). HANDOFF · OPEN_PACKET 읽음. 지켜보기는 켜지 않음 — 「적어 주세요」가 올 때만 `extract_qa.py 2026-11-22T02:15:05`부터 적음.
+- 2026-11-28 01:25(옛 RSCH CLOSED 01:25:18): RSCH PRIMARY 승계(옛 ed5ef600 → 새 Paseo ae883848 · Claude 263f25e7 · 구글 계정 Fable). `tools/extract_qa.py`의 `TR`을 새 transcript `C:/Users/ms1pk/.claude-max/projects/C--Users-ms1pk-dev-mitchell-studio-agent/263f25e7-262c-41af-a244-677f9ac1ca21.jsonl`로 바꿈(옛 경로는 그 줄 위 주석). 「적어 주세요」는 이제 새 RSCH가 보냄.
