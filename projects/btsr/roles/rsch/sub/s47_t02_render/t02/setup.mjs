@@ -13,7 +13,7 @@ const downloadDir = path.join(root, 'ffmpeg_dl');
 const work = path.join(root, 'work');
 const results = path.join(here, 'results.txt');
 const powershell = 'C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe';
-const zipUrl = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip';
+const zipUrl = 'https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.1-essentials_build.zip';
 const shaUrl = `${zipUrl}.sha256`;
 const started = performance.now();
 const log = line => appendFile(results, `${line}\n`, 'utf8');
@@ -69,15 +69,14 @@ async function sha256(target) {
 }
 
 try {
-  await writeFile(results, 'T02 SETUP\n', { encoding: 'utf8', flag: 'wx' });
+  await access(results);
+  await log('\n=== 둘째 시도 / SECOND ATTEMPT ===');
   await log(`COMMAND ${JSON.stringify({ exe: process.execPath, args: process.argv.slice(1), cwd: process.cwd(), shell: false })}`);
   await log(`START ${await kst()}`);
-  if (await exists(downloadDir)) throw new Error('ffmpeg_dl already exists. Stop without changing it.');
+  if (!(await exists(downloadDir)) || (await readdir(downloadDir)).length !== 0) throw new Error('Authorized retained ffmpeg_dl is absent or not empty. Stop without changing it.');
   if (await exists(work)) throw new Error('work already exists. Stop without changing it.');
-  await mkdir(root, { recursive: true });
-  await mkdir(downloadDir);
-  await log('PASS download directory newly created and empty');
-  const zip = path.join(downloadDir, 'ffmpeg-release-essentials.zip');
+  await log('PASS authorized retained download directory is still empty');
+  const zip = path.join(downloadDir, 'ffmpeg-9.1-essentials_build.zip');
   const checksum = `${zip}.sha256`;
   await download(shaUrl, checksum);
   const checksumText = (await readFile(checksum, 'utf8')).trim();
