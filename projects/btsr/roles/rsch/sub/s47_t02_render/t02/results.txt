@@ -1,0 +1,29 @@
+T02 SETUP
+COMMAND {"exe":"C:\\Users\\ms1pk\\DevEnvBackup-tools\\node-v24.22.0\\node-v24.22.0-win-x64\\node.exe","args":["C:\\Users\\ms1pk\\dev\\mitchell-studio_agent\\projects\\btsr\\roles\\rsch\\sub\\s47_t02_render\\t02\\setup.mjs"],"cwd":"C:\\Users\\ms1pk\\dev\\mitchell-studio_agent","shell":false}
+COMMAND {"exe":"C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe","args":["-NoProfile","-NonInteractive","-Command","[TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow,'Korea Standard Time').ToString('yyyy-MM-dd HH:mm:ss')"],"input":"","cwd":"C:\\Users\\ms1pk\\dev\\mitchell-studio_agent\\projects\\btsr\\roles\\rsch\\sub\\s47_t02_render\\t02","shell":false}
+START 2026-11-28 19:11:07 KST
+PASS download directory newly created and empty
+DOWNLOAD {"url":"https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip.sha256","target":"C:\\Users\\ms1pk\\dev\\mitchell-studio_t02\\ffmpeg_dl\\ffmpeg-release-essentials.zip.sha256","followRedirects":false}
+FAIL SETUP Download stopped: HTTP 303; no redirects or alternate URL allowed.
+SETUP_STOP elapsedSeconds=1.568
+
+STOP_REVIEW 2026-11-28 19:11:38 KST
+TIME_SOURCE PowerShell [TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow,'Korea Standard Time').ToString('yyyy-MM-dd HH:mm:ss')
+SUMMARY PASS=1 FAIL=1; video-validation PASS=0 FAIL=0 NOT_RUN=ALL
+PASS download directory newly created and empty (same check as above; not an additional pass)
+FAIL download endpoint returned HTTP 303; redirects were not followed (same failure as above)
+BOUNDARY Only the two exact URLs in OPEN_PACKET.md are authorized. Stop without alternate address/tool or retry.
+ZIP_REQUEST not started
+ZIP_SHA256 published=NOT_OBTAINED actual=NOT_OBTAINED
+FFMPEG_VERSION NOT_OBTAINED; drawtext=NOT_TESTED; libfreetype=NOT_TESTED
+ASSET_HASHES_BEFORE NOT_CREATED
+ASSET_HASHES_AFTER NOT_CREATED
+NOT_RUN generated photo 3024x4032; photo 4000x3000; video 1920x1080 30fps audio 8s; video 1080x1920 60fps silent 6s
+NOT_RUN T02 plan/validator; render 1; render 2; ffprobe format/dimensions/fps/duration/audio/frame-count checks
+NOT_RUN invalid source-range plan; missing-asset plan; midpoint PNG extraction
+FRAMES none; C:/Users/ms1pk/dev/mitchell-studio_t02/work/frames/ does not exist
+T01_REUSE unavailable unchanged: exactly 3 scenes, strict unknown-field rejection; T02 requires >=4 scenes and extra fields
+DOWNLOAD_DIRECTORY C:/Users/ms1pk/dev/mitchell-studio_t02/ffmpeg_dl/ exists and is empty at STOP_REVIEW
+WORK_DIRECTORY not created
+NO deletion, PATH/environment/registry/system-setting changes, installation, commit or push
+VISUAL_CAPTION_JUDGEMENT pending RSCH; no image available; no quality claim

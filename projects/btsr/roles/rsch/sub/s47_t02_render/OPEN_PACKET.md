@@ -32,3 +32,12 @@
 - 키 · 비밀 · Claude/Paseo/codex 설정 파일을 열지 않음. 손님 · 개인 정보를 어디에도 적지 않음. 막힌 명령을 다른 길로 돌아가지 않음 — 막히면 멈추고 보고.
 - 지우기는 `mitchell-studio_t02/work/` 안에서 스스로 만든 것만. 커밋 · push 하지 않음(RSCH가 검증 뒤 함).
 - 마지막 답: 다섯 줄 안 — 낸 파일 · 통과/실패 수 · 장면 그림 경로 · 못 한 것 · 대화 길이 어림.
+
+## 첫 시도 멈춤과 다시 하기 (2026-11-28 19:15 KST · RSCH)
+
+- S47이 19:11에 멈춤 — `.sha256` 주소가 HTTP 303(다른 주소로 보냄)을 돌려줌. 의뢰서의 '두 주소만'을 지켜 따라가지 않고 멈춘 것은 **옳음**.
+- RSCH가 머리글만 받아(HEAD · 내려받기 아님) 보낸 곳을 확인함 — 같은 곳(`www.gyan.dev/ffmpeg/builds/packages/`)의 판 번호가 붙은 파일:
+  - `https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.1-essentials_build.zip`
+  - `https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.1-essentials_build.zip.sha256`
+- **허락하는 주소를 이 둘로 바꿈.** 이 둘을 바로 요청하고, 이 둘이 또 다른 주소로 보내면 다시 멈추고 보고. 그 밖의 규칙은 위 그대로.
+- 19:11에 S47이 만든 빈 `ffmpeg_dl/`은 스스로 만든 새 빈 폴더이므로 그대로 씀(지금도 비어 있음 — RSCH 확인). `results.txt`는 덮어쓰지 말고 아래에 '둘째 시도' 칸을 이어 씀.
