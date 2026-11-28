@@ -1,0 +1,73 @@
+T01 편집표·단계 기록 연구 모형 — 실제 실행 결과
+명령: & 'C:\Users\ms1pk\DevEnvBackup-tools\node-v24.22.0\node-v24.22.0-win-x64\node.exe' 'projects/btsr/roles/rsch/sub/s33_followup_bundle1/a1_mock/run.mjs'
+실행기: v24.22.0
+시작: 2026-11-28 17:49:20 KST
+범위: 합성 JSON·Node 내장 기능·단일 프로세스·상태 파일 다시 읽기; 영상/청구/외부 호출 없음
+통과 F00 표본 수와 서로 다른 거부 까닭
+근거 V01 job=job_a durationMs=6000 hash=789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068
+통과 V01 정상 편집표
+근거 V02 job=job_b durationMs=7000 hash=0b479e85f66bd7143bc76d3722b283305f7f5d45c733a69f9c9e4df58ff6f864
+통과 V02 정상 편집표
+근거 V03 job=job_c durationMs=3000 hash=196a37ac98b11dc6c404f98e79124a15f673fa78b80c0402df54d9f4385baec2
+통과 V03 정상 편집표
+근거 E01 expected=SCHEMA_VERSION actual=SCHEMA_VERSION detail=SCHEMA_VERSION: schemaVersion은 1
+통과 E01 모르는 편집표 판
+근거 E02 expected=MISSING_FIELD actual=MISSING_FIELD detail=MISSING_FIELD: plan.revision
+통과 E02 필수 판 번호 없음
+근거 E03 expected=DUPLICATE_ASSET_ID actual=DUPLICATE_ASSET_ID detail=DUPLICATE_ASSET_ID: mock_x
+통과 E03 가짜 파일 번호 중복
+근거 E04 expected=UNKNOWN_ASSET actual=UNKNOWN_ASSET detail=UNKNOWN_ASSET: missing
+통과 E04 없는 파일 번호
+근거 E05 expected=SOURCE_RANGE actual=SOURCE_RANGE detail=SOURCE_RANGE: s1
+통과 E05 원본 끝을 넘긴 구간
+근거 E06 expected=DURATION actual=DURATION detail=DURATION: s1
+통과 E06 음수 장면 길이
+근거 E07 expected=DUPLICATE_SCENE_ID actual=DUPLICATE_SCENE_ID detail=DUPLICATE_SCENE_ID: s1
+통과 E07 장면 번호 중복
+근거 E08 expected=SCENE_COUNT actual=SCENE_COUNT detail=SCENE_COUNT: 장면은 3개
+통과 E08 3장면 조건 어김
+근거 E09 expected=TIMELINE_OVERLAP actual=TIMELINE_OVERLAP detail=TIMELINE_OVERLAP: s2
+통과 E09 장면 시간표 겹침
+근거 E10 expected=DUPLICATE_JOB_ID actual=DUPLICATE_JOB_ID detail=DUPLICATE_JOB_ID: job_a
+통과 E10 먼저 받은 작업 번호와 겹침
+근거 W01 동일 승인 2회 → 승인 저장 1회; 다른 승인 번호 반복도 추가 승인 0; 완료 뒤 재요청 추가 실행 0
+통과 W01 같은 승인 두 번·새 승인 번호의 반복
+근거 W02 미승인·다른 판·같은 판의 바뀐 내용 3건 거부; 실행 0
+통과 W02 승인 전 실행·다른 판과 표 해시의 승인 거부
+근거 W03 재개1 이전완료={"edit":1} 다음=captions 완료단계추가실행=0
+근거 W03 재개2 이전완료={"edit":1,"captions":1} 다음=final_marker 완료단계추가실행=0
+근거 W03 중단=2 재개=2 최종실행={"edit":1,"captions":1,"final_marker":1} 완료단계추가실행=0
+기록 W03 {"seq":1,"atKst":"2026-11-28 17:49:20 KST","event":"approved","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","approvalId":"approval_job_a"}
+기록 W03 {"seq":2,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"0783483c-4f5a-4dcf-ae96-320259ee1966"}
+기록 W03 {"seq":3,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"0783483c-4f5a-4dcf-ae96-320259ee1966","outputHash":"fe2ad6e08d6cc56f85e5b4c71ca69d896226eed3d19cb7d513de5e820a9ef89b"}
+기록 W03 {"seq":4,"atKst":"2026-11-28 17:49:20 KST","event":"simulated_interruption","jobId":"job_a","afterStage":"edit"}
+기록 W03 {"seq":5,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"captions","attempt":1,"requestId":"99bbcb6e-b8b0-41ca-a568-14a73b85c1b8"}
+기록 W03 {"seq":6,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"captions","attempt":1,"requestId":"99bbcb6e-b8b0-41ca-a568-14a73b85c1b8","outputHash":"e89cd3ef76ba3ce84b89cb2efd1f094d9c8c11beb9fd7c6ef217def09fcd1def"}
+기록 W03 {"seq":7,"atKst":"2026-11-28 17:49:20 KST","event":"simulated_interruption","jobId":"job_a","afterStage":"captions"}
+기록 W03 {"seq":8,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"final_marker","attempt":1,"requestId":"fed7c7cd-6fcd-4fe7-bf4a-a3854f54ed0a"}
+기록 W03 {"seq":9,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"final_marker","attempt":1,"requestId":"fed7c7cd-6fcd-4fe7-bf4a-a3854f54ed0a","outputHash":"ad0dc0c04fbf2e9cfed72c1a5e9627591384d60ce5aefdb93427ec9cb1eceeef"}
+통과 W03 중단 2회·파일 재읽기 재개 2회
+근거 W04 이전응답=stale(새응답 전/후) 중복=duplicate 다른판=mismatch; 미완료재시도=1 완료뒤추가실행=0
+기록 W04 {"seq":1,"atKst":"2026-11-28 17:49:20 KST","event":"approved","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","approvalId":"approval_job_a"}
+기록 W04 {"seq":2,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"e66f8ef4-7547-43ca-a706-321f43938e03"}
+기록 W04 {"seq":3,"atKst":"2026-11-28 17:49:20 KST","event":"superseded","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"e66f8ef4-7547-43ca-a706-321f43938e03"}
+기록 W04 {"seq":4,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":2,"requestId":"3e129b1e-fed2-4261-bd12-867bc2793b3a"}
+기록 W04 {"seq":5,"atKst":"2026-11-28 17:49:20 KST","event":"response_ignored","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"e66f8ef4-7547-43ca-a706-321f43938e03","status":"stale"}
+기록 W04 {"seq":6,"atKst":"2026-11-28 17:49:20 KST","event":"response_ignored","jobId":"job_a","revision":99,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":2,"requestId":"3e129b1e-fed2-4261-bd12-867bc2793b3a","status":"mismatch"}
+기록 W04 {"seq":7,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":2,"requestId":"3e129b1e-fed2-4261-bd12-867bc2793b3a","outputHash":"fe2ad6e08d6cc56f85e5b4c71ca69d896226eed3d19cb7d513de5e820a9ef89b"}
+기록 W04 {"seq":8,"atKst":"2026-11-28 17:49:20 KST","event":"response_ignored","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":1,"requestId":"e66f8ef4-7547-43ca-a706-321f43938e03","status":"stale"}
+기록 W04 {"seq":9,"atKst":"2026-11-28 17:49:20 KST","event":"response_ignored","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"edit","attempt":2,"requestId":"3e129b1e-fed2-4261-bd12-867bc2793b3a","status":"duplicate"}
+기록 W04 {"seq":10,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"captions","attempt":1,"requestId":"d18646ba-e9c8-4918-924d-d56467006f64"}
+기록 W04 {"seq":11,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"captions","attempt":1,"requestId":"d18646ba-e9c8-4918-924d-d56467006f64","outputHash":"e89cd3ef76ba3ce84b89cb2efd1f094d9c8c11beb9fd7c6ef217def09fcd1def"}
+기록 W04 {"seq":12,"atKst":"2026-11-28 17:49:20 KST","event":"execute","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"final_marker","attempt":1,"requestId":"d0beab87-d757-4e68-838f-af6c3bb225ab"}
+기록 W04 {"seq":13,"atKst":"2026-11-28 17:49:20 KST","event":"completed","jobId":"job_a","revision":1,"planHash":"789fe7a2af06cd1f7af39d6867e41e582a5b47c7a2ab6da06b09721fe7d02068","stage":"final_marker","attempt":1,"requestId":"d0beab87-d757-4e68-838f-af6c3bb225ab","outputHash":"ad0dc0c04fbf2e9cfed72c1a5e9627591384d60ce5aefdb93427ec9cb1eceeef"}
+통과 W04 늦은 응답·중복 응답·판이 다른 응답
+근거 W05 3작업×3단계 결과=9; 섞인 응답/자막/작업번호 주입 거부=9; 저장된 작업 섞임=0; 실행=9
+통과 W05 3작업 교차 실행·역순 응답·자막 섞기 거부
+근거 W06 응답 대기 상태를 파일에서 복원; 기존 요청 UUID 유지; 재개 자체의 새 실행=0
+통과 W06 응답 대기 중 재개는 새 실행을 만들지 않음
+측정 합계: {"valid":3,"invalid":10,"interruptions":2,"resumes":2,"completedExtra":0,"mixed":0}
+결과: 통과 20 / 실패 0 / 전체 20
+종료: 2026-11-28 17:49:21 KST
+경과: 214.9 ms
+한계: 저장 직후의 모의 예외이며 실제 강제 종료 아님; 실제 영상·청구·외부 응답·저장 손상·다중 컴퓨터 미검증

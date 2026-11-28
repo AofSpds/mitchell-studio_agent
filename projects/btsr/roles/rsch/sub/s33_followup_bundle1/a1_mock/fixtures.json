@@ -1,0 +1,161 @@
+{
+  "valid": [
+    {
+      "caseId": "V01",
+      "plan": {
+        "schemaVersion": 1, "jobId": "job_a", "revision": 1,
+        "assets": [{"assetId": "mock_a", "durationMs": 10000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_a", "sourceInMs": 0, "durationMs": 2000, "timelineStartMs": 0, "caption": "가상 A 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_a", "sourceInMs": 2000, "durationMs": 3000, "timelineStartMs": 2000, "caption": "가상 A 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_a", "sourceInMs": 5000, "durationMs": 1000, "timelineStartMs": 5000, "caption": "가상 A 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "V02",
+      "plan": {
+        "schemaVersion": 1, "jobId": "job_b", "revision": 2,
+        "assets": [{"assetId": "mock_b1", "durationMs": 6000}, {"assetId": "mock_b2", "durationMs": 4000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_b1", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 B 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_b2", "sourceInMs": 0, "durationMs": 4000, "timelineStartMs": 1000, "caption": "가상 B 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_b1", "sourceInMs": 4000, "durationMs": 2000, "timelineStartMs": 5000, "caption": "가상 B 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "V03",
+      "plan": {
+        "schemaVersion": 1, "jobId": "job_c", "revision": 1,
+        "assets": [{"assetId": "mock_c", "durationMs": 3000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_c", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 C 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_c", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 C 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_c", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 C 마지막 장면"}
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "caseId": "E01", "expectedCode": "SCHEMA_VERSION", "reason": "모르는 편집표 판",
+      "plan": {
+        "schemaVersion": 2, "jobId": "bad_01", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E02", "expectedCode": "MISSING_FIELD", "reason": "필수 판 번호 없음",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_02",
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E03", "expectedCode": "DUPLICATE_ASSET_ID", "reason": "가짜 파일 번호 중복",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_03", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}, {"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E04", "expectedCode": "UNKNOWN_ASSET", "reason": "없는 파일 번호",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_04", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "missing", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E05", "expectedCode": "SOURCE_RANGE", "reason": "원본 끝을 넘긴 구간",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_05", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 5500, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E06", "expectedCode": "DURATION", "reason": "음수 장면 길이",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_06", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": -1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E07", "expectedCode": "DUPLICATE_SCENE_ID", "reason": "장면 번호 중복",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_07", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E08", "expectedCode": "SCENE_COUNT", "reason": "3장면 조건 어김",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_08", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E09", "expectedCode": "TIMELINE_OVERLAP", "reason": "장면 시간표 겹침",
+      "plan": {
+        "schemaVersion": 1, "jobId": "bad_09", "revision": 1,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 500, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    },
+    {
+      "caseId": "E10", "expectedCode": "DUPLICATE_JOB_ID", "reason": "먼저 받은 작업 번호와 겹침", "existingJobIds": ["job_a"],
+      "plan": {
+        "schemaVersion": 1, "jobId": "job_a", "revision": 2,
+        "assets": [{"assetId": "mock_x", "durationMs": 6000}],
+        "scenes": [
+          {"sceneId": "s1", "assetId": "mock_x", "sourceInMs": 0, "durationMs": 1000, "timelineStartMs": 0, "caption": "가상 첫 장면"},
+          {"sceneId": "s2", "assetId": "mock_x", "sourceInMs": 1000, "durationMs": 1000, "timelineStartMs": 1000, "caption": "가상 둘째 장면"},
+          {"sceneId": "s3", "assetId": "mock_x", "sourceInMs": 2000, "durationMs": 1000, "timelineStartMs": 2000, "caption": "가상 마지막 장면"}
+        ]
+      }
+    }
+  ]
+}
