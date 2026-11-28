@@ -58,6 +58,18 @@
 - Python이 필요하면 `C:\Users\ms1pk\DevEnvBackup-tools\python-standalone\cpython-3.13-windows-x86_64-none\python.exe -I -B`(표준 모듈만).
 - 한글 파일은 UTF-8로 읽고 쓴다(PowerShell `Get-Content -Encoding UTF8`).
 
+## 둘째 차례 (2026-11-28 17:00 KST에 더함 — 첫 차례 여섯 글이 16:50 – 16:57에 다 옴)
+
+RSCH가 대조 글 넷의 '다름 · 부풀림' 판정 가운데 12건을 바탕 글의 줄로 직접 확인했다 — 12건 모두 대조 글이 맞았다(C04 · C06 · C09 · C41 · X56 · X64 · Q32(= X42 · C25 · K44) · Q36 · K07 · K18 · K29 · K62).
+
+| 창 | 읽을 것 | 낼 파일(하나) |
+|---|---|---|
+| S29_FIXES | 대조 글 넷(`S23_CHK_X.md` – `S26_CHK_KR.md`)의 1 – 3번 칸 + 종합본 17 – 41줄 | `S29_FIXES.md` — 종합본에서 고칠 곳 · 핵심 주장의 출처 · 날짜 · 엇갈림 |
+| S30_SCOPE | 대조 글 넷의 4 – 6번 칸 + `S27_TECH_TEST.md` + `S28_FOLLOWUP.md` + 종합본 134 – 165줄 · 199 – 203줄 | `S30_SCOPE.md` — 첫 판 범위 후보 · 기술 시험 후보 · 뒤따를 조사 · 한알께 여쭐 것 |
+| S31_SHEET (위 둘이 온 뒤) | `S29_FIXES.md` + `S30_SCOPE.md` + 종합본 17 – 41줄 | `projects/btsr/roles/rsch/studies/2026-11-28-origin-research-one-sheet.md` — 한 장 초안 |
+
+지킬 것은 아래 '모든 창이 지킬 것' 그대로. 종합본 자체는 고치지 않는다(고칠 곳은 목록으로만).
+
 ## 마지막 답(반환) — 다섯 줄 안
 
 쓴 파일과 줄 수 · 가장 큰 발견 셋 · 못 한 것 · 자기 대화 길이 어림.
