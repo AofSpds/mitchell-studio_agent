@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "jobId": "t02b_caption",
+  "revision": 1,
+  "assets": [
+    {
+      "assetId": "photo_portrait",
+      "durationMs": 6000,
+      "kind": "photo",
+      "path": "C:\\Users\\ms1pk\\dev\\mitchell-studio_t02\\work\\assets\\세로사진_01.png"
+    },
+    {
+      "assetId": "photo_landscape",
+      "durationMs": 6000,
+      "kind": "photo",
+      "path": "C:\\Users\\ms1pk\\dev\\mitchell-studio_t02\\work\\assets\\landscape_photo.png"
+    },
+    {
+      "assetId": "video_landscape",
+      "durationMs": 8000,
+      "kind": "video",
+      "path": "C:\\Users\\ms1pk\\dev\\mitchell-studio_t02\\work\\assets\\landscape_audio.mp4"
+    },
+    {
+      "assetId": "video_portrait",
+      "durationMs": 6000,
+      "kind": "video",
+      "path": "C:\\Users\\ms1pk\\dev\\mitchell-studio_t02\\work\\assets\\portrait_silent.mp4"
+    }
+  ],
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "captionSafeArea": {
+      "top": 430,
+      "bottom": 720,
+      "left": 100,
+      "right": 200
+    }
+  },
+  "scenes": [
+    {
+      "sceneId": "s1",
+      "assetId": "photo_portrait",
+      "sourceInMs": 0,
+      "durationMs": 2500,
+      "timelineStartMs": 0,
+      "caption": "세로 사진: 화면을 가득 채워요",
+      "fit": "cover"
+    },
+    {
+      "sceneId": "s2",
+      "assetId": "photo_landscape",
+      "sourceInMs": 0,
+      "durationMs": 3500,
+      "timelineStartMs": 2500,
+      "caption": "긴 자막 시험: 가로 사진을 온전히 담고 한글 문장이 여러 줄로 이어질 때 양옆과 아래쪽 글자가 잘리지 않는지 살펴봅니다",
+      "fit": "contain"
+    },
+    {
+      "sceneId": "s3",
+      "assetId": "video_landscape",
+      "sourceInMs": 1000,
+      "durationMs": 4000,
+      "timelineStartMs": 6000,
+      "caption": "가로 영상: 색이 바뀌고 소리가 나요",
+      "fit": "cover"
+    },
+    {
+      "sceneId": "s4",
+      "assetId": "video_portrait",
+      "sourceInMs": 1500,
+      "durationMs": 3000,
+      "timelineStartMs": 10000,
+      "caption": "세로 영상: '무음'도 끝까지 이어져요",
+      "fit": "contain"
+    },
+    {
+      "sceneId": "s5",
+      "assetId": "photo_portrait",
+      "sourceInMs": 0,
+      "durationMs": 3000,
+      "timelineStartMs": 13000,
+      "caption": "띄어쓰기가 많은 긴 문장도 어절을 지키며 접어요 양옆과 아래쪽 글자가 잘리지 않는지 살펴봅니다",
+      "fit": "cover"
+    },
+    {
+      "sceneId": "s6",
+      "assetId": "photo_landscape",
+      "sourceInMs": 0,
+      "durationMs": 3000,
+      "timelineStartMs": 16000,
+      "caption": "한어절이아주길어서한줄의너비를넘어서는경우에만글자사이에서나누어표시합니다",
+      "fit": "contain"
+    },
+    {
+      "sceneId": "s7",
+      "assetId": "video_landscape",
+      "sourceInMs": 1000,
+      "durationMs": 3000,
+      "timelineStartMs": 19000,
+      "caption": "1080×1920 세로 영상 OK! 한글과 English 12345, WIDE iii, 30fps / 48kHz를 섞어서 줄 너비를 확인합니다.",
+      "fit": "cover"
+    }
+  ]
+}
