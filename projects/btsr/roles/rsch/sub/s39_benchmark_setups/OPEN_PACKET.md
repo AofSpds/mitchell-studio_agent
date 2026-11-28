@@ -57,3 +57,35 @@
 ## 마지막 답(반환) — 다섯 줄 안
 
 쓴 파일과 줄 수 · 새 세팅 카드 수(이미 있음 제외) · 가장 본뜰 만한 것 셋 · 막힌 곳 · 자기 대화 길이 어림.
+
+## RSCH 수용 (2026-11-28 18:32 KST — 다섯 글이 18:32 전에 다 옴)
+
+| 창 | 낸 것 | 판정 |
+|---|---|---|
+| S39_BM_X `7d71c9fa` | `S39_BM_X.md` 117줄 · 새 카드 4(FrameJam · OpenFilm · cut-as-code · FableCut) · 엑스 · Tangled 403 — 거울 사이트로 돌아가지 않음 | 받아들임 |
+| S40_BM_REDDIT `c925348b` | `S40_BM_REDDIT.md` 177줄 · 새 카드 10(AskEditor · proofcut · fastCutVid · Marketing Studio · Palmier Pro 등) | 받아들임 |
+| S41_BM_CN `412733b9` | `S41_BM_CN.md` 158줄 · 새 카드 8(JJYB_AI 智剪 · dsh-autocut · ai-cut · web-video-produce 등) · 知乎 403 | 받아들임 |
+| S42_BM_JP `62202b0b` | `S42_BM_JP.md` 180줄 · 새 카드 11(localcut · Sashimono Edit · FrameWright · Weekly Slideshow Engine 등) | 받아들임 |
+| S43_BM_KR `685213ed` | `S43_BM_KR.md` 178줄 · 새 카드 8(K01 – K08 — GPTers 한 JSON 수정 · Vrew 마무리 등) · 브런치 멤버십 벽 | 받아들임 |
+
+- **RSCH가 한 검증:** 다섯 글의 '본뜰 것 다섯'을 다 읽음 · 처음 보는 이름 여섯을 원문으로 따로 열어 맞춤(18:32 전) — FableCut README "any process that can write JSON can edit video, and the open browser UI hot-reloads" · fastCutVid 스키마 `"const": "fastcut.timeline/v1"`와 `asset_id` · `source_in` · `source_out` · Sashimono Edit "Undo / Redo" · "1 指示 = 1 取り消し"와 AI 계획을 먼저 보이고 〔付ける〕로 붙임 · FrameWright "外部(手編集や AI)による JSON の変更は ホットリロードで反映されます" · dsh-autocut `asset_catalog.json` · `asset_matches.json` · `selections.json` · GPTers 글 "문구, 색, 씬 길이는 여기서만 바꿉니다"(다만 `index.html` 안의 JSON 덩어리 — 따로 떨어진 파일은 아님) — **여섯 다 있음 · 판정과 맞음.** 카드의 시간 · 값 · 성공은 글쓴이의 말이며 RSCH가 돌려 본 것이 아님.
+- **다섯이 같은 쪽을 가리킴(RSCH의 읽기):** 자동 초안과 사람의 편집 화면이 **같은 편집표(JSON) 하나**를 쓰고(FableCut · fastCutVid · FrameWright · MakeMyClip · GPTers K03) · 사람의 수정이 편집표로 돌아오며 판 번호가 붙고 · 굽기 전후 검사(길이 · 글자 위치 · 검은 구간 · 다시 받아쓰기)를 두고 · 영상과 올릴 글을 한 꾸러미로 내보냄 — 고르신 길과 같은 꼴. 한글 자막의 실측은 다섯 어디에도 없음.
+- 끝난 창 다섯은 이름 끝에 ' CLOSED'(18:32).
+
+## 둘째 차례 — 벤치마크 한 장 (2026-11-28 18:32 KST)
+
+| 창 | 읽을 것 | 낼 것 |
+|---|---|---|
+| S45_BM_SHEET (새 창) | 이 폴더의 다섯 글 전체 · 위 'RSCH 수용' 칸 / `projects/btsr/roles/rsch/sub/s33_followup_bundle1/S38_EDITOR_CANDIDATES.md` 1 · 2 · 5 · 7번 칸 / `projects/btsr/roles/rsch/sub/s33_followup_bundle1/S34_A1_MOCK.md` 70 – 77줄 / `projects/btsr/roles/rsch/studies/2026-11-28-origin-research-one-sheet.md` 13 – 44줄 | `projects/btsr/roles/rsch/studies/2026-11-28-automation-setup-benchmark.md` — 220줄 안 |
+
+### S45_BM_SHEET — 낼 글의 칸
+
+0. **한알께 드릴 다섯 줄** — 쉬운 말 · 결론 먼저 · 영어 낱말과 내부 번호 없이(도구 이름은 그대로): 남들은 어떻게 하나 · 우리가 본뜰 것 셋 · 아직 모르는 것.
+1. **단계별 본뜰 것** — 받기 · 고르기 → 편집표 → 앱 안에서 고치기 → 굽기 · 검사 → 사람 확인 → 내보내기 · 올릴 글. 단계마다: 본뜰 꼴(두세 줄) · 근거 카드(파일 · 카드 번호) · 몇 지역에서 나왔나 · 우리에게 맞추려면 더할 것.
+2. **편집표 초안의 칸** — 다섯 글의 카드에 실제로 나온 칸 이름(`asset_id` · `source_in/out` · `start/duration/text` · `title/body/hashtags` 등)과 시험 T01의 칸(S34 70 – 77줄)을 한 표로 맞댐: 칸 · 뜻 · 나온 카드 · T01에 있나 · 첫 판에 꼭 넣나('읽은 이의 판단'). 사진 표시 길이 · 세로 배치 · 한글 자막 · 올릴 글 · 판 번호 · 사람이 잠근 곳.
+3. **편집 앱 후보 다시 보기** — S38의 셋(OpenCut classic · MakeMyClip · HyperFrames)에 벤치마크에서 나온 **편집 화면이 있는 공개 도구**(FableCut · fastCutVid · FrameWright · Sashimono Edit · AskEditor · Palmier Pro · OpenFilm · JJYB_AI 등)를 더한 표: 어디서 도나 · 편집표를 같이 쓰나 · 라이선스(카드에 있으면 — **없으면 '확인 안 됨'으로 · 이 창은 웹을 열지 않음**) · 먼저 비교 시험할 후보 셋을 다시 고름(까닭 — '읽은 이의 판단').
+4. **첫 판에 넣지 않을 것** — 카드들이 넣었지만 고르신 범위 밖인 것(목소리 · 음악 · 생성 영상 · 자동 게시 등).
+5. **기술 시험 후보 갱신** — 시험 T01 다음 차례로 무엇을 돌릴지(설치 허락이 필요한지 함께).
+6. **한계** — 글쓴이의 말 · 돌려 보지 않음 · 한글 실측 없음 · 엑스 직접 글 못 읽음 · 여섯 달 넘은 카드.
+
+- 지킬 것: 이 묶음의 '모든 창이 지킬 것' 그대로 — 단 **이 창은 웹을 쓰지 않는다**(이미 받은 글만 묶음). 다섯 글에 없는 것을 지어 적지 않는다. 쓰기는 낼 파일 하나만 · 커밋 안 함.
