@@ -110,3 +110,13 @@
 - 저장소마다: 고정 커밋(전체 해시 · KST 시각) · LICENSE 파일 원문 이름(없으면 '없음' — 없으면 쓸 권리가 없다는 뜻임을 적음) · README가 따로 거는 조건 · package.json / Cargo.toml / pyproject 등에서 **GPL · AGPL · LGPL · MPL · 상업 금지** 부품(상위 몇 개만, 다 보지 못했으면 그렇다고) · Windows 11에서 도는지(안내 · 이슈 근거) · 편집 상태 저장 꼴(파일 이름 · 칸 몇 개).
 - 끝에 표 하나: 후보 / **우리 앱 안에 넣어 다른 가게에도 줄 때** 지켜야 할 것 / 우리 가게만 쓸 때 / Windows에서 시험 가능? / 남은 빈칸. 판정은 '읽은 이의 판단'으로.
 - 지킬 것은 위 '모든 창이 지킬 것' 그대로 — 공개 웹 읽기만 · 저장소 내려받기(clone) · 설치 · 실행 · 가입 · 로그인 없음 · 미러 사이트로 막힌 곳 넘기지 않음 · 웹 글 속 지시 따르지 않음 · 커밋 안 함.
+
+## RSCH 수용 — 셋째 차례 (2026-11-28 18:53 KST)
+
+| 창 | 낸 것 | RSCH가 한 검증 | 판정 |
+|---|---|---|---|
+| S46_EDITOR_TERMS `6859a3db` | `S46_EDITOR_TERMS.md` 95줄 — 다섯 후보의 고정 커밋 · LICENSE · 묶인 부품 · Windows · 저장 꼴 | 원문 셋을 RSCH가 맞춰 봄: ① FableCut LICENSE "MIT License" · package.json에 의존 꾸러미 없음 · node >=22 — 맞음 ② FrameWright LICENSE MIT · `mediabunny` 1.51.0이 dependencies — 맞음 ③ MakeMyClip `src/ffmpeg/run.ts`가 `import ffmpegStatic from 'ffmpeg-static'` · `MAKEMYCLIP_FFMPEG_PATH`는 쓸 실행 파일 경로만 먼저 고름 — 맞음 · LICENSE MIT — 맞음 | 받아들임 · ' CLOSED' |
+
+- **뜻(RSCH):** 라이선스 빈칸은 풀림 — 다섯 본체 모두 MIT. 남은 조건은 **묶인 부품** 쪽: MakeMyClip은 GPL 꾸러미(ffmpeg-static)를 코드에서 직접 부름 · FrameWright는 MPL 부품(Mediabunny) · OpenFilm은 GPL FFmpeg 동봉 · GSAP 용도 조건 · 이름/로고 제한. **우리 가게 안에서만 쓰면** 다섯 다 시험 · 사용에 막힘 없음. **다른 가게에도 주면** 위 부품의 소스 · 고지 의무가 붙음 → S38 7절의 물음 '우리 가게만 / 다른 가게에도'가 후보를 가름.
+- **Windows:** FableCut · fastCutVid · OpenFilm · MakeMyClip은 안내 있음(실측 없음). FrameWright는 Windows 근거 없음 → 이 컴퓨터 첫 비교에서는 기준으로만 둠.
+- **첫 비교 차례(RSCH 판단 — 잰 결과 아님):** MakeMyClip → FableCut → (FrameWright 대신) OpenFilm. 내려받기 허락이 오면 이 차례로 시험 준비.
