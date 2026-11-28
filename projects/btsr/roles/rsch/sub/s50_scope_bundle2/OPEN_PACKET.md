@@ -50,3 +50,14 @@
 - 키 · 비밀 · Claude/Paseo/codex 설정 파일을 열지 않음. 커밋 · push 하지 않음(RSCH가 검증 뒤 함). 자기 파일 하나만 씀 — 다른 창의 파일을 고치지 않음.
 - **헛멈춤 막기(11-28 배운 것):** ① 깔리지 않은 도구(`rg` 등)는 막힘이 아님 — PowerShell · Node 내장으로 찾음 ② 진행판(paseo-progress)은 쓰지 않음 ③ 권한 거부 · 허락 창이 뜨면 그때만 멈추고 거부 문구를 보고.
 - 마지막 답: 다섯 줄 안 — 파일 · 줄 수 · 가장 큰 발견 셋 · 못 한 것 · 대화 길이 어림.
+
+## RSCH 수용 — S51 · S52 (2026-11-28 23:43 KST)
+
+| 창 | 낸 것 | RSCH가 한 검증 | 판정 |
+|---|---|---|---|
+| S52_VIDEO_KINDS `cf2d485f` | `S52_VIDEO_KINDS.md` 155줄 — 작업 종류 열(3D 빼고) 지도 · 도구들이 새 종류 · 겹 · 효과 · 판을 받는 꼴 · T02b와 맞대기 · 첫 판에 미리 해 둘 것 | 원문 셋: ① MakeMyClip `compile.ts`가 따로 된 소리 트랙("Separate audio tracks are not supported in export yet") · 그림 트랙 둘("Multi-track overlay export is not supported yet") · chromaKey를 굽기에서 거절 — 맞음 ② AudioCraft 코드 MIT · 가중치 CC-BY-NC 4.0 — 맞음 ③ Remotion 무료는 개인 · 3인 이하 회사 — 맞음 | 받아들임 · ' CLOSED' |
+| S51_3D_VIDEO `137f733d` | `S51_3D_VIDEO.md` 160줄 — 3D를 넣는 꼴 셋 · 엔진(Blender · Three.js · R3F · Remotion · HyperFrames · MCP for Blender) · 휴대폰 촬영→3D(COLMAP · gsplat) · AI 3D 생성 · 공개 세팅 셋 · 지금 해 둘 칸 | 원문 둘: ① Hunyuan3D-2.1 약관 Territory가 "excluding the territory of the European Union, United Kingdom and South Korea" — 맞음(한국에서 쓸 수 없음 — 보류가 옳음) ② TRELLIS.2 LICENSE "MIT License" — 맞음 | 받아들임 · ' CLOSED' |
+
+- **두 글이 같은 쪽을 가리킴(RSCH):** 새 작업(3D · 배경 지우기 · AI 생성 · 목소리 등)은 **먼저 '구운 영상 조각'으로 받는다** — 지금 편집표의 영상 소재 길로 바로 들어옴. 편집표에는 지금 **경계만** 열어 둠: 매체 종류(`asset.kind`)와 장면 종류(`scene.type`)를 나눔 · 장면 안 겹(`layers[]`) · 효과 배열 · 굽는 부품 이름과 판 · 원본 장면/카메라/엔진 판 · 미리보기와 최종 출력 분리 · 비동기 굽기 작업 · 부품/모델별 라이선스 기록. 3D 편집 화면 · 모델 생성 · 스캔은 첫 판에 넣지 않음.
+- **새로 안 것:** MakeMyClip(먼저 비교할 편집 앱 1번)은 **저장은 여러 트랙이지만 굽기는 그림 한 트랙 + 글자**뿐 — 전후 나란히 · 따로 된 소리 · 합성이 필요하면 그대로는 모자람. 편집 앱 비교 시험(T03)의 검사 항목에 넣음.
+- **라이선스 덫:** 코드와 모델 가중치의 조건이 다름(AudioCraft 가중치 비상업 · rembg 기본 모델 상업 유료 · Hunyuan3D 한국 제외 · Stable Fast 3D 매출 경계 · Remotion 4인 이상 유료 · Blender GPL은 따로 부르는 꼴로).
