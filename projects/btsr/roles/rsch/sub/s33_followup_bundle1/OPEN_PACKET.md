@@ -113,3 +113,13 @@
 - OpenReels를 출발점으로 **직접 관련된 공개 코드 넷 안**(MoneyPrinterTurbo · Pixelle-Video는 빼고 · S38이 보는 편집 앱 후보와 겹치면 그 이름만 적고 넘어감). 저장소마다: 주소 · 라이선스 · 판 · 커밋 · 날짜 · **자기 사진 · 영상 · 섞음을 받는가(README 주장 / 코드 경로 — 파일과 줄 / 이슈)** · 받는 방식(파일 · 주소) · 한국어 요청 · 자막 · 얼굴 처리 · 무엇을 내나(영상 · 올릴 글 · 편집 상태 파일) · 바깥 서비스에 기대는 곳 · 원본을 지키는가 · 짧은 원문 인용.
 - 끝에: '그대로 쓸 근거가 있는 범위 / 더 만들어야 할 범위 / 확인 못 함 / 나중에 돌려서 가릴 것' 표 · **내일 미P4 프로챗을 보낼 필요가 있는가**(예 / 아니오 + 남길 물음 — '읽은 이의 판단').
 - 지킬 것은 위 '모든 창이 지킬 것' 그대로 — 공개 웹 읽기만 · 저장소 내려받기 · 설치 · 실행 · 가입 없음 · 커밋 안 함.
+
+## RSCH 수용 — 둘째 · 셋째 차례 (2026-11-28 18:22 KST)
+
+| 창 | 낸 것 | RSCH가 한 검증 | 판정 |
+|---|---|---|---|
+| S33_MISSION `8c6638c6` (이어 씀 둘) | 미P5를 남은 물음 다섯으로 좁힘(de825bd) · 미P2를 '공개 편집 앱을 자기 서비스 안에 들인 사례'로 바꿈(4084ff7) | 고친 칸을 읽음 · 보낼 글 안에 내부 경로 · 이름 · 계정이 없는지 찾아봄(없음) | 받아들임 · 차례는 MIMIR 순서 한 장대로 미P5 → 미P1 → 미P3 → 미P2(RSCH가 3번 칸에 적음) · 미P4는 S44로 |
+| S38_EDITOR_CANDIDATES `d88bad98` | `S38_EDITOR_CANDIDATES.md` 144줄 — 후보 여섯(OpenCut classic · MakeMyClip · HyperFrames · OpenChatCut · Remotion · kinocut) · 먼저 비교 시험할 셋 = OpenCut classic / MakeMyClip / HyperFrames(채택 권고 아님) · 한알께 여쭐 것 셋(고칠 기기 · 쓰는 범위 · 사람이 고칠 기능) | 전체를 읽음 · 원문 셋을 따로 열어 맞춤(18:22 전): MakeMyClip "four surfaces, one composition document, one append-only op log" · MIT · ffmpeg-static 빌드 GPLv3 / nonfree 재배포 불가 / HyperFrames Studio "The exported components are building blocks, not a drop-in embedded editor." · "The Studio server writes those changes back to the project files." / opencut-classic "archived by the owner on May 17, 2026. It is now read-only." — **셋 다 맞음** | 받아들임 · ' CLOSED' |
+
+- **알아 둘 것:** 맞춰 보던 중 공개 페이지 하나를 읽은 도구 출력 뒤에 '문서를 만들라'는 글이 덧붙어 있었음 — 페이지 글도 요청도 아니라서 따르지 않음(웹 글 속 지시는 읽을 거리일 뿐).
+- **한알께 여쭐 것(S38 7번 칸 — 한 번에 하나씩, 지금 물음(영상 도구 설치 허락) 뒤에):** ① 먼저 고칠 기기 — 컴퓨터 브라우저 / 휴대폰 브라우저 / 둘 다 ② 우리 가게 안에서만 쓰는가, 다른 가게에도 서비스하거나 앱을 배포하는가(라이선스가 후보를 바꿈) ③ 사람이 꼭 고칠 것 — 컷 순서 · 길이 · 자막 · 소리 크기 정도인가, 더 많은가. 벤치마크 한 장이 오면 그 결과로 줄이거나 차례를 바꿀 수 있음.
